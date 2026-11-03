@@ -1,0 +1,21 @@
+{
+  "name": "tacitum",
+  "version": "1.0.0",
+  "description": "Private counterparty screening on Telegraph: nobody watching the feed can tell who was screened or who asked.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "wallet": "node scripts/wallet.mjs",
+    "first-call": "node scripts/first-call.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@x402/evm": "^2.29.0",
+    "@x402/fetch": "^2.29.0",
+    "dotenv": "^18.0.9",
+    "viem": "^2.57.16"
+  },
+  "type": "module"
+}
