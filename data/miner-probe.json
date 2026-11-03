@@ -1,0 +1,812 @@
+{
+  "probedAt": "2026-11-03T16:54:59.478Z",
+  "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+  "checks": {
+    "SANCTIONS_SCREENING_MATCH_GENERAL": [
+      {
+        "minerId": 710637,
+        "passed": 2,
+        "cases": [
+          {
+            "params": {
+              "name": "Banco Nacional de Cuba"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 20439,
+            "signal": "0x30192fb9c8651317caeab3783af7305833ab623c10b59fb77061990e9d2d20df",
+            "result": {
+              "name": "Banco Nacional de Cuba",
+              "matched": true,
+              "matches": [
+                "{\"alias_strength\":\"primary\",\"countries\":[\"Japan\",\"Panama\",\"Spain\",\"Switzerland\"],\"dates_of_birth\":[],\"entry_id\":\"306\",\"list\":\"OFAC SDN\",\"listed_name\":\"BANCO NACIONAL DE CUBA\",\"match_type\":\"normalized_exact\",\"matched_name\":\"BANCO NACIONAL DE CUBA\",\"programs\":[\"CUBA\"],\"published_at\":\"2026-10-28\",\"record_url\":\"https://sanctionssearch.ofac.treas.gov/Details.aspx?id=306\",\"score\":1,\"source\":\"https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML\",\"type\":\"Entity\"}"
+              ],
+              "lists": [
+                "OFAC SDN",
+                "OFAC Consolidated (non-SDN)",
+                "UK Sanctions List (entities only)",
+                "Canada autonomous sanctions (entities only)"
+              ],
+              "match_score": 1
+            }
+          },
+          {
+            "params": {
+              "name": "Unilever PLC"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 8597,
+            "signal": "0x6a6b7552857c97724797229544de70e5941d68f63212cb3e415251695c7369be",
+            "result": {
+              "name": "Unilever PLC",
+              "matched": false,
+              "matches": null,
+              "lists": [
+                "OFAC SDN",
+                "OFAC Consolidated (non-SDN)",
+                "UK Sanctions List (entities only)",
+                "Canada autonomous sanctions (entities only)"
+              ],
+              "match_score": 0
+            }
+          }
+        ],
+        "name": "Sanctions Name Evidence",
+        "score": 1
+      },
+      {
+        "minerId": 9002,
+        "passed": 2,
+        "cases": [
+          {
+            "params": {
+              "name": "Banco Nacional de Cuba"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 30801,
+            "signal": "0x4a600bfe41af7468413b00f75c1002589604ef158032437019fe3864b604af5e",
+            "result": {
+              "name": "Banco Nacional de Cuba",
+              "matched": true,
+              "matches": null,
+              "lists": [
+                "US Treasury OFAC SDN list",
+                "US Treasury OFAC SDN list",
+                "US Treasury OFAC SDN list"
+              ],
+              "match_score": 1
+            }
+          },
+          {
+            "params": {
+              "name": "Unilever PLC"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 12898,
+            "signal": "0xd65906cbf9db6879d5470119c1e08c2a2da55b60893b931064d01e38742ac568",
+            "result": {
+              "name": "Unilever PLC",
+              "matched": false,
+              "matches": null,
+              "lists": [
+                "US Treasury OFAC Specially Designated Nationals (SDN) list"
+              ],
+              "match_score": null
+            }
+          }
+        ],
+        "name": "TxLens",
+        "score": 1
+      },
+      {
+        "minerId": 4433,
+        "passed": 1,
+        "cases": [
+          {
+            "params": {
+              "name": "Banco Nacional de Cuba"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 14989,
+            "signal": "0xca3ecb38a41dee6c7bf5cbbab783eeecc2d7e48b880fea9a3d52fc673cee515e",
+            "result": {
+              "name": "Banco Nacional de Cuba",
+              "matched": true,
+              "matches": [
+                "{\"dob_check\":\"not_given\",\"dob_years\":[],\"id\":\"306\",\"list\":\"OFAC SDN\",\"listed_on\":null,\"matched_name\":\"BANCO NACIONAL DE CUBA\",\"name\":\"BANCO NACIONAL DE CUBA\",\"nationalities\":[],\"programs\":[\"CUBA\"],\"score\":1,\"type\":\"entity\",\"url\":\"https://sanctionssearch.ofac.treas.gov/Details.aspx?id=306\"}"
+              ],
+              "lists": [
+                "OFAC SDN"
+              ],
+              "match_score": 1
+            }
+          },
+          {
+            "params": {
+              "name": "Unilever PLC"
+            },
+            "status": 200,
+            "pass": false,
+            "ms": 32361,
+            "signal": "0xb1e8ab0d6512b7dc6ce222d2038981b19bc42f1e00e7c186ee7112ee29f0466e",
+            "result": {
+              "name": "Unilever PLC",
+              "matched": null,
+              "matches": null,
+              "lists": [
+                "OFAC SDN",
+                "UN Security Council Consolidated"
+              ],
+              "match_score": 0.851
+            }
+          }
+        ],
+        "name": "LiveCert — Sourced Answers for Agents",
+        "score": 0.5
+      },
+      {
+        "minerId": 302,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "name": "Banco Nacional de Cuba"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 1007,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+              "message": "miner chainsight-oracle cannot take this request's params: /sanctions has no field for required param(s) name",
+              "schema_version": 3
+            }
+          },
+          {
+            "params": {
+              "name": "Unilever PLC"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 1017,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+              "message": "miner chainsight-oracle cannot take this request's params: /sanctions has no field for required param(s) name",
+              "schema_version": 3
+            }
+          }
+        ],
+        "score": 0
+      },
+      {
+        "minerId": 78021,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "name": "Banco Nacional de Cuba"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 2029,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+              "message": "miner san-ofac-entity cannot take this request's params: /query has no field for required param(s) name",
+              "schema_version": 3
+            }
+          },
+          {
+            "params": {
+              "name": "Unilever PLC"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 1088,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+              "message": "miner san-ofac-entity cannot take this request's params: /query has no field for required param(s) name",
+              "schema_version": 3
+            }
+          }
+        ],
+        "score": 0
+      },
+      {
+        "minerId": 78022,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "name": "Banco Nacional de Cuba"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 2195,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+              "message": "miner san-un-list cannot take this request's params: /query has no field for required param(s) name",
+              "schema_version": 3
+            }
+          },
+          {
+            "params": {
+              "name": "Unilever PLC"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 983,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+              "message": "miner san-un-list cannot take this request's params: /query has no field for required param(s) name",
+              "schema_version": 3
+            }
+          }
+        ],
+        "score": 0
+      },
+      {
+        "minerId": 78004,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "name": "Banco Nacional de Cuba"
+            },
+            "status": 200,
+            "pass": false,
+            "ms": 17438,
+            "signal": "0x7ab753f4a30d53360d8061f64d43f6fc0ad7f7539f996d713caca0d48d78c3a0",
+            "result": {
+              "name": null,
+              "matched": null,
+              "matches": null,
+              "lists": [
+                "US OFAC Specially Designated Nationals (SDN) List"
+              ],
+              "match_score": null
+            }
+          },
+          {
+            "params": {
+              "name": "Unilever PLC"
+            },
+            "status": 200,
+            "pass": false,
+            "ms": 21152,
+            "signal": "0x218740148d479cd8281c7874c8270c53f836478f55e6d8de7751b41d72aaeb2c",
+            "result": {
+              "name": null,
+              "matched": null,
+              "matches": null,
+              "lists": [
+                "US OFAC Specially Designated Nationals (SDN) List"
+              ],
+              "match_score": null
+            }
+          }
+        ],
+        "name": "OpenSanctions US OFAC Index",
+        "score": 0
+      },
+      {
+        "minerId": 78003,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "name": "Banco Nacional de Cuba"
+            },
+            "status": 500,
+            "pass": false,
+            "ms": 36039,
+            "result": null,
+            "error": {
+              "error": "upstream call failed: response body exceeds 20971520 byte limit",
+              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+              "miner_id": "78003",
+              "payment": {
+                "status": "escrow_credit_pending",
+                "message": "Your payment settled but the request failed, so nothing was billed. The amount is being credited to your Telegraph escrow balance (on-chain, usually within a few minutes): it then pays for your next asks, or withdraw it with requestWithdraw then executeWithdraw. If your balance has not risen after a while, contact support with this transaction.",
+                "transaction": "0x233f1801db030b2e20599d86e9ea39120ba55c16218713acace666cb2f2755b1",
+                "network": "eip155:11155111",
+                "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608"
+              }
+            }
+          },
+          {
+            "params": {
+              "name": "Unilever PLC"
+            },
+            "status": 500,
+            "pass": false,
+            "ms": 34050,
+            "result": null,
+            "error": {
+              "error": "upstream call failed: response body exceeds 20971520 byte limit",
+              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+              "miner_id": "78003",
+              "payment": {
+                "status": "escrow_credit_pending",
+                "message": "Your payment settled but the request failed, so nothing was billed. The amount is being credited to your Telegraph escrow balance (on-chain, usually within a few minutes): it then pays for your next asks, or withdraw it with requestWithdraw then executeWithdraw. If your balance has not risen after a while, contact support with this transaction.",
+                "transaction": "0x1c71b694b60c1c1759366f8346e773bc69c286bb2b73be387041c0bef9951bbc",
+                "network": "eip155:11155111",
+                "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608"
+              }
+            }
+          }
+        ],
+        "score": 0
+      }
+    ],
+    "CORPORATE_REGISTRY_LOOKUP_GENERAL": [
+      {
+        "minerId": 7393,
+        "passed": 1,
+        "cases": [
+          {
+            "params": {
+              "company": "Barclays PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 24787,
+            "signal": "0x00914768a0bf7156c08a910595140706b6b9bf61f3a9da43d90dd063f76fc172",
+            "result": {
+              "legal_name": "BARCLAYS PLC",
+              "registration_id": "213800LBQA1Y9L22JB70",
+              "active": true,
+              "jurisdiction": "GB",
+              "registered_address": "LONDON, GB-LND, GB",
+              "incorporated": "2014-07-25T00:00:00Z"
+            }
+          }
+        ],
+        "name": "DataWire Corporate Registry Lookup",
+        "score": 1
+      },
+      {
+        "minerId": 9002,
+        "passed": 1,
+        "cases": [
+          {
+            "params": {
+              "company": "Barclays PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 33635,
+            "signal": "0x3303def0e5c3faf8e242ed45cd34aa20f261705c05a329e683feef993a2e80e3",
+            "result": {
+              "legal_name": "BARCLAYS PLC",
+              "registration_id": "00048839",
+              "active": true,
+              "jurisdiction": "GB",
+              "registered_address": "1 CHURCHILL PLACE, LONDON, GB-LND, E14 5HP, GB",
+              "incorporated": "1896-07-20T00:00:00Z"
+            }
+          }
+        ],
+        "name": "TxLens",
+        "score": 1
+      },
+      {
+        "minerId": 4433,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "company": "Barclays PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 969,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+              "message": "miner livecert cannot take this request's params: /ssl-check has no field for required param(s) company, jurisdiction; /storm-alert has no field for required param(s) company, jurisdiction; /papers has no field for required param(s) company, jurisdiction; /translate has no field for required param(s) company, jurisdiction; /ip-geolocate has no field for required param(s) company, jurisdiction; /weather-forecast has no field for required param(s) company, jurisdiction; /extract has no field for required param(s) company, jurisdiction; /headlines has no field for required param(s) company, jurisdiction; /wallet-balance has no field for required param(s) company, jurisdiction; /tx-lookup has no field for required param(s) company, jurisdiction; /cve has no field for required param(s) company, jurisdiction; /news-search has no field for required param(s) company, jurisdiction; /convert has no field for required param(s) company, jurisdiction; /gas-price has no field for required param(s) company, jurisdiction; /financial has no field for required param(s) company, jurisdiction; /fraud-check has no field for required param(s) company, jurisdiction; /token-holders has no field for required param(s) company, jurisdiction; /research has no field for required param(s) company, jurisdiction; /crypto-price has no field for required param(s) company, jurisdiction; /stock-price has no field for required param(s) company, jurisdiction; /cross-chain has no field for required param(s) company, jurisdiction; /event-outcome has no field for required param(s) company, jurisdiction; /url-scan has no field for required param(s) company, jurisdiction; /web-search has no field for required param(s) company, jurisdiction; /sentiment has no field for required param(s) company, jurisdiction; /classify has no field for required param(s) company, jurisdiction; /research-synthesis has no field for required param(s) company, jurisdiction; /fact-check has no field for required param(s) company, jurisdiction; /sanctions-screen has no field for required param(s) company, jurisdiction; /company-registry has no field for required param(s) jurisdiction; /sec-filings has no field for required param(s) jurisdiction; /transfer-verify has no field for required param(s) company, jurisdiction; /macro has no field for required param(s) company, jurisdiction; /url-reputation has no field for required param(s) company, jurisdiction; /answer has no field for required param(s) company, jurisdiction",
+              "schema_version": 1
+            }
+          }
+        ],
+        "score": 0
+      },
+      {
+        "minerId": 302,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "company": "Barclays PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 1011,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+              "message": "miner chainsight-oracle cannot take this request's params: /corp has no field for required param(s) company, jurisdiction",
+              "schema_version": 1
+            }
+          }
+        ],
+        "score": 0
+      },
+      {
+        "minerId": 98001,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "company": "Barclays PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 1426,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+              "message": "miner corp-gleif cannot take this request's params: /query has no field for required param(s) company, jurisdiction",
+              "schema_version": 1
+            }
+          }
+        ],
+        "score": 0
+      },
+      {
+        "minerId": 190104,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "company": "Barclays PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 1534,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+              "message": "miner corp-brreg-no cannot take this request's params: /query has no field for required param(s) company, jurisdiction",
+              "schema_version": 1
+            }
+          }
+        ],
+        "score": 0
+      },
+      {
+        "minerId": 79011,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "company": "Barclays PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 2230,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+              "message": "miner corp-gleif-status cannot take this request's params: /query has no field for required param(s) company, jurisdiction",
+              "schema_version": 1
+            }
+          }
+        ],
+        "score": 0
+      }
+    ],
+    "REGULATORY_FILING_MONITOR_GENERAL": [
+      {
+        "minerId": 9002,
+        "passed": 1,
+        "cases": [
+          {
+            "params": {
+              "entity": "Apple Inc",
+              "period": "last 12 months"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 22777,
+            "signal": "0xa199b547311b5b05b77ed2d3e30bfb0734c98c398a53068b2a02ef83475aba78",
+            "result": {
+              "entity": "Apple Inc",
+              "filing_count": 2722,
+              "filings": [
+                "Certain Electronic Devices With Certain Audio Technologies; Notice of Institution of Investigation",
+                "Certain Mobile Devices With Hardware and Software for Exchanging Electronic Content; Institution of Investigation",
+                "Certain Light-Based Physiological Measurement Devices and Components Thereof; Notice of a Commission Determination Not To Review a Combined Recommended Determination on Modification and Enforcement Initial Determination; Termination of Proceeding",
+                "Certain Wearable Electronic Devices With ECG Functionality and Components Thereof; Notice of Commission Decision To Dismiss the Complaint as Moot, Institute a Rescission Proceeding, and Rescind the Remedial Orders; Termination of the Rescission Proceeding",
+                "Certain Light-Based Physiological Measurement Devices and Components Thereof; Notice of a Commission Determination To Institute a Combined Modification and Enforcement Proceeding"
+              ],
+              "urls": [
+                "https://www.federalregister.gov/documents/2025/05/09/2025-08196/certain-wearable-electronic-devices-with-ecg-functionality-and-components-thereof-notice-of",
+                "https://www.federalregister.gov/documents/2026/09/18/2026-19175/certain-electronic-devices-with-certain-audio-technologies-notice-of-institution-of-investigation",
+                "https://www.federalregister.gov/documents/2026/04/22/2026-07779/certain-light-based-physiological-measurement-devices-and-components-thereof-notice-of-a-commission",
+                "https://www.federalregister.gov/documents/2025/11/18/2025-20148/certain-light-based-physiological-measurement-devices-and-components-thereof-notice-of-a-commission",
+                "https://www.federalregister.gov/documents/2026/09/01/2026-17864/certain-mobile-devices-with-hardware-and-software-for-exchanging-electronic-content-institution-of"
+              ]
+            }
+          }
+        ],
+        "name": "TxLens",
+        "score": 1
+      },
+      {
+        "minerId": 77131,
+        "passed": 1,
+        "cases": [
+          {
+            "params": {
+              "entity": "Apple Inc",
+              "period": "last 12 months"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 28650,
+            "signal": "0x8febf4dfe6994b80689a7670b2ac8b02bf93c6ceeb1c4b92069861ba7fd97a6b",
+            "result": {
+              "entity": "Apple Inc",
+              "filing_count": 88,
+              "filings": null,
+              "urls": null
+            }
+          }
+        ],
+        "name": "Filing Window",
+        "score": 1
+      },
+      {
+        "minerId": 80011,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "entity": "Apple Inc",
+              "period": "last 12 months"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 982,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+              "message": "miner reg-sec-edgar cannot take this request's params: /query has no field for required param(s) entity, period",
+              "schema_version": 1
+            }
+          }
+        ],
+        "score": 0
+      },
+      {
+        "minerId": 302,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "entity": "Apple Inc",
+              "period": "last 12 months"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 990,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+              "message": "miner chainsight-oracle cannot take this request's params: /regfiling has no field for required param(s) entity, period",
+              "schema_version": 1
+            }
+          }
+        ],
+        "score": 0
+      },
+      {
+        "minerId": 4433,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "entity": "Apple Inc",
+              "period": "last 12 months"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 1023,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+              "message": "miner livecert cannot take this request's params: /ssl-check has no field for required param(s) entity, period; /storm-alert has no field for required param(s) entity, period; /papers has no field for required param(s) entity, period; /translate has no field for required param(s) entity, period; /ip-geolocate has no field for required param(s) entity, period; /weather-forecast has no field for required param(s) entity, period; /extract has no field for required param(s) entity, period; /headlines has no field for required param(s) entity, period; /wallet-balance has no field for required param(s) entity, period; /tx-lookup has no field for required param(s) entity, period; /cve has no field for required param(s) entity, period; /news-search has no field for required param(s) entity, period; /convert has no field for required param(s) entity, period; /gas-price has no field for required param(s) entity, period; /financial has no field for required param(s) entity, period; /fraud-check has no field for required param(s) entity, period; /token-holders has no field for required param(s) entity, period; /research has no field for required param(s) entity, period; /crypto-price has no field for required param(s) entity, period; /stock-price has no field for required param(s) entity, period; /cross-chain has no field for required param(s) entity, period; /event-outcome has no field for required param(s) entity, period; /url-scan has no field for required param(s) entity, period; /web-search has no field for required param(s) entity, period; /sentiment has no field for required param(s) entity, period; /classify has no field for required param(s) entity, period; /research-synthesis has no field for required param(s) entity, period; /fact-check has no field for required param(s) entity, period; /sanctions-screen has no field for required param(s) entity, period; /company-registry has no field for required param(s) entity, period; /sec-filings has no field for required param(s) entity, period; /transfer-verify has no field for required param(s) entity, period; /macro has no field for required param(s) entity, period; /url-reputation has no field for required param(s) entity, period; /answer has no field for required param(s) entity, period",
+              "schema_version": 1
+            }
+          }
+        ],
+        "score": 0
+      },
+      {
+        "minerId": 190160,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "entity": "Apple Inc",
+              "period": "last 12 months"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 2055,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+              "message": "miner filing-sec-submissions cannot take this request's params: /query has no field for required param(s) entity, period",
+              "schema_version": 1
+            }
+          }
+        ],
+        "score": 0
+      }
+    ],
+    "NEWS_SEARCH_GENERAL": [
+      {
+        "minerId": 302,
+        "passed": 1,
+        "cases": [
+          {
+            "params": {
+              "query": "Barclays"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 13615,
+            "signal": "0x6c88f4f2d9db89ad85367544252877e4065fb9a4395da74470ee806e1434072d",
+            "result": {
+              "answer": null,
+              "result_count": 4,
+              "sources": [
+                "noticingnewyork.blogspot.com",
+                "watchlistnews.com",
+                "atlanticyardsreport.blogspot.com",
+                "pymnts.com"
+              ],
+              "brief": "Recent coverage of Barclays from the last 30 days includes 4 articles."
+            }
+          }
+        ],
+        "name": "ChainSight — Universal Intelligence & Data Oracle",
+        "score": 1
+      },
+      {
+        "minerId": 4433,
+        "passed": 1,
+        "cases": [
+          {
+            "params": {
+              "query": "Barclays"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 14712,
+            "signal": "0x7ba77c12444425047b5df9f2b272eb64f54201e53cb181adc0862cd916e4b6c8",
+            "result": {
+              "answer": "News coverage of Barclays is not searched: Google News RSS does not license its data for resale, and this is a paid service (terms: https://policies.google.com/terms).",
+              "result_count": 0,
+              "sources": [
+                "Google News RSS"
+              ],
+              "brief": "News coverage of Barclays is not searched: Google News RSS does not license its data for resale, and this is a paid service."
+            }
+          }
+        ],
+        "name": "LiveCert — Sourced Answers for Agents",
+        "score": 1
+      },
+      {
+        "minerId": 7329,
+        "passed": 1,
+        "cases": [
+          {
+            "params": {
+              "query": "Barclays"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 36096,
+            "signal": "0xc60b530673a6a31194d45e2435330b42f3796c384ddb48b123bfa1857b6f8db6",
+            "result": {
+              "answer": null,
+              "result_count": 5,
+              "sources": [
+                "GOV.UK",
+                "Wikinews"
+              ],
+              "brief": "GOV.UK reports: \"UK moves closer to launching first digitally native…\"."
+            }
+          }
+        ],
+        "name": "NewsWire News Search",
+        "score": 1
+      },
+      {
+        "minerId": 5530,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "query": "Barclays"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 1634,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "NEWS_SEARCH_GENERAL",
+              "message": "miner telegraph-verity-intelligence cannot take this request's params: /v1/intent has no field for required param(s) query",
+              "schema_version": 3
+            }
+          }
+        ],
+        "score": 0
+      },
+      {
+        "minerId": 9004,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "query": "Barclays"
+            },
+            "status": 500,
+            "pass": false,
+            "ms": 30569,
+            "result": null,
+            "error": {
+              "error": "upstream error 404: {\"status\":\"error\",\"code\":404,\"message\":\"Application not found\",\"request_id\":\"DeDOGlMSRNukec4t0ubPiw\"}",
+              "intent": "NEWS_SEARCH_GENERAL",
+              "miner_id": "9004",
+              "payment": {
+                "status": "escrow_credit_pending",
+                "message": "Your payment settled but the request failed, so nothing was billed. The amount is being credited to your Telegraph escrow balance (on-chain, usually within a few minutes): it then pays for your next asks, or withdraw it with requestWithdraw then executeWithdraw. If your balance has not risen after a while, contact support with this transaction.",
+                "transaction": "0x484c8ad25b9bd8a9aa5947e786ee52ea52119316164d8dff583eaeb720f26232",
+                "network": "eip155:11155111",
+                "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608"
+              }
+            }
+          }
+        ],
+        "score": 0
+      }
+    ]
+  },
+  "spentUsd": 0.15
+}

@@ -1,0 +1,269 @@
+{
+  "counterparty": {
+    "name": "Banco Nacional de Cuba",
+    "jurisdiction": "CU"
+  },
+  "startedAt": "2026-11-03T17:07:06.141Z",
+  "finishedAt": "2026-11-03T17:09:38.911Z",
+  "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+  "overall": "FLAG",
+  "verdicts": {
+    "sanctions": "FLAG",
+    "registry": "REVIEW",
+    "filings": "REVIEW",
+    "news": "CLEAR"
+  },
+  "costUsd": 0.05,
+  "paidCalls": 5,
+  "checks": {
+    "sanctions": {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "Banco Nacional de Cuba"
+      },
+      "answers": [
+        {
+          "minerId": 710637,
+          "miner": "Sanctions Name Evidence",
+          "ok": true,
+          "status": 200,
+          "result": {
+            "name": "Banco Nacional de Cuba",
+            "matched": true,
+            "matches": [
+              "{\"alias_strength\":\"primary\",\"countries\":[\"Japan\",\"Panama\",\"Spain\",\"Switzerland\"],\"dates_of_birth\":[],\"entry_id\":\"306\",\"list\":\"OFAC SDN\",\"listed_name\":\"BANCO NACIONAL DE CUBA\",\"match_type\":\"normalized_exact\",\"matched_name\":\"BANCO NACIONAL DE CUBA\",\"programs\":[\"CUBA\"],\"published_at\":\"2026-10-28\",\"record_url\":\"https://sanctionssearch.ofac.treas.gov/Details.aspx?id=306\",\"score\":1,\"source\":\"https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML\",\"type\":\"Entity\"}"
+            ],
+            "lists": [
+              "OFAC SDN",
+              "OFAC Consolidated (non-SDN)",
+              "UK Sanctions List (entities only)",
+              "Canada autonomous sanctions (entities only)"
+            ],
+            "match_score": 1
+          },
+          "costUsd": 0.01,
+          "signal": "0xc33600a10e52520df24bc6ebcedd1a91272f30337222670e451dae619139268e",
+          "tx": "0xfe5d2b39ee1ab440eca70c7c56eafa115227d654d25e4124bf9c22b3de0b5755",
+          "receipt": {
+            "receipt_hash": "0x3ac0ee21de2d135e66959bbbe3200281248b17440416d72e5c5bae93d0c0c343",
+            "rail": "x402",
+            "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+            "miner": "4860",
+            "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+            "amount_uusdc": "10000",
+            "epoch_id": 2004,
+            "settlement": "onchain",
+            "chain": "eip155:11155111",
+            "tx_hash": "0xfe5d2b39ee1ab440eca70c7c56eafa115227d654d25e4124bf9c22b3de0b5755",
+            "timestamp": 1793725575
+          }
+        },
+        {
+          "minerId": 9002,
+          "miner": "TxLens",
+          "ok": true,
+          "status": 200,
+          "result": {
+            "name": "Banco Nacional de Cuba",
+            "matched": true,
+            "matches": [
+              "{\"ent_num\":\"306\",\"match_score\":1,\"name\":\"BANCO NACIONAL DE CUBA\",\"program\":\"CUBA\",\"remarks\":\"a.k.a. 'BNC'.\",\"title\":null,\"type\":null}",
+              "{\"ent_num\":\"1042\",\"match_score\":0.75,\"name\":\"INSTITUTO NACIONAL DE TURISMO DE CUBA\",\"program\":\"CUBA\",\"remarks\":null,\"title\":null,\"type\":null}",
+              "{\"ent_num\":\"58490\",\"match_score\":0.75,\"name\":\"BANCO EXTERIOR DE CUBA\",\"program\":\"CUBA-EO14404\",\"remarks\":\"SWIFT/BIC BECUCUHH; Website bancoexteriorcuba.cu; Organization Established Date 29 Feb 2000; Target Type Financial Institution; Entity Code 259 (Cuba).\",\"title\":null,\"type\":null}"
+            ],
+            "lists": [
+              "US Treasury OFAC SDN list"
+            ],
+            "match_score": 1
+          },
+          "costUsd": 0.01,
+          "signal": "0xb86ef85f55628b2b2ec9dc83721d230f397a1305a48910ff967f1575b4c91b4d",
+          "tx": "0xad3d3194f8ccd36b1ccbb99aab6967c00f8c73d0428571d22c06be42abadb93d",
+          "receipt": {
+            "receipt_hash": "0xa31b0bf9c2a0351f104234f3a19601d8612b3022ad924664cdf05902678e1216",
+            "rail": "x402",
+            "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+            "miner": "4348",
+            "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+            "amount_uusdc": "10000",
+            "epoch_id": 2004,
+            "settlement": "onchain",
+            "chain": "eip155:11155111",
+            "tx_hash": "0xad3d3194f8ccd36b1ccbb99aab6967c00f8c73d0428571d22c06be42abadb93d",
+            "timestamp": 1793725588
+          }
+        }
+      ]
+    },
+    "registry": {
+      "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+      "params": {
+        "company": "Banco Nacional de Cuba",
+        "jurisdiction": "CU"
+      },
+      "answers": [
+        {
+          "minerId": 7393,
+          "miner": "DataWire Corporate Registry Lookup",
+          "ok": true,
+          "status": 200,
+          "result": {
+            "as_of": "2026-11-03T17:06:40.459Z",
+            "attribution": "Macro indicators from World Bank Open Data (CC BY 4.0). Filings from SEC EDGAR and the US Federal Register. Sanctions screening against the US Treasury OFAC SDN list. Company identity from the Global LEI Index (GLEIF, CC0). Threat intelligence from the CISA Known Exploited Vulnerabilities catalog and the abuse.ch URLhaus and Feodo Tracker feeds.",
+            "confidence": 0.7,
+            "found": false,
+            "intent": "CORPORATE_REGISTRY_LOOKUP",
+            "query": "Banco Nacional de Cuba",
+            "source": "Global LEI Index (GLEIF, CC0)",
+            "summary": "No corporate registry record was found for \"Banco Nacional de Cuba\" in the Global LEI Index or, for a US company, in SEC EDGAR. Try the full registered legal name or a Legal Entity Identifier."
+          },
+          "costUsd": 0.01,
+          "signal": "0x1664fdb7eeb0edb1acfbd1daba74778f42576d31630de0a026391564a96dd470",
+          "tx": "0x67598cee9750a4863918871e5b5eac441761ae8795644e2f4af9f140a5141eb0",
+          "receipt": {
+            "receipt_hash": "0xaf74082318894626b83f20334f9ea1161d2891e863e988b8d829efc173380a09",
+            "rail": "x402",
+            "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+            "miner": "4471",
+            "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+            "amount_uusdc": "10000",
+            "epoch_id": 2004,
+            "settlement": "onchain",
+            "chain": "eip155:11155111",
+            "tx_hash": "0x67598cee9750a4863918871e5b5eac441761ae8795644e2f4af9f140a5141eb0",
+            "timestamp": 1793725602
+          }
+        },
+        {
+          "minerId": 9002,
+          "miner": "TxLens",
+          "ok": true,
+          "status": 200,
+          "result": {
+            "legal_name": null,
+            "registration_id": null,
+            "active": null,
+            "jurisdiction": "CU",
+            "registered_address": null,
+            "incorporated": null
+          },
+          "costUsd": 0.01,
+          "signal": "0x3d13e5e72a9df148af69da6a2b55c45fc4d7149bb40293ed3a0041f2e0ad675c",
+          "tx": "0x5eab878d5787f3de96ddfbf578b8fddbe5318c43766b0fb87ce17bd4f8a66931",
+          "receipt": {
+            "receipt_hash": "0x02cd909301c0c6610edd99080912857eaba07ad2ce9a97bd2414b61ea704dbce",
+            "rail": "x402",
+            "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+            "miner": "4348",
+            "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+            "amount_uusdc": "10000",
+            "epoch_id": 2004,
+            "settlement": "onchain",
+            "chain": "eip155:11155111",
+            "tx_hash": "0x5eab878d5787f3de96ddfbf578b8fddbe5318c43766b0fb87ce17bd4f8a66931",
+            "timestamp": 1793725651
+          }
+        }
+      ]
+    },
+    "filings": {
+      "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+      "params": {
+        "entity": "Banco Nacional de Cuba",
+        "period": "last 12 months"
+      },
+      "answers": [
+        {
+          "minerId": 77131,
+          "ok": false,
+          "status": 500,
+          "result": null,
+          "error": "miner error error [entity_not_found]: No exact issuer name or ticker was found in the SEC directory; use its CIK.",
+          "costUsd": 0,
+          "tx": "0x6e4c43d1274842c03442c5b09ca0917805f30586ae64b33e73c538b6f451eb7d",
+          "receipt": null
+        }
+      ]
+    },
+    "news": {
+      "intent": "NEWS_SEARCH_GENERAL",
+      "params": {
+        "query": "Banco Nacional de Cuba"
+      },
+      "answers": [
+        {
+          "minerId": 7329,
+          "miner": "NewsWire News Search",
+          "ok": true,
+          "status": 200,
+          "result": {
+            "answer": "No dated matching reports for \"Banco Nacional de Cuba\" were found in the checked sources.\n\nChecked: Global Voices, NASA, European Commission, NIST, Wikinews, GOV.UK. Recent direct matches precede background mentions and archives; newest within each group. Publisher wording is quoted, with abridgments marked; no endorsement implied. Contains public sector information licensed under the Open Government Licence v3.0.",
+            "result_count": 0,
+            "sources": [
+              "Global Voices",
+              "NASA",
+              "European Commission",
+              "NIST",
+              "Wikinews",
+              "GOV.UK"
+            ],
+            "brief": "No dated matching reports were found in the checked sources."
+          },
+          "costUsd": 0.01,
+          "signal": "0xe93e1594415f526dc138b00a17658129f608b4728dcb3d1b2f2202900d3a5bd3",
+          "tx": "0xb02d5f015123b3d6c18e6be1ba67588c33150a08ea6ca23eef08c40c7805d82c",
+          "receipt": {
+            "receipt_hash": "0x522fd8de3341136547aacc994a4ea47ef4456a8b2906bb41f959ed28260241ca",
+            "rail": "x402",
+            "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+            "miner": "365",
+            "intent": "NEWS_SEARCH_GENERAL",
+            "amount_uusdc": "10000",
+            "epoch_id": 2004,
+            "settlement": "onchain",
+            "chain": "eip155:11155111",
+            "tx_hash": "0xb02d5f015123b3d6c18e6be1ba67588c33150a08ea6ca23eef08c40c7805d82c",
+            "timestamp": 1793725710
+          }
+        }
+      ]
+    }
+  },
+  "verification": [
+    {
+      "signal": "0xc33600a10e52520df24bc6ebcedd1a91272f30337222670e451dae619139268e",
+      "found": true,
+      "payerMatches": true,
+      "txMatches": true,
+      "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Banco Nacional de Cuba\"}"
+    },
+    {
+      "signal": "0xb86ef85f55628b2b2ec9dc83721d230f397a1305a48910ff967f1575b4c91b4d",
+      "found": true,
+      "payerMatches": true,
+      "txMatches": true,
+      "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Banco Nacional de Cuba\"}"
+    },
+    {
+      "signal": "0x1664fdb7eeb0edb1acfbd1daba74778f42576d31630de0a026391564a96dd470",
+      "found": true,
+      "payerMatches": true,
+      "txMatches": true,
+      "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Banco Nacional de Cuba\",\"jurisdiction\":\"CU\"}"
+    },
+    {
+      "signal": "0x3d13e5e72a9df148af69da6a2b55c45fc4d7149bb40293ed3a0041f2e0ad675c",
+      "found": true,
+      "payerMatches": true,
+      "txMatches": true,
+      "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Banco Nacional de Cuba\",\"jurisdiction\":\"CU\"}"
+    },
+    {
+      "signal": "0xe93e1594415f526dc138b00a17658129f608b4728dcb3d1b2f2202900d3a5bd3",
+      "found": true,
+      "payerMatches": true,
+      "txMatches": true,
+      "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"Banco Nacional de Cuba\"}"
+    }
+  ]
+}

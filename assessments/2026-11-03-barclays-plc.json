@@ -1,0 +1,282 @@
+{
+  "counterparty": {
+    "name": "Barclays PLC",
+    "jurisdiction": "GB"
+  },
+  "startedAt": "2026-11-03T17:03:28.113Z",
+  "finishedAt": "2026-11-03T17:06:44.374Z",
+  "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+  "overall": "CLEAR",
+  "verdicts": {
+    "sanctions": "CLEAR",
+    "registry": "CLEAR",
+    "filings": "INFO",
+    "news": "CLEAR"
+  },
+  "costUsd": 0.06,
+  "paidCalls": 6,
+  "checks": {
+    "sanctions": {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "Barclays PLC"
+      },
+      "answers": [
+        {
+          "minerId": 710637,
+          "miner": "Sanctions Name Evidence",
+          "ok": true,
+          "status": 200,
+          "result": {
+            "name": "Barclays PLC",
+            "matched": false,
+            "matches": null,
+            "lists": [
+              "OFAC SDN",
+              "OFAC Consolidated (non-SDN)",
+              "UK Sanctions List (entities only)",
+              "Canada autonomous sanctions (entities only)"
+            ],
+            "match_score": 0
+          },
+          "costUsd": 0.01,
+          "signal": "0x5782eb19a85a91e00220880545d6ff37eb6c90deb940e3efa17bb4f59f75709e",
+          "tx": "0xebeb3dea3cfbffd68e74df923250b543d8b84d455281a0e0e3dd8b74380aeacd",
+          "receipt": {
+            "receipt_hash": "0x4d5fedd16522d55aa7a976226a6d15becb796f4e9d24c90e15930e0702e27d34",
+            "rail": "x402",
+            "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+            "miner": "4860",
+            "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+            "amount_uusdc": "10000",
+            "epoch_id": 2004,
+            "settlement": "onchain",
+            "chain": "eip155:11155111",
+            "tx_hash": "0xebeb3dea3cfbffd68e74df923250b543d8b84d455281a0e0e3dd8b74380aeacd",
+            "timestamp": 1793725363
+          }
+        },
+        {
+          "minerId": 9002,
+          "miner": "TxLens",
+          "ok": true,
+          "status": 200,
+          "result": {
+            "name": "Barclays PLC",
+            "matched": false,
+            "matches": null,
+            "lists": [
+              "OFAC SDN list"
+            ],
+            "match_score": null
+          },
+          "costUsd": 0.01,
+          "signal": "0x97fa3e148cf364a2a621ecdc872d798886027b32a94a8d7e7273463fc2595852",
+          "tx": "0x206dfad73e16866e53f594ef1f90d79e6adaca8943a5bc97ab10f733bc060cc6",
+          "receipt": {
+            "receipt_hash": "0xd54a891499448f97a3692deb564a925fbd692216f8680df1c9d7f5e483df1196",
+            "rail": "x402",
+            "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+            "miner": "4348",
+            "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+            "amount_uusdc": "10000",
+            "epoch_id": 2004,
+            "settlement": "onchain",
+            "chain": "eip155:11155111",
+            "tx_hash": "0x206dfad73e16866e53f594ef1f90d79e6adaca8943a5bc97ab10f733bc060cc6",
+            "timestamp": 1793725397
+          }
+        }
+      ]
+    },
+    "registry": {
+      "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+      "params": {
+        "company": "Barclays PLC",
+        "jurisdiction": "GB"
+      },
+      "answers": [
+        {
+          "minerId": 7393,
+          "miner": "DataWire Corporate Registry Lookup",
+          "ok": true,
+          "status": 200,
+          "result": {
+            "legal_name": "BARCLAYS PLC",
+            "registration_id": "213800LBQA1Y9L22JB70",
+            "active": true,
+            "jurisdiction": "GB",
+            "registered_address": "LONDON, GB-LND, GB",
+            "incorporated": "2014-07-25T00:00:00Z"
+          },
+          "costUsd": 0.01,
+          "signal": "0xff661b0729f85c6d6172245ece1109d4b8d87dd1f79feacc054e6e6c72bb8238",
+          "tx": "0x7f2a13c9d3b34282e7927f6ce379a6eeabb3b9de8f0a7ddba23c5c9e825a2555",
+          "receipt": {
+            "receipt_hash": "0x3983452ba69e9829ae07695791e104678053313d32f3bd25fedb3812af8c19c4",
+            "rail": "x402",
+            "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+            "miner": "4471",
+            "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+            "amount_uusdc": "10000",
+            "epoch_id": 2004,
+            "settlement": "onchain",
+            "chain": "eip155:11155111",
+            "tx_hash": "0x7f2a13c9d3b34282e7927f6ce379a6eeabb3b9de8f0a7ddba23c5c9e825a2555",
+            "timestamp": 1793725412
+          }
+        },
+        {
+          "minerId": 9002,
+          "miner": "TxLens",
+          "ok": true,
+          "status": 200,
+          "result": {
+            "legal_name": "BARCLAYS PLC",
+            "registration_id": "00048839",
+            "active": true,
+            "jurisdiction": "GB",
+            "registered_address": "1 CHURCHILL PLACE, LONDON, GB-LND, E14 5HP, GB",
+            "incorporated": "1896-07-20T00:00:00Z"
+          },
+          "costUsd": 0.01,
+          "signal": "0x85eaa8d0972afb6c054d3d2ae7967e4a07673a5778db48c861eabedc448cdfd2",
+          "tx": "0x7246d5e5ccc19decf60ece3749bd05c517af4191f8ff602996b80d40cd159ac8",
+          "receipt": {
+            "receipt_hash": "0xad5cbb0da24a32d4c0d19223d80fc7356505487a895e2b6b03a53c853005e3ee",
+            "rail": "x402",
+            "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+            "miner": "4348",
+            "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+            "amount_uusdc": "10000",
+            "epoch_id": 2004,
+            "settlement": "onchain",
+            "chain": "eip155:11155111",
+            "tx_hash": "0x7246d5e5ccc19decf60ece3749bd05c517af4191f8ff602996b80d40cd159ac8",
+            "timestamp": 1793725431
+          }
+        }
+      ]
+    },
+    "filings": {
+      "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+      "params": {
+        "entity": "Barclays PLC",
+        "period": "last 12 months"
+      },
+      "answers": [
+        {
+          "minerId": 77131,
+          "miner": "Filing Window",
+          "ok": true,
+          "status": 200,
+          "result": {
+            "entity": "Barclays PLC",
+            "filing_count": 255,
+            "filings": null,
+            "urls": null
+          },
+          "costUsd": 0.01,
+          "signal": "0xeb6af787d0998c2361ddd65c745abf9b81f462b6c96c28247df7de85cc22a25c",
+          "tx": "0xd0eb5e2d3792c0f8e54d0b159ecd66cbdc9f864b28cea4ebf88c630ac1e77237",
+          "receipt": {
+            "receipt_hash": "0x13ea516add5d07fd58bc2e5c25a94bbc75dee76032b93d50787713464b338328",
+            "rail": "x402",
+            "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+            "miner": "4867",
+            "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+            "amount_uusdc": "10000",
+            "epoch_id": 2004,
+            "settlement": "onchain",
+            "chain": "eip155:11155111",
+            "tx_hash": "0xd0eb5e2d3792c0f8e54d0b159ecd66cbdc9f864b28cea4ebf88c630ac1e77237",
+            "timestamp": 1793725455
+          }
+        }
+      ]
+    },
+    "news": {
+      "intent": "NEWS_SEARCH_GENERAL",
+      "params": {
+        "query": "Barclays PLC"
+      },
+      "answers": [
+        {
+          "minerId": 7329,
+          "miner": "NewsWire News Search",
+          "ok": true,
+          "status": 200,
+          "result": {
+            "answer": null,
+            "result_count": 5,
+            "sources": [
+              "GOV.UK",
+              "Wikinews"
+            ],
+            "brief": "GOV.UK reports: \"Sir Richard Broadbent reappointed as Chair of the HMCTS…\"."
+          },
+          "costUsd": 0.01,
+          "signal": "0x27faa4687e9886f80359c71d7a64d721035cf93303eb2608a4bde81040ec45a3",
+          "tx": "0x70fa537992c0cbedc2de466d1a5e4e9288d9bf6946e86633ff8ad2d04072c731",
+          "receipt": {
+            "receipt_hash": "0xd3e76f609d8ab9c7aea4f11e765d89ea0468eaf73998381458be294a421f400e",
+            "rail": "x402",
+            "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+            "miner": "365",
+            "intent": "NEWS_SEARCH_GENERAL",
+            "amount_uusdc": "10000",
+            "epoch_id": 2004,
+            "settlement": "onchain",
+            "chain": "eip155:11155111",
+            "tx_hash": "0x70fa537992c0cbedc2de466d1a5e4e9288d9bf6946e86633ff8ad2d04072c731",
+            "timestamp": 1793725488
+          }
+        }
+      ]
+    }
+  },
+  "verification": [
+    {
+      "signal": "0x5782eb19a85a91e00220880545d6ff37eb6c90deb940e3efa17bb4f59f75709e",
+      "found": true,
+      "payerMatches": true,
+      "txMatches": true,
+      "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Barclays PLC\"}"
+    },
+    {
+      "signal": "0x97fa3e148cf364a2a621ecdc872d798886027b32a94a8d7e7273463fc2595852",
+      "found": true,
+      "payerMatches": true,
+      "txMatches": true,
+      "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Barclays PLC\"}"
+    },
+    {
+      "signal": "0xff661b0729f85c6d6172245ece1109d4b8d87dd1f79feacc054e6e6c72bb8238",
+      "found": true,
+      "payerMatches": true,
+      "txMatches": true,
+      "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Barclays PLC\",\"jurisdiction\":\"GB\"}"
+    },
+    {
+      "signal": "0x85eaa8d0972afb6c054d3d2ae7967e4a07673a5778db48c861eabedc448cdfd2",
+      "found": true,
+      "payerMatches": true,
+      "txMatches": true,
+      "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Barclays PLC\",\"jurisdiction\":\"GB\"}"
+    },
+    {
+      "signal": "0xeb6af787d0998c2361ddd65c745abf9b81f462b6c96c28247df7de85cc22a25c",
+      "found": true,
+      "payerMatches": true,
+      "txMatches": true,
+      "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"Barclays PLC\",\"period\":\"last 12 months\"}"
+    },
+    {
+      "signal": "0x27faa4687e9886f80359c71d7a64d721035cf93303eb2608a4bde81040ec45a3",
+      "found": true,
+      "payerMatches": true,
+      "txMatches": true,
+      "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"Barclays PLC\"}"
+    }
+  ]
+}
