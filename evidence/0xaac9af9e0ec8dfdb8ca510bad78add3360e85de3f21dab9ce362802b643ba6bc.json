@@ -1,0 +1,347 @@
+{
+  "request": {
+    "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+    "params": {
+      "name": "Acme Trading Ltd"
+    }
+  },
+  "response": {
+    "miner_id": "78004",
+    "miner_name": "OpenSanctions US OFAC Index",
+    "endpoint": "/query",
+    "result": {
+      "name": null,
+      "matched": null,
+      "matches": null,
+      "lists": [
+        "US OFAC Specially Designated Nationals (SDN) List"
+      ],
+      "match_score": null
+    },
+    "result_shape": "intent",
+    "format_version": 3,
+    "field_status": {
+      "name": "missing",
+      "matched": "missing",
+      "matches": "missing",
+      "lists": "ok",
+      "match_score": "missing"
+    },
+    "input": {
+      "name": "Acme Trading Ltd"
+    },
+    "input_schema_version": 3,
+    "cost_usd": 0.01,
+    "duration_ms": 1839,
+    "timestamp": "2026-11-03T16:37:41.04530585Z",
+    "reasoning": "Intent: intent given by the caller\nMiner: The user is asking for a sanctions screening match with specific parameters. The OpenSanctions US OFAC Index miner has an endpoint that serves the SANCTIONS_SCREENING_MATCH intent. The provided parameters are directly mapped to the query parameters for this endpoint.",
+    "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+    "signal_hash": "0xaac9af9e0ec8dfdb8ca510bad78add3360e85de3f21dab9ce362802b643ba6bc"
+  },
+  "receipt": {
+    "receipt_hash": "0xe86748c8491d282898b2ecbe64458b34e4ac916dacb8585cfb2ad939f50e8aaa",
+    "rail": "x402",
+    "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+    "miner": "3829",
+    "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+    "amount_uusdc": "10000",
+    "epoch_id": 2004,
+    "settlement": "onchain",
+    "chain": "eip155:11155111",
+    "tx_hash": "0x26bbada35c07dc9ec3272a61e22d53fae1c4aff76a8a4d759f70c0bc9509fad1",
+    "timestamp": 1793723862
+  },
+  "public": {
+    "signal_hash": "0xaac9af9e0ec8dfdb8ca510bad78add3360e85de3f21dab9ce362802b643ba6bc",
+    "kind": "direct_result",
+    "signal": {
+      "id": "af9a783e-3250-444e-84f1-cdfef48ecb23",
+      "signal_hash": "0xaac9af9e0ec8dfdb8ca510bad78add3360e85de3f21dab9ce362802b643ba6bc",
+      "kind": "direct_result",
+      "wallet_address": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+      "miner_slug": "san-os-ofac",
+      "subnet_id": "78004",
+      "intent_id": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "tx_hash": "0x26bbada35c07dc9ec3272a61e22d53fae1c4aff76a8a4d759f70c0bc9509fad1",
+      "result_id": "07bce124-02e2-441d-b5ae-a3f9a10a79f0",
+      "created_at": "2026-11-03T16:37:41.049797Z"
+    },
+    "payload": {
+      "intent_id": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "miner_slug": "san-os-ofac",
+      "subnet_id": "78004",
+      "wallet_address": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+      "request": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Acme Trading Ltd\"}",
+      "response": {
+        "children": [],
+        "coverage": {
+          "countries": [],
+          "frequency": "daily",
+          "schedule": "0 */2 * * *",
+          "start": "2015-12-05"
+        },
+        "data": {
+          "format": "XML",
+          "url": "https://www.treasury.gov/ofac/downloads/sanctions/1.0/sdn_advanced.xml"
+        },
+        "delta_url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/delta.json",
+        "deprecated": false,
+        "description": "As part of its enforcement efforts, OFAC publishes a list of individuals and\ncompanies owned or controlled by, or acting for or on behalf of, targeted\ncountries. It also lists individuals, groups, and entities, such as terrorists\nand narcotics traffickers designated under programs that are not country-specific.\nCollectively, such individuals and companies are called \"Specially Designated\nNationals\" or \"SDNs.\" Their assets are blocked and U.S. persons are generally\nprohibited from dealing with them.\n",
+        "disabled": false,
+        "entity_count": 72670,
+        "entry_point": "ofac_advanced.py",
+        "hidden": false,
+        "index_url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/index.json",
+        "issue_count": 0,
+        "issue_levels": {},
+        "issues_url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/issues.json",
+        "last_change": "2026-10-28T14:10:04",
+        "last_export": "2026-11-03T16:10:05",
+        "name": "us_ofac_sdn",
+        "publisher": {
+          "acronym": "OFAC",
+          "country": "us",
+          "country_label": "United States",
+          "description": "OFAC is a divison of the United States Department of the Treasury that administers and enforces economic and trade sanctions based on US foreign policy and national security goals against targeted foreign countries and regimes, terrorists, international narcotics traffickers, those engaged in activities related to the proliferation of weapons of mass destruction, and other threats to the national security, foreign policy or economy of the United​ States.\n",
+          "name": "Office of Foreign Assets Control",
+          "official": true,
+          "url": "https://www.treasury.gov/"
+        },
+        "resources": [
+          {
+            "checksum": "5622c252cab70be7f094b8b1f94075a41fbe0399",
+            "mime_type": "application/json+ftm",
+            "mime_type_label": "FollowTheMoney Entities",
+            "name": "entities.ftm.json",
+            "path": "entities.ftm.json",
+            "size": 53319612,
+            "title": "FollowTheMoney entities",
+            "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/entities.ftm.json"
+          },
+          {
+            "checksum": "7cddf8e17d43331f5b90e3378c064fe28f8f6726",
+            "mime_type": "text/plain",
+            "mime_type_label": "Plain text",
+            "name": "names.txt",
+            "path": "names.txt",
+            "size": 1437038,
+            "title": "Target names text file",
+            "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/names.txt"
+          },
+          {
+            "checksum": "4c556defe8694ff3ff822c8e182ff6887cacb5bc",
+            "mime_type": "application/json+senzing",
+            "mime_type_label": "json+senzing",
+            "name": "senzing.json",
+            "path": "senzing.json",
+            "size": 18752081,
+            "title": "Senzing entity format",
+            "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/senzing.json"
+          },
+          {
+            "checksum": "b5c75c41e63230e82f77c59a42cc92a6aeff529d",
+            "mime_type": "application/xml",
+            "mime_type_label": "eXtensible Markup Language",
+            "name": "source.xml",
+            "path": "source.xml",
+            "size": 127776518,
+            "title": "Source data",
+            "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/source.xml"
+          },
+          {
+            "checksum": "214f9ea3c3c8a5b56ebca8f0f28bb75b9b0f6405",
+            "mime_type": "application/json",
+            "mime_type_label": "JavaScript Object Notation",
+            "name": "targets.nested.json",
+            "path": "targets.nested.json",
+            "size": 84372081,
+            "title": "Targets as nested JSON",
+            "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/targets.nested.json"
+          },
+          {
+            "checksum": "89154fd013562b04b390433fc336ce7e398d1d8b",
+            "mime_type": "text/csv",
+            "mime_type_label": "Comma-separated table",
+            "name": "targets.simple.csv",
+            "path": "targets.simple.csv",
+            "size": 7594828,
+            "title": "Targets as simplified CSV",
+            "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/targets.simple.csv"
+          }
+        ],
+        "result": "success",
+        "statistics_url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/statistics.json",
+        "summary": "The primary United States' sanctions list, specially designated nationals (SDN) part.\n",
+        "tags": [
+          "list.sanction",
+          "juris.us",
+          "issuer.west",
+          "sector.maritime",
+          "sector.crypto",
+          "sector.energy",
+          "sector.securities"
+        ],
+        "target_count": 20456,
+        "thing_count": 38290,
+        "title": "US OFAC Specially Designated Nationals (SDN) List",
+        "type": "source",
+        "updated_at": "2026-11-03T16:10:05",
+        "url": "https://www.treasury.gov/resource-center/sanctions/Pages/default.aspx",
+        "version": "20261103161005-dxv"
+      },
+      "timestamp": "2026-11-03T16:37:41.04530585Z"
+    },
+    "result": {
+      "id": "07bce124-02e2-441d-b5ae-a3f9a10a79f0",
+      "type": "direct",
+      "source": "user",
+      "status": "success",
+      "created_at": "2026-11-03T16:37:41.045652Z",
+      "signal_hash": "0xaac9af9e0ec8dfdb8ca510bad78add3360e85de3f21dab9ce362802b643ba6bc",
+      "routing_mode": "auto",
+      "question": {
+        "hash": "651676afeb855b20efd081445218b386d2a251e871e5a1e3551117030dcfb635",
+        "text": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Acme Trading Ltd\"}",
+        "category": "",
+        "interest_score": 0,
+        "affected_pct": 0,
+        "audience_pct": 0,
+        "source_url": ""
+      },
+      "routing": {
+        "subnet_id": "78004",
+        "subnet_name": "OpenSanctions US OFAC Index",
+        "miner_slug": "san-os-ofac",
+        "reasoning": "Intent: intent given by the caller\nMiner: The user is asking for a sanctions screening match with specific parameters. The OpenSanctions US OFAC Index miner has an endpoint that serves the SANCTIONS_SCREENING_MATCH intent. The provided parameters are directly mapped to the query parameters for this endpoint.",
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL"
+      },
+      "execution": {
+        "result": {
+          "children": [],
+          "coverage": {
+            "countries": [],
+            "frequency": "daily",
+            "schedule": "0 */2 * * *",
+            "start": "2015-12-05"
+          },
+          "data": {
+            "format": "XML",
+            "url": "https://www.treasury.gov/ofac/downloads/sanctions/1.0/sdn_advanced.xml"
+          },
+          "delta_url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/delta.json",
+          "deprecated": false,
+          "description": "As part of its enforcement efforts, OFAC publishes a list of individuals and\ncompanies owned or controlled by, or acting for or on behalf of, targeted\ncountries. It also lists individuals, groups, and entities, such as terrorists\nand narcotics traffickers designated under programs that are not country-specific.\nCollectively, such individuals and companies are called \"Specially Designated\nNationals\" or \"SDNs.\" Their assets are blocked and U.S. persons are generally\nprohibited from dealing with them.\n",
+          "disabled": false,
+          "entity_count": 72670,
+          "entry_point": "ofac_advanced.py",
+          "hidden": false,
+          "index_url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/index.json",
+          "issue_count": 0,
+          "issue_levels": {},
+          "issues_url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/issues.json",
+          "last_change": "2026-10-28T14:10:04",
+          "last_export": "2026-11-03T16:10:05",
+          "name": "us_ofac_sdn",
+          "publisher": {
+            "acronym": "OFAC",
+            "country": "us",
+            "country_label": "United States",
+            "description": "OFAC is a divison of the United States Department of the Treasury that administers and enforces economic and trade sanctions based on US foreign policy and national security goals against targeted foreign countries and regimes, terrorists, international narcotics traffickers, those engaged in activities related to the proliferation of weapons of mass destruction, and other threats to the national security, foreign policy or economy of the United​ States.\n",
+            "name": "Office of Foreign Assets Control",
+            "official": true,
+            "url": "https://www.treasury.gov/"
+          },
+          "resources": [
+            {
+              "checksum": "5622c252cab70be7f094b8b1f94075a41fbe0399",
+              "mime_type": "application/json+ftm",
+              "mime_type_label": "FollowTheMoney Entities",
+              "name": "entities.ftm.json",
+              "path": "entities.ftm.json",
+              "size": 53319612,
+              "title": "FollowTheMoney entities",
+              "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/entities.ftm.json"
+            },
+            {
+              "checksum": "7cddf8e17d43331f5b90e3378c064fe28f8f6726",
+              "mime_type": "text/plain",
+              "mime_type_label": "Plain text",
+              "name": "names.txt",
+              "path": "names.txt",
+              "size": 1437038,
+              "title": "Target names text file",
+              "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/names.txt"
+            },
+            {
+              "checksum": "4c556defe8694ff3ff822c8e182ff6887cacb5bc",
+              "mime_type": "application/json+senzing",
+              "mime_type_label": "json+senzing",
+              "name": "senzing.json",
+              "path": "senzing.json",
+              "size": 18752081,
+              "title": "Senzing entity format",
+              "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/senzing.json"
+            },
+            {
+              "checksum": "b5c75c41e63230e82f77c59a42cc92a6aeff529d",
+              "mime_type": "application/xml",
+              "mime_type_label": "eXtensible Markup Language",
+              "name": "source.xml",
+              "path": "source.xml",
+              "size": 127776518,
+              "title": "Source data",
+              "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/source.xml"
+            },
+            {
+              "checksum": "214f9ea3c3c8a5b56ebca8f0f28bb75b9b0f6405",
+              "mime_type": "application/json",
+              "mime_type_label": "JavaScript Object Notation",
+              "name": "targets.nested.json",
+              "path": "targets.nested.json",
+              "size": 84372081,
+              "title": "Targets as nested JSON",
+              "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/targets.nested.json"
+            },
+            {
+              "checksum": "89154fd013562b04b390433fc336ce7e398d1d8b",
+              "mime_type": "text/csv",
+              "mime_type_label": "Comma-separated table",
+              "name": "targets.simple.csv",
+              "path": "targets.simple.csv",
+              "size": 7594828,
+              "title": "Targets as simplified CSV",
+              "url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/targets.simple.csv"
+            }
+          ],
+          "result": "success",
+          "statistics_url": "https://data.opensanctions.org/artifacts/us_ofac_sdn/20261103161005-dxv/statistics.json",
+          "summary": "The primary United States' sanctions list, specially designated nationals (SDN) part.\n",
+          "tags": [
+            "list.sanction",
+            "juris.us",
+            "issuer.west",
+            "sector.maritime",
+            "sector.crypto",
+            "sector.energy",
+            "sector.securities"
+          ],
+          "target_count": 20456,
+          "thing_count": 38290,
+          "title": "US OFAC Specially Designated Nationals (SDN) List",
+          "type": "source",
+          "updated_at": "2026-11-03T16:10:05",
+          "url": "https://www.treasury.gov/resource-center/sanctions/Pages/default.aspx",
+          "version": "20261103161005-dxv"
+        },
+        "cost_usd": 0.01,
+        "duration_ms": 1839,
+        "timestamp": "2026-11-03T16:37:41.04530585Z"
+      }
+    },
+    "verification": {
+      "algorithm": "keccak256",
+      "commitment": "payload",
+      "verified": true
+    }
+  }
+}

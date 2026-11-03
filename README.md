@@ -24,7 +24,7 @@ It is a layer on top of Telegraph. Every answer is still bought from Telegraph m
 ## Status
 
 - [x] Testnet payer wallet and x402 client (`npm run wallet`, `npm run first-call`)
-- [ ] First paid call (milestone, 14 Nov)
+- [x] First paid call: one $0.01 sanctions screen, settled in tx `0x26bbada3…09fad1` on Sepolia. The public feed shows our wallet and the question (`evidence/`)
 - [ ] Counterparty assessment workflow
 - [ ] Decoy engine and privacy measurement
 - [ ] Screened funding pool and one-time payers

@@ -26,8 +26,9 @@ if (usdc < parseUnits("0.1", 6)) {
     console.log("\nNeeds a little Sepolia ETH to mint test USDC. Send ~0.01 to the payer address, then rerun.");
   } else {
     const hash = await walletClient(account).writeContract({ address: USDC, abi: usdcAbi, functionName: "mint", args: [account.address, parseUnits("10", 6)] });
-    await publicClient.waitForTransactionReceipt({ hash });
-    usdc = await publicClient.readContract({ address: USDC, abi: usdcAbi, functionName: "balanceOf", args: [account.address] });
+    const { blockNumber } = await publicClient.waitForTransactionReceipt({ hash });
+    // Read at the mint block: load-balanced public RPCs can lag "latest" by a block.
+    usdc = await publicClient.readContract({ address: USDC, abi: usdcAbi, functionName: "balanceOf", args: [account.address], blockNumber });
     console.log(`minted  10 test USDC (tx ${hash}), balance now ${formatUnits(usdc, 6)}`);
   }
 }
