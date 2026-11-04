@@ -17,7 +17,7 @@ const TRUE = ["true", "yes", "match", "matched", "1"];
 const FALSE = ["false", "no", "0", "no match", "not matched", "clear"];
 const bool = (v) => (TRUE.includes(String(v).toLowerCase()) ? true : FALSE.includes(String(v).toLowerCase()) ? false : null);
 
-async function runCheck(client, check, counterparty) {
+export async function runCheck(client, check, counterparty) {
   const params = check.params(counterparty);
   const answers = [];
   for (const minerId of check.miners) {
@@ -85,7 +85,11 @@ export async function assess(client, counterparty) {
   const startedAt = new Date().toISOString();
   const checks = {};
   for (const [name, check] of Object.entries(CHECKS)) checks[name] = await runCheck(client, check, counterparty);
+  return finish(client, counterparty, checks, startedAt);
+}
 
+// Builds the assessment record from checks that have already been bought.
+export async function finish(client, counterparty, checks, startedAt) {
   const all = Object.values(checks).flatMap((c) => c.answers);
   const verification = await verify(checks, client.payer);
   return {

@@ -13,6 +13,14 @@ export const RPC = process.env.RPC_URL || "https://ethereum-sepolia-rpc.publicno
 export const usdcAbi = parseAbi([
   "function balanceOf(address) view returns (uint256)",
   "function mint(address to, uint256 amount)",
+  "function approve(address spender, uint256 amount) returns (bool)",
+]);
+
+// Telegraph escrow (docs/using/escrow-inference): deposit once, then pay per call with a signed message.
+export const escrowAbi = parseAbi([
+  "function depositUSDC(uint256 amount)",
+  "function depositUSDCFor(address beneficiary, uint256 amount)",
+  "function effectiveBalance(address) view returns (uint256)",
 ]);
 
 export const publicClient = createPublicClient({ chain: sepolia, transport: http(RPC) });

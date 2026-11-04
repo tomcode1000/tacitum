@@ -1,0 +1,58 @@
+{
+  "sampledAt": "2026-11-04T12:52:11.725Z",
+  "window": {
+    "from": "2026-11-03T18:14:38.375Z",
+    "to": "2026-11-04T12:50:52.969Z"
+  },
+  "userQuestions": 638,
+  "intents": {
+    "FACT_CHECK_GENERAL": 170,
+    "WEB_SEARCH_GENERAL": 117,
+    "ACADEMIC_SEARCH_GENERAL": 61,
+    "SANCTIONS_SCREENING_MATCH_GENERAL": 48,
+    "REGULATORY_FILING_MONITOR_GENERAL": 41,
+    "SENTIMENT_ANALYSIS_GENERAL": 35,
+    "CORPORATE_REGISTRY_LOOKUP_GENERAL": 31,
+    "URL_SAFE_GENERAL": 17,
+    "LLM_OUTPUT_EVALUATION_GENERAL": 17,
+    "TRAVEL_DISRUPTION_GENERAL": 15,
+    "CRYPTO_PRICE_USD": 14,
+    "CRYPTO_PRICE": 12,
+    "GAS_PRICE_GENERAL": 10,
+    "MACRO_ECONOMIC_INDICATOR_GENERAL": 8,
+    "SANCTIONS_SCREENING_MATCH": 6,
+    "URL_SCAN_VERDICT": 6,
+    "TEXT_GENERATION_GENERAL": 5,
+    "NEWS_SEARCH_GENERAL": 4,
+    "SECURITY_REVIEW_GENERAL": 4,
+    "SMART_CONTRACT_AUDIT": 3,
+    "URL_SCAN": 3,
+    "EVENT_OUTCOME_RESOLUTION_GENERAL": 2,
+    "CODE_REVIEW_GENERAL": 2,
+    "CVE_LOOKUP_CVSS": 2,
+    "NEWS_HEADLINES_GENERAL": 1,
+    "FINANCIAL_DATA_GENERAL": 1,
+    "unrouted": 1,
+    "TVL_LOOKUP_GENERAL": 1,
+    "ROUTE_ETA_GENERAL": 1
+  },
+  "entityNames": {
+    "total": 111,
+    "style": {
+      "UPPER": 7,
+      "Mixed": 104
+    },
+    "suffix": {
+      "ltd": 28,
+      "inc.": 13,
+      "none": 34,
+      "plc": 20,
+      "limited": 16
+    }
+  },
+  "gapSeconds": {
+    "p10": 0.094,
+    "median": 1.23,
+    "p90": 47.717
+  }
+}
