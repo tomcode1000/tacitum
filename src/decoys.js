@@ -106,6 +106,8 @@ export function styleLike(target, name) {
   const targetSuffix = t.match(SUFFIX)?.[1];
   if (targetSuffix) out = `${out} ${targetSuffix}`;
   if (t === t.toUpperCase()) return out.toUpperCase();
+  // Names that already have mixed case (Wikipedia titles) keep it, so acronyms like GCP or SSE survive.
+  if (name !== name.toUpperCase()) return out.replace(/\b(plc|llc)\b/gi, (s) => s.toUpperCase());
   return out
     .toLowerCase()
     .replace(/\b([a-z])/g, (c) => c.toUpperCase())
@@ -121,21 +123,40 @@ export async function pickDecoys(target, count, strategy = "matched") {
     return names.slice(0, count).map((name) => ({ name, jurisdiction: target.jurisdiction }));
   }
 
-  const bucket = fameBucket(await fameHits(target.name));
-  const picked = [];
-  // Obscure pools come one registration day at a time, so keep drawing days until there are enough.
-  for (let round = 0; picked.length < count && round < 8; round++) {
-    const pool = shuffle(
-      fresh(bucket === "obscure" ? (await gleifSample(target.jurisdiction)).filter((n) => COMPANY.test(n)) : await listedSample(target.jurisdiction)),
-    );
-    for (const name of pool) {
-      if (picked.length === count) break;
-      if (fameBucket(await fameHits(name)) !== bucket) continue;
-      exclude.add(name.toLowerCase());
-      picked.push({ name: styleLike(target.name, name), jurisdiction: target.jurisdiction });
+  // Fame is measured on the name exactly as it will be sent: "Konami" has many exact-phrase
+  // hits, "Konami PLC" has none, and the observer only ever sees the styled name.
+  const level = (hits) => Math.log10(1 + hits);
+  const targetLevel = level(await fameHits(target.name));
+  const as = (name) => ({ name: styleLike(target.name, name), jurisdiction: target.jurisdiction });
+
+  if (targetLevel === 0) {
+    const picked = [];
+    // Obscure pools come one registration day at a time, so keep drawing days until there are enough.
+    for (let round = 0; picked.length < count && round < 8; round++) {
+      for (const name of shuffle(fresh((await gleifSample(target.jurisdiction)).filter((n) => COMPANY.test(n))))) {
+        if (picked.length === count) break;
+        const decoy = as(name);
+        if ((await fameHits(decoy.name)) !== 0) continue;
+        exclude.add(name.toLowerCase());
+        picked.push(decoy);
+      }
     }
-    if (bucket !== "obscure") break;
+    if (picked.length < count) throw new Error(`only found ${picked.length}/${count} obscure decoys for ${target.jurisdiction}`);
+    return picked;
   }
-  if (picked.length < count) throw new Error(`only found ${picked.length}/${count} ${bucket} decoys for ${target.jurisdiction}`);
-  return picked;
+
+  // Known targets: score listed companies by how close their (styled) fame is to the target's,
+  // and take the nearest. Within TOLERANCE (a factor of ~1.8 in hits) counts as indistinguishable.
+  const TOLERANCE = 0.25;
+  const scored = [];
+  for (const name of shuffle(fresh(await listedSample(target.jurisdiction))).slice(0, 250)) {
+    const decoy = as(name);
+    if (decoy.name.toLowerCase() === target.name.toLowerCase()) continue;
+    scored.push({ decoy, gap: Math.abs(level(await fameHits(decoy.name)) - targetLevel) });
+    if (scored.filter((s) => s.gap <= TOLERANCE).length >= count * 3) break;
+  }
+  const nearest = scored.sort((a, b) => a.gap - b.gap).slice(0, count);
+  if (nearest.length < count) throw new Error(`only found ${nearest.length}/${count} decoys for ${target.jurisdiction}`);
+  if (nearest.some((s) => s.gap > TOLERANCE)) console.warn(`decoys for ${target.name}: fame gap up to ${nearest.at(-1).gap.toFixed(2)}`);
+  return nearest.map((s) => s.decoy);
 }

@@ -1,6 +1,7 @@
 // Paid Telegraph client. Every paid call goes through one queue: concurrent x402
 // payments from the same payer are rejected with a bare 402, which looks exactly
 // like not paying, so we serialize and retry instead.
+import fs from "node:fs";
 import { wrapFetchWithPaymentFromConfig, decodePaymentResponseHeader } from "@x402/fetch";
 import { ExactEvmScheme } from "@x402/evm";
 import { NETWORK, USDC, NODE } from "../scripts/config.mjs";
@@ -111,7 +112,26 @@ export function createClient(account, { maxPerPayment = "100000", rail = "escrow
 }
 
 // Anyone can fetch this, no payment or login. It is what the public sees about a call.
+// Records never change once written, so they are cached on disk.
+const RECORDS = "data/cache/signals";
+
 export async function publicRecord(signalHash) {
-  const res = await fetch(`${NODE}/engine/v1/signal/${signalHash}`);
-  return res.ok ? res.json() : null;
+  const file = `${RECORDS}/${signalHash}.json`;
+  if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, "utf8"));
+  for (let attempt = 0; attempt < 4; attempt++) {
+    try {
+      const res = await fetch(`${NODE}/engine/v1/signal/${signalHash}`);
+      if (res.status === 404) return null;
+      if (res.ok) {
+        const record = await res.json();
+        fs.mkdirSync(RECORDS, { recursive: true });
+        fs.writeFileSync(file, JSON.stringify(record));
+        return record;
+      }
+    } catch {
+      // dropped connection; retry
+    }
+    await sleep(1000 * (attempt + 1));
+  }
+  return null;
 }
