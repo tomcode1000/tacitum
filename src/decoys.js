@@ -25,11 +25,24 @@ const shuffle = (a) => {
   return a;
 };
 
+// Retries dropped connections; throws rather than returning a guess, so a failed lookup is never cached as "0 hits".
+async function wikiJson(url) {
+  for (let attempt = 0; ; attempt++) {
+    try {
+      const res = await fetch(url, { headers: { "User-Agent": UA } });
+      if (res.ok) return res.json();
+      if (attempt >= 4) throw new Error(`Wikipedia ${res.status}`);
+    } catch (err) {
+      if (attempt >= 4) throw err;
+    }
+    await new Promise((r) => setTimeout(r, 2000 * (attempt + 1)));
+  }
+}
+
 export async function fameHits(name) {
   if (name in fameCache) return fameCache[name];
   const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(`"${name}"`)}&srlimit=1&format=json`;
-  const res = await fetch(url, { headers: { "User-Agent": UA } });
-  const hits = res.ok ? (await res.json()).query?.searchinfo?.totalhits ?? 0 : 0;
+  const hits = (await wikiJson(url)).query?.searchinfo?.totalhits ?? 0;
   fameCache[name] = hits;
   fs.mkdirSync("data/cache", { recursive: true });
   fs.writeFileSync(CACHE, JSON.stringify(fameCache));
@@ -47,7 +60,7 @@ export const fameBucket = (hits) => (hits === 0 ? "obscure" : hits <= 30 ? "know
 // not over-represented.
 const GLEIF = "https://api.gleif.org/api/v1/lei-records";
 const FIRST_DAY = Date.parse("2013-01-01");
-const BUSY_DAY = 600; // roughly the most GB registrations seen on one day
+const BUSY_DAY = 200; // days with more registrations than this are always accepted (they are rare)
 const gleifQuery = (country, day) =>
   `${GLEIF}?filter%5Bentity.legalAddress.country%5D=${country}&filter%5Bentity.status%5D=ACTIVE` +
   `&filter%5Bregistration.initialRegistrationDate%5D=${day}`;
@@ -71,7 +84,7 @@ async function gleifJson(url) {
 }
 
 async function gleifSample(country, size = 50) {
-  for (let tries = 0; tries < 40; tries++) {
+  for (let tries = 0; tries < 150; tries++) {
     const day = new Date(FIRST_DAY + Math.random() * (Date.now() - 30 * 864e5 - FIRST_DAY)).toISOString().slice(0, 10);
     const first = await gleifJson(`${gleifQuery(country, day)}&page%5Bsize%5D=1`);
     const total = first.meta?.pagination?.total ?? 0;
@@ -90,8 +103,7 @@ async function listedSample(country) {
   const names = [];
   for (const cat of LISTED[country] || []) {
     const url = `https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=${encodeURIComponent(`Category:${cat}`)}&cmlimit=500&cmtype=page&format=json`;
-    const res = await fetch(url, { headers: { "User-Agent": UA } });
-    if (res.ok) names.push(...(await res.json()).query.categorymembers.map((m) => m.title.replace(/ \(.*\)$/, "")));
+    names.push(...(await wikiJson(url)).query.categorymembers.map((m) => m.title.replace(/ \(.*\)$/, "")));
   }
   return names;
 }
@@ -114,6 +126,27 @@ export function styleLike(target, name) {
     .replace(/\b(Plc|Llc)\b/g, (s) => s.toUpperCase());
 }
 
+// The third tell is the registry answer, which is published: the target's exact legal name
+// resolves, while a re-styled decoy ("Persimmon PLC", "... Limited" for "... LTD") often does
+// not. So a decoy must resolve in GLEIF, by exactly the name we will send, the same way the
+// target does. GLEIF is the registry source the miners read; asking it directly leaks nothing to Telegraph.
+const EXACT = "data/cache/gleif-exact.json";
+const exactCache = fs.existsSync(EXACT) ? JSON.parse(fs.readFileSync(EXACT, "utf8")) : {};
+const norm = (s) => s.toLowerCase().replace(/[^a-z0-9&]+/g, " ").trim();
+
+export async function resolves(name, country) {
+  const key = `${country}:${name}`;
+  if (key in exactCache) return exactCache[key];
+  const url =
+    `${GLEIF}?filter%5Bentity.legalAddress.country%5D=${country}&filter%5Bentity.status%5D=ACTIVE` +
+    `&filter%5Bentity.legalName%5D=${encodeURIComponent(name)}&page%5Bsize%5D=20`;
+  const data = await gleifJson(url);
+  exactCache[key] = (data.data || []).some((r) => norm(r.attributes.entity.legalName.name) === norm(name));
+  fs.mkdirSync("data/cache", { recursive: true });
+  fs.writeFileSync(EXACT, JSON.stringify(exactCache));
+  return exactCache[key];
+}
+
 export async function pickDecoys(target, count, strategy = "matched") {
   const exclude = new Set([target.name.toLowerCase()]);
   const fresh = (names) => names.filter((n) => !exclude.has(n.toLowerCase()));
@@ -128,6 +161,8 @@ export async function pickDecoys(target, count, strategy = "matched") {
   const level = (hits) => Math.log10(1 + hits);
   const targetLevel = level(await fameHits(target.name));
   const as = (name) => ({ name: styleLike(target.name, name), jurisdiction: target.jurisdiction });
+  const targetResolves = await resolves(target.name, target.jurisdiction);
+  const sameRegistry = async (decoy) => (await resolves(decoy.name, decoy.jurisdiction)) === targetResolves;
 
   if (targetLevel === 0) {
     const picked = [];
@@ -136,7 +171,7 @@ export async function pickDecoys(target, count, strategy = "matched") {
       for (const name of shuffle(fresh((await gleifSample(target.jurisdiction)).filter((n) => COMPANY.test(n))))) {
         if (picked.length === count) break;
         const decoy = as(name);
-        if ((await fameHits(decoy.name)) !== 0) continue;
+        if ((await fameHits(decoy.name)) !== 0 || !(await sameRegistry(decoy))) continue;
         exclude.add(name.toLowerCase());
         picked.push(decoy);
       }
@@ -152,8 +187,11 @@ export async function pickDecoys(target, count, strategy = "matched") {
   for (const name of shuffle(fresh(await listedSample(target.jurisdiction))).slice(0, 250)) {
     const decoy = as(name);
     if (decoy.name.toLowerCase() === target.name.toLowerCase()) continue;
-    scored.push({ decoy, gap: Math.abs(level(await fameHits(decoy.name)) - targetLevel) });
-    if (scored.filter((s) => s.gap <= TOLERANCE).length >= count * 3) break;
+    const gap = Math.abs(level(await fameHits(decoy.name)) - targetLevel);
+    // The registry check costs a GLEIF call, so only run it for candidates already close on fame.
+    if (gap <= TOLERANCE * 2 && !(await sameRegistry(decoy))) continue;
+    scored.push({ decoy, gap });
+    if (scored.filter((s) => s.gap <= TOLERANCE).length >= count * 2) break;
   }
   const nearest = scored.sort((a, b) => a.gap - b.gap).slice(0, count);
   if (nearest.length < count) throw new Error(`only found ${nearest.length}/${count} decoys for ${target.jurisdiction}`);

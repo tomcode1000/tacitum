@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Rolls-Royce Holdings PLC",
+  "parties": [
+    "Saga PLC",
+    "Rolls-Royce Holdings PLC",
+    "GlobalData PLC",
+    "STV PLC"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x19a65707a8ca617f72e615baaf73bd58b4cf60bc7667fa695ffc9ea602364bc6",
+    "0xd4d1b97b5affb138f7897632348a10438dd522283658e1d3924fd7edce60ec3a",
+    "0x78ec134245d136880a6a1259c3ce2803f17889f09afeaa4647f6b9c2ac367bd9",
+    "0x9054d33823d97c58059da55216085f7e3cc17a7dfc2ee9caa41fdfd6a9f47e7e",
+    "0x84452ff293dd459ede6d40e38e3ec4aac7014c76bc9a9228b7b55071ffdfc365",
+    "0xfbf6b76d6074a92319c5cd196c73adf98a158f75cd4da3c4e936ac6d4cf7de2a",
+    "0x75c584080ca027759a86008330b0138bb6850299326735b06c301bdfe37e2a81",
+    "0x48707589c76289c702c511a8f7bd5d103023a235183826e349ea6713f91df49e",
+    "0xd352080161a851fcbd93e80909be38b7549a74261d7e56fc269a974771ae0bad",
+    "0xf7513b3f6710f37ac0b093de6f5c1b0b6b79bb5ca88b72605acbe0b8e5990007",
+    "0x44d3307bb5d768712c17775275f31eda3096c5d01bfbd08a64978773030c9b0c",
+    "0x62698f438ee4539a971eb7cafca0fd1f2d28893fe860d58822dbd2d03349c736",
+    "0xeedbc6a421689db3c9f884bbe5b9c42352d2ff9c69318917fe75c8d4b0f37d7a",
+    "0x5ac54d9108ddfd7fdff202cebe470f2e16eda275b7d8011cd76ca627ef3634cf",
+    "0xe941c3292bd46045ee3596c50fbe69f0db5baf15c2fa7882e7ab52b9269abbbb",
+    "0x321ff9b598edb654f3aa7d53033671dd3900fcc6392459b61178e38deda2cf5e",
+    "0xcba1b737ed23b302e5c41768e2fdfdd075ce460540eee180a4b58db7dbb26b38",
+    "0xa95ab572e3861d591dcd7d8c9a8846a3a382955debd79a90a1f9f05866b6611d",
+    "0xef2aeece58b76afa2deb9a0a10aa37617cbfbd1b7ce8ecbe31c8b46b47d0ad77",
+    "0x1a37d86c1729d0d2703903d823b8e1cccc5131173fdcbd3ae0dba76dbcf623ad"
+  ],
+  "order": [
+    {
+      "name": "GlobalData PLC",
+      "check": "news"
+    },
+    {
+      "name": "Saga PLC",
+      "check": "registry"
+    },
+    {
+      "name": "STV PLC",
+      "check": "registry"
+    },
+    {
+      "name": "GlobalData PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "GlobalData PLC",
+      "check": "registry"
+    },
+    {
+      "name": "STV PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Saga PLC",
+      "check": "news"
+    },
+    {
+      "name": "Saga PLC",
+      "check": "filings"
+    },
+    {
+      "name": "GlobalData PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "filings"
+    },
+    {
+      "name": "STV PLC",
+      "check": "news"
+    },
+    {
+      "name": "STV PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "news"
+    },
+    {
+      "name": "Saga PLC",
+      "check": "sanctions"
+    }
+  ]
+}

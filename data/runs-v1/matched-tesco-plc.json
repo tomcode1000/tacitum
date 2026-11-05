@@ -1,0 +1,99 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Tesco PLC",
+  "parties": [
+    "Persimmon PLC",
+    "Currys PLC",
+    "Barclays PLC",
+    "Tesco PLC"
+  ],
+  "costUsd": 0.19,
+  "signals": [
+    "0xbaecc36a655f5280af9aee117404b44e2468cfda05e4222ddd661535553ba030",
+    "0x3742d75c963df5bc5cf52c7b8ed4a6ddf32a3f7e0d8cd5beb70fdea9d9d50694",
+    "0x27a82712b1b7504a320e887b1986fce9056d408961ca4de43d89631adefaa352",
+    "0x9811cea7aeecfa80c5c2305dce7a8a11e189aefa61e900e2e67e47f464579ca1",
+    "0x16cf508e5b2d230076362bbe8d10610f447f5efd70b2c141b6a6f8abc7e7dd5f",
+    "0x834e89efcbbd3b17a2e3922a46368f1411b7cf5756eb483e2880cdb71f0c75c3",
+    "0x6f064a8fd1d824e46cab9f57f2a046fd11a504f65700e1bbb3fe132c3936d374",
+    "0x2ffe93c8165f6f2c288787e140fd7f410fde7d9475878e1dd761faacda5ffb0f",
+    "0xf27bf8fc06a0641fd754ddfbbd00c6432b5938004a17fc97464e0cf24e027241",
+    "0x2b4a03514e114ea9fbbb2dee43201ce4994c4b0b528ed71523b68767492c50b7",
+    "0x6ae53a6f31abce7b2d83375e8aa9d0848860cbf9bea056d43fbe6e35d21590d7",
+    "0x1eff075f188afc4e231785ebcd459f45635234a1d7cff6ed34555949c768652f",
+    "0x90c7c5217aaa9589b71e9119e068afbc992f8b0b89546fa9cbae28e8f341b819",
+    "0xa5a3474b0626263aff83d8226c264756fc2cffafadd664f2814788432efa5a5b",
+    "0x7d78c872baa4961ce70ebd9e41b175b2184717a4a1a06b32f846b396f561bce9",
+    "0xa169c4a8308931768ac845d15b7befbc8e2605c80bed7d61a61a4c86d860d8cc",
+    "0x26bc04c98f7daf881fff3662b2591eb8893896d48db377f61f19613da19fb1dc",
+    "0x217783ca63c21048bda3b040f2abdccf19f129858e10f9c96b1a5f1bba7d9a70",
+    "0x589bc995a63698a337417ee24ba82c998f47cebd24a4db23f1c843b32d20911c"
+  ],
+  "order": [
+    {
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "news"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "news"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "news"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    }
+  ]
+}

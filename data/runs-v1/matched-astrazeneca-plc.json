@@ -1,0 +1,101 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "AstraZeneca PLC",
+  "parties": [
+    "AstraZeneca PLC",
+    "Inchcape PLC",
+    "Grainger PLC",
+    "Standard Chartered PLC"
+  ],
+  "costUsd": 0.21,
+  "signals": [
+    "0xace0458470c5220deea3c8aae3f0cfd4b6d2d64aaaa1cbbcc8fcc6950e110ea5",
+    "0x4e933d6e183ec7f5754130fde70e52085ec85d3d2e005ec0dfaaade72eb84482",
+    "0xb89b77e76f7194d8ac03f0d84a47912ec78fad98cc2387b0e3682f11034cba79",
+    "0x23ddfd7a2830bd48b92a9b1bb7a142c3a8d2d55ea5110bb93554cacfd2765c29",
+    "0x49ec4e0c0d20f12f3332d4031b835197760c9c1e50f9417f26aedce676439ec0",
+    "0xea5eeeebdecf2da096db20c93ecf79319781d788c9d1a1a638ad40ee1a97f568",
+    "0xb0b48b7fac3b8d4dd6898570f50f2375ed3b6caf4cf1b95f31affe5f7e127f95",
+    "0x3b4655ba53848f73d9b5684688eb933fb81678dda6c2ecb0c517f76d6e05ab77",
+    "0xa1ba96c583c973bb693743857036d1f13d73ac81b0c57fcb35ab281052bcb76d",
+    "0xf47b3008c7cdf60892b22ee93bc55a7f055826231c3fb00b54c397441db880f2",
+    "0x206c7c08975e50d45be85497210b3fd17e446edaeb74e04f7c27a986d82762a5",
+    "0x133065d6d3e0481878012b19abfd71282a98f3dca87c1f89efb68d40874d3f83",
+    "0xdfc5fa7c2bf3090d09c89fded101cd813b717c96e530ef037b3444a456e6b2ff",
+    "0x4288213a2e9ed9dd20bedca292444624317e59ab9f05b3648fef5c8a8565b4fd",
+    "0x3e37968e6d236db5056e56d84c2f47ed456c14b420b8676ee679766eb81351ff",
+    "0xebdd91cef14b91ce30fd6cfc72399b138be1c575bec719c5369d5cc46b0705c9",
+    "0xd636c1a7eb1d3e1da6b246adddf77b30a5c1811e5dd467262df3c89071b8aea3",
+    "0x97789a5962c21e192345e4c2485ff4028553a9253e01f0650613bb1cc45535ea",
+    "0x388e416c898fe231f8664fec1ab9e479ffcb5f83f39e54620f05933c2e3bad79",
+    "0x4676beb3e6f657bc15d5f8d5687e9958b673453fca4a99b802a031f18e7e8934",
+    "0x946ca8800388b14b8620f545292e77c8a2f535ccd01518d9b3c21913f83df73f"
+  ],
+  "order": [
+    {
+      "name": "Standard Chartered PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Standard Chartered PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Grainger PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Inchcape PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Inchcape PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Grainger PLC",
+      "check": "news"
+    },
+    {
+      "name": "Standard Chartered PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Grainger PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Standard Chartered PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Inchcape PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Grainger PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Inchcape PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    }
+  ]
+}

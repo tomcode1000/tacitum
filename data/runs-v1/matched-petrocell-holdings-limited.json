@@ -1,0 +1,99 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Petrocell Holdings Limited",
+  "parties": [
+    "D'Addario Uk Limited",
+    "Keepsafe Enterprises Limited",
+    "Aldingbourne Accountancy Services Limited",
+    "Petrocell Holdings Limited"
+  ],
+  "costUsd": 0.19,
+  "signals": [
+    "0xcf4b278e456686f2e897c08c12ab3607492fc4aab49f5dddf712ec9bc4df8ce4",
+    "0xe02c59560125ea5519169c4782c268cac893d2555ece678b7e08d3477c254dbf",
+    "0x7514d468dff3f19f4cc5d0d30b40fd2dac34da4058bf24cfc0ee7fbab49ecd3b",
+    "0x59055ff9977371f6eb52ca6ff019278680804f1b66998db5ba41a2c3413e5325",
+    "0x780cf98c5f15ae88c4a4ab9a7dbf6d3a58721a4d9e96e6fbf5b2c8f8ed322394",
+    "0xcb25527952138bbd2c3b47d4f40e64ccd3ae3165bc6f2d481c8ff6076f1a542e",
+    "0x920f7df3a343e91ed25065640ac4b55fcf561f2c3c1a74a9c13883399b248e00",
+    "0x0c8e005fbe2f07e813cc6010c58b7bfb97c76e91e8b65859e152c97f009e27dc",
+    "0xe7618f94a8d031e790c10025d94f15e913d02fc868601deb4c93d216b0b8b917",
+    "0x3d93e729c0de93a375a3691807153d421336509af72ff8497fe07a111c1e0568",
+    "0xb11c45367af5b691a085d40b1e4a92bfacd8542b7a3369eead751c3608bda800",
+    "0x45c8b25cb33f64324c30e7f8ff93c47f58a0a45c8bcc4f20416ed776f4d2323d",
+    "0x145012ab7e88963db7de571e35d72a2fe8acafcab7ad3cf899c492fa919f950c",
+    "0x7ca3336c5d68dcbe221fc3b5a14e98b2d2c2ed9b79100204675de2c92029b351",
+    "0x5bb4aa1af6ce3df8a8229de6818995489c812a99e3ad1ff1b99e4ff8b4edb2c2",
+    "0xa2f76b704f5fb467d88aba2fe961ac553ff6379cc2d77a57fab650a38c7907ba",
+    "0xf05fcfefb1c31d7ee7d0e0bf35d61826a7b43744632e6e53cb3cb7e241e5339f",
+    "0x4714c207bd6c4774ddec3e614bd3e6bc43c7b8872054c2f5b21a5cdac876b612",
+    "0x66c3ae74e4876f7ebda37743c0c175709f7ce5111782e174bf299031f426c58d"
+  ],
+  "order": [
+    {
+      "name": "D'Addario Uk Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Aldingbourne Accountancy Services Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Keepsafe Enterprises Limited",
+      "check": "registry"
+    },
+    {
+      "name": "D'Addario Uk Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Keepsafe Enterprises Limited",
+      "check": "news"
+    },
+    {
+      "name": "D'Addario Uk Limited",
+      "check": "news"
+    },
+    {
+      "name": "Aldingbourne Accountancy Services Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Aldingbourne Accountancy Services Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "news"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Keepsafe Enterprises Limited",
+      "check": "filings"
+    },
+    {
+      "name": "D'Addario Uk Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Aldingbourne Accountancy Services Limited",
+      "check": "news"
+    },
+    {
+      "name": "Keepsafe Enterprises Limited",
+      "check": "sanctions"
+    }
+  ]
+}

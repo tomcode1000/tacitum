@@ -1,0 +1,97 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Three Shires Property Investment Limited",
+  "parties": [
+    "Three Shires Property Investment Limited",
+    "Greenbank Holidays Limited",
+    "G&E Investment Services Limited",
+    "Umv Global Foods Company Limited"
+  ],
+  "costUsd": 0.17,
+  "signals": [
+    "0x17518e58cdf20515d8f44435d0579e2fdae5e0f70182f863eff28929d51e8d3f",
+    "0x5956eebb5f0a48f36cc20394aeec8e6f590ad314c53e481a94932d6fa3263b76",
+    "0xd78ba04fee44a68785dd9b78287092685a47ddc4cf0c915b88e1baf6eda4e187",
+    "0x11eb64310e8192590fec6f3a4ee3ebf1f43bf0e335be7e91bcd61c8984a49135",
+    "0x27a14aa59c0eab8c13cc91380f70a9af8d9a5d6eb15b26e0a7eefdc33d3b4a9f",
+    "0x43e0f30e34a001a11fee0582301628aa92be9c82597b9821ac9b555ce1817cc8",
+    "0x73fd279a2a46b7644ed1a3d79506a69fcf4c31dd1e5385d6e44552324a926003",
+    "0xef3509e4c012893742d7af0a4953d80bd4c1ee97349b636280e7309cd824fc5a",
+    "0x9dd624c134de27165b70631fd24a23e76e6dd09e589d5f009ac33bbf3c91b951",
+    "0x68959a9e0944b1711ff462586d5b32438e68505c663fae0912146c1095f750e5",
+    "0xec929de3494a0d1bee29e05edcf0ad15625b67993851adfb88861731b7692262",
+    "0x85e91b2adeaf20a75b7713fe65e797386585ac10d0f354f3be2b7b85619c6620",
+    "0xdd0f380a2611758d82b475f1f0fb1b963a4e312bbb415164ca89b4d0da5d4e57",
+    "0xc8ab4b0b0d7f2cdfbcf4c0778b0e879b9a44e119599fc4c2cd17c878200c5c2d",
+    "0x27f513af7ac2ec79478b1ceac3ec7d93364637a3daf7a63c198024625a3c0ef5",
+    "0xe82855a3e09cf462ea0864694797ced3fb769b42a0fb39219fe59ce8c0c3c33d",
+    "0xfd6c685099b914b6e8ba10973d6406301ffed28473ab90139c9f87e5482dd44a"
+  ],
+  "order": [
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "news"
+    },
+    {
+      "name": "Umv Global Foods Company Limited",
+      "check": "news"
+    },
+    {
+      "name": "Greenbank Holidays Limited",
+      "check": "news"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Greenbank Holidays Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "G&E Investment Services Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Umv Global Foods Company Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Greenbank Holidays Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Umv Global Foods Company Limited",
+      "check": "registry"
+    },
+    {
+      "name": "G&E Investment Services Limited",
+      "check": "news"
+    },
+    {
+      "name": "Greenbank Holidays Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "registry"
+    },
+    {
+      "name": "G&E Investment Services Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Umv Global Foods Company Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "G&E Investment Services Limited",
+      "check": "filings"
+    }
+  ]
+}

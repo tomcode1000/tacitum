@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Barclays PLC",
+  "parties": [
+    "National Grid PLC",
+    "Barclays PLC",
+    "Currys PLC",
+    "FirstGroup PLC"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x1e25da795ad564f8d13fa2d73197cac8dd4875733a86e59191011a2875e997ea",
+    "0x569e9013d18dc465ee71f622fbd0ffabb0773aea3af77a23bd368052f055e88a",
+    "0x4a32dfee0881c7be0b5142f32a8d6de237be3313e3144b5972d4fe4c6db32899",
+    "0x44989ea83608235a4c8307c9f20cf42bd75693817692659cfa87e1db53bb8dc9",
+    "0x20fc4864035784bdb77939ac6b5743a692a02712d65e05d284cc8a5bea3ce528",
+    "0x09ad03257372d92c1ce41b01ff2764347e4d75a91b02e336638530af09d7c58f",
+    "0x5ce4b6a357bf101f8086874f1e644af36ade4fa2b5c7d6e4b6c1be787da840f9",
+    "0xdbd44a6d86eb412d55329fc8ce803ddf718bf473e520545bcafc37227078c5e7",
+    "0x424c3dc1f7fdf3c2df35b91607bf46cb70e2fbb49aad8fac6a40ed7603875515",
+    "0x424c04c4be3b1da046470a8b8373605c0479d130878c98dac42fc93e94702001",
+    "0x2c9d3e0433a1d861d27636ce7fac5d7382e419b2c2aa81cb6153fcd018f02da2",
+    "0x9b49d3b7c06d3c372028733a5e79360175ae7b23c4fc9aeefce8a1c771d214bb",
+    "0x0c149cba4234212a2765a2b3316cd9241adfb307fd3b542dcd710bcd59d8cb3f",
+    "0x9111c1d89f34c1bab7fe4fb922f4cf96b5adb600dd05f8f95a7fd13ef3d64f8b",
+    "0x5b86b689d039db771eed27b0e67b667575b2f5d64d7a3b479cd3a7329e17705c",
+    "0x0ea5a00a79de2176d953de7af07004b40c19743f229d0e4604491b11e884feb3",
+    "0x295a1985ba0fb2e38c8122cfaca0f1fd0056a7f71e3cde4185e835b582b96f8d",
+    "0x7f80db7c7ef7869753f2b15d61a50a31aa74954e18041f8310ad9fc8b9512329",
+    "0x0d8d54554a02ae94ac7e3e488956d91e4f124c6b256e529dc21dbbbef777f70c",
+    "0x395c601ac8f9dd253a7a6b36a9884a1eff61821341a206cbf65dfab5074ff8d2"
+  ],
+  "order": [
+    {
+      "name": "National Grid PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "filings"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "filings"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "registry"
+    }
+  ]
+}

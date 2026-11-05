@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Hillside Housing Trust Limited",
+  "parties": [
+    "Orbit Investments (Properties) Limited",
+    "Multipanel Uk Limited",
+    "Hillside Housing Trust Limited",
+    "Sumitomo Corporation Capital Europe Limited"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x7680e2f1a1690b2725047541e665e29d44ce0ba3ff995e0fe41513089971f7d2",
+    "0x8814a1a5fac3e884fcef3c858eab5f130b99ad679ebdc10301698f86508e3fa0",
+    "0x58beb99e0cf7ffc079b8d675dd78cdc0879f361d8dce12f70de46cd53e4798ea",
+    "0xe729be1fa04e6630f95c33a6dd986453d8e40c3f921f843de2b588bcef3e2c8c",
+    "0x53ac3afa67934aa5befcaaffcc462cf4d650d7b8f0153c11c54d4b082f44a6bc",
+    "0xdc7fc54ad517bf4e3af4df9439074357f8d9d2e5b8f3613206fd6aa76d320744",
+    "0x54ec0b827f1dacf15977180c20ee8cfe550ba45f5012da3770146d934ffefc51",
+    "0xbf40b56af2a0b2ad34fb3f73ad68e2f1f100b488946d175b6e217929b2f85185",
+    "0x11877d58cf7cdd4f92adce2555f1f77bbb8b0e0ff2c221be1b9171e4d7048387",
+    "0xbbe4d182635e96d64b555241dfebb7be896745d209fb039f10c0e9adbf65f6d8",
+    "0xb116c453d28212ca2d5e4bd6b7419d403557e653132ba7cf08fdadf1059cc9ce",
+    "0x910e761de70d9ff87c859905262ba5eb7dd3b3a415a30858cc3634287670cf52",
+    "0x2ed4e329c9d3626dc964ccec682ed8ce46edff063a08c276cf8740f466fac10b",
+    "0xc7f52f31958b70ba567612e42d393e66fd57a43e9e69e2f8866ae3553b607085",
+    "0xb7be2c7c0ac16556d782457d9ea83f450a509e7479dc04506f83a26048c409f5",
+    "0x82b2ababc453e13e0c0cf9ef1081ab144d30be8094441f31e9c3517415901d86",
+    "0x7ad3eaf16404bcc6a25f0b058e974227c01283e9b8307495fb7eba0c37b4fee7",
+    "0x009ceb791d311813bf63cf4d638c6a2d9f76f83d7d12699c776b52625d23deec",
+    "0x868fe17a48f20c7a893aac6b48030408111d2951a532a67bf3bf788d947d0db9",
+    "0x5d27274f311a25a52238fb6d928e4a76efb0844b2c2ba08c9247958b49ba644a"
+  ],
+  "order": [
+    {
+      "name": "Multipanel Uk Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Sumitomo Corporation Capital Europe Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Orbit Investments (Properties) Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Orbit Investments (Properties) Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Orbit Investments (Properties) Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Orbit Investments (Properties) Limited",
+      "check": "news"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "news"
+    },
+    {
+      "name": "Multipanel Uk Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Multipanel Uk Limited",
+      "check": "news"
+    },
+    {
+      "name": "Sumitomo Corporation Capital Europe Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Sumitomo Corporation Capital Europe Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Sumitomo Corporation Capital Europe Limited",
+      "check": "news"
+    },
+    {
+      "name": "Multipanel Uk Limited",
+      "check": "sanctions"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Zakhs Holdings Ltd",
+  "parties": [
+    "Carbonbit Ltd",
+    "Emerton Surgical Services Ltd",
+    "Zakhs Holdings Ltd",
+    "Orbian Financial Services Xlix Ltd"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x45a230b5cb3f55edbdc51abefda4c0954180c50db09fb7446d34d9a9ed8dc6c6",
+    "0x46c1c702233e3371ade6e522b97dad6f8363703f62363bf8769537a8be3ba4da",
+    "0xefcefcfed35c5cd8e7a8a8688a2ce4d2b77e50be0cca9559f09258669d9c9398",
+    "0x740f27d1a9ad2a05aa1eeaef753b46b95bcf02ec2368ddfb421519f3e216c1a7",
+    "0x3b501d26e47dae4b61ab5061f7aa70024ebfe7296d177cdcce29a452c2d0b128",
+    "0xb7066fd3e2a7653c9a514933588507cbf9d9e49cf8c71b7f46e598cf8839c2dd",
+    "0x02349161f2a21c85ea9a0cd35966e2eac9685ae83a3d4d1f7d04fea5c93676bf",
+    "0x4c9dc18566386ca071f208a17f166cdb2c727c3707634643e0ce4d76d7fdee74",
+    "0xc666895c1b6cf679722089c02f04291b97a475d45cc312bf31092fa28ff8e169",
+    "0x7551b68ac7418c30e884b12c43bec917bc41da7e414cae62de7fe998346b1dcd",
+    "0x08e17fcf9a8642838f00106923200fef66bd09baddb6b5a767853b2ae47e7769",
+    "0x93221d3ad84bca0a7daa2ffd770e3f8616a25528ad68b4b9fd31f60aaba33369",
+    "0x04a138f154981b01edaa5d469491998a00ccca2227851d9d918d2d3d7b841d7c",
+    "0x7f0a08f004399261f2717da9e2196adbfc1ada8e9e81a9b9708bc6d8f9aecccc",
+    "0xc56d2cf601ac24c05dd827c58ebf635c9d813568abbf161fea67adbf92d1adc8",
+    "0x719e36f1869cc5176ad763f8f7eb23a0e3bd7c28c04af96310ee4d6edad22a60",
+    "0x26e1a7a1d6921c8e01de46b514f0e5ac0d5b4e04fa21addb95f7645d22cac117",
+    "0x47d1307c246e9b57e1f20c41ebe52a9a0e935bcad7b45b3d04eb2e3907e4b4ea",
+    "0x3f3721cf68609060e4922592ae4af368424c06bc1836e7e3fa3dc3266cc6c250",
+    "0x6b5239e1d2b0c85717cace54015b58bb9b6982bbf4fd16653bf926422c6bdb48"
+  ],
+  "order": [
+    {
+      "name": "Orbian Financial Services Xlix Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Carbonbit Ltd",
+      "check": "news"
+    },
+    {
+      "name": "Emerton Surgical Services Ltd",
+      "check": "sanctions"
+    },
+    {
+      "name": "Carbonbit Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Orbian Financial Services Xlix Ltd",
+      "check": "sanctions"
+    },
+    {
+      "name": "Emerton Surgical Services Ltd",
+      "check": "news"
+    },
+    {
+      "name": "Emerton Surgical Services Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Orbian Financial Services Xlix Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Carbonbit Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Carbonbit Ltd",
+      "check": "sanctions"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "sanctions"
+    },
+    {
+      "name": "Emerton Surgical Services Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Orbian Financial Services Xlix Ltd",
+      "check": "news"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "news"
+    }
+  ]
+}

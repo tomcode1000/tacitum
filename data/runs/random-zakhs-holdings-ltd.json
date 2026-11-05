@@ -1,0 +1,100 @@
+{
+  "strategy": "random",
+  "k": 4,
+  "target": "Zakhs Holdings Ltd",
+  "parties": [
+    "KKR NEXT GENERATION TECHNOLOGY GROWTH FUND (EEA), L.P.",
+    "Zakhs Holdings Ltd",
+    "CASTLE MICROWAVE LIMITED",
+    "FSSA Global Emerging Markets Focus Fund"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0xac5de1e7a890d29f2a10b76769c8d689586c7b13d7c6cf40a3d4aa3cf37df807",
+    "0x586207f2e6a3596d6ac393bd6b1278b704dc9800622f2a3ea95a78c99d158894",
+    "0xb6332f35d42e730156b382571ef14ca7d74d148d14f64a80bed27bbf9aca6548",
+    "0x2eeb955f5959cb5af2dc9ed29ec9e2bdb0aa59e90870184ff6cb08de2b8e3c9d",
+    "0x801ed41b62e653a6c71e6530de0f315b6f813bacb807886a8841d9694cd69a84",
+    "0xdebbb1e6a9f551ab6fd386e02f615ceec6a41a3f9c1d8cd9e2a7b90397443e35",
+    "0xa86dcf97446ed81ebe233a846e61b4b5e5a138579660537da2cb732e525ca138",
+    "0xb972c6bf21c6e41eb9af56c30f70e8b6e2b3aee5aeee3300b8c85817fd975044",
+    "0xdfe101d5bcf01c98eaf2cfcccca9c638453bb3d2f10870d0d266e95e753386dc",
+    "0x4cc24988b4fd06e2258075d899b43293ee696a6415c917420751c5a066eb1e4f",
+    "0xdbca4072c7b9c2fdfe2dc3226bcaded642a3bddb3bc50452d39784700dd09b3e",
+    "0xa15304fbef19b2a6ee62eacc7eb748a6fc0959ba938134741c4fa9f5b49b996b",
+    "0xf7231f3ffb324a7a179614d2185b945acc4e4435e5925bc5bc79d0ad376c649d",
+    "0xa77bd2cd664d5b622f20a4bf7f96f45eb987baed9a3458a87ac10d56b4b6abd2",
+    "0xf8d4374cec04515dd46d6acaa8b1eb630234c14a18cc021ce875b8e36147e023",
+    "0x7b388b94885f7a9bcbaa3ca1a0919354441168b731d7b4590926634b5b327635",
+    "0xf564fcb3a47c79b22ae1b3005669bace53e1f6c95737bb974da568c1e08cca23",
+    "0x0f00d78ec85784ae35cc19b515e93099a3c440494ac21f53cd4f10f8a5d0f711",
+    "0xf90e998676cc4d8e4a2d83ef88c74add235d75b301aff9b461d6025d515940cd",
+    "0x38afecb22ac892a88d26e3654110ee52f2bfaefd8c235ce022af8959db113162"
+  ],
+  "order": [
+    {
+      "name": "FSSA Global Emerging Markets Focus Fund",
+      "check": "registry"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "news"
+    },
+    {
+      "name": "CASTLE MICROWAVE LIMITED",
+      "check": "registry"
+    },
+    {
+      "name": "FSSA Global Emerging Markets Focus Fund",
+      "check": "news"
+    },
+    {
+      "name": "FSSA Global Emerging Markets Focus Fund",
+      "check": "filings"
+    },
+    {
+      "name": "CASTLE MICROWAVE LIMITED",
+      "check": "filings"
+    },
+    {
+      "name": "KKR NEXT GENERATION TECHNOLOGY GROWTH FUND (EEA), L.P.",
+      "check": "sanctions"
+    },
+    {
+      "name": "KKR NEXT GENERATION TECHNOLOGY GROWTH FUND (EEA), L.P.",
+      "check": "registry"
+    },
+    {
+      "name": "KKR NEXT GENERATION TECHNOLOGY GROWTH FUND (EEA), L.P.",
+      "check": "filings"
+    },
+    {
+      "name": "FSSA Global Emerging Markets Focus Fund",
+      "check": "sanctions"
+    },
+    {
+      "name": "KKR NEXT GENERATION TECHNOLOGY GROWTH FUND (EEA), L.P.",
+      "check": "news"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "sanctions"
+    },
+    {
+      "name": "CASTLE MICROWAVE LIMITED",
+      "check": "news"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "CASTLE MICROWAVE LIMITED",
+      "check": "sanctions"
+    }
+  ]
+}

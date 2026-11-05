@@ -1,0 +1,102 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Lloyds Banking Group PLC",
+  "parties": [
+    "Carillion PLC",
+    "AstraZeneca PLC",
+    "Lloyds Banking Group PLC",
+    "Inchcape PLC"
+  ],
+  "costUsd": 0.22,
+  "signals": [
+    "0x06834de47e94e0c8dea223fddf7499d992e809dcd07d3e3de4762b29ceedd60f",
+    "0x337767345bf6fc1360ea7016e050bfd11e70b58ee75b683bf09e04bf430df736",
+    "0x60111da3be77168b56590674befb1c62a90c7b5eda3b201055d989b91bae9c9d",
+    "0x314e8720865e38eec6352e1484e4271818aba9974ab000d519a3ac9bd1d2140a",
+    "0xabcbc3fb650753e20bfe3a6f12c472a4c1023726f5e806d35d147e9b40548860",
+    "0xf0d5a48afd61ec854125843c05c34b5d36b1fe30372699ee5975cf4b857b3afe",
+    "0x631dcfea6256dd5919edff8d1ce7443e4f8c5c730da21c48d6125beb757e7078",
+    "0xa1485a75ee9df811b8787bf7ef50ad6d02069601cdb2e80199bbda2cb096c3e1",
+    "0x891498a74cb04ed712346a81ae5f5e48d031cd68f7375993e6dcb62d28f8d9af",
+    "0x7f664078a772904d54f4b4271bd5f0691511e68b2b1c46fec54f4de344dfdd01",
+    "0xcff1bcef8254fe07922ec05c996f4a7e5f4df0f7edf6c2bafc5e57ead6d32a2a",
+    "0xc024e1e859109fae2371d59dd665c121c7b3e89b666da17ee2df4016d56d4afb",
+    "0xe1069f9ec291e4665fa3527f5bd140d3e3c28d016862521ebf8cc1e12f6d1b73",
+    "0x31b10573cf07e0abc40ecd69f962b2628099e4c9fe98212f65b677e7bd78095b",
+    "0x33f89d1794d303cd2ef6b24d0805176a860fcd40e3bea1046073c5535ab2200f",
+    "0x94d17882ec0893e1099b7e7cd798e8293b4951087d1cfb3e853ad60736d52370",
+    "0x3afe9cf99f80630923a2e3e20a3887662e5cfa3fb4f2d80eef022a8fa3a36aa7",
+    "0xf7015b8b23c5f63ad4ed737eff8b29125e658d7a20166b05204a7ed6a5929a32",
+    "0xddf2b39950d3ccc59f3484e673bc5d2cdaa44d78b913d62cc9de8e096df45dfe",
+    "0x208e6016caf4cfbade56383433f74e0e2e0badcf029c5737564fd7ebbb022891",
+    "0x46e09cbc5457d90d100a6309941d20b783d3101f483d6576a35b688921671760",
+    "0x18cc428e702d935d2da8470b7f3087f74ce79099bc86e364ee456d3f36f9f25d"
+  ],
+  "order": [
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Carillion PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Inchcape PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "Carillion PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Carillion PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "news"
+    },
+    {
+      "name": "Carillion PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Inchcape PLC",
+      "check": "news"
+    },
+    {
+      "name": "Inchcape PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Inchcape PLC",
+      "check": "sanctions"
+    }
+  ]
+}

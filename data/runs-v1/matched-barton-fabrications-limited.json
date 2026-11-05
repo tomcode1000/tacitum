@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Barton Fabrications Limited",
+  "parties": [
+    "Mylotto24 Limited",
+    "Barton Fabrications Limited",
+    "Cosmetic Surgeons London Limited",
+    "Amtivo Group Limited"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0xb0ea781b3c84b09d18c99601b375da89d79c8dfcf0120a94ecb8b19b3978b41b",
+    "0x1de67e2edcbd544e6de4eb575d91fb272cd0fb2133ff8fbe1c701813086f22bb",
+    "0xd0856f22579d3adb93c94f4cf002d0a8d48d75820065fa744071dd173f93bdf5",
+    "0x8adbbc7b7dbd2ff5da392d167b266de7c595b7e31586bb9f3f93379ed6ac9968",
+    "0x30556c43764e35ef0090e2c4ef2aff111dbdaf58db21426f8967c1fcd4f6862b",
+    "0xf5508cba876a9321ecd883e68d9d149c7c6989a3dda9addcc94506bb84a43ff4",
+    "0x011471e3753800e9a226dbfc0ed0d9f920675aefa0bed9581dd4ad4e4e4d2eec",
+    "0xa8900c282c1222ee6c1be1acf388c414a6161b7d7a2aae130b28f8f5bf7a149b",
+    "0xbb70319172e51dcbbfb8582db0725faaccd099dcd7f68fa347aa2b257b286a4c",
+    "0x1d7f5739917fe6904cbe071748b8b9226e22d3aa3a5e5279749df487d3f2a430",
+    "0x5d2c470523f4f0cb8c74402548b963cdadfed5be18b00614d53f650083ef34a5",
+    "0x72a91ba1018ebe3008e3d187c0c06afbe01de2befa8406b8239892f1ac218081",
+    "0x9dd13e99c2a668684ab8d0c06552d5b5596176d0f79fa280ff0e6c380d96cbcd",
+    "0xd35146c5e98a1291ec706279ac7005f7310e00eac1e04b36fc4d43e91906ac15",
+    "0x2f2e420bbbb9cc5c90be46f959788f37a92fcd21db5ae5c9e1650577cdedf75b",
+    "0x3f2dafb66eef2e196e9cec2a13e323c84f390ccc0596ef48cb7b6288447583f8",
+    "0x2bd330589ee543be2eefc389274c9c3da3019d88d9fddf1c479ae973c3b7219d",
+    "0x96f5621a14cdf4da6608fdbcd540edab915b3cb4c0af6b88f0a39f7cf9b375f2",
+    "0x6eb550032c2483700ad9f3cb6bf391bf9fbfaf4f14c0efbc757644730d489118",
+    "0x07d54cc93e7506d13200cacafc9f92dfd96c14a6ff43fcb0322ce63bfba5091b"
+  ],
+  "order": [
+    {
+      "name": "Mylotto24 Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Mylotto24 Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Cosmetic Surgeons London Limited",
+      "check": "news"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "news"
+    },
+    {
+      "name": "Amtivo Group Limited",
+      "check": "news"
+    },
+    {
+      "name": "Cosmetic Surgeons London Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Amtivo Group Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Mylotto24 Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Cosmetic Surgeons London Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Cosmetic Surgeons London Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Mylotto24 Limited",
+      "check": "news"
+    },
+    {
+      "name": "Amtivo Group Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Amtivo Group Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "sanctions"
+    }
+  ]
+}

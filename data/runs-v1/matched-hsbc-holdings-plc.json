@@ -1,0 +1,102 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "HSBC Holdings PLC",
+  "parties": [
+    "Prudential PLC",
+    "HSBC Holdings PLC",
+    "Persimmon PLC",
+    "Kingfisher PLC"
+  ],
+  "costUsd": 0.22,
+  "signals": [
+    "0xf824d62ac6d0312b5de69bfc27a2860cad0435b0ce2ed19e384726fc41c3c50f",
+    "0xec2e4b87bd2cf712066395a6f0ce54f4acbd4ff92568e884e0b703d8f2e791b2",
+    "0x6d4a9e971b3f0148ef52ee6ce356431cb1da31324e5d837ee0c2acb19755efd6",
+    "0xea3de67be8bafc5ae7e01de959c7894a58d30018edc0718e1300751278e2bb1c",
+    "0xedbc87951dd456364f56797c4292826aa70cb94c331bd6c5b57a7d51aaa8dbe8",
+    "0xdeaacd874be40ea6177cdf03f14e1f96b67f9aebf7fe676108d53912855eca6a",
+    "0xfd0ddef02529ff44a1e94ad8cd488dd14fc8e077beaaeb93e2df8520c0afd2d6",
+    "0x8f1ee2fc5d726107a4c83dc98186741c9244489d6ae7391b33252908de962542",
+    "0x69c291c8fffee0bb5c192e52983671c742781763ec6b2ef74ee3fae8c5d900c6",
+    "0x3db6b9050b49cabde247579d1de334ce1ca970c22ed5a394012a64a7020bb4c7",
+    "0x0c949548dc8fada551aa145865cee2a9ab07da718ee383e68016fd657c346f25",
+    "0x468aaa2c374a3a5ea027a0dab91a0330374b5aeba5acbb791940637125cad811",
+    "0xf93d03b24af0b990d5db6d521924986b6456c4680d416e67c168f51f400171e7",
+    "0x9b93800a96a1f218b1ce4613db8245c95288b2f0a6dd67cc2ad2820be95d256d",
+    "0x29bd66da681215a4386ee10f4acdb47f25f8c1c9ac9d538ce049f1dc762d2d67",
+    "0xad769545f665ddabb1a3fd6d82731493a0f60bd58f95ddc14fe1b4f44bd2619e",
+    "0x4d451564b4aebb65c54c02fb53f648e31b5f1b9620cbb92c34e88f9fef8ec7cd",
+    "0xe81b8114fb74416a5ff9fb68ac29904a633db41884789ab0b54b42bc6b553d53",
+    "0x165279768c1ab78c1fdfafc9f65110ac7550be14800deeb3f5d908472c025319",
+    "0xd40e260257c30cb57efdecec72d0a323c490c61665a4b0b144550fca5cfa4819",
+    "0x542610a500c5bb0e194255a2a78ce1485c974962da8a23c7c11a9001fc14d92d",
+    "0x9733c0c3c255dfd0f04922eadbd9022d4efe904cc591c0e329fb9c36173a927a"
+  ],
+  "order": [
+    {
+      "name": "Kingfisher PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Prudential PLC",
+      "check": "news"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "filings"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "news"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Prudential PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Prudential PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Prudential PLC",
+      "check": "registry"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "news"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "news"
+    }
+  ]
+}

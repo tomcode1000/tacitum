@@ -1,0 +1,100 @@
+{
+  "strategy": "random",
+  "k": 4,
+  "target": "Satobe Limited",
+  "parties": [
+    "IN THE ESTATE OF JAMES EASTWOOD KENYON DECEASED",
+    "ROBERT LAUDER WILL TRUST - SIMON'S FUND",
+    "BRIDGE MEADOW HAVERFORDWEST TRUST",
+    "Satobe Limited"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x9dc84e5bd7484367b3a23ae338eb4dff35413c692bf67af3043f897fd0133e0f",
+    "0x381cabdddf8278f8055f1b58eaeefae936c5ffc16c4c94e3e4a7c6df447c9796",
+    "0xfed7b0abbb64c8f2d4592d6182683d63525c469f61093bc58e6d70794bc02ad9",
+    "0x6686014ca34b16ca77da6c2984b6d9f1b6d5b056d8c0a32594f374b7a70fe9b6",
+    "0x81e436d177ca07228074a357dbe0cb748e1768f36b6b503b7113b85d374fbc07",
+    "0x4ea201a7ec513c1777257b71ab9fba35f92eee2931a57491ddd17db89d92dece",
+    "0x276377189fdef99f74be5408b02952a1de25b5206f135dcf5eed344c585f332c",
+    "0xbd86de906dfc852501db953cd03a7ceb1654def2fc5e504d8e1fd3591227cebb",
+    "0x5f7fe4e81844e80dc8d3496e2b5f0c8593cdec81e7127025c5dcf27b94805e53",
+    "0xd3462f86727f8de3ab374409c60ae3360f68c1e6ba7bb5a4f20c836efff82f88",
+    "0xe27238c22c0306753963691a68fa1b166625c39cd8c89feaf623dd7a5a5190bc",
+    "0x391f3b338bc800591903f0c45aafa68b25529d5f047fcf8ed23294a0b4da22f9",
+    "0xa5383006130a50c7aac13deafce79c2dc4670478720f69f0c0d4bf870e9b312f",
+    "0xde62fdf7d88724d19e52c7c9d42a383e32c7504ec1bedbefd69a8ef99a529a70",
+    "0x95ac6ed4e4580765a336745232c4b611b78f02b5754d18f3833a2c755c533cb7",
+    "0x1c07d9869efbaed3a3227d783da782a5ada625075a6da47c69eeffbf619f62cb",
+    "0x6292dde854f1f529e78f1bae508520b43e2c55c5ce822356bc7e79d648ec3983",
+    "0xf0e19a507671062eb7e8bb5f6dc0f5ea1d86931e717cc50f9e6f97e9bbc2aab1",
+    "0x2fd7b548f96507396bdba85fe56bfb7b0af10c0d3ba3f36378f79370f4d035ba",
+    "0x6994564d3ddbd885fae841e6488f53e8cfc1014098c72bedec19a4d20a0d9ebc"
+  ],
+  "order": [
+    {
+      "name": "Satobe Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "IN THE ESTATE OF JAMES EASTWOOD KENYON DECEASED",
+      "check": "sanctions"
+    },
+    {
+      "name": "ROBERT LAUDER WILL TRUST - SIMON'S FUND",
+      "check": "registry"
+    },
+    {
+      "name": "ROBERT LAUDER WILL TRUST - SIMON'S FUND",
+      "check": "sanctions"
+    },
+    {
+      "name": "IN THE ESTATE OF JAMES EASTWOOD KENYON DECEASED",
+      "check": "filings"
+    },
+    {
+      "name": "BRIDGE MEADOW HAVERFORDWEST TRUST",
+      "check": "filings"
+    },
+    {
+      "name": "BRIDGE MEADOW HAVERFORDWEST TRUST",
+      "check": "sanctions"
+    },
+    {
+      "name": "ROBERT LAUDER WILL TRUST - SIMON'S FUND",
+      "check": "news"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "filings"
+    },
+    {
+      "name": "ROBERT LAUDER WILL TRUST - SIMON'S FUND",
+      "check": "filings"
+    },
+    {
+      "name": "IN THE ESTATE OF JAMES EASTWOOD KENYON DECEASED",
+      "check": "registry"
+    },
+    {
+      "name": "BRIDGE MEADOW HAVERFORDWEST TRUST",
+      "check": "news"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "news"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "registry"
+    },
+    {
+      "name": "IN THE ESTATE OF JAMES EASTWOOD KENYON DECEASED",
+      "check": "news"
+    },
+    {
+      "name": "BRIDGE MEADOW HAVERFORDWEST TRUST",
+      "check": "registry"
+    }
+  ]
+}

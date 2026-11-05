@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Klicco Limited",
+  "parties": [
+    "Doczen Limited",
+    "Klicco Limited",
+    "Glen Artair Limited",
+    "Ottava Holdings Limited"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x124c86b230fff87707bc529bfabb5c8741acab7f96ed7fb665ab9954dd7691af",
+    "0xa2f876b09b8dfe61b47f2427fed2228306cdb107bbfed73aed76549ecae8bc8e",
+    "0x5e780aeda77d9f977fb56d6d3787fd82795c7cf736327b98b9a796eb1aba8ce9",
+    "0xddb7208b68b2a7a5e5ef7cd7c87bd155a58f68c0025b7874bfc7ec002353c74d",
+    "0x2d17d4ee4bd2ebbc981a90b806446918e29c78cd93fea7e4c8cae740183848ef",
+    "0xc2aa6afe2cb81da839f54f7ea4b34bf081bd8139f8be2d1722311e36774dc77e",
+    "0xcd349674c340e492d75f24d362b3767cff091d112eabf005a2d2d397e522877e",
+    "0x46ae7f079ed890d2646d352761f2663361d358bb6562203ec043533728d245fc",
+    "0x641ff716c0ce8b52ffa936e2be246da37a1bf754e18ab4da1b3fc1227ee2c856",
+    "0xc29d22bfdd200ac43d77854da2ed2d72ba9ee7a654671a2a4b0ad02d635e8ea7",
+    "0xa15f8764e3c07641695939ce2461bf6e6f403d2889e247e1dd4ecad474fe14b7",
+    "0x06ced15bb287c36d35700cb22a1d3eaf530d129ae2535e507e16cf2c1f0e7e68",
+    "0x6ac30d16f6839b34fcc8e4f848f5dee40b73584f2721f8b56325420d2e3c5aa5",
+    "0x8b48bbb73d9c2a0a8141261be760ee4e2b674d93cc2614ab0ff3682eed7a1bd2",
+    "0x50799eda530de2d7510862b63ace039be20b7e968dfb78479827fd5095c1e378",
+    "0x3f658ec393663594ff082af2a01b692a2a0a09f287854720de71a9d38d77cf7a",
+    "0xfb00b985b3a77b2f0197565a7c08ecfae5b0d9d0c7f69669411f50301a826f7a",
+    "0x6bfb84e8c2803ca4b98e6dc13d7c59c029b0c2557b87e0c689b56881fc3d92fc",
+    "0xa5cbbddae74c2ce657fdea2185f6defd7f1b8bbf55df6c74cace8794b79d9ab9",
+    "0x876955d5e0ebc4f1cbd898ff953a72f3d97f8ce7a795e2b97a257de67b0531f3"
+  ],
+  "order": [
+    {
+      "name": "Glen Artair Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Glen Artair Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Doczen Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Doczen Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Klicco Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Ottava Holdings Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Doczen Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Ottava Holdings Limited",
+      "check": "news"
+    },
+    {
+      "name": "Glen Artair Limited",
+      "check": "news"
+    },
+    {
+      "name": "Klicco Limited",
+      "check": "news"
+    },
+    {
+      "name": "Ottava Holdings Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Klicco Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Glen Artair Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Ottava Holdings Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Klicco Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Doczen Limited",
+      "check": "news"
+    }
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Vodafone Group PLC",
+  "parties": [
+    "SSE PLC",
+    "Vodafone Group PLC",
+    "BAE Systems PLC",
+    "Bp PLC"
+  ],
+  "costUsd": 0.21,
+  "signals": [
+    "0x93ea490399437280c9ebf45ec124dd0d724a54d84742859eda32e62d1afea733",
+    "0x827edb7eaf3c7a6df3ada4e285ec0c38524eafba29d6d8ad43ff7fdd1be308ef",
+    "0x3d23a64bfca060be4543c1bd6a0e71ad19e5bff65f5802fb6b07defbcbb1acc7",
+    "0x5613a3abc30bd6864411a423b6c3a706476eed45a261d21d80da4d44779e5365",
+    "0xa219debf2a0fc293e4047931b055cee5e9c82f704cd2c46246b82e2a4b1f8073",
+    "0x041af2fc4c3fd4e44e2eeda378f43d7ea1bed980ffc18cd10b3a4fc8fa8ead95",
+    "0x92c28a3bdca2bebf2b1f4ec9e7e3ecd368226429e94d466cf0a5b966441c94a8",
+    "0x0b4e33cee97195fc82b17e9c5924081cb0e7c20633912b1278f94c3c5f8c0b31",
+    "0x9c185d6108f2784ee6d1a2c32de22bdf1e4f70ad9200317964ce3b9398e74055",
+    "0x21ab1d48a195adbf025ee858cd55619c5788487f6d3ce34f958e366cbabaf7e9",
+    "0xac129ff56ef84cbcb9daafaba26e4a58661661ae44c5a68fbec81001e3be9703",
+    "0x7a4c3dc5cc98f39c2a61f412946f2863d3a79bb3d28fdc1faed66a517940d69c",
+    "0x770575a9f23c70b8226fdd783b555f24e1ad9b04d012acfbafb40158cb860f05",
+    "0x9b1b897b67dc78011ac670dd09afba48b07eac451bd5847a6c27877e5e0bcf34",
+    "0x05211548ef5c3d8ad153f6b0090dfbfbb69926eff75f905c6c352cd68f841cc7",
+    "0xbaa6e4b3369a0c5a658d60f087df7e4e2492cdfbc2807cf56987d2463d56c4e6",
+    "0x8bea149e488c3652dea0cbfa6721339f82dbb57140ec53415b22576ea2052e85",
+    "0x67667d9664df491ef32f37a9edf3e4c37fb245644e29650d97cef219c2d88e2e",
+    "0x04f70b3bbdcaf386f15aea007dcaf33fae39744d5568143f6750a611b3340e11",
+    "0x374fc8eebfe608f54157bf9ebe67236a658918e512bcc655c5b41e6c7b47f2bb",
+    "0x4162ba2de6399c4d9c80d6fa178731203f2cb69e4b0ffeac0cf9edbfcbbff887"
+  ],
+  "order": [
+    {
+      "name": "SSE PLC",
+      "check": "registry"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "filings"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "SSE PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "filings"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "news"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "SSE PLC",
+      "check": "news"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "news"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "news"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "registry"
+    },
+    {
+      "name": "SSE PLC",
+      "check": "sanctions"
+    }
+  ]
+}

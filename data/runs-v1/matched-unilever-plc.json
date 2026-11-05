@@ -1,0 +1,102 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Unilever PLC",
+  "parties": [
+    "FirstGroup PLC",
+    "Persimmon PLC",
+    "Unilever PLC",
+    "Diageo PLC"
+  ],
+  "costUsd": 0.22,
+  "signals": [
+    "0x4300d313c4622f3d0c12f7b1ab436445dc4e58113b96e3bca103b1732c87fea0",
+    "0x9b6dbb53ec56a69495a9cdd04e24e70683eb43865510f9704489d7266b1040c6",
+    "0xe35b0d38cbaa8bbd4c6564283b3c4016352abcac2c45d60ff5cc1b6b24758736",
+    "0xf2f94b2e8d2f364963971c454717f8a0aa49a399f19201bf133f5c09ce8003fa",
+    "0xf0f7e857608a6e3493b8bb615afb4d3d40d6158453bc40810dd497e82cf25eda",
+    "0xe1340b33c80d8033265ea79922d2409b09e846549704bbe1452fa0cfc0eaf616",
+    "0x2cab2fe01c426b9bb804d7e0bfd3f5881467b4fad39291fe30ccd85b8fc3ba3c",
+    "0x08df50014c87671cd82b497873b383e8b95d356d4086dc696bf4b8577414c88e",
+    "0xb0e4d0052722b36437fdb708eea430b50c929a0e4c265155c5f4a8f980ad5e00",
+    "0x843730e096db9615e0de922cabb81c21bc9a6a297a09e019eba9c8faeadda247",
+    "0x5cf4a4a2c16f7b17cd898ba4d16ebc757c58e4cef21676097d9a2f06f6a40428",
+    "0x497ad2bea34c957fa864e11ee6391be5b03a81962c8485e299885c5e42da6659",
+    "0xa88af912d9b97990fd5e9d406d8f4bb524682276ecff7c6ac35d6435b0e4c741",
+    "0xefe201b85cb2b36d74259c795ce500b7169e47bd7f3a4b72167caf43dd220328",
+    "0x002a0c3557ace9f7231a9123e900bb02a293264d389340a458491bf9bec60308",
+    "0x16a840644aaef1d3cfdab3e66dfd08466fe9fb2cfb77ec5ed123be5be346caa5",
+    "0x91002e626b675f9a491db903625d6371e4368af9b3be59c6a6ce59c80139347a",
+    "0x7ba9750d097f88ef2f540e09243da37e9a66bf251ad83ecc85de06305d5d165d",
+    "0x0505ef42fb5359d08478dfa873dd565b357f5172d9078067088e7a02c761a481",
+    "0xd745e4b5cb899ee8f6b416174bc3fd58b803ac0876c8f35a859c7bf7218e2c1b",
+    "0x2fdc528aa35a1ebb06c67a395940a316d405227bef020a1cf55b09e296007ec7",
+    "0x0110ea350d6a120060fa0a93baa7e69c318032365a2d1b52f1c4c94c5602820c"
+  ],
+  "order": [
+    {
+      "name": "Unilever PLC",
+      "check": "registry"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "news"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "news"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "filings"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "news"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "news"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "sanctions"
+    }
+  ]
+}

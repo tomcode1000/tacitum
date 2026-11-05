@@ -1,0 +1,100 @@
+{
+  "strategy": "random",
+  "k": 4,
+  "target": "Hillside Housing Trust Limited",
+  "parties": [
+    "Hillside Housing Trust Limited",
+    "THE MAUREEN SEED 2014 DISCRETIONARY SETTLEMENT",
+    "WATCH BIDCO LIMITED",
+    "The Oswald Smith Exhibition"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0xf5ffba70f9ec87fee5eea5598cb6b006b2ab324ef7a18c84da018f4050f0457a",
+    "0x4196dfee229f83d070603b410d1698ff615fee53e44007e56e4419b868fa7564",
+    "0x0977cc3d57ddce74203b30b3022c0fe944000f253f8c7a648153e8878cee3f7b",
+    "0x6b90b57d1a661880c58be87819d669c340d3123654015d7341a198225ad2ce18",
+    "0x77b44db273a467c341ce6243733e9b9f5fce7921704b549f80e3faf9209895e0",
+    "0x40065f80d7f16f07f24aedda11be05a1d1dac8d22835dda7052ed52fd1d2bf35",
+    "0xd349051e66f7ecf0b8e106ac09e6fb1169e8d76f8dc22184314549b74eb997e4",
+    "0x585b469d3d148f89d8f62aba789b754a371fde63f28c84220810f5a9fa8b29dd",
+    "0x8e3277f026015003e6eeed1f60e8e4a1cfc6d6ad3768f52f96541ba50338981b",
+    "0x6aaf504dfab1f86eeb966913e1ab297e429bd0ee78bb8fe52810af97f1c668cb",
+    "0x8f886e9dc21f5a15e0d4d3bedcf22da700d56458dd01165fcdbc74d7ad059be3",
+    "0x04fd246a561a2a03c4aeedc3bdb50fc8fe4871d4b7a9a68a2bfde41e735f786c",
+    "0x80022cf744afead2fd05d9bafdd0161cefe8751c4057071d2d1725d1088ea815",
+    "0xb152a018d19be3d43e52c949c2a68240d5f2935c5526ece365249e4e066b290a",
+    "0xfca27eb97ac1ec607e36ed06dac39953f678ebc795ac82bc4fc549c28ac70220",
+    "0x536e969764202515e10080bfed2208736ec7bfe413f7941557c69ed18af6e2f8",
+    "0x9ab100b0a9a1ed965c73c3629c10bcacd6a1c6d40e2cbe6ea170fa8a05a89157",
+    "0x5d5bc0fb41581e45fcc237b4c105b2f791aa53c07d56b9322aec043768076861",
+    "0x78266a1e3224540af4ddd119175347f9004b1921fa5d38eb84af27ad4dacc113",
+    "0x15df14ea37c1c7293cf2203436a933f444164bee666d850632cc9f05bdcd0aaa"
+  ],
+  "order": [
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "filings"
+    },
+    {
+      "name": "THE MAUREEN SEED 2014 DISCRETIONARY SETTLEMENT",
+      "check": "filings"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "registry"
+    },
+    {
+      "name": "WATCH BIDCO LIMITED",
+      "check": "news"
+    },
+    {
+      "name": "The Oswald Smith Exhibition",
+      "check": "news"
+    },
+    {
+      "name": "The Oswald Smith Exhibition",
+      "check": "registry"
+    },
+    {
+      "name": "The Oswald Smith Exhibition",
+      "check": "sanctions"
+    },
+    {
+      "name": "THE MAUREEN SEED 2014 DISCRETIONARY SETTLEMENT",
+      "check": "sanctions"
+    },
+    {
+      "name": "THE MAUREEN SEED 2014 DISCRETIONARY SETTLEMENT",
+      "check": "registry"
+    },
+    {
+      "name": "WATCH BIDCO LIMITED",
+      "check": "sanctions"
+    },
+    {
+      "name": "WATCH BIDCO LIMITED",
+      "check": "registry"
+    },
+    {
+      "name": "WATCH BIDCO LIMITED",
+      "check": "filings"
+    },
+    {
+      "name": "THE MAUREEN SEED 2014 DISCRETIONARY SETTLEMENT",
+      "check": "news"
+    },
+    {
+      "name": "The Oswald Smith Exhibition",
+      "check": "filings"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "news"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "sanctions"
+    }
+  ]
+}

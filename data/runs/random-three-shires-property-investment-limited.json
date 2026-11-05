@@ -1,0 +1,100 @@
+{
+  "strategy": "random",
+  "k": 4,
+  "target": "Three Shires Property Investment Limited",
+  "parties": [
+    "Three Shires Property Investment Limited",
+    "QUANTUM QB LTD",
+    "CAPITAL INVESTMENT VENTURES LTD",
+    "VERDENTO LLP"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x308fb4affa9f64f17059365a967c4f6055e3c805e78afae1f4dee1e745346d86",
+    "0x297cedb61bcfa55c1c21c13cf3a9f8eaa8d896c72c0e7d56131741984af8996d",
+    "0xff72dd680e69e3548cef2775e40c4ee75eed47eeffe181607fd757b2298eb1d0",
+    "0xc1106c5493933173a67ebfc623985aa38e137b816395c0b37669fe91d64a94e8",
+    "0xa2030a7eadfd9b2495477f58e25133e6d71ed19cdb50461b2a12a7de86bee67d",
+    "0xf1fa76a6dfb69e71d1f185d47b9fb9b97c00dac7af5e32d1a8e31d9b5b75e717",
+    "0x6059d62d49b39f13af831790ad8513737ec097bcae28cbec541b108a51fdc637",
+    "0xe085f16d466027679e55cc887d63b9545c88174203fd5dbb5b9251c97da8fb55",
+    "0x247fc874233c38de01cdb82fdaec881e5d6516e8b53f8d34441d3aba806c8bac",
+    "0x0014d597c247377b28573959130a73fce3da217d73211111dce722d8492755dc",
+    "0xedc2ba96cfc5bdd3e7dc4b326835928819ce1e47dbc9afead25a480e947c7762",
+    "0xaaae14b7f96e3bed3a902e0edc6d7602e91e2aeeace3f1f5cfb956a2c502c0f0",
+    "0x372b81cbebb9025144f17ceb4650ca6857faa30fb5221e867786761cdd428e36",
+    "0x0bacdb4052b40022041b58ae085e6e43382fa1d9fcf5f566eb032e23ec41b6bd",
+    "0x1d7cd0204b4eb6ebf0f9588cbd7243353f10433f4bf315397d5e83e18996bc46",
+    "0x1ead78197b1086d20dea71c2b94f5c8148d23205d1c07410196c6ccfa992806d",
+    "0xd8ed189171403f5b4b033282e73202970a68d686e93e35df5eebf699bcdd0570",
+    "0x769390a38d737510402e9cebd313c435ea3f6fcffa8a5b7a6e33989cf21d4794",
+    "0x9882cd68383d62701034fd6d1995f86573353362d6ff329a5c7a3c9e593bc6d3",
+    "0x9565b47bdbe2e673cffa49fa4eceb212d1041ef1e7a1f8e7c1921fa2ae67dc42"
+  ],
+  "order": [
+    {
+      "name": "CAPITAL INVESTMENT VENTURES LTD",
+      "check": "sanctions"
+    },
+    {
+      "name": "QUANTUM QB LTD",
+      "check": "registry"
+    },
+    {
+      "name": "VERDENTO LLP",
+      "check": "news"
+    },
+    {
+      "name": "QUANTUM QB LTD",
+      "check": "news"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "VERDENTO LLP",
+      "check": "filings"
+    },
+    {
+      "name": "QUANTUM QB LTD",
+      "check": "filings"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "news"
+    },
+    {
+      "name": "CAPITAL INVESTMENT VENTURES LTD",
+      "check": "registry"
+    },
+    {
+      "name": "QUANTUM QB LTD",
+      "check": "sanctions"
+    },
+    {
+      "name": "CAPITAL INVESTMENT VENTURES LTD",
+      "check": "filings"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "filings"
+    },
+    {
+      "name": "VERDENTO LLP",
+      "check": "sanctions"
+    },
+    {
+      "name": "CAPITAL INVESTMENT VENTURES LTD",
+      "check": "news"
+    },
+    {
+      "name": "VERDENTO LLP",
+      "check": "registry"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "registry"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Satobe Limited",
+  "parties": [
+    "Araldo Limited",
+    "Hawkins Wright Limited",
+    "Dhfour Limited",
+    "Satobe Limited"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x711af073648cd56e801e336b5c9ed50449aa304a092765b1019beca7aed84d13",
+    "0x722575c029e141f8ad05330d1dd485c7b3be193cc18737a2e4320aa580c42664",
+    "0x20c827155946ed00556e3e9a4a59b2e61e7be66e4a2c37d4c1f430f9ea8892f4",
+    "0x03524b6f3cb64837048e33ca3d13d220404e496c29d844aa18d2918bbba2e6fb",
+    "0x08f0ed26fce8ce36de3450d808424079577b608d4726d426953e48499b93b52c",
+    "0x8ef0da3faedaafa5bfbafe1ca417c8f5830841229aca3a481e1cc4a9fb9a1650",
+    "0x9070d21383fa1abbdf6210e8a4c784d8e612ac4f2f10d3b531741aa07c70f35e",
+    "0x0c827c6940235e624731d8f8ab636650966f720c023e670bbaaf839630877d3a",
+    "0x8303b2f4a1288b8b5c6e0eddc97456fd53565e380b87d5ec34f514edc6156db4",
+    "0x5d4eebb98d1641f75e6e571f0e77fba55419505f6defb70e792f513156299a5f",
+    "0x82dafb9c494ed9ebb62c56364790a1fe9db2190edd850936fff8ca80059bc05a",
+    "0x0ebcd4bdc1395be9747652fe6aee4e2d2dc6230a9f0fe85bebcfefb685850349",
+    "0x761927c77149e2c8804efca7395d2a68c06e7e5c013cb0d4f72eab3dbbabd659",
+    "0x8a6c879a7c3cf87e67f54c368ecc4bc3ca7339320aa5019ca59c62afdf26d6fa",
+    "0x2386d8aa85e92c641d52e9421ed1d12c4e7de7e65b55824387cd1cfd75c3d725",
+    "0x7022e98750a3675ab46a18a7c095ed7f77bbc3ef634ae009b1a0d3ecbe6961ca",
+    "0xc1d295fd1cea1174419e9588174611a18b8c89b4b74fbef486633ffa1cb52e85",
+    "0xb7097316f99e087e17f5666ce115acc986dd83e4c076da481a7b8e81d4e285ed",
+    "0x0dd01346351da7f8a363c8d3a9a5189683fce764fec864b40843e826f13b291a",
+    "0xc64f829fb41d6c7833d70b227cd3554f2acc69cb9977077cc3f7d06f0a934d81"
+  ],
+  "order": [
+    {
+      "name": "Araldo Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Dhfour Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Araldo Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Hawkins Wright Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Hawkins Wright Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Dhfour Limited",
+      "check": "news"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Araldo Limited",
+      "check": "news"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Hawkins Wright Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "news"
+    },
+    {
+      "name": "Hawkins Wright Limited",
+      "check": "news"
+    },
+    {
+      "name": "Dhfour Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Dhfour Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Araldo Limited",
+      "check": "filings"
+    }
+  ]
+}

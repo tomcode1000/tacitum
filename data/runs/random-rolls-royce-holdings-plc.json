@@ -1,0 +1,96 @@
+{
+  "strategy": "random",
+  "k": 4,
+  "target": "Rolls-Royce Holdings PLC",
+  "parties": [
+    "WORK LESS ORDINARY LTD",
+    "SOCIAL MONEY GROUP LIMITED",
+    "Rolls-Royce Holdings PLC",
+    "DEEM GLOBAL (UK) LIMITED"
+  ],
+  "costUsd": 0.16,
+  "signals": [
+    "0xacc3f67f2edc599518ae37f3467e565fb530ea85e99b56952c92e73fddb89fe2",
+    "0x6536c6427f8dc5c7417f3e74a1a7a80517aed51a13c1600f3d2f0939d363f6f2",
+    "0xa10107e4f128525a0ebe1392d481e718f635655beeef11c7a2038a2d4ab7f88d",
+    "0xcbdce1cb22582d4078cd861c755c9646d373244980061c5366c183225d2f407c",
+    "0xff06d939066b22dafc68f3559d031707f1dc82050c4375faf3c046ed24a3aa79",
+    "0x8f2e768d9a3a832e33738cef07388aef400d2789301b97deca0dccc898c901ad",
+    "0x1beedf1a240fc16bcd0f665d2d3801fb862bd06adf4f2508b19b5aaa7850ebfa",
+    "0x7bc0b67aff85cafbf69884ae01ecf5956ec7df60f9c83a66d3283e0488c75c84",
+    "0x27a0bb40404d8b2daec192c4ad14f4007710d43e2b6c9a99620236e39f912098",
+    "0x923afdb694f51fb4e9e672b27eba1eabaa81b215ffd36fa0e5e46afe57364fa1",
+    "0x1f153ea3e2e4ec2a562e5aedbb4e58a0d2b60b357ddc208e0e9c8793c28213ac",
+    "0xb772b53f24968d800560f13bf8e28fd3e0ce138b53f8bd134d281db0c14881a1",
+    "0xe1ef7e4b330c754fe5606aa982d0b530de232478e960eabb9cb25da71a13f466",
+    "0xa036cc645d062d874f847b5743e5243be6c28971ea935a85147f546a736c9466",
+    "0x0c802b5884b962e76d31ae0d762e97ac16fd5ad99bd243bab58c41be6f06b6f8",
+    "0xa691cae7ae968649e77589bd553d7d91798a0fc2220cb0a7e4710108beeee1de"
+  ],
+  "order": [
+    {
+      "name": "WORK LESS ORDINARY LTD",
+      "check": "filings"
+    },
+    {
+      "name": "SOCIAL MONEY GROUP LIMITED",
+      "check": "sanctions"
+    },
+    {
+      "name": "SOCIAL MONEY GROUP LIMITED",
+      "check": "news"
+    },
+    {
+      "name": "DEEM GLOBAL (UK) LIMITED",
+      "check": "news"
+    },
+    {
+      "name": "DEEM GLOBAL (UK) LIMITED",
+      "check": "sanctions"
+    },
+    {
+      "name": "DEEM GLOBAL (UK) LIMITED",
+      "check": "filings"
+    },
+    {
+      "name": "WORK LESS ORDINARY LTD",
+      "check": "registry"
+    },
+    {
+      "name": "WORK LESS ORDINARY LTD",
+      "check": "news"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "news"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "filings"
+    },
+    {
+      "name": "SOCIAL MONEY GROUP LIMITED",
+      "check": "registry"
+    },
+    {
+      "name": "SOCIAL MONEY GROUP LIMITED",
+      "check": "filings"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "registry"
+    },
+    {
+      "name": "DEEM GLOBAL (UK) LIMITED",
+      "check": "registry"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "WORK LESS ORDINARY LTD",
+      "check": "sanctions"
+    }
+  ]
+}

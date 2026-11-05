@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Recircle Consulting Limited",
+  "parties": [
+    "Treetop Holdings Limited",
+    "Wildcat Geoscience Limited",
+    "B.A.T. Operating Finance Limited",
+    "Recircle Consulting Limited"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x2862e0d41c122f7a315995d68d8054dd06275ca07af2d87142b0825e347cd37c",
+    "0x3dd3505fab214f3dba77c9ee17415b996af8b74cf927dec427a97a0d5d51e0b2",
+    "0xda369f59125a4609fe8138507e05bd347b58686b808e6aa249f10dab1dcba0d1",
+    "0x3686f596ff3c2c26e36139be7bfb903788af521a1e6137c8abed6c13f4891f2c",
+    "0xea17f6f8cd107c9ef260f80c72f0e7d77c14dfea3e9af2e0ba4621d3c357d982",
+    "0x3ccea8785e0bf1b56f6f7dedbec16be07e2b6d0ce3ab44fc78a4f39b8dd4deca",
+    "0xf9eeab076aa7af18a9bd8241e215bad2b544793b72ff44928f93e25fac70b6d4",
+    "0xfd367315fd8f31d8bb11f2a9004bd6ebe30464e723f4d52f2da6bfab7456fbb0",
+    "0xf2756ba52d3dd76245444418faab155a51f648ec27c3b65ba088be693d251281",
+    "0x7289cd5df11e4b258d1710353038425344137c0611aa2a4d50fefa5554aa1344",
+    "0xc48d2334406f464438e4c95700a9d902b94698b2d676911e75aae1dd50945ad0",
+    "0x05fad8cc8b3eddcfd9a136d67f1fb2ddf5fff46e33c24b611bcbe48d278614ab",
+    "0x67742f463f450375a0ed346419070f8021dd9e56007e10c54dd0ad71f80401d3",
+    "0x92c5a50b0f1f21b66ea7be56e800fad4d4ddf39d003e299b4b978c514208f5cc",
+    "0x6805fda2ab28a6cdb6aa3738fe6994c5d9511bb2c05385992ea869e28e0ddf73",
+    "0xca8a641b10e941babf73b2e8db45c3b23b6cfa07cb55823f2376b12bc4aeb28f",
+    "0xba7922b8aea6494a13a033c1398769dff167564d7374ed5d031176efa7b7ec16",
+    "0x8ae5cad3bb9a80a99371f488b485907d33d9ba9bb24bc2f11eeb550db61cf8c3",
+    "0x4a69689c652750afa231e54a0492b64c2c8a3a970817756673a442449ae8d0f2",
+    "0xc3cb959a046475acc3c76c5bebdabd3fabe3b087aaba08bd41efd214ca60247c"
+  ],
+  "order": [
+    {
+      "name": "B.A.T. Operating Finance Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Treetop Holdings Limited",
+      "check": "news"
+    },
+    {
+      "name": "Recircle Consulting Limited",
+      "check": "news"
+    },
+    {
+      "name": "B.A.T. Operating Finance Limited",
+      "check": "news"
+    },
+    {
+      "name": "Recircle Consulting Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Wildcat Geoscience Limited",
+      "check": "registry"
+    },
+    {
+      "name": "B.A.T. Operating Finance Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Recircle Consulting Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "B.A.T. Operating Finance Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Treetop Holdings Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Treetop Holdings Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Wildcat Geoscience Limited",
+      "check": "news"
+    },
+    {
+      "name": "Wildcat Geoscience Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Wildcat Geoscience Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Treetop Holdings Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Recircle Consulting Limited",
+      "check": "registry"
+    }
+  ]
+}
