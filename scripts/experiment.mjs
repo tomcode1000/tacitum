@@ -44,11 +44,19 @@ fs.mkdirSync("data/runs", { recursive: true });
 
 if (mode === "run") {
   const client = createClient(loadAccount());
+  // Up to three passes: a run lost to a network error or an outage is retried on the next pass.
+  for (let pass = 0; pass < 3; pass++)
   for (const strategy of ["random", "matched"]) {
     for (const target of TARGETS.filter((t) => strategy === "matched" || !t.matchedOnly)) {
       const file = `data/runs/${strategy}-${target.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}.json`;
       if (fs.existsSync(file)) continue;
-      const run = await privateAssess(client, target, { k: K, strategy });
+      let run;
+      try {
+        run = await privateAssess(client, target, { k: K, strategy });
+      } catch (err) {
+        console.log(`skipped  ${target.name}: ${String(err.cause?.code || err.message).slice(0, 80)}`);
+        continue;
+      }
       const signals = [run.real, ...run.decoys].flatMap((a) => Object.values(a.checks).flatMap((c) => c.answers.map((x) => x.signal))).filter(Boolean);
       // A run caught by a node outage says nothing about privacy; leave it unsaved so the next `run` redoes it.
       if (signals.length < K * 3) {

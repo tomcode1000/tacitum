@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "HSBC Holdings PLC",
+  "parties": [
+    "Kingfisher PLC",
+    "HSBC Holdings PLC",
+    "GSK PLC",
+    "Anglo American PLC"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0xcc23653916c46f25f55a770b34f13d772bd41015a02c0ac1337c3d6604e71815",
+    "0x362e932f66c4b7de0b1a4a70bc77301b5ca018b4cce199bc06229ddf408a6eac",
+    "0x6532501e969029ebbcdf038bef6c812d42f97d301099f28ff90af611fd290399",
+    "0xc5d59b83a08ff314bcb7b41ae3e924051865dbb9f1db2beb40d29c2823fa4fd1",
+    "0xb6b5e878f4615ad91279a640e6208dbdefac2f1888f9b0decae1ce116d4d8195",
+    "0x1c394797925ca6f86a43c7128e328900b9bfbb1de7215f9081a3c57efdb68e2b",
+    "0xae4670c24569e07b897dc7166f67d383f3cf04d4be77d9dc64ec52402cf1c62f",
+    "0x8e9430f6e336d26df3444667e5444053a65a4db51ee9edae1cc326d24d319797",
+    "0x83ac8c6a3cdc79d5b676be15fb37479d5549a36bc79205ec829d27057f637457",
+    "0x155e78c6b59c8f4525a9fab8b332cc6020c19b72fae8eeceb523943abc3f0366",
+    "0x6cc0d141bc778bef5f116ee2334067b07b5660bc1d49b524f4cc0074bb0c357c",
+    "0xe1ca6bb380c6a91a2777ed0ad4e6ff7ea05fe217fefed1cb50262d894ca25e6b",
+    "0x9ee5d3f2f410d907b9649634c9368a2e4b9a77fbcc5aa36b73143a85310add36",
+    "0x7c7485e7d556864063e7903ac92410677416b744855722f70a3d7f8828841882",
+    "0x8c01124ee309a30acef5a2672e6d5fcd5fb4e9a5f977d0860d6951b96763f85d",
+    "0xcf69f2510adacb437504ed8c7fdf505bfd429e5454cd888fb73c38c05028854c",
+    "0x31c5829545ef75c25f25ac81c5a519edd0f73b353ffa83a0efe172dfe53e6841",
+    "0x539cf3783b092080e141fd91a505dcd46ebd1cbb8e04fdf810b72d9802aca3c7",
+    "0x2a37107d5d7c040661ea80996da62535259299ec16f9b76ec0f4074090df11c4",
+    "0x56ee3b700813be696c767243e79f0098fe5994ead5d00faa9a47d8546ed9dd5b"
+  ],
+  "order": [
+    {
+      "name": "GSK PLC",
+      "check": "registry"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "news"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "news"
+    },
+    {
+      "name": "Anglo American PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "filings"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "registry"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Anglo American PLC",
+      "check": "news"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Anglo American PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "news"
+    },
+    {
+      "name": "Anglo American PLC",
+      "check": "sanctions"
+    }
+  ]
+}

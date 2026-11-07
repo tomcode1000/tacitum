@@ -1,0 +1,102 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Lloyds Banking Group PLC",
+  "parties": [
+    "Lloyds Banking Group PLC",
+    "Antofagasta PLC",
+    "AstraZeneca PLC",
+    "Standard Chartered PLC"
+  ],
+  "costUsd": 0.22,
+  "signals": [
+    "0x970062b37b85aa8b3b1961de512ab2e31f5f9a861b6b3b7d2eb8277841c51b6f",
+    "0x01225210057deb6c829ff4b40e627cdf968f74eaf01c787a36eea01c9132c5ae",
+    "0x45b370f4286debd199a90a3a23a0e511da9eda31a5e25425317aa49538b15956",
+    "0xf0f058ffe79c4adf339572ae766eb23018a9b0f15f82d6dd74eacbcd522dafdc",
+    "0x44755e445c84b9a0552caecd98112f471124cb21d1e7d9068826802b119c59a2",
+    "0xf67e196c9f0f85f398226f03ffdee5257b1c6b52d1d89e2f8efe43322cb9c30e",
+    "0x0d3f0596a271f74caf7a67adf9b9a584336f6a2554ba03e8d957fb5bc6aa8f72",
+    "0x23e2b73ca2cccd8eafca8ff749d68e6b00739282cbdf215aec3ec71bea4228c0",
+    "0xc6364e8aa0da3bd148c225252e86e732bdfc5fe479a5809fb91c5fd7f8309f99",
+    "0x69a8b87fae296983fe24444703228073d7f75745408d0b21763ddf5448639ccf",
+    "0xe3632c374fc568b15489a3a11b454c07086f1ffdb03b8a752b932c101909da00",
+    "0x63a81ea7356aae8f535364739e71d5f2c566737f5cf1d6f5c12ae9b93c41b3a8",
+    "0x103d55a53d628eabd2805e0ff518f58ea810c0b669f984629ca60edbd59a8c09",
+    "0x279d7c6c15bf4a2e75b5d2ee92ad2bd0b8ce3bbe16b2df5e9c256f93195d9e2c",
+    "0xca727a2de4275b965ad1fa856ac6ff666b0a17d4e05890d0892289b0d702978a",
+    "0x027be0ea23118a72bbb5ca9f63b8ecec1d985eec244df98b9136fcb43c357156",
+    "0x0d2f8de40536d2a15c528c06bb737b3a9cb216cc2d0e0300cc32252c16a49f17",
+    "0xa7a53589700f2bc6fee2b6193577aa122cd67e5a259d1032ff05a1e87680b179",
+    "0xc58ad1064da8654c41d044fb80ddfb3b6178284db1ded24fa4af5aaa5654158c",
+    "0x6098c6bffa9ffc57b83e9eaa3f17c2186ae65dd4812144338c914b7cd0334bee",
+    "0x7e248ff416b0abf4f7bd21131a5e76ceecbcb697a15627e3399869ad60025eb6",
+    "0x06e0695df954753e87de6249446346d55ed1e96dd8cedbf3b29fd7c5690c1a01"
+  ],
+  "order": [
+    {
+      "name": "Antofagasta PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Antofagasta PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Standard Chartered PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Standard Chartered PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Standard Chartered PLC",
+      "check": "news"
+    },
+    {
+      "name": "Antofagasta PLC",
+      "check": "news"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "news"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Antofagasta PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Standard Chartered PLC",
+      "check": "registry"
+    }
+  ]
+}

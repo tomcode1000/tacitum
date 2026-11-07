@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Vodafone Group PLC",
+  "parties": [
+    "Vodafone Group PLC",
+    "Renishaw PLC",
+    "Schroders PLC",
+    "BT PLC"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0xb0348b14979ef9ca6095b1906d0fcecc4c099a365cabc50bfb4ed0e9fa6c2011",
+    "0xac2736570e87d388e59b190283123e9604393195c66edb4ec3150b38e8ff72ec",
+    "0x249358e1f645c09be5fe244fea668030629222f7008537af81092ccb2e065f5a",
+    "0x741d232aa98bf9f2b026b9d60b4ab7ae50aed9cb3dc68e86f02fbc47cb79f416",
+    "0xc277886dc192222040fcd360c77454f5ac820267262b64542a0a725792835cad",
+    "0xa81e68612ad039a67c62379263adb33cfb929da103db2c0e38b7de34dd82fc69",
+    "0x2af252b611800d80a679dc212d1c25e1b537860e6bde0caba7ff849b33fdf2b0",
+    "0x1b7070ed3b043aa27eea064c1b9a3fb93aed6e9eed3faf7078fef857e14f4560",
+    "0xf63c98e0c1ec129a3d5dc38d796b36a0897842b3516679d6a1b46b027180482a",
+    "0x80c8c6977f26d37d16d16eb3b124990deb9a2c1332ad9482a690a064584c8112",
+    "0x633f9cae645528988420c45bb555ea31ba9b30860353ad6a748f1d9e07747f9e",
+    "0x5c467b3c74f83ed20c238cc337e285fd128c7157745bdee1d2f1229ef9d47722",
+    "0x043b6cd583da4f37718f1f0e774bf1a5c8b39ce34a79fba3e208241fa8fff816",
+    "0x99cc1ac5a6047be06e431e59c3118bb16f761babce872fd295cda6627eb1bd51",
+    "0x3c7dd3180fe3566aa0f837af11a0676f701ea72aff43c4eedbe511f912d1c75f",
+    "0x2c6b320c55715807f0b6c795c6a12b32f5f673eebef0487bd5b7cd97c2241530",
+    "0x99fa71734c768429b4f644183b1385e67d2b5036128d0faddc6947f1f1e98bbb",
+    "0x2e9c83671cb224b4905b6d67aced311035354aaa271b616d1faf69da51836a0f",
+    "0x0122fb5c6ecd5b28adf49fd71d055044c1f7c1b903932e2bef1ae9419b7392d0",
+    "0x374e0b307331233aad55d32295d4037f6c453edb0a34a5e769a3a6ca53048415"
+  ],
+  "order": [
+    {
+      "name": "BT PLC",
+      "check": "news"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "BT PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Schroders PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "news"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "registry"
+    },
+    {
+      "name": "BT PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Schroders PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Schroders PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Schroders PLC",
+      "check": "news"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "filings"
+    },
+    {
+      "name": "BT PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "news"
+    }
+  ]
+}
