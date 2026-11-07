@@ -3,97 +3,98 @@
   "k": 4,
   "target": "AstraZeneca PLC",
   "parties": [
-    "Currys PLC",
-    "Hunting PLC",
+    "Barclays PLC",
+    "Smith & Nephew PLC",
     "AstraZeneca PLC",
-    "Carillion PLC"
+    "Bp PLC"
   ],
-  "costUsd": 0.2,
+  "costUsd": 0.21,
   "signals": [
-    "0x61e063f54d8b6ececd17a62ce767273324ad5e8037490760c33485aea1c8ae5e",
-    "0xcf38e0609c58744dea2909abe4cd89f81bc23e3278791820d5d72c2c6a68b6ff",
-    "0x81b1d23ce1768d17c5cf40de9d2d5f6105b78b8e40f4fd7638acc15bb69eff65",
-    "0x5e193ed0748d1c6a0c2e458beb2b61109a34d0bb06b05a2e09a9fa5c7483882d",
-    "0xb51c45aab5dcb2ad37bd6f0fcb7a2c74c770ee76d44e66c159e5343e7c9afba7",
-    "0x08d61a9158682fccf93855b1dde02df633bc1d338abdb4b8adb39fa40b920117",
-    "0x7401ad66d06ecf6355bcad1126ad784879c2bd795cf7f572db093f9b2496e2f7",
-    "0x232ebdcafb09ef20dc8553fa290351ad1960a14c97445c815a5e428ad5f9f104",
-    "0x9c363bb245187d1fa7b0f036c1ccc362920c39e657bdc13af270c1355de62b18",
-    "0x263284aaffb22e6dca4f64f5bff06fe9f46ca3bc37610ada37afdb78eba15163",
-    "0xa10805f2cd9deb76bd44ae58cbf9946e4718253a73a92c9067709c508a07835c",
-    "0xaf1a181908fa633aa3522fb7c7b6d7bb92b2c4edf26e3c5bdbc08d4b6bef5c35",
-    "0x560159ccf99e23ac6bbc255259ff09b7b69bb4ef8cc40353bcc60e64cc293f58",
-    "0xb872cc776ef82d4442ed34e99486d76996b5ac0043a64d15dedf940d02d34372",
-    "0x54041aa935c4d7c8874143ccfaf9025ced3b076fe460239225ceeb205b720298",
-    "0x6d6dfa0385ceef5731d48c4f4734cc1539ac7b78741d5e06fff4327617445241",
-    "0x1539fc500175007c94abe43a31e4a07d8373f9b3b12f7b032e14d93f4dba3393",
-    "0x72a8bdddbfe45ca791c3e202ddc30ef54eb94cabf0a20d5559b6705a067f2c40",
-    "0x8d23b6462697f0919d534143ceafca6f0aef966eac3ab1ea746ab0bd1163fb4b",
-    "0x8174df33f65149d240ad24b1414c67473584382fc617eb57c02dd5039a71706d"
+    "0x09de3b08f1be188693718c116a55dae04078733d593661a628e8a7c834f507b4",
+    "0xb9c4dc7aa38969804d6b22e7cc088243e9217b3f889a261c049957772c355246",
+    "0x67f1fff8e9907d60a1524a1025c9428b64e57c91b1f9e28dae29b31633d9b392",
+    "0xd0b4b8e97ebdbe6eb93ee0c82e80f2662be11134db884bac879413f2f648ea1e",
+    "0x5e24bfa67b898a34081a309e47826030173539d5697fa143bd00e226b485bc88",
+    "0x721d9c81267a0b3d52743819bb0cf781651d62cf691de983ea4e446f57de2f42",
+    "0xb414aba34d4ce23fc2e0d7940b7b2d68f69ee5cedef4e16bf2afe4117e11a21b",
+    "0xc5702234da790d969abacb601d1ef8b4a529e009f2db026716c5bc2901c4ccc2",
+    "0x9e7127b8cb05e231e6a2e134bbc1134879e731ec6b943a1052b4b302a647e546",
+    "0x7bf92bdad0245d5eba348702363261548a111b7d4ed23a480b5a3c3971e7f6b3",
+    "0x6600643da77ebeaab2b3b2b5de790375bfe08c65312e04022cd3a43bfcc69a2a",
+    "0x551c7ecc57878de781ebd367160631ac4ddf4be35925f1d3247264a4cea8a2d6",
+    "0x939cdbbe2efb0e8e19a822ad024e3b771608baf53b4d5e463ea60ed2e49d393d",
+    "0x89e1f1fbe7e8ad46533eff46b5ed09174f7297a390115adeb246531b18a34f73",
+    "0x7d038173d2639e34f4663422a5f8e83dd9626be8f09a253fae5722df6eabbe2f",
+    "0xfcd6dbdc3b423ffaa9ed305f9d3757c0ad2c894459fd8df9bce19413a6250e93",
+    "0x5c1e4633c5d3172b40a6350753247791c102380a11d4606044c62ad7f7944fd7",
+    "0x007c2290fad09211bdc69e826237937da56fd66dae43f633bc654983f0e65d30",
+    "0xe909cbffabb0f5e6becdf89c5a0987ec9205158eaad567c9c0ecfdb6d50dd3f8",
+    "0x6226221a075b79b8944460416dee2ce6061039a37380f5693a1d34814a0f27aa",
+    "0x9d54eade5fc74462194945c957b8a5e53b0bc7187858681fcd869ba50201afe1"
   ],
   "order": [
     {
-      "name": "Currys PLC",
-      "check": "news"
-    },
-    {
-      "name": "AstraZeneca PLC",
-      "check": "registry"
-    },
-    {
-      "name": "Currys PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "Carillion PLC",
+      "name": "Smith & Nephew PLC",
       "check": "filings"
     },
     {
-      "name": "Currys PLC",
-      "check": "registry"
-    },
-    {
-      "name": "Hunting PLC",
-      "check": "sanctions"
-    },
-    {
       "name": "AstraZeneca PLC",
       "check": "sanctions"
     },
     {
-      "name": "Carillion PLC",
+      "name": "AstraZeneca PLC",
       "check": "registry"
     },
     {
-      "name": "AstraZeneca PLC",
-      "check": "news"
-    },
-    {
-      "name": "Hunting PLC",
+      "name": "Barclays PLC",
       "check": "registry"
     },
     {
-      "name": "Carillion PLC",
-      "check": "news"
-    },
-    {
-      "name": "AstraZeneca PLC",
+      "name": "Bp PLC",
       "check": "filings"
     },
     {
-      "name": "Hunting PLC",
-      "check": "news"
-    },
-    {
-      "name": "Hunting PLC",
-      "check": "filings"
-    },
-    {
-      "name": "Carillion PLC",
+      "name": "Smith & Nephew PLC",
       "check": "sanctions"
     },
     {
-      "name": "Currys PLC",
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Smith & Nephew PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "news"
+    },
+    {
+      "name": "Smith & Nephew PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
       "check": "filings"
     }
   ]

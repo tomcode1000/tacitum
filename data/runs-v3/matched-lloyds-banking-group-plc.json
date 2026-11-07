@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Lloyds Banking Group PLC",
+  "parties": [
+    "AstraZeneca PLC",
+    "Diageo PLC",
+    "Aviva PLC",
+    "Lloyds Banking Group PLC"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0x250f3f0ee0d54f586690e6d2a3ead49e1a371d332f5825fca917081bb08c70ed",
+    "0x484c150865cd3a205ff1e80201df1093017a0915921ddab67482c82d40ff87b1",
+    "0xe7ddef314fc50d37e91f98b34f4eda14cf427597b9b7c5fb6f366774920b81de",
+    "0x7237bb504c6741c9303ace06761fd0dd51878fc50d260213fe05da415ac039ca",
+    "0xce6a2f975f84451aa1c28ea8debd1eda7967c6732de1c691ab461cb9f57386be",
+    "0x895b4ed8e00604692af0d9e7e444d18e67588dad9a6a052f5d3bcf5b5efd9a2d",
+    "0xefc5e47000fb9d93bc818cba7315c77e6097513fb6d9e62a759cf1dbcd213415",
+    "0x53f8c9cec292e692b062b51499c61b5d22e3bdb4e09cfef550295bd4bb2128fc",
+    "0x0bcce11ad4504878f692936ded75e68f06de54a5154538710d4b6dab4c84fd02",
+    "0xd427e0e50dfd00c9b5251395504313eefaa330c931e1f63de27a9fbb2cd3ce45",
+    "0xf55f46efb2c02d2548a8577d5892e1ddbea39ba53c599e8b627d923d923d769a",
+    "0x89d49eddc0ab620a79a59a68432667b28bee63964811c4f136a7932b9ca82a6d",
+    "0x885dec552a9ad4eed85699f1a1390007ff5727fc386c77fa378ba3a47e675fb7",
+    "0x15ef20ba7dd812e6bcf2e404f360b82ea12143a2cf42867e21300a3ea6ad0a08",
+    "0x0db503813acb0b53d7401092e85c9d7ff7f61870ed4f7db60dc464a0bd5d2dec",
+    "0x9ecb086d99ef4d448f09bb24c55387a92b39a3e3b9424178929d95c1cea8a997",
+    "0xbfdf5bba5043b468c4d768611a0dc35ce7f824b2e6b545db8e7cee8e7d20652b",
+    "0x9152f1b5af2ef4c826f7746cfc5d3bdd8e9df0fc0bc963d4152c5d0587c580ce",
+    "0xd93694c9be9382ff935be20a454f8d73c99e80966e44b211cd86274b7a3422b8",
+    "0x0edbf4696f90444c796aab47ac4a2629863fbd2129a9745be983727daf4c087a",
+    "0x2d5e9b0e22566133d3c032bc0ad608e2888b9e626c319b9b1614b722a207e18e",
+    "0x5399ee7c041deaee3da0496902c42b95e5ba8dc7cbe08a2b08859e7b1f32c3b5",
+    "0x18573b045813a7e2c0da7940c7cfabaa77c8427bb5e1f0d019fee6bd89b05082",
+    "0x9eb08ef24c764ffc6a0b99c77f722f625e9738451a92b4c6f9bd476ead0be5e6"
+  ],
+  "order": [
+    {
+      "name": "Diageo PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "news"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "news"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "news"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "registry"
+    }
+  ]
+}

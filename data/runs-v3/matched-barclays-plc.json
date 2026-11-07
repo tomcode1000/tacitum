@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Barclays PLC",
+  "parties": [
+    "Barclays PLC",
+    "Aviva PLC",
+    "National Grid PLC",
+    "Diageo PLC"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0x9862e17af7bb5ac5aac785230843a7512959344cc782f216c145b7eadab39bfd",
+    "0x9500314a5725f808fb7d9f668d74b684559d1781e2501942496ca0a2e1ec0f93",
+    "0x70ca28b5544dd2a03a4178ad108465160749c345362a444bd54210d33d8181a3",
+    "0x6c2e4382e6fdcc33ef93198c7b75125cb3a91c7b8a3dae6275797f66b3797cd4",
+    "0xbb615a5e34d54f24aa2480da100c8c8ccec89e59c71fca9c373f54e6253b3e87",
+    "0x44e4605030d9337f5d9d759e3191d98a346619adcb29bec3f5f362db9cbe5a6e",
+    "0xa977374c611cae25ff0c4a03e70a9345193dc30e7164d16e68f6c9a883be201d",
+    "0x9d45d1a6b61603313aca9e81a7b71cfea6f14300fa679accb3257e0220719279",
+    "0xf368c00d6a04b1f848ee032a045a4aba1ae7d8432ace6bf7e4daa79c02eff34a",
+    "0xc37223104813bef5d76244965a20bf409e77ecddcb6a198b9c5a467cfe6a0f44",
+    "0x63ad3d57ee4c119c2c918cc1ec1e47319ea1fef08835c7cdc6a177704d637b3f",
+    "0x6b379a2d8e3c1ca27be524f93abaf1a703a8a8ce1a40c19e354830cc38b7404d",
+    "0x8ad0f38083b68ba909e81b7645c3f71d247ad3ad428333f5c419595649a26d01",
+    "0xcce90230f226341ddd3cb7c7709923c65e182e6d0b3537629cbf1631788be621",
+    "0x6e624f0ac3066f216c5bbeda2670a2fc1418b5b46a6735fbf2b9c2f11cbb5bf4",
+    "0x12190b0e2c0c7668e0a7230160b462359171cb8109c5f31f9a93ec808122b58e",
+    "0x3f7707fdc37983ca99bb7e75e1c2a68f639ade56cdbaf942ce5a3a6f49eaf665",
+    "0xe46cc4ed239d4fbcf2cc4931f1293f62e16d019e1de1177a735e62935c87db7c",
+    "0x8a362007ac0384a8027da96caf631204b495b4aba37a4dfcc0d22ee56c1a79ae",
+    "0x457191a953f0173dbf759606615298a9c2e23fa9f4f0a66be5fd3cbb89007e11",
+    "0xdc7290eea186c829e454802cc57ec453c5a435f404459ef4290c0730daada14b",
+    "0x813d1acea6010489071323107a75b63d2d4c66fb3ad06ac79906d7586506ad7c",
+    "0x664ff46a037bbe7ba1cc1ca43b67bdfd983871f6b446291fbf748cadc26fca7e",
+    "0x7082a62c04beab64ef418fbea1a6434bd92fceb2e3da774edda709dd4ad98b6d"
+  ],
+  "order": [
+    {
+      "name": "National Grid PLC",
+      "check": "news"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "news"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "registry"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "registry"
+    }
+  ]
+}

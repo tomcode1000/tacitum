@@ -99,7 +99,7 @@ async function gleifSample(country, size = 50) {
 // Desks screen companies, not family trusts or pension schemes.
 const COMPANY = /\b(limited|ltd\.?|plc|llp|inc\.?|llc|corp\.?|corporation)$/i;
 
-async function listedSample(country) {
+export async function listedSample(country) {
   const names = [];
   for (const cat of LISTED[country] || []) {
     const url = `https://en.wikipedia.org/w/api.php?action=query&list=categorymembers&cmtitle=${encodeURIComponent(`Category:${cat}`)}&cmlimit=500&cmtype=page&format=json`;
@@ -131,6 +131,7 @@ export function styleLike(target, name) {
 // not. So a decoy must resolve in GLEIF, by exactly the name we will send, the same way the
 // target does. GLEIF is the registry source the miners read; asking it directly leaks nothing to Telegraph.
 const EXACT = "data/cache/gleif-exact.json";
+const FILERS = "data/filers.json";
 const exactCache = fs.existsSync(EXACT) ? JSON.parse(fs.readFileSync(EXACT, "utf8")) : {};
 const norm = (s) => s.toLowerCase().replace(/[^a-z0-9&]+/g, " ").trim();
 
@@ -180,14 +181,27 @@ export async function pickDecoys(target, count, strategy = "matched") {
     return picked;
   }
 
+  // The fourth tell is the filings answer: a famous SEC filer among decoys with no filings stands
+  // out. data/filers.json is the filer survey (scripts/survey-filings.mjs), asked ahead of time
+  // from a separate wallet; when it covers the target, decoys must share its filer status. Volume
+  // tells too (a bank files ~280 times a year, Aviva 6), so the filings level counts toward the gap.
+  const filers = fs.existsSync(FILERS) ? JSON.parse(fs.readFileSync(FILERS, "utf8")) : {};
+  const isFiler = (name) => (name in filers ? filers[name] > 0 : null);
+  const targetFiler = isFiler(target.name);
+  const filingsGap = (name) => (targetFiler ? Math.abs(level(filers[name]) - level(filers[target.name])) : 0);
+  if (targetFiler === null) console.warn(`${target.name} is not in the filer survey: decoys are not matched on filings`);
+
   // Known targets: score listed companies by how close their (styled) fame is to the target's,
   // and take the nearest. Within TOLERANCE (a factor of ~1.8 in hits) counts as indistinguishable.
   const TOLERANCE = 0.25;
   const scored = [];
-  for (const name of shuffle(fresh(await listedSample(target.jurisdiction))).slice(0, 250)) {
+  // Filers are rare, so a filer target needs the whole pool searched.
+  const candidates = shuffle(fresh(await listedSample(target.jurisdiction)));
+  for (const name of targetFiler ? candidates : candidates.slice(0, 250)) {
     const decoy = as(name);
     if (decoy.name.toLowerCase() === target.name.toLowerCase()) continue;
-    const gap = Math.abs(level(await fameHits(decoy.name)) - targetLevel);
+    if (targetFiler !== null && isFiler(decoy.name) !== targetFiler) continue;
+    const gap = Math.abs(level(await fameHits(decoy.name)) - targetLevel) + filingsGap(decoy.name);
     // The registry check costs a GLEIF call, so only run it for candidates already close on fame.
     if (gap <= TOLERANCE * 2 && !(await sameRegistry(decoy))) continue;
     scored.push({ decoy, gap });
@@ -195,6 +209,6 @@ export async function pickDecoys(target, count, strategy = "matched") {
   }
   const nearest = scored.sort((a, b) => a.gap - b.gap).slice(0, count);
   if (nearest.length < count) throw new Error(`only found ${nearest.length}/${count} decoys for ${target.jurisdiction}`);
-  if (nearest.some((s) => s.gap > TOLERANCE)) console.warn(`decoys for ${target.name}: fame gap up to ${nearest.at(-1).gap.toFixed(2)}`);
+  if (nearest.some((s) => s.gap > TOLERANCE)) console.warn(`decoys for ${target.name}: fame and filings gap up to ${nearest.at(-1).gap.toFixed(2)}`);
   return nearest.map((s) => s.decoy);
 }

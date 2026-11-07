@@ -3,47 +3,65 @@
   "k": 4,
   "target": "Lloyds Banking Group PLC",
   "parties": [
+    "Barclays PLC",
+    "Prudential PLC",
     "Lloyds Banking Group PLC",
-    "Antofagasta PLC",
-    "AstraZeneca PLC",
-    "Standard Chartered PLC"
+    "AstraZeneca PLC"
   ],
-  "costUsd": 0.22,
+  "costUsd": 0.24,
   "signals": [
-    "0x970062b37b85aa8b3b1961de512ab2e31f5f9a861b6b3b7d2eb8277841c51b6f",
-    "0x01225210057deb6c829ff4b40e627cdf968f74eaf01c787a36eea01c9132c5ae",
-    "0x45b370f4286debd199a90a3a23a0e511da9eda31a5e25425317aa49538b15956",
-    "0xf0f058ffe79c4adf339572ae766eb23018a9b0f15f82d6dd74eacbcd522dafdc",
-    "0x44755e445c84b9a0552caecd98112f471124cb21d1e7d9068826802b119c59a2",
-    "0xf67e196c9f0f85f398226f03ffdee5257b1c6b52d1d89e2f8efe43322cb9c30e",
-    "0x0d3f0596a271f74caf7a67adf9b9a584336f6a2554ba03e8d957fb5bc6aa8f72",
-    "0x23e2b73ca2cccd8eafca8ff749d68e6b00739282cbdf215aec3ec71bea4228c0",
-    "0xc6364e8aa0da3bd148c225252e86e732bdfc5fe479a5809fb91c5fd7f8309f99",
-    "0x69a8b87fae296983fe24444703228073d7f75745408d0b21763ddf5448639ccf",
-    "0xe3632c374fc568b15489a3a11b454c07086f1ffdb03b8a752b932c101909da00",
-    "0x63a81ea7356aae8f535364739e71d5f2c566737f5cf1d6f5c12ae9b93c41b3a8",
-    "0x103d55a53d628eabd2805e0ff518f58ea810c0b669f984629ca60edbd59a8c09",
-    "0x279d7c6c15bf4a2e75b5d2ee92ad2bd0b8ce3bbe16b2df5e9c256f93195d9e2c",
-    "0xca727a2de4275b965ad1fa856ac6ff666b0a17d4e05890d0892289b0d702978a",
-    "0x027be0ea23118a72bbb5ca9f63b8ecec1d985eec244df98b9136fcb43c357156",
-    "0x0d2f8de40536d2a15c528c06bb737b3a9cb216cc2d0e0300cc32252c16a49f17",
-    "0xa7a53589700f2bc6fee2b6193577aa122cd67e5a259d1032ff05a1e87680b179",
-    "0xc58ad1064da8654c41d044fb80ddfb3b6178284db1ded24fa4af5aaa5654158c",
-    "0x6098c6bffa9ffc57b83e9eaa3f17c2186ae65dd4812144338c914b7cd0334bee",
-    "0x7e248ff416b0abf4f7bd21131a5e76ceecbcb697a15627e3399869ad60025eb6",
-    "0x06e0695df954753e87de6249446346d55ed1e96dd8cedbf3b29fd7c5690c1a01"
+    "0xd020d5e16bdff1ed51757d49f1feaf11e2816bd0fdd4b6b0106b2bbfe6a2cb30",
+    "0x02d44972cdab026f92011d0a2816adf88cd0768393244868d4c17e031e2d2150",
+    "0x384163a29bd21003db1d592d1cd63bb60f7a44740737c02afb42b545a3314955",
+    "0x5bf345efb07526035760cdca834819fbc31cd3204b2b8abc22974ae7955ea352",
+    "0x13cd2c01fb8326f81099c0ba3b6e4643524ecd11e629c5995b238fe01bb273d7",
+    "0x6a847b7f3e8769c75067d9b3dd02f169b38bf9b05bfaed67d230d307305c80e6",
+    "0xb6f00f59fde161ac819b71afd34a9a1b7939c0a6cdd22487aa4c6170f8f2e47d",
+    "0x8fb07cea3b29e63837f8837758d824ba7d02aa70d383abe1b7f56d72004a2906",
+    "0xe09e97544761770de69d835d14ed30554df256f8508ff66f4b0a7dfbab84b864",
+    "0x205037e30930ce8a82a0e1bfee409b8f01d25d4c060be3fee8ce88ff0e37ca89",
+    "0x1c050b8bf625e3f2f4fd73674a4b6145a5b32675e2244213a7b18b54f4d6b3b7",
+    "0x57392a31e31899cbf9973ea05141b8cd65dc5ef0a8eb556eb4d9a4b5e15ed39f",
+    "0xb9fd614c34dcdb7e8a3d9d83eb70bafc64435bff9ae29efbcc93041acb459f6f",
+    "0x9c1fa2fa9e61fbc8b275e1fc375167ea5d8d4722ec096b2b9a3cb86e20c6852b",
+    "0x6151fc0474df54254c289d06583004dba437f1ee309006257af70204f2f651d3",
+    "0x4d701b70262a2bd72c83f8cec23a890eb877d3541e2d1f64af4fef6f3fb407c1",
+    "0xa957c65fa6cc9837475ee165596cd63b7e2782fde3233a42ea117976e3687975",
+    "0xe53c3c930211394b34e570694a62af2ef530f10bdeb72eb1f40b5fde5b083950",
+    "0xfc7fb5d3841476ade280d46ec640a87de015b0bd8e3f95f1607a6ea42cfb3afe",
+    "0xa1cef9669e1362301391773f28cabb0df948f0106bf6677126a3f7aea5e6a735",
+    "0x0a5f406db2d4242cede13d5fc73922bdab787590b9e77fb2bc72de2df0d2bea7",
+    "0x3a1b85c0af9966090a1efd2000694a0bda9b54ea2de0dcd6074e5e88a8426eaf",
+    "0x44d5d1ae1fe9b7289fc9d09e2a5f7a7928c64659a4211d453a19b8f080cb9c35",
+    "0xbb53ec3bd775d9183c7ab30cc6f008997ab1dfe83d58ccefeca3481a3e0209f9"
   ],
   "order": [
     {
-      "name": "Antofagasta PLC",
-      "check": "registry"
+      "name": "Prudential PLC",
+      "check": "sanctions"
     },
     {
       "name": "AstraZeneca PLC",
-      "check": "registry"
+      "check": "news"
     },
     {
-      "name": "Antofagasta PLC",
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
       "check": "sanctions"
     },
     {
@@ -51,43 +69,11 @@
       "check": "registry"
     },
     {
-      "name": "Standard Chartered PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "AstraZeneca PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "Standard Chartered PLC",
-      "check": "filings"
-    },
-    {
-      "name": "Standard Chartered PLC",
+      "name": "Barclays PLC",
       "check": "news"
     },
     {
-      "name": "Antofagasta PLC",
-      "check": "news"
-    },
-    {
-      "name": "Lloyds Banking Group PLC",
-      "check": "news"
-    },
-    {
-      "name": "Lloyds Banking Group PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "AstraZeneca PLC",
-      "check": "news"
-    },
-    {
-      "name": "Lloyds Banking Group PLC",
-      "check": "filings"
-    },
-    {
-      "name": "Antofagasta PLC",
+      "name": "Prudential PLC",
       "check": "filings"
     },
     {
@@ -95,7 +81,23 @@
       "check": "filings"
     },
     {
-      "name": "Standard Chartered PLC",
+      "name": "Lloyds Banking Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Prudential PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Prudential PLC",
       "check": "registry"
     }
   ]

@@ -1,0 +1,93 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Petrocell Holdings Limited",
+  "parties": [
+    "Petrocell Holdings Limited",
+    "Software Integrators Limited",
+    "Waste Advice Limited",
+    "Edinburgh Skin Cancer & Dermatologic Surgery Limited"
+  ],
+  "costUsd": 0.13,
+  "signals": [
+    "0x21d7fddb7f4dc2d7d195bb6ad20e8ad09069e937d597527323d450286c55c3f2",
+    "0xf1eeb40a208bec619b43dff276fc6c890dd41c1808c99332dd3cb9d4230b8f4d",
+    "0x8e11f8edbc76c296b8ff0eeadad4404f01728935360fd415a45f31d2e1a22ca1",
+    "0xe81a9a84a75e530b484094c9acf2e82078f4d19e8ad031af24632ccbe6f2895c",
+    "0xe19a56d2f393bb570bda84ad16d7c7a065cc729ded21a4878251beac9ee8565e",
+    "0xfc26bb4bab20b086b9a37dafe99699f562f26d6b8ec24fd1084c3baefa3d3ad9",
+    "0xd466c0a507611fa7befffe3f7c3176ce4d8d0671481568bddc4bbf2886f7788d",
+    "0x4844455ae1ddb38cd64fbaf30b9749abb7287e54d8df02075e45794c0f485f2a",
+    "0x343942b6447d24fdc49db7eb8d9becec95715521d66c0dbd3ba5b2ca28a25347",
+    "0x1d157dfb30a3de8952eb57893eba1dbe0250f915645b6c47d86f7fa22b9f4bc6",
+    "0xf6fdec7b6cd4162aa4a5977c37567cad49043b7dee5bb3c6b8c7ce8bea705cd2",
+    "0xaa1d1f1419ddcb70347efd4f43e6ab373d3b3e9b98123dc7ff4b112a5f3a2edf",
+    "0x0743ba49a0cd1b16f838d8d7a80ed30c57d8b3c3375c83a95f9e105da115c925"
+  ],
+  "order": [
+    {
+      "name": "Software Integrators Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Edinburgh Skin Cancer & Dermatologic Surgery Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Software Integrators Limited",
+      "check": "news"
+    },
+    {
+      "name": "Edinburgh Skin Cancer & Dermatologic Surgery Limited",
+      "check": "news"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "news"
+    },
+    {
+      "name": "Software Integrators Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Waste Advice Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Edinburgh Skin Cancer & Dermatologic Surgery Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Waste Advice Limited",
+      "check": "news"
+    },
+    {
+      "name": "Software Integrators Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Waste Advice Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Edinburgh Skin Cancer & Dermatologic Surgery Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Waste Advice Limited",
+      "check": "registry"
+    }
+  ]
+}

@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Rolls-Royce Holdings PLC",
+  "parties": [
+    "Rolls-Royce Holdings PLC",
+    "Saga PLC",
+    "Centaur Media PLC",
+    "ASOS PLC"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x842e4ee733167b87d4518f74a11b4310b799a707377fd8ba4c65bef5e3fdac3f",
+    "0xf652a9e937f47e57d7ae6f9e42c1112cfd659bb16c828a0bb06babc0976e6334",
+    "0x275d1a1d92832d93e34c8a0af5bae7d7b038fd8a1bc4755f40deea474fc3814f",
+    "0x1ef70760823d9ac582f61d4ff74da9114c5450d483bebee8b633eb9a766d04ee",
+    "0x2fed149417bb0b5aac7bd86502651b10efe54c3115990b88b4c1c9b061ade844",
+    "0x862f93ee1ef3ab54d81b46e83ff3a73c7159523d07a4793f9e10f8338e21b2e2",
+    "0x5a275d49313780ab0ac3090bcc4f2c52711211657c997792efe13e854df1e594",
+    "0x14691729c4d54a84967d6cb63a92052128a1b8516f9fce0fc068e467fdf4130b",
+    "0x91b8fa0db8d471f854cd1e1652603e157858e6f321b92e2d5ef1b11dcd88d44f",
+    "0x7401e371d3a5ff2f0c5f9c777d67702033506371bc1e398445ae9a54a46670de",
+    "0x26e8aa3a3b291f8585defc0bae5cebeefe783de6c854106ddadd45d6d0470d39",
+    "0x7d10dc9b0854ff2175b36174ae97b01385c014dfbb4981e0c709a3c621a9a1c0",
+    "0xc020b4088df8a1fab6a4985e0c356b873c66cfeb1a218dbfa142bf46ee5cd137",
+    "0x70ecfaac4b983727241613c347090bf309602666f198a2e8c17039f4e207050c",
+    "0x40f0922f6f85b40d139e5fbdc52034797b26f30958f9174d9a7dfae828661cba",
+    "0x52ad82a6c83dfb44e9e915eccfedc794b880a6a5f8d22a8a8a52c9eb3a3dad1a",
+    "0x1a0ad91aac39e7c33640c6d2467433cb5af72d5a88b7e3e75b2cf701830eae03",
+    "0x372ed55f2a0e923e680e211a1b7c9bf5fe6d15de22b0072864adebfb9f8ba6e3",
+    "0xb788e71a999ea5543132e1ce1824fc8f1900b6315f579b9a1702ca2653443cdd",
+    "0x333dd1cabdee10b0b45bcd6a0590857a80fc2ad4c83a0bc849c63e0a94454fbd"
+  ],
+  "order": [
+    {
+      "name": "Saga PLC",
+      "check": "filings"
+    },
+    {
+      "name": "ASOS PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Centaur Media PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Centaur Media PLC",
+      "check": "registry"
+    },
+    {
+      "name": "ASOS PLC",
+      "check": "news"
+    },
+    {
+      "name": "Saga PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Saga PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Centaur Media PLC",
+      "check": "news"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Saga PLC",
+      "check": "news"
+    },
+    {
+      "name": "ASOS PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "news"
+    },
+    {
+      "name": "Centaur Media PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "filings"
+    },
+    {
+      "name": "ASOS PLC",
+      "check": "registry"
+    }
+  ]
+}

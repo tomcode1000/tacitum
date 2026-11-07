@@ -1,0 +1,96 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Rolls-Royce Holdings PLC",
+  "parties": [
+    "Rolls-Royce Holdings PLC",
+    "GlobalData PLC",
+    "THG PLC",
+    "London Stock Exchange PLC"
+  ],
+  "costUsd": 0.16,
+  "signals": [
+    "0x7fbf23ceafc5f0966b04883b5a6a1e1847b5ea519f09551dc12b619d0982289c",
+    "0x98af65ad54652cdb600bb6e16261cdfdfc295940945c61626f0c7521c11d03b9",
+    "0x029d10f40b1ba077a06cb33866a1e7f2f4669ba7b4d0ec05dd851aa0644d3196",
+    "0xff620b8edf44092813473dca49f66eee360881a76c45bb6a1a854d710b49b7ce",
+    "0x5d4fc464f5ae03df23b4c29255d40fac10248ecb89dbec329d4dc797cf1da545",
+    "0xdeda8039b4435cf8546c7874ee35b8764d2f2a1d285d4132311c6e4e5f9049d1",
+    "0x40fc5ea4a1840dd6ace0ca1b60171d6e1b881d17dfca910b5032151f378fcd00",
+    "0x10ebbabcb7b2307d18872b1f782ac4e7a0b92b3b277de08073371337e918ee32",
+    "0xaff81e5b507e4f8d2b192f48a01e5294b6be258dd088d7a8947aeedc80810ed9",
+    "0x2a049c23440b84dd29ce28edede2168d27b31b5db6194630d399266c9cd5fccc",
+    "0x95c09799760c11e077bc7ac309fca297ebfc3a9f46ecf65453d06632eedf836b",
+    "0xef61958e89a2d06be1a494ff86aa2ae4a2656e3807e9944ea2a2fc52c6f21fbf",
+    "0xcf793a25bc48dfafe109530f5a29daa7ca1eeec39e06f17cbb2db4f8f5ff332d",
+    "0x13549ec94da6f0606f38dd58f8ec93fd6563542553d1d177a1f13c51ab2f0db0",
+    "0x9145af316073008eb4da641a50c672fafa08f18c82fa1d45d9bcf3bd1e08d00b",
+    "0xf4d927a783a152fb713adca64fe008562f4165983aa3c2a60cf9b5f4c6042370"
+  ],
+  "order": [
+    {
+      "name": "THG PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "GlobalData PLC",
+      "check": "news"
+    },
+    {
+      "name": "THG PLC",
+      "check": "filings"
+    },
+    {
+      "name": "London Stock Exchange PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "THG PLC",
+      "check": "news"
+    },
+    {
+      "name": "THG PLC",
+      "check": "registry"
+    },
+    {
+      "name": "London Stock Exchange PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "filings"
+    },
+    {
+      "name": "London Stock Exchange PLC",
+      "check": "news"
+    },
+    {
+      "name": "GlobalData PLC",
+      "check": "registry"
+    },
+    {
+      "name": "GlobalData PLC",
+      "check": "filings"
+    },
+    {
+      "name": "London Stock Exchange PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "news"
+    },
+    {
+      "name": "GlobalData PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "registry"
+    }
+  ]
+}

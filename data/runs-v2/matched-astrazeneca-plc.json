@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "AstraZeneca PLC",
+  "parties": [
+    "Currys PLC",
+    "Hunting PLC",
+    "AstraZeneca PLC",
+    "Carillion PLC"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x61e063f54d8b6ececd17a62ce767273324ad5e8037490760c33485aea1c8ae5e",
+    "0xcf38e0609c58744dea2909abe4cd89f81bc23e3278791820d5d72c2c6a68b6ff",
+    "0x81b1d23ce1768d17c5cf40de9d2d5f6105b78b8e40f4fd7638acc15bb69eff65",
+    "0x5e193ed0748d1c6a0c2e458beb2b61109a34d0bb06b05a2e09a9fa5c7483882d",
+    "0xb51c45aab5dcb2ad37bd6f0fcb7a2c74c770ee76d44e66c159e5343e7c9afba7",
+    "0x08d61a9158682fccf93855b1dde02df633bc1d338abdb4b8adb39fa40b920117",
+    "0x7401ad66d06ecf6355bcad1126ad784879c2bd795cf7f572db093f9b2496e2f7",
+    "0x232ebdcafb09ef20dc8553fa290351ad1960a14c97445c815a5e428ad5f9f104",
+    "0x9c363bb245187d1fa7b0f036c1ccc362920c39e657bdc13af270c1355de62b18",
+    "0x263284aaffb22e6dca4f64f5bff06fe9f46ca3bc37610ada37afdb78eba15163",
+    "0xa10805f2cd9deb76bd44ae58cbf9946e4718253a73a92c9067709c508a07835c",
+    "0xaf1a181908fa633aa3522fb7c7b6d7bb92b2c4edf26e3c5bdbc08d4b6bef5c35",
+    "0x560159ccf99e23ac6bbc255259ff09b7b69bb4ef8cc40353bcc60e64cc293f58",
+    "0xb872cc776ef82d4442ed34e99486d76996b5ac0043a64d15dedf940d02d34372",
+    "0x54041aa935c4d7c8874143ccfaf9025ced3b076fe460239225ceeb205b720298",
+    "0x6d6dfa0385ceef5731d48c4f4734cc1539ac7b78741d5e06fff4327617445241",
+    "0x1539fc500175007c94abe43a31e4a07d8373f9b3b12f7b032e14d93f4dba3393",
+    "0x72a8bdddbfe45ca791c3e202ddc30ef54eb94cabf0a20d5559b6705a067f2c40",
+    "0x8d23b6462697f0919d534143ceafca6f0aef966eac3ab1ea746ab0bd1163fb4b",
+    "0x8174df33f65149d240ad24b1414c67473584382fc617eb57c02dd5039a71706d"
+  ],
+  "order": [
+    {
+      "name": "Currys PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Carillion PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Hunting PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Carillion PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "Hunting PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Carillion PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Hunting PLC",
+      "check": "news"
+    },
+    {
+      "name": "Hunting PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Carillion PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "filings"
+    }
+  ]
+}

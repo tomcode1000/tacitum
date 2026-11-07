@@ -33,7 +33,9 @@ The institutional workflow, first without privacy, so we have the baseline.
 - [x] Decoy generator: k−1 realistic decoys per real question, timing jitter and batching
 - [x] Attacker: a classifier that tries to pick the real question out of the feed
 - [x] Privacy score: attacker success rate against the ideal 1/k, published per run
-- [ ] Filer-status matching: survey the listed pool's filings answers once, from an unlinked wallet, so decoys match the target on filings too
+- [x] Filer matching: one survey of 117 well-known names' filings answers (data/filers.json) from a separate wallet; decoys match the target's filer status and filing volume
+- [ ] Decoy reuse across runs: the same few filers (Barclays, GSK, BP, AstraZeneca) recur as decoys; test whether a multi-run attacker exploits that
+- [ ] Bigger filer pool (US-listed names): only 16 famous UK filers exist, so filer decoys sit up to 0.94 apart on fame plus filings
 
 Results so far (k=4, chance 0.25, best attacker, 95% Wilson interval):
 
@@ -42,8 +44,12 @@ Results so far (k=4, chance 0.25, best attacker, 95% Wilson interval):
 | random | 8 | 1.00 (learned) | 0.68–1.00 | fame, format |
 | matched v1 (fame, format) | 16 | 0.50 (learned) | 0.28–0.72 | registry answer |
 | matched v2 (+ registry) | 16 | 0.57 (famous) | 0.33–0.77 | SEC filings count |
+| matched v3 (+ filer status) | 16 | 0.45 (famous) | 0.23–0.67 | filing volume |
+| matched v4 (+ filing volume) | 16 | 0.38 (learned) | 0.18–0.61 | none clear |
 
 In v2 every obscure target was hidden (all four parties: 0 fame, 0 news, 0 filings). Four of the eight famous targets (Barclays, HSBC, Lloyds, AstraZeneca) were the only party with SEC filings.
+
+v3 and v4 redo only the famous runs whose decoy rule changed; the obscure runs carry over unchanged. In v4 every simple attacker is at chance (first 0.19, famous 0.28, format 0.19); the learned one's 6/16 is not distinguishable from chance with 16 runs. The survey wallet's funder is two hops from the payer's funder on chain (a 2025 transfer), a testnet shortcut the P4 pool removes. Archives: data/runs-v1, -v2, -v3.
 
 ### P3: Milestone checkpoint (14 Nov)
 - [ ] Private mode v0: decoys plus a fresh payer wallet per assessment (funding still linkable, stated plainly)

@@ -1,0 +1,93 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Satobe Limited",
+  "parties": [
+    "Neon Payments Limited",
+    "Star Tours Limited",
+    "Satobe Limited",
+    "Havengore House Residential Care Home Limited"
+  ],
+  "costUsd": 0.13,
+  "signals": [
+    "0xc6a2e112e437e0a19dbf4543686d57dd18bef00697850b9431a3cc1145def375",
+    "0x3c5ffdf9edc858d7ff18c1c12419b26078b01156344bf4bc6d3f6c450c4b2a23",
+    "0x6c672374878195dc207426c37e988fbded4a7f813cb0eff71386d7808e47ae54",
+    "0x82792971b5439a90738edb2e5b72337d07763c4b0a4fc89e27bee76feea9e9eb",
+    "0x310ed0d0fcb3b195bd6611d56583ef97388ff27df0523d97a0976a92bad84b33",
+    "0xfe0b58e19eae5fa8c3e93b25933afc5c57963962ff5eedee03770bff252d7270",
+    "0xafe56fcca18ead7c13314ae60338258919112555b66c2be18e7eb8eea6347d9f",
+    "0x6d83aa57f13b07d0903b5b0d6db6b87c6878d9be5f662b2eb1517e458d8644de",
+    "0xedeaaeafb64a7c9a6b48049f6eeb2d792f83ff7cb374b2cd6c905e3e2091d6c3",
+    "0xec069495ff3dc74677de468b7be17f5a164d56b8ab0200a70c04b64179697e84",
+    "0xb668bc491ccd94c119de0dd8b038b4c0db8abe3953c8cbd8a4481af8aff99fd0",
+    "0x39ba6daa806e4f296cf27ec782a1012bd5655414bc8869d02720b8e7911fc938",
+    "0x40f66386f2a725a4b50e27b459647a2f7eb5c5a0aa05388e3a96ca9291c3a61e"
+  ],
+  "order": [
+    {
+      "name": "Havengore House Residential Care Home Limited",
+      "check": "news"
+    },
+    {
+      "name": "Havengore House Residential Care Home Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Havengore House Residential Care Home Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Star Tours Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Star Tours Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Neon Payments Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Neon Payments Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Star Tours Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Neon Payments Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Havengore House Residential Care Home Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Neon Payments Limited",
+      "check": "news"
+    },
+    {
+      "name": "Star Tours Limited",
+      "check": "news"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "news"
+    }
+  ]
+}

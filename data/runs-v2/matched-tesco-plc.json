@@ -1,0 +1,99 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Tesco PLC",
+  "parties": [
+    "Tesco PLC",
+    "Currys PLC",
+    "Standard Chartered PLC",
+    "IMI PLC"
+  ],
+  "costUsd": 0.19,
+  "signals": [
+    "0xeecacb27812f3d2c8b0319f9b2d795b4ce74566cde750cbb193db574de5c1e59",
+    "0xbf8af46d786a074b21d2e38d48d1475a79ce197bba951e359a4cc00a6b52ba38",
+    "0x64ba088e382b2a8acd4c4c3cd974a15fc59883a374c899e68091bfa654e15f26",
+    "0xccfcb28392315e7a0470dddc8f9b6a9386be232695635b05ce712dc9a08c9717",
+    "0xd82f09e90ad78e1ce48a53c049ef12df7007ad5ec100fff9f4122bdc0723802f",
+    "0x10bd64d4713ef2b313f364d2778fe54eb6bad3f5777fa7083a6262ba2427e28a",
+    "0xfb65e6417184186c7d08a9a61b3b0499fd51f0906b94bbf932e3f3d9e08d0df6",
+    "0xbbc205b5a153f61557751ec7f6c056c0b635eab387c8985e84fe2dc77aaf2339",
+    "0xfd58915e504582fac8fc471b46402371d2155542c0bdfd4286bc6d36904693ea",
+    "0x799d23fa223b4234648ad4cb57c970096a371c2cbc9c480edaaa74a71c180790",
+    "0x311de787cf35cec4b4f907a16bef02a63257b89aba717e119d72c62b053c4e8d",
+    "0x43c2bc44581b649c9320b30e7a73b4a8f6bf51b1c2c75e0632a0e3a7ce76ea39",
+    "0xf2373414fe8614a408e1dc8f5b7b55337421e749971145d7e6ff47a59a39ed37",
+    "0x79fb55c0544f22bda1664cae2c2cb82344d22f5b36192434206c056c4ee3c73b",
+    "0x7e3b663494b75f77d0145baeb2275f17ed241e90a8d0db99fbb80d9556c21fac",
+    "0x3b26c581fe19a87c07236bb72dcdc2fb6f21f3639e4d087e7d41648741b7e54e",
+    "0xa7a368066947a260a0158388f900927efa1c5537f605cf244c0d3322b18f0b11",
+    "0x0bdff409201d8c33dc6b50dc88cc56e27451a81333fbff368d6578d1a31994e6",
+    "0x0226c69d73220b68d16d0d47a1d168ac04ddf25a5cec2622d77a71c0e32f5826"
+  ],
+  "order": [
+    {
+      "name": "Currys PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "news"
+    },
+    {
+      "name": "Standard Chartered PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Standard Chartered PLC",
+      "check": "registry"
+    },
+    {
+      "name": "IMI PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Standard Chartered PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "registry"
+    },
+    {
+      "name": "IMI PLC",
+      "check": "news"
+    },
+    {
+      "name": "IMI PLC",
+      "check": "filings"
+    },
+    {
+      "name": "IMI PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Standard Chartered PLC",
+      "check": "news"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Currys PLC",
+      "check": "news"
+    }
+  ]
+}

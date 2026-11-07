@@ -3,61 +3,53 @@
   "k": 4,
   "target": "HSBC Holdings PLC",
   "parties": [
-    "Kingfisher PLC",
-    "HSBC Holdings PLC",
     "GSK PLC",
-    "Anglo American PLC"
+    "HSBC Holdings PLC",
+    "Bp PLC",
+    "Barclays PLC"
   ],
-  "costUsd": 0.2,
+  "costUsd": 0.24,
   "signals": [
-    "0xcc23653916c46f25f55a770b34f13d772bd41015a02c0ac1337c3d6604e71815",
-    "0x362e932f66c4b7de0b1a4a70bc77301b5ca018b4cce199bc06229ddf408a6eac",
-    "0x6532501e969029ebbcdf038bef6c812d42f97d301099f28ff90af611fd290399",
-    "0xc5d59b83a08ff314bcb7b41ae3e924051865dbb9f1db2beb40d29c2823fa4fd1",
-    "0xb6b5e878f4615ad91279a640e6208dbdefac2f1888f9b0decae1ce116d4d8195",
-    "0x1c394797925ca6f86a43c7128e328900b9bfbb1de7215f9081a3c57efdb68e2b",
-    "0xae4670c24569e07b897dc7166f67d383f3cf04d4be77d9dc64ec52402cf1c62f",
-    "0x8e9430f6e336d26df3444667e5444053a65a4db51ee9edae1cc326d24d319797",
-    "0x83ac8c6a3cdc79d5b676be15fb37479d5549a36bc79205ec829d27057f637457",
-    "0x155e78c6b59c8f4525a9fab8b332cc6020c19b72fae8eeceb523943abc3f0366",
-    "0x6cc0d141bc778bef5f116ee2334067b07b5660bc1d49b524f4cc0074bb0c357c",
-    "0xe1ca6bb380c6a91a2777ed0ad4e6ff7ea05fe217fefed1cb50262d894ca25e6b",
-    "0x9ee5d3f2f410d907b9649634c9368a2e4b9a77fbcc5aa36b73143a85310add36",
-    "0x7c7485e7d556864063e7903ac92410677416b744855722f70a3d7f8828841882",
-    "0x8c01124ee309a30acef5a2672e6d5fcd5fb4e9a5f977d0860d6951b96763f85d",
-    "0xcf69f2510adacb437504ed8c7fdf505bfd429e5454cd888fb73c38c05028854c",
-    "0x31c5829545ef75c25f25ac81c5a519edd0f73b353ffa83a0efe172dfe53e6841",
-    "0x539cf3783b092080e141fd91a505dcd46ebd1cbb8e04fdf810b72d9802aca3c7",
-    "0x2a37107d5d7c040661ea80996da62535259299ec16f9b76ec0f4074090df11c4",
-    "0x56ee3b700813be696c767243e79f0098fe5994ead5d00faa9a47d8546ed9dd5b"
+    "0xf6ab5ae75515f5f6050bc31839cc1a220dc7f3003435aebce491ccd60917fa8c",
+    "0x02e71b5b0e799ce58fd247edfa94e0415105aeab4c40f0093955fd80a944ce78",
+    "0x00a0e98d582e753f2a66024a31ebb8e81488a171e374851eb70f2ba0e287ff3b",
+    "0x0bce944695b0be6c3c62ec40285739faa36c31cbc582ef43946992fed220bfd3",
+    "0x8292afb2035c651cfd592f253e52b9d12ef4f3055c03eb635e2452bf4a23a3aa",
+    "0x095f2ec7b7fea856b5a548016aeda2d9494dee4dd8149be0e8a5fc02a933ea53",
+    "0x472355e3514c740e03e61392fb0bc4e85856f808547ba098bb8a3c110f7629bb",
+    "0x331c5d180555c86875d882d1b7e3e985f9a9afcc248280d51e7b4f7a5bb403b7",
+    "0x268c6a3ae844e9f8bc72ae568c1992874003e889537a109a6bdb28d58e4d8ea7",
+    "0x8c0d93242da7fc4fa0c88a0e84a7566ed27966237de57eeec167e5ab0ca7dd77",
+    "0x0ebd8cb4838c6a4407a327b55d7a78f382af07e3e6c919a1b6c70e14031b6fa2",
+    "0xf9ade5eeb75af1511a6ad9d64e4e7aa8cc1b925feec1b9152dfd819d0538ecc5",
+    "0x2ca7304e9de240036ae1761695be9657cd3270b010cc6f53c37a22a166088acc",
+    "0x12ef50ad21052e8f26321df28dfc19051be0a732459ff810b88d963d0bbcd61d",
+    "0x0655e68b5a9cbca882e4a9be32d78a1ec3a77ee21aef6b454231dcd4d743e1da",
+    "0x338fc3191baa3b682000b1a1705b764cea940836e2e836f0c9b48bc19dd7c7d1",
+    "0xad4e9a466233e207e7eb168d5d74577630cedc9ae7fc5ff1c49c105880726828",
+    "0x13fcbbcd4a93423dbaa7b27a9806f46215ccf60e3248a07955ec76a8a34d9d83",
+    "0xdf57d04b7a4fb6c22d478c5509806e897673227354c848406669210bf8d123a2",
+    "0xeafe56ec07b410e1a8ae6f40be05275aed6838e5ae79a02e7d713781127ef99d",
+    "0x709fffff41da88ca3cb41f335dc07ae120c32181672a9c24b5535475b3e2803b",
+    "0x03c67bd8a5d102344e41d3789f21bf1e214c13b92b0d41b9bf6257c10e7a736d",
+    "0xfb61a0000d63dda9ae5de5078505960b3a9338885d504318f1d3effd44a8671c",
+    "0x921bd2c6a4e99f1e73957780fecb22aa284ad2657b8baeda0f45374a3492055e"
   ],
   "order": [
     {
-      "name": "GSK PLC",
+      "name": "HSBC Holdings PLC",
+      "check": "news"
+    },
+    {
+      "name": "Bp PLC",
       "check": "registry"
     },
     {
-      "name": "HSBC Holdings PLC",
-      "check": "news"
-    },
-    {
-      "name": "GSK PLC",
-      "check": "news"
-    },
-    {
-      "name": "Anglo American PLC",
+      "name": "Barclays PLC",
       "check": "filings"
     },
     {
-      "name": "Kingfisher PLC",
-      "check": "filings"
-    },
-    {
-      "name": "GSK PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "HSBC Holdings PLC",
+      "name": "Bp PLC",
       "check": "sanctions"
     },
     {
@@ -65,11 +57,11 @@
       "check": "registry"
     },
     {
-      "name": "GSK PLC",
-      "check": "filings"
+      "name": "Barclays PLC",
+      "check": "sanctions"
     },
     {
-      "name": "Anglo American PLC",
+      "name": "Bp PLC",
       "check": "news"
     },
     {
@@ -77,24 +69,36 @@
       "check": "filings"
     },
     {
-      "name": "Kingfisher PLC",
-      "check": "registry"
-    },
-    {
-      "name": "Kingfisher PLC",
+      "name": "GSK PLC",
       "check": "sanctions"
     },
     {
-      "name": "Anglo American PLC",
-      "check": "registry"
-    },
-    {
-      "name": "Kingfisher PLC",
+      "name": "Barclays PLC",
       "check": "news"
     },
     {
-      "name": "Anglo American PLC",
+      "name": "GSK PLC",
+      "check": "registry"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "filings"
+    },
+    {
+      "name": "HSBC Holdings PLC",
       "check": "sanctions"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "news"
     }
   ]
 }

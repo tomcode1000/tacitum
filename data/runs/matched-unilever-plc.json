@@ -3,98 +3,98 @@
   "k": 4,
   "target": "Unilever PLC",
   "parties": [
+    "Diageo PLC",
     "Unilever PLC",
-    "Antofagasta PLC",
-    "Grainger PLC",
-    "Aviva PLC"
+    "AstraZeneca PLC",
+    "Smith & Nephew PLC"
   ],
   "costUsd": 0.21,
   "signals": [
-    "0x7d771f9447cdb6b06187a8ccdd70e48b6a16a3ea89f6a6e53aed3d8a27078305",
-    "0x66cec779aa23733232a6e0a7f4838c7791c79fcd5435cc2b125efda12af20009",
-    "0xd20ac5b86cad88d4dd0d9e37c4d455b8e48716b9eb1ab69ce11842772686cbd8",
-    "0xe021ff35bce751ba6491864411041100f3a4b22472f7129ff1cf537d0fd06cf4",
-    "0x5afda0e10097474c0d1dd80174e689410e37fa204a3716e79645d4c44d363e79",
-    "0x403676b1daf533b68929b9f0e4238feeb90fc0fb342358f47859884e7b3fdfae",
-    "0x86d2e859fd50cfc79152e94fadad258c1b413ddfa58a21e56ddf9ee10c1ee4c2",
-    "0xed24f5bbd0095c8535830f01f27d8af4ea86db932055aa7c88b8fd5ae2ad9e30",
-    "0x8d85dbe36c455cde03e162bb1ef1610a491e57f017648590d7d48ec7c122f7b8",
-    "0xd5430bd4a4bc3ef9bdee22f6e6c26bb808ff25a02d7616c3eead94d1da7541ec",
-    "0x9c43fd1c290c6c35fcd47db306cfd5ad4f5189423c80aa373b97d2a956621132",
-    "0x2845b1469ae6ce6e3640920ec439c8b8e4466aaab8b725b27b53ad0e084fd085",
-    "0x3b9886c61f5dd16e54df233f0debd10e3568a47742452a1860ba6559c28d27d8",
-    "0x516b0d1da27fc073568b0d7b6ccd6243d3038c1080309e513352938df34f96e1",
-    "0x0fa911cd4894f6108fa56108d17a5d11cbb65ffeb8dd77a8f9cf9891eef5a0ec",
-    "0xc7022a90abf5877a1d32c9024f53b9b59f60ed21d0c72114a606eb1f2fd78a88",
-    "0xa2f279c5ddbcfec875ff7b695f2c6e99e939ec31b7cef8febe992bee7cddc025",
-    "0x514a7eda3f1523130b4a00110b0e33061969837e2baaa69cdd85f1010c1762b1",
-    "0x4e423c396ee9c39f4e10675e71cad204b573634e14f412d432e0433cdf1f1ab3",
-    "0x710b097eff0aa117d919899d6a32663b9090ed09d968b87bdaa4d481432fb7cd",
-    "0xdfa0eb733295e267a91e340d5cd4abde2ac4142c0251e34266c5e384c43a96e4"
+    "0x57596a8a48a98d1cbe544e3b3c38b578cdd09b4582f157851a8a16399a9e1152",
+    "0x7ee83ca8714894b18e6df7f89fcbccf42ed8c7cb32a89a1e672bd493e653891b",
+    "0x142f3007704ff58fb9142abc3c1c7832dc96d2febaf582123659a21beb25a397",
+    "0x2d87e7b7080e9632a9384b488c0ed9ab8e796ffb9288d3594af9dbcd27fdf792",
+    "0xf5d9703e4b34efa0eecd6153a6cd7e980a35717d4e91b6be4f25e9b1de4b6417",
+    "0x704ba82e4937de3af716e9cb1da1e87116052777d4d012323a1765f00cdfe8d5",
+    "0x1a9fc525972ad1cc75e08bd973860dd93ff3ebbf02cb6801431f091b39f1cb69",
+    "0xac4f1dccdf9875bfe75615d947fd8a1f01deb39b8fdd28c217ca95c0a89e7ae1",
+    "0x70dd438f960241496e0d97840a66e5b39a893a198a1af7a166add5c4412cdd85",
+    "0x4a8773b9be8546f56fd8d954316eeb0406001459cd70e198c557eccefd845963",
+    "0x76ab73f76d164c8af725a8099798afe0650013d60fbc38060231b9d6a9b3e788",
+    "0xb4d2ddd40a2821162554005dbae1b118774b25cb4e2f9201ea4e3d62653c596a",
+    "0x21370404258f8a4aa098e0c717bf5a0b9e121bb472d6826cf0a8716c617aaac8",
+    "0x2ef427c95cdd1e670518bc2d48e9713aafb4c6c1c267beae746d2b35c64ec332",
+    "0x0f363c954f1180bbecb141e05da90420e3e30fb419613e563f4427038c202f8c",
+    "0xdc4d4538dd51bebdc3aee485cc0556fbdc99b624df4975547a7a9f9ea8359320",
+    "0x5063697f0ecff97cac10b1b18a0b693372031b7bb50f86d594d46fb3098d9e92",
+    "0x124896bc940b8c1b41a37517a6d4e294e58fc21ad540ca88283a4f2d71868e80",
+    "0xfc1563a3df14e619e0ee9f9c415e16cc315aedac7ff0e43f3349e72d7a6a4b7d",
+    "0x607b5945731dc1cd869d8c7a71a09cd4a42ceb42711917407c0832065a556ca7",
+    "0x5d0628fe92f584719ea86de1f3cde3c10e68a393449d02ad5bc02cdc39eafb86"
   ],
   "order": [
     {
-      "name": "Aviva PLC",
-      "check": "filings"
-    },
-    {
-      "name": "Grainger PLC",
+      "name": "Diageo PLC",
       "check": "news"
     },
     {
-      "name": "Aviva PLC",
+      "name": "Smith & Nephew PLC",
       "check": "sanctions"
     },
     {
-      "name": "Antofagasta PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "Grainger PLC",
+      "name": "Diageo PLC",
       "check": "sanctions"
     },
     {
       "name": "Unilever PLC",
-      "check": "news"
-    },
-    {
-      "name": "Unilever PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "Antofagasta PLC",
       "check": "registry"
     },
     {
-      "name": "Grainger PLC",
+      "name": "AstraZeneca PLC",
       "check": "registry"
     },
     {
-      "name": "Grainger PLC",
-      "check": "filings"
-    },
-    {
-      "name": "Antofagasta PLC",
-      "check": "news"
-    },
-    {
-      "name": "Unilever PLC",
-      "check": "registry"
-    },
-    {
-      "name": "Aviva PLC",
-      "check": "registry"
-    },
-    {
-      "name": "Aviva PLC",
-      "check": "news"
-    },
-    {
-      "name": "Antofagasta PLC",
+      "name": "Diageo PLC",
       "check": "filings"
     },
     {
       "name": "Unilever PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Smith & Nephew PLC",
+      "check": "news"
+    },
+    {
+      "name": "Smith & Nephew PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Smith & Nephew PLC",
       "check": "filings"
     }
   ]

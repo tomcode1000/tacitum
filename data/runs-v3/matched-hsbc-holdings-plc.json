@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "HSBC Holdings PLC",
+  "parties": [
+    "National Grid PLC",
+    "Barclays PLC",
+    "Diageo PLC",
+    "HSBC Holdings PLC"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0x7e096cb2251691712a447a95ba95209db910888f5ff99a9e0297f87d9098b644",
+    "0x2373a533743ae04635e5fccbfd941288b366f59cf5eb54605d0f5014254321d3",
+    "0x6ceeec5d35224761e4a732cbce069dac610e999e82f53bc62a7e2f127a1f0969",
+    "0xf73e3b8d49933355b40f4d01d72a79cc1108a908e7c5399221ea1d58e6d2ac26",
+    "0x280764a7a11cecd65edd05bc40d33b303d06880cdf40b2ba8ceba572efbbb8e5",
+    "0xe28d6354429a536323cafb180b677e2fba0d5bf4b932ffecd2a9a228f24ba1cf",
+    "0x649c905039e0514b8687b7f48635a89d2de0d1047e72dcd296250d92e3709169",
+    "0x0a5ec8fec9cfc1024ada1621500454def4293c84c5a641180eccae2b38f7b6ec",
+    "0xa09c4464cc0586b0450ce8e8746ce2c873f18fe9f01d127eb6b1aa6a886e4ff3",
+    "0x8934a00fa22e6d5870ea72217aa46fd1a432d99cadafd98057fccd655ccad3e9",
+    "0x491bc05a4c0429f3bf582a83b985385cb4f10bc0c13953f0e19bf228a893596b",
+    "0xf038fd687778c2cc057f21033fec1abc76fa9e7336bffaabaa4027e1eac09845",
+    "0x0e171e44df06087186e2b1a534855ff3756a07e052765cfdf85c066b0e8302a7",
+    "0x82e686740f0ebb57fdadd4796864e518d1ecd03055b1fb1c7c77682d23cd4ff6",
+    "0xae75caf90810c133070d53bf99317c393eeda9c4e14a85d51e1f66ecd00a652f",
+    "0x7a554e1f9bf4b32578d86ac16429148b336a3857ad01d348cc6eaa72421ee5bc",
+    "0xa27238c697216499a4c3c4c8702df475e137f76f0fdeb8ae14a28961992496ca",
+    "0x3d60ed026928ebc1ef910c7280baf5046cfc01752e16ce2ec1afd7bd5cf2e911",
+    "0xa9ba46e4470887c530074a1dbc1c0522709a71bdb337f7125c0f4d897cc391b5",
+    "0x9f5786310c9d19dd6cfc8f1c17ded8bbd91063f9ed32fae470dbf56a2acebd86",
+    "0xa1bb95d9f87bd66db4a28d36ff33a56bbf1c1713beeac45554897f3bc7c54e8f",
+    "0x61d92f3611c735256911a2ea305e35aa87dc6d9c1140903616756f4926f10e9e",
+    "0xb84cfa9717611ada309061fd9270fe41bfd2dcdad974115f116f1561b34ae63a",
+    "0x0b3570ac3a02f84da9f5fa79a5091a6f43c951846ab743a7a459e79bd72ee809"
+  ],
+  "order": [
+    {
+      "name": "Diageo PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "news"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "news"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "filings"
+    }
+  ]
+}

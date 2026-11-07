@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Zakhs Holdings Ltd",
+  "parties": [
+    "Zakhs Holdings Ltd",
+    "Britannia Beverages Ltd",
+    "Zark Capital Ltd",
+    "Chameleon Communications International Ltd"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x0ed09bf6b569006eeb9bc84f6dbda0c2dee69bbcc25c9f4a9febb481bd207ef8",
+    "0x326ec995c3efaf403a175963728ba111370a2f33cf97277d3a8c5d07723a818b",
+    "0x264cab61ef2be1e73f2dd93f877b821fba59e9a8c9700f23dbf81c451a068ba9",
+    "0xd9386163c87794fb666e7dde543e903882a3f4aee755e053c944604a885a6523",
+    "0xff2c2dfadf20fa47fc4b961a967f59f748885cf670ec0e7b050dc4a5ad851cf4",
+    "0x64acf6ad6652e0315a9003b6756056786dca50c7933803e009cf64186db17fb5",
+    "0x99490bae89727d91add76a8461ee7fbe656e83c0e2fe77c0f391af42edbfac16",
+    "0x002f1dd7b00e3e808c58b5ab1e7d9a15271484599e331cfc7dc209e644aff19c",
+    "0x81d8d785a2bf9f4a56b8f9e7484a5597bbeaac09bdebcd69aa85d528d79a4485",
+    "0x2dbb7984e1747572045281a5dc0f7592db8e37973fb8edfb7092225031d206b9",
+    "0xe847feeda0d5ba5126f0dda65677bc9159376113a0f25917e36cafa9ffa9a18d",
+    "0x87c7a5d9ef872efab0807d8d70c6ff199b9790612d4d00f320f352800fb1ccdb",
+    "0xfffe20f9e03c713c4ccea50c0c9f1ac1206829f992d4d555508540d1e2fb8c0a",
+    "0x8da1e985885de0f2977c12bf39d96f5009930ed558fdb3042edfed4d172840af",
+    "0x1389635a1d119424c54f0c13f3e782d08a60fd84168d27cd5c7f85d688db05ee",
+    "0x9294f388883b7b287a694efeaf582cc695d5e7adbf7359747449f3ca7be26b81",
+    "0x9ac93f9392e344c8c546dcc4f903bc52cab39ab38ee820d5c6bb066fd88070c6",
+    "0xf9c4cb4566ca73edb5e49eb1fe15d7ae4bea7caf78c60be71d3b349fb8833da7",
+    "0x226a3b1de8bb968dcb953f7728c43eaf2384e025c9a6f824257a4a01d20812e4",
+    "0x598af6d6333c9354f678b683b245751aa7aaf14e713fc2e91ba47a89b4193012"
+  ],
+  "order": [
+    {
+      "name": "Zark Capital Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Britannia Beverages Ltd",
+      "check": "news"
+    },
+    {
+      "name": "Zark Capital Ltd",
+      "check": "news"
+    },
+    {
+      "name": "Chameleon Communications International Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Britannia Beverages Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "sanctions"
+    },
+    {
+      "name": "Chameleon Communications International Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Zark Capital Ltd",
+      "check": "sanctions"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "news"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Britannia Beverages Ltd",
+      "check": "sanctions"
+    },
+    {
+      "name": "Britannia Beverages Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Chameleon Communications International Ltd",
+      "check": "news"
+    },
+    {
+      "name": "Zark Capital Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Chameleon Communications International Ltd",
+      "check": "sanctions"
+    }
+  ]
+}

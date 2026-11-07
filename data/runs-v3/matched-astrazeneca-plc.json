@@ -1,0 +1,103 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "AstraZeneca PLC",
+  "parties": [
+    "Diageo PLC",
+    "AstraZeneca PLC",
+    "Aviva PLC",
+    "EasyJet PLC"
+  ],
+  "costUsd": 0.23,
+  "signals": [
+    "0x09c2788eec1569be9fefe18fc5569c476223b49eb3e36e04c174387733900e66",
+    "0x0cdda9cd170b50c72a0ef5c0e42247c872b0e70dd26f640d9a396ce8d00beff3",
+    "0xdbd3d3e8da71aa0aad5722bfad52ff9c4fd3d459eea84afab624eb6ef26d57ed",
+    "0xd08b83afe012ad52cef47a341023f5b170ec39839b39c42a31166cd3d92095b8",
+    "0xf0ab1fd0200b90cbe56f059b8e09f0ecfa19be474686b7f939ba30b835650b9b",
+    "0xb23b7fbc7f7bab5c471884a595c63fc848c71d9e371c0c188c462e23ace040a7",
+    "0xac189f7843ad41f2d5045e9d121b29f804c1beac06db94dd8b131c7e2c84d1e6",
+    "0x5276fa219efd547927e8db07c29d0c9033429ef49c9891fff2bcb1643aacad43",
+    "0x73c5f0833ac6f8f0a18e854488397bfedba9e16d1330c1ec99b1a9e9f750dd1f",
+    "0xaefbcb590c076f10baa2d389f5a497c459112493e7c3c0c83a66fc612ca073d9",
+    "0x605327564611e345d38c6f0609c3914a485bd471800e8813e7b79028290caf6e",
+    "0x15f69b827aede19cab4d41d8eaeeed80f62488ea259fe649103fb6dd4cd17f21",
+    "0xc9773fe43ababf5ce97767ef0c0ef591ddd4db03a88bca5c804c508b46da33c5",
+    "0x00a56ba552ce4b4da56659256fbf14b9f41031f7dc5a4945a286b6b67c5f5906",
+    "0x731543b6b40239d01b3d2c83949a841ffa06d77e1a73a87df7beab5b4b09164a",
+    "0x62ea5dabf1b265ea6e9d64ccc527d8ca57f126c5ed8d3927f6c8a838a69ea87a",
+    "0xeb26d83cfbc65ef451e135504a5ce613c72400eddcf77550f43b1bea3166bb20",
+    "0x4d570357266c5cfa18eb2f9455ea07e53801efce54719a93e99e35a1c9f33367",
+    "0xf9da3b4d9b5993660a83621b0fabb42077ff95242d6fabc0d6e99ffbeae2757b",
+    "0x7c7f6cb34efcdfdfa755947c533ec7eb6a4278e4dc4ab6634653a4a2fe979ede",
+    "0x4243c8b59491240971ec29456d4c9e18e83a05c3dfa05bd465b3559906f9af8c",
+    "0xc59f910db9c46b1bfe97a8bad9ee30a53f10edf50d93cbd1cd65fb16c4f8eef7",
+    "0x4f8259caf53df8fd4ba6303276c43e8eb0ae2107157ffd80c116f428e81dcc92"
+  ],
+  "order": [
+    {
+      "name": "Diageo PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "filings"
+    },
+    {
+      "name": "EasyJet PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "registry"
+    },
+    {
+      "name": "EasyJet PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "news"
+    },
+    {
+      "name": "EasyJet PLC",
+      "check": "registry"
+    },
+    {
+      "name": "EasyJet PLC",
+      "check": "news"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    }
+  ]
+}

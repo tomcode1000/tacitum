@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Vodafone Group PLC",
+  "parties": [
+    "Schroders PLC",
+    "Persimmon PLC",
+    "Hammerson PLC",
+    "Vodafone Group PLC"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0xe675ae677406c687a3bc2cb28b4084024e98456d364bb39fcbfdf3364a1d4783",
+    "0x3a0e21e317a54bc9e033299e7fd1bfb11d74d63421f494a04be123af4c25bfd8",
+    "0x87e1e68bd1dd2c60c3f6c1377cd0b27b21095fe782555293a585af392a989b64",
+    "0xf9a63a95170c06a778039d172a034f71d4912059aebb7e42abb98b1e0835569a",
+    "0x3937ca8c821b5e352751857f939c459ea0b39a8e894d7f74c8a721ca7b2f88c5",
+    "0x746c91ddd089883a858e13f55fca035849e408667c8a77aa945d53d6cfff6399",
+    "0x7c9c78b6841354444277078c150e68fc01c27d7bf8554f69050e0362b1300aaf",
+    "0xd13f0812abacffc962ecb61728c0e65bb9a476abbbaa254112cf70fafe959614",
+    "0x7fede6761685c8d876901dec9e7d949e2fd0b38f4bd007299750ce8024fa965f",
+    "0x0c5546cc6ac4e34b42d21ae5671e80357eb4b65cf27554cbedbdf46b27246480",
+    "0xda6f85f8365e2565f57049d8779722da365242e736c482873084fad9eac39c8d",
+    "0x1bc7cad68dd33f9949f922084e248cc72a0a52697e71cd9b8820836696438a28",
+    "0x1eda9ab8c02137288862ff9f72ee2804acc663af736df5045dbbf5e11715e714",
+    "0x709c107156f5f48abb9df251b86d235edb77201b957125a6813b1caa2f082757",
+    "0x036d144f5934230e3355ef8ba1a57d42601000d77dfa3c27496a9d26f066182a",
+    "0x455066a859f093a5a37a25d978f1e97d16e83fe3a6a0387f5533db6ffe9a9e9d",
+    "0xbd27d0ff528e2da6c1d8c0a25ef8ed0bd9db9ad64eb945d4c32b529c2914f9b3",
+    "0x752d84aac7b9d8d54046f1329f9507ad39ba8abf43b5811cfca99715a73c5625",
+    "0xa7c9a8af5de71ea81944423a919d5810c8035fcb2a84f11b3be32f92c4f3c5b5",
+    "0x044bd329d20d3711323658ef6150ffe00fbff3f36ddb1c85b1d50c9c068118b7"
+  ],
+  "order": [
+    {
+      "name": "Hammerson PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Schroders PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Schroders PLC",
+      "check": "news"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "news"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Schroders PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "news"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Hammerson PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Hammerson PLC",
+      "check": "news"
+    },
+    {
+      "name": "Schroders PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Hammerson PLC",
+      "check": "registry"
+    }
+  ]
+}

@@ -1,0 +1,94 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Hillside Housing Trust Limited",
+  "parties": [
+    "Graham & Rosen Limited",
+    "Hillside Housing Trust Limited",
+    "Chemicrest Limited",
+    "Warbrick Property Company Limited"
+  ],
+  "costUsd": 0.14,
+  "signals": [
+    "0x6fbe8f64235c687ec18c9a6de1f3423fe692c1effb95e8be309b387c46a5940b",
+    "0xfe0bcbd848bd842dd9b2d3cfbfda81c35e4b4d7625e4934f191870d2ba73de1f",
+    "0x3c79c13de15d3ce30f1d3a1e724ff3c5767d6ae120cc1e527fb8f9a3ed83e7bd",
+    "0x6a4134f1b53504f9bc94162cfd80fc38caa7ff2138346484bc2f87d1b5e6bac4",
+    "0x23d6ba19d18c85425fb87e58b125dfb3f56d0f2bbb41b48f480ab5079c5eba72",
+    "0x0d17036a4161601e6d9fed8141bb934b61eaf2ec282197352697eeb2efc32162",
+    "0xe1654ee9636a38508099ef1836f58d35f70dd0e44f4f0920e6e4938d579ae1da",
+    "0x8e8534ab79518e8d81bcfbd3d0da458daa9f27d408bc425675e61d2cf319fd30",
+    "0x575b2b55d4fb81ebbd991c7f3cf0a498ba7b58635ea664add161ebb986957ad8",
+    "0x220b9b949ef5d7b1d3e204b7041142229585aa13e2e0f8cb6f568f564c424fb9",
+    "0x27d6b26dc7fa9c950119ad7e5943b60482f3f5276322399971f41c9068b3a92f",
+    "0x3a57c5ceb3514d1f90b1ad807b772685ba5afcd2ce5324c8daa0183811b60291",
+    "0x429ee1cd69d5ae917e07047f798bf559ffcf887ffb6124d025db3214528680f8",
+    "0x181e2c0d66b6958483c10cfe8661875d6059bc349b2547696d2b837327ce489a"
+  ],
+  "order": [
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "news"
+    },
+    {
+      "name": "Warbrick Property Company Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Chemicrest Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Chemicrest Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Warbrick Property Company Limited",
+      "check": "news"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Chemicrest Limited",
+      "check": "news"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Warbrick Property Company Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Graham & Rosen Limited",
+      "check": "news"
+    },
+    {
+      "name": "Graham & Rosen Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Warbrick Property Company Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Graham & Rosen Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Graham & Rosen Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Chemicrest Limited",
+      "check": "registry"
+    }
+  ]
+}

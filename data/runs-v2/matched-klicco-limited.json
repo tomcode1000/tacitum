@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Klicco Limited",
+  "parties": [
+    "Ng Bailey Group Limited",
+    "Klicco Limited",
+    "Dyson Exchange Limited",
+    "Freeola Limited"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x7d31919c12b4c0a0c44522bd31215b88b566d04a847fa4e79698d7387c2443bc",
+    "0x8bef9749de02f4422ea29597e3219914434d91bb1fa7538a890f1e4a3bfb1cd7",
+    "0x141240c437630e7654070e8370d1eaf5f6b8e080838ff33497b74d8d9c94c1dd",
+    "0xa075eb84d029302f878ce70b95afcea6a679093c0da1892bf36df19248fdd088",
+    "0x0fb40751be2d1ac7270e04cc7707242bcecddae8de000d657c122035dbbc2008",
+    "0x72d122665e6922d7ab44fbd0f272363b2605a7c479cba0b8477c1f9fde319667",
+    "0x8e1dee654006106475b20a394dbf111648fae582b4b1a95c946af4fb54b7efdf",
+    "0x79863c684a107e81dbc410b6d9ddcbc410b1e36eb324e21ceff2ff81da7fe9a9",
+    "0x2d30ec976d81f837ad3dad56ccde4d26f76cd3b2c4e25af241bd1aa156776625",
+    "0xd3f344c635bff45e92128b240a8894c77503afea00cf6fddbfb53627c5a2a47d",
+    "0xcd2259fdbe3a2928b0907b93948dbfc9cb51345ad9e59a8c8623d9b16cdc59bc",
+    "0xae5db1c292ef0819a070d01946739308027f72cfdc17a4c0f61a4edc2944cd70",
+    "0xbc9acb5529446c1c92c3222b1180392d8b0b492756b7a525f71b516df27dc530",
+    "0xfba481152b53cb4199a4caf852651df517cafb79bab7ccef44a51aee22f6d93b",
+    "0xbf3e5a5fc5676494c77017456a3a8dfa1d66444e20b3a689864d059d393f4d25",
+    "0x716cf073aa7fdddbe4c0597e6b8d36dc150fc1a6d4e4584c152d8535e0e6f23e",
+    "0x9ef486aec020938b4b4b542c3cfbec81e52b56944e9e8d80397c5be3df579746",
+    "0xe8be9e5713375708ebdcd8f3be0382d911b764a52b3dc1a5ca2e3d11234c0f76",
+    "0x1aceef2c2ee1a5e1fec860532f245b2b68b2269a006af5a6123f972b3914fae8",
+    "0x0f5ebe8ed6d46b863243efb937be58c98897d0c2c8b5f1fa68037f1daa03c9f1"
+  ],
+  "order": [
+    {
+      "name": "Klicco Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Freeola Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Dyson Exchange Limited",
+      "check": "news"
+    },
+    {
+      "name": "Ng Bailey Group Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Klicco Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Dyson Exchange Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Ng Bailey Group Limited",
+      "check": "news"
+    },
+    {
+      "name": "Freeola Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Dyson Exchange Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Ng Bailey Group Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Dyson Exchange Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Klicco Limited",
+      "check": "news"
+    },
+    {
+      "name": "Ng Bailey Group Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Freeola Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Freeola Limited",
+      "check": "news"
+    },
+    {
+      "name": "Klicco Limited",
+      "check": "filings"
+    }
+  ]
+}

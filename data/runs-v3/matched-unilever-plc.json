@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Unilever PLC",
+  "parties": [
+    "Aviva PLC",
+    "Unilever PLC",
+    "Diageo PLC",
+    "AstraZeneca PLC"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0x83297efdee8dd16a52225576d529e6bee860beb1120b97ed95167c8005a265e3",
+    "0xea9ddf2b37c49b0ba40021961789d8dd2594a15f0a5a2aff57578081e20d2019",
+    "0x22bd272dc87b0bd4c1f9ca93174461213df229e0fbf077dd04d6a44889acd747",
+    "0x920b6c7acc3580d4b5928b991abacbe90d6e35c31b625368ec886cb76328172f",
+    "0x3b0ff0a5c526b131b08df42db0697ed1c1d4cbc04a7365c62dfcb16b61a5af31",
+    "0xadfb8680355d0e2c53a5dcdb4a8a24961b7a74836a249c2abc990314ca655e2a",
+    "0x6b6c69b32eb501be6a2161f3071063691b269ac4e09299f104a7a248d98c758a",
+    "0xd19636458fe40f85cf689efd192e950ac6994a8b8b45250b47cd49eda057d64d",
+    "0xf6dfaf3ea04f818fb1b35c673a8292d3bc41590f490114f767083f1554407b21",
+    "0xed9da994f6f1ede7d7b0f581a4c25226b8b5df2e45ad068e9a7085c02a11263d",
+    "0x4bfe571051b019c3afd2237328ed8c1ea93c60e9eb790f0ceb96c8bf130d33d9",
+    "0xf5cfdd91015b541e86b13244c7ed7b84cd70514651c88d1aed9bc5006af5b896",
+    "0x6a4268a99ecb57a1cc45455833d32d50717394f3d34cc7d8ddfe20d29647c78f",
+    "0x2e943cbb1375cf7effa19225d8fcb427223dfc1b3245bd2846fc6300bb0815fa",
+    "0x819c9f4fc19131f961a75a0c5e481507f41f89d303a53495a6f80c32614396e6",
+    "0xab0a1212dda4ead9408d72fb89b356e728b01e698383c5579072faaab3b22638",
+    "0x7f8e4062bbf25bea7df49ff7778d9c3ee4cf4e94028f1aee40c71551b1a73685",
+    "0x93f5e07634c7aba80168450bb1984155d84c1bf635a4d86a4cfbeeb93a144d24",
+    "0xc35513c959ba27929e5296ff7a10d03673796e2c5fba9a41e26a0057581b3d36",
+    "0xe0b28804c897c5b91266451cf441a4d90bfd8d84de963492c025e3c570997962",
+    "0xc79a24feb3c7bb9bd1b195d978e2be198bced520c0cc1693e6334a2c4fdbc625",
+    "0x85996833f1cce5182e58dea6afad5a882261c8096ce7767ef962cd468c48fe46",
+    "0xd419dcd1a168ab27cdd1133e9be0dd8d73d1a06f8106d9643e717acc77b1e725",
+    "0x255fc1ad3f080a6be487a2f41b3ca00a9fabd2ea78e204ef9a721fc7d07a5326"
+  ],
+  "order": [
+    {
+      "name": "Diageo PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "news"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "news"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Aviva PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "news"
+    }
+  ]
+}

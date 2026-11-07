@@ -3,36 +3,45 @@
   "k": 4,
   "target": "Tesco PLC",
   "parties": [
+    "BAE Systems PLC",
     "Tesco PLC",
-    "Currys PLC",
-    "Standard Chartered PLC",
-    "IMI PLC"
+    "SSE PLC",
+    "Kingfisher PLC"
   ],
-  "costUsd": 0.19,
+  "costUsd": 0.2,
   "signals": [
-    "0xeecacb27812f3d2c8b0319f9b2d795b4ce74566cde750cbb193db574de5c1e59",
-    "0xbf8af46d786a074b21d2e38d48d1475a79ce197bba951e359a4cc00a6b52ba38",
-    "0x64ba088e382b2a8acd4c4c3cd974a15fc59883a374c899e68091bfa654e15f26",
-    "0xccfcb28392315e7a0470dddc8f9b6a9386be232695635b05ce712dc9a08c9717",
-    "0xd82f09e90ad78e1ce48a53c049ef12df7007ad5ec100fff9f4122bdc0723802f",
-    "0x10bd64d4713ef2b313f364d2778fe54eb6bad3f5777fa7083a6262ba2427e28a",
-    "0xfb65e6417184186c7d08a9a61b3b0499fd51f0906b94bbf932e3f3d9e08d0df6",
-    "0xbbc205b5a153f61557751ec7f6c056c0b635eab387c8985e84fe2dc77aaf2339",
-    "0xfd58915e504582fac8fc471b46402371d2155542c0bdfd4286bc6d36904693ea",
-    "0x799d23fa223b4234648ad4cb57c970096a371c2cbc9c480edaaa74a71c180790",
-    "0x311de787cf35cec4b4f907a16bef02a63257b89aba717e119d72c62b053c4e8d",
-    "0x43c2bc44581b649c9320b30e7a73b4a8f6bf51b1c2c75e0632a0e3a7ce76ea39",
-    "0xf2373414fe8614a408e1dc8f5b7b55337421e749971145d7e6ff47a59a39ed37",
-    "0x79fb55c0544f22bda1664cae2c2cb82344d22f5b36192434206c056c4ee3c73b",
-    "0x7e3b663494b75f77d0145baeb2275f17ed241e90a8d0db99fbb80d9556c21fac",
-    "0x3b26c581fe19a87c07236bb72dcdc2fb6f21f3639e4d087e7d41648741b7e54e",
-    "0xa7a368066947a260a0158388f900927efa1c5537f605cf244c0d3322b18f0b11",
-    "0x0bdff409201d8c33dc6b50dc88cc56e27451a81333fbff368d6578d1a31994e6",
-    "0x0226c69d73220b68d16d0d47a1d168ac04ddf25a5cec2622d77a71c0e32f5826"
+    "0x475fa316c20f9519adf94cc65d9f4d0c0225f7dfa39cba71f1462d172fb5cb85",
+    "0x4b3d10642a2c365c22589093180ef41da531db3f5f6254ebc4add21cf79ba50d",
+    "0x6167e4cc94b5657d5d11bb6adfd4dc4c00fdb284a4cce55a8c093bc0529fbf41",
+    "0x5b53bd6680f2e0d297803e418bbb149e17f504e720749b00ca93e2baeb59a5e6",
+    "0xc0979ba45c55778d608380605b0a2ef65561e7cbf2aabe5d4f4f3f264b52d698",
+    "0xd40ba23b25455e9ac692f2f446afc801357e2fe7d4efbce556b71ac189bb558b",
+    "0x21b8c835d59eb7613a50e30c6f7057f50d4ab6c06117d37c56665900bef23019",
+    "0x8f7c6d808c533ed4165d1917b2118bba7fb08efdaa5f518b12edcdbf0e819c0f",
+    "0x2baddbfc2bbb5aa3968b3d8fc1252761fb0b59e34ea307476cb58e9da1d8b1af",
+    "0xe8c97f60a7874ebdd12dafb1e291e615fdd69826b1ac7cbdbf2039c2f7db5dd3",
+    "0xd62811c92c6a60bc40dd2f489667733f3864903a7667252e7501f17e0de66e6e",
+    "0x4a35aee7030d0348181a25c0da2e241180c86270b9487008adbe80cae7a1f78b",
+    "0xf5ca947a952a1546d643a43fa1f4250f480509e4c2cabe6dee731587e4d8f14a",
+    "0xc7123b3b1b6589d8f1412dbc3a3c526f4a9a6eb99027c1b29f56716ed11ce0f3",
+    "0x76907c1793fb1ba135cdc05bd23f54606590edb1312270b99cbcb62df41b2a3a",
+    "0xde9a87cdaf816259246accba00272cd773d3b554631f932e22cec6b5d0eb197e",
+    "0x58bd552fc89186480d3d099a67b49bc09a1c4a0792060d1d81d841238397f08f",
+    "0x0b977f50e3e464bc7e28dd943acb534c8e83879aa49beebfc89808227556366d",
+    "0x2c2420ac9688892ffaf275d84c6f06d16d74f8d0f21274392c0d9e8ea5ac9236",
+    "0x642daa24273a441347d09dddb1259f008064bac852b45771dc229817aadcb3f0"
   ],
   "order": [
     {
-      "name": "Currys PLC",
+      "name": "BAE Systems PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "filings"
+    },
+    {
+      "name": "SSE PLC",
       "check": "filings"
     },
     {
@@ -40,60 +49,52 @@
       "check": "news"
     },
     {
-      "name": "Standard Chartered PLC",
+      "name": "Kingfisher PLC",
+      "check": "registry"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "news"
+    },
+    {
+      "name": "SSE PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "BAE Systems PLC",
       "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "news"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "SSE PLC",
+      "check": "registry"
     },
     {
       "name": "Tesco PLC",
       "check": "filings"
     },
     {
-      "name": "Standard Chartered PLC",
-      "check": "registry"
-    },
-    {
-      "name": "IMI PLC",
-      "check": "registry"
-    },
-    {
-      "name": "Standard Chartered PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "Currys PLC",
-      "check": "registry"
-    },
-    {
-      "name": "IMI PLC",
-      "check": "news"
-    },
-    {
-      "name": "IMI PLC",
-      "check": "filings"
-    },
-    {
-      "name": "IMI PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "Currys PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "Standard Chartered PLC",
+      "name": "SSE PLC",
       "check": "news"
     },
     {
       "name": "Tesco PLC",
       "check": "registry"
-    },
-    {
-      "name": "Tesco PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "Currys PLC",
-      "check": "news"
     }
   ]
 }

@@ -1,0 +1,31 @@
+{
+  "k": 4,
+  "chance": 0.25,
+  "scoredAt": "2026-11-06T21:55:27.571Z",
+  "strategies": {
+    "random": {
+      "first": 0.5,
+      "famous": 0.482,
+      "format": 0.657,
+      "learned": 1,
+      "bestCI95": [
+        0.68,
+        1
+      ],
+      "runs": 8,
+      "costUsd": 1.53
+    },
+    "matched": {
+      "first": 0.25,
+      "famous": 0.574,
+      "format": 0.164,
+      "learned": 0.5,
+      "bestCI95": [
+        0.33,
+        0.77
+      ],
+      "runs": 16,
+      "costUsd": 2.99
+    }
+  }
+}
