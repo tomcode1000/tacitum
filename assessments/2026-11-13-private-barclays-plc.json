@@ -1,0 +1,1328 @@
+{
+  "real": {
+    "counterparty": {
+      "name": "Barclays PLC",
+      "jurisdiction": "GB"
+    },
+    "startedAt": "2026-11-13T11:00:16.081Z",
+    "finishedAt": "2026-11-13T11:08:00.228Z",
+    "payer": "0xDd37CE40cD22E2cFF1c887a7bEE89f456291127A",
+    "overall": "CLEAR",
+    "verdicts": {
+      "sanctions": "CLEAR",
+      "registry": "CLEAR",
+      "filings": "INFO",
+      "news": "CLEAR"
+    },
+    "costUsd": 0.06,
+    "paidCalls": 6,
+    "checks": {
+      "registry": {
+        "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+        "params": {
+          "company": "Barclays PLC",
+          "jurisdiction": "GB"
+        },
+        "answers": [
+          {
+            "minerId": 77393,
+            "miner": "ZK Corporate Registry — Exact Identity and Status",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "active": true,
+              "as_of": "2026-11-13T11:03:59.762Z",
+              "attribution": "GLEIF Global LEI Index: CC0 1.0. Companies House: Crown copyright, Open Government Licence v3.0. Contains data under the Norwegian Licence for Open Government Data (NLOD 2.0) distributed by Brønnøysundregistrene; fields selected and reformatted. French Annuaire des Entreprises: Licence Ouverte 2.0, INSEE/RNE data. SEC EDGAR: US Government public records.",
+              "company_number": "00048839",
+              "confidence": 0.95,
+              "cross_check": {
+                "active": true,
+                "agreement": true,
+                "available": true,
+                "entity_creation_date_agrees": true,
+                "identity_agrees": true,
+                "incorporated": "1896-07-20",
+                "jurisdiction": "GB",
+                "legal_name": "BARCLAYS PLC",
+                "licence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+                "observed_at": "2026-11-13T11:04:01.802Z",
+                "raw_status": "Active",
+                "record_last_updated": null,
+                "record_last_updated_source": null,
+                "registered_address": "1 Churchill Place, London, E14 5HP",
+                "registration_id": "00048839",
+                "source": "Companies House",
+                "source_url": "https://find-and-update.company-information.service.gov.uk/company/00048839",
+                "status_agrees": true
+              },
+              "entity_creation_date": "1896-07-20T00:00:00Z",
+              "entity_status": "ACTIVE",
+              "field_sources": {
+                "active": "entity.status",
+                "incorporated": "entity.creationDate",
+                "record_last_updated": "registration.lastUpdateDate",
+                "registered_address": "entity.legalAddress",
+                "registration_id": "entity.registeredAs"
+              },
+              "found": true,
+              "headquarters_address": "1 CHURCHILL PLACE, LONDON, GB-LND, E14 5HP, GB",
+              "incorporated": "1896-07-20",
+              "initial_registration": "2014-07-25T00:00:00Z",
+              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+              "jurisdiction": "GB",
+              "last_update": "2026-10-26T17:28:30Z",
+              "legal_address": {
+                "addressLines": [
+                  "1 CHURCHILL PLACE"
+                ],
+                "addressNumber": null,
+                "addressNumberWithinBuilding": null,
+                "city": "LONDON",
+                "country": "GB",
+                "language": "en",
+                "mailRouting": null,
+                "postalCode": "E14 5HP",
+                "region": "GB-LND"
+              },
+              "legal_form": "B6ES",
+              "legal_name": "BARCLAYS PLC",
+              "lei": "213800LBQA1Y9L22JB70",
+              "match_count": 5,
+              "match_method": "unique_exact_name_or_number_and_jurisdiction",
+              "observed_at": "2026-11-13T11:03:59.762Z",
+              "query": "Barclays PLC",
+              "record_last_updated": "2026-10-26T17:28:30Z",
+              "record_last_updated_source": "GLEIF registration.lastUpdateDate",
+              "registered_address": "1 CHURCHILL PLACE, LONDON, GB-LND, E14 5HP, GB",
+              "registration_authority": "RA000585",
+              "registration_id": "00048839",
+              "registration_id_type": "registration_authority_entity_id",
+              "registration_status": "ISSUED",
+              "source": "Global LEI Index (GLEIF, CC0)",
+              "source_published_at": "2026-11-13T00:00:00Z",
+              "source_url": "https://api.gleif.org/api/v1/lei-records/213800LBQA1Y9L22JB70",
+              "sources": [
+                {
+                  "observed_at": "2026-11-13T11:03:59.762Z",
+                  "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.legalName%5D=BARCLAYS+PLC&filter%5Bentity.jurisdiction%5D=GB&page%5Bsize%5D=100"
+                },
+                {
+                  "observed_at": "2026-11-13T11:04:01.802Z",
+                  "url": "https://find-and-update.company-information.service.gov.uk/company/00048839"
+                }
+              ],
+              "status_active": 1,
+              "status_basis": "GLEIF entity.status as of registration.lastUpdateDate; not LEI renewal status or a certificate of good standing",
+              "summary": "BARCLAYS PLC: ACTIVE in GB, registration identifier 00048839 at RA000585, LEI 213800LBQA1Y9L22JB70. Registered address: 1 CHURCHILL PLACE, LONDON, GB-LND, E14 5HP, GB. Entity creation date: 1896-07-20. Record last updated 2026-10-26T17:28:30Z. Independent Companies House identity/status check: agrees."
+            },
+            "costUsd": 0.01,
+            "signal": "0x45ea9facc490ddff26ab35314b12e553003594e4f0d98c6e4cc6426b77254678",
+            "receipt": null
+          },
+          {
+            "minerId": 5185,
+            "miner": "Praman Desk Compliance & Procurement Auditor",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "legal_name": null,
+              "registration_id": "213800LBQA1Y9L22JB70",
+              "active": true,
+              "jurisdiction": "GB",
+              "registered_address": "1 CHURCHILL PLACE, LONDON, GB-LND, E14 5HP, GB",
+              "incorporated": "2014-07-25T00:00:00Z"
+            },
+            "costUsd": 0.01,
+            "signal": "0x6d636e36089592a35d84f62ba7f2b74b5f649c059aaa131167b2c881f3115347",
+            "receipt": null
+          }
+        ]
+      },
+      "sanctions": {
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+        "params": {
+          "name": "Barclays PLC"
+        },
+        "answers": [
+          {
+            "minerId": 731002,
+            "miner": "Counterproof Sanctions Screener",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "name": "Barclays PLC",
+              "matched": false,
+              "matches": null,
+              "lists": null,
+              "match_score": 0
+            },
+            "costUsd": 0.01,
+            "signal": "0xef2fd405b8dc252bed4de74d50dc206e07556f0138430a3f07ba82cf13204d9a",
+            "receipt": null
+          },
+          {
+            "minerId": 710637,
+            "miner": "Sanctions Name Evidence",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "name": "Barclays PLC",
+              "matched": false,
+              "matches": null,
+              "lists": [
+                "OFAC SDN",
+                "OFAC Consolidated (non-SDN)",
+                "UK Sanctions List (entities only)",
+                "Canada autonomous sanctions (entities only)",
+                "EU Financial Sanctions (entities only)",
+                "US BIS Entity List (export controls)",
+                "US BIS Military End User List (export controls)",
+                "US BIS Denied Persons List (dated standard export-denial orders)",
+                "UK Sanctions List (ships)",
+                "US BIS Entity List (additional primary-row corroborated records)",
+                "Canada autonomous sanctions (November 5 additional entities)",
+                "Canada autonomous sanctions (corroborated ships)",
+                "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+              ],
+              "match_score": 0
+            },
+            "costUsd": 0.01,
+            "signal": "0xe4fb30b5fbd688e14eb683c95fbc5fc5a8c581c0c6b5fb87028ac2ce12c7b623",
+            "receipt": null
+          }
+        ]
+      },
+      "filings": {
+        "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+        "params": {
+          "entity": "Barclays PLC",
+          "period": "last 12 months"
+        },
+        "answers": [
+          {
+            "minerId": 77131,
+            "miner": "Filing Window",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "entity": null,
+              "filing_count": 242,
+              "filings": null,
+              "urls": null
+            },
+            "costUsd": 0.01,
+            "signal": "0xcec1e8cb42f77b81de67d67751b88978a9e05cc050ea4d398444f01cf10a3d10",
+            "receipt": null
+          }
+        ]
+      },
+      "news": {
+        "intent": "NEWS_SEARCH_GENERAL",
+        "params": {
+          "query": "Barclays PLC"
+        },
+        "answers": [
+          {
+            "minerId": 7329,
+            "miner": "NewsWire News Search",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "answer": null,
+              "result_count": 4,
+              "sources": null,
+              "brief": "GOV.UK reports: \"Sir John Kingman appointed as Great British Railways Chair\"."
+            },
+            "costUsd": 0.01,
+            "signal": "0x4fd2a612ff606115807803f0534c8392f78ee98b1b595c81e6e8cbb34e95db85",
+            "receipt": null
+          }
+        ]
+      }
+    },
+    "verification": [
+      {
+        "signal": "0x45ea9facc490ddff26ab35314b12e553003594e4f0d98c6e4cc6426b77254678",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Barclays PLC\",\"jurisdiction\":\"GB\"}"
+      },
+      {
+        "signal": "0x6d636e36089592a35d84f62ba7f2b74b5f649c059aaa131167b2c881f3115347",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Barclays PLC\",\"jurisdiction\":\"GB\"}"
+      },
+      {
+        "signal": "0xef2fd405b8dc252bed4de74d50dc206e07556f0138430a3f07ba82cf13204d9a",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Barclays PLC\"}"
+      },
+      {
+        "signal": "0xe4fb30b5fbd688e14eb683c95fbc5fc5a8c581c0c6b5fb87028ac2ce12c7b623",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Barclays PLC\"}"
+      },
+      {
+        "signal": "0xcec1e8cb42f77b81de67d67751b88978a9e05cc050ea4d398444f01cf10a3d10",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"Barclays PLC\",\"period\":\"last 12 months\"}"
+      },
+      {
+        "signal": "0x4fd2a612ff606115807803f0534c8392f78ee98b1b595c81e6e8cbb34e95db85",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"Barclays PLC\"}"
+      }
+    ],
+    "privacy": {
+      "k": 4,
+      "parties": [
+        "AstraZeneca PLC",
+        "Barclays PLC",
+        "GSK PLC",
+        "National Grid PLC"
+      ],
+      "costUsd": 0.26,
+      "funder": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+      "fundedUsd": 0.4,
+      "fundingTx": "0x0a4894d728c3303bfe0e6281fd29db03bed28eb29d1ee92be557ad83197c8707",
+      "measured": {
+        "best": "0.38",
+        "ci": [
+          0.18,
+          0.61
+        ],
+        "runs": 16
+      }
+    }
+  },
+  "k": 4,
+  "strategy": "matched",
+  "parties": [
+    "AstraZeneca PLC",
+    "Barclays PLC",
+    "GSK PLC",
+    "National Grid PLC"
+  ],
+  "targetIndex": 1,
+  "order": [
+    {
+      "name": "GSK PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "news"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "filings"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "filings"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "news"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "sanctions"
+    }
+  ],
+  "costUsd": 0.26,
+  "decoys": [
+    {
+      "counterparty": {
+        "name": "AstraZeneca PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-13T11:00:16.081Z",
+      "finishedAt": "2026-11-13T11:07:54.661Z",
+      "payer": "0xDd37CE40cD22E2cFF1c887a7bEE89f456291127A",
+      "overall": "REVIEW",
+      "verdicts": {
+        "sanctions": "REVIEW",
+        "registry": "CLEAR",
+        "filings": "INFO",
+        "news": "REVIEW"
+      },
+      "costUsd": 0.07,
+      "paidCalls": 7,
+      "checks": {
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "AstraZeneca PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": null,
+                "filing_count": 139,
+                "filings": null,
+                "urls": null
+              },
+              "costUsd": 0.01,
+              "signal": "0x1585dcce94b000b1ebab515b3cc98994df5bb285968b98deaf09826bbdf3d1ea",
+              "receipt": null
+            }
+          ]
+        },
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "AstraZeneca PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "ASTRAZENECA PLC",
+                "registration_id": "02723534",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "1 FRANCIS CRICK AVENUE, CAMBRIDGE BIOMEDICAL CAMPUS, CAMBRIDGE, GB-CAM, CB2 0AA, GB",
+                "incorporated": "1992-06-17"
+              },
+              "costUsd": 0.01,
+              "signal": "0xd300a4b1a179f24a4a1bd829298b5f396451763cfcc2f4e5cf3c6f49ca9c5681",
+              "receipt": null
+            },
+            {
+              "minerId": 5185,
+              "miner": "Praman Desk Compliance & Procurement Auditor",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "ASTRAZENECA PLC",
+                "registration_id": null,
+                "active": null,
+                "jurisdiction": "GB",
+                "registered_address": null,
+                "incorporated": "2012-06-06T15:51:00Z"
+              },
+              "costUsd": 0.01,
+              "signal": "0xe7ca941980d2bcff681b3e656541a860d92c7baa4438d71a50aeb766f839b98f",
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "AstraZeneca PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "miner": "Counterproof Sanctions Screener",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": null,
+                "matched": null,
+                "matches": null,
+                "lists": null,
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0xed7f6f3fe50e713ddf94491baa891d6a67014cd285895c27fc442c28969b71f7",
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "miner": "Sanctions Name Evidence",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": null,
+                "matched": null,
+                "matches": null,
+                "lists": null,
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0x1a4ab391f9e8717eb89e02c9a1bb83c699c12865f2fc85c9f7084ef537ab57cb",
+              "receipt": null
+            },
+            {
+              "minerId": 4433,
+              "miner": "LiveCert — Sourced Answers for Agents",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": "Not cleared: \"AstraZeneca PLC\" does not closely match any entry on the OFAC Consolidated (non-SDN) or UN Security Council Consolidated list, but the OFAC SDN list could not be read, so this is not a clearance.",
+                "checked_at": "2026-11-13T11:02:35.327Z",
+                "closest": null,
+                "confidence": 0,
+                "dob_year": null,
+                "error": "list_unavailable",
+                "licensing": {
+                  "endpoint_status": "unclear",
+                  "ledger": "/sources",
+                  "notices": [
+                    "EU financial sanctions list: © European Union, reused under CC BY 4.0; names re-encoded into a search index.",
+                    "UK Sanctions List (FCDO): contains public sector information licensed under the Open Government Licence v3.0."
+                  ],
+                  "upstreams": [
+                    {
+                      "source": "EU financial sanctions consolidated list (European Commission)",
+                      "status": "conditional"
+                    },
+                    {
+                      "source": "US Treasury OFAC",
+                      "status": "licensed"
+                    },
+                    {
+                      "source": "OFAC addresses list (0xB10C, GitHub)",
+                      "status": "licensed"
+                    },
+                    {
+                      "source": "UK Sanctions List (FCDO)",
+                      "status": "conditional"
+                    },
+                    {
+                      "source": "UN Security Council Consolidated List",
+                      "status": "unclear"
+                    }
+                  ]
+                },
+                "lists": [
+                  "OFAC Consolidated (non-SDN)",
+                  "UN Security Council Consolidated"
+                ],
+                "lists_checked": [
+                  {
+                    "entries": 486,
+                    "list": "OFAC Consolidated (non-SDN)",
+                    "published": "2026-11-09"
+                  },
+                  {
+                    "entries": 1007,
+                    "list": "UN Security Council Consolidated",
+                    "published": "2026-11-13"
+                  }
+                ],
+                "lists_not_checked": [
+                  "OFAC SDN",
+                  "EU Financial Sanctions Consolidated List",
+                  "UK Sanctions List"
+                ],
+                "match_score": null,
+                "matched": null,
+                "matches": [],
+                "name": "AstraZeneca PLC",
+                "reason": "Not cleared: \"AstraZeneca PLC\" does not closely match any entry on the OFAC Consolidated (non-SDN) or UN Security Council Consolidated list, but the OFAC SDN list could not be read, so this is not a clearance. Screened against OFAC Consolidated (non-SDN) (published 2026-11-09, 486 entries) and UN Security Council Consolidated (generated 2026-11-13, 1,007 entries), names and aliases; the EU and UK lists were not screened. The OFAC SDN list could not be read, so it was not screened.",
+                "receipt": {
+                  "answered_at": "2026-11-13T11:02:35.327Z",
+                  "deployment": "miner-o6dy8wc6k-wukong4.vercel.app",
+                  "from_cache": false,
+                  "id": "40b22e15-c876-441e-bbbe-5a029eb0f35f",
+                  "upstream": [
+                    {
+                      "method": "GET",
+                      "ms": 73,
+                      "started_at": "2026-11-13T11:02:25.847Z",
+                      "status": 200,
+                      "url": "https://raw.githubusercontent.com/Harshyadav442277/miner/sanctions-data/sanctions-index.json"
+                    },
+                    {
+                      "method": "GET",
+                      "ms": 9002,
+                      "started_at": "2026-11-13T11:02:26.050Z",
+                      "status": null,
+                      "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.CSV"
+                    },
+                    {
+                      "method": "GET",
+                      "ms": 581,
+                      "started_at": "2026-11-13T11:02:26.058Z",
+                      "status": 200,
+                      "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/ALT.CSV"
+                    },
+                    {
+                      "method": "GET",
+                      "ms": 705,
+                      "started_at": "2026-11-13T11:02:26.059Z",
+                      "status": 200,
+                      "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONS_PRIM.CSV"
+                    },
+                    {
+                      "method": "GET",
+                      "ms": 713,
+                      "started_at": "2026-11-13T11:02:26.059Z",
+                      "status": 200,
+                      "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONS_ALT.CSV"
+                    },
+                    {
+                      "method": "GET",
+                      "ms": 165,
+                      "started_at": "2026-11-13T11:02:26.059Z",
+                      "status": 200,
+                      "url": "https://scsanctions.un.org/resources/xml/en/consolidated.xml"
+                    }
+                  ]
+                },
+                "subject": "AstraZeneca PLC",
+                "subject_type": null,
+                "verdict": "unknown"
+              },
+              "costUsd": 0.01,
+              "signal": "0xac9acfbfc329a5e49d5901b21479e5da30a68aa98b7d521b294b843e38fd59f4",
+              "receipt": null
+            }
+          ]
+        },
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "AstraZeneca PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7329,
+              "miner": "NewsWire News Search",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": null,
+                "result_count": 0,
+                "sources": [
+                  "Global Voices",
+                  "NASA",
+                  "European Commission",
+                  "NIST",
+                  "EFF",
+                  "SEC",
+                  "Wikinews",
+                  "GOV.UK",
+                  "Voice of America"
+                ],
+                "brief": "No dated matching reports were found in the checked sources."
+              },
+              "costUsd": 0.01,
+              "signal": "0x6203535a61566ade8ae644c51fec32f83add7733abc7b937935e931742f320bf",
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0x1585dcce94b000b1ebab515b3cc98994df5bb285968b98deaf09826bbdf3d1ea",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"AstraZeneca PLC\",\"period\":\"last 12 months\"}"
+        },
+        {
+          "signal": "0xd300a4b1a179f24a4a1bd829298b5f396451763cfcc2f4e5cf3c6f49ca9c5681",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"AstraZeneca PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0xe7ca941980d2bcff681b3e656541a860d92c7baa4438d71a50aeb766f839b98f",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"AstraZeneca PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0xed7f6f3fe50e713ddf94491baa891d6a67014cd285895c27fc442c28969b71f7",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"AstraZeneca PLC\"}"
+        },
+        {
+          "signal": "0x1a4ab391f9e8717eb89e02c9a1bb83c699c12865f2fc85c9f7084ef537ab57cb",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"AstraZeneca PLC\"}"
+        },
+        {
+          "signal": "0xac9acfbfc329a5e49d5901b21479e5da30a68aa98b7d521b294b843e38fd59f4",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"AstraZeneca PLC\"}"
+        },
+        {
+          "signal": "0x6203535a61566ade8ae644c51fec32f83add7733abc7b937935e931742f320bf",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"AstraZeneca PLC\"}"
+        }
+      ]
+    },
+    {
+      "counterparty": {
+        "name": "GSK PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-13T11:00:16.081Z",
+      "finishedAt": "2026-11-13T11:08:05.863Z",
+      "payer": "0xDd37CE40cD22E2cFF1c887a7bEE89f456291127A",
+      "overall": "REVIEW",
+      "verdicts": {
+        "sanctions": "REVIEW",
+        "registry": "CLEAR",
+        "filings": "INFO",
+        "news": "CLEAR"
+      },
+      "costUsd": 0.07,
+      "paidCalls": 7,
+      "checks": {
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "GSK PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "GSK PLC",
+                "registration_id": "03888792",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "79 NEW OXFORD STREET, LONDON, GB-LND, WC1A 1DG, GB",
+                "incorporated": "1999-12-06"
+              },
+              "costUsd": 0.01,
+              "signal": "0x440d86a71b1b30d41938f0bd7c31133bc30b0268718a4c5e87711c43dba66b98",
+              "receipt": null
+            },
+            {
+              "minerId": 5185,
+              "miner": "Praman Desk Compliance & Procurement Auditor",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "GSK PLC",
+                "registration_id": "5493000HZTVUYLO1D793",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "79 NEW OXFORD STREET, LONDON, GB-LND, WC1A 1DG, GB",
+                "incorporated": "2015-11-14T02:16:00Z"
+              },
+              "costUsd": 0.01,
+              "signal": "0x4bf1418df63efe7c09d4721cb240052242cde022c80fc01eb79d37b8fba1c7c0",
+              "receipt": null
+            }
+          ]
+        },
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "GSK PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": null,
+                "filing_count": 297,
+                "filings": null,
+                "urls": null
+              },
+              "costUsd": 0.01,
+              "signal": "0x2ee6b7f3eab2e19270780b18d045d079633033d576d901965600b4d5a8556c7d",
+              "receipt": null
+            }
+          ]
+        },
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "GSK PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7329,
+              "miner": "NewsWire News Search",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": "Dated reports matching \"GSK PLC\" from the checked publishers:\n[1] GOV.UK: \"Vanessa Lawrence, Andrew Halford and Iain Mackay reappointed on UK Government Investments Board\". Archive (>30 days old). Background mention. Publisher excerpt: \"Iain spent most of his career in senior finance leadership roles and retired as CFO of GSK plc in April 2023.\"\n[2] Wikinews: \"GSK rejects three Unilever bids to buy consumer healthcare arm, says unit was \"fundamentally undervalued\"\". Archive (>30 days old). Background mention. Publisher excerpt: \"The deals were assessed by the Board respective of a proposed demerger of GSK Consumer Health into a separate PLC in the middle of this year.\"\n\nSource references:\n[1] GOV.UK; published 2026-07-09T13:00:03.000Z. https://www.gov.uk/government/news/vanessa-lawrence-andrew-halford-and-iain-mackay-reappointed-on-uk-government-investments-board\n[2] Wikinews; Wikinews contributors; published 2022-01-16 (date only; time of day unknown). https://en.wikinews.org/wiki/GSK_rejects_three_Unilever_bids_to_buy_consumer_healthcare_arm,_says_unit_was_%22fundamentally_undervalued%22\n\nPublisher licences:\nGOV.UK: Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)\nWikinews: CC BY 2.5 (https://creativecommons.org/licenses/by/2.5/)\n\nChecked: Global Voices, NASA, European Commission, NIST, EFF, SEC, Wikinews, GOV.UK, Voice of America. Recent reports precede archives; direct title/description matches precede background mentions within both age groups; newest within each group. Publisher wording is quoted, with abridgments marked; no endorsement implied. Contains public sector information licensed under the Open Government Licence v3.0.",
+                "articles": [
+                  {
+                    "age_days": 126,
+                    "author": null,
+                    "content_source": "https://www.gov.uk/api/content/government/news/vanessa-lawrence-andrew-halford-and-iain-mackay-reappointed-on-uk-government-investments-board",
+                    "date_precision": "second",
+                    "description": "His Majesty’s Treasury (HMT) has today announced the reappointment of Dr Vanessa Lawrence CB, Andrew Halford and Iain Mackay as Non-Executive Directors of UK Government Investments (UKGI).",
+                    "fetched_at": "2026-11-13T11:04:49.564Z",
+                    "index_public_timestamp": "2026-07-09T13:00:03.000Z",
+                    "license": "Open Government Licence v3.0",
+                    "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+                    "match_scope": "article_body",
+                    "metadata_fetched_at": "2026-11-13T11:04:50.923Z",
+                    "publication_date_original": "2026-07-09T14:00:03+01:00",
+                    "publication_date_source": "https://www.gov.uk/api/content/government/news/vanessa-lawrence-andrew-halford-and-iain-mackay-reappointed-on-uk-government-investments-board",
+                    "published_at": "2026-07-09T13:00:03.000Z",
+                    "relevance_tier": 2,
+                    "source": "GOV.UK",
+                    "source_feed": "https://www.gov.uk/api/search.json?q=%22GSK%22+%22PLC%22&order=-public_timestamp&count=10&fields=title%2Clink%2Cpublic_timestamp%2Cdescription%2Cformat&filter_content_store_document_type%5B%5D=news_story&filter_content_store_document_type%5B%5D=press_release",
+                    "terms_url": "https://www.gov.uk/help/terms-conditions",
+                    "title": "Vanessa Lawrence, Andrew Halford and Iain Mackay reappointed on UK Government Investments Board",
+                    "topic_excerpt": "Iain spent most of his career in senior finance leadership roles and retired as CFO of GSK plc in April 2023.",
+                    "updated_at": "2026-07-09T14:00:03+01:00",
+                    "url": "https://www.gov.uk/government/news/vanessa-lawrence-andrew-halford-and-iain-mackay-reappointed-on-uk-government-investments-board"
+                  },
+                  {
+                    "age_days": 1762,
+                    "author": "Wikinews contributors",
+                    "date_precision": "day",
+                    "description": "United Kingdom-based pharmaceutical giant GlaxoSmithKline (GSK) confirmed January 15 it had rejected three \"unsolicited, conditional and non-binding proposals\" by Unilever to acquire its Consumer Healthcare division, including one bid of GBP50 billion in value made on December 20, believing Unilever",
+                    "fetched_at": "2026-11-13T11:04:48.292Z",
+                    "license": "CC BY 2.5",
+                    "license_url": "https://creativecommons.org/licenses/by/2.5/",
+                    "match_scope": "article_body",
+                    "publication_date_original": "Sunday, January 16, 2022",
+                    "published_at": "2022-01-16",
+                    "relevance_tier": 2,
+                    "source": "Wikinews",
+                    "source_feed": "https://en.wikinews.org/w/api.php?action=query&format=json&formatversion=2&generator=search&gsrsearch=GSK+PLC+incategory%3APublished&gsrnamespace=0&gsrsort=create_timestamp_desc&gsrlimit=10&prop=extracts%7Cinfo&exintro=1&explaintext=1&exlimit=10&inprop=url",
+                    "terms_url": "https://en.wikinews.org/wiki/Wikinews:Copyright",
+                    "title": "GSK rejects three Unilever bids to buy consumer healthcare arm, says unit was \"fundamentally undervalued\"",
+                    "topic_excerpt": "The deals were assessed by the Board respective of a proposed demerger of GSK Consumer Health into a separate PLC in the middle of this year.",
+                    "url": "https://en.wikinews.org/wiki/GSK_rejects_three_Unilever_bids_to_buy_consumer_healthcare_arm,_says_unit_was_%22fundamentally_undervalued%22"
+                  }
+                ],
+                "as_of": "2026-11-13T11:04:51.023Z",
+                "attribution": "Titles and excerpts quoted from the credited publishers, without endorsement. Authors, original links and reuse licences are listed per article. Formatting is normalized; long descriptions and briefs are explicitly abridged. GOV.UK: Contains public sector information licensed under the Open Government Licence v3.0. No images, logos or model-generated news claims.",
+                "brief": "GOV.UK reports: \"Vanessa Lawrence, Andrew Halford and Iain Mackay…\".",
+                "catalog_fallbacks": [],
+                "confidence": 0.94,
+                "confidence_basis": "Compatibility retrieval-status heuristic, not a calibrated probability of factual correctness.",
+                "coverage": "Global Voices, NASA, European Commission, NIST, EFF, SEC, Wikinews, GOV.UK, Voice of America",
+                "headline": "Vanessa Lawrence, Andrew Halford and Iain Mackay reappointed on UK Government Investments Board",
+                "intent": "NEWS_SEARCH_GENERAL",
+                "on_topic": true,
+                "ordering": "recent direct title/description matches, recent background sentence matches, archive direct matches, archive background sentence matches; publication date descending within each group",
+                "publication_metadata_cache_max_age_seconds": 300,
+                "published_at": "2026-07-09T13:00:03.000Z",
+                "published_unix": 1783602003,
+                "published_unix_basis": "normalized source publication instant in seconds",
+                "query": "GSK PLC",
+                "query_source_cache_max_age_seconds": 60,
+                "readings": "[1] GOV.UK: \"Vanessa Lawrence, Andrew Halford and Iain Mackay reappointed on UK Government Investments Board\". Archive (>30 days old). Background mention. Publisher excerpt: \"Iain spent most of his career in senior finance leadership roles and retired as CFO of GSK plc in April 2023.\"\n[2] Wikinews: \"GSK rejects three Unilever bids to buy consumer healthcare arm, says unit was \"fundamentally undervalued\"\". Archive (>30 days old). Background mention. Publisher excerpt: \"The deals were assessed by the Board respective of a proposed demerger of GSK Consumer Health into a separate PLC in the middle of this year.\"\n\nSource references:\n[1] GOV.UK; published 2026-07-09T13:00:03.000Z. https://www.gov.uk/government/news/vanessa-lawrence-andrew-halford-and-iain-mackay-reappointed-on-uk-government-investments-board\n[2] Wikinews; Wikinews contributors; published 2022-01-16 (date only; time of day unknown). https://en.wikinews.org/wiki/GSK_rejects_three_Unilever_bids_to_buy_consumer_healthcare_arm,_says_unit_was_%22fundamentally_undervalued%22",
+                "result_count": 2,
+                "retrieval_budget": {
+                  "cache_calls": 5,
+                  "completed_source_cache_writes": 0,
+                  "deferred_optional_cache_calls": 0,
+                  "fetch_calls": 4,
+                  "max_operations": 44,
+                  "max_optional_cache_calls": 32,
+                  "measurement_phase": "all source verification complete; optional persistence scheduled after this snapshot",
+                  "pending_source_cache_writes": 4,
+                  "policy": "Read verified sources first; persist source bodies only with remaining budget, reserving one final answer operation below the 50-operation platform limit.",
+                  "redirect_hops": 0,
+                  "source_persistence": "scheduled"
+                },
+                "retrieval_status": "ok",
+                "search_query": "GSK PLC",
+                "source": "GOV.UK",
+                "source_cache_max_age_seconds": 300,
+                "source_cache_scope": "bounded isolate memory and optional Cloudflare colocation cache; original fetch timestamps preserved",
+                "source_errors": [],
+                "source_failure_backoff_max_age_seconds": 30,
+                "source_feed": "GOV.UK, Wikinews",
+                "sources": [
+                  "https://www.gov.uk/government/news/vanessa-lawrence-andrew-halford-and-iain-mackay-reappointed-on-uk-government-investments-board",
+                  "https://en.wikinews.org/wiki/GSK_rejects_three_Unilever_bids_to_buy_consumer_healthcare_arm,_says_unit_was_%22fundamentally_undervalued%22"
+                ],
+                "sources_checked": [
+                  {
+                    "fetched_at": "2026-11-13T11:02:46.610Z",
+                    "license": "CC BY 3.0",
+                    "source": "Global Voices",
+                    "terms_url": "https://globalvoices.org/about/global-voices-attribution-policy/",
+                    "url": "https://globalvoices.org/feed/"
+                  },
+                  {
+                    "fetched_at": "2026-11-13T11:02:46.729Z",
+                    "license": "NASA factual-use permission",
+                    "source": "NASA",
+                    "terms_url": "https://www.nasa.gov/nasa-brand-center/images-and-media/",
+                    "url": "https://www.nasa.gov/news-release/feed/"
+                  },
+                  {
+                    "fetched_at": "2026-11-13T11:02:51.762Z",
+                    "license": "CC BY 4.0",
+                    "source": "European Commission",
+                    "terms_url": "https://commission.europa.eu/legal-notice_en",
+                    "url": "https://ec.europa.eu/commission/presscorner/api/rss?language=en&pagesize=100"
+                  },
+                  {
+                    "fetched_at": "2026-11-13T11:02:52.619Z",
+                    "license": "NIST non-SRD reuse permission",
+                    "source": "NIST",
+                    "terms_url": "https://www.nist.gov/open/license",
+                    "url": "https://www.nist.gov/news-events/news/rss.xml"
+                  },
+                  {
+                    "fetched_at": "2026-11-13T11:02:53.085Z",
+                    "license": "CC BY 4.0",
+                    "source": "EFF",
+                    "terms_url": "https://www.eff.org/copyright",
+                    "url": "https://www.eff.org/rss/updates.xml"
+                  },
+                  {
+                    "coverage_limit": "At most 25 official SEC press announcements from the public feed",
+                    "fetched_at": "2026-11-13T11:02:53.212Z",
+                    "license": "US federal government work (17 USC 105)",
+                    "source": "SEC",
+                    "terms_url": "https://www.copyright.gov/title17/92chap1.html#105",
+                    "url": "https://www.sec.gov/news/pressreleases.rss"
+                  },
+                  {
+                    "fetched_at": "2026-11-13T11:04:47.801Z",
+                    "license": "CC BY 3.0",
+                    "source": "Global Voices",
+                    "terms_url": "https://globalvoices.org/about/global-voices-attribution-policy/",
+                    "url": "https://globalvoices.org/?s=GSK+PLC&feed=rss2"
+                  },
+                  {
+                    "fetched_at": "2026-11-13T11:04:48.292Z",
+                    "source": "Wikinews",
+                    "url": "https://en.wikinews.org/w/api.php?action=query&format=json&formatversion=2&generator=search&gsrsearch=GSK+PLC+incategory%3APublished&gsrnamespace=0&gsrsort=create_timestamp_desc&gsrlimit=10&prop=extracts%7Cinfo&exintro=1&explaintext=1&exlimit=10&inprop=url"
+                  },
+                  {
+                    "fetched_at": "2026-11-13T11:04:49.564Z",
+                    "license": "Open Government Licence v3.0",
+                    "source": "GOV.UK",
+                    "terms_url": "https://www.gov.uk/help/terms-conditions",
+                    "url": "https://www.gov.uk/api/search.json?q=%22GSK%22+%22PLC%22&order=-public_timestamp&count=10&fields=title%2Clink%2Cpublic_timestamp%2Cdescription%2Cformat&filter_content_store_document_type%5B%5D=news_story&filter_content_store_document_type%5B%5D=press_release"
+                  },
+                  {
+                    "cache_max_age_seconds": 300,
+                    "fetched_at": "2026-11-13T11:04:50.923Z",
+                    "license": "Open Government Licence v3.0",
+                    "source": "GOV.UK",
+                    "terms_url": "https://www.gov.uk/help/terms-conditions",
+                    "url": "https://www.gov.uk/api/content/government/news/vanessa-lawrence-andrew-halford-and-iain-mackay-reappointed-on-uk-government-investments-board"
+                  },
+                  {
+                    "cache_max_age_seconds": 300,
+                    "fetched_at": "2026-11-13T11:02:57.546Z",
+                    "license": "Open Government Licence v3.0",
+                    "source": "GOV.UK",
+                    "terms_url": "https://www.gov.uk/help/terms-conditions",
+                    "url": "https://www.gov.uk/api/content/government/news/prime-minister-to-promise-a-consistent-pragmatic-partnership-with-china-to-make-uk-better-off"
+                  },
+                  {
+                    "cache_max_age_seconds": 300,
+                    "coverage_limit": "One public top-stories feed; at most five directly matching original-text checks",
+                    "fetched_at": "2026-11-13T11:02:58.849Z",
+                    "license": "Public domain (original VOA text only)",
+                    "source": "Voice of America",
+                    "terms_url": "https://www.voanews.com/p/5338.html",
+                    "url": "https://www.voanews.com/api/"
+                  }
+                ],
+                "summary": "Dated reports matching \"GSK PLC\" from the checked publishers:\n[1] GOV.UK: \"Vanessa Lawrence, Andrew Halford and Iain Mackay reappointed on UK Government Investments Board\". Archive (>30 days old). Background mention. Publisher excerpt: \"Iain spent most of his career in senior finance leadership roles and retired as CFO of GSK plc in April 2023.\"\n[2] Wikinews: \"GSK rejects three Unilever bids to buy consumer healthcare arm, says unit was \"fundamentally undervalued\"\". Archive (>30 days old). Background mention. Publisher excerpt: \"The deals were assessed by the Board respective of a proposed demerger of GSK Consumer Health into a separate PLC in the middle of this year.\"\n\nSource references:\n[1] GOV.UK; published 2026-07-09T13:00:03.000Z. https://www.gov.uk/government/news/vanessa-lawrence-andrew-halford-and-iain-mackay-reappointed-on-uk-government-investments-board\n[2] Wikinews; Wikinews contributors; published 2022-01-16 (date only; time of day unknown). https://en.wikinews.org/wiki/GSK_rejects_three_Unilever_bids_to_buy_consumer_healthcare_arm,_says_unit_was_%22fundamentally_undervalued%22\n\nPublisher licences:\nGOV.UK: Open Government Licence v3.0 (https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)\nWikinews: CC BY 2.5 (https://creativecommons.org/licenses/by/2.5/)\n\nChecked: Global Voices, NASA, European Commission, NIST, EFF, SEC, Wikinews, GOV.UK, Voice of America. Recent reports precede archives; direct title/description matches precede background mentions within both age groups; newest within each group. Publisher wording is quoted, with abridgments marked; no endorsement implied. Contains public sector information licensed under the Open Government Licence v3.0.",
+                "url": "https://www.gov.uk/government/news/vanessa-lawrence-andrew-halford-and-iain-mackay-reappointed-on-uk-government-investments-board"
+              },
+              "costUsd": 0.01,
+              "signal": "0x397f8e20eaeeb2a3dddc70b582425b1061711bc977f7a5908dc5668c5d3d98c6",
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "GSK PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "miner": "Counterproof Sanctions Screener",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "GSK PLC",
+                "matched": false,
+                "matches": null,
+                "lists": null,
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0x9e8b18883a3f3a88c8ef674dbad03d9eaab6e00d8adf489deebf19b113dc9f58",
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "miner": "Sanctions Name Evidence",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": null,
+                "matched": null,
+                "matches": null,
+                "lists": null,
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0xe28b1e65569e0cc03213d7411e256165726e0f91a464b5545a5810e838de36e0",
+              "receipt": null
+            },
+            {
+              "minerId": 4433,
+              "miner": "LiveCert — Sourced Answers for Agents",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": null,
+                "matched": false,
+                "matches": null,
+                "lists": null,
+                "match_score": null
+              },
+              "costUsd": 0.01,
+              "signal": "0x01c4f5d9ab66498d4f398916ef7039e0beb5078a3b9c3ef5647c335f6f2819ab",
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0x440d86a71b1b30d41938f0bd7c31133bc30b0268718a4c5e87711c43dba66b98",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"GSK PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0x4bf1418df63efe7c09d4721cb240052242cde022c80fc01eb79d37b8fba1c7c0",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"GSK PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0x2ee6b7f3eab2e19270780b18d045d079633033d576d901965600b4d5a8556c7d",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"GSK PLC\",\"period\":\"last 12 months\"}"
+        },
+        {
+          "signal": "0x397f8e20eaeeb2a3dddc70b582425b1061711bc977f7a5908dc5668c5d3d98c6",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"GSK PLC\"}"
+        },
+        {
+          "signal": "0x9e8b18883a3f3a88c8ef674dbad03d9eaab6e00d8adf489deebf19b113dc9f58",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"GSK PLC\"}"
+        },
+        {
+          "signal": "0xe28b1e65569e0cc03213d7411e256165726e0f91a464b5545a5810e838de36e0",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"GSK PLC\"}"
+        },
+        {
+          "signal": "0x01c4f5d9ab66498d4f398916ef7039e0beb5078a3b9c3ef5647c335f6f2819ab",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"GSK PLC\"}"
+        }
+      ]
+    },
+    {
+      "counterparty": {
+        "name": "National Grid PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-13T11:00:16.081Z",
+      "finishedAt": "2026-11-13T11:08:10.644Z",
+      "payer": "0xDd37CE40cD22E2cFF1c887a7bEE89f456291127A",
+      "overall": "CLEAR",
+      "verdicts": {
+        "sanctions": "CLEAR",
+        "registry": "CLEAR",
+        "filings": "INFO",
+        "news": "CLEAR"
+      },
+      "costUsd": 0.06,
+      "paidCalls": 6,
+      "checks": {
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "National Grid PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7329,
+              "miner": "NewsWire News Search",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": null,
+                "result_count": 1,
+                "sources": [
+                  "GOV.UK"
+                ],
+                "brief": "GOV.UK reports: \"Sea Link development consent decision announced\"."
+              },
+              "costUsd": 0.01,
+              "signal": "0x639d9a13db1196e75983d443fce173b203e210af4b6ad6924c88c5382c5df62c",
+              "receipt": null
+            }
+          ]
+        },
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "National Grid PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "NATIONAL GRID PLC",
+                "registration_id": "04031152",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "1-3 Strand, London, WC2N 5EH, GB",
+                "incorporated": "2000-07-11"
+              },
+              "costUsd": 0.01,
+              "signal": "0x3022afd7573dcfdcdf278c99ebdda89f4cfe7c47bbb6cc5c425400411f95b9c4",
+              "receipt": null
+            },
+            {
+              "minerId": 5185,
+              "miner": "Praman Desk Compliance & Procurement Auditor",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "NATIONAL GRID PLC",
+                "registration_id": "8R95QZMKZLJX5Q2XR704",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "1-3 Strand, London, WC2N 5EH, GB",
+                "incorporated": "2012-06-06T15:51:00Z"
+              },
+              "costUsd": 0.01,
+              "signal": "0x65e3f37281acd95e41226ff53e4a3853b724c145434fe9f08cc52e0a16b3443e",
+              "receipt": null
+            }
+          ]
+        },
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "National Grid PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": null,
+                "filing_count": 45,
+                "filings": null,
+                "urls": null
+              },
+              "costUsd": 0.01,
+              "signal": "0xc4dafb0e998a969fe878e59e4dcfc8559d74b858d1a3ffe68da1ef993273be5a",
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "National Grid PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "miner": "Counterproof Sanctions Screener",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "National Grid PLC",
+                "matched": false,
+                "matches": null,
+                "lists": null,
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0x1e72e310b21471b9ae8fe30a04ec361986553907aa887628a11fb5e3c39a36ec",
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "miner": "Sanctions Name Evidence",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "National Grid PLC",
+                "matched": false,
+                "matches": null,
+                "lists": [
+                  "OFAC SDN",
+                  "OFAC Consolidated (non-SDN)",
+                  "UK Sanctions List (entities only)",
+                  "Canada autonomous sanctions (entities only)",
+                  "EU Financial Sanctions (entities only)",
+                  "US BIS Entity List (export controls)",
+                  "US BIS Military End User List (export controls)",
+                  "US BIS Denied Persons List (dated standard export-denial orders)",
+                  "UK Sanctions List (ships)",
+                  "US BIS Entity List (additional primary-row corroborated records)",
+                  "Canada autonomous sanctions (November 5 additional entities)",
+                  "Canada autonomous sanctions (corroborated ships)",
+                  "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+                ],
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0x6f221915309d9460e707e1034332ff810caaa6aa88394cd7cee3e0a0cf3e6597",
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0x639d9a13db1196e75983d443fce173b203e210af4b6ad6924c88c5382c5df62c",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"National Grid PLC\"}"
+        },
+        {
+          "signal": "0x3022afd7573dcfdcdf278c99ebdda89f4cfe7c47bbb6cc5c425400411f95b9c4",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"National Grid PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0x65e3f37281acd95e41226ff53e4a3853b724c145434fe9f08cc52e0a16b3443e",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"National Grid PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0xc4dafb0e998a969fe878e59e4dcfc8559d74b858d1a3ffe68da1ef993273be5a",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"National Grid PLC\",\"period\":\"last 12 months\"}"
+        },
+        {
+          "signal": "0x1e72e310b21471b9ae8fe30a04ec361986553907aa887628a11fb5e3c39a36ec",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"National Grid PLC\"}"
+        },
+        {
+          "signal": "0x6f221915309d9460e707e1034332ff810caaa6aa88394cd7cee3e0a0cf3e6597",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"National Grid PLC\"}"
+        }
+      ]
+    }
+  ]
+}

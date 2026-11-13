@@ -52,12 +52,38 @@ ${evidence("filings", a.checks.filings)}
 ### Adverse news
 ${evidence("news", a.checks.news)}
 
-## What the public feed shows about this assessment
+${a.privacy ? privacySection(a) : openSection(a)}`;
+}
+
+function openSection(a) {
+  return `## What the public feed shows about this assessment
 
 Every question above is published with the paying wallet. Anyone watching saw:
 
 ${a.verification.map((r) => `- \`${r.publicQuestion ?? "?"}\``).join("\n")}
 
 This is the leak Tacitum's private mode removes.
+`;
+}
+
+function privacySection(a) {
+  const p = a.privacy;
+  const m = p.measured;
+  const best = m ? `${m.best} (95% interval ${m.ci.join("–")}, ${m.runs} runs)` : "not measured";
+  return `## Private mode (v0)
+
+| | |
+|---|---|
+| Payer | one-time wallet \`${a.payer}\`, used for this assessment only |
+| Cover | ${p.k} complete assessments bought together, checks shuffled and spaced with random gaps |
+| Total paid | $${p.costUsd} for all ${p.k} (this memo's share $${a.costUsd}) |
+| Observer picking the real one | blind guess ${(1 / p.k).toFixed(2)}; best measured attacker ${best} |
+| Funding | \`${p.funder}\` deposited $${p.fundedUsd} into the payer's escrow, tx \`${short(p.fundingTx)}\` |
+
+The feed shows ${p.k} counterparties assessed by a new wallet, in no particular order: ${p.parties.map((n) => `\`${n}\``).join(", ")}. Nothing in the questions marks which one the desk wanted.
+
+**Not hidden in v0:** the funding deposit is on chain, so anyone who checks who funded the payer finds the desk's wallet. They still cannot tell which of the ${p.k} counterparties it cared about. The screened deposit pool (P4) removes that link.
+
+Decoy results stay in the local run record and are not part of this memo.
 `;
 }

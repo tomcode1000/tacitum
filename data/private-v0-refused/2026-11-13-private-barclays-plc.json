@@ -1,0 +1,609 @@
+{
+  "real": {
+    "counterparty": {
+      "name": "Barclays PLC",
+      "jurisdiction": "GB"
+    },
+    "startedAt": "2026-11-13T10:53:03.455Z",
+    "finishedAt": "2026-11-13T10:57:11.044Z",
+    "payer": "0x99A55e8976a87c4D61Ecb341F7cec9A1d370C176",
+    "overall": "REVIEW",
+    "verdicts": {
+      "sanctions": "REVIEW",
+      "registry": "REVIEW",
+      "filings": "REVIEW",
+      "news": "REVIEW"
+    },
+    "costUsd": 0,
+    "paidCalls": 0,
+    "checks": {
+      "sanctions": {
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+        "params": {
+          "name": "Barclays PLC"
+        },
+        "answers": [
+          {
+            "minerId": 731002,
+            "ok": false,
+            "status": 402,
+            "result": null,
+            "error": "payment required",
+            "costUsd": 0,
+            "receipt": null
+          },
+          {
+            "minerId": 710637,
+            "ok": false,
+            "status": 402,
+            "result": null,
+            "error": "payment required",
+            "costUsd": 0,
+            "receipt": null
+          },
+          {
+            "minerId": 4433,
+            "ok": false,
+            "status": 402,
+            "result": null,
+            "error": "payment required",
+            "costUsd": 0,
+            "receipt": null
+          }
+        ]
+      },
+      "news": {
+        "intent": "NEWS_SEARCH_GENERAL",
+        "params": {
+          "query": "Barclays PLC"
+        },
+        "answers": [
+          {
+            "minerId": 7329,
+            "ok": false,
+            "status": 402,
+            "result": null,
+            "error": "payment required",
+            "costUsd": 0,
+            "receipt": null
+          },
+          {
+            "minerId": 302,
+            "ok": false,
+            "status": 402,
+            "result": null,
+            "error": "payment required",
+            "costUsd": 0,
+            "receipt": null
+          }
+        ]
+      },
+      "registry": {
+        "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+        "params": {
+          "company": "Barclays PLC",
+          "jurisdiction": "GB"
+        },
+        "answers": [
+          {
+            "minerId": 77393,
+            "ok": false,
+            "status": 402,
+            "result": null,
+            "error": "payment required",
+            "costUsd": 0,
+            "receipt": null
+          },
+          {
+            "minerId": 5185,
+            "ok": false,
+            "status": 402,
+            "result": null,
+            "error": "payment required",
+            "costUsd": 0,
+            "receipt": null
+          }
+        ]
+      },
+      "filings": {
+        "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+        "params": {
+          "entity": "Barclays PLC",
+          "period": "last 12 months"
+        },
+        "answers": [
+          {
+            "minerId": 77131,
+            "ok": false,
+            "status": 402,
+            "result": null,
+            "error": "payment required",
+            "costUsd": 0,
+            "receipt": null
+          }
+        ]
+      }
+    },
+    "verification": [],
+    "privacy": {
+      "k": 4,
+      "parties": [
+        "GSK PLC",
+        "AstraZeneca PLC",
+        "National Grid PLC",
+        "Barclays PLC"
+      ],
+      "costUsd": 0,
+      "funder": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+      "fundedUsd": 0.4,
+      "fundingTx": "0xe677c6dac03cc4e24840c80bccdfaa5bc0a473ab216103ac485b451dedae5766",
+      "measured": {
+        "best": "0.38",
+        "ci": [
+          0.18,
+          0.61
+        ],
+        "runs": 16
+      }
+    }
+  },
+  "k": 4,
+  "strategy": "matched",
+  "parties": [
+    "GSK PLC",
+    "AstraZeneca PLC",
+    "National Grid PLC",
+    "Barclays PLC"
+  ],
+  "targetIndex": 3,
+  "order": [
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "filings"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "registry"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "filings"
+    }
+  ],
+  "costUsd": 0,
+  "decoys": [
+    {
+      "counterparty": {
+        "name": "GSK PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-13T10:53:03.455Z",
+      "finishedAt": "2026-11-13T10:57:11.043Z",
+      "payer": "0x99A55e8976a87c4D61Ecb341F7cec9A1d370C176",
+      "overall": "REVIEW",
+      "verdicts": {
+        "sanctions": "REVIEW",
+        "registry": "REVIEW",
+        "filings": "REVIEW",
+        "news": "REVIEW"
+      },
+      "costUsd": 0,
+      "paidCalls": 0,
+      "checks": {
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "GSK PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7329,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 302,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        },
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "GSK PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 5185,
+              "ok": false,
+              "status": 0,
+              "result": null,
+              "error": "UND_ERR_CONNECT_TIMEOUT",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "GSK PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 4433,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        },
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "GSK PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": []
+    },
+    {
+      "counterparty": {
+        "name": "AstraZeneca PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-13T10:53:03.455Z",
+      "finishedAt": "2026-11-13T10:57:11.043Z",
+      "payer": "0x99A55e8976a87c4D61Ecb341F7cec9A1d370C176",
+      "overall": "REVIEW",
+      "verdicts": {
+        "sanctions": "REVIEW",
+        "registry": "REVIEW",
+        "filings": "REVIEW",
+        "news": "REVIEW"
+      },
+      "costUsd": 0,
+      "paidCalls": 0,
+      "checks": {
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "AstraZeneca PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 5185,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "AstraZeneca PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 4433,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        },
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "AstraZeneca PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        },
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "AstraZeneca PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7329,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 302,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": []
+    },
+    {
+      "counterparty": {
+        "name": "National Grid PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-13T10:53:03.455Z",
+      "finishedAt": "2026-11-13T10:57:11.044Z",
+      "payer": "0x99A55e8976a87c4D61Ecb341F7cec9A1d370C176",
+      "overall": "REVIEW",
+      "verdicts": {
+        "sanctions": "REVIEW",
+        "registry": "REVIEW",
+        "filings": "REVIEW",
+        "news": "REVIEW"
+      },
+      "costUsd": 0,
+      "paidCalls": 0,
+      "checks": {
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "National Grid PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        },
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "National Grid PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7329,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 302,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        },
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "National Grid PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 5185,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "National Grid PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 4433,
+              "ok": false,
+              "status": 402,
+              "result": null,
+              "error": "payment required",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": []
+    }
+  ]
+}

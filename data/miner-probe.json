@@ -1,10 +1,10 @@
 {
-  "probedAt": "2026-11-03T16:54:59.478Z",
+  "probedAt": "2026-11-13T10:49:17.931Z",
   "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
   "checks": {
     "SANCTIONS_SCREENING_MATCH_GENERAL": [
       {
-        "minerId": 710637,
+        "minerId": 731002,
         "passed": 2,
         "cases": [
           {
@@ -13,20 +13,15 @@
             },
             "status": 200,
             "pass": true,
-            "ms": 20439,
-            "signal": "0x30192fb9c8651317caeab3783af7305833ab623c10b59fb77061990e9d2d20df",
+            "ms": 4517,
+            "signal": "0xfe599ff42e306947312f8c7db6b2d23f4590143b72782875ad4b436720c1792d",
             "result": {
               "name": "Banco Nacional de Cuba",
               "matched": true,
               "matches": [
-                "{\"alias_strength\":\"primary\",\"countries\":[\"Japan\",\"Panama\",\"Spain\",\"Switzerland\"],\"dates_of_birth\":[],\"entry_id\":\"306\",\"list\":\"OFAC SDN\",\"listed_name\":\"BANCO NACIONAL DE CUBA\",\"match_type\":\"normalized_exact\",\"matched_name\":\"BANCO NACIONAL DE CUBA\",\"programs\":[\"CUBA\"],\"published_at\":\"2026-10-28\",\"record_url\":\"https://sanctionssearch.ofac.treas.gov/Details.aspx?id=306\",\"score\":1,\"source\":\"https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML\",\"type\":\"Entity\"}"
+                "BANCO NACIONAL DE CUBA"
               ],
-              "lists": [
-                "OFAC SDN",
-                "OFAC Consolidated (non-SDN)",
-                "UK Sanctions List (entities only)",
-                "Canada autonomous sanctions (entities only)"
-              ],
+              "lists": null,
               "match_score": 1
             }
           },
@@ -36,73 +31,146 @@
             },
             "status": 200,
             "pass": true,
-            "ms": 8597,
-            "signal": "0x6a6b7552857c97724797229544de70e5941d68f63212cb3e415251695c7369be",
+            "ms": 4538,
+            "signal": "0xcb5d9c41e31e86740aa034123e8295d8e992a2c453d97cd6400ec50f7f87603a",
+            "result": {
+              "name": "Unilever PLC",
+              "matched": false,
+              "matches": null,
+              "lists": null,
+              "match_score": 0
+            }
+          }
+        ],
+        "name": "Counterproof Sanctions Screener",
+        "score": 1
+      },
+      {
+        "minerId": 4433,
+        "passed": 2,
+        "cases": [
+          {
+            "params": {
+              "name": "Banco Nacional de Cuba"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 7106,
+            "signal": "0xd38e421ef7701cd09691e5c36ecbde1385db94cc1e631a93fec7bab8fcf4d0a0",
+            "result": {
+              "name": null,
+              "matched": true,
+              "matches": null,
+              "lists": null,
+              "match_score": null
+            }
+          },
+          {
+            "params": {
+              "name": "Unilever PLC"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 4352,
+            "signal": "0xf518015de08fa5f1ae6a6222e276b0c698c5035b16e94b54df602e50ec7785ee",
+            "result": {
+              "name": null,
+              "matched": false,
+              "matches": null,
+              "lists": null,
+              "match_score": null
+            }
+          }
+        ],
+        "name": "LiveCert — Sourced Answers for Agents",
+        "score": 1
+      },
+      {
+        "minerId": 501,
+        "passed": 1,
+        "cases": [
+          {
+            "params": {
+              "name": "Banco Nacional de Cuba"
+            },
+            "status": 200,
+            "pass": false,
+            "ms": 4145,
+            "signal": "0x83bb1e9bedd09ddebbeacf52e9eda7220509504aeab7bb3e3fbc2ecba53e11ef",
+            "result": {
+              "name": null,
+              "matched": false,
+              "matches": null,
+              "lists": null,
+              "match_score": 0
+            }
+          },
+          {
+            "params": {
+              "name": "Unilever PLC"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 3684,
+            "signal": "0x5c57114dd660de61d1f476481ada71979a7aaf465c78664c93afc93c7671f729",
+            "result": {
+              "name": null,
+              "matched": false,
+              "matches": null,
+              "lists": null,
+              "match_score": 0
+            }
+          }
+        ],
+        "name": "Telegraph Sentinel Risk Intelligence",
+        "score": 0.5
+      },
+      {
+        "minerId": 711637,
+        "passed": 1,
+        "cases": [
+          {
+            "params": {
+              "name": "Banco Nacional de Cuba"
+            },
+            "status": 200,
+            "pass": false,
+            "ms": 5371,
+            "signal": "0x9b8c7e9146715038049d93e870ea727a2fb5a35764e9eed4c48cb19e2688d5b0",
+            "result": {
+              "name": "Banco Nacional de Cuba",
+              "matched": false,
+              "matches": null,
+              "lists": [
+                "Canada consolidated autonomous sanctions (SEMA/JVCFOA)"
+              ],
+              "match_score": 0
+            }
+          },
+          {
+            "params": {
+              "name": "Unilever PLC"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 4563,
+            "signal": "0xabea6a017ada222fb4233d6a9f15b05937148a43f1c1e6ebec271b2ec2aded23",
             "result": {
               "name": "Unilever PLC",
               "matched": false,
               "matches": null,
               "lists": [
-                "OFAC SDN",
-                "OFAC Consolidated (non-SDN)",
-                "UK Sanctions List (entities only)",
-                "Canada autonomous sanctions (entities only)"
+                "Canada consolidated autonomous sanctions (SEMA/JVCFOA)"
               ],
               "match_score": 0
             }
           }
         ],
-        "name": "Sanctions Name Evidence",
-        "score": 1
+        "name": "Maple Canadian Sanctions Evidence",
+        "score": 0.5
       },
       {
-        "minerId": 9002,
-        "passed": 2,
-        "cases": [
-          {
-            "params": {
-              "name": "Banco Nacional de Cuba"
-            },
-            "status": 200,
-            "pass": true,
-            "ms": 30801,
-            "signal": "0x4a600bfe41af7468413b00f75c1002589604ef158032437019fe3864b604af5e",
-            "result": {
-              "name": "Banco Nacional de Cuba",
-              "matched": true,
-              "matches": null,
-              "lists": [
-                "US Treasury OFAC SDN list",
-                "US Treasury OFAC SDN list",
-                "US Treasury OFAC SDN list"
-              ],
-              "match_score": 1
-            }
-          },
-          {
-            "params": {
-              "name": "Unilever PLC"
-            },
-            "status": 200,
-            "pass": true,
-            "ms": 12898,
-            "signal": "0xd65906cbf9db6879d5470119c1e08c2a2da55b60893b931064d01e38742ac568",
-            "result": {
-              "name": "Unilever PLC",
-              "matched": false,
-              "matches": null,
-              "lists": [
-                "US Treasury OFAC Specially Designated Nationals (SDN) list"
-              ],
-              "match_score": null
-            }
-          }
-        ],
-        "name": "TxLens",
-        "score": 1
-      },
-      {
-        "minerId": 4433,
+        "minerId": 5185,
         "passed": 1,
         "cases": [
           {
@@ -111,16 +179,16 @@
             },
             "status": 200,
             "pass": true,
-            "ms": 14989,
-            "signal": "0xca3ecb38a41dee6c7bf5cbbab783eeecc2d7e48b880fea9a3d52fc673cee515e",
+            "ms": 7954,
+            "signal": "0xc128d4e35801702fa23842d0fae1b3a25f07aea6e6949be9ed1145a93bde74ec",
             "result": {
-              "name": "Banco Nacional de Cuba",
+              "name": "BANCO NACIONAL DE CUBA",
               "matched": true,
               "matches": [
-                "{\"dob_check\":\"not_given\",\"dob_years\":[],\"id\":\"306\",\"list\":\"OFAC SDN\",\"listed_on\":null,\"matched_name\":\"BANCO NACIONAL DE CUBA\",\"name\":\"BANCO NACIONAL DE CUBA\",\"nationalities\":[],\"programs\":[\"CUBA\"],\"score\":1,\"type\":\"entity\",\"url\":\"https://sanctionssearch.ofac.treas.gov/Details.aspx?id=306\"}"
+                "BANCO NACIONAL DE CUBA"
               ],
               "lists": [
-                "OFAC SDN"
+                "BANCO NACIONAL DE CUBA"
               ],
               "match_score": 1
             }
@@ -131,137 +199,27 @@
             },
             "status": 200,
             "pass": false,
-            "ms": 32361,
-            "signal": "0xb1e8ab0d6512b7dc6ce222d2038981b19bc42f1e00e7c186ee7112ee29f0466e",
+            "ms": 4657,
+            "signal": "0x7942e5bd43fb7022b498a1bb13f70d12cdf7a528e1484c50a822bacb788a4dfd",
             "result": {
               "name": "Unilever PLC",
-              "matched": null,
-              "matches": null,
-              "lists": [
-                "OFAC SDN",
-                "UN Security Council Consolidated"
+              "matched": true,
+              "matches": [
+                "NILE"
               ],
-              "match_score": 0.851
+              "lists": [
+                "US Treasury OFAC SDN List (treasury.gov/ofac)"
+              ],
+              "match_score": 0.85
             }
           }
         ],
-        "name": "LiveCert — Sourced Answers for Agents",
+        "name": "Praman Desk Compliance & Procurement Auditor",
         "score": 0.5
       },
       {
-        "minerId": 302,
-        "passed": 0,
-        "cases": [
-          {
-            "params": {
-              "name": "Banco Nacional de Cuba"
-            },
-            "status": 503,
-            "pass": false,
-            "ms": 1007,
-            "result": null,
-            "error": {
-              "error": "no_compatible_miner",
-              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
-              "message": "miner chainsight-oracle cannot take this request's params: /sanctions has no field for required param(s) name",
-              "schema_version": 3
-            }
-          },
-          {
-            "params": {
-              "name": "Unilever PLC"
-            },
-            "status": 503,
-            "pass": false,
-            "ms": 1017,
-            "result": null,
-            "error": {
-              "error": "no_compatible_miner",
-              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
-              "message": "miner chainsight-oracle cannot take this request's params: /sanctions has no field for required param(s) name",
-              "schema_version": 3
-            }
-          }
-        ],
-        "score": 0
-      },
-      {
-        "minerId": 78021,
-        "passed": 0,
-        "cases": [
-          {
-            "params": {
-              "name": "Banco Nacional de Cuba"
-            },
-            "status": 503,
-            "pass": false,
-            "ms": 2029,
-            "result": null,
-            "error": {
-              "error": "no_compatible_miner",
-              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
-              "message": "miner san-ofac-entity cannot take this request's params: /query has no field for required param(s) name",
-              "schema_version": 3
-            }
-          },
-          {
-            "params": {
-              "name": "Unilever PLC"
-            },
-            "status": 503,
-            "pass": false,
-            "ms": 1088,
-            "result": null,
-            "error": {
-              "error": "no_compatible_miner",
-              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
-              "message": "miner san-ofac-entity cannot take this request's params: /query has no field for required param(s) name",
-              "schema_version": 3
-            }
-          }
-        ],
-        "score": 0
-      },
-      {
-        "minerId": 78022,
-        "passed": 0,
-        "cases": [
-          {
-            "params": {
-              "name": "Banco Nacional de Cuba"
-            },
-            "status": 503,
-            "pass": false,
-            "ms": 2195,
-            "result": null,
-            "error": {
-              "error": "no_compatible_miner",
-              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
-              "message": "miner san-un-list cannot take this request's params: /query has no field for required param(s) name",
-              "schema_version": 3
-            }
-          },
-          {
-            "params": {
-              "name": "Unilever PLC"
-            },
-            "status": 503,
-            "pass": false,
-            "ms": 983,
-            "result": null,
-            "error": {
-              "error": "no_compatible_miner",
-              "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
-              "message": "miner san-un-list cannot take this request's params: /query has no field for required param(s) name",
-              "schema_version": 3
-            }
-          }
-        ],
-        "score": 0
-      },
-      {
-        "minerId": 78004,
-        "passed": 0,
+        "minerId": 710637,
+        "passed": 1,
         "cases": [
           {
             "params": {
@@ -269,16 +227,14 @@
             },
             "status": 200,
             "pass": false,
-            "ms": 17438,
-            "signal": "0x7ab753f4a30d53360d8061f64d43f6fc0ad7f7539f996d713caca0d48d78c3a0",
+            "ms": 39417,
+            "signal": "0xe8ca9a0dc8c97fdde142bed3016998fa39ed29e18deaba043302c6a12ca77472",
             "result": {
               "name": null,
               "matched": null,
               "matches": null,
-              "lists": [
-                "US OFAC Specially Designated Nationals (SDN) List"
-              ],
-              "match_score": null
+              "lists": null,
+              "match_score": 1
             }
           },
           {
@@ -286,67 +242,67 @@
               "name": "Unilever PLC"
             },
             "status": 200,
-            "pass": false,
-            "ms": 21152,
-            "signal": "0x218740148d479cd8281c7874c8270c53f836478f55e6d8de7751b41d72aaeb2c",
+            "pass": true,
+            "ms": 9807,
+            "signal": "0xcb3396289b9c23a163aa0ac65f6d8cf07703aea989c3bf2dd0e465b303ec4e35",
             "result": {
-              "name": null,
-              "matched": null,
+              "name": "Unilever PLC",
+              "matched": false,
               "matches": null,
               "lists": [
-                "US OFAC Specially Designated Nationals (SDN) List"
+                "OFAC SDN",
+                "OFAC Consolidated (non-SDN)",
+                "UK Sanctions List (entities only)",
+                "Canada autonomous sanctions (entities only)",
+                "EU Financial Sanctions (entities only)",
+                "US BIS Entity List (export controls)",
+                "US BIS Military End User List (export controls)",
+                "US BIS Denied Persons List (dated standard export-denial orders)",
+                "UK Sanctions List (ships)",
+                "US BIS Entity List (additional primary-row corroborated records)",
+                "Canada autonomous sanctions (November 5 additional entities)",
+                "Canada autonomous sanctions (corroborated ships)",
+                "Canada autonomous sanctions (November 5 Iranian entity amendment)"
               ],
-              "match_score": null
+              "match_score": 0
             }
           }
         ],
-        "name": "OpenSanctions US OFAC Index",
-        "score": 0
+        "name": "Sanctions Name Evidence",
+        "score": 0.5
       },
       {
-        "minerId": 78003,
+        "minerId": 9002,
         "passed": 0,
         "cases": [
           {
             "params": {
               "name": "Banco Nacional de Cuba"
             },
-            "status": 500,
+            "status": 503,
             "pass": false,
-            "ms": 36039,
+            "ms": 5125,
             "result": null,
             "error": {
-              "error": "upstream call failed: response body exceeds 20971520 byte limit",
+              "error": "no_compatible_miner",
               "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
-              "miner_id": "78003",
-              "payment": {
-                "status": "escrow_credit_pending",
-                "message": "Your payment settled but the request failed, so nothing was billed. The amount is being credited to your Telegraph escrow balance (on-chain, usually within a few minutes): it then pays for your next asks, or withdraw it with requestWithdraw then executeWithdraw. If your balance has not risen after a while, contact support with this transaction.",
-                "transaction": "0x233f1801db030b2e20599d86e9ea39120ba55c16218713acace666cb2f2755b1",
-                "network": "eip155:11155111",
-                "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608"
-              }
+              "message": "miner txlens cannot take this request's params: /sanctions-screening has no field for required param(s) name",
+              "schema_version": 3
             }
           },
           {
             "params": {
               "name": "Unilever PLC"
             },
-            "status": 500,
+            "status": 503,
             "pass": false,
-            "ms": 34050,
+            "ms": 1237,
             "result": null,
             "error": {
-              "error": "upstream call failed: response body exceeds 20971520 byte limit",
+              "error": "no_compatible_miner",
               "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
-              "miner_id": "78003",
-              "payment": {
-                "status": "escrow_credit_pending",
-                "message": "Your payment settled but the request failed, so nothing was billed. The amount is being credited to your Telegraph escrow balance (on-chain, usually within a few minutes): it then pays for your next asks, or withdraw it with requestWithdraw then executeWithdraw. If your balance has not risen after a while, contact support with this transaction.",
-                "transaction": "0x1c71b694b60c1c1759366f8346e773bc69c286bb2b73be387041c0bef9951bbc",
-                "network": "eip155:11155111",
-                "payer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608"
-              }
+              "message": "miner txlens cannot take this request's params: /sanctions-screening has no field for required param(s) name",
+              "schema_version": 3
             }
           }
         ],
@@ -355,8 +311,8 @@
     ],
     "CORPORATE_REGISTRY_LOOKUP_GENERAL": [
       {
-        "minerId": 7393,
-        "passed": 1,
+        "minerId": 5185,
+        "passed": 2,
         "cases": [
           {
             "params": {
@@ -365,24 +321,42 @@
             },
             "status": 200,
             "pass": true,
-            "ms": 24787,
-            "signal": "0x00914768a0bf7156c08a910595140706b6b9bf61f3a9da43d90dd063f76fc172",
+            "ms": 5924,
+            "signal": "0x3f96d975c9e600bfaacb4efce1e9308dfb0ea9fa485b75a0064e46f507bc3e6b",
             "result": {
               "legal_name": "BARCLAYS PLC",
               "registration_id": "213800LBQA1Y9L22JB70",
               "active": true,
               "jurisdiction": "GB",
-              "registered_address": "LONDON, GB-LND, GB",
+              "registered_address": "1 CHURCHILL PLACE, LONDON, GB-LND, E14 5HP, GB",
               "incorporated": "2014-07-25T00:00:00Z"
+            }
+          },
+          {
+            "params": {
+              "company": "GSK PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 6280,
+            "signal": "0xab5ee97695e4c9d5f02db9a2e92399fbf97f85f123ae2cf6d938d1b99bd9b72c",
+            "result": {
+              "legal_name": "GSK PLC",
+              "registration_id": "5493000HZTVUYLO1D793",
+              "active": true,
+              "jurisdiction": "GB",
+              "registered_address": "79 NEW OXFORD STREET, LONDON, GB-LND, WC1A 1DG, GB",
+              "incorporated": "2015-11-14T02:16:00Z"
             }
           }
         ],
-        "name": "DataWire Corporate Registry Lookup",
+        "name": "Praman Desk Compliance & Procurement Auditor",
         "score": 1
       },
       {
-        "minerId": 9002,
-        "passed": 1,
+        "minerId": 77393,
+        "passed": 2,
         "cases": [
           {
             "params": {
@@ -391,20 +365,121 @@
             },
             "status": 200,
             "pass": true,
-            "ms": 33635,
-            "signal": "0x3303def0e5c3faf8e242ed45cd34aa20f261705c05a329e683feef993a2e80e3",
+            "ms": 7919,
+            "signal": "0xdbd623a8a35db10fba053ce6b65b86c0ef49ed282796bf35f7d976453615de48",
             "result": {
               "legal_name": "BARCLAYS PLC",
               "registration_id": "00048839",
               "active": true,
               "jurisdiction": "GB",
               "registered_address": "1 CHURCHILL PLACE, LONDON, GB-LND, E14 5HP, GB",
-              "incorporated": "1896-07-20T00:00:00Z"
+              "incorporated": "1896-07-20"
+            }
+          },
+          {
+            "params": {
+              "company": "GSK PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 7474,
+            "signal": "0xe091edd31710b918c541e9d503282ee6c8440bada678a7ec53509b6157dbef32",
+            "result": {
+              "legal_name": "GSK PLC",
+              "registration_id": "03888792",
+              "active": true,
+              "jurisdiction": "GB",
+              "registered_address": "79 NEW OXFORD STREET, LONDON, GB-LND, WC1A 1DG, GB",
+              "incorporated": "1999-12-06"
             }
           }
         ],
-        "name": "TxLens",
+        "name": "ZK Corporate Registry — Exact Identity and Status",
         "score": 1
+      },
+      {
+        "minerId": 77419,
+        "passed": 2,
+        "cases": [
+          {
+            "params": {
+              "company": "Barclays PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 20586,
+            "signal": "0x44e995f3d69bb457fdc6eca0bf9e2620aca60aeefcc9999e1b32bb568bf03fcc",
+            "result": {
+              "legal_name": "BARCLAYS PLC",
+              "registration_id": "00048839",
+              "active": true,
+              "jurisdiction": "GB",
+              "registered_address": "1 Churchill Place, London, E14 5HP",
+              "incorporated": "1896-07-20"
+            }
+          },
+          {
+            "params": {
+              "company": "GSK PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 200,
+            "pass": true,
+            "ms": 6940,
+            "signal": "0xb05ea3b294873fff046a9e57513a154b9672c2c47eb2e4e9eb750c30333d7c1c",
+            "result": {
+              "legal_name": "GSK PLC",
+              "registration_id": "03888792",
+              "active": true,
+              "jurisdiction": "GB",
+              "registered_address": "79 New Oxford Street, London, United Kingdom, WC1A 1DG",
+              "incorporated": "1999-12-06"
+            }
+          }
+        ],
+        "name": "ZK Corporate Atlas — Live Registry Identity and Status",
+        "score": 1
+      },
+      {
+        "minerId": 9002,
+        "passed": 0,
+        "cases": [
+          {
+            "params": {
+              "company": "Barclays PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 931,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+              "message": "miner txlens cannot take this request's params: /corporate-registry has no field for required param(s) company, jurisdiction",
+              "schema_version": 1
+            }
+          },
+          {
+            "params": {
+              "company": "GSK PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 948,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+              "message": "miner txlens cannot take this request's params: /corporate-registry has no field for required param(s) company, jurisdiction",
+              "schema_version": 1
+            }
+          }
+        ],
+        "score": 0
       },
       {
         "minerId": 4433,
@@ -417,12 +492,28 @@
             },
             "status": 503,
             "pass": false,
-            "ms": 969,
+            "ms": 2322,
             "result": null,
             "error": {
               "error": "no_compatible_miner",
               "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
-              "message": "miner livecert cannot take this request's params: /ssl-check has no field for required param(s) company, jurisdiction; /storm-alert has no field for required param(s) company, jurisdiction; /papers has no field for required param(s) company, jurisdiction; /translate has no field for required param(s) company, jurisdiction; /ip-geolocate has no field for required param(s) company, jurisdiction; /weather-forecast has no field for required param(s) company, jurisdiction; /extract has no field for required param(s) company, jurisdiction; /headlines has no field for required param(s) company, jurisdiction; /wallet-balance has no field for required param(s) company, jurisdiction; /tx-lookup has no field for required param(s) company, jurisdiction; /cve has no field for required param(s) company, jurisdiction; /news-search has no field for required param(s) company, jurisdiction; /convert has no field for required param(s) company, jurisdiction; /gas-price has no field for required param(s) company, jurisdiction; /financial has no field for required param(s) company, jurisdiction; /fraud-check has no field for required param(s) company, jurisdiction; /token-holders has no field for required param(s) company, jurisdiction; /research has no field for required param(s) company, jurisdiction; /crypto-price has no field for required param(s) company, jurisdiction; /stock-price has no field for required param(s) company, jurisdiction; /cross-chain has no field for required param(s) company, jurisdiction; /event-outcome has no field for required param(s) company, jurisdiction; /url-scan has no field for required param(s) company, jurisdiction; /web-search has no field for required param(s) company, jurisdiction; /sentiment has no field for required param(s) company, jurisdiction; /classify has no field for required param(s) company, jurisdiction; /research-synthesis has no field for required param(s) company, jurisdiction; /fact-check has no field for required param(s) company, jurisdiction; /sanctions-screen has no field for required param(s) company, jurisdiction; /company-registry has no field for required param(s) jurisdiction; /sec-filings has no field for required param(s) jurisdiction; /transfer-verify has no field for required param(s) company, jurisdiction; /macro has no field for required param(s) company, jurisdiction; /url-reputation has no field for required param(s) company, jurisdiction; /answer has no field for required param(s) company, jurisdiction",
+              "message": "miner livecert cannot take this request's params: /company-registry has no field for required param(s) jurisdiction",
+              "schema_version": 1
+            }
+          },
+          {
+            "params": {
+              "company": "GSK PLC",
+              "jurisdiction": "GB"
+            },
+            "status": 503,
+            "pass": false,
+            "ms": 934,
+            "result": null,
+            "error": {
+              "error": "no_compatible_miner",
+              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+              "message": "miner livecert cannot take this request's params: /company-registry has no field for required param(s) jurisdiction",
               "schema_version": 1
             }
           }
@@ -430,7 +521,7 @@
         "score": 0
       },
       {
-        "minerId": 302,
+        "minerId": 7393,
         "passed": 0,
         "cases": [
           {
@@ -438,87 +529,39 @@
               "company": "Barclays PLC",
               "jurisdiction": "GB"
             },
-            "status": 503,
+            "status": 200,
             "pass": false,
-            "ms": 1011,
-            "result": null,
-            "error": {
-              "error": "no_compatible_miner",
-              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
-              "message": "miner chainsight-oracle cannot take this request's params: /corp has no field for required param(s) company, jurisdiction",
-              "schema_version": 1
+            "ms": 9438,
+            "signal": "0x9dc782192be636f945493c93992494fccd00ad4b32a8e5584d71e6c9675770bd",
+            "result": {
+              "legal_name": null,
+              "registration_id": null,
+              "active": null,
+              "jurisdiction": "GB",
+              "registered_address": null,
+              "incorporated": null
             }
-          }
-        ],
-        "score": 0
-      },
-      {
-        "minerId": 98001,
-        "passed": 0,
-        "cases": [
+          },
           {
             "params": {
-              "company": "Barclays PLC",
+              "company": "GSK PLC",
               "jurisdiction": "GB"
             },
-            "status": 503,
+            "status": 200,
             "pass": false,
-            "ms": 1426,
-            "result": null,
-            "error": {
-              "error": "no_compatible_miner",
-              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
-              "message": "miner corp-gleif cannot take this request's params: /query has no field for required param(s) company, jurisdiction",
-              "schema_version": 1
+            "ms": 7102,
+            "signal": "0xc995991bfae6decbdaeaad46e4d1dd977ad9b735f37c72ac38882440081a813a",
+            "result": {
+              "legal_name": null,
+              "registration_id": null,
+              "active": null,
+              "jurisdiction": "GB",
+              "registered_address": null,
+              "incorporated": null
             }
           }
         ],
-        "score": 0
-      },
-      {
-        "minerId": 190104,
-        "passed": 0,
-        "cases": [
-          {
-            "params": {
-              "company": "Barclays PLC",
-              "jurisdiction": "GB"
-            },
-            "status": 503,
-            "pass": false,
-            "ms": 1534,
-            "result": null,
-            "error": {
-              "error": "no_compatible_miner",
-              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
-              "message": "miner corp-brreg-no cannot take this request's params: /query has no field for required param(s) company, jurisdiction",
-              "schema_version": 1
-            }
-          }
-        ],
-        "score": 0
-      },
-      {
-        "minerId": 79011,
-        "passed": 0,
-        "cases": [
-          {
-            "params": {
-              "company": "Barclays PLC",
-              "jurisdiction": "GB"
-            },
-            "status": 503,
-            "pass": false,
-            "ms": 2230,
-            "result": null,
-            "error": {
-              "error": "no_compatible_miner",
-              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
-              "message": "miner corp-gleif-status cannot take this request's params: /query has no field for required param(s) company, jurisdiction",
-              "schema_version": 1
-            }
-          }
-        ],
+        "name": "DataWire Corporate Registry Lookup",
         "score": 0
       }
     ],
@@ -808,5 +851,5 @@
       }
     ]
   },
-  "spentUsd": 0.15
+  "spentUsd": 0.35
 }

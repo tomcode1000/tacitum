@@ -8,7 +8,8 @@ import { createClient } from "../src/telegraph.js";
 const CHECKS = [
   {
     intent: "SANCTIONS_SCREENING_MATCH_GENERAL",
-    miners: [78003, 4433, 78021, 710637, 78004, 78022, 302, 9002],
+    // 13 Nov re-probe: 9002 went offline (503 no_compatible_miner); newer miners added.
+    miners: [710637, 9002, 731002, 711637, 501, 5185, 4433],
     cases: [
       { params: { name: "Banco Nacional de Cuba" }, expect: (r) => isTrue(r.matched) },
       { params: { name: "Unilever PLC" }, expect: (r) => isFalse(r.matched) },
@@ -16,9 +17,10 @@ const CHECKS = [
   },
   {
     intent: "CORPORATE_REGISTRY_LOOKUP_GENERAL",
-    miners: [79011, 4433, 7393, 98001, 302, 9002, 190104],
+    miners: [7393, 9002, 77393, 77419, 5185, 4433],
     cases: [
       { params: { company: "Barclays PLC", jurisdiction: "GB" }, expect: (r) => isTrue(r.active) && /barclays/i.test(r.legal_name || "") },
+      { params: { company: "GSK PLC", jurisdiction: "GB" }, expect: (r) => isTrue(r.active) && /gsk/i.test(r.legal_name || "") },
     ],
   },
   {

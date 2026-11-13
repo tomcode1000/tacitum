@@ -26,7 +26,8 @@ It is a layer on top of Telegraph. Every answer is still bought from Telegraph m
 - [x] Testnet payer wallet and x402 client (`npm run wallet`, `npm run first-call`)
 - [x] First paid call: one $0.01 sanctions screen, settled in tx `0x26bbada3…09fad1` on Sepolia. The public feed shows our wallet and the question (`evidence/`)
 - [x] Counterparty assessment workflow (`npm run assess -- "Barclays PLC" GB`), see PLAN.md
-- [ ] Decoy engine and privacy measurement
+- [x] Decoy engine and privacy measurement: with k=4 matched decoys every simple attacker is at chance (best learned 0.38, 95% interval 0.18–0.61, 16 runs)
+- [x] Private mode v0: decoys plus a one-time payer per assessment (`npm run private`); funding still linkable on chain
 - [ ] Screened funding pool and one-time payers
 - [ ] Viewing keys
 - [ ] Drop-in fetch wrapper and MCP server
@@ -41,4 +42,5 @@ npm run wallet       # creates a testnet-only key in .env and mints test USDC on
 npm run first-call   # one paid sanctions screen, then prints what the public feed shows about it
 npm run probe        # tests candidate miners against known answers (about $0.15)
 npm run assess -- "Barclays PLC" GB   # full counterparty memo, about $0.06
+npm run private -- "Barclays PLC" GB  # same memo, bought among 3 decoys by a one-time wallet, about $0.21
 ```

@@ -6,8 +6,11 @@ import { publicRecord } from "./telegraph.js";
 // Sanctions are screened by two independent miners, because one call cannot tell you
 // when a miner is wrong. The other checks use a primary miner with fallbacks.
 export const CHECKS = {
-  sanctions: { intent: "SANCTIONS_SCREENING_MATCH_GENERAL", miners: [710637, 9002], mode: "all", params: (c) => ({ name: c.name }) },
-  registry: { intent: "CORPORATE_REGISTRY_LOOKUP_GENERAL", miners: [7393, 9002], mode: "all", params: (c) => ({ company: c.name, jurisdiction: c.jurisdiction }) },
+  // Re-probed 13 Nov: 9002 left both intents, 7393 stopped resolving UK names, 710637 sometimes
+  // returns nulls. "two" asks in order until two miners give a definite answer.
+  sanctions: { intent: "SANCTIONS_SCREENING_MATCH_GENERAL", miners: [731002, 710637, 4433], mode: "two", params: (c) => ({ name: c.name }) },
+  // 77393 reads Companies House; 5185 reads GLEIF (LEI ids), so the two are independent sources.
+  registry: { intent: "CORPORATE_REGISTRY_LOOKUP_GENERAL", miners: [77393, 5185], mode: "all", params: (c) => ({ company: c.name, jurisdiction: c.jurisdiction }) },
   filings: { intent: "REGULATORY_FILING_MONITOR_GENERAL", miners: [77131], mode: "first", params: (c) => ({ entity: c.name, period: "last 12 months" }) },
   news: { intent: "NEWS_SEARCH_GENERAL", miners: [7329, 302], mode: "first", params: (c) => ({ query: c.name }) },
 };
@@ -35,6 +38,7 @@ export async function runCheck(client, check, counterparty) {
       receipt: res.receipt,
     });
     if (check.mode === "first" && answers.at(-1).ok) break;
+    if (check.mode === "two" && answers.filter((a) => a.ok && bool(a.result.matched) !== null).length >= 2) break;
   }
   return { intent: check.intent, params, answers };
 }

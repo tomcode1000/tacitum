@@ -120,11 +120,15 @@ export function styleLike(target, name) {
   if (t === t.toUpperCase()) return out.toUpperCase();
   // Names that already have mixed case (Wikipedia titles) keep it, so acronyms like GCP or SSE survive.
   if (name !== name.toUpperCase()) return out.replace(/\b(plc|llc)\b/gi, (s) => s.toUpperCase());
+  // All-caps source: title-case it, but keep short acronyms (BP, GSK, SSE, 3I) as they are.
+  // "Bp PLC" is a spelling no person types, so it would mark the decoy.
   return out
-    .toLowerCase()
-    .replace(/\b([a-z])/g, (c) => c.toUpperCase())
+    .split(/(\s+)/)
+    .map((w) => (/^[A-Z0-9&]{1,3}$/.test(w) && !WORDS.has(w) ? w : w.toLowerCase().replace(/\b([a-z])/g, (c) => c.toUpperCase())))
+    .join("")
     .replace(/\b(Plc|Llc)\b/g, (s) => s.toUpperCase());
 }
+const WORDS = new Set(["THE", "AND", "OF", "FOR", "NEW", "OLD", "ONE", "TWO", "BIG", "TOP", "SEA", "OIL", "GAS", "CAR", "ART", "BAY", "SUN"]);
 
 // The third tell is the registry answer, which is published: the target's exact legal name
 // resolves, while a re-styled decoy ("Persimmon PLC", "... Limited" for "... LTD") often does

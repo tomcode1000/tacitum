@@ -13,10 +13,13 @@ const shuffle = (a) => {
   return a;
 };
 
-export async function privateAssess(client, target, { k = 4, strategy = "matched", jitterMs = [0, 1500] } = {}) {
+// notBefore: no paid call before this time (ms). A just-funded one-time payer needs it: the node
+// sees a new escrow deposit only after a delay, and a payer it saw empty stays refused until epoch close.
+export async function privateAssess(client, target, { k = 4, strategy = "matched", jitterMs = [0, 1500], notBefore = 0 } = {}) {
   const startedAt = new Date().toISOString();
   const decoys = await pickDecoys(target, k - 1, strategy);
   const parties = shuffle([target, ...decoys]);
+  if (Date.now() < notBefore) await sleep(notBefore - Date.now());
 
   const tasks = shuffle(parties.flatMap((party) => Object.keys(CHECKS).map((check) => ({ party, check }))));
   const bought = new Map(parties.map((p) => [p, {}]));

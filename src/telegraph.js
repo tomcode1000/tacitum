@@ -78,6 +78,11 @@ export function createClient(account, { maxPerPayment = "100000", rail = "escrow
         return { ok: false, status: 0, data: { error: String(err.cause?.code || err.message) }, payment: null, receipt: null };
       }
       const data = await res.json().catch(() => ({}));
+      // The node's view of the escrow is stale (it can hold a zero balance for a freshly funded
+      // payer until the epoch closes). Retrying or moving on only buys a run full of refusals.
+      if (res.status === 402 && /insufficient escrow/i.test(data.reason || "")) {
+        throw new Error(`escrow refused for ${account.address}: ${data.reason}`);
+      }
       if (res.status === 402 && attempt < RETRIES) {
         await sleep(STAGGER_MS * (attempt + 2));
         continue;

@@ -3,3 +3,4 @@ node_modules/
 *.log
 data/cache/
 data/feed-raw/
+keys/

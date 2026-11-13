@@ -52,7 +52,7 @@ In v2 every obscure target was hidden (all four parties: 0 fame, 0 news, 0 filin
 v3 and v4 redo only the famous runs whose decoy rule changed; the obscure runs carry over unchanged. In v4 every simple attacker is at chance (first 0.19, famous 0.28, format 0.19); the learned one's 6/16 is not distinguishable from chance with 16 runs. The survey wallet's funder is two hops from the payer's funder on chain (a 2025 transfer), a testnet shortcut the P4 pool removes. Archives: data/runs-v1, -v2, -v3.
 
 ### P3: Milestone checkpoint (14 Nov)
-- [ ] Private mode v0: decoys plus a fresh payer wallet per assessment (funding still linkable, stated plainly)
+- [x] Private mode v0: decoys plus a fresh payer wallet per assessment (funding still linkable, stated plainly). `npm run private -- "<name>" GB [k]`: the desk funds a one-time wallet's Telegraph escrow with `depositUSDCFor`, so the payer never holds ETH or sends a transaction; memo states the funding link (src/payers.js)
 - [ ] Post progress to the Telegraph mod and on X
 - [ ] Decide on Track 1: if a check had no good miner in P1, build that miner (decision gate, 10 Nov)
 
