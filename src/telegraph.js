@@ -4,7 +4,8 @@
 import fs from "node:fs";
 import { wrapFetchWithPaymentFromConfig, decodePaymentResponseHeader } from "@x402/fetch";
 import { ExactEvmScheme } from "@x402/evm";
-import { NETWORK, USDC, NODE } from "../scripts/config.mjs";
+import path from "node:path";
+import { NETWORK, USDC, NODE, HOME } from "./config.js";
 
 const STAGGER_MS = 450;
 const RETRIES = 2;
@@ -118,7 +119,7 @@ export function createClient(account, { maxPerPayment = "100000", rail = "escrow
 
 // Anyone can fetch this, no payment or login. It is what the public sees about a call.
 // Records never change once written, so they are cached on disk.
-const RECORDS = "data/cache/signals";
+const RECORDS = path.join(HOME, "cache", "signals");
 
 export async function publicRecord(signalHash) {
   const file = `${RECORDS}/${signalHash}.json`;

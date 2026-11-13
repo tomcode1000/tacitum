@@ -93,6 +93,19 @@ for (const decoys of ["random", "matched"]) {
   const learned = learnedGuesses(set);
   const learnedHits = learned.filter((g, i) => g === set[i].target).length;
   row.learned = Number((learnedHits / set.length).toFixed(3));
+  // Cross-run attacker: sees every bundle, and picks the name it has seen least often, since
+  // recycled decoys recur while each target is screened once. Ties broken at random (expected value).
+  const seen = {};
+  for (const r of set) for (const p of r.parties) seen[p.toLowerCase()] = (seen[p.toLowerCase()] || 0) + 1;
+  row.rarest = Number(
+    (
+      set.reduce((s, r) => {
+        const min = Math.min(...r.parties.map((p) => seen[p.toLowerCase()]));
+        const tied = r.parties.filter((p) => seen[p.toLowerCase()] === min);
+        return s + (tied.includes(r.target) ? 1 / tied.length : 0);
+      }, 0) / set.length
+    ).toFixed(3),
+  );
   // The best attacker sets the privacy level, so report its interval.
   const best = Math.max(...Object.values(row));
   row.bestCI95 = wilson(Math.round(best * set.length), set.length);

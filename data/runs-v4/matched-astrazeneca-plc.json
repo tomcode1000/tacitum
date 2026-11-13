@@ -1,0 +1,101 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "AstraZeneca PLC",
+  "parties": [
+    "Barclays PLC",
+    "Smith & Nephew PLC",
+    "AstraZeneca PLC",
+    "Bp PLC"
+  ],
+  "costUsd": 0.21,
+  "signals": [
+    "0x09de3b08f1be188693718c116a55dae04078733d593661a628e8a7c834f507b4",
+    "0xb9c4dc7aa38969804d6b22e7cc088243e9217b3f889a261c049957772c355246",
+    "0x67f1fff8e9907d60a1524a1025c9428b64e57c91b1f9e28dae29b31633d9b392",
+    "0xd0b4b8e97ebdbe6eb93ee0c82e80f2662be11134db884bac879413f2f648ea1e",
+    "0x5e24bfa67b898a34081a309e47826030173539d5697fa143bd00e226b485bc88",
+    "0x721d9c81267a0b3d52743819bb0cf781651d62cf691de983ea4e446f57de2f42",
+    "0xb414aba34d4ce23fc2e0d7940b7b2d68f69ee5cedef4e16bf2afe4117e11a21b",
+    "0xc5702234da790d969abacb601d1ef8b4a529e009f2db026716c5bc2901c4ccc2",
+    "0x9e7127b8cb05e231e6a2e134bbc1134879e731ec6b943a1052b4b302a647e546",
+    "0x7bf92bdad0245d5eba348702363261548a111b7d4ed23a480b5a3c3971e7f6b3",
+    "0x6600643da77ebeaab2b3b2b5de790375bfe08c65312e04022cd3a43bfcc69a2a",
+    "0x551c7ecc57878de781ebd367160631ac4ddf4be35925f1d3247264a4cea8a2d6",
+    "0x939cdbbe2efb0e8e19a822ad024e3b771608baf53b4d5e463ea60ed2e49d393d",
+    "0x89e1f1fbe7e8ad46533eff46b5ed09174f7297a390115adeb246531b18a34f73",
+    "0x7d038173d2639e34f4663422a5f8e83dd9626be8f09a253fae5722df6eabbe2f",
+    "0xfcd6dbdc3b423ffaa9ed305f9d3757c0ad2c894459fd8df9bce19413a6250e93",
+    "0x5c1e4633c5d3172b40a6350753247791c102380a11d4606044c62ad7f7944fd7",
+    "0x007c2290fad09211bdc69e826237937da56fd66dae43f633bc654983f0e65d30",
+    "0xe909cbffabb0f5e6becdf89c5a0987ec9205158eaad567c9c0ecfdb6d50dd3f8",
+    "0x6226221a075b79b8944460416dee2ce6061039a37380f5693a1d34814a0f27aa",
+    "0x9d54eade5fc74462194945c957b8a5e53b0bc7187858681fcd869ba50201afe1"
+  ],
+  "order": [
+    {
+      "name": "Smith & Nephew PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Smith & Nephew PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Smith & Nephew PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Bp PLC",
+      "check": "news"
+    },
+    {
+      "name": "Smith & Nephew PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    }
+  ]
+}

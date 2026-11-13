@@ -1,0 +1,97 @@
+{
+  "strategy": "random",
+  "k": 4,
+  "target": "Vodafone Group PLC",
+  "parties": [
+    "LOGISTICS & DISTRIBUTION SERVICES LIMITED",
+    "CHITTERING SOLAR TWO LIMITED",
+    "CHEMRING PRIME CONTRACTS LIMITED",
+    "Vodafone Group PLC"
+  ],
+  "costUsd": 0.17,
+  "signals": [
+    "0xaf0cb7c23c3894485fd6d211d03607e7b2c5aa1fdf40c6afbf3620cb566aa1d8",
+    "0xa831ec7b362bd2afb84b04ec407114e939c51c534832cdc0fcf1ae40a34b8c13",
+    "0x4fd6a8901e92615c9cc40f095a79d92a88e259a6df8cc8bd44eeeaab800f1657",
+    "0xb8ca9868fff8b6f43ddee579df951cc0f80eb7f33960464cb051e935d91d7c6c",
+    "0x448e0cf01d0ea2867e748227409d46e2dd63b5dfd71c1aa29c79a1a569dea872",
+    "0x873c52c7187a71b4ec46b1745ef422036b5a5888f208dd16b2e4f20c9548c91b",
+    "0xbbaf292c091ad2f42516806f0f3265c87be8ecb6dd626cf4675017717b2999f4",
+    "0x129020751d2c7adb85e83181bac54fd56c3b15a4e804d7287cf1975e1b17ab21",
+    "0x4323f2e864dfe8519a92ecaef8dda26c273176e48b0db4fd27ea4a6b4ad6ce60",
+    "0x308a287fead6d080224165f4dfa00df894164669c63ce9d69d170a747a71d6f6",
+    "0x0a84b08eeeb0f03a030f47a8813aa15d9a6961fe6dfd4a95d0194f3d0d2f542e",
+    "0x4151d5e606e65a6cd84e192b93b7d992a0edb3258999907ef2983de4fe0f3d67",
+    "0xb6a2365dcc4b8497be55674baf0a0b6c58329c9fb16fd76c42eb45ea57c92600",
+    "0x6f1e44a21d70d385628dbb3f34ed27fe38c8bed3e7e8137cb791346562ba4f4b",
+    "0xd94b1b0a583bbdbacc270ca7db20bbe79ab33fa91277d2a1326a14daa07d21e2",
+    "0x34b33c39127d7ad457bf59294d01ee1e14d268aab78487ddeb89683e7440c89e",
+    "0x00d189fe90ac27e14e910a6661b24883569547905aef726eb5aa97205d015237"
+  ],
+  "order": [
+    {
+      "name": "Vodafone Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "CHITTERING SOLAR TWO LIMITED",
+      "check": "registry"
+    },
+    {
+      "name": "LOGISTICS & DISTRIBUTION SERVICES LIMITED",
+      "check": "news"
+    },
+    {
+      "name": "LOGISTICS & DISTRIBUTION SERVICES LIMITED",
+      "check": "sanctions"
+    },
+    {
+      "name": "CHITTERING SOLAR TWO LIMITED",
+      "check": "sanctions"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "news"
+    },
+    {
+      "name": "CHITTERING SOLAR TWO LIMITED",
+      "check": "news"
+    },
+    {
+      "name": "LOGISTICS & DISTRIBUTION SERVICES LIMITED",
+      "check": "registry"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "CHEMRING PRIME CONTRACTS LIMITED",
+      "check": "sanctions"
+    },
+    {
+      "name": "CHEMRING PRIME CONTRACTS LIMITED",
+      "check": "registry"
+    },
+    {
+      "name": "CHITTERING SOLAR TWO LIMITED",
+      "check": "filings"
+    },
+    {
+      "name": "CHEMRING PRIME CONTRACTS LIMITED",
+      "check": "news"
+    },
+    {
+      "name": "LOGISTICS & DISTRIBUTION SERVICES LIMITED",
+      "check": "filings"
+    },
+    {
+      "name": "CHEMRING PRIME CONTRACTS LIMITED",
+      "check": "filings"
+    }
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "strategy": "random",
+  "k": 4,
+  "target": "Tesco PLC",
+  "parties": [
+    "MTL GLOBAL LTD",
+    "CONNINGS LIMITED",
+    "Tesco PLC",
+    "WARRINGTON BOROUGH COUNCIL"
+  ],
+  "costUsd": 0.19,
+  "signals": [
+    "0x688d0980012c5f8fb9a76945d9473d3c3755edbcb3934ed852cefda243fc0f1b",
+    "0xaed48212f5d1e586c126969aa52165a92a93a8cde30ea35a3a13bca46d8af19d",
+    "0x69078d95827a4c92e13b90e7cb16f1a21a44a81fd4a400c4d985b8d03f49c1a4",
+    "0xa154d21490d783fd78e82fcb1b68c7e3c0a7c33ac26de575876c4dfd0184f6f4",
+    "0x90fa54607db9c452caf6dd84dd8b4c21d3f5cf72d39286c51a74c220b0bd11a1",
+    "0xd67c00e2449e63873f397d9dde91f3db97f97ffe243abecb64760ca591d5f93e",
+    "0x947c0a801b27b3a184f1193dd0db299340e9e6956d3ea16dca43f70fd5621a67",
+    "0x8ce98bc1694fdd4faa6e99068c4a34c011662b5816861cb1ecb409aa267c2fbb",
+    "0x87686f1c763cba71694485006e11a0f60274decc929b37aabb85b81183c36a01",
+    "0x3c9bb5f6ae01a3d238cee03376226e75db2fc69b24477f69b9f2d33d3ecb2014",
+    "0x1c3f931df9246448e8ebd7ffc6d5aa27b4c104537521d4d3bfb707f24df8b674",
+    "0x2d072ec128e2b6f6cd7d1eff02b09b902196eda593066f4abd768e6f054b8f23",
+    "0x9900f33452eef394fb541de3ee8f6971b905cb35b8065105244ef98426ccf192",
+    "0x20b8f2df088a9d1c7e3fb06f9f7cd7f7ee468c934d136b07e78193385cf24fb6",
+    "0x26219435dca89f537f3cbcfda9c11975bc890cbbf918f0b5b30005a54dfb29b3",
+    "0xfc890f79e788afa7e7e5ebe5d1e58f4dc16b7bdba014050bca630fd1e69e7c27",
+    "0x49566c475dfa291588710de3c0a3ba7d72a94612354f9f085166adfdf4fed7c5",
+    "0x407881ae9368ff4996e87ca0d10d8bafd066cd245ebb18035ee542ef81cb2145",
+    "0x515465e5533d24f898248c1c3ac40614d8a00c24c0e2c45dcf61d70d0c38b692"
+  ],
+  "order": [
+    {
+      "name": "MTL GLOBAL LTD",
+      "check": "filings"
+    },
+    {
+      "name": "CONNINGS LIMITED",
+      "check": "filings"
+    },
+    {
+      "name": "MTL GLOBAL LTD",
+      "check": "registry"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "news"
+    },
+    {
+      "name": "CONNINGS LIMITED",
+      "check": "sanctions"
+    },
+    {
+      "name": "WARRINGTON BOROUGH COUNCIL",
+      "check": "news"
+    },
+    {
+      "name": "WARRINGTON BOROUGH COUNCIL",
+      "check": "filings"
+    },
+    {
+      "name": "WARRINGTON BOROUGH COUNCIL",
+      "check": "registry"
+    },
+    {
+      "name": "CONNINGS LIMITED",
+      "check": "news"
+    },
+    {
+      "name": "MTL GLOBAL LTD",
+      "check": "sanctions"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "CONNINGS LIMITED",
+      "check": "registry"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "registry"
+    },
+    {
+      "name": "WARRINGTON BOROUGH COUNCIL",
+      "check": "sanctions"
+    },
+    {
+      "name": "MTL GLOBAL LTD",
+      "check": "news"
+    }
+  ]
+}

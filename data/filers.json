@@ -4,7 +4,6 @@
   "GSK PLC": 302,
   "EasyJet PLC": 2,
   "Diageo PLC": 35,
-  "Bp PLC": 59,
   "Hochschild Mining PLC": 4,
   "Aviva PLC": 6,
   "Barclays PLC": 282,
@@ -115,5 +114,6 @@
   "RIT Capital Partners PLC": 0,
   "British American Tobacco PLC": 0,
   "Countrywide PLC": 0,
-  "Informa PLC": 0
+  "Informa PLC": 0,
+  "BP PLC": 59
 }

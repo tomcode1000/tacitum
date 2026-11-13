@@ -1,0 +1,101 @@
+{
+  "strategy": "random",
+  "k": 4,
+  "target": "Barclays PLC",
+  "parties": [
+    "ENSTAR (US ASIA-PAC) HOLDINGS LIMITED",
+    "THE SUKHJIT SINGH POONI 2007 SETTLEMENT",
+    "SANDBAR ASSET MANAGEMENT LLP",
+    "Barclays PLC"
+  ],
+  "costUsd": 0.21,
+  "signals": [
+    "0x039478a2e39a32506447687c802706f65831a6ae064d5c1effca7c5d8e408c5b",
+    "0xf275bc84be6610ea49191879b5cf9d58beb1173dada15bcd04d54ba947c28cb2",
+    "0x2beda9f0c47ff6d0e16ed0b395a398fe25434f5cfe00d6f86a11ec14d16e3e38",
+    "0x58cdcb9f23196be1d906b6d355c9f23f9cc4f3f8b7e952f74bd71092fd053652",
+    "0x60a25f72ce04496ac39ec72580331ca8d48361351f624b4325d2ced46069534d",
+    "0x690cc71e1e3e594c311e5c082d791b23634d86c863febdaa2e3091aad5fc89c6",
+    "0xe72a28d33e64ac6ff9e9b0e7a5ead886f52bdef10d1931a693fd7edf7b7297a7",
+    "0x5fae50b17a1259588a3d89cd0f74dab4edd5053c565c805036f7e26d4d98e993",
+    "0xdc05b92e46f7c634cece95a02ff3dc75cae35e63a21f7202539d355ba5b9b976",
+    "0x3fd0d396c3f4ae5d443f6f9ad88a71f782c6f64ccaaaeb0be2fc53e6106e8a3b",
+    "0x92ed13e9959b9aa1ce1036ae089132aed25f22ed5fd3571e0fb851e32ff86a08",
+    "0xa08b8d50884b02094f3a119e315c613d173419182390a2ff75455507d1239c0f",
+    "0x95f27be507a47fcb843746a9f50d9b45582e42152b04ddedb37c3c1163457b7c",
+    "0xdffbf1bab738f7238f5e55ad235aac502e81fec18ed028a9de43789251dd7cfb",
+    "0x383c4be9da3eb37d7055bb2b06afcf2b6d3494d08217d13d2d6ad80dc3f482e3",
+    "0x73961640a1b136e01b270f1094776747bf3f6c6cd569dc2baa327624214d94d3",
+    "0x16bf4360c03f6f929e696f1288b8ad437a1e72ac1927aec6cda76dca18385a57",
+    "0x33336c67f9db7d3526b7a97b1966166c8c2fb2052fcb89c1694ed1d45d5572e6",
+    "0xee0049585103699c608480877d579975999ad0077ffb3486ef49d313a5845e54",
+    "0x7178d2c014c2f915e7eb0162e14f8b37e2dcd6052f6c248ec7768b1f5b0dfb4f",
+    "0x214fda1bf8ac456d64172f8adcbdffb808d460d0bae80d87c1538794706ddb86"
+  ],
+  "order": [
+    {
+      "name": "THE SUKHJIT SINGH POONI 2007 SETTLEMENT",
+      "check": "filings"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "SANDBAR ASSET MANAGEMENT LLP",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "SANDBAR ASSET MANAGEMENT LLP",
+      "check": "news"
+    },
+    {
+      "name": "SANDBAR ASSET MANAGEMENT LLP",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "THE SUKHJIT SINGH POONI 2007 SETTLEMENT",
+      "check": "news"
+    },
+    {
+      "name": "ENSTAR (US ASIA-PAC) HOLDINGS LIMITED",
+      "check": "filings"
+    },
+    {
+      "name": "ENSTAR (US ASIA-PAC) HOLDINGS LIMITED",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "ENSTAR (US ASIA-PAC) HOLDINGS LIMITED",
+      "check": "news"
+    },
+    {
+      "name": "THE SUKHJIT SINGH POONI 2007 SETTLEMENT",
+      "check": "registry"
+    },
+    {
+      "name": "ENSTAR (US ASIA-PAC) HOLDINGS LIMITED",
+      "check": "registry"
+    },
+    {
+      "name": "SANDBAR ASSET MANAGEMENT LLP",
+      "check": "filings"
+    },
+    {
+      "name": "THE SUKHJIT SINGH POONI 2007 SETTLEMENT",
+      "check": "sanctions"
+    }
+  ]
+}

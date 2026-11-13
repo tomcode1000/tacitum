@@ -4,3 +4,4 @@ node_modules/
 data/cache/
 data/feed-raw/
 keys/
+.tacitum/

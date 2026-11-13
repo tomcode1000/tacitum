@@ -9,9 +9,10 @@
 import fs from "node:fs";
 import { formatUnits, parseUnits } from "viem";
 import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
-import { USDC, DIAMOND, usdcAbi, escrowAbi, publicClient, walletClient } from "../scripts/config.mjs";
+import path from "node:path";
+import { USDC, DIAMOND, KEYS, usdcAbi, escrowAbi, publicClient, walletClient } from "./config.js";
 
-const KEYS = "keys"; // gitignored; the keys are kept so the record can be opened for an auditor later
+// One-time keys are kept (in TACITUM_KEYS) so the record can be opened for an auditor later.
 
 export async function oneTimePayer(funder, amountUsd, label = "") {
   const amount = parseUnits(String(amountUsd), 6);
@@ -43,7 +44,7 @@ export async function oneTimePayer(funder, amountUsd, label = "") {
 
   fs.mkdirSync(KEYS, { recursive: true });
   const record = { address: account.address, key, funder: funder.address, fundingTx, amountUsd: Number(amountUsd), label, createdAt: new Date().toISOString() };
-  fs.writeFileSync(`${KEYS}/${account.address}.json`, JSON.stringify(record, null, 2));
+  fs.writeFileSync(path.join(KEYS, `${account.address}.json`), JSON.stringify(record, null, 2));
 
   return { account, fundingTx, funder: funder.address, amountUsd: Number(amountUsd), fundedAt: Date.now() };
 }

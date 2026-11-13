@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Three Shires Property Investment Limited",
+  "parties": [
+    "Three Shires Property Investment Limited",
+    "London Bit Capital Limited",
+    "Charterhouse Property Group Brookmans Park Limited",
+    "Fairway Energy Limited"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x9d81be7f82b525a69daeb8a67227346ee0e7d3a50aaf86387b901d99fdc5c9e5",
+    "0x6cb1c6c3ca67a82be37ca73b6abecdbe947f54301f6cb4986703683707895723",
+    "0xde5fa8766d6554f77eb1beff3767033770c387372aaf4aa17c92ee1d3374e7ea",
+    "0xef64e465caf47d59f9de6b5d8f2b946007d83f203d60b31a94b997ee4381e450",
+    "0xd277fc3ba394487c235c31ca1b00016610ccdeb357e51bd3bcec3d8a6b7eee76",
+    "0xff2595c4373926353fedc74db8084c6906c34ca78b4a2837ab64b963721e82e0",
+    "0xf35ad720b6c74dd248b34fb6fc501313a2334720ec4a5fbd91904488b4c228eb",
+    "0x9bc52fa512fb96fd9f584544ed473fc0d5a59d631c91bd0e09b629c1f147510e",
+    "0x6e46668f2ed1b2c2371a42e2d612453ca8ace80f04331c197f55c7c6b039c2f0",
+    "0x4414a483995771ff251bec9e8c2d143de97003cb39d18bd2875c004c62ee6348",
+    "0xeb4947c1df10638903aa830d369d13f784e06ccfa5666abce3313f9f787b6f36",
+    "0xee3833c92d541c4f19b29c8688577f313f06f001d643ca3f62c45cf014d34f45",
+    "0x688ff1fd9fa6de6a59058d0c3105baa3c3d900979a903ef1b0f3bbb6c361452e",
+    "0xca3c394a4773d014421da4ec5b350d65a198bb83675096c0e080de6aae8fcb83",
+    "0x17131d56d5c918f4ea156234c6d1bdf2a4c79a4834be9a31f89af3a898c551f3",
+    "0x486d2c2c0e13598435aa0f989e1f6716e4f86578f41862edace396b9e35a3f90",
+    "0x49b1acac0968589341d132ac956bd4de6cfadd7bf8e039dece363f891f82ddc5",
+    "0xf09f03236af5d39f73ed522e05feca40e9cd7b527adcf01976224996953dd980",
+    "0xba5086d5f9fb8e52baedfe135146813e9d6d7d508974581d18e53a11ccd631e6",
+    "0x6333dd9c0340dde628d98058630d39e2aa0e95e48245123a1fa2b54bf88e1e3f"
+  ],
+  "order": [
+    {
+      "name": "Charterhouse Property Group Brookmans Park Limited",
+      "check": "news"
+    },
+    {
+      "name": "Fairway Energy Limited",
+      "check": "registry"
+    },
+    {
+      "name": "London Bit Capital Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Charterhouse Property Group Brookmans Park Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Fairway Energy Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Charterhouse Property Group Brookmans Park Limited",
+      "check": "filings"
+    },
+    {
+      "name": "London Bit Capital Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Charterhouse Property Group Brookmans Park Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "London Bit Capital Limited",
+      "check": "news"
+    },
+    {
+      "name": "Fairway Energy Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Fairway Energy Limited",
+      "check": "news"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "filings"
+    },
+    {
+      "name": "London Bit Capital Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "news"
+    }
+  ]
+}

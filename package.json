@@ -1,24 +1,56 @@
 {
   "name": "tacitum",
-  "version": "1.0.0",
-  "description": "Private counterparty screening on Telegraph: nobody watching the feed can tell who was screened or who asked.",
-  "main": "index.js",
+  "version": "0.1.0",
+  "description": "Private buying on Telegraph: one-time payers and matched decoys, so the public feed cannot tell who was screened or who asked.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "wallet": "node scripts/wallet.mjs",
     "first-call": "node scripts/first-call.mjs",
     "assess": "node scripts/assess.mjs",
     "private": "node scripts/private-assess.mjs",
-    "probe": "node scripts/probe-miners.mjs"
+    "probe": "node scripts/probe-miners.mjs",
+    "mcp": "node src/mcp.js"
   },
-  "keywords": [],
+  "keywords": [
+    "telegraph",
+    "x402",
+    "privacy",
+    "mcp",
+    "agents",
+    "sanctions",
+    "kyc"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
     "@x402/evm": "^2.29.0",
     "@x402/fetch": "^2.29.0",
-    "dotenv": "^18.0.9",
-    "viem": "^2.57.16"
+    "viem": "^2.57.16",
+    "zod": "^4.6.7"
   },
-  "type": "module"
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js"
+  },
+  "bin": {
+    "tacitum-mcp": "src/mcp.js"
+  },
+  "files": [
+    "src/",
+    "data/filers.json",
+    "data/cover-sets.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomcode1000/tacitum.git"
+  },
+  "devDependencies": {
+    "dotenv": "^18.0.9"
+  }
 }

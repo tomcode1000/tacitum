@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Tesco PLC",
+  "parties": [
+    "BAE Systems PLC",
+    "Tesco PLC",
+    "SSE PLC",
+    "Kingfisher PLC"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x475fa316c20f9519adf94cc65d9f4d0c0225f7dfa39cba71f1462d172fb5cb85",
+    "0x4b3d10642a2c365c22589093180ef41da531db3f5f6254ebc4add21cf79ba50d",
+    "0x6167e4cc94b5657d5d11bb6adfd4dc4c00fdb284a4cce55a8c093bc0529fbf41",
+    "0x5b53bd6680f2e0d297803e418bbb149e17f504e720749b00ca93e2baeb59a5e6",
+    "0xc0979ba45c55778d608380605b0a2ef65561e7cbf2aabe5d4f4f3f264b52d698",
+    "0xd40ba23b25455e9ac692f2f446afc801357e2fe7d4efbce556b71ac189bb558b",
+    "0x21b8c835d59eb7613a50e30c6f7057f50d4ab6c06117d37c56665900bef23019",
+    "0x8f7c6d808c533ed4165d1917b2118bba7fb08efdaa5f518b12edcdbf0e819c0f",
+    "0x2baddbfc2bbb5aa3968b3d8fc1252761fb0b59e34ea307476cb58e9da1d8b1af",
+    "0xe8c97f60a7874ebdd12dafb1e291e615fdd69826b1ac7cbdbf2039c2f7db5dd3",
+    "0xd62811c92c6a60bc40dd2f489667733f3864903a7667252e7501f17e0de66e6e",
+    "0x4a35aee7030d0348181a25c0da2e241180c86270b9487008adbe80cae7a1f78b",
+    "0xf5ca947a952a1546d643a43fa1f4250f480509e4c2cabe6dee731587e4d8f14a",
+    "0xc7123b3b1b6589d8f1412dbc3a3c526f4a9a6eb99027c1b29f56716ed11ce0f3",
+    "0x76907c1793fb1ba135cdc05bd23f54606590edb1312270b99cbcb62df41b2a3a",
+    "0xde9a87cdaf816259246accba00272cd773d3b554631f932e22cec6b5d0eb197e",
+    "0x58bd552fc89186480d3d099a67b49bc09a1c4a0792060d1d81d841238397f08f",
+    "0x0b977f50e3e464bc7e28dd943acb534c8e83879aa49beebfc89808227556366d",
+    "0x2c2420ac9688892ffaf275d84c6f06d16d74f8d0f21274392c0d9e8ea5ac9236",
+    "0x642daa24273a441347d09dddb1259f008064bac852b45771dc229817aadcb3f0"
+  ],
+  "order": [
+    {
+      "name": "BAE Systems PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "filings"
+    },
+    {
+      "name": "SSE PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "news"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "registry"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "news"
+    },
+    {
+      "name": "SSE PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "news"
+    },
+    {
+      "name": "Kingfisher PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "SSE PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "filings"
+    },
+    {
+      "name": "SSE PLC",
+      "check": "news"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "registry"
+    }
+  ]
+}

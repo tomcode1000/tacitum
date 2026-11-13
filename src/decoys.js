@@ -6,9 +6,14 @@
 //
 // Fame is measured on Wikipedia, never through Telegraph, so measuring it leaks nothing to the feed.
 import fs from "node:fs";
+import path from "node:path";
+import { HOME, SHIPPED } from "./config.js";
 
 const UA = "tacitum/0.1 (https://github.com/tomcode1000/tacitum)";
-const CACHE = "data/cache/fame.json";
+const CACHE_DIR = path.join(HOME, "cache");
+const CACHE = path.join(CACHE_DIR, "fame.json");
+// State written by this install, falling back to the copy shipped with the package.
+const stateOrShipped = (file) => (fs.existsSync(path.join(HOME, file)) ? path.join(HOME, file) : path.join(SHIPPED, file));
 const fameCache = fs.existsSync(CACHE) ? JSON.parse(fs.readFileSync(CACHE, "utf8")) : {};
 
 // Lists of well-known companies per jurisdiction, used for the famous/known buckets.
@@ -44,7 +49,7 @@ export async function fameHits(name) {
   const url = `https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${encodeURIComponent(`"${name}"`)}&srlimit=1&format=json`;
   const hits = (await wikiJson(url)).query?.searchinfo?.totalhits ?? 0;
   fameCache[name] = hits;
-  fs.mkdirSync("data/cache", { recursive: true });
+  fs.mkdirSync(CACHE_DIR, { recursive: true });
   fs.writeFileSync(CACHE, JSON.stringify(fameCache));
   return hits;
 }
@@ -134,8 +139,8 @@ const WORDS = new Set(["THE", "AND", "OF", "FOR", "NEW", "OLD", "ONE", "TWO", "B
 // resolves, while a re-styled decoy ("Persimmon PLC", "... Limited" for "... LTD") often does
 // not. So a decoy must resolve in GLEIF, by exactly the name we will send, the same way the
 // target does. GLEIF is the registry source the miners read; asking it directly leaks nothing to Telegraph.
-const EXACT = "data/cache/gleif-exact.json";
-const FILERS = "data/filers.json";
+const EXACT = path.join(CACHE_DIR, "gleif-exact.json");
+const FILERS = stateOrShipped("filers.json");
 const exactCache = fs.existsSync(EXACT) ? JSON.parse(fs.readFileSync(EXACT, "utf8")) : {};
 const norm = (s) => s.toLowerCase().replace(/[^a-z0-9&]+/g, " ").trim();
 
@@ -147,19 +152,57 @@ export async function resolves(name, country) {
     `&filter%5Bentity.legalName%5D=${encodeURIComponent(name)}&page%5Bsize%5D=20`;
   const data = await gleifJson(url);
   exactCache[key] = (data.data || []).some((r) => norm(r.attributes.entity.legalName.name) === norm(name));
-  fs.mkdirSync("data/cache", { recursive: true });
+  fs.mkdirSync(CACHE_DIR, { recursive: true });
   fs.writeFileSync(EXACT, JSON.stringify(exactCache));
   return exactCache[key];
 }
 
-export async function pickDecoys(target, count, strategy = "matched") {
-  const exclude = new Set([target.name.toLowerCase()]);
-  const fresh = (names) => names.filter((n) => !exclude.has(n.toLowerCase()));
+// Cover sets. Picking the nearest decoys afresh each time leaks across runs: the famous filers
+// are few, so the same ones recur as decoys (AstraZeneca and Barclays in 4 of 16 runs each), and
+// the one name in a bundle never seen elsewhere is the target (rarest-name attacker: 0.40 on those
+// runs, chance 0.25). Fresh decoys for a repeated target leak too: intersect the bundles.
+// So a matched cover set, once chosen, is kept, and every member of it is screened with exactly
+// that set. A bundle then looks the same whichever member was wanted. New sets avoid names already
+// in a set, so the sets partition the pool.
+const COVERS_OUT = path.join(HOME, "cover-sets.json");
+const loadCovers = () => {
+  const file = stateOrShipped("cover-sets.json");
+  return fs.existsSync(file) ? JSON.parse(fs.readFileSync(file, "utf8")) : [];
+};
+const sameName = (a, b) => a.toLowerCase() === b.toLowerCase();
 
+export function coverSetFor(target, size) {
+  return loadCovers().find((s) => s.jurisdiction === target.jurisdiction && s.members.length === size && s.members.some((m) => sameName(m, target.name)));
+}
+
+export async function pickDecoys(target, count, strategy = "matched") {
   if (strategy === "random") {
-    const names = shuffle(fresh(await gleifSample(target.jurisdiction)));
+    const names = shuffle((await gleifSample(target.jurisdiction)).filter((n) => !sameName(n, target.name)));
     return names.slice(0, count).map((name) => ({ name, jurisdiction: target.jurisdiction }));
   }
+
+  const known = coverSetFor(target, count + 1);
+  if (known) return known.members.filter((m) => !sameName(m, target.name)).map((name) => ({ name, jurisdiction: target.jurisdiction }));
+
+  const covers = loadCovers();
+  const taken = new Set(covers.filter((s) => s.jurisdiction === target.jurisdiction).flatMap((s) => s.members.map((m) => m.toLowerCase())));
+  let decoys;
+  try {
+    decoys = await pickMatched(target, count, taken);
+  } catch {
+    // The famous-filer pool is small; if the unused names cannot cover the target, share names.
+    decoys = await pickMatched(target, count, new Set());
+  }
+  covers.push({ jurisdiction: target.jurisdiction, members: [target.name, ...decoys.map((d) => d.name)], createdAt: new Date().toISOString() });
+  fs.mkdirSync(HOME, { recursive: true });
+  fs.writeFileSync(COVERS_OUT, JSON.stringify(covers, null, 2));
+  return decoys;
+}
+
+async function pickMatched(target, count, taken) {
+  const exclude = new Set([target.name.toLowerCase()]);
+  const fresh = (names) => names.filter((n) => !exclude.has(n.toLowerCase()));
+  const unused = (decoy) => !taken.has(decoy.name.toLowerCase());
 
   // Fame is measured on the name exactly as it will be sent: "Konami" has many exact-phrase
   // hits, "Konami PLC" has none, and the observer only ever sees the styled name.
@@ -176,7 +219,7 @@ export async function pickDecoys(target, count, strategy = "matched") {
       for (const name of shuffle(fresh((await gleifSample(target.jurisdiction)).filter((n) => COMPANY.test(n))))) {
         if (picked.length === count) break;
         const decoy = as(name);
-        if ((await fameHits(decoy.name)) !== 0 || !(await sameRegistry(decoy))) continue;
+        if (!unused(decoy) || (await fameHits(decoy.name)) !== 0 || !(await sameRegistry(decoy))) continue;
         exclude.add(name.toLowerCase());
         picked.push(decoy);
       }
@@ -189,10 +232,13 @@ export async function pickDecoys(target, count, strategy = "matched") {
   // out. data/filers.json is the filer survey (scripts/survey-filings.mjs), asked ahead of time
   // from a separate wallet; when it covers the target, decoys must share its filer status. Volume
   // tells too (a bank files ~280 times a year, Aviva 6), so the filings level counts toward the gap.
-  const filers = fs.existsSync(FILERS) ? JSON.parse(fs.readFileSync(FILERS, "utf8")) : {};
-  const isFiler = (name) => (name in filers ? filers[name] > 0 : null);
+  const filers = Object.fromEntries(
+    Object.entries(fs.existsSync(FILERS) ? JSON.parse(fs.readFileSync(FILERS, "utf8")) : {}).map(([n, c]) => [n.toLowerCase(), c]),
+  );
+  const filings = (name) => filers[name.toLowerCase()];
+  const isFiler = (name) => (filings(name) === undefined ? null : filings(name) > 0);
   const targetFiler = isFiler(target.name);
-  const filingsGap = (name) => (targetFiler ? Math.abs(level(filers[name]) - level(filers[target.name])) : 0);
+  const filingsGap = (name) => (targetFiler ? Math.abs(level(filings(name)) - level(filings(target.name))) : 0);
   if (targetFiler === null) console.warn(`${target.name} is not in the filer survey: decoys are not matched on filings`);
 
   // Known targets: score listed companies by how close their (styled) fame is to the target's,
@@ -203,7 +249,9 @@ export async function pickDecoys(target, count, strategy = "matched") {
   const candidates = shuffle(fresh(await listedSample(target.jurisdiction)));
   for (const name of targetFiler ? candidates : candidates.slice(0, 250)) {
     const decoy = as(name);
-    if (decoy.name.toLowerCase() === target.name.toLowerCase()) continue;
+    // The listed sample comes from two overlapping categories, so the same company can appear twice.
+    if (exclude.has(decoy.name.toLowerCase()) || !unused(decoy)) continue;
+    exclude.add(decoy.name.toLowerCase());
     if (targetFiler !== null && isFiler(decoy.name) !== targetFiler) continue;
     const gap = Math.abs(level(await fameHits(decoy.name)) - targetLevel) + filingsGap(decoy.name);
     // The registry check costs a GLEIF call, so only run it for candidates already close on fame.
@@ -213,6 +261,8 @@ export async function pickDecoys(target, count, strategy = "matched") {
   }
   const nearest = scored.sort((a, b) => a.gap - b.gap).slice(0, count);
   if (nearest.length < count) throw new Error(`only found ${nearest.length}/${count} decoys for ${target.jurisdiction}`);
+  // Keeping sets apart is worth less than a close match: a far-off decoy is a tell in every run.
+  if (taken.size && nearest.at(-1).gap > TOLERANCE * 2) throw new Error(`unused names too far from ${target.name}`);
   if (nearest.some((s) => s.gap > TOLERANCE)) console.warn(`decoys for ${target.name}: fame and filings gap up to ${nearest.at(-1).gap.toFixed(2)}`);
   return nearest.map((s) => s.decoy);
 }

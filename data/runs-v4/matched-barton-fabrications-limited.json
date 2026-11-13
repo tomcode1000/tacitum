@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Barton Fabrications Limited",
+  "parties": [
+    "Barton Fabrications Limited",
+    "Whites Waste Papers Limited",
+    "Fugen Uk Limited",
+    "G4s International Holdings Limited"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x5b4c93fe48601c2fe55e7af46d05aac71677c05c59f949ee3704a5636008bb15",
+    "0x814f53d6b4eebd86f36f9f21786926386090034fd7cc638fba24e7cef4b5ed2a",
+    "0x35b307162b83c74996c9753e215a1d0eb949620fd32f686ae2daad5be66dbef3",
+    "0x90015aaa1e8a3a65b89f6a6fea2f301e07022331c466dbc863cf4f30de963494",
+    "0xec12a4716a40d4470b1297bd919dc1ea8fea5503ef90eca29b5a7c0fb9f56ea0",
+    "0xe41a21031c9d2fb069f82398e24fb2716860374af0013ddc06aa49a1e288f8c8",
+    "0x390f2aef60e2f45b597daabd5bffd5dc4ed587ca56563b468dd36e477a1f6f54",
+    "0x0f4d5e7aa0320819eaa730bbf5b25541d600e05a8009f8f428b4d7a1777b08f0",
+    "0x2c945f8e3c2d633275a8765c0c856df8c06d039ebe3056509b0fd190d0b07fd0",
+    "0x327dce3b177a4f7e3299338867ffb4cde294cb6d7a17bbe67ae9a0aef6c2c0dc",
+    "0xb20f124e2a2a42966908309c65d5939a56d5bcf1216d60d9547c66cbbd6233de",
+    "0x913c2686c5f7f3c3b31495f1090224785ada1cf5df35813e24f2d106999c5699",
+    "0xc6e79da5b2829cfc9fef5c1450be0514e8b8d64174ff2a74464aa878412886cc",
+    "0x1660e4f9a1db64a3663c939fe17e2b41830004fe1589ef9dbd377d041f764487",
+    "0xa3aa604b38b5ea17e1712802c59212ab1ca62589e7706e36a8bd7cd02434346d",
+    "0x7221b553225dd7a202696565abcfb8993f6e8d73753da353c3552ad8df44b6a9",
+    "0x53c5082371d666232461b54f679945bbd0ec6dae32719cdec13e9312077ef61a",
+    "0xfcf2317745cb267344350479f2468d9afb597310c0b4d1246cf8a1d92858f4b8",
+    "0xb79e2a22e15703db272a5b996b40f147360862470f207d79581110e651815cf2",
+    "0xb85757c61c4666ae09df8b58d0bea7631c75537102b71de5c4ad1435925d30fd"
+  ],
+  "order": [
+    {
+      "name": "G4s International Holdings Limited",
+      "check": "news"
+    },
+    {
+      "name": "Whites Waste Papers Limited",
+      "check": "news"
+    },
+    {
+      "name": "G4s International Holdings Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Fugen Uk Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "news"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Fugen Uk Limited",
+      "check": "news"
+    },
+    {
+      "name": "G4s International Holdings Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Whites Waste Papers Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Fugen Uk Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Whites Waste Papers Limited",
+      "check": "registry"
+    },
+    {
+      "name": "G4s International Holdings Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Whites Waste Papers Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Fugen Uk Limited",
+      "check": "filings"
+    }
+  ]
+}

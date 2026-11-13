@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Lloyds Banking Group PLC",
+  "parties": [
+    "Barclays PLC",
+    "Prudential PLC",
+    "Lloyds Banking Group PLC",
+    "AstraZeneca PLC"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0xd020d5e16bdff1ed51757d49f1feaf11e2816bd0fdd4b6b0106b2bbfe6a2cb30",
+    "0x02d44972cdab026f92011d0a2816adf88cd0768393244868d4c17e031e2d2150",
+    "0x384163a29bd21003db1d592d1cd63bb60f7a44740737c02afb42b545a3314955",
+    "0x5bf345efb07526035760cdca834819fbc31cd3204b2b8abc22974ae7955ea352",
+    "0x13cd2c01fb8326f81099c0ba3b6e4643524ecd11e629c5995b238fe01bb273d7",
+    "0x6a847b7f3e8769c75067d9b3dd02f169b38bf9b05bfaed67d230d307305c80e6",
+    "0xb6f00f59fde161ac819b71afd34a9a1b7939c0a6cdd22487aa4c6170f8f2e47d",
+    "0x8fb07cea3b29e63837f8837758d824ba7d02aa70d383abe1b7f56d72004a2906",
+    "0xe09e97544761770de69d835d14ed30554df256f8508ff66f4b0a7dfbab84b864",
+    "0x205037e30930ce8a82a0e1bfee409b8f01d25d4c060be3fee8ce88ff0e37ca89",
+    "0x1c050b8bf625e3f2f4fd73674a4b6145a5b32675e2244213a7b18b54f4d6b3b7",
+    "0x57392a31e31899cbf9973ea05141b8cd65dc5ef0a8eb556eb4d9a4b5e15ed39f",
+    "0xb9fd614c34dcdb7e8a3d9d83eb70bafc64435bff9ae29efbcc93041acb459f6f",
+    "0x9c1fa2fa9e61fbc8b275e1fc375167ea5d8d4722ec096b2b9a3cb86e20c6852b",
+    "0x6151fc0474df54254c289d06583004dba437f1ee309006257af70204f2f651d3",
+    "0x4d701b70262a2bd72c83f8cec23a890eb877d3541e2d1f64af4fef6f3fb407c1",
+    "0xa957c65fa6cc9837475ee165596cd63b7e2782fde3233a42ea117976e3687975",
+    "0xe53c3c930211394b34e570694a62af2ef530f10bdeb72eb1f40b5fde5b083950",
+    "0xfc7fb5d3841476ade280d46ec640a87de015b0bd8e3f95f1607a6ea42cfb3afe",
+    "0xa1cef9669e1362301391773f28cabb0df948f0106bf6677126a3f7aea5e6a735",
+    "0x0a5f406db2d4242cede13d5fc73922bdab787590b9e77fb2bc72de2df0d2bea7",
+    "0x3a1b85c0af9966090a1efd2000694a0bda9b54ea2de0dcd6074e5e88a8426eaf",
+    "0x44d5d1ae1fe9b7289fc9d09e2a5f7a7928c64659a4211d453a19b8f080cb9c35",
+    "0xbb53ec3bd775d9183c7ab30cc6f008997ab1dfe83d58ccefeca3481a3e0209f9"
+  ],
+  "order": [
+    {
+      "name": "Prudential PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "Prudential PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Prudential PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Prudential PLC",
+      "check": "registry"
+    }
+  ]
+}
