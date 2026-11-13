@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Satobe Limited",
+  "parties": [
+    "Hopkins Engineering Limited",
+    "1let Limited",
+    "Barkisland Economics Limited",
+    "Satobe Limited"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0x3ef4110357c30deaae1ad72bdedcbe8081099fc1927235b0da5c3d9882903863",
+    "0x90804ec9ac5e3fc6b781dd5e2f89248f9fdc96e5591e15f07b7313847e006008",
+    "0xf866e5aadf4774f50c13333afbb2834b797442b0dc6bdea6a9f7bf0992f32917",
+    "0x71d0ad35b8825ee11e6aa73d56970f678b3ca37b3031ffbfb61d3172b57e2a3f",
+    "0x530dadccd0a81c5f70d8ce42fbf36319e392fa303db08b8a97492eacc8e9391b",
+    "0x4ad676ecd7ec018952eadb858f8d1aa6ac291425b28c32000d09998c35b99ab3",
+    "0xf66b5694eb55d4a45f6415fc7c665416b2de7a3a9fedb2420a8351f9e399db16",
+    "0x4928f0a02e91922f2702f762ec2ed3f51aec76276bc602b841e95f0ad525edca",
+    "0x25d368ac1b2bfe93257803c9480cc9fe6f4ea7201d0f932771fbca9d0e599479",
+    "0x9046e0d26edaa7b8e23bb71ab96db9bcffd09e69ddc10bbbf1d51651e7c242dd",
+    "0x85c8d8a2e5a036291ccdc9790e2ab1b4ce0126079e29dd434fa2eb31944dc8f6",
+    "0x68ab6a715b6bb3a1125f9dbc1ce79efd38391ebe72b51fe8f9edb94a59a331f5",
+    "0x0c0780595c7daa26e8111d0f261b37ec1222a0de118b4242983772a043bfc530",
+    "0xe286bd5ec0e289612d40e8eff96ec71efacdf0ee87d8f281217799d292e06e7c",
+    "0x2490551416fa957e90ef1dd5371111696afae3e62b662a433095012273a44bd8",
+    "0xefc519b4648500d3d1fbdc96505057e2dd1a29834bdc62ee63103ca9a7b05453",
+    "0x6d5cf41cfab692ef46d3c21d7af2377010bf34ce3715148fd237e191461deff9",
+    "0x3d3e67e2cef7267e186ba729c92f7993f3fc6c7c1d7c68bc3825517d4aa9b7a7",
+    "0x1de1042b0b669c4b0c30cc1805a9d0d64e5ad94eae2c5b11bd30bc77a15d07b3",
+    "0x4d296bfc09ccad92348abcbe6f0305eb7d2a034f156cf81ceb2ebd34be365767"
+  ],
+  "order": [
+    {
+      "name": "1let Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Hopkins Engineering Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Barkisland Economics Limited",
+      "check": "news"
+    },
+    {
+      "name": "Barkisland Economics Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "news"
+    },
+    {
+      "name": "1let Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "1let Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Hopkins Engineering Limited",
+      "check": "news"
+    },
+    {
+      "name": "Hopkins Engineering Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Hopkins Engineering Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Barkisland Economics Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "1let Limited",
+      "check": "news"
+    },
+    {
+      "name": "Barkisland Economics Limited",
+      "check": "registry"
+    }
+  ]
+}

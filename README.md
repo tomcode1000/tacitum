@@ -26,7 +26,7 @@ It is a layer on top of Telegraph. Every answer is still bought from Telegraph m
 - [x] Testnet payer wallet and x402 client (`npm run wallet`, `npm run first-call`)
 - [x] First paid call: one $0.01 sanctions screen, settled in tx `0x26bbada3…09fad1` on Sepolia. The public feed shows our wallet and the question (`evidence/`)
 - [x] Counterparty assessment workflow (`npm run assess -- "Barclays PLC" GB`), see PLAN.md
-- [x] Decoy engine and privacy measurement: with k=4 matched decoys every simple attacker is at chance (best learned 0.38, 95% interval 0.18–0.61, 16 runs)
+- [x] Decoy engine and privacy measurement: with k=4 matched decoys every attacker we built, including a learned one and a cross-run "rarest name" one, is at chance: 0.25 (95% interval 0.10–0.49, 16 live runs, v5)
 - [x] Private mode v0: decoys plus a one-time payer per assessment (`npm run private`); funding still linkable on chain
 - [x] Cover sets: decoy groups are fixed and shared, so bundles look the same whichever member was wanted and repeat screens reveal nothing (`data/cover-sets.json`)
 - [x] Library and MCP server (`tacitum`, `tacitum-mcp`), below

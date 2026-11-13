@@ -3,97 +3,96 @@
   "k": 4,
   "target": "Recircle Consulting Limited",
   "parties": [
+    "Domainex Limited",
     "Recircle Consulting Limited",
-    "Brookfield Global Property Advisor Limited",
-    "Dinnis Diggers Limited",
-    "Magnus Care Group Limited"
+    "Circle Square Agency Limited",
+    "ST IA Limited"
   ],
-  "costUsd": 0.2,
+  "costUsd": 0.19,
   "signals": [
-    "0xe2da69a9239325307a1a5f797d3a02f40e8ed1e6b54deae3f744826a7ecd81a0",
-    "0x833f176c42d07b5024ca73855ba4e8ee96dad0042e7d04b138337e8869298229",
-    "0x0db16887eb56c5b90af188085b54be2b084293cbb5c66f99e10c14d2cf5933eb",
-    "0xc739813fddaf7a1b631df6fb99a478863362f57b99e84abc984e1357d6f1866b",
-    "0xe97335437d8f11ba46c03115a8c423dd23f0f763b83959ec44e07eea8c968029",
-    "0x0ea0ba7a3ae21ae5bf20cefd7910e2ce8474a0d17babe7d80391c70b10cee38c",
-    "0x46c81ab97ef9a51787272d887a65a3da9242c76f4ff2a328f3c0143194564d41",
-    "0x45695f920782a293636054961c00c6a1e3f68d4a14656f11b850d5e88e62f28f",
-    "0x03b4bb5860737f9401cd492e00591327930fba333c0019af30d9c7b83304d6d8",
-    "0x86193e9e28fff78dd377e8ddd0c875352f418b7a83b39e99c395fba57c6be24e",
-    "0xae630a700ff44ea7a0c301daefa73e8c6f9da98f4fab0963b563f21f1d10c9aa",
-    "0xbf17941259fafc3725e4f340333ee923a6538b5620fe18b8c10a6553dcc1e66b",
-    "0x7ad15f35ca3b12efc5e4c8361bed9d580bb17d86c0d6e0db4ee9e3cfbbb4c180",
-    "0x464e790fc04702e1528cf922eb0033624a153579e5610425adf9bedb3a10c9ed",
-    "0xe94b4002ecb9b29f0f1d509d697b685582520cd44994dabbaa2d8c19592d9163",
-    "0x9ceaf1b35d98a3cbd46a095cf8c1309d159fecad21a376d2442c8cdfc8a53437",
-    "0xec96818d14f1f90b87cc492943f12d4897e5c87c755475c48acb24cd3609a650",
-    "0x9b1f3d63383d520f6fe34735d87a296d6d3a13fb112f2d5766d04d340bcbb663",
-    "0xef5acbcc13a30680462d1bf5d317af8ed6a5cf3ce64ab29100749344262a258c",
-    "0x63fad57721ffa0fafd8359cbbf30ec0e901059efce2d70307b6f5cc06b34ce17"
+    "0x68818e35bc0333cebb6536b485bfe7a18fbe354385e579954d4d55624bc8b597",
+    "0x782b0ba93f39a29c4c4c48fb6becb39797631efa891ce628f9e334e7effd3864",
+    "0xb5bfbf6bd48199b69cfc60f745f43fdab9c75a8ad1d23d9a7b70098267630e1d",
+    "0xb3a02febea854789617da7e427b893bbe572a5bf39f66b53817b306e6342b433",
+    "0xb44ad3dabda426dafa8bee566c02e0e977c6eed3add8c16dc9feab9dd3ffc712",
+    "0xc9dbc9d7183b1382b2b3aaab0823c0f32ec8fc7adcaa98367bab26172e6e49db",
+    "0x053b434d3203a3c4e4ec099dcd567e62917619fe939b1260491d4b1980367720",
+    "0xf7f50e3031ec35bd27bd6a5ec0c012d2ea0b419aa07ba59b9d8714347cfb3079",
+    "0x83c3cc8535f8cd59f470c30aeb0020037a527a78fcf1d7272aa22618326e495e",
+    "0xb271615078c9f56a764cd28c8c4bf6d47f27d86bb6066ea5ad6e66125f55a971",
+    "0x49cf660025a37c1afe8d8a845590c0b8d9eadf20327e99c556720b42e43b1a3a",
+    "0x8ad0bac0e5caaf6d16487883808bda73d7b8bad49a7b7042285c35f9dc6c6444",
+    "0xb99e0b0d6d0930bcc7c6579a39d0fa5b4c67cf925e84e9f9ee3b97cb0705d13a",
+    "0xaf50a4009add45f7d0656e5e4dcea53563be473746699d48159085b79d4c0b37",
+    "0x4e77f853a1c5b607a5de8d513d81350102a214a89c791907ca23a253e317c572",
+    "0x5ff414ee1e1b4bcdf19085a49ae61bef04c46cf39f84b6cf58d04146585719b5",
+    "0xd0b2d2db82c3ad1481694583ca7fcefe69ba66a4b53517b8e3bdf16a27cb7410",
+    "0xa078d121f56c52d9c9b72eb5f2d2cc3cd9c1a3ac43499465a8024e946fabb088",
+    "0xdd25af966076de9eed4f7c6226827e594474ef996fc0c6a85a8af99ed118f077"
   ],
   "order": [
     {
-      "name": "Brookfield Global Property Advisor Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "Recircle Consulting Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "Brookfield Global Property Advisor Limited",
+      "name": "Domainex Limited",
       "check": "filings"
     },
     {
-      "name": "Brookfield Global Property Advisor Limited",
+      "name": "Domainex Limited",
       "check": "news"
     },
     {
-      "name": "Dinnis Diggers Limited",
+      "name": "ST IA Limited",
+      "check": "news"
+    },
+    {
+      "name": "ST IA Limited",
       "check": "sanctions"
     },
     {
-      "name": "Magnus Care Group Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "Magnus Care Group Limited",
+      "name": "Circle Square Agency Limited",
       "check": "news"
     },
     {
-      "name": "Recircle Consulting Limited",
-      "check": "filings"
-    },
-    {
-      "name": "Dinnis Diggers Limited",
-      "check": "filings"
-    },
-    {
-      "name": "Dinnis Diggers Limited",
-      "check": "news"
-    },
-    {
-      "name": "Brookfield Global Property Advisor Limited",
+      "name": "Domainex Limited",
       "check": "registry"
     },
     {
-      "name": "Dinnis Diggers Limited",
+      "name": "Domainex Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Circle Square Agency Limited",
       "check": "registry"
     },
     {
       "name": "Recircle Consulting Limited",
-      "check": "news"
-    },
-    {
-      "name": "Magnus Care Group Limited",
-      "check": "filings"
-    },
-    {
-      "name": "Magnus Care Group Limited",
       "check": "registry"
     },
     {
+      "name": "ST IA Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Circle Square Agency Limited",
+      "check": "sanctions"
+    },
+    {
       "name": "Recircle Consulting Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Circle Square Agency Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Recircle Consulting Limited",
+      "check": "news"
+    },
+    {
+      "name": "Recircle Consulting Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "ST IA Limited",
       "check": "registry"
     }
   ]

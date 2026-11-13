@@ -3,91 +3,97 @@
   "k": 4,
   "target": "Hillside Housing Trust Limited",
   "parties": [
-    "Graham & Rosen Limited",
+    "Glasgow Airport Business Park Management Company Limited",
     "Hillside Housing Trust Limited",
-    "Chemicrest Limited",
-    "Warbrick Property Company Limited"
+    "Suntrust Limited",
+    "Atlas Park Management Company Limited"
   ],
-  "costUsd": 0.14,
+  "costUsd": 0.2,
   "signals": [
-    "0x6fbe8f64235c687ec18c9a6de1f3423fe692c1effb95e8be309b387c46a5940b",
-    "0xfe0bcbd848bd842dd9b2d3cfbfda81c35e4b4d7625e4934f191870d2ba73de1f",
-    "0x3c79c13de15d3ce30f1d3a1e724ff3c5767d6ae120cc1e527fb8f9a3ed83e7bd",
-    "0x6a4134f1b53504f9bc94162cfd80fc38caa7ff2138346484bc2f87d1b5e6bac4",
-    "0x23d6ba19d18c85425fb87e58b125dfb3f56d0f2bbb41b48f480ab5079c5eba72",
-    "0x0d17036a4161601e6d9fed8141bb934b61eaf2ec282197352697eeb2efc32162",
-    "0xe1654ee9636a38508099ef1836f58d35f70dd0e44f4f0920e6e4938d579ae1da",
-    "0x8e8534ab79518e8d81bcfbd3d0da458daa9f27d408bc425675e61d2cf319fd30",
-    "0x575b2b55d4fb81ebbd991c7f3cf0a498ba7b58635ea664add161ebb986957ad8",
-    "0x220b9b949ef5d7b1d3e204b7041142229585aa13e2e0f8cb6f568f564c424fb9",
-    "0x27d6b26dc7fa9c950119ad7e5943b60482f3f5276322399971f41c9068b3a92f",
-    "0x3a57c5ceb3514d1f90b1ad807b772685ba5afcd2ce5324c8daa0183811b60291",
-    "0x429ee1cd69d5ae917e07047f798bf559ffcf887ffb6124d025db3214528680f8",
-    "0x181e2c0d66b6958483c10cfe8661875d6059bc349b2547696d2b837327ce489a"
+    "0xb79847032734b0a32c7cd49352312469b9d1e69a052a6b499e97019c4dcd370f",
+    "0xde0e6d19739b2e2ae48fc1a16b5f405a28dfea6a82ba89bdc19e0a332b5a1196",
+    "0x9676d8f8c465a9730b36d2d486440b910e98157ececd614d48971e6dea85fd04",
+    "0xbace86ae75be3fe1cad66eb6e55538b63940478847cc60d95ecb7ed6c2247cf0",
+    "0x75c8e1d1a6f0456964c69b42b013db28cfc04d38f88211aa0ca5565990671b56",
+    "0xb2b943134a98de3f06b23a78d9b78a192c500d2dca3fb2075bd0380cc45f1f59",
+    "0xfa325b979e96bee117d0bdc70ff9129f51d0566b04769d381dd64e6e64c5aa09",
+    "0xd3afb0e044ec4ae60c4cfa6c74e58e8b4468a67e1363f99eb5acaef182814ef0",
+    "0xc49cc25f77b1e2d57914de3bb7d41de3bdf7aecbd3b780080a186663156bdb62",
+    "0xf5bd5c35b3d5206c05099f51f6a601464652d4ec8fbfa0abe22193341f6b0238",
+    "0x4b46b3fa191b3e6a9d399b9a16c751b1854cf89092cad1246cb6f1451aa2ef2a",
+    "0x224b41bfab238404ec1bd76f23abfdc107688fd13ea0cf164469403e37fb3c13",
+    "0xd871b4256dec9510d8c660840fb404eed25bfe29542c5644f29ee3aba9096aca",
+    "0x45fd2d0eba5e9dddcfe88627c462a1d242e5836db7a27654e9ec957f602a50cc",
+    "0x252b989b172aa9d7e1e0d70bc6cd843e8bc17515916871ba21f6f7246fda391c",
+    "0x70ff8003e1ec10a121395c64d1189bfc7a5d4f2aa3256bc8d0c7c2519d79a2ed",
+    "0xe7710f73c7d602ffe49f2c6a90ad8237b6571f733838f03c797a35c8ff108aaf",
+    "0xe50452dcfedfc4f2b1867306c79b09af18881fae4ce8f2e6b62088b9c0008eaa",
+    "0x0da7c06084eca4ec2f1801d49154782ac2382f016b9a89be92a740f4a4d97f6b",
+    "0x4c6ebeeab810679915b16ee03b35ad59870c2965605e194d97c5cd533af7ac21"
   ],
   "order": [
     {
-      "name": "Hillside Housing Trust Limited",
+      "name": "Atlas Park Management Company Limited",
       "check": "news"
     },
     {
-      "name": "Warbrick Property Company Limited",
-      "check": "filings"
-    },
-    {
-      "name": "Chemicrest Limited",
-      "check": "filings"
-    },
-    {
-      "name": "Hillside Housing Trust Limited",
+      "name": "Suntrust Limited",
       "check": "registry"
     },
     {
-      "name": "Chemicrest Limited",
+      "name": "Suntrust Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Atlas Park Management Company Limited",
       "check": "sanctions"
     },
     {
-      "name": "Warbrick Property Company Limited",
+      "name": "Glasgow Airport Business Park Management Company Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Glasgow Airport Business Park Management Company Limited",
       "check": "news"
+    },
+    {
+      "name": "Suntrust Limited",
+      "check": "news"
+    },
+    {
+      "name": "Atlas Park Management Company Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Glasgow Airport Business Park Management Company Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Atlas Park Management Company Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Suntrust Limited",
+      "check": "sanctions"
     },
     {
       "name": "Hillside Housing Trust Limited",
       "check": "sanctions"
     },
     {
-      "name": "Chemicrest Limited",
-      "check": "news"
-    },
-    {
       "name": "Hillside Housing Trust Limited",
       "check": "filings"
     },
     {
-      "name": "Warbrick Property Company Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "Graham & Rosen Limited",
+      "name": "Hillside Housing Trust Limited",
       "check": "news"
     },
     {
-      "name": "Graham & Rosen Limited",
-      "check": "registry"
-    },
-    {
-      "name": "Warbrick Property Company Limited",
-      "check": "registry"
-    },
-    {
-      "name": "Graham & Rosen Limited",
-      "check": "filings"
-    },
-    {
-      "name": "Graham & Rosen Limited",
+      "name": "Glasgow Airport Business Park Management Company Limited",
       "check": "sanctions"
     },
     {
-      "name": "Chemicrest Limited",
+      "name": "Hillside Housing Trust Limited",
       "check": "registry"
     }
   ]

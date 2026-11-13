@@ -3,98 +3,98 @@
   "k": 4,
   "target": "Three Shires Property Investment Limited",
   "parties": [
+    "LND UK Commercial Mortgages 1 Limited",
     "Three Shires Property Investment Limited",
-    "London Bit Capital Limited",
-    "Charterhouse Property Group Brookmans Park Limited",
-    "Fairway Energy Limited"
+    "G.H. And V.E. Davies And SON Limited",
+    "Airhop Bristol Limited"
   ],
   "costUsd": 0.2,
   "signals": [
-    "0x9d81be7f82b525a69daeb8a67227346ee0e7d3a50aaf86387b901d99fdc5c9e5",
-    "0x6cb1c6c3ca67a82be37ca73b6abecdbe947f54301f6cb4986703683707895723",
-    "0xde5fa8766d6554f77eb1beff3767033770c387372aaf4aa17c92ee1d3374e7ea",
-    "0xef64e465caf47d59f9de6b5d8f2b946007d83f203d60b31a94b997ee4381e450",
-    "0xd277fc3ba394487c235c31ca1b00016610ccdeb357e51bd3bcec3d8a6b7eee76",
-    "0xff2595c4373926353fedc74db8084c6906c34ca78b4a2837ab64b963721e82e0",
-    "0xf35ad720b6c74dd248b34fb6fc501313a2334720ec4a5fbd91904488b4c228eb",
-    "0x9bc52fa512fb96fd9f584544ed473fc0d5a59d631c91bd0e09b629c1f147510e",
-    "0x6e46668f2ed1b2c2371a42e2d612453ca8ace80f04331c197f55c7c6b039c2f0",
-    "0x4414a483995771ff251bec9e8c2d143de97003cb39d18bd2875c004c62ee6348",
-    "0xeb4947c1df10638903aa830d369d13f784e06ccfa5666abce3313f9f787b6f36",
-    "0xee3833c92d541c4f19b29c8688577f313f06f001d643ca3f62c45cf014d34f45",
-    "0x688ff1fd9fa6de6a59058d0c3105baa3c3d900979a903ef1b0f3bbb6c361452e",
-    "0xca3c394a4773d014421da4ec5b350d65a198bb83675096c0e080de6aae8fcb83",
-    "0x17131d56d5c918f4ea156234c6d1bdf2a4c79a4834be9a31f89af3a898c551f3",
-    "0x486d2c2c0e13598435aa0f989e1f6716e4f86578f41862edace396b9e35a3f90",
-    "0x49b1acac0968589341d132ac956bd4de6cfadd7bf8e039dece363f891f82ddc5",
-    "0xf09f03236af5d39f73ed522e05feca40e9cd7b527adcf01976224996953dd980",
-    "0xba5086d5f9fb8e52baedfe135146813e9d6d7d508974581d18e53a11ccd631e6",
-    "0x6333dd9c0340dde628d98058630d39e2aa0e95e48245123a1fa2b54bf88e1e3f"
+    "0xd61a960006da88eabffcf991790b913d5402036569772f3e365929a8cac633d1",
+    "0x79f447b90338c490f081e0b279f492ea8e07ddba34f69556b0e262d1fc864d60",
+    "0x49956c6dc30b750e1ed2996cb1031316c20c228180378970776da55cf349c320",
+    "0x25d74ec81fb7e631edde9964313b3b1753b2d9d8875d7766e7058292ee9ecff3",
+    "0x49521aab986d8bbbcb85de46d41ad06ce82c30eaebbbebaf3a08b98e9a5bafa5",
+    "0xdb2df2307235c45c9167e4119d92fac4f3cbe5de3d1e9e7fa538f559c5e8ee38",
+    "0xb1f8fccdd901cd8926fedd535e4bdc989ec8b1053bc9f926731febe022165a2b",
+    "0xea72904dbbe3cede0d15b65346061e13f252535a6ee374be2c8d6387be5a75cb",
+    "0x6a1c267e7095b37f7452b23e422837f1a800a5dfb271ca7e9d0e1b59519d3f02",
+    "0x66be46faaf6d77464291463b072db2e1fb4385a57f8db5b134c14051c3a41936",
+    "0x0ee81ee5a9f7b88dad8ac531a0433202c4d52ff084ee71c4933a3a4fd6608c57",
+    "0x38b8ab7936fa10d513b78a0d792589ff04b99da839323476242fcfb6cfefec42",
+    "0x5357842f3be238df4abf7cc98074efda144101d528b105091cd7ffc3e7354bbe",
+    "0xcd8de79d36ce1ea47fe53db5e076166842b623c600f580481dd7ca98bf6b04c7",
+    "0x8e9f850d064676e92b3854abeb34277214fcb147d7ec09864baa1298d801b85c",
+    "0x7380d1c26190077c204b968cb7c3fc6f65df311b78663185e33a2cdc66530590",
+    "0x2943fa3adb88c47ac08672ad85ff35989ff7bca19277c2cfb235c2475f941400",
+    "0xc6bc466aff93ae68bbfed0b67885fd25c39b4545546d749c3c22ef8a93aad436",
+    "0x45b087f10b1f0741493dd0f467ba5c9d8268f11b0ff2526424d587341e028f50",
+    "0x735201e81e89cc86e7e0bafb868da14751dc2393e3251979d44040bc04e81a0d"
   ],
   "order": [
     {
-      "name": "Charterhouse Property Group Brookmans Park Limited",
+      "name": "LND UK Commercial Mortgages 1 Limited",
+      "check": "registry"
+    },
+    {
+      "name": "G.H. And V.E. Davies And SON Limited",
       "check": "news"
     },
     {
-      "name": "Fairway Energy Limited",
-      "check": "registry"
-    },
-    {
-      "name": "London Bit Capital Limited",
-      "check": "registry"
-    },
-    {
-      "name": "Charterhouse Property Group Brookmans Park Limited",
-      "check": "registry"
-    },
-    {
-      "name": "Fairway Energy Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "Charterhouse Property Group Brookmans Park Limited",
-      "check": "filings"
-    },
-    {
-      "name": "London Bit Capital Limited",
-      "check": "filings"
-    },
-    {
-      "name": "Charterhouse Property Group Brookmans Park Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "London Bit Capital Limited",
+      "name": "Three Shires Property Investment Limited",
       "check": "news"
-    },
-    {
-      "name": "Fairway Energy Limited",
-      "check": "filings"
     },
     {
       "name": "Three Shires Property Investment Limited",
       "check": "sanctions"
     },
     {
-      "name": "Three Shires Property Investment Limited",
+      "name": "Airhop Bristol Limited",
+      "check": "news"
+    },
+    {
+      "name": "G.H. And V.E. Davies And SON Limited",
       "check": "registry"
     },
     {
-      "name": "Fairway Energy Limited",
-      "check": "news"
+      "name": "Airhop Bristol Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "G.H. And V.E. Davies And SON Limited",
+      "check": "filings"
     },
     {
       "name": "Three Shires Property Investment Limited",
       "check": "filings"
     },
     {
-      "name": "London Bit Capital Limited",
+      "name": "Three Shires Property Investment Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Airhop Bristol Limited",
+      "check": "filings"
+    },
+    {
+      "name": "G.H. And V.E. Davies And SON Limited",
       "check": "sanctions"
     },
     {
-      "name": "Three Shires Property Investment Limited",
+      "name": "LND UK Commercial Mortgages 1 Limited",
+      "check": "filings"
+    },
+    {
+      "name": "LND UK Commercial Mortgages 1 Limited",
       "check": "news"
+    },
+    {
+      "name": "LND UK Commercial Mortgages 1 Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Airhop Bristol Limited",
+      "check": "registry"
     }
   ]
 }

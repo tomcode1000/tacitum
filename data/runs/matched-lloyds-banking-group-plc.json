@@ -3,102 +3,102 @@
   "k": 4,
   "target": "Lloyds Banking Group PLC",
   "parties": [
-    "Barclays PLC",
-    "Prudential PLC",
+    "Diageo PLC",
     "Lloyds Banking Group PLC",
-    "AstraZeneca PLC"
+    "HSBC Holdings PLC",
+    "Unilever PLC"
   ],
   "costUsd": 0.24,
   "signals": [
-    "0xd020d5e16bdff1ed51757d49f1feaf11e2816bd0fdd4b6b0106b2bbfe6a2cb30",
-    "0x02d44972cdab026f92011d0a2816adf88cd0768393244868d4c17e031e2d2150",
-    "0x384163a29bd21003db1d592d1cd63bb60f7a44740737c02afb42b545a3314955",
-    "0x5bf345efb07526035760cdca834819fbc31cd3204b2b8abc22974ae7955ea352",
-    "0x13cd2c01fb8326f81099c0ba3b6e4643524ecd11e629c5995b238fe01bb273d7",
-    "0x6a847b7f3e8769c75067d9b3dd02f169b38bf9b05bfaed67d230d307305c80e6",
-    "0xb6f00f59fde161ac819b71afd34a9a1b7939c0a6cdd22487aa4c6170f8f2e47d",
-    "0x8fb07cea3b29e63837f8837758d824ba7d02aa70d383abe1b7f56d72004a2906",
-    "0xe09e97544761770de69d835d14ed30554df256f8508ff66f4b0a7dfbab84b864",
-    "0x205037e30930ce8a82a0e1bfee409b8f01d25d4c060be3fee8ce88ff0e37ca89",
-    "0x1c050b8bf625e3f2f4fd73674a4b6145a5b32675e2244213a7b18b54f4d6b3b7",
-    "0x57392a31e31899cbf9973ea05141b8cd65dc5ef0a8eb556eb4d9a4b5e15ed39f",
-    "0xb9fd614c34dcdb7e8a3d9d83eb70bafc64435bff9ae29efbcc93041acb459f6f",
-    "0x9c1fa2fa9e61fbc8b275e1fc375167ea5d8d4722ec096b2b9a3cb86e20c6852b",
-    "0x6151fc0474df54254c289d06583004dba437f1ee309006257af70204f2f651d3",
-    "0x4d701b70262a2bd72c83f8cec23a890eb877d3541e2d1f64af4fef6f3fb407c1",
-    "0xa957c65fa6cc9837475ee165596cd63b7e2782fde3233a42ea117976e3687975",
-    "0xe53c3c930211394b34e570694a62af2ef530f10bdeb72eb1f40b5fde5b083950",
-    "0xfc7fb5d3841476ade280d46ec640a87de015b0bd8e3f95f1607a6ea42cfb3afe",
-    "0xa1cef9669e1362301391773f28cabb0df948f0106bf6677126a3f7aea5e6a735",
-    "0x0a5f406db2d4242cede13d5fc73922bdab787590b9e77fb2bc72de2df0d2bea7",
-    "0x3a1b85c0af9966090a1efd2000694a0bda9b54ea2de0dcd6074e5e88a8426eaf",
-    "0x44d5d1ae1fe9b7289fc9d09e2a5f7a7928c64659a4211d453a19b8f080cb9c35",
-    "0xbb53ec3bd775d9183c7ab30cc6f008997ab1dfe83d58ccefeca3481a3e0209f9"
+    "0x02c91ca31b509032ad50673650c5a721e9ce83ab2f5b864ea0a774e22b68dff0",
+    "0xe945e808029c8abae1afab99f94a594f43e258129fce120d99aa23b0edb6f35e",
+    "0xa29e03da7640c920d66c070400117e8136c12022142efa6d4fb618101a0af7c1",
+    "0xfa6fcafdfb8ed5059275e1cf05b4630edc8337c8024b240b03020207c270d89e",
+    "0x44bd018a63daaa781904d2904d163597f4d52efdcf6c4a75e1ee32df452b37f9",
+    "0xf299804a864d16ee93020891e795a7c802a59b200a229b50b4ca7001f5b56999",
+    "0x9318d43708de21e0ba91ff1846bf62bc104684e5b2246e9dcf2ba7345db2f587",
+    "0x76f0a360a8122b47af6b4b2e3b4f6cbbfc5665a4a30043e653037e9efe25856b",
+    "0xf2b302348b30be34e63d0cb9e9a65e628e592b40a664baad482a3b24ea7e1f7c",
+    "0xff60af3955ad19b9c350c683d9bc7cbd780ab1e6a3b1a97fd43021b9e2f14a1e",
+    "0x00157923aefe8fbc62e85337227382992f5d1c4248df84651e5c7ec577aeb621",
+    "0x454fccf4f3c486be7db909b26ef8c514119d69cf4db7905ee9e442b2ebaaf9bb",
+    "0xa780a3be50baabf22d16a1ab11cdbe1456ce5dedd081fa368388217d6ce9867e",
+    "0x3cf39d9ad70caf9894f0152a560f3c60e2623e739633d1b3c09a046581ef89af",
+    "0x2f3200e9188712d6559075ef0240be9ded460c406623d32728bfc03c3b42bef7",
+    "0x030d0965b7a0920a966feac3c8eea6da9fb080e5b62608fb74d726d3b3f99c1a",
+    "0x42b96a64c2d843f23f2812ed216738b7018577ef8d75594581001d83d9fdef2d",
+    "0xe9c829bab62cf5bd334d419c2aacda2a2abd87db5b034356d81fe27169cca327",
+    "0x849613dd49738f8ea19c8e1c0316e639651c78f83849172e68cfa9dee6d00644",
+    "0x7f822ae822af77e90df0e0ce441aac81f3ac90eb5890c3e273259f9b51b61477",
+    "0xbff4bc318522e6dd40ed40ebc73db89afa32fa6e87e85ebdc228db73e3094dbf",
+    "0x03e16002eebc00a24800695caf4b000a4048293cee4fbbbdb153ad145ed8e2ed",
+    "0x5ae5014ca39f9fbf88fc3620c19709940715711801d379fcb46f9d2c7f988d76",
+    "0x916e823f2437ac7b99c45c967ff3dcba66802d654b8ef60c1172563fb26e12df"
   ],
   "order": [
     {
-      "name": "Prudential PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "AstraZeneca PLC",
+      "name": "HSBC Holdings PLC",
       "check": "news"
-    },
-    {
-      "name": "Barclays PLC",
-      "check": "filings"
     },
     {
       "name": "Lloyds Banking Group PLC",
       "check": "filings"
     },
     {
-      "name": "Lloyds Banking Group PLC",
+      "name": "Diageo PLC",
       "check": "news"
     },
     {
-      "name": "Barclays PLC",
-      "check": "sanctions"
+      "name": "Diageo PLC",
+      "check": "registry"
     },
     {
-      "name": "AstraZeneca PLC",
-      "check": "sanctions"
+      "name": "HSBC Holdings PLC",
+      "check": "registry"
     },
     {
       "name": "Lloyds Banking Group PLC",
       "check": "registry"
     },
     {
-      "name": "Barclays PLC",
+      "name": "HSBC Holdings PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Unilever PLC",
       "check": "news"
     },
     {
-      "name": "Prudential PLC",
+      "name": "Diageo PLC",
       "check": "filings"
     },
     {
-      "name": "AstraZeneca PLC",
-      "check": "filings"
+      "name": "Unilever PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "registry"
     },
     {
       "name": "Lloyds Banking Group PLC",
       "check": "sanctions"
     },
     {
-      "name": "Prudential PLC",
+      "name": "HSBC Holdings PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
       "check": "news"
-    },
-    {
-      "name": "Barclays PLC",
-      "check": "registry"
-    },
-    {
-      "name": "AstraZeneca PLC",
-      "check": "registry"
-    },
-    {
-      "name": "Prudential PLC",
-      "check": "registry"
     }
   ]
 }

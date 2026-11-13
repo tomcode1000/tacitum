@@ -1,0 +1,100 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Hillside Housing Trust Limited",
+  "parties": [
+    "Glasgow Airport Business Park Management Company Limited",
+    "Hillside Housing Trust Limited",
+    "Suntrust Limited",
+    "Atlas Park Management Company Limited"
+  ],
+  "costUsd": 0.2,
+  "signals": [
+    "0xb79847032734b0a32c7cd49352312469b9d1e69a052a6b499e97019c4dcd370f",
+    "0xde0e6d19739b2e2ae48fc1a16b5f405a28dfea6a82ba89bdc19e0a332b5a1196",
+    "0x9676d8f8c465a9730b36d2d486440b910e98157ececd614d48971e6dea85fd04",
+    "0xbace86ae75be3fe1cad66eb6e55538b63940478847cc60d95ecb7ed6c2247cf0",
+    "0x75c8e1d1a6f0456964c69b42b013db28cfc04d38f88211aa0ca5565990671b56",
+    "0xb2b943134a98de3f06b23a78d9b78a192c500d2dca3fb2075bd0380cc45f1f59",
+    "0xfa325b979e96bee117d0bdc70ff9129f51d0566b04769d381dd64e6e64c5aa09",
+    "0xd3afb0e044ec4ae60c4cfa6c74e58e8b4468a67e1363f99eb5acaef182814ef0",
+    "0xc49cc25f77b1e2d57914de3bb7d41de3bdf7aecbd3b780080a186663156bdb62",
+    "0xf5bd5c35b3d5206c05099f51f6a601464652d4ec8fbfa0abe22193341f6b0238",
+    "0x4b46b3fa191b3e6a9d399b9a16c751b1854cf89092cad1246cb6f1451aa2ef2a",
+    "0x224b41bfab238404ec1bd76f23abfdc107688fd13ea0cf164469403e37fb3c13",
+    "0xd871b4256dec9510d8c660840fb404eed25bfe29542c5644f29ee3aba9096aca",
+    "0x45fd2d0eba5e9dddcfe88627c462a1d242e5836db7a27654e9ec957f602a50cc",
+    "0x252b989b172aa9d7e1e0d70bc6cd843e8bc17515916871ba21f6f7246fda391c",
+    "0x70ff8003e1ec10a121395c64d1189bfc7a5d4f2aa3256bc8d0c7c2519d79a2ed",
+    "0xe7710f73c7d602ffe49f2c6a90ad8237b6571f733838f03c797a35c8ff108aaf",
+    "0xe50452dcfedfc4f2b1867306c79b09af18881fae4ce8f2e6b62088b9c0008eaa",
+    "0x0da7c06084eca4ec2f1801d49154782ac2382f016b9a89be92a740f4a4d97f6b",
+    "0x4c6ebeeab810679915b16ee03b35ad59870c2965605e194d97c5cd533af7ac21"
+  ],
+  "order": [
+    {
+      "name": "Atlas Park Management Company Limited",
+      "check": "news"
+    },
+    {
+      "name": "Suntrust Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Suntrust Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Atlas Park Management Company Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Glasgow Airport Business Park Management Company Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Glasgow Airport Business Park Management Company Limited",
+      "check": "news"
+    },
+    {
+      "name": "Suntrust Limited",
+      "check": "news"
+    },
+    {
+      "name": "Atlas Park Management Company Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Glasgow Airport Business Park Management Company Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Atlas Park Management Company Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Suntrust Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "news"
+    },
+    {
+      "name": "Glasgow Airport Business Park Management Company Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Hillside Housing Trust Limited",
+      "check": "registry"
+    }
+  ]
+}

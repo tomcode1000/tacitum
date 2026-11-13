@@ -3,50 +3,80 @@
   "k": 4,
   "target": "Barton Fabrications Limited",
   "parties": [
+    "Leadership Connections Limited",
+    "Jandu Developments Limited",
     "Barton Fabrications Limited",
-    "Whites Waste Papers Limited",
-    "Fugen Uk Limited",
-    "G4s International Holdings Limited"
+    "Bentham Developments Limited"
   ],
-  "costUsd": 0.2,
+  "costUsd": 0.22,
   "signals": [
-    "0x5b4c93fe48601c2fe55e7af46d05aac71677c05c59f949ee3704a5636008bb15",
-    "0x814f53d6b4eebd86f36f9f21786926386090034fd7cc638fba24e7cef4b5ed2a",
-    "0x35b307162b83c74996c9753e215a1d0eb949620fd32f686ae2daad5be66dbef3",
-    "0x90015aaa1e8a3a65b89f6a6fea2f301e07022331c466dbc863cf4f30de963494",
-    "0xec12a4716a40d4470b1297bd919dc1ea8fea5503ef90eca29b5a7c0fb9f56ea0",
-    "0xe41a21031c9d2fb069f82398e24fb2716860374af0013ddc06aa49a1e288f8c8",
-    "0x390f2aef60e2f45b597daabd5bffd5dc4ed587ca56563b468dd36e477a1f6f54",
-    "0x0f4d5e7aa0320819eaa730bbf5b25541d600e05a8009f8f428b4d7a1777b08f0",
-    "0x2c945f8e3c2d633275a8765c0c856df8c06d039ebe3056509b0fd190d0b07fd0",
-    "0x327dce3b177a4f7e3299338867ffb4cde294cb6d7a17bbe67ae9a0aef6c2c0dc",
-    "0xb20f124e2a2a42966908309c65d5939a56d5bcf1216d60d9547c66cbbd6233de",
-    "0x913c2686c5f7f3c3b31495f1090224785ada1cf5df35813e24f2d106999c5699",
-    "0xc6e79da5b2829cfc9fef5c1450be0514e8b8d64174ff2a74464aa878412886cc",
-    "0x1660e4f9a1db64a3663c939fe17e2b41830004fe1589ef9dbd377d041f764487",
-    "0xa3aa604b38b5ea17e1712802c59212ab1ca62589e7706e36a8bd7cd02434346d",
-    "0x7221b553225dd7a202696565abcfb8993f6e8d73753da353c3552ad8df44b6a9",
-    "0x53c5082371d666232461b54f679945bbd0ec6dae32719cdec13e9312077ef61a",
-    "0xfcf2317745cb267344350479f2468d9afb597310c0b4d1246cf8a1d92858f4b8",
-    "0xb79e2a22e15703db272a5b996b40f147360862470f207d79581110e651815cf2",
-    "0xb85757c61c4666ae09df8b58d0bea7631c75537102b71de5c4ad1435925d30fd"
+    "0xe80e94bf663bad0fd0585eb9b7e0956524eeb62bba33389aa06bd9e267adf1b6",
+    "0xe116f8b9ea600adefd15c2fc35fb05f063ffacf6816d73618c172d50e35e849d",
+    "0xc50aa162d735ebaa80608472624f2d0221327b5ed9acf9ee3e1244b82cbb36a8",
+    "0xed5b5dcb7f76346f2c6be6161aa2eacef37384adbab78f91b0521e4117ee027f",
+    "0x7bb11c437aba5a08bd17ca3bae2f35c36fa9d98acfca5284f951a0bfe5a3ee03",
+    "0x86eb9257d21d5e2c3d6c4d79ee4303163f29557f5866a87f0d2b0be4d93847a7",
+    "0x942c8d81be65bb723fc1c228fedfa4b75902996cac531d634846f433ab26099c",
+    "0xe92ec164da4280d275d85c525dbee92b94564482eaf5516032b15be729c6476a",
+    "0x89469cc2d76ce42dff49b78f2b4fcec3e9333c9c4923c62584f6f20df40e8617",
+    "0x1c52539551cb50120752bb153e1fd968d3a87ea788bfe1140cb15776ae56a748",
+    "0xa44d0083c38316ebb82605e71c009373fdfa256b6ec9568f90664160c3587200",
+    "0xd1e8cec57e0381ab7504adb5bd1d37a4bf4bbc2e4ceaaace5bdf34eb94a1a4a2",
+    "0xc99768b7a4b4d44503b2e8f33837a4c40569d7400f467de3ff1cc7aab21a93aa",
+    "0xcb04a0569303a5bcf9ae30ad7a39e8e85511279312ea3d922960a3315a5e8e75",
+    "0xab9affd2f986f06166a77828a9c267741c6a5a7225d997378ca93c19c2a03a89",
+    "0x7d5ac33ea223b89c59f685b036ba186108566f9dfa9de3ef9a831840b9f109a8",
+    "0x7da35feee42a40d52a6a2080503a611049db5b262cf973e0b47e545c34f2c95d",
+    "0x345d0468e830497ee4751a1c58084a7a0a0af234c1e1d884745150b35406b390",
+    "0x80fdd01037aa94a4a17ff19591a64018ba7e4db1d4c728576ca8cea1e1126c57",
+    "0x4a911182d0debf751860b65e9c1c1764c9a69a72b1ed070e093895a1c61ab1e3",
+    "0xf6be66f2860ea55d84df09593ff9366f1c3334494259ec4a4683af6858b3fffd",
+    "0xc0b3f53815ba063ea3223b70034eaecac599f84db62152952f20e8dd7313f75d"
   ],
   "order": [
     {
-      "name": "G4s International Holdings Limited",
+      "name": "Bentham Developments Limited",
       "check": "news"
     },
     {
-      "name": "Whites Waste Papers Limited",
-      "check": "news"
+      "name": "Bentham Developments Limited",
+      "check": "registry"
     },
     {
-      "name": "G4s International Holdings Limited",
+      "name": "Barton Fabrications Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Jandu Developments Limited",
       "check": "filings"
     },
     {
-      "name": "Fugen Uk Limited",
+      "name": "Barton Fabrications Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Leadership Connections Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Leadership Connections Limited",
+      "check": "news"
+    },
+    {
+      "name": "Jandu Developments Limited",
       "check": "sanctions"
+    },
+    {
+      "name": "Bentham Developments Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Leadership Connections Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Jandu Developments Limited",
+      "check": "news"
     },
     {
       "name": "Barton Fabrications Limited",
@@ -54,47 +84,19 @@
     },
     {
       "name": "Barton Fabrications Limited",
-      "check": "filings"
-    },
-    {
-      "name": "Barton Fabrications Limited",
       "check": "registry"
     },
     {
-      "name": "Fugen Uk Limited",
-      "check": "news"
-    },
-    {
-      "name": "G4s International Holdings Limited",
+      "name": "Leadership Connections Limited",
       "check": "sanctions"
     },
     {
-      "name": "Whites Waste Papers Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "Barton Fabrications Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "Fugen Uk Limited",
-      "check": "registry"
-    },
-    {
-      "name": "Whites Waste Papers Limited",
-      "check": "registry"
-    },
-    {
-      "name": "G4s International Holdings Limited",
-      "check": "registry"
-    },
-    {
-      "name": "Whites Waste Papers Limited",
+      "name": "Bentham Developments Limited",
       "check": "filings"
     },
     {
-      "name": "Fugen Uk Limited",
-      "check": "filings"
+      "name": "Jandu Developments Limited",
+      "check": "registry"
     }
   ]
 }

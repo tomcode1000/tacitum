@@ -3,93 +3,85 @@
   "k": 4,
   "target": "HSBC Holdings PLC",
   "parties": [
-    "GSK PLC",
     "HSBC Holdings PLC",
-    "Bp PLC",
-    "Barclays PLC"
+    "Diageo PLC",
+    "Unilever PLC",
+    "Lloyds Banking Group PLC"
   ],
   "costUsd": 0.24,
   "signals": [
-    "0xf6ab5ae75515f5f6050bc31839cc1a220dc7f3003435aebce491ccd60917fa8c",
-    "0x02e71b5b0e799ce58fd247edfa94e0415105aeab4c40f0093955fd80a944ce78",
-    "0x00a0e98d582e753f2a66024a31ebb8e81488a171e374851eb70f2ba0e287ff3b",
-    "0x0bce944695b0be6c3c62ec40285739faa36c31cbc582ef43946992fed220bfd3",
-    "0x8292afb2035c651cfd592f253e52b9d12ef4f3055c03eb635e2452bf4a23a3aa",
-    "0x095f2ec7b7fea856b5a548016aeda2d9494dee4dd8149be0e8a5fc02a933ea53",
-    "0x472355e3514c740e03e61392fb0bc4e85856f808547ba098bb8a3c110f7629bb",
-    "0x331c5d180555c86875d882d1b7e3e985f9a9afcc248280d51e7b4f7a5bb403b7",
-    "0x268c6a3ae844e9f8bc72ae568c1992874003e889537a109a6bdb28d58e4d8ea7",
-    "0x8c0d93242da7fc4fa0c88a0e84a7566ed27966237de57eeec167e5ab0ca7dd77",
-    "0x0ebd8cb4838c6a4407a327b55d7a78f382af07e3e6c919a1b6c70e14031b6fa2",
-    "0xf9ade5eeb75af1511a6ad9d64e4e7aa8cc1b925feec1b9152dfd819d0538ecc5",
-    "0x2ca7304e9de240036ae1761695be9657cd3270b010cc6f53c37a22a166088acc",
-    "0x12ef50ad21052e8f26321df28dfc19051be0a732459ff810b88d963d0bbcd61d",
-    "0x0655e68b5a9cbca882e4a9be32d78a1ec3a77ee21aef6b454231dcd4d743e1da",
-    "0x338fc3191baa3b682000b1a1705b764cea940836e2e836f0c9b48bc19dd7c7d1",
-    "0xad4e9a466233e207e7eb168d5d74577630cedc9ae7fc5ff1c49c105880726828",
-    "0x13fcbbcd4a93423dbaa7b27a9806f46215ccf60e3248a07955ec76a8a34d9d83",
-    "0xdf57d04b7a4fb6c22d478c5509806e897673227354c848406669210bf8d123a2",
-    "0xeafe56ec07b410e1a8ae6f40be05275aed6838e5ae79a02e7d713781127ef99d",
-    "0x709fffff41da88ca3cb41f335dc07ae120c32181672a9c24b5535475b3e2803b",
-    "0x03c67bd8a5d102344e41d3789f21bf1e214c13b92b0d41b9bf6257c10e7a736d",
-    "0xfb61a0000d63dda9ae5de5078505960b3a9338885d504318f1d3effd44a8671c",
-    "0x921bd2c6a4e99f1e73957780fecb22aa284ad2657b8baeda0f45374a3492055e"
+    "0x264e06aa1f6beda8b8cb3b4085094b73dff6d8dc442f99340b45619c4685dfb9",
+    "0x15d51101352396c1b460608d2590a4148ca56b6ed09da674b74161bf4c240708",
+    "0x1cb9ddc7292327d15551076d8f32b6d5a059f9f1605f9833cc88c9f87cbfbeb1",
+    "0xef793fb46125e0c711829b053ece631cbf12c0f063c983d100cbbb7a2841e2e6",
+    "0x6f7e70205ceb9ae6f9a5a81434e3b4094229886a5c271e4b6c4460968788dbff",
+    "0xf0f35d4da55a315e80a1d842077f7334db6ca4132b665e77e30fd6c5d750f4e6",
+    "0x1ac7b5fad32167a4353fc21845da4124c2ce4e48765d3aa732486aae6871ca04",
+    "0xe54b74095f5ff2e9653f23780416041c25b04d67041d4569c3bc5d4d69ebfb3b",
+    "0x8440452a91ff99378d0584ad4564d61b15f9f8dd8fb8e93746ee120d4acb9d50",
+    "0x90cbd703d919f72757760d44e4ef40ff6371c908be01f62e4cdaa1f51854dc97",
+    "0xcd1fdee1e4f554c381ead6f5a77301160cac0e7096315fa46a9546dee85ed0c7",
+    "0xad9ddc07fb397380f377010e17922830a7a08a68b61b530c1ede88fb4f83f988",
+    "0x3209cd6ac388225598e76fd2d2aae5a4a40ee0e41107cadabbce8bd237a77ea5",
+    "0x83bffdecaae3548911f167765470c634f2b7238fb7e302b42a43af0e81fc636c",
+    "0x0c6f3f06c36138102e806b55602217c446c3d34c87fbfbf501317355a7b44475",
+    "0xee790120bb9b2f47aa522131f7b0b025aa7a8356390a399fe5f30a0d1973109e",
+    "0xa6bc1ebe2a90bd70d11cdb034b8f4e56719a9828f548d13468f558cfde382a5b",
+    "0x32affff30a7d79a31d3d916e5fb314548713d097c800d7a79a3940a8df93bb32",
+    "0xd60d5b867fd8c5a5d58c1ca812d39859748b110f0ce94198008e3ecd709b2e02",
+    "0x994f237571984c26376b24888aacb1774b91a516db89e562a9976dcb54bb7088",
+    "0xf64811516252d90d9a635e971289daa0718685a744973b58feb31bed9e6e6613",
+    "0x07dce88035344d31434c33e75eaaf3adc1cd0b70a0802def6af3cce6c3c187f3",
+    "0x46ca4d98a2a474da738b8ff98ab2ee8f4b0b5e07d582ecdc6c19b302db0f5794",
+    "0xabcda8a017098c212a95a8edbeb16b529f4eaf657498204efb21e21a70341fe9"
   ],
   "order": [
     {
       "name": "HSBC Holdings PLC",
-      "check": "news"
-    },
-    {
-      "name": "Bp PLC",
-      "check": "registry"
-    },
-    {
-      "name": "Barclays PLC",
       "check": "filings"
     },
     {
-      "name": "Bp PLC",
-      "check": "sanctions"
+      "name": "HSBC Holdings PLC",
+      "check": "news"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "news"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "filings"
     },
     {
       "name": "HSBC Holdings PLC",
       "check": "registry"
     },
     {
-      "name": "Barclays PLC",
+      "name": "Lloyds Banking Group PLC",
       "check": "sanctions"
     },
     {
-      "name": "Bp PLC",
+      "name": "Diageo PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
       "check": "news"
     },
     {
-      "name": "HSBC Holdings PLC",
-      "check": "filings"
-    },
-    {
-      "name": "GSK PLC",
+      "name": "Unilever PLC",
       "check": "sanctions"
     },
     {
-      "name": "Barclays PLC",
+      "name": "Diageo PLC",
       "check": "news"
     },
     {
-      "name": "GSK PLC",
-      "check": "registry"
-    },
-    {
-      "name": "GSK PLC",
-      "check": "filings"
-    },
-    {
-      "name": "Barclays PLC",
-      "check": "registry"
-    },
-    {
-      "name": "Bp PLC",
+      "name": "Unilever PLC",
       "check": "filings"
     },
     {
@@ -97,8 +89,16 @@
       "check": "sanctions"
     },
     {
-      "name": "GSK PLC",
-      "check": "news"
+      "name": "Diageo PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "registry"
     }
   ]
 }

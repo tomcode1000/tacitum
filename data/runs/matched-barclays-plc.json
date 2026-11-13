@@ -3,54 +3,62 @@
   "k": 4,
   "target": "Barclays PLC",
   "parties": [
-    "AstraZeneca PLC",
-    "Barclays PLC",
     "GSK PLC",
-    "Bp PLC"
+    "National Grid PLC",
+    "Barclays PLC",
+    "AstraZeneca PLC"
   ],
   "costUsd": 0.24,
   "signals": [
-    "0x48da5abed109ef1a16876000bca01573e5435e589749bc24568a7e43df0abee4",
-    "0x4ed265a06a1707cb8e103eff9b5b8815b329f592f5a5602113eecf234b96d7be",
-    "0x76cfb57191c2088eae69565ab2d3c1af70d825911c354d13bb881bbbf239ae67",
-    "0x6242bd224ddb79de0e7512270936827024c3059165166d37263217e549192299",
-    "0x36bb946d1277324b62f0750b47c7a9ae65c165a46c79984c607e02e9d3e239ab",
-    "0x46e8f06d7d14ad96174aaaa58fbdc80f13b7055dcbc3f065a05f919bea0173ec",
-    "0x51a48b8de6bedeaf6ad0d66e79ab4bf726cc2d3d9787f9e49865470ad9eb5ca4",
-    "0x2ddbda5c5f16833191882fc6bf9141da2a9ee70753f23675e696d86ab5cd25ac",
-    "0x571960cae06dd2416fb7525261c7d2eb9b1e1e4c25a19946b604f98262b1ec9f",
-    "0x4ccb5b697749c09b620d07dd552de197dbd62fcfdd28c66bbf5e9d1bd06f0bfc",
-    "0xcc43be724970c1a7ac7eb6cf12f9be720aec282bdc70e789ebd3aaf5d520fd74",
-    "0x88389d8ec037e481333c62ced68febb0804e4a22d571d8cb636597bd829e6d29",
-    "0x9382737c7549c50d6ee0a21f6b9b53f1f58a4ee2458c000de10eda7e49e0690b",
-    "0x87dbd6d65dadb46e3723bb26133ca6cc038e65acc75058ce2f9eec85df49dba7",
-    "0xc0e39b92b9f2dc3a10e2403287d896ae263ee312d317a46c02f67bcd1e2b168c",
-    "0x348130b0411b07bccad6720eb0391e622208464d54e0dfbe63be716b5d053f85",
-    "0xe18af298c4db58065ff6068ca28d9717b0b4ec97f11b887a287072b390acbf2f",
-    "0xe1786a3fc1b2d1c9d64432900cd526464e7cd2d3994ea5c8a6c6f9f1e7bae1f5",
-    "0xc19614cf5b96376d9bf3a897329b716712e2ec1d251c27800190c269c3e2642b",
-    "0x05c65356639e7ce67ffb87aae955eab43c3e8c98f476f6eff83e6084d40d0a1b",
-    "0x08cfd5601ee58359e03eb7c0d4f64e17acebc8fda264ac9ae325d690448314bc",
-    "0x88094ade84c63a19891d5a961d16ee56c7e2c112af6404d3b7db679e7ed1c0c5",
-    "0x1fc730719ed60eb64ddbf695330c44e51e3694ff8a98e6a13bef7a22e96371e1",
-    "0x1cb8bd2f61682e85e09f8e72cbbf44a2180c1357810442c87c1e4f941ee2fb84"
+    "0x0aa8579e6915247d8e3b9580c1f94762e68d9dd03f68af1d37af863772dd2592",
+    "0x6eed85d55234f61bb1a2b20c621a920bccf2b41b9bf007a84513d2e11b02d8f8",
+    "0x99e438de3815b40b9f539696c774f7952b83fce98cff554a92b4ca0e1a96e969",
+    "0x8c6ae144daa9f2bdac7b4794559589514d66486709e63ac85a7fdf7f37878e81",
+    "0x3c029a9443ada517c3b40c3de542bf28cd18a6b0a9625b7b4223f954acaf6ea6",
+    "0x5acee4914b618436d72e191307ed711c977f8492a9f5805fce7d95ed7801865e",
+    "0x761699d1bee180c94799398fd7f9cc9310c45e952858db9e5e9429b88c53cc1a",
+    "0xe76819c1b0fdbcb129ef527d8a0cdb59892c067f31ef568eed735d720cfa07b2",
+    "0xd8b19516899e37d78fffef84ccd2c5c126028f0e64aea2365d3affc4d78c983e",
+    "0xc43f65351f8e8d3177fc7e622eb110d93626d94ebe6354233713628c6ef3c8c5",
+    "0xcc179cd0d540de875904b533a6fdc85cf2081e74a395b050adab3c33cfab6297",
+    "0x087019c1ce89303b43ef3ca2b66cb13d7daeffc8405a7adfced9b2c4a85b7880",
+    "0x6654040d17dc4ba6aeadd2b279b65a15bef0dc79dbd3cd8406e49d3f4c70a980",
+    "0x5a9d3cd09c8017b409d05f9e1cdd46fc0e37fb29e6b53c70394155340f3cac05",
+    "0x428e8d8ad5b20ff26d56d2a852494400e097f47d125c911b47660e2eacc63b0f",
+    "0xd27452c1bd464f1b6ef44cf535ea8bad638bf7d4d664414cd74fbb56edb8f726",
+    "0x5584dc8b44b3566fc40b2f06182a7d7b266021a4244bc7a2cd91adf4792a5530",
+    "0x7c1b8c5c1e96c5f1c64b18ea0163601c73f2f1b6dece99e121a872761576c13e",
+    "0xfa6d82e0771ba9a209760e678ecdd8c21d887b6ee79c2495809a247d39333d75",
+    "0xd236b14fd978d2aa521d86c3d0177a43fa53ef8f0564c2f4acf6e925cf0a26ee",
+    "0xc4d9ff4c347d20a2c59bc53e79faa2e8a3ee32fca84dbc310f68266e9be3d914",
+    "0x1b813efa04af0cea37a9aa6946c3e363c3e616d1ed2928ffb225ec7f51af9034",
+    "0x517d74bd1bb7b220eb78cf8aff05e6101dab5fbc593b365efae6a6bdcbf39834",
+    "0xdd1c0bf5c07a5c69be14ca4408ad3124c777917ec5e9434712465dda8b52e475"
   ],
   "order": [
     {
-      "name": "GSK PLC",
-      "check": "filings"
-    },
-    {
       "name": "AstraZeneca PLC",
       "check": "news"
-    },
-    {
-      "name": "GSK PLC",
-      "check": "registry"
     },
     {
       "name": "Barclays PLC",
-      "check": "sanctions"
+      "check": "filings"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "registry"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
     },
     {
       "name": "AstraZeneca PLC",
@@ -65,32 +73,20 @@
       "check": "sanctions"
     },
     {
-      "name": "Barclays PLC",
+      "name": "National Grid PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
       "check": "registry"
     },
     {
-      "name": "Bp PLC",
-      "check": "filings"
-    },
-    {
-      "name": "Bp PLC",
+      "name": "National Grid PLC",
       "check": "sanctions"
     },
     {
-      "name": "Bp PLC",
-      "check": "news"
-    },
-    {
       "name": "GSK PLC",
-      "check": "news"
-    },
-    {
-      "name": "AstraZeneca PLC",
       "check": "filings"
-    },
-    {
-      "name": "Bp PLC",
-      "check": "registry"
     },
     {
       "name": "Barclays PLC",
@@ -98,7 +94,11 @@
     },
     {
       "name": "Barclays PLC",
-      "check": "filings"
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
     }
   ]
 }

@@ -3,98 +3,98 @@
   "k": 4,
   "target": "Klicco Limited",
   "parties": [
-    "Ng Bailey Group Limited",
-    "Klicco Limited",
-    "Dyson Exchange Limited",
-    "Freeola Limited"
+    "Hfmc Asset Management Limited",
+    "Stamford Investment Trust Limited",
+    "SP Smart Meter Assets Limited",
+    "Klicco Limited"
   ],
   "costUsd": 0.2,
   "signals": [
-    "0x7d31919c12b4c0a0c44522bd31215b88b566d04a847fa4e79698d7387c2443bc",
-    "0x8bef9749de02f4422ea29597e3219914434d91bb1fa7538a890f1e4a3bfb1cd7",
-    "0x141240c437630e7654070e8370d1eaf5f6b8e080838ff33497b74d8d9c94c1dd",
-    "0xa075eb84d029302f878ce70b95afcea6a679093c0da1892bf36df19248fdd088",
-    "0x0fb40751be2d1ac7270e04cc7707242bcecddae8de000d657c122035dbbc2008",
-    "0x72d122665e6922d7ab44fbd0f272363b2605a7c479cba0b8477c1f9fde319667",
-    "0x8e1dee654006106475b20a394dbf111648fae582b4b1a95c946af4fb54b7efdf",
-    "0x79863c684a107e81dbc410b6d9ddcbc410b1e36eb324e21ceff2ff81da7fe9a9",
-    "0x2d30ec976d81f837ad3dad56ccde4d26f76cd3b2c4e25af241bd1aa156776625",
-    "0xd3f344c635bff45e92128b240a8894c77503afea00cf6fddbfb53627c5a2a47d",
-    "0xcd2259fdbe3a2928b0907b93948dbfc9cb51345ad9e59a8c8623d9b16cdc59bc",
-    "0xae5db1c292ef0819a070d01946739308027f72cfdc17a4c0f61a4edc2944cd70",
-    "0xbc9acb5529446c1c92c3222b1180392d8b0b492756b7a525f71b516df27dc530",
-    "0xfba481152b53cb4199a4caf852651df517cafb79bab7ccef44a51aee22f6d93b",
-    "0xbf3e5a5fc5676494c77017456a3a8dfa1d66444e20b3a689864d059d393f4d25",
-    "0x716cf073aa7fdddbe4c0597e6b8d36dc150fc1a6d4e4584c152d8535e0e6f23e",
-    "0x9ef486aec020938b4b4b542c3cfbec81e52b56944e9e8d80397c5be3df579746",
-    "0xe8be9e5713375708ebdcd8f3be0382d911b764a52b3dc1a5ca2e3d11234c0f76",
-    "0x1aceef2c2ee1a5e1fec860532f245b2b68b2269a006af5a6123f972b3914fae8",
-    "0x0f5ebe8ed6d46b863243efb937be58c98897d0c2c8b5f1fa68037f1daa03c9f1"
+    "0xd509750da4fa330e72aba65e9d5f313ba28650fba3d461a028ef684888e6ae26",
+    "0xf1834fbf3c79b982062f8bd33e25d4da8f3d57647dea0cc7bb575fe468369981",
+    "0x284653233fd54e8d70118c5c69ee95be55243ad6744f4253689288dfe443afdf",
+    "0xaf39663d42525d17f700795af5e901950aea69398f0f6c453e0c3ca650c55fb5",
+    "0x3906bd373615b078057054e7d7aecd7eded17e6b9a451fc3262d92ef25f6d850",
+    "0xe4fb34b120cd4b32a3e1c9629ac2ccbaf9645bed0e6dd3714dc1e8957297a997",
+    "0xb39a978031990e8acf62c01ddb96bb518351bbe102d34b7f0f4092e3058e1f9e",
+    "0x72e7e665b774e160a981688c6acda8e482e4e090940b9280ebfe6014882c2d8d",
+    "0x85d90d031dcc4a08df65da6c79bc78d22167ba88635f6f7c9d2f96f3e89a02f2",
+    "0xdfa0183cb096616ad156a3b215d4ede2c95217eb201040e4bbb2c0af391c6437",
+    "0x947cd50154946025eed06d09d17e92a7fa7a827544d4eb1d102e134d7c7d82dc",
+    "0x8bbfce708c1545a81a00be9fa970df83b5f8bcf0bf8ab1ee8cc40b9ae8d4bee3",
+    "0x833c7beeb1c3c6e524539c0a66b8d8f449020c625d2e8ab98e5363f898564f2e",
+    "0xc2a46bc84bb20df5223ac3d77a343cdd253e786ed5004781bc7bf29adedd2e08",
+    "0x972467dddf9299a60636a61f7c40304784aae96c57cee46d3d8b1828d561815f",
+    "0x8b1704c0cf2590c4efe70627fe9ebf0cde9e94bb67e1fd73075383790aa4e77b",
+    "0xf08ef954131eed5825f95578acd0f875a7fc8e1a7ad39d744507df6401a38e8f",
+    "0x9bb5239fa84ce1599a0493fec488f29f253615cba55748cedbc09538d5638518",
+    "0xc5e66c0f549b574802a78da0525ac82fb40b09e3551da6a97d2c7014588c6a68",
+    "0x12ef28412ef4b6eeef2f51b6413dad600d4a67c1deee9e5b8d870c21711eb924"
   ],
   "order": [
     {
-      "name": "Klicco Limited",
-      "check": "registry"
-    },
-    {
-      "name": "Freeola Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "Dyson Exchange Limited",
-      "check": "news"
-    },
-    {
-      "name": "Ng Bailey Group Limited",
-      "check": "registry"
-    },
-    {
-      "name": "Klicco Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "Dyson Exchange Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "Ng Bailey Group Limited",
-      "check": "news"
-    },
-    {
-      "name": "Freeola Limited",
-      "check": "registry"
-    },
-    {
-      "name": "Dyson Exchange Limited",
+      "name": "SP Smart Meter Assets Limited",
       "check": "filings"
-    },
-    {
-      "name": "Ng Bailey Group Limited",
-      "check": "sanctions"
-    },
-    {
-      "name": "Dyson Exchange Limited",
-      "check": "registry"
     },
     {
       "name": "Klicco Limited",
       "check": "news"
     },
     {
-      "name": "Ng Bailey Group Limited",
-      "check": "filings"
-    },
-    {
-      "name": "Freeola Limited",
-      "check": "filings"
-    },
-    {
-      "name": "Freeola Limited",
+      "name": "Stamford Investment Trust Limited",
       "check": "news"
+    },
+    {
+      "name": "SP Smart Meter Assets Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Hfmc Asset Management Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Stamford Investment Trust Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Stamford Investment Trust Limited",
+      "check": "filings"
+    },
+    {
+      "name": "SP Smart Meter Assets Limited",
+      "check": "news"
+    },
+    {
+      "name": "Hfmc Asset Management Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Hfmc Asset Management Limited",
+      "check": "news"
+    },
+    {
+      "name": "Stamford Investment Trust Limited",
+      "check": "sanctions"
     },
     {
       "name": "Klicco Limited",
       "check": "filings"
+    },
+    {
+      "name": "Hfmc Asset Management Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Klicco Limited",
+      "check": "registry"
+    },
+    {
+      "name": "SP Smart Meter Assets Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Klicco Limited",
+      "check": "sanctions"
     }
   ]
 }

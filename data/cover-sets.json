@@ -1,0 +1,157 @@
+[
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Barclays PLC",
+      "AstraZeneca PLC",
+      "GSK PLC",
+      "National Grid PLC"
+    ],
+    "createdAt": "2026-11-13T11:01:00.000Z",
+    "note": "from the first live private assessment (assessments/2026-11-13-private-barclays-plc.json)",
+    "live": true
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Tesco PLC",
+      "BAE Systems PLC",
+      "Next PLC",
+      "FirstGroup PLC"
+    ],
+    "createdAt": "2026-11-13T11:25:07.119Z"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Rolls-Royce Holdings PLC",
+      "Hammerson PLC",
+      "THG PLC",
+      "Rio Tinto PLC"
+    ],
+    "createdAt": "2026-11-13T11:26:05.581Z"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "EasyJet PLC",
+      "Hochschild Mining PLC",
+      "Aviva PLC",
+      "Smith & Nephew PLC"
+    ],
+    "createdAt": "2026-11-13T11:26:46.595Z",
+    "note": "filer partition"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Diageo PLC",
+      "Lloyds Banking Group PLC",
+      "Unilever PLC",
+      "HSBC Holdings PLC"
+    ],
+    "createdAt": "2026-11-13T11:26:46.595Z",
+    "note": "filer partition"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Pearson PLC",
+      "Shell PLC",
+      "Prudential PLC",
+      "BP PLC"
+    ],
+    "createdAt": "2026-11-13T11:26:46.595Z",
+    "note": "filer partition"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Vodafone Group PLC",
+      "Persimmon PLC",
+      "Renishaw PLC",
+      "Marks & Spencer PLC"
+    ],
+    "createdAt": "2026-11-13T11:27:09.285Z"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Satobe Limited",
+      "Barkisland Economics Limited",
+      "1let Limited",
+      "Hopkins Engineering Limited"
+    ],
+    "createdAt": "2026-11-13T11:48:37.709Z"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Zakhs Holdings Ltd",
+      "Lawrence Oakley Ltd",
+      "Blackthorn Finance Ltd",
+      "Aw&C Investments Ltd"
+    ],
+    "createdAt": "2026-11-13T11:52:51.461Z"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Three Shires Property Investment Limited",
+      "Airhop Bristol Limited",
+      "LND UK Commercial Mortgages 1 Limited",
+      "G.H. And V.E. Davies And SON Limited"
+    ],
+    "createdAt": "2026-11-13T11:57:16.272Z"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Hillside Housing Trust Limited",
+      "Atlas Park Management Company Limited",
+      "Suntrust Limited",
+      "Glasgow Airport Business Park Management Company Limited"
+    ],
+    "createdAt": "2026-11-13T12:05:31.373Z"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Petrocell Holdings Limited",
+      "Leisure And Outdoor Furniture Association Limited",
+      "8HC Limited",
+      "Yanco Limited"
+    ],
+    "createdAt": "2026-11-13T12:31:51.780Z"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Recircle Consulting Limited",
+      "Circle Square Agency Limited",
+      "ST IA Limited",
+      "Domainex Limited"
+    ],
+    "createdAt": "2026-11-13T12:36:04.828Z"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Barton Fabrications Limited",
+      "Jandu Developments Limited",
+      "Leadership Connections Limited",
+      "Bentham Developments Limited"
+    ],
+    "createdAt": "2026-11-13T12:43:02.476Z"
+  },
+  {
+    "jurisdiction": "GB",
+    "members": [
+      "Klicco Limited",
+      "SP Smart Meter Assets Limited",
+      "Hfmc Asset Management Limited",
+      "Stamford Investment Trust Limited"
+    ],
+    "createdAt": "2026-11-13T12:52:56.722Z"
+  }
+]

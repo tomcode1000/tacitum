@@ -3,99 +3,102 @@
   "k": 4,
   "target": "Unilever PLC",
   "parties": [
-    "Diageo PLC",
     "Unilever PLC",
-    "AstraZeneca PLC",
-    "Smith & Nephew PLC"
+    "Diageo PLC",
+    "HSBC Holdings PLC",
+    "Lloyds Banking Group PLC"
   ],
-  "costUsd": 0.21,
+  "costUsd": 0.24,
   "signals": [
-    "0x57596a8a48a98d1cbe544e3b3c38b578cdd09b4582f157851a8a16399a9e1152",
-    "0x7ee83ca8714894b18e6df7f89fcbccf42ed8c7cb32a89a1e672bd493e653891b",
-    "0x142f3007704ff58fb9142abc3c1c7832dc96d2febaf582123659a21beb25a397",
-    "0x2d87e7b7080e9632a9384b488c0ed9ab8e796ffb9288d3594af9dbcd27fdf792",
-    "0xf5d9703e4b34efa0eecd6153a6cd7e980a35717d4e91b6be4f25e9b1de4b6417",
-    "0x704ba82e4937de3af716e9cb1da1e87116052777d4d012323a1765f00cdfe8d5",
-    "0x1a9fc525972ad1cc75e08bd973860dd93ff3ebbf02cb6801431f091b39f1cb69",
-    "0xac4f1dccdf9875bfe75615d947fd8a1f01deb39b8fdd28c217ca95c0a89e7ae1",
-    "0x70dd438f960241496e0d97840a66e5b39a893a198a1af7a166add5c4412cdd85",
-    "0x4a8773b9be8546f56fd8d954316eeb0406001459cd70e198c557eccefd845963",
-    "0x76ab73f76d164c8af725a8099798afe0650013d60fbc38060231b9d6a9b3e788",
-    "0xb4d2ddd40a2821162554005dbae1b118774b25cb4e2f9201ea4e3d62653c596a",
-    "0x21370404258f8a4aa098e0c717bf5a0b9e121bb472d6826cf0a8716c617aaac8",
-    "0x2ef427c95cdd1e670518bc2d48e9713aafb4c6c1c267beae746d2b35c64ec332",
-    "0x0f363c954f1180bbecb141e05da90420e3e30fb419613e563f4427038c202f8c",
-    "0xdc4d4538dd51bebdc3aee485cc0556fbdc99b624df4975547a7a9f9ea8359320",
-    "0x5063697f0ecff97cac10b1b18a0b693372031b7bb50f86d594d46fb3098d9e92",
-    "0x124896bc940b8c1b41a37517a6d4e294e58fc21ad540ca88283a4f2d71868e80",
-    "0xfc1563a3df14e619e0ee9f9c415e16cc315aedac7ff0e43f3349e72d7a6a4b7d",
-    "0x607b5945731dc1cd869d8c7a71a09cd4a42ceb42711917407c0832065a556ca7",
-    "0x5d0628fe92f584719ea86de1f3cde3c10e68a393449d02ad5bc02cdc39eafb86"
+    "0x5b35fb240287cf0d0a8bc67d0a7954c76b054d564437097522c98047eae700a3",
+    "0x0e8f5bc7ec4addcec0cdff4e7ab1a9d04ebbcc4ca3524b7d51d01562772e2f35",
+    "0xee734c11f5630ff13c776fd5667e6b8094412945a315eefdbeba1a6522b4a573",
+    "0xb64ee77729db778572d3cbd0115aaa91166042be3bc153157c0d6fd5167f372a",
+    "0xebb6092d4129f17ab10cdcf728893a366d8fc64f3826abbe66f0ade74d0a629e",
+    "0xc29b5a856b1e342903e6ba8c0927d2d6bc14983d2d0749a1fdd95d2f79e0743a",
+    "0x77d8ae5cc9edafb5145cee8e8d13943ee63d23257620c97c2105f6c56c506fb3",
+    "0xaf7f4f3a3c04b41b48507f3115830d513305ffe9913061e3d46ef5bb67f07c5c",
+    "0xaefffd61320aabdea963626d0014e756fa01cf95cd37aceb9251db9dccc0b283",
+    "0x22c11d2e6e9e6cf03541954b01d797ffb9bd6effe2b530197c69c5ba6a4a7acd",
+    "0xe2ec57532e7e0ba2d1730f68e3203833ad6a243a549c13bccdb78c4090339d4b",
+    "0xef1333dfde29874818dc5930b263d04b115c3db31ffbee9fd16db61a729eb1b6",
+    "0x6607c1f06b9e2a4649442527972a7888ec59ec9701e5ed3eec43a745ca009049",
+    "0xfe7af8415e42fb8fef74aeff8b4dd277e3a3fc6b376ec3fb798080a4c4ec8b58",
+    "0xc08f29bc2a87eb6bae0caa94e12c7d0098f4448693616facc3c223974d681b4f",
+    "0xe515dc69cbeb3c40219bc9a1d881de02388c736311bbc3d44ab9b8afa68bd312",
+    "0x65cb6cd4f7801edcbc67799f25ecec5f93a4fe0e1fabf0d6b9166c3d1d51eddd",
+    "0x65b751273f02d68633926abec9e97fcb95e1c1b64ba728b027466dda77f9f76f",
+    "0x88becd221793d4437b22b27a0a17c0aba8b9e5bb5483061297f6a8268af8cd75",
+    "0x954dbe14825fdd74f1d5347fbf70c75c3c02581a958c5f798a3b93baba8215d3",
+    "0x7edd6e132eccba1c03faba11f88213762550ea927ab2b82b0b086242766f2606",
+    "0x58cb65c1b6612344641192cb1602454f9ee4e2c96d1546ba520d53386f5d289f",
+    "0x3cd3a982ffe827ed2f643ec29332956ba52abbce676876727683194dbf3aeb3c",
+    "0xda48bbcc98c557edbaa2e413956334e5045cb49e9cacbb95ca2c8037649d20dd"
   ],
   "order": [
     {
-      "name": "Diageo PLC",
-      "check": "news"
-    },
-    {
-      "name": "Smith & Nephew PLC",
+      "name": "Lloyds Banking Group PLC",
       "check": "sanctions"
-    },
-    {
-      "name": "Diageo PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "Unilever PLC",
-      "check": "registry"
-    },
-    {
-      "name": "AstraZeneca PLC",
-      "check": "registry"
     },
     {
       "name": "Diageo PLC",
       "check": "filings"
     },
     {
-      "name": "Unilever PLC",
-      "check": "sanctions"
-    },
-    {
-      "name": "Unilever PLC",
+      "name": "HSBC Holdings PLC",
       "check": "filings"
     },
     {
-      "name": "Smith & Nephew PLC",
-      "check": "news"
+      "name": "Diageo PLC",
+      "check": "sanctions"
     },
     {
-      "name": "Smith & Nephew PLC",
+      "name": "Lloyds Banking Group PLC",
       "check": "registry"
     },
     {
-      "name": "AstraZeneca PLC",
-      "check": "sanctions"
+      "name": "HSBC Holdings PLC",
+      "check": "news"
     },
     {
-      "name": "AstraZeneca PLC",
-      "check": "news"
+      "name": "HSBC Holdings PLC",
+      "check": "registry"
     },
     {
       "name": "Unilever PLC",
       "check": "news"
     },
     {
-      "name": "AstraZeneca PLC",
+      "name": "Unilever PLC",
       "check": "filings"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "news"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "sanctions"
     },
     {
       "name": "Diageo PLC",
       "check": "registry"
     },
     {
-      "name": "Smith & Nephew PLC",
-      "check": "filings"
+      "name": "Lloyds Banking Group PLC",
+      "check": "news"
     }
   ]
 }
