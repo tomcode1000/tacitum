@@ -90,4 +90,4 @@ v3 and v4 redo only the famous runs whose decoy rule changed; the obscure runs c
 ## Ground rules
 - Only our own wallets appear in full in any demo; other feed rows are shown in aggregate.
 - Every number in the README is measured live, with the evidence committed.
-- The repo stays private until submission.
+- The repo went public on 13 Nov 2026 so other teams can adopt it early; keys, .env and raw feed data stay gitignored.
