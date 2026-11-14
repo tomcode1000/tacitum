@@ -1,0 +1,884 @@
+{
+  "real": {
+    "counterparty": {
+      "name": "Barclays PLC",
+      "jurisdiction": "GB"
+    },
+    "startedAt": "2026-11-14T07:43:16.861Z",
+    "finishedAt": "2026-11-14T07:53:25.410Z",
+    "payer": "0x6f4EB24CCc31A2636d763E3E1Fe3d781C0F7a720",
+    "overall": "REVIEW",
+    "verdicts": {
+      "sanctions": "CLEAR",
+      "registry": "CLEAR",
+      "filings": "INFO",
+      "news": "REVIEW"
+    },
+    "costUsd": 0.05,
+    "paidCalls": 5,
+    "checks": {
+      "registry": {
+        "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+        "params": {
+          "company": "Barclays PLC",
+          "jurisdiction": "GB"
+        },
+        "answers": [
+          {
+            "minerId": 77393,
+            "miner": "ZK Corporate Registry — Exact Identity and Status",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "legal_name": "BARCLAYS PLC",
+              "registration_id": "00048839",
+              "active": true,
+              "jurisdiction": "GB",
+              "registered_address": "1 CHURCHILL PLACE, LONDON, GB-LND, E14 5HP, GB",
+              "incorporated": "1896-07-20"
+            },
+            "costUsd": 0.01,
+            "signal": "0xe1eecc8fabd3e1eb9cc4743b84d3d992a32f82955d898c8426b837c80e16e1b0",
+            "receipt": null
+          },
+          {
+            "minerId": 5185,
+            "miner": "Praman Desk Compliance & Procurement Auditor",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "legal_name": "BARCLAYS PLC",
+              "registration_id": "213800LBQA1Y9L22JB70",
+              "active": true,
+              "jurisdiction": "GB",
+              "registered_address": "1 CHURCHILL PLACE, LONDON, GB-LND, E14 5HP, GB",
+              "incorporated": "2014-07-25T00:00:00Z"
+            },
+            "costUsd": 0.01,
+            "signal": "0x7c9959f4c181774c8ed45dfe528784592ea2b70ff432560532d863182bb13a02",
+            "receipt": null
+          }
+        ]
+      },
+      "filings": {
+        "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+        "params": {
+          "entity": "Barclays PLC",
+          "period": "last 12 months"
+        },
+        "answers": [
+          {
+            "minerId": 77131,
+            "miner": "Filing Window",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "entity": null,
+              "filing_count": 242,
+              "filings": null,
+              "urls": null
+            },
+            "costUsd": 0.01,
+            "signal": "0x88fe4f9e1de4230e40f9a34540a7ad54865d9669b45ab2190a3f07878cc05934",
+            "receipt": null
+          }
+        ]
+      },
+      "sanctions": {
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+        "params": {
+          "name": "Barclays PLC"
+        },
+        "answers": [
+          {
+            "minerId": 731002,
+            "miner": "Counterproof Sanctions Screener",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "name": "Barclays PLC",
+              "matched": false,
+              "matches": null,
+              "lists": null,
+              "match_score": 0
+            },
+            "costUsd": 0.01,
+            "signal": "0x714fc086f874c2f0335e1633987239b5ccb6106b78ed0c469490e7a7c66fd3c3",
+            "receipt": null
+          },
+          {
+            "minerId": 710637,
+            "miner": "Sanctions Name Evidence",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "name": "Barclays PLC",
+              "matched": false,
+              "matches": null,
+              "lists": [
+                "OFAC SDN",
+                "OFAC Consolidated (non-SDN)",
+                "UK Sanctions List (entities only)",
+                "Canada autonomous sanctions (entities only)",
+                "EU Financial Sanctions (entities only)",
+                "US BIS Entity List (export controls)",
+                "US BIS Military End User List (export controls)",
+                "US BIS Denied Persons List (dated standard export-denial orders)",
+                "UK Sanctions List (ships)",
+                "US BIS Entity List (additional primary-row corroborated records)",
+                "Canada autonomous sanctions (November 5 additional entities)",
+                "Canada autonomous sanctions (corroborated ships)",
+                "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+              ],
+              "match_score": 0
+            },
+            "costUsd": 0.01,
+            "signal": "0x5471076ba9bdff35dd9f7ba00c4a357844d5b19b9d8101ba3c9a3595547ed72c",
+            "receipt": null
+          }
+        ]
+      },
+      "news": {
+        "intent": "NEWS_SEARCH_GENERAL",
+        "params": {
+          "query": "Barclays PLC"
+        },
+        "answers": [
+          {
+            "minerId": 7329,
+            "ok": false,
+            "status": 0,
+            "result": null,
+            "error": "UND_ERR_CONNECT_TIMEOUT",
+            "costUsd": 0,
+            "receipt": null
+          },
+          {
+            "minerId": 302,
+            "ok": false,
+            "status": 0,
+            "result": null,
+            "error": "UND_ERR_CONNECT_TIMEOUT",
+            "costUsd": 0,
+            "receipt": null
+          }
+        ]
+      }
+    },
+    "verification": [
+      {
+        "signal": "0xe1eecc8fabd3e1eb9cc4743b84d3d992a32f82955d898c8426b837c80e16e1b0",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Barclays PLC\",\"jurisdiction\":\"GB\"}"
+      },
+      {
+        "signal": "0x7c9959f4c181774c8ed45dfe528784592ea2b70ff432560532d863182bb13a02",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Barclays PLC\",\"jurisdiction\":\"GB\"}"
+      },
+      {
+        "signal": "0x88fe4f9e1de4230e40f9a34540a7ad54865d9669b45ab2190a3f07878cc05934",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"Barclays PLC\",\"period\":\"last 12 months\"}"
+      },
+      {
+        "signal": "0x714fc086f874c2f0335e1633987239b5ccb6106b78ed0c469490e7a7c66fd3c3",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Barclays PLC\"}"
+      },
+      {
+        "signal": "0x5471076ba9bdff35dd9f7ba00c4a357844d5b19b9d8101ba3c9a3595547ed72c",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Barclays PLC\"}"
+      }
+    ],
+    "privacy": {
+      "k": 4,
+      "parties": [
+        "Barclays PLC",
+        "GSK PLC",
+        "National Grid PLC",
+        "AstraZeneca PLC"
+      ],
+      "costUsd": 0.2,
+      "funder": "0x615cacc9f7613e435a5c39e3ac55efa16e442f11",
+      "fundedUsd": 1,
+      "fundingTx": "0x9b0c3550a8e5551b961a6288881234cf985bc8292383d7f6e29c15a04b9f0097",
+      "measured": {
+        "best": "0.26",
+        "ci": [
+          0.1,
+          0.49
+        ],
+        "runs": 16
+      },
+      "viaPool": true,
+      "anonymitySet": 4
+    }
+  },
+  "k": 4,
+  "strategy": "matched",
+  "parties": [
+    "Barclays PLC",
+    "GSK PLC",
+    "National Grid PLC",
+    "AstraZeneca PLC"
+  ],
+  "targetIndex": 0,
+  "order": [
+    {
+      "name": "GSK PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "registry"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "news"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    }
+  ],
+  "costUsd": 0.2,
+  "decoys": [
+    {
+      "counterparty": {
+        "name": "GSK PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-14T07:43:16.861Z",
+      "finishedAt": "2026-11-14T07:54:57.468Z",
+      "payer": "0x6f4EB24CCc31A2636d763E3E1Fe3d781C0F7a720",
+      "overall": "CLEAR",
+      "verdicts": {
+        "sanctions": "CLEAR",
+        "registry": "CLEAR",
+        "filings": "INFO",
+        "news": "CLEAR"
+      },
+      "costUsd": 0.06,
+      "paidCalls": 6,
+      "checks": {
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "GSK PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": null,
+                "filing_count": 296,
+                "filings": null,
+                "urls": null
+              },
+              "costUsd": 0.01,
+              "signal": "0x5d756b329219c88b6983a98308183fc48e719946a7c798d5824b49dfd2a53859",
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "GSK PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "miner": "Counterproof Sanctions Screener",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "GSK PLC",
+                "matched": false,
+                "matches": null,
+                "lists": null,
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0x458eb43dc041a872b6f324551db20ff46ee5edfe9474a83385a1bf0886010965",
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "miner": "Sanctions Name Evidence",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "GSK PLC",
+                "matched": false,
+                "matches": null,
+                "lists": [
+                  "OFAC SDN",
+                  "OFAC Consolidated (non-SDN)",
+                  "UK Sanctions List (entities only)",
+                  "Canada autonomous sanctions (entities only)",
+                  "EU Financial Sanctions (entities only)",
+                  "US BIS Entity List (export controls)",
+                  "US BIS Military End User List (export controls)",
+                  "US BIS Denied Persons List (dated standard export-denial orders)",
+                  "UK Sanctions List (ships)",
+                  "US BIS Entity List (additional primary-row corroborated records)",
+                  "Canada autonomous sanctions (November 5 additional entities)",
+                  "Canada autonomous sanctions (corroborated ships)",
+                  "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+                ],
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0x5b22c278a94e97a64f2d6a34b54a9bc0ffb693c04cacb31b9ea352ade34f1072",
+              "receipt": null
+            }
+          ]
+        },
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "GSK PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "GSK PLC",
+                "registration_id": "03888792",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "79 NEW OXFORD STREET, LONDON, GB-LND, WC1A 1DG, GB",
+                "incorporated": "1999-12-06"
+              },
+              "costUsd": 0.01,
+              "signal": "0xeea8c482ca4c9fb9d7455339b5ab18016265a4e8d7913ef967a3c3f4034cddbf",
+              "receipt": null
+            },
+            {
+              "minerId": 5185,
+              "miner": "Praman Desk Compliance & Procurement Auditor",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "GSK PLC",
+                "registration_id": "5493000HZTVUYLO1D793",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "79 NEW OXFORD STREET, LONDON, GB-LND, WC1A 1DG, GB",
+                "incorporated": "2015-11-14T02:16:00Z"
+              },
+              "costUsd": 0.01,
+              "signal": "0x832273861413c3487ac079a83f7dac15b7612301c7cdfe38fba78a28d3021274",
+              "receipt": null
+            }
+          ]
+        },
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "GSK PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7329,
+              "miner": "NewsWire News Search",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": null,
+                "result_count": 2,
+                "sources": [
+                  "https://www.gov.uk/government/news/vanessa-lawrence-andrew-halford-and-iain-mackay-reappointed-on-uk-government-investments-board",
+                  "https://en.wikinews.org/wiki/GSK_rejects_three_Unilever_bids_to_buy_consumer_healthcare_arm,_says_unit_was_%22fundamentally_undervalued%22"
+                ],
+                "brief": "GOV.UK reports: \"Vanessa Lawrence, Andrew Halford and Iain Mackay…\"."
+              },
+              "costUsd": 0.01,
+              "signal": "0xc9281bf7441df7c5f5fc0040e35372ba35d3baa0179f3b258a6687574cec2cc1",
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0x5d756b329219c88b6983a98308183fc48e719946a7c798d5824b49dfd2a53859",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0x458eb43dc041a872b6f324551db20ff46ee5edfe9474a83385a1bf0886010965",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0x5b22c278a94e97a64f2d6a34b54a9bc0ffb693c04cacb31b9ea352ade34f1072",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0xeea8c482ca4c9fb9d7455339b5ab18016265a4e8d7913ef967a3c3f4034cddbf",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0x832273861413c3487ac079a83f7dac15b7612301c7cdfe38fba78a28d3021274",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0xc9281bf7441df7c5f5fc0040e35372ba35d3baa0179f3b258a6687574cec2cc1",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        }
+      ]
+    },
+    {
+      "counterparty": {
+        "name": "National Grid PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-14T07:43:16.861Z",
+      "finishedAt": "2026-11-14T07:56:29.493Z",
+      "payer": "0x6f4EB24CCc31A2636d763E3E1Fe3d781C0F7a720",
+      "overall": "CLEAR",
+      "verdicts": {
+        "sanctions": "CLEAR",
+        "registry": "CLEAR",
+        "filings": "INFO",
+        "news": "CLEAR"
+      },
+      "costUsd": 0.06,
+      "paidCalls": 6,
+      "checks": {
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "National Grid PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7329,
+              "miner": "NewsWire News Search",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": null,
+                "result_count": 1,
+                "sources": [
+                  "GOV.UK"
+                ],
+                "brief": "GOV.UK reports: \"Sea Link development consent decision announced\"."
+              },
+              "costUsd": 0.01,
+              "signal": "0xca061690fd09c5808c6f687ae529828bc8cab4bb737b6f3d72d821fbef20a5de",
+              "receipt": null
+            }
+          ]
+        },
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "National Grid PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "NATIONAL GRID PLC",
+                "registration_id": "04031152",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "1-3 Strand, London, WC2N 5EH, GB",
+                "incorporated": "2000-07-11"
+              },
+              "costUsd": 0.01,
+              "signal": "0x8698016808a973e65fce6be887410d34f79d9bb5068f373b3085782947693ed8",
+              "receipt": null
+            },
+            {
+              "minerId": 5185,
+              "miner": "Praman Desk Compliance & Procurement Auditor",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "NATIONAL GRID PLC",
+                "registration_id": "8R95QZMKZLJX5Q2XR704",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "1-3 Strand, London, WC2N 5EH, GB",
+                "incorporated": "2012-06-06T15:51:00Z"
+              },
+              "costUsd": 0.01,
+              "signal": "0x309f1cf351ff1fc32190113bcfee848957931ff0cf44accc50933b130ded5ad3",
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "National Grid PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "miner": "Counterproof Sanctions Screener",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "National Grid PLC",
+                "matched": false,
+                "matches": null,
+                "lists": null,
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0x6ae5c4fa6e7865f2c5b59645847c9cc2c26dee71bea5ffb49a6dd64501605567",
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "miner": "Sanctions Name Evidence",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "National Grid PLC",
+                "matched": false,
+                "matches": null,
+                "lists": [
+                  "OFAC SDN",
+                  "OFAC Consolidated (non-SDN)",
+                  "UK Sanctions List (entities only)",
+                  "Canada autonomous sanctions (entities only)",
+                  "EU Financial Sanctions (entities only)",
+                  "US BIS Entity List (export controls)",
+                  "US BIS Military End User List (export controls)",
+                  "US BIS Denied Persons List (dated standard export-denial orders)",
+                  "UK Sanctions List (ships)",
+                  "US BIS Entity List (additional primary-row corroborated records)",
+                  "Canada autonomous sanctions (November 5 additional entities)",
+                  "Canada autonomous sanctions (corroborated ships)",
+                  "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+                ],
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0x7fea8c527c1b1a07d76c6d4b365c34f04d0ff7de41ad8232bca3475f5a16f7fa",
+              "receipt": null
+            }
+          ]
+        },
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "National Grid PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": null,
+                "filing_count": 45,
+                "filings": null,
+                "urls": null
+              },
+              "costUsd": 0.01,
+              "signal": "0x16ef69fe6926939a5205b7d3eaca26964af312a84f789fa64879cab1c72973e8",
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0xca061690fd09c5808c6f687ae529828bc8cab4bb737b6f3d72d821fbef20a5de",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0x8698016808a973e65fce6be887410d34f79d9bb5068f373b3085782947693ed8",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0x309f1cf351ff1fc32190113bcfee848957931ff0cf44accc50933b130ded5ad3",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0x6ae5c4fa6e7865f2c5b59645847c9cc2c26dee71bea5ffb49a6dd64501605567",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0x7fea8c527c1b1a07d76c6d4b365c34f04d0ff7de41ad8232bca3475f5a16f7fa",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0x16ef69fe6926939a5205b7d3eaca26964af312a84f789fa64879cab1c72973e8",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        }
+      ]
+    },
+    {
+      "counterparty": {
+        "name": "AstraZeneca PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-14T07:43:16.861Z",
+      "finishedAt": "2026-11-14T07:57:21.272Z",
+      "payer": "0x6f4EB24CCc31A2636d763E3E1Fe3d781C0F7a720",
+      "overall": "REVIEW",
+      "verdicts": {
+        "sanctions": "REVIEW",
+        "registry": "CLEAR",
+        "filings": "INFO",
+        "news": "REVIEW"
+      },
+      "costUsd": 0.03,
+      "paidCalls": 3,
+      "checks": {
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "AstraZeneca PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "ASTRAZENECA PLC",
+                "registration_id": "02723534",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "1 FRANCIS CRICK AVENUE, CAMBRIDGE BIOMEDICAL CAMPUS, CAMBRIDGE, GB-CAM, CB2 0AA, GB",
+                "incorporated": "1992-06-17"
+              },
+              "costUsd": 0.01,
+              "signal": "0xd572f5fa3fa1df589e8c0509c1c680916212ac61d9ef0fdb66855c8f00ba8693",
+              "receipt": null
+            },
+            {
+              "minerId": 5185,
+              "miner": "Praman Desk Compliance & Procurement Auditor",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "ASTRAZENECA PLC",
+                "registration_id": "PY6ZZQWO2IZFZC3IOL08",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "1 FRANCIS CRICK AVENUE, CAMBRIDGE BIOMEDICAL CAMPUS, CAMBRIDGE, GB-CAM, CB2 0AA, GB",
+                "incorporated": "2012-06-06T15:51:00Z"
+              },
+              "costUsd": 0.01,
+              "signal": "0x27e1dcbc57da6dbe8f2ab3157af781c54c8f80307c8c20f568af97bb37744f9b",
+              "receipt": null
+            }
+          ]
+        },
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "AstraZeneca PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": null,
+                "filing_count": 139,
+                "filings": null,
+                "urls": null
+              },
+              "costUsd": 0.01,
+              "signal": "0x5368b652af734a897dc15903d8aff295ef26d80debdc0b19f4dda3bd0ac5ef4e",
+              "receipt": null
+            }
+          ]
+        },
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "AstraZeneca PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7329,
+              "ok": false,
+              "status": 0,
+              "result": null,
+              "error": "UND_ERR_CONNECT_TIMEOUT",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 302,
+              "ok": false,
+              "status": 0,
+              "result": null,
+              "error": "ENOTFOUND",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "AstraZeneca PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "ok": false,
+              "status": 0,
+              "result": null,
+              "error": "UND_ERR_CONNECT_TIMEOUT",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "ok": false,
+              "status": 0,
+              "result": null,
+              "error": "ENOTFOUND",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 4433,
+              "ok": false,
+              "status": 0,
+              "result": null,
+              "error": "ENOTFOUND",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0xd572f5fa3fa1df589e8c0509c1c680916212ac61d9ef0fdb66855c8f00ba8693",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0x27e1dcbc57da6dbe8f2ab3157af781c54c8f80307c8c20f568af97bb37744f9b",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        },
+        {
+          "signal": "0x5368b652af734a897dc15903d8aff295ef26d80debdc0b19f4dda3bd0ac5ef4e",
+          "found": false,
+          "payerMatches": false,
+          "txMatches": true
+        }
+      ]
+    }
+  ]
+}

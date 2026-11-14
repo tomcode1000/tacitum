@@ -1,0 +1,17 @@
+{
+  "network": "sepolia",
+  "pool": "0x615cacc9f7613e435a5c39e3ac55efa16e442f11",
+  "deployBlock": 12126448,
+  "hasher": "0x034ee164958955aecbb865d4c5fa9f1ac52bf65d",
+  "verifier": "0x0962b0b50115c2cbe82ec691f3b055f04724dc70",
+  "usdc": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
+  "escrow": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
+  "denominationUsd": 1,
+  "screener": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+  "txs": {
+    "hasher": "0x588341382681fa9767d97ed84d4267e178ea71d0f187c94fe4786d87a0e34747",
+    "verifier": "0xf1fd3d518d9f2eadb486856fd4bc99d57129e4530420de3430fbdecdad8697c9",
+    "pool": "0x1186d192ce854e7ea4977bdf24b4ecc9df9afba7d79e63325670e9868acbb427"
+  },
+  "deployedAt": "2026-11-13T14:07:17.708Z"
+}

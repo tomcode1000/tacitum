@@ -1,0 +1,87 @@
+{
+  "pool": "0x615cacc9f7613e435a5c39e3ac55efa16e442f11",
+  "ranAt": "2026-11-14T07:41:05.360Z",
+  "depositors": 4,
+  "approved": 4,
+  "anonymitySet": 4,
+  "deposits": [
+    {
+      "address": "0xdD5Bead392df158297799528E243f7a98bA0A566",
+      "depositTx": "0xc86e782280293c8df0a9267e49d2292214a9e99a1d8a4fe666f7b469c545d5af"
+    },
+    {
+      "address": "0xD86fdeA9551A1Ec658c01C10F90C3BcbF524366c",
+      "depositTx": "0xa12c15e1cb47b4f412d5f0c25cd7b73dc539845303154e150d38eaf0f5e34ce8"
+    },
+    {
+      "address": "0xf362c8B5181b939DCa63d6165eBA618f65Fc6A65",
+      "depositTx": "0x78a4e02f19629720e79f73e993bea041aad61475e0ef07f0d1a0a9295ed6b78d"
+    },
+    {
+      "address": "0x51D83cea49E9b15AdDb98dD7b0c0344200bB7F47",
+      "depositTx": "0x9993b60b60724363d5500e2a04d0764d41a1d6968b846fd19a692a8a52abd6c8"
+    }
+  ],
+  "screening": [
+    {
+      "depositor": "0xdD5Bead392df158297799528E243f7a98bA0A566",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x8654268d6b5bf9f76aa594e0bc3ad302fde5952fd8fb7d7729d3468f009503e8",
+      "tx": "0x57caf37ae6e776ed05f7092eb179cb0240175e76ad5f207057ee90e38242591f"
+    },
+    {
+      "depositor": "0xD86fdeA9551A1Ec658c01C10F90C3BcbF524366c",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x7183ad02e3ebaf8abd26905731d8447cf07e9c578f02cc40a919cdb5c2eabc77",
+      "tx": "0xbfc76f29bd60fd0fc9ce70d2ffab8c6c1eb7f078cadebb63275e5eca4a2bcf16"
+    },
+    {
+      "depositor": "0xf362c8B5181b939DCa63d6165eBA618f65Fc6A65",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x5ff215933dd67ba3c4745592a07e918e9a4ddb2dc07771ab9a436343096e22b9",
+      "tx": "0x00dc86c62462d23dc4cab4f58b90e13e54948bb22c814f041aaa903ac4ab584b"
+    },
+    {
+      "depositor": "0x51D83cea49E9b15AdDb98dD7b0c0344200bB7F47",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0xc2ebb233d8c0db108c35e9958ac3d34535e5ecaf29ae6119b1b474f9528c3f2c",
+      "tx": "0x7449054e8d38012d9dcf37680d7c4a5d9cb327b97e0cd33c68d66ed5898fddd5"
+    }
+  ],
+  "withdraw": {
+    "tx": "0x9b0c3550a8e5551b961a6288881234cf985bc8292383d7f6e29c15a04b9f0097",
+    "payer": "0x6f4EB24CCc31A2636d763E3E1Fe3d781C0F7a720",
+    "escrowUsd": 1,
+    "relayer": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608"
+  },
+  "doubleSpend": "rejected (The contract function \"withdraw\" reverted with the following signature:)",
+  "gas": {
+    "deposit": 270834,
+    "approve": 1159995,
+    "withdraw": 540851
+  },
+  "log": [
+    "minted 1 USDC to 4 fresh depositors; one of them is the desk",
+    "deposit  #0 0xdD5Bead392df158297799528E243f7a98bA0A566  tx 0xc86e782280293c8df0a9267e49d2292214a9e99a1d8a4fe666f7b469c545d5af",
+    "deposit  #1 0xD86fdeA9551A1Ec658c01C10F90C3BcbF524366c  tx 0xa12c15e1cb47b4f412d5f0c25cd7b73dc539845303154e150d38eaf0f5e34ce8",
+    "deposit  #2 0xf362c8B5181b939DCa63d6165eBA618f65Fc6A65  tx 0x78a4e02f19629720e79f73e993bea041aad61475e0ef07f0d1a0a9295ed6b78d",
+    "deposit  #3 0x51D83cea49E9b15AdDb98dD7b0c0344200bB7F47  tx 0x9993b60b60724363d5500e2a04d0764d41a1d6968b846fd19a692a8a52abd6c8",
+    "approve  depositor 0xdD5Bead392df158297799528E243f7a98bA0A566  matched=false score=0  signal 0x8654268d6b5bf9f76aa594e0bc3ad302fde5952fd8fb7d7729d3468f009503e8  0x57caf37ae6e776ed05f7092eb179cb0240175e76ad5f207057ee90e38242591f",
+    "approve  depositor 0xD86fdeA9551A1Ec658c01C10F90C3BcbF524366c  matched=false score=0  signal 0x7183ad02e3ebaf8abd26905731d8447cf07e9c578f02cc40a919cdb5c2eabc77  0xbfc76f29bd60fd0fc9ce70d2ffab8c6c1eb7f078cadebb63275e5eca4a2bcf16",
+    "approve  depositor 0xf362c8B5181b939DCa63d6165eBA618f65Fc6A65  matched=false score=0  signal 0x5ff215933dd67ba3c4745592a07e918e9a4ddb2dc07771ab9a436343096e22b9  0x00dc86c62462d23dc4cab4f58b90e13e54948bb22c814f041aaa903ac4ab584b",
+    "approve  depositor 0x51D83cea49E9b15AdDb98dD7b0c0344200bB7F47  matched=false score=0  signal 0xc2ebb233d8c0db108c35e9958ac3d34535e5ecaf29ae6119b1b474f9528c3f2c  0x7449054e8d38012d9dcf37680d7c4a5d9cb327b97e0cd33c68d66ed5898fddd5",
+    "approved set: 4 deposits, root matches the chain",
+    "proof made in 1.7 s, verifies locally: true",
+    "withdraw tx 0x9b0c3550a8e5551b961a6288881234cf985bc8292383d7f6e29c15a04b9f0097: one-time payer 0x6f4EB24CCc31A2636d763E3E1Fe3d781C0F7a720 escrow = 1 USDC",
+    "second withdraw with the same note: rejected (The contract function \"withdraw\" reverted with the following signature:)",
+    "gas: deposit 270834, approve 1159995, withdraw 540851"
+  ]
+}

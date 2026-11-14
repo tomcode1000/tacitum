@@ -121,13 +121,21 @@ export function createClient(account, { maxPerPayment = "100000", rail = "escrow
 // Records never change once written, so they are cached on disk.
 const RECORDS = path.join(HOME, "cache", "signals");
 
-export async function publicRecord(signalHash) {
+// A fresh signal is 404 until the node publishes it (14 Nov: all 5 were missing at memo time and
+// present minutes later). waitMs keeps polling a 404 that long; 0 means one look.
+export async function publicRecord(signalHash, { waitMs = 0 } = {}) {
   const file = `${RECORDS}/${signalHash}.json`;
   if (fs.existsSync(file)) return JSON.parse(fs.readFileSync(file, "utf8"));
+  const deadline = Date.now() + waitMs;
   for (let attempt = 0; attempt < 4; attempt++) {
     try {
       const res = await fetch(`${NODE}/engine/v1/signal/${signalHash}`);
-      if (res.status === 404) return null;
+      if (res.status === 404) {
+        if (Date.now() >= deadline) return null;
+        await sleep(10_000);
+        attempt = -1;
+        continue;
+      }
       if (res.ok) {
         const record = await res.json();
         fs.mkdirSync(RECORDS, { recursive: true });

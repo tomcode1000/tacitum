@@ -72,7 +72,7 @@ async function verify(checks, payer) {
   const rows = [];
   for (const check of Object.values(checks)) {
     for (const a of check.answers.filter((x) => x.signal)) {
-      const pub = await publicRecord(a.signal);
+      const pub = await publicRecord(a.signal, { waitMs: 180_000 });
       rows.push({
         signal: a.signal,
         found: Boolean(pub),

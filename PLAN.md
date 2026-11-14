@@ -63,10 +63,17 @@ v3 and v4 redo only the famous runs whose decoy rule changed; the obscure runs c
 - [ ] Decide on Track 1: if a check had no good miner in P1, build that miner (decision gate, 10 Nov)
 
 ### P4: Screened funding pool (14–21 Nov)
-- [ ] Pool contract on Sepolia: fixed-denomination USDC deposits, Merkle tree of commitments
-- [ ] Deposit gate: depositor wallet screened through Telegraph's sanctions intent; only passing deposits enter the approved set
-- [ ] Withdraw circuit (Circom + Groth16): prove a deposit is in the approved set without revealing which, nullifier against double spend
-- [ ] Relayer: withdraws to one-time payer wallets (EIP-3009 means they never need gas)
+- [x] Pool contract on Sepolia (14 Nov): `contracts/ScreenedPool.sol` at 0x615c…2f11, 1 USDC deposits, Poseidon Merkle tree (depth 16) of approved commitments only, root history 30. Addresses in data/pool.json
+- [x] Gasless deposits: EIP-3009 `receiveWithAuthorization` with nonce = keccak256(commitment), so a copied signature cannot fund another commitment; depositors hold no ETH
+- [x] Deposit gate: depositor wallet screened by miner 731002 (OFAC SDN, UN, EU, UK). Tested: our wallet matched=false, the OFAC-listed Ronin exploiter wallet matched=true. approve()/reject() record the Telegraph signal hash on chain; reject refunds
+- [x] Withdraw circuit (Circom 2.2.3 + Groth16): 9,255 constraints, recipient/relayer/fee bound; proof in ~1.7 s. 4 local tests pass (`node --test test/pool-circuit.test.mjs`)
+- [x] Trusted setup: local 2^14 Powers of Tau + beacon + one phase-2 contribution (Hermez files were unreachable). Fine for testnet; mainnet needs a public ceremony
+- [x] Relayer: the operator sends deposits and withdraws; the withdraw pays straight into the one-time payer's Telegraph escrow (`depositUSDCFor` called by the pool)
+- [x] End to end (`scripts/pool-e2e.mjs`, data/pool-e2e.json): 4 depositors, 4 screens clear, root matches chain, withdraw funded payer 0x6f4E…a720 with 1 USDC, double spend rejected. Gas: deposit 271k, approve 1.16M, withdraw 541k (Sepolia charges heavily for new storage)
+- [x] First private assessment paid through the pool (14 Nov): Barclays PLC among 3 decoys, payer 0x6f4E…a720 funded only by the pool, 5/5 receipts verified, $0.20 for k=4 (assessments/2026-11-14-private-barclays-plc.md). News miners 7329 and 302 timed out, so the verdict is REVIEW on news alone
+- [ ] Contract tests on a local chain (reject path, bad proof, unknown root, fee cap)
+- [ ] Reclaim for deposits the screener never answers (timeout ragequit)
+- [ ] Bigger anonymity set: invite other Season II teams to deposit; today the 4 seed depositors are ours
 
 ### P5: Audit (21–25 Nov)
 - [ ] Encrypted receipt log per assessment, readable with the buyer's viewing key

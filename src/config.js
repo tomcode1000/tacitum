@@ -31,8 +31,8 @@ export const escrowAbi = parseAbi([
   "function effectiveBalance(address) view returns (uint256)",
 ]);
 
-export const publicClient = createPublicClient({ chain: sepolia, transport: http(RPC) });
+export const publicClient = createPublicClient({ chain: sepolia, transport: http(RPC, { timeout: 30_000, retryCount: 6, retryDelay: 2_000 }) });
 
 export function walletClient(account) {
-  return createWalletClient({ account, chain: sepolia, transport: http(RPC) });
+  return createWalletClient({ account, chain: sepolia, transport: http(RPC, { timeout: 30_000, retryCount: 6, retryDelay: 2_000 }) });
 }

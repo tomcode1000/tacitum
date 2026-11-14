@@ -53,3 +53,38 @@ export async function escrowBalance(address) {
   const b = await publicClient.readContract({ address: DIAMOND, abi: escrowAbi, functionName: "effectiveBalance", args: [address] });
   return Number(formatUnits(b, 6));
 }
+
+// P4: fund a one-time payer from the screened pool instead of from the desk. The relayer sends
+// the withdraw; on chain the payer's escrow deposit comes from the pool contract, and the desk's
+// deposit is one of the approved set. Uses (and spends) the oldest unspent desk note.
+export async function poolPayer(relayer, poolInfo, label = "") {
+  const pool = await import("./pool.js");
+  const notes = pool.loadNotes(poolInfo.pool).filter((n) => n.desk);
+  let note;
+  for (const n of notes) {
+    const used = await publicClient.readContract({ address: poolInfo.pool, abi: pool.poolAbi, functionName: "spent", args: [n.nullifierHash] });
+    const ok = await publicClient.readContract({ address: poolInfo.pool, abi: pool.poolAbi, functionName: "approved", args: [n.commitment] });
+    if (!used && ok) { note = n; break; }
+  }
+  if (!note) throw new Error("no approved, unspent desk note in this pool: deposit first");
+
+  const leaves = await pool.approvedLeaves(poolInfo.pool, poolInfo.deployBlock);
+  const tree = await pool.Tree.create(leaves.map((l) => l.commitment));
+  const leafIndex = leaves.findIndex((l) => l.commitment === note.commitment);
+  const key = generatePrivateKey();
+  const account = privateKeyToAccount(key);
+  const p = await pool.prove(note, tree, leafIndex, { recipient: account.address, relayer: relayer.address, fee: 0n });
+  const fundingTx = await pool.withdraw(relayer, poolInfo.pool, p, { nullifierHash: note.nullifierHash, recipient: account.address });
+  await pool.shutdown();
+
+  const amountUsd = poolInfo.denominationUsd;
+  fs.mkdirSync(KEYS, { recursive: true });
+  fs.writeFileSync(path.join(KEYS, `${account.address}.json`), JSON.stringify({ address: account.address, key, funder: poolInfo.pool, fundingTx, amountUsd, label, note: note.file, createdAt: new Date().toISOString() }, null, 2));
+  return { account, fundingTx, funder: poolInfo.pool, amountUsd, fundedAt: Date.now(), anonymitySet: leaves.length, viaPool: true };
+}
+
+// Reuse a one-time payer already funded (its key is in TACITUM_KEYS).
+export function savedPayer(address) {
+  const rec = JSON.parse(fs.readFileSync(path.join(KEYS, `${address}.json`), "utf8"));
+  return { account: privateKeyToAccount(rec.key), fundingTx: rec.fundingTx, funder: rec.funder, amountUsd: rec.amountUsd, fundedAt: Date.parse(rec.createdAt), viaPool: !/^0xdbEE/i.test(rec.funder) && rec.label?.includes("pool") };
+}

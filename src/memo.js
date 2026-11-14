@@ -70,7 +70,15 @@ function privacySection(a) {
   const p = a.privacy;
   const m = p.measured;
   const best = m ? `${m.best} (95% interval ${m.ci.join("–")}, ${m.runs} runs)` : "not measured";
-  return `## Private mode (v0)
+  const pooled = p.viaPool;
+  const set = p.anonymitySet ?? "all the";
+  const funding = pooled
+    ? `the Tacitum screened pool \`${p.funder}\` paid $${p.fundedUsd} into the payer's escrow through a zero-knowledge withdraw, tx \`${short(p.fundingTx)}\`. The desk's deposit is one of ${set} approved deposits, each screened through Telegraph sanctions before it could be spent`
+    : `\`${p.funder}\` deposited $${p.fundedUsd} into the payer's escrow, tx \`${short(p.fundingTx)}\``;
+  const gap = pooled
+    ? `**Funding:** the payer was funded by the pool, not by the desk. Anyone can see which wallets deposited, but not which deposit paid for this assessment: it is one of ${set} approved deposits, so that set size is the number to watch. On testnet the other depositors are seeded by us.`
+    : `**Not hidden in v0:** the funding deposit is on chain, so anyone who checks who funded the payer finds the desk's wallet. They still cannot tell which of the ${p.k} counterparties it cared about. The screened deposit pool (P4) removes that link.`;
+  return `## Private mode (${pooled ? "screened pool" : "v0"})
 
 | | |
 |---|---|
@@ -78,11 +86,11 @@ function privacySection(a) {
 | Cover | ${p.k} complete assessments bought together, checks shuffled and spaced with random gaps |
 | Total paid | $${p.costUsd} for all ${p.k} (this memo's share $${a.costUsd}) |
 | Observer picking the real one | blind guess ${(1 / p.k).toFixed(2)}; best measured attacker ${best} |
-| Funding | \`${p.funder}\` deposited $${p.fundedUsd} into the payer's escrow, tx \`${short(p.fundingTx)}\` |
+| Funding | ${funding} |
 
 The feed shows ${p.k} counterparties assessed by a new wallet, in no particular order: ${p.parties.map((n) => `\`${n}\``).join(", ")}. Nothing in the questions marks which one the desk wanted.
 
-**Not hidden in v0:** the funding deposit is on chain, so anyone who checks who funded the payer finds the desk's wallet. They still cannot tell which of the ${p.k} counterparties it cared about. The screened deposit pool (P4) removes that link.
+${gap}
 
 Decoy results stay in the local run record and are not part of this memo.
 `;
