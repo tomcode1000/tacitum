@@ -10,6 +10,21 @@ Every paid Telegraph request is public. `GET /daemon/api/questions` lists the qu
 
 A desk that screens a counterparty through Telegraph tells everyone watching who it is screening, and which wallet is doing it. Funds, legal teams and listing desks cannot use the network that way.
 
+## Journey
+
+**Decoys that hold up (4–13 Nov).** Each real assessment is bought together with 3 decoys. With random decoys our attacker found the real one every time. Five rounds later, after matching fame, name format, registry answers and SEC filings, and fixing the decoy groups across runs, every attacker is at chance.
+
+![Privacy experiment v5: random decoys are caught every time; matched decoys leave every attacker at 0.25](docs/screenshots/experiment-v5.png)
+
+| Version | Best attacker (chance 0.25) | Change |
+|---|---|---|
+| random | 1.00 | none |
+| v1 | 0.50 | match fame and name format |
+| v2 | 0.57 | match registry answers |
+| v3 | 0.45 | match SEC filer status |
+| v4 | 0.38 | match filing volume |
+| v5 | 0.25 | fixed decoy groups, re-probed miners |
+
 ## What Tacitum does
 
 An agent assesses a counterparty (sanctions, company registry, on-chain activity, filings) with intelligence bought through Telegraph, and:

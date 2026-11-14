@@ -1,0 +1,18 @@
+<!doctype html><meta charset=utf-8><style>
+html,body{margin:0;background:#0d1117}body{padding:24px;font:15px/1.25 "Cascadia Mono",Consolas,monospace;color:#c9d1d9;display:inline-block}
+.win{background:#161b22;border:1px solid #30363d;border-radius:10px;overflow:hidden}
+.bar{background:#21262d;padding:8px 14px;color:#8b949e;font-size:13px}.bar i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;background:#484f58}
+pre{margin:0;padding:18px 22px;white-space:pre;font:inherit}.p{color:#7ee787}.d{color:#8b949e}.g{color:#7ee787}.r{color:#ff7b72}
+</style><div class=win><div class=bar><i></i><i></i><i></i>&nbsp; tacitum: privacy experiment v5, 13 Nov 2026</div><pre><span class=p>$</span> node scripts/experiment.mjs run
+<span class=d># 16 live runs on Telegraph testnet; each buys 1 real assessment + 3 decoys</span>
+matched  Barclays PLC $0.24  [GSK PLC | National Grid PLC | Barclays PLC | AstraZeneca PLC]
+matched  Vodafone Group PLC $0.2  [Renishaw PLC | Persimmon PLC | Marks &amp; Spencer PLC | Vodafone Group PLC]
+<span class=d>… 14 more runs</span>
+
+Attacker success rate (chance = 0.25 with k=4)
+┌─────────┬───────┬────────┬────────┬─────────┬────────┬───────────────┬──────┬─────────┐
+│ (index) │ first │ famous │ format │ learned │ rarest │ bestCI95      │ runs │ costUsd │
+├─────────┼───────┼────────┼────────┼─────────┼────────┼───────────────┼──────┼─────────┤
+│ <b class=r>random</b>  │ 0.5   │ 0.497  │ 0.608  │ 1       │ 0.25   │ [ 0.68, 1 ]   │ 8    │ 1.53    │
+│ <b class=g>matched</b> │ 0.25  │ 0.256  │ 0.195  │ 0.25    │ 0.25   │ [ 0.1, 0.49 ] │ 16   │ 3.45    │
+└─────────┴───────┴────────┴────────┴─────────┴────────┴───────────────┴──────┴─────────┘</pre></div>
