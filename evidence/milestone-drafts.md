@@ -1,15 +1,22 @@
-# Milestone drafts (14 Nov): not sent yet
+# Milestone drafts (14 Nov)
 
-Figures are from the v5 experiment (13 Nov).
+Figures: v5 privacy experiment (13 Nov) and the first pool-paid assessment (14 Nov).
 
 ## To the Telegraph mod
 
-> Tacitum checkpoint (14 Nov): private mode v0 is live on testnet. A desk's counterparty assessment is bought among 3 matched decoys by a one-time wallet funded with `depositUSDCFor`, so the payer never holds gas. First private memo (Barclays PLC): CLEAR, 6/6 receipts verified against /engine/v1/signal, $0.26 for all four bundles. With matched decoys in fixed cover sets, every attacker we built, including a learned one and one that watches across runs, picks the real party at chance: 0.25 with k=4 (95% CI 0.10–0.49, 16 live runs). Known gap, stated in every memo: the funding deposit still links payer to funder, and the screened pool (P4, next) removes it. Two things we hit that may help others: a payer called seconds after funding stays at available=0 until epoch close, and miner 9002 has left sanctions and registry.
+> Tacitum, 14 Nov checkpoint. You asked for privacy, verifiable purchases, an institutional workflow and audit-friendly pooled funding together. Here is where each stands on testnet:
+>
+> - Workflow: a counterparty assessment (sanctions from two miners, registry, filings, news) bought among 3 matched decoys. Every attacker we built, including one that watches across runs, picks the real party at chance: 0.25 with k=4 (95% CI 0.10–0.49, 16 live runs).
+> - Pooled funding: a screened pool on Sepolia. Each depositor wallet is screened through Telegraph sanctions (miner 731002) before its deposit can be spent, and the signal hash is stored on chain with the approval. A Groth16 proof then funds a one-time payer's escrow via depositUSDCFor, so the payer is funded by the pool, not the desk.
+> - Verifiable: first pool-paid memo (Barclays PLC), 5/5 receipts verified against /engine/v1/signal.
+> - Next: auditor view keys (P5) and a bigger anonymity set. Other Season II teams are welcome to deposit.
+>
+> Repo: https://github.com/tomcode1000/tacitum. Two notes that may help others: a payer called seconds after funding stays at available=0 until epoch close, and fresh signals return 404 for a few minutes before they publish.
 
-## For X (273/280 characters)
+## For X (277/280 characters)
 
 > Every paid Telegraph question is public: question, answer and the wallet that paid. A desk screening a counterparty shows its hand.
-> 
-> I'm building Tacitum: the real check is hidden among decoys and paid by a one-time wallet. Observers spot it at chance.
-> 
+>
+> I'm building Tacitum for the @Telegraphprotoc hackathon: real checks hide among decoys, paid via a sanctions-screened pool.
+>
 > #TelegraphHackathon
