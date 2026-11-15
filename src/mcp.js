@@ -63,4 +63,27 @@ server.registerTool(
   },
 );
 
+server.registerTool(
+  "pool_deposit",
+  {
+    title: "Deposit into the screened pool",
+    description:
+      "Deposits 1 test USDC into Tacitum's screened pool on Sepolia. The deposit becomes spendable after the funder's wallet " +
+      "passes Telegraph sanctions screening. Every approved deposit enlarges the set that private payers are hidden in. " +
+      "The spending note is saved locally under TACITUM_HOME.",
+    inputSchema: {},
+  },
+  async () => text(JSON.stringify(await t.deposit(), null, 2)),
+);
+
+server.registerTool(
+  "pool_status",
+  {
+    title: "Screened pool status",
+    description: "How many approved deposits the pool holds (the hiding set for pool-funded payers) and how many notes this funder holds.",
+    inputSchema: {},
+  },
+  async () => text(JSON.stringify(await t.poolStatus(), null, 2)),
+);
+
 await server.connect(new StdioServerTransport());

@@ -2,7 +2,23 @@
 
 Private counterparty screening on [Telegraph](https://telegraphprotocol.com).
 
-Telegraph Hackathon Season II, Apps & Agents track (Mission 03, Institutional Markets).
+Telegraph Hackathon Season II, Apps & Agents track (Mission 03, Institutional Markets), plus a Track 1 provider: the `tacitum-adverse-media` miner.
+
+![Tacitum: screen counterparties on Telegraph without telling the market](docs/screenshots/product-hero.png)
+
+## In one live run (15 Nov 2026, Sepolia)
+
+- A desk's deposit entered a pool where **every depositor is screened through Telegraph sanctions** first. The pool now holds 16 approved deposits.
+- A zero-knowledge withdraw funded a **brand-new payer from the pool**, so the desk's wallet never appears.
+- The payer bought a full assessment of Barclays PLC **among 3 matched decoys**. Our attackers find the real company at chance (0.26 against a blind 0.25, 16 live runs).
+- News came from **our own adverse-media miner**, registered on Telegraph.
+- **6 of 6 receipts** verify against Telegraph's public signal record.
+
+![The assessment memo: every answer links to its Telegraph receipt](docs/screenshots/product-memo.png)
+
+![The screened pool: deposit, screen, approved set, zero-knowledge withdraw, pay](docs/screenshots/product-pool.png)
+
+Run the demo locally: `npm run web:build && npm run web`, then open http://localhost:8080. Design rules are in [DESIGN.md](DESIGN.md).
 
 ## The problem
 

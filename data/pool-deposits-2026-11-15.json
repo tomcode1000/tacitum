@@ -1,0 +1,127 @@
+{
+  "pool": "0x615cacc9f7613e435a5c39e3ac55efa16e442f11",
+  "ranAt": "2026-11-15T14:36:53.720Z",
+  "depositors": 8,
+  "approved": 7,
+  "approvedSet": 15,
+  "deposits": [
+    {
+      "address": "0x08CFA028456A4a8d275509094530d8dB15f45121",
+      "depositTx": "0x80bfd3487dadcd09cd352f260146c010249e1f4c4ee54494a3643903682c9d07"
+    },
+    {
+      "address": "0x6547E59e8114f9fc8Df7211dD92d6aF60cDE22cC",
+      "depositTx": "0xef9eb50ad2157a4612730b7e022dd591cfb6ed3d4bc232e5ee153bb4e1cfa7ce"
+    },
+    {
+      "address": "0xE2fd0e821818cFd5CaC6D9757F61Cd4379A4EA90",
+      "depositTx": "0x85e658410db3ccbd00819a158440e898306f9c01d21ccb4ba1ab85d54ba3e109"
+    },
+    {
+      "address": "0xeB5c16d4313f6fC95EC60a3F2b11E3C797bFDDea",
+      "depositTx": "0xb64f242de3298fd9dfa68b14616ba05bd6e062a613be94b8b71b4153c75cbd52"
+    },
+    {
+      "address": "0xdAbD908647C922e4CAF29934086b9480C4265119",
+      "depositTx": "0xbde4a1266573beae9b6fafb3d565c4ecfacd0a9d55af394cb893790633b30b89"
+    },
+    {
+      "address": "0xe101Cf516e040f12fAb1ea5D48B9D7cE10917b42",
+      "depositTx": "0x083f14285703926178f0e7797e7f5a559af93c5e1a04509dd2e88dc05d872d14"
+    },
+    {
+      "address": "0x9Bbc3587a9309E47db676826EA0F2f24E3E370Eb",
+      "depositTx": "0x77b8aa8259b65860f2855feea4ea324e3eecfa9e18991d09689cf9152db0ceaa"
+    },
+    {
+      "address": "0xB435531502b50340A93A19A54678287Cee4ceE13",
+      "depositTx": "0xff22972dc3f5bf30e8a9ec9894df6451ec9b188157cbaea338eddab7a54b4a1e"
+    }
+  ],
+  "screening": [
+    {
+      "depositor": "0x08CFA028456A4a8d275509094530d8dB15f45121",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0xeffa0e5f0f315e628c62683ad0e07d8e50b04b7f93b3ad9e8929f69ae08654ce",
+      "tx": "0xb7ac8b386d827ea201221410f14eaa89f89304c05980c2382274f05c58c4068b"
+    },
+    {
+      "depositor": "0x6547E59e8114f9fc8Df7211dD92d6aF60cDE22cC",
+      "verdict": "pending",
+      "matched": null,
+      "score": 0,
+      "signal": "0xfe2ae23c3ec149ff3bd46eb87b4457a70294ee552885330e06d7277f3900665c",
+      "tx": null
+    },
+    {
+      "depositor": "0xE2fd0e821818cFd5CaC6D9757F61Cd4379A4EA90",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0xc2e900dc5c4e5f90d066fab281691483d8b9f8a5f622a92bd78217923ac7fcda",
+      "tx": "0x1cd0b49ee70e8b5b24c520dddcc148911e799791bbe8ebfdb8f02fbb12438ee2"
+    },
+    {
+      "depositor": "0xeB5c16d4313f6fC95EC60a3F2b11E3C797bFDDea",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x92230d067f2c886b5ca85774432cabf94271b800e8bc891ed9f1f2846d66e6f4",
+      "tx": "0x2d5595d164fc48c918e6ad8b24aadca05907f3bcbdb42b23aef120b84734efe7"
+    },
+    {
+      "depositor": "0xdAbD908647C922e4CAF29934086b9480C4265119",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0xff462d122662515d39cd43ec6d05af60d563dc99b0745c3781e2a8b1ec5c2230",
+      "tx": "0xb7f16f55d176e2ce5625c0d2d83e65cb5510f649f2074121992173f7963c5786"
+    },
+    {
+      "depositor": "0xe101Cf516e040f12fAb1ea5D48B9D7cE10917b42",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0xdf1665c84600b09b0ce7d8a0063ac7710a3acf905383f89613356e77db9f5572",
+      "tx": "0xf28cf4f9adfa3c01fbf5460bd87dfa159dddf436cd9f53a992eeb6ad2651f111"
+    },
+    {
+      "depositor": "0x9Bbc3587a9309E47db676826EA0F2f24E3E370Eb",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x669b7678daa2e0157e5bd208eca70acda80581f7d3c580539361c1bfd5909e3f",
+      "tx": "0x13022015bb8eeb049b2c2fb1d0b07f9a33f00f171c9b442f3aa36bdb8acd804b"
+    },
+    {
+      "depositor": "0xB435531502b50340A93A19A54678287Cee4ceE13",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x71439b678435169326aa2a99d9c6301d82b76e25d46f4557cdb4e722eccf3071",
+      "tx": "0xdca13bcbd3b718e2202b0c90eb807507dbb27a977d17574377c2319c6e9d0266"
+    }
+  ],
+  "log": [
+    "minted 1 USDC to 8 fresh depositors; one of them is the desk",
+    "deposit  #0 0x08CFA028456A4a8d275509094530d8dB15f45121  tx 0x80bfd3487dadcd09cd352f260146c010249e1f4c4ee54494a3643903682c9d07",
+    "deposit  #1 0x6547E59e8114f9fc8Df7211dD92d6aF60cDE22cC  tx 0xef9eb50ad2157a4612730b7e022dd591cfb6ed3d4bc232e5ee153bb4e1cfa7ce",
+    "deposit  #2 0xE2fd0e821818cFd5CaC6D9757F61Cd4379A4EA90  tx 0x85e658410db3ccbd00819a158440e898306f9c01d21ccb4ba1ab85d54ba3e109",
+    "deposit  #3 0xeB5c16d4313f6fC95EC60a3F2b11E3C797bFDDea  tx 0xb64f242de3298fd9dfa68b14616ba05bd6e062a613be94b8b71b4153c75cbd52",
+    "deposit  #4 0xdAbD908647C922e4CAF29934086b9480C4265119  tx 0xbde4a1266573beae9b6fafb3d565c4ecfacd0a9d55af394cb893790633b30b89",
+    "deposit  #5 0xe101Cf516e040f12fAb1ea5D48B9D7cE10917b42  tx 0x083f14285703926178f0e7797e7f5a559af93c5e1a04509dd2e88dc05d872d14",
+    "deposit  #6 0x9Bbc3587a9309E47db676826EA0F2f24E3E370Eb  tx 0x77b8aa8259b65860f2855feea4ea324e3eecfa9e18991d09689cf9152db0ceaa",
+    "deposit  #7 0xB435531502b50340A93A19A54678287Cee4ceE13  tx 0xff22972dc3f5bf30e8a9ec9894df6451ec9b188157cbaea338eddab7a54b4a1e",
+    "approve  depositor 0x08CFA028456A4a8d275509094530d8dB15f45121  matched=false score=0  signal 0xeffa0e5f0f315e628c62683ad0e07d8e50b04b7f93b3ad9e8929f69ae08654ce  0xb7ac8b386d827ea201221410f14eaa89f89304c05980c2382274f05c58c4068b",
+    "pending  depositor 0x6547E59e8114f9fc8Df7211dD92d6aF60cDE22cC  matched=null score=0  signal 0xfe2ae23c3ec149ff3bd46eb87b4457a70294ee552885330e06d7277f3900665c  ",
+    "approve  depositor 0xE2fd0e821818cFd5CaC6D9757F61Cd4379A4EA90  matched=false score=0  signal 0xc2e900dc5c4e5f90d066fab281691483d8b9f8a5f622a92bd78217923ac7fcda  0x1cd0b49ee70e8b5b24c520dddcc148911e799791bbe8ebfdb8f02fbb12438ee2",
+    "approve  depositor 0xeB5c16d4313f6fC95EC60a3F2b11E3C797bFDDea  matched=false score=0  signal 0x92230d067f2c886b5ca85774432cabf94271b800e8bc891ed9f1f2846d66e6f4  0x2d5595d164fc48c918e6ad8b24aadca05907f3bcbdb42b23aef120b84734efe7",
+    "approve  depositor 0xdAbD908647C922e4CAF29934086b9480C4265119  matched=false score=0  signal 0xff462d122662515d39cd43ec6d05af60d563dc99b0745c3781e2a8b1ec5c2230  0xb7f16f55d176e2ce5625c0d2d83e65cb5510f649f2074121992173f7963c5786",
+    "approve  depositor 0xe101Cf516e040f12fAb1ea5D48B9D7cE10917b42  matched=false score=0  signal 0xdf1665c84600b09b0ce7d8a0063ac7710a3acf905383f89613356e77db9f5572  0xf28cf4f9adfa3c01fbf5460bd87dfa159dddf436cd9f53a992eeb6ad2651f111",
+    "approve  depositor 0x9Bbc3587a9309E47db676826EA0F2f24E3E370Eb  matched=false score=0  signal 0x669b7678daa2e0157e5bd208eca70acda80581f7d3c580539361c1bfd5909e3f  0x13022015bb8eeb049b2c2fb1d0b07f9a33f00f171c9b442f3aa36bdb8acd804b",
+    "approve  depositor 0xB435531502b50340A93A19A54678287Cee4ceE13  matched=false score=0  signal 0x71439b678435169326aa2a99d9c6301d82b76e25d46f4557cdb4e722eccf3071  0xdca13bcbd3b718e2202b0c90eb807507dbb27a977d17574377c2319c6e9d0266",
+    "deposit-only: 7 approved this run; approved set now 15. The desk note is saved, unspent."
+  ]
+}

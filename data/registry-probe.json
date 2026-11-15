@@ -1,0 +1,360 @@
+{
+  "probedAt": "2026-11-15T14:27:55.173Z",
+  "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+  "rows": [
+    {
+      "id": "4433",
+      "name": "LiveCert — Sourced Answers for Agents",
+      "base_url": "https://miner-wine.vercel.app",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 200,
+          "legal_name": null,
+          "active": true,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "98002",
+      "name": "GLEIF LEI Apple",
+      "base_url": "https://api.gleif.org",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "98004",
+      "name": "OpenSanctions EU Corp",
+      "base_url": "https://data.opensanctions.org",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 200,
+          "legal_name": null,
+          "active": false,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "302",
+      "name": "ChainSight — Universal Intelligence & Data Oracle",
+      "base_url": "https://hub.shadrakbessanh.me",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "98009",
+      "name": "Clearbit Company Suggest",
+      "base_url": "https://autocomplete.clearbit.com",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "501",
+      "name": "Telegraph Sentinel Risk Intelligence",
+      "base_url": "https://telegraph-sentinel-ql8d.onrender.com",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 200,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "9002",
+      "name": "TxLens",
+      "base_url": "https://telegraph-onchain-tx-lookup-miner.onrender.com",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "190104",
+      "name": "Corp Brreg No",
+      "base_url": "https://data.brreg.no",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "98001",
+      "name": "GLEIF LEI Tesla",
+      "base_url": "https://api.gleif.org",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "98010",
+      "name": "Brandfetch Corp Search",
+      "base_url": "https://api.brandfetch.io",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "79012",
+      "name": "FR Recherche Entreprises Status",
+      "base_url": "https://omni-chat.13.237.89.59.sslip.io",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "190106",
+      "name": "Corp Prh Fi",
+      "base_url": "https://avoindata.prh.fi",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "7393",
+      "name": "DataWire Corporate Registry Lookup",
+      "base_url": "https://telegraph-data.margyn.workers.dev",
+      "passed": 2,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 200,
+          "legal_name": "BARCLAYS PLC",
+          "active": true,
+          "ok": true
+        },
+        {
+          "company": "GSK PLC",
+          "status": 200,
+          "legal_name": "GSK PLC",
+          "active": true,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "5186",
+      "name": "Praman Desk Compliance & Procurement Auditor",
+      "base_url": "https://praman-desk.vercel.app",
+      "passed": 2,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 200,
+          "legal_name": "BARCLAYS PLC",
+          "active": true,
+          "ok": true
+        },
+        {
+          "company": "GSK PLC",
+          "status": 200,
+          "legal_name": "GSK PLC",
+          "active": true,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "79011",
+      "name": "GLEIF LEI Status Active",
+      "base_url": "https://omni-chat.13.237.89.59.sslip.io",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "98006",
+      "name": "CourtListener Corp Search",
+      "base_url": "https://www.courtlistener.com",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "98005",
+      "name": "OpenSanctions OFAC Corp",
+      "base_url": "https://data.opensanctions.org",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 200,
+          "legal_name": null,
+          "active": false,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "77419",
+      "name": "ZK Corporate Atlas — Live Registry Identity and Status",
+      "base_url": "https://telegraph-s2-corp-atlas.margyn.workers.dev",
+      "passed": 2,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 200,
+          "legal_name": "BARCLAYS PLC",
+          "active": true,
+          "ok": true
+        },
+        {
+          "company": "GSK PLC",
+          "status": 200,
+          "legal_name": "GSK PLC",
+          "active": true,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "170114",
+      "name": "Bronnoysund Enhetsregisteret",
+      "base_url": "https://omni-chat.13.237.89.59.sslip.io",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "190105",
+      "name": "Corp Krs Pl",
+      "base_url": "https://api-krs.ms.gov.pl",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "98008",
+      "name": "GLEIF Microsoft LEI",
+      "base_url": "https://api.gleif.org",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "98007",
+      "name": "Federal Register Corp",
+      "base_url": "https://www.federalregister.gov",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 503,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "98003",
+      "name": "OpenSanctions Corp Index",
+      "base_url": "https://data.opensanctions.org",
+      "passed": 0,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 200,
+          "ok": false
+        }
+      ]
+    },
+    {
+      "id": "20260828",
+      "name": "PREFLIGHT Infrastructure Signals",
+      "base_url": "https://preflight-ssl-verification.vercel.app",
+      "passed": 2,
+      "answers": [
+        {
+          "company": "Barclays PLC",
+          "status": 200,
+          "legal_name": "BARCLAYS PLC",
+          "active": true,
+          "ok": true
+        },
+        {
+          "company": "GSK PLC",
+          "status": 200,
+          "legal_name": "GSK PLC",
+          "active": true,
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

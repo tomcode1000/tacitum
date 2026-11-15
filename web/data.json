@@ -1,0 +1,488 @@
+{
+  "builtAt": "2026-11-15T14:42:03.033Z",
+  "node": "https://devnode.telegraphprotocol.com",
+  "repo": "https://github.com/tomcode1000/tacitum",
+  "memo": {
+    "file": "assessments/2026-11-15-private-barclays-plc.json",
+    "counterparty": {
+      "name": "Barclays PLC",
+      "jurisdiction": "GB"
+    },
+    "finishedAt": "2026-11-15T13:48:20.417Z",
+    "overall": "FLAG",
+    "verified": 6,
+    "receipts": 6,
+    "costUsd": 0.06,
+    "checks": [
+      {
+        "name": "news",
+        "verdict": "FLAG",
+        "answers": [
+          {
+            "miner": "Tacitum Adverse Media Screen",
+            "minerId": 7314402,
+            "ok": true,
+            "summary": "21 adverse items on Barclays, risk high",
+            "signal": "0x95611954943fbc324bb13bcf66b8155a0044e0c5e64cee8ee8977762a911e70d",
+            "costUsd": 0.01
+          }
+        ]
+      },
+      {
+        "name": "sanctions",
+        "verdict": "CLEAR",
+        "answers": [
+          {
+            "miner": "Counterproof Sanctions Screener",
+            "minerId": 731002,
+            "ok": true,
+            "summary": "matched = false",
+            "signal": "0x48e236aa736e13595519fb2332c28185e3bac7704c8c8ef74089b01575067393",
+            "costUsd": 0.01
+          },
+          {
+            "miner": "Sanctions Name Evidence",
+            "minerId": 710637,
+            "ok": true,
+            "summary": "matched = null",
+            "signal": "0x0cf217549156d43c3c4f56f5517dc2de464a2f4c5d8e9da9130961fcd4978b58",
+            "costUsd": 0.01
+          },
+          {
+            "miner": "LiveCert — Sourced Answers for Agents",
+            "minerId": 4433,
+            "ok": true,
+            "summary": "matched = false",
+            "signal": "0xb1f81e44ba7faf875c43e073748dfb7359d2c2de90cce478f10eace6d051f677",
+            "costUsd": 0.01
+          }
+        ]
+      },
+      {
+        "name": "filings",
+        "verdict": "INFO",
+        "answers": [
+          {
+            "miner": "Filing Window",
+            "minerId": 77131,
+            "ok": true,
+            "summary": "242 filings in the last 12 months",
+            "signal": "0x91a46a3ffe885358a5c1735b50eb3042f9fb30f5d5a7c4eac5a30819490a0121",
+            "costUsd": 0.01
+          }
+        ]
+      },
+      {
+        "name": "registry",
+        "verdict": "CLEAR",
+        "answers": [
+          {
+            "miner": "ZK Corporate Registry — Exact Identity and Status",
+            "minerId": 77393,
+            "ok": true,
+            "summary": "BARCLAYS PLC · active = true",
+            "signal": "0x2dbbd8ea78f0b171f6af97f80584633a62c67fadc2ec7f655c11ec284ab427e1",
+            "costUsd": 0.01
+          },
+          {
+            "miner": "miner 5185",
+            "minerId": 5185,
+            "ok": false,
+            "summary": "no answer (404, miner_not_found)",
+            "signal": null,
+            "costUsd": 0
+          }
+        ]
+      }
+    ]
+  },
+  "observed": {
+    "payer": "0xa327b26325B6A0de2BC28aFCbcf4ddd2b37Fb992",
+    "funder": "0x615cacc9f7613e435a5c39e3ac55efa16e442f11",
+    "fundingTx": "0x54ba86dbc949f1aea37d0e28c3238148ac77abbfc503c2787cb593c735ffa510",
+    "viaPool": true,
+    "anonymitySet": 8,
+    "parties": [
+      "Barclays PLC",
+      "GSK PLC",
+      "AstraZeneca PLC",
+      "National Grid PLC"
+    ],
+    "real": "Barclays PLC",
+    "order": [
+      {
+        "name": "National Grid PLC",
+        "check": "filings"
+      },
+      {
+        "name": "Barclays PLC",
+        "check": "news"
+      },
+      {
+        "name": "National Grid PLC",
+        "check": "news"
+      },
+      {
+        "name": "AstraZeneca PLC",
+        "check": "filings"
+      },
+      {
+        "name": "GSK PLC",
+        "check": "news"
+      },
+      {
+        "name": "GSK PLC",
+        "check": "registry"
+      },
+      {
+        "name": "National Grid PLC",
+        "check": "registry"
+      },
+      {
+        "name": "AstraZeneca PLC",
+        "check": "news"
+      },
+      {
+        "name": "Barclays PLC",
+        "check": "sanctions"
+      },
+      {
+        "name": "National Grid PLC",
+        "check": "sanctions"
+      },
+      {
+        "name": "Barclays PLC",
+        "check": "filings"
+      },
+      {
+        "name": "AstraZeneca PLC",
+        "check": "sanctions"
+      },
+      {
+        "name": "Barclays PLC",
+        "check": "registry"
+      },
+      {
+        "name": "AstraZeneca PLC",
+        "check": "registry"
+      },
+      {
+        "name": "GSK PLC",
+        "check": "filings"
+      },
+      {
+        "name": "GSK PLC",
+        "check": "sanctions"
+      }
+    ],
+    "bundleCostUsd": 0.21
+  },
+  "privacy": {
+    "k": 4,
+    "chance": 0.25,
+    "versions": [
+      {
+        "v": "Random",
+        "best": 1,
+        "lo": 0.68,
+        "hi": 1,
+        "runs": 8,
+        "change": "Decoys picked at random"
+      },
+      {
+        "v": "v1",
+        "best": 0.5,
+        "lo": 0.28,
+        "hi": 0.72,
+        "runs": 16,
+        "change": "Match fame and name format"
+      },
+      {
+        "v": "v2",
+        "best": 0.57,
+        "lo": 0.33,
+        "hi": 0.77,
+        "runs": 16,
+        "change": "Match registry answers"
+      },
+      {
+        "v": "v3",
+        "best": 0.45,
+        "lo": 0.23,
+        "hi": 0.67,
+        "runs": 16,
+        "change": "Match SEC filer status"
+      },
+      {
+        "v": "v4",
+        "best": 0.38,
+        "lo": 0.18,
+        "hi": 0.61,
+        "runs": 16,
+        "change": "Match filing volume"
+      },
+      {
+        "v": "v5",
+        "best": 0.256,
+        "lo": 0.1,
+        "hi": 0.49,
+        "runs": 16,
+        "change": "Fixed cover sets, re-probed miners"
+      }
+    ],
+    "attackers": {
+      "first": 0.25,
+      "famous": 0.256,
+      "format": 0.195,
+      "learned": 0.25,
+      "rarest": 0.25,
+      "bestCI95": [
+        0.1,
+        0.49
+      ],
+      "runs": 16,
+      "costUsd": 3.45
+    },
+    "perPartyUsd": 0.052
+  },
+  "pool": {
+    "address": "0x615cacc9f7613e435a5c39e3ac55efa16e442f11",
+    "denominationUsd": 1,
+    "approvedSet": 16,
+    "screener": {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "miner": 731002
+    },
+    "flaggedExample": {
+      "wallet": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+      "label": "Ronin bridge exploiter (OFAC SDN)",
+      "matched": true
+    },
+    "screened": [
+      {
+        "depositor": "0xa722D4B8F1A2928931537c77D6DcE41A1e9923c2",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xeb88201aa468f3aa1fc419b0319eb80c70837c8bf7c7046860716aa4fbbda296",
+        "tx": "0x4b932cd4611595233b1ff07ffbe8de1ca347c4a5ff86378323142bbe994bb09d"
+      },
+      {
+        "depositor": "0xaECbDB3d17b2DBdFc144fA76569FFC08575cb1a6",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x4bdd3dc10b44af3edf407055932f910240b67ab6712d3fe2b72f394893556d47",
+        "tx": "0xe90cd2d38251ed03f0dc36c889f920f78d3e6b67d13724adb4ad71fa83dd63cc"
+      },
+      {
+        "depositor": "0xE51A072D14D727eBA8d84fb3f056e46E1B1e35f1",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x6ad35ed79a07f3b9862f05e69e7a5ff2b029c1995a01026531368453eeada516",
+        "tx": "0x51b9977c9038de23bc8bc4b45f63a8b24570c9feac0299dad9f1ee0fc1f0ce9f"
+      },
+      {
+        "depositor": "0x9b0CeEAAe7b51723017614b36071C5f59F0a3626",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x87216015123e98f9145ca24e338341fa0c4e8021525b8db6e04daaaf1a9d8133",
+        "tx": "0x053f1e551ef3221f5c80260a166ae2253f4ec884f488b4248b988c4516629287"
+      },
+      {
+        "depositor": "0x6547E59e8114f9fc8Df7211dD92d6aF60cDE22cC",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xe248f7cf70f80370323403e0ef7ba2127ca192316b5fdcc122c12b22899af031",
+        "tx": "0xf52c4241f112a1f26bae36b53b9192cca2fa307520085232d3d25875c9e7e71e"
+      },
+      {
+        "depositor": "0x08CFA028456A4a8d275509094530d8dB15f45121",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xeffa0e5f0f315e628c62683ad0e07d8e50b04b7f93b3ad9e8929f69ae08654ce",
+        "tx": "0xb7ac8b386d827ea201221410f14eaa89f89304c05980c2382274f05c58c4068b"
+      },
+      {
+        "depositor": "0xE2fd0e821818cFd5CaC6D9757F61Cd4379A4EA90",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xc2e900dc5c4e5f90d066fab281691483d8b9f8a5f622a92bd78217923ac7fcda",
+        "tx": "0x1cd0b49ee70e8b5b24c520dddcc148911e799791bbe8ebfdb8f02fbb12438ee2"
+      },
+      {
+        "depositor": "0xeB5c16d4313f6fC95EC60a3F2b11E3C797bFDDea",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x92230d067f2c886b5ca85774432cabf94271b800e8bc891ed9f1f2846d66e6f4",
+        "tx": "0x2d5595d164fc48c918e6ad8b24aadca05907f3bcbdb42b23aef120b84734efe7"
+      },
+      {
+        "depositor": "0xdAbD908647C922e4CAF29934086b9480C4265119",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xff462d122662515d39cd43ec6d05af60d563dc99b0745c3781e2a8b1ec5c2230",
+        "tx": "0xb7f16f55d176e2ce5625c0d2d83e65cb5510f649f2074121992173f7963c5786"
+      },
+      {
+        "depositor": "0xe101Cf516e040f12fAb1ea5D48B9D7cE10917b42",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xdf1665c84600b09b0ce7d8a0063ac7710a3acf905383f89613356e77db9f5572",
+        "tx": "0xf28cf4f9adfa3c01fbf5460bd87dfa159dddf436cd9f53a992eeb6ad2651f111"
+      },
+      {
+        "depositor": "0x9Bbc3587a9309E47db676826EA0F2f24E3E370Eb",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x669b7678daa2e0157e5bd208eca70acda80581f7d3c580539361c1bfd5909e3f",
+        "tx": "0x13022015bb8eeb049b2c2fb1d0b07f9a33f00f171c9b442f3aa36bdb8acd804b"
+      },
+      {
+        "depositor": "0xB435531502b50340A93A19A54678287Cee4ceE13",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x71439b678435169326aa2a99d9c6301d82b76e25d46f4557cdb4e722eccf3071",
+        "tx": "0xdca13bcbd3b718e2202b0c90eb807507dbb27a977d17574377c2319c6e9d0266"
+      }
+    ],
+    "screenedTotal": 16
+  },
+  "miner": {
+    "id": 7314402,
+    "slug": "tacitum-adverse-media",
+    "registrationId": 5285,
+    "endpoint": "https://tacitum-adverse.vercel.app/api/adverse",
+    "sample": {
+      "query": "Binance",
+      "result": {
+        "adverse": true,
+        "answer": "69 adverse news items naming Binance in the last 12 months from 50 sources, mainly data breach, money laundering, investigation. Latest: Binance Restores Withdrawals Across 87 Networks After $6.3bn Security Breach (Crowdfund Insider, 2026-11-14).",
+        "articles": [
+          {
+            "categories": [
+              "data_breach"
+            ],
+            "published": "2026-11-14",
+            "solicitation": false,
+            "source": "Crowdfund Insider",
+            "title": "Binance Restores Withdrawals Across 87 Networks After $6.3bn Security Breach",
+            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQnVIa1JYZkg0ZnpqQjJDR04xTE5LOUVrUDdMTHgyXzhiaXdSclZuUFY2dW14blp4ZkZ5QVVnTEtBTW1DTldkWDlmTmd3VUlMSmw4X0hqdkR5R09DNHlscHYtLWJUYzNIZHFFdTZkMnJXYnkwWlNYMEpnZ3lWM0gweWcxTlpnWVdRcEszNGNxcVA4UVQ2SDdrWmZaT2Y3dWtsV0Ywd05TZXJBVHJ3OTh6ek1LN3lseW1UeElSWFFiNHpkZw?oc=5"
+          },
+          {
+            "categories": [
+              "data_breach"
+            ],
+            "published": "2026-11-14",
+            "solicitation": false,
+            "source": "Tekedia",
+            "title": "Binance Targets Full Withdrawal Resumption Next Week After $6.3bn Security Breach",
+            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQemxOa2o5RFB6ZTJVbU1jS3N0cjJqUDlaVzMzTWRnNUdWTHRfSzNjX2M5TU1qSGgzUU9waXpPY0sxdEZXdWJXb3d4NE91YkRVeHVpX1BVTkxmRnRoUFlnNHh2Q1BPV3AxdThpSWhlWW1mZGZxNThaLVp4V01lWV92MkdfenNRaWM0X0tHT19jZ1NZaTJDOWk1cURTbnlydmZmbk1INHVjSEs?oc=5"
+          },
+          {
+            "categories": [
+              "regulatory_action"
+            ],
+            "published": "2026-11-14",
+            "solicitation": false,
+            "source": "Laodong.vn",
+            "title": "Technology 24h: Meta fined, Binance is about to resume withdrawals",
+            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbTQ1cnFMbko0NWNlQTNhYlpOeVdPLU1zbXljak1zMmpDbXA0eXlDZ0lxbDhvd0c3VkNmdmRmMU1HZnRzazRReWNmd3ZOUUl2MFZFMkFtZllrMHBELUIyVmhDTGZsXzVPc21GQUQ0S3U1Y3NxMTdjekZhYlVOTzJJS1F2bkVwNmdJMVUtTHR1NDNOMldpYzZveDNjUEVjaTMzaF9aQVNQTHdyN1o0dFNIbDdKSQ?oc=5"
+          },
+          {
+            "categories": [
+              "data_breach"
+            ],
+            "published": "2026-11-14",
+            "solicitation": false,
+            "source": "Bitcoin News",
+            "title": "Binance Reopens 87 Networks Following Historic $6.3 Billion Breach",
+            "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOT2x6V1pTbGZNdmEyYzhkeUlqQ2FRYkNZQVRUcTdCc0ZqTjlxZzRWdXQ2dE1oSVhFeXg1dzhqaE9jeEJaeFVhZHBPTnZVZDViTnRFX2xDLUE2NjIwdWxKTDdmNVk2UUNQemU0dVNYVlU2VXFLeXI5Z1FkX01ibkp2dlViVFR5OHZuQlRwTmxxYjIybkgwRGdGdzlCMmVHODQyb2c?oc=5"
+          },
+          {
+            "categories": [
+              "data_breach"
+            ],
+            "published": "2026-11-14",
+            "solicitation": false,
+            "source": "PhilNews",
+            "title": "Binance Announces Completion of $6.34-Billion Reimbursement After Major Security Breach",
+            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQODFsRlBmaUpjYnNlNDRQa1ZPYndNWTVIaEhScWllQmFpV3JnNG9qeVNEMWZScVIwUTJyUHllSFdnT3J5UXh6dkpOcVNYdG5DOXVMYUdhSnBSVzBjS3JwRlpscVdQT3JtdVdEaHM5MWNYd0pvVDh2VWtvcENSeHJ3bTF0aGE0eTdRS2E2Mkdsb19qOXJCTk9oZGN6VGJkZnh2YU1qcnJiSHJ6Z3F1TlRGaHY1TnFJbW5ubnc?oc=5"
+          },
+          {
+            "categories": [
+              "data_breach"
+            ],
+            "published": "2026-11-13",
+            "solicitation": false,
+            "source": "Dark Reading",
+            "title": "Binance Breach Highlights Control Weaknesses at Crypto Orgs",
+            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORHNmV2pXZXB5alo2TGlqbnlrb0RFbnhjT0VONjE4UlpGYmR3VDYzd1l5am51V1hPdDlicFBNaWwxWGRMX3lZS3BMdW5fbnFtLUx1RVdfZm1BSEtrVnVkVkpZMGlKYWY2b21lN3JOVlFUMzBUYXlYOHhVOTU3ODlYYWE0di1WY2JDVUE2RlRaTFJnckZqQkZ1a19KV3lrYmU0X3BQTHpZNW83YjFCU3pLb0F3?oc=5"
+          },
+          {
+            "categories": [
+              "data_breach"
+            ],
+            "published": "2026-11-13",
+            "solicitation": false,
+            "source": "Yahoo Finance",
+            "title": "3 Cybersecurity Stocks Investors Are Watching After The Binance Breach",
+            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbHk1WjFHbF9EMTBreXdTS0hPb0t1V3VSakRmSkhJSEkzcXNmWW1FRFl3cndZS0N5ckFFQWwxUFlhS3UzZ2tac1d0VWt3MWc2Y0pySDVWbzQ3ODhHNWR6SjFkajlQS3FTRGVINWxEaUtfUWt6VmdPSHNJNGdMY3FvTEs0aFNqeUMxbS16NGlvQk9YMFBZMGZpbnBQdEM1QmhSNGZNajVQQmw?oc=5"
+          },
+          {
+            "categories": [
+              "data_breach"
+            ],
+            "published": "2026-11-13",
+            "solicitation": false,
+            "source": "TNGlobal",
+            "title": "Binance completes coverage of $6.34B in losses from security breach",
+            "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSHQySVlyQnk0RWtXWVdyLXJQbTg0cU1DeVIzcUZ1NkhtRHktb3F5WEx5c2JNYnBWTzB1dVdMb3g1OW5Ec3ByZGN2ODVKZ2tfV1poNHBSWEQzTUZWYWgtU2MzVFZ0SlM4aFN0MnFrVEFmLVF0cTg5dHFlWTQ4SHgzUkd6VDVSNE1QZm42WE5FQUc2cXFjWktvd0RhNzZuWVhnNm1oeA?oc=5"
+          }
+        ],
+        "brief": "69 adverse items on Binance, risk high",
+        "categories": {
+          "data_breach": 63,
+          "investigation": 2,
+          "litigation": 2,
+          "money_laundering": 4,
+          "regulatory_action": 1
+        },
+        "checked_at": "2026-11-15T13:32:31.921Z",
+        "method": "Entity name plus adverse terms searched over 12 months in GDELT DOC 2.0 and Google News RSS; kept only headlines that name the entity and contain an adverse term; copies de-duplicated across feeds; law-firm solicitations separated.",
+        "provenance": [
+          {
+            "articles": 0,
+            "note": "TimeoutError",
+            "ok": false,
+            "provider": "gdelt"
+          },
+          {
+            "articles": 90,
+            "ok": true,
+            "provider": "google_news_rss"
+          }
+        ],
+        "query": "Binance",
+        "result_count": 69,
+        "risk": "high",
+        "scanned": 90,
+        "solicitations": 0,
+        "sources": [
+          "Crowdfund Insider",
+          "Tekedia",
+          "Laodong.vn",
+          "Bitcoin News",
+          "PhilNews",
+          "Dark Reading",
+          "Yahoo Finance",
+          "TNGlobal",
+          "TradingView",
+          "Beinsure",
+          "Bitdefender",
+          "NeoTeo"
+        ],
+        "window": "last 12 months"
+      },
+      "signal": "0x229a9088ae79b7edb62049af41f55fbc83f07f5fc34a32481391661b6ff51ee9"
+    }
+  }
+}

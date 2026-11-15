@@ -9,8 +9,10 @@ export const CHECKS = {
   // Re-probed 13 Nov: 9002 left both intents, 7393 stopped resolving UK names, 710637 sometimes
   // returns nulls. "two" asks in order until two miners give a definite answer.
   sanctions: { intent: "SANCTIONS_SCREENING_MATCH_GENERAL", miners: [731002, 710637, 4433], mode: "two", params: (c) => ({ name: c.name }) },
-  // 77393 reads Companies House; 5185 reads GLEIF (LEI ids), so the two are independent sources.
-  registry: { intent: "CORPORATE_REGISTRY_LOOKUP_GENERAL", miners: [77393, 5185], mode: "all", params: (c) => ({ company: c.name, jurisdiction: c.jurisdiction }) },
+  // 77393 reads Companies House. 5186 (Praman, re-registered from 5185 on 15 Nov) and 7393
+  // (DataWire) read GLEIF, an independent register. "twoOk" stops after two usable answers.
+  // Re-probed 15 Nov: data/registry-probe.json.
+  registry: { intent: "CORPORATE_REGISTRY_LOOKUP_GENERAL", miners: [77393, 5186, 7393], mode: "twoOk", params: (c) => ({ company: c.name, jurisdiction: c.jurisdiction }) },
   filings: { intent: "REGULATORY_FILING_MONITOR_GENERAL", miners: [77131], mode: "first", params: (c) => ({ entity: c.name, period: "last 12 months" }) },
   // 7314402 is our own adverse-media miner (miner/): headlines must name the entity and report
   // something adverse, so "0 items" means screened and clean. 7329 and 302 are general news fallbacks.
@@ -42,6 +44,7 @@ export async function runCheck(client, check, counterparty) {
       receipt: res.receipt,
     });
     if (check.mode === "first" && answers.at(-1).ok) break;
+    if (check.mode === "twoOk" && answers.filter((a) => a.ok && bool(a.result.active) !== null).length >= 2) break;
     if (check.mode === "two" && answers.filter((a) => a.ok && bool(a.result.matched) !== null).length >= 2) break;
   }
   return { intent: check.intent, params, answers };

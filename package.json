@@ -11,7 +11,10 @@
     "probe": "node scripts/probe-miners.mjs",
     "mcp": "node src/mcp.js",
     "pool:deploy": "node scripts/pool-deploy.mjs",
-    "pool:e2e": "node scripts/pool-e2e.mjs"
+    "pool:e2e": "node scripts/pool-e2e.mjs",
+    "pool:screen": "node scripts/pool-screen.mjs",
+    "web": "node scripts/serve-web.mjs",
+    "web:build": "node scripts/build-web.mjs"
   },
   "keywords": [
     "telegraph",
@@ -43,6 +46,7 @@
   "files": [
     "src/",
     "data/filers.json",
+    "data/pool.json",
     "data/cover-sets.json",
     "README.md",
     "LICENSE",
