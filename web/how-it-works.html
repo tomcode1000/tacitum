@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How it works · Tacitum</title>
+<meta name="description" content="How Tacitum keeps a counterparty check private on Telegraph: screened deposits, a zero-knowledge withdraw, matched decoys and public receipts.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="site.css">
+</head>
+<body data-head="solid">
+<main id="main">
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="crumbs"><a href="index.html">Tacitum</a> / How it works</p>
+      <h1>Two leaks, <span class="accent">two fixes.</span></h1>
+      <p class="lede">Telegraph publishes every paid question and the wallet that paid for it. Tacitum hides the question among decoys and hides the payer behind a pool that only screened money can enter. Nothing is taken away from verification.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap cards c2">
+      <div class="card" style="padding:36px">
+        <span class="icon"><i data-i="eyeOff"></i></span>
+        <p class="eyebrow">Leak one: the question</p>
+        <h3 style="font-size:1.8rem">Who you are screening</h3>
+        <p><b style="color:var(--text)">Fix: matched decoys.</b> The real company is bought together with three others chosen to look the same on every public signal: how famous they are, how the name is written, what the registry says and how much they file. The four checks are shuffled and spaced, and decoy groups are fixed, so repeat screens give nothing away.</p>
+      </div>
+      <div class="card" style="padding:36px">
+        <span class="icon"><i data-i="wallet"></i></span>
+        <p class="eyebrow">Leak two: the payer</p>
+        <h3 style="font-size:1.8rem">Which wallet is asking</h3>
+        <p><b style="color:var(--text)">Fix: the screened pool.</b> Each assessment is paid by a brand-new wallet. Its Telegraph balance comes from a pool contract through a zero-knowledge withdraw, so on chain the payer is funded by the pool, never by the desk.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Step by step</p>
+        <h2>What happens, <span class="accent">and who can see it.</span></h2>
+      </div>
+      <div class="flow-rows" id="rows"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Trust model</p>
+        <h2>Who learns what.</h2>
+      </div>
+      <div class="panel scroll-x">
+        <table class="table">
+          <thead><tr><th>Party</th><th>Learns</th><th>Does not learn</th></tr></thead>
+          <tbody>
+            <tr><td>Anyone reading the feed</td><td>Four companies were checked by a new wallet that the pool funded; every answer and receipt</td><td>Which company the desk wanted, or which desk paid</td></tr>
+            <tr><td>Telegraph miners</td><td>The questions they answer, and that they were paid</td><td>Which of the questions is real</td></tr>
+            <tr><td>The pool screener</td><td>Who deposited, and that each depositor passed sanctions screening</td><td>Which deposit funded which payer</td></tr>
+            <tr><td>The relayer</td><td>That a valid proof was submitted for a given one-time payer</td><td>Which deposit the proof spends</td></tr>
+            <tr><td>The desk</td><td>Everything: the real target, every answer, every receipt</td><td>Nothing is hidden from the desk</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout" style="margin-top:28px"><b>Stated limits.</b> Everything runs on Sepolia with test USDC. The pool's hiding set is only as large as its approved deposits, and on testnet those are wallets we seeded. The zero-knowledge setup was generated locally; mainnet needs a public ceremony. Privacy was measured on 16 live runs.</div>
+      <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap"><a class="btn light" href="live-run.html">See it on a live run <i data-i="arrow"></i></a><a class="btn ghost" href="docs.html">Run it yourself</a></div>
+    </div>
+  </section>
+</main>
+<script src="site.js"></script>
+<script>
+T.data.then((d) => {
+  const v5 = d.privacy.versions.at(-1);
+  const rows = [
+    ["Deposit", "A desk deposits a fixed $" + d.pool.denominationUsd + " into the pool by signing an EIP-3009 authorization. Its deposit wallet needs no ETH, and the signature can only fund that one deposit.", "That this wallet deposited, and when.", "Nothing about what the money will later pay for."],
+    ["Screen", "The screener runs the depositor's wallet through Telegraph's sanctions intent (miner " + d.pool.screener.miner + "). A clear answer adds the deposit to the approved set; a match refunds it; no answer leaves it pending.", "The verdict and its Telegraph receipt, stored on chain with the approval.", "Nothing: screening is meant to be visible to auditors."],
+    ["Withdraw", "When the desk needs a payer, it proves with Groth16 that it owns one approved deposit, without saying which. A relayer submits the proof; the pool pays straight into a brand-new wallet's Telegraph balance.", "That the pool funded a new payer.", "Which of the " + d.pool.approvedSet + " approved deposits paid for it."],
+    ["Blend", "The new wallet buys the full assessment for the real company and for three matched decoys, shuffled and spaced: sanctions from two miners, the company registry, filings and adverse news.", "Four companies checked alike.", "Which one matters. Best attacker " + Math.round(v5.best * 100) + "% against a blind " + Math.round(d.privacy.chance * 100) + "%."],
+    ["Verify", "The desk's memo keeps every answer's signal hash and re-checks each against Telegraph's public record: same payer, same settlement transaction.", "Every receipt.", "Nothing is lost: verification works exactly as on a public call."],
+  ];
+  document.getElementById("rows").innerHTML = rows.map(([h, what, pub, hid], i) => `
+    <div class="flow-row"><span class="num">0${i + 1}</span>
+      <div><h3>${h}</h3><p>${what}</p></div>
+      <div><span class="lab">Public</span><p>${pub}</p></div>
+      <div><span class="lab">Hidden</span><p>${hid}</p></div></div>`).join("");
+});
+</script>
+</body>
+</html>

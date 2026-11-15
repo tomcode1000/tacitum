@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Screened pool · Tacitum</title>
+<meta name="description" content="Tacitum's funding pool: every depositor is sanctions-screened through Telegraph before their money can be spent, and payers are funded by a zero-knowledge withdraw.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="site.css">
+</head>
+<body data-head="solid">
+<main id="main">
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="crumbs"><a href="index.html">Tacitum</a> / Screened pool</p>
+      <h1>Private funding, <span class="accent">clean by construction.</span></h1>
+      <p class="lede">A private pool on a network whose busiest job is sanctions screening has to keep sanctioned money out. Every depositor is screened through Telegraph before their deposit can be spent, and the screening receipt is written on chain with the approval.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="stats" id="pool-stats"></div>
+      <div class="steps" id="steps" style="margin-top:22px"></div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Screening log</p>
+        <h2>Every approval <span class="accent">carries its receipt.</span></h2>
+        <p class="lede">Click any receipt to open Telegraph's public record of the screen. The last row is a screen test against a wallet on the OFAC list: it is flagged, so a deposit from it would be refused and refunded.</p>
+      </div>
+      <div class="panel scroll-x" id="log"></div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">Join the pool</p>
+        <h2>Every deposit <span class="accent">widens the crowd.</span></h2>
+        <p class="lede">A pool-funded payer hides among all approved deposits. Today those are wallets we seeded on testnet. Other teams can deposit test USDC in one call, and the screener approves them automatically once Telegraph clears the wallet.</p>
+        <div><a class="btn light" href="docs.html#pool">Pool docs <i data-i="arrow"></i></a></div>
+      </div>
+      <pre><code><span class="c-key">import</span> { tacitum } <span class="c-key">from</span> <span class="c-str">"tacitum"</span>;
+
+<span class="c-key">const</span> t = tacitum({ funder });   <span class="c-com">// test USDC on Sepolia</span>
+<span class="c-key">await</span> t.deposit();                 <span class="c-com">// 1 USDC, gasless</span>
+<span class="c-key">await</span> t.poolStatus();              <span class="c-com">// { approvedSet, myNotes }</span>
+
+<span class="c-com"># or from an agent: the pool_deposit MCP tool</span></code></pre>
+    </div>
+  </section>
+</main>
+<script src="site.js"></script>
+<script>
+T.data.then((d) => {
+  const p = d.pool;
+  document.getElementById("pool-stats").innerHTML = [
+    [p.approvedSet, "Approved deposits", "The set each withdraw hides in."],
+    [p.screenedTotal, "Wallets screened", "Through Telegraph sanctions, miner " + p.screener.miner + "."],
+    ["$" + p.denominationUsd, "Per deposit", "Fixed size, so deposits look alike."],
+    ["9,255", "Circuit constraints", "Groth16 withdraw proof, about 1.7 s."],
+  ].map(([n, w, s]) => `<div class="stat"><div class="num">${n}</div><div class="what">${w}</div><div class="src">${s}</div></div>`).join("");
+  const steps = [
+    ["Deposit", "Signed EIP-3009 authorization; the nonce binds it to one commitment.", "No ETH needed"],
+    ["Screen", "Depositor wallet through Telegraph sanctions.", "Clear, match or pending"],
+    ["Approve", "Commitment enters the Merkle tree with the signal hash.", "Matches are refunded"],
+    ["Withdraw", "Groth16 proof of membership; nullifier stops reuse.", "Recipient and fee bound"],
+    ["Pay", "Pool calls depositUSDCFor on Telegraph's escrow.", "Payer never holds gas"],
+  ];
+  document.getElementById("steps").innerHTML = steps.map(([h, t, s], i) => `<div class="step"><div class="top"><span class="n">0${i + 1}</span><span class="rule"></span></div><h4>${h}</h4><p>${t}</p><small>${s}</small></div>`).join("");
+  const rows = p.screened.map((s) => `<tr><td>${T.addr(s.depositor)}</td><td>${T.chip(s.verdict === "approve" ? "CLEAR" : s.verdict === "reject" ? "FLAG" : "REVIEW")}</td><td>${s.verdict === "approve" ? "Approved into the set" : T.esc(s.verdict)}</td><td>${T.sig(s.signal)}</td><td>${T.tx(s.tx)}</td></tr>`).join("");
+  document.getElementById("log").innerHTML = `<table class="table"><thead><tr><th>Depositor</th><th>Screen</th><th>Outcome</th><th>Telegraph receipt</th><th>Approval transaction</th></tr></thead><tbody>${rows}
+    <tr><td>${T.addr(p.flaggedExample.wallet)}</td><td>${T.chip("FLAG")}</td><td>Screen test: ${T.esc(p.flaggedExample.label)}</td><td class="muted">matched = true</td><td class="muted">would be refused</td></tr></tbody></table>
+    <p class="muted" style="padding:16px 22px;font-size:.88rem;border-top:1px solid var(--line)">Latest ${p.screened.length} of ${p.screenedTotal} screened wallets. Pool contract ${T.addr(p.address)} on Sepolia.</p>`;
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Live run · Tacitum</title>
+<meta name="description" content="One private counterparty assessment bought on Telegraph's live testnet: what the public feed saw, what the desk saw, and the receipted memo.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="site.css">
+</head>
+<body data-head="solid">
+<main id="main">
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="crumbs"><a href="index.html">Tacitum</a> / Live run</p>
+      <h1>One purchase. <span class="accent">Two very different views.</span></h1>
+      <p class="lede" id="hero-lede">A full counterparty assessment bought on Telegraph's testnet on 15 November 2026, with a payer the screened pool funded and three decoy companies alongside the real one.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Public feed against desk view</p>
+        <h2>Sixteen paid checks, <span class="accent">in the order Telegraph recorded them.</span></h2>
+        <p class="lede">Switch views. The feed sees four companies screened alike by a wallet nobody has seen before. Only the desk knows which one mattered.</p>
+      </div>
+      <div class="grid-main" id="views">
+        <div class="panel">
+          <div class="panel-head">
+            <span class="eyebrow" id="feed-title">Public feed</span>
+            <div class="seg" role="group" aria-label="View">
+              <button type="button" data-view="public" aria-pressed="true">Public feed</button>
+              <button type="button" data-view="desk" aria-pressed="false">Desk view</button>
+            </div>
+          </div>
+          <dl class="feed-meta" id="feed-meta"></dl>
+          <ol class="feed" id="feed"></ol>
+        </div>
+        <div class="panel sticky">
+          <div class="panel-head"><span class="eyebrow">What can be learned</span></div>
+          <div class="learn" id="learn"></div>
+          <p class="muted" style="padding:18px 22px;font-size:.88rem" id="learn-note"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">The desk's record</p>
+        <h2>The memo, <span class="accent">with a receipt for every answer.</span></h2>
+        <p class="lede">Each line links to Telegraph's public signal record, where anyone can confirm the answer was bought by this payer and settled on chain.</p>
+      </div>
+      <article class="panel memo" id="memo"></article>
+      <div style="margin-top:32px;display:flex;gap:28px;flex-wrap:wrap">
+        <a class="link-arrow" href="privacy.html">How we know the decoys hold <i data-i="arrow"></i></a>
+        <a class="link-arrow" href="pool.html">How the payer was funded <i data-i="arrow"></i></a>
+      </div>
+    </div>
+  </section>
+</main>
+<script src="site.js"></script>
+<script>
+T.data.then((d) => {
+  const o = d.observed, m = d.memo, v5 = d.privacy.versions.at(-1);
+  const verdictFor = (c) => m.checks.find((x) => x.name === c)?.verdict;
+  document.getElementById("feed-meta").innerHTML = `
+    <dt>Payer</dt><dd>${T.addr(o.payer)} <span class="muted">· first seen in this bundle</span></dd>
+    <dt>Funded by</dt><dd>${o.viaPool ? "Tacitum screened pool " : ""}${T.addr(o.funder)} · ${T.tx(o.fundingTx)}</dd>
+    <dt>Real target</dt><dd><span class="only-public"><span class="redact" style="width:150px" aria-label="hidden"></span></span><span class="only-desk"><b>${T.esc(o.real)}</b></span></dd>`;
+  document.getElementById("feed").innerHTML = o.order.map((r) => {
+    const real = r.name === o.real;
+    return `<li class="${real ? "real" : "cover"}"><span class="check">${T.CHECK[r.check]}</span><span>${T.esc(r.name)}</span><span class="only-desk">${real ? T.chip(verdictFor(r.check)) : '<span class="tag">Cover</span>'}</span></li>`;
+  }).join("");
+  const row = (k, pub, desk) => `<div class="row"><span class="k">${k}</span><span><span class="only-public">${pub}</span><span class="only-desk">${desk}</span></span></div>`;
+  document.getElementById("learn").innerHTML =
+    row("Who was screened", `<span class="redact" style="width:90px"></span> <span class="muted">one of ${o.parties.length}, equally likely</span>`, `<b>${T.esc(o.real)}</b>`) +
+    row("Who asked", `<span class="redact" style="width:120px"></span> <span class="muted">a new wallet the pool funded</span>`, `The desk, one of ${o.anonymitySet} screened depositors at the time`) +
+    row("The verdict", `<span class="redact" style="width:70px"></span> <span class="muted">all four bought alike</span>`, T.chip(m.overall, true)) +
+    `<div class="row"><span class="k">Proof it was bought</span><span>${m.verified} of ${m.receipts} receipts on the public record, in both views.</span></div>`;
+  document.getElementById("learn-note").textContent = `Measured over ${v5.runs} live bundles, the best attacker picks the real company ${Math.round(v5.best * 100)}% of the time (95% interval ${Math.round(v5.lo * 100)}–${Math.round(v5.hi * 100)}%). A blind guess is ${Math.round(d.privacy.chance * 100)}%.`;
+  const views = document.getElementById("views");
+  document.querySelectorAll("[data-view]").forEach((b) => (b.onclick = () => {
+    const desk = b.dataset.view === "desk";
+    views.classList.toggle("desk", desk);
+    document.querySelectorAll("[data-view]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+    document.getElementById("feed-title").textContent = desk ? "Desk view" : "Public feed";
+  }));
+
+  const order = ["sanctions", "registry", "filings", "news"];
+  document.getElementById("memo").innerHTML = `
+    <div class="memo-head">
+      <div><p class="eyebrow">Counterparty assessment · ${T.esc(m.counterparty.jurisdiction)} · ${new Date(m.finishedAt).toUTCString().slice(5, 22)} UTC</p><h3 style="font-size:2rem;margin-top:10px">${T.esc(m.counterparty.name)}</h3></div>
+      <div style="text-align:right"><p class="eyebrow" style="margin-bottom:10px">Overall</p>${T.chip(m.overall, true)}</div>
+    </div>
+    <div class="scroll-x"><table class="table">
+      <thead><tr><th style="width:200px">Check</th><th style="width:130px">Verdict</th><th>Evidence and receipts</th></tr></thead>
+      <tbody>${[...m.checks].sort((a, b) => order.indexOf(a.name) - order.indexOf(b.name)).map((c) => `<tr><td>${T.CHECK[c.name]}</td><td>${T.chip(c.verdict)}</td><td><div class="ev">${c.answers.map((a) => `<div><span class="who">${T.esc(a.miner)}</span><span>${T.esc(a.summary)}</span>${T.sig(a.signal)}</div>`).join("")}</div></td></tr>`).join("")}</tbody>
+    </table></div>
+    <div class="memo-foot"><span><b style="color:var(--text)">${m.verified} of ${m.receipts}</b> receipts re-verified (payer and settlement match)</span><span>Paid by ${T.addr(o.payer)}</span><span>This memo's share $${m.costUsd} · bundle $${o.bundleCostUsd}</span><a href="${d.repo}/blob/main/${m.file.replace(/\.json$/, ".md")}" style="color:var(--text)">Full memo on GitHub</a></div>
+    <p class="muted" style="padding:16px 28px 22px;font-size:.88rem">FLAG means a person should review, not that the counterparty is blocked. Here it comes from adverse news alone; sanctions and registry are clear.</p>`;
+});
+</script>
+</body>
+</html>

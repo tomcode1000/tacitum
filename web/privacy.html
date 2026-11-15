@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy results · Tacitum</title>
+<meta name="description" content="How well Tacitum's decoys hide the real counterparty, measured against attackers on live Telegraph purchases.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="site.css">
+</head>
+<body data-head="solid">
+<main id="main">
+  <header class="page-hero">
+    <div class="wrap">
+      <p class="crumbs"><a href="index.html">Tacitum</a> / Privacy</p>
+      <h1>We attacked our own traffic <span class="accent">until it held.</span></h1>
+      <p class="lede">Each round, we bought real assessments with decoys on the live network, then ran attackers that try to pick the real company out of the public feed. Random decoys were caught every time. Five rounds later, the best attacker does no better than a blind guess.</p>
+    </div>
+  </header>
+
+  <section class="section">
+    <div class="wrap grid-main">
+      <div class="panel" style="position:relative">
+        <div class="panel-head">
+          <span class="eyebrow">Best attacker success, four parties per bundle</span>
+          <div class="seg" role="group" aria-label="Chart or table">
+            <button type="button" data-cv="chart" aria-pressed="true">Chart</button>
+            <button type="button" data-cv="table" aria-pressed="false">Table</button>
+          </div>
+        </div>
+        <div id="chart" style="padding:24px 24px 16px"></div>
+        <div id="chart-table" class="scroll-x" hidden></div>
+        <div class="tip" id="tip" role="status"></div>
+      </div>
+      <div class="panel sticky">
+        <div class="panel-head"><span class="eyebrow">Privacy dial</span></div>
+        <div style="padding:22px;display:grid;gap:18px" id="dial"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Method</p>
+        <h2>Five attackers, <span class="accent">one honest number.</span></h2>
+        <p class="lede">Every attacker sees only what the public feed shows. We report the best of them, with a 95% Wilson interval.</p>
+      </div>
+      <div class="cards c3" id="attackers"></div>
+      <div class="callout" style="margin-top:28px" id="caveat"></div>
+    </div>
+  </section>
+</main>
+<script src="site.js"></script>
+<script>
+T.data.then((d) => {
+  const p = d.privacy, v5 = p.versions.at(-1);
+  drawChart(p.versions, p.chance);
+  document.getElementById("chart-table").innerHTML = `<table class="table"><thead><tr><th>Version</th><th>What changed</th><th>Best attacker</th><th>95% interval</th><th>Runs</th></tr></thead><tbody>${p.versions.map((v) => `<tr><td>${v.v}</td><td>${T.esc(v.change)}</td><td>${v.best.toFixed(2)}</td><td>${v.lo.toFixed(2)}–${v.hi.toFixed(2)}</td><td>${v.runs}</td></tr>`).join("")}</tbody></table>`;
+  document.querySelectorAll("[data-cv]").forEach((b) => (b.onclick = () => {
+    const t = b.dataset.cv === "table";
+    document.getElementById("chart").hidden = t; document.getElementById("chart-table").hidden = !t;
+    document.querySelectorAll("[data-cv]").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+  }));
+  document.getElementById("dial").innerHTML = `
+    <label for="k" style="display:flex;justify-content:space-between;font-weight:600"><span>Parties per bundle</span><span class="mono" id="kv"></span></label>
+    <input id="k" type="range" min="2" max="8" value="4">
+    <div class="kpis"><div class="kpi"><span class="eyebrow">Blind guess</span><b id="kg"></b></div><div class="kpi"><span class="eyebrow">Cost per assessment</span><b id="kc"></b></div></div>
+    <p class="muted" style="font-size:.88rem">More decoys make a blind guess less likely and cost more. Cost uses the measured $${p.perPartyUsd.toFixed(2)} per party; attackers were measured at four parties.</p>`;
+  const k = document.getElementById("k");
+  const upd = () => { document.getElementById("kv").textContent = k.value; document.getElementById("kg").textContent = Math.round(100 / k.value) + "%"; document.getElementById("kc").textContent = "$" + (k.value * p.perPartyUsd).toFixed(2); };
+  k.oninput = upd; upd();
+  const a = p.attackers;
+  const list = [
+    ["First in line", "Picks whichever company was asked first.", a.first],
+    ["Most famous", "Picks the best-known name, by news and web presence.", a.famous],
+    ["Name format", "Picks the name written most like a real desk would type it.", a.format],
+    ["Learned", "A classifier trained on every public signal at once.", a.learned],
+    ["Across runs", "Watches many bundles and picks the name it has seen least.", a.rarest],
+  ];
+  document.getElementById("attackers").innerHTML = list.map(([h, t, s]) => `<div class="card"><p class="eyebrow">Attacker</p><h3>${h}</h3><p>${t}</p><div class="foot" style="display:flex;justify-content:space-between;align-items:baseline"><span class="muted">Success in v5</span><b style="font:600 1.6rem var(--display)">${Math.round(s * 100)}%</b></div></div>`).join("") +
+    `<div class="card" style="background:transparent;border-style:dashed"><p class="eyebrow">Blind guess</p><h3>Chance</h3><p>One in four, with no information at all.</p><div class="foot" style="display:flex;justify-content:space-between;align-items:baseline"><span class="muted">Reference</span><b style="font:600 1.6rem var(--display)">${Math.round(p.chance * 100)}%</b></div></div>`;
+  document.getElementById("caveat").innerHTML = `<b>What this does not prove.</b> ${v5.runs} live runs put the best attacker between ${Math.round(v5.lo * 100)}% and ${Math.round(v5.hi * 100)}% at 95% confidence, so a better attacker could still exist. Raw runs and results are in the <a href="${d.repo}/tree/main/data" style="color:var(--text)">repository</a>.`;
+});
+
+function drawChart(vs, chance) {
+  const W = 760, H = 330, L = 46, R = 16, Tp = 16, B = 52;
+  const xs = vs.map((_, i) => L + ((W - L - R) * (i + 0.5)) / vs.length);
+  const y = (v) => Tp + (H - Tp - B) * (1 - v);
+  let s = `<svg class="chart" viewBox="0 0 ${W} ${H}" role="img" aria-label="Best attacker success falls from 1.00 with random decoys to ${vs.at(-1).best.toFixed(2)} in v5, against a blind guess at ${chance}">`;
+  for (const t of [0, .25, .5, .75, 1]) s += `<line class="axis" x1="${L}" x2="${W - R}" y1="${y(t)}" y2="${y(t)}" ${t ? 'stroke-opacity=".45"' : ""}/><text x="${L - 10}" y="${y(t) + 4}" text-anchor="end">${t.toFixed(2)}</text>`;
+  s += `<line class="chance" x1="${L}" x2="${W - R}" y1="${y(chance)}" y2="${y(chance)}"/><text x="${L + 8}" y="${y(chance) + 18}">Blind guess, ${chance}</text>`;
+  vs.forEach((v, i) => {
+    s += `<line class="ci" x1="${xs[i]}" x2="${xs[i]}" y1="${y(v.lo)}" y2="${y(v.hi)}"/><circle class="pt${i === vs.length - 1 ? " last" : ""}" cx="${xs[i]}" cy="${y(v.best)}" r="6"/><text class="val" x="${xs[i] + 11}" y="${y(v.best) + 4}">${v.best.toFixed(2)}</text><text x="${xs[i]}" y="${H - B + 24}" text-anchor="middle">${v.v}</text><rect class="hit" data-i="${i}" x="${xs[i] - 45}" y="${Tp}" width="90" height="${H - Tp - B}"/>`;
+  });
+  s += `<text x="${L}" y="${H - 6}">Bars: 95% Wilson interval</text></svg>`;
+  const el = document.getElementById("chart"); el.innerHTML = s;
+  const tip = document.getElementById("tip"), card = el.parentElement;
+  el.querySelectorAll(".hit").forEach((h) => {
+    const show = () => { const v = vs[h.dataset.i]; tip.innerHTML = `<b>${v.v}</b> · ${T.esc(v.change)}<br>Best attacker ${v.best.toFixed(2)} · 95% ${v.lo.toFixed(2)}–${v.hi.toFixed(2)} · ${v.runs} runs`; const bx = card.getBoundingClientRect(), r = h.getBoundingClientRect(); tip.style.left = Math.max(8, Math.min(r.left - bx.left + r.width / 2 - 130, bx.width - 270)) + "px"; tip.style.top = (r.top - bx.top + 10) + "px"; tip.style.opacity = 1; };
+    h.addEventListener("mouseenter", show); h.addEventListener("click", show); h.addEventListener("mouseleave", () => (tip.style.opacity = 0));
+  });
+}
+</script>
+</body>
+</html>

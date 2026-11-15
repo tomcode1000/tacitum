@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Documentation · Tacitum</title>
+<meta name="description" content="How to install, configure and run Tacitum: private assessments, the screened pool, the adverse-media miner, the library, the MCP server and the web demo.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="site.css">
+</head>
+<body data-head="solid">
+<main id="main">
+  <header class="page-hero" style="padding-bottom:56px">
+    <div class="wrap">
+      <p class="crumbs"><a href="index.html">Tacitum</a> / Documentation</p>
+      <h1>Run Tacitum <span class="accent">yourself.</span></h1>
+      <p class="lede">Everything runs on Ethereum Sepolia with test tokens. From a fresh clone to a private, receipted assessment takes about fifteen minutes.</p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top:64px">
+    <div class="wrap docs">
+      <nav class="toc" aria-label="On this page">
+        <span class="grp">Start</span>
+        <a href="#overview">Overview</a><a href="#requirements">Requirements</a><a href="#install">Install</a><a href="#configure">Configure</a><a href="#funds">Get test funds</a>
+        <span class="grp">Use</span>
+        <a href="#assess">Run an assessment</a><a href="#private">Private assessment</a><a href="#pool">Screened pool</a><a href="#library">Library</a><a href="#mcp">MCP server</a>
+        <span class="grp">Build</span>
+        <a href="#miner">Adverse-media miner</a><a href="#contracts">Contracts and circuit</a><a href="#experiment">Privacy experiment</a><a href="#web">Web demo</a>
+        <span class="grp">Reference</span>
+        <a href="#commands">Commands</a><a href="#evidence">Evidence files</a><a href="#troubleshooting">Troubleshooting</a>
+      </nav>
+
+      <article class="prose">
+        <h2 id="overview">Overview</h2>
+        <p>Tacitum buys counterparty intelligence through Telegraph without revealing who was screened or who asked. It has four parts:</p>
+        <ul>
+          <li><b>Assessment workflow</b>: sanctions from two miners, the company registry from two independent registers, regulatory filings and adverse news, written up as a memo with a verified receipt for every answer.</li>
+          <li><b>Decoy engine</b>: the real company is bought among matched decoys, shuffled and spaced, with privacy measured against attackers.</li>
+          <li><b>Screened pool</b>: a Sepolia contract that admits only deposits whose depositor passed Telegraph sanctions screening, and funds one-time payers through a Groth16 withdraw.</li>
+          <li><b>Adverse-media miner</b>: a Telegraph provider (Track 1) that Tacitum buys its news check from.</li>
+        </ul>
+
+        <h2 id="requirements">Requirements</h2>
+        <table class="table"><thead><tr><th>Need</th><th>Notes</th></tr></thead><tbody>
+          <tr><td>Node.js 20 or newer</td><td>Tested on Node 22.</td></tr>
+          <tr><td>A little Sepolia ETH</td><td>About 0.01 ETH covers minting, approvals and pool transactions. Any public Sepolia faucet works.</td></tr>
+          <tr><td>Test USDC</td><td>Free: <code>npm run wallet</code> mints 10 to your wallet once it has ETH.</td></tr>
+          <tr><td>Optional: Circom 2 and snarkjs</td><td>Only to rebuild the withdraw circuit. The built proving files ship in <code>circuits/build/</code>.</td></tr>
+          <tr><td>Optional: Vercel CLI</td><td>Only to host your own copy of the miner.</td></tr>
+        </tbody></table>
+
+        <h2 id="install">Install</h2>
+<pre><code>git clone https://github.com/tomcode1000/tacitum
+cd tacitum
+npm install
+cp .env.example .env
+npm test            <span class="c-com"># circuit and Merkle tree tests, about 15 seconds</span></code></pre>
+
+        <h2 id="configure">Configure</h2>
+        <p>All settings live in <code>.env</code>. Only use a fresh, testnet-only key.</p>
+        <table class="table"><thead><tr><th>Variable</th><th>Purpose</th><th>Default</th></tr></thead><tbody>
+          <tr><td><code>PRIVATE_KEY</code></td><td>Your wallet: pays for calls, funds one-time payers, operates the pool.</td><td>Created by <code>npm run wallet</code></td></tr>
+          <tr><td><code>RPC_URL</code></td><td>Sepolia RPC for reads and transactions.</td><td>publicnode</td></tr>
+          <tr><td><code>LOGS_RPC_URL</code></td><td>RPC for event scans. Needs history; publicnode prunes it.</td><td>Tenderly public gateway</td></tr>
+          <tr><td><code>TELEGRAPH_NODE</code></td><td>Telegraph node.</td><td>devnode.telegraphprotocol.com</td></tr>
+          <tr><td><code>TACITUM_HOME</code></td><td>Where state and caches go.</td><td><code>data</code> in the repo, <code>.tacitum</code> for the library</td></tr>
+          <tr><td><code>TACITUM_KEYS</code></td><td>One-time payer keys and pool notes. Back this up: a lost note is a lost deposit.</td><td><code>keys</code></td></tr>
+          <tr><td><code>TACITUM_FUNDER_KEY</code></td><td>The funder key for the MCP server.</td><td>none</td></tr>
+        </tbody></table>
+
+        <h2 id="funds">Get test funds</h2>
+<pre><code>npm run wallet       <span class="c-com"># creates PRIVATE_KEY if empty, prints balances</span>
+<span class="c-com"># send ~0.01 Sepolia ETH to the printed address, then run it again to mint 10 test USDC</span>
+npm run wallet
+npm run first-call   <span class="c-com"># one paid $0.01 sanctions screen, to prove the path works</span></code></pre>
+
+        <h2 id="assess">Run an assessment (no privacy)</h2>
+        <p>The baseline: what a desk would get on Telegraph today, fully public.</p>
+<pre><code>npm run assess -- "Barclays PLC" GB</code></pre>
+        <p>The memo is written to <code>assessments/</code> as Markdown and JSON. Each answer's signal hash is re-checked against <code>/engine/v1/signal/{hash}</code>.</p>
+
+        <h2 id="private">Private assessment</h2>
+<pre><code><span class="c-com"># one-time payer funded by your wallet (fast to try; the funding is linkable)</span>
+npm run private -- "Barclays PLC" GB 4
+
+<span class="c-com"># one-time payer funded by the screened pool (the desk never appears)</span>
+npm run private -- "Barclays PLC" GB 4 --pool</code></pre>
+        <p>The last argument is the number of parties in the bundle, real one included. Expect 5 to 8 minutes: the payer must wait about two minutes after funding before Telegraph sees its balance, and receipts take a few minutes to publish.</p>
+        <div class="callout"><b>Pool mode needs an approved note.</b> Deposit and get screened first (next section). Each <code>--pool</code> run spends one note.</div>
+
+        <h2 id="pool">Screened pool</h2>
+        <p>The pool is already deployed; its address is in <code>data/pool.json</code>. To deposit and get approved:</p>
+<pre><code><span class="c-com"># seed N screened deposits, one of them yours, and keep your note unspent</span>
+node scripts/pool-e2e.mjs 4 --deposit-only
+
+<span class="c-com"># screen anything still pending (one pass, or keep watching)</span>
+npm run pool:screen
+npm run pool:screen -- --watch</code></pre>
+        <p>A deposit is approved only when Telegraph's sanctions screen returns a clear answer. A match is refunded. An empty answer leaves it pending until the next pass. To deploy your own pool: <code>npm run pool:deploy -- 1</code> (denomination in USDC).</p>
+
+        <h2 id="library">Library</h2>
+<pre><code><span class="c-key">import</span> { tacitum } <span class="c-key">from</span> <span class="c-str">"tacitum"</span>;
+<span class="c-key">import</span> { privateKeyToAccount } <span class="c-key">from</span> <span class="c-str">"viem/accounts"</span>;
+
+<span class="c-key">const</span> funder = privateKeyToAccount(process.env.FUNDER_KEY);
+<span class="c-key">const</span> relayer = privateKeyToAccount(process.env.RELAYER_KEY); <span class="c-com">// no link to the funder</span>
+
+<span class="c-key">const</span> t = tacitum({ funder, k: <span class="c-str">4</span>, pool: { relayer } });
+<span class="c-key">await</span> t.deposit();                                    <span class="c-com">// join the pool</span>
+<span class="c-key">const</span> { memo } = <span class="c-key">await</span> t.assess({ name: <span class="c-str">"Barclays PLC"</span>, jurisdiction: <span class="c-str">"GB"</span> });
+
+<span class="c-com">// any intent, with your own decoys</span>
+<span class="c-key">const</span> { answer } = <span class="c-key">await</span> t.ask(<span class="c-str">"SANCTIONS_SCREENING_MATCH_GENERAL"</span>, { name: <span class="c-str">"Acme Ltd"</span> },
+  { decoys: [{ name: <span class="c-str">"Brindle Ltd"</span> }, { name: <span class="c-str">"Corvel Ltd"</span> }, { name: <span class="c-str">"Dunmore Ltd"</span> }] });</code></pre>
+        <p>Without <code>pool</code>, payers are funded straight from the funder. In pool mode the library refuses to use the funder as relayer, because that would link the withdraw to the desk.</p>
+
+        <h2 id="mcp">MCP server</h2>
+<pre><code>claude mcp add tacitum -e TACITUM_FUNDER_KEY=0x... -- npx -y tacitum-mcp</code></pre>
+        <table class="table"><thead><tr><th>Tool</th><th>What it does</th></tr></thead><tbody>
+          <tr><td><code>private_assess</code></td><td>Full counterparty assessment among matched decoys; returns the memo.</td></tr>
+          <tr><td><code>private_ask</code></td><td>Any Telegraph intent from a one-time wallet, mixed with decoys you supply.</td></tr>
+          <tr><td><code>pool_deposit</code></td><td>Deposits 1 test USDC into the screened pool.</td></tr>
+          <tr><td><code>pool_status</code></td><td>Size of the approved set and your notes.</td></tr>
+        </tbody></table>
+
+        <h2 id="miner">Adverse-media miner</h2>
+        <p>The miner is a small HTTP service (<code>miner/</code>) described to Telegraph by <code>miner/public/miner.yaml</code>. It is registered as <code>tacitum-adverse-media</code> (id 7314402) for <code>NEWS_SEARCH_GENERAL</code>.</p>
+<pre><code><span class="c-com"># try the service locally</span>
+node --input-type=module -e "const {screen}=await import('./miner/lib/adverse.js');console.log(await screen('Barclays PLC'))"
+
+<span class="c-com"># host your own copy, then register or update it on Telegraph</span>
+cd miner &amp;&amp; vercel deploy --prod
+node scripts/miner-register.mjs --dry     <span class="c-com"># simulate first</span>
+node scripts/miner-register.mjs           <span class="c-com"># swaps test USDC for the MACHINA bond, then registers</span>
+node scripts/miner-update.mjs             <span class="c-com"># after changing the YAML</span></code></pre>
+        <p>Through Telegraph, ask it directly with miner id <code>7314402</code> and params <code>{ "query": "Barclays PLC" }</code>. Each answer costs $0.01.</p>
+
+        <h2 id="contracts">Contracts and circuit</h2>
+        <ul>
+          <li><code>contracts/ScreenedPool.sol</code>: deposits, screening approvals with the Telegraph signal hash, Poseidon Merkle tree (depth 16), Groth16 withdraw into Telegraph escrow.</li>
+          <li><code>circuits/withdraw.circom</code>: 9,255 constraints; binds recipient, relayer and fee into the proof.</li>
+          <li>Rebuild: <code>circom circuits/withdraw.circom --r1cs --wasm -o build/circuits</code>, then a Groth16 setup with snarkjs. The shipped key comes from a local Powers of Tau and is for testnet only.</li>
+        </ul>
+
+        <h2 id="experiment">Privacy experiment</h2>
+<pre><code>node scripts/experiment.mjs run      <span class="c-com"># paid: buys the runs (about $3.50 for 16)</span>
+node scripts/experiment.mjs score    <span class="c-com"># free: re-scores saved runs</span></code></pre>
+        <p>Results land in <code>data/privacy-results.json</code>; earlier rounds are archived as <code>data/runs-v1</code> to <code>data/runs-v5</code>.</p>
+
+        <h2 id="web">Web demo</h2>
+<pre><code>npm run web:build    <span class="c-com"># collects figures from committed evidence into web/data.json</span>
+npm run web          <span class="c-com"># serves web/ on http://localhost:8080 (PORT to change)</span></code></pre>
+
+        <h2 id="commands">Commands</h2>
+        <table class="table"><thead><tr><th>Command</th><th>Cost</th><th>What it does</th></tr></thead><tbody>
+          <tr><td><code>npm run wallet</code></td><td>Free</td><td>Create or check the wallet; mint test USDC</td></tr>
+          <tr><td><code>npm run first-call</code></td><td>$0.01</td><td>One paid Telegraph call</td></tr>
+          <tr><td><code>npm run assess</code></td><td>~$0.06</td><td>Public assessment and memo</td></tr>
+          <tr><td><code>npm run private</code></td><td>~$0.21 (k=4)</td><td>Private assessment; add <code>--pool</code> for pool funding</td></tr>
+          <tr><td><code>npm run pool:screen</code></td><td>$0.01 per wallet</td><td>Screen pending deposits</td></tr>
+          <tr><td><code>npm run pool:deploy</code></td><td>Gas only</td><td>Deploy a new pool</td></tr>
+          <tr><td><code>npm run probe</code></td><td>~$0.01 per call</td><td>Re-test candidate miners</td></tr>
+          <tr><td><code>npm run mcp</code></td><td>Free</td><td>Start the MCP server</td></tr>
+          <tr><td><code>npm test</code></td><td>Free</td><td>Circuit and tree tests</td></tr>
+          <tr><td><code>node scripts/rerender-memo.mjs &lt;file&gt;</code></td><td>Free</td><td>Re-verify receipts and rewrite a memo</td></tr>
+        </tbody></table>
+
+        <h2 id="evidence">Evidence files</h2>
+        <table class="table"><tbody>
+          <tr><td><code>assessments/</code></td><td>Every memo with its full run record</td></tr>
+          <tr><td><code>data/privacy-results*.json</code>, <code>data/runs-v*</code></td><td>Privacy experiment results and raw runs</td></tr>
+          <tr><td><code>data/pool.json</code>, <code>data/screening/</code></td><td>Pool addresses and screening outcomes</td></tr>
+          <tr><td><code>data/miner.json</code>, <code>evidence/miner-*.json</code></td><td>Miner registration and paid calls</td></tr>
+          <tr><td><code>data/registry-probe.json</code></td><td>Registry miner re-probe</td></tr>
+        </tbody></table>
+
+        <h2 id="troubleshooting">Troubleshooting</h2>
+        <table class="table"><thead><tr><th>Symptom</th><th>Cause and fix</th></tr></thead><tbody>
+          <tr><td>Every call refused with "insufficient escrow"</td><td>Telegraph had not yet seen the new payer's balance. The scripts wait two minutes after funding; if you call sooner the payer stays refused until the epoch closes.</td></tr>
+          <tr><td>"pruned history unavailable"</td><td>Your RPC drops old logs. Set <code>LOGS_RPC_URL</code> to an archive-capable endpoint.</td></tr>
+          <tr><td>Memo shows 0 receipts verified</td><td>Signals take a few minutes to publish. Run <code>node scripts/rerender-memo.mjs</code> on the memo's JSON.</td></tr>
+          <tr><td>A deposit stays pending</td><td>The sanctions screen returned no clear answer. Run <code>npm run pool:screen</code> again.</td></tr>
+          <tr><td>Miner answers slowly or from one source</td><td>GDELT rate-limits shared cloud IPs; the miner falls back to Google News. A host with its own IP fixes it.</td></tr>
+        </tbody></table>
+      </article>
+    </div>
+  </section>
+</main>
+<script src="site.js"></script>
+<script>
+// highlight the section in view
+const links = [...document.querySelectorAll(".toc a")];
+const io = new IntersectionObserver((es) => es.forEach((e) => { if (e.isIntersecting) links.forEach((l) => l.classList.toggle("on", l.getAttribute("href") === "#" + e.target.id)); }), { rootMargin: "-20% 0px -70% 0px" });
+document.querySelectorAll(".prose h2[id]").forEach((h) => io.observe(h));
+</script>
+</body>
+</html>

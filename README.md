@@ -18,7 +18,7 @@ Telegraph Hackathon Season II, Apps & Agents track (Mission 03, Institutional Ma
 
 ![The screened pool: deposit, screen, approved set, zero-knowledge withdraw, pay](docs/screenshots/product-pool.png)
 
-Run the demo locally: `npm run web:build && npm run web`, then open http://localhost:8080. Design rules are in [DESIGN.md](DESIGN.md).
+Run the site locally: `npm run web:build && npm run web`, then open http://localhost:8080 (pages: How it works, Live run, Privacy, Screened pool, Adverse media, Docs). Full run instructions are on the Docs page (`web/docs.html`); design rules are in [DESIGN.md](DESIGN.md).
 
 ## The problem
 

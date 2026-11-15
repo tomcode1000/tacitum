@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adverse-media miner · Tacitum</title>
+<meta name="description" content="tacitum-adverse-media: a Telegraph miner that returns twelve months of adverse news on a company or person, with sources.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="site.css">
+</head>
+<body data-head="solid">
+<main id="main">
+  <section class="hero" style="min-height:auto;padding:170px 0 90px">
+    <div class="hero-bg"><img src="img/skyline.jpg" alt="" style="object-position:center 30%"></div>
+    <div class="wrap" style="grid-template-columns:minmax(0,1fr)">
+      <div>
+        <p class="crumbs"><a href="index.html">Tacitum</a> / Adverse media</p>
+        <h1 style="margin-top:22px;max-width:16ch">Adverse media, <span class="accent">sold on Telegraph.</span></h1>
+        <p class="lede">Telegraph had no miner for adverse-media screening, so we built one. It returns headlines from the last twelve months that name the company and report something adverse, each with its source and date. It is registered on Telegraph, and every Tacitum assessment buys from it.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:40px">
+    <div class="wrap">
+      <form class="search" id="form">
+        <label class="sr" for="q">Company or person</label>
+        <input id="q" placeholder="Company or person, for example Barclays PLC" autocomplete="off" required maxlength="120">
+        <button class="btn brass" type="submit" style="height:56px">Screen <i data-i="search"></i></button>
+      </form>
+      <p class="muted" style="margin-top:14px;font-size:.88rem" id="note"></p>
+      <div class="panel" id="result" style="margin-top:24px"></div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it screens</p>
+        <h2>Precise enough <span class="accent">for a compliance file.</span></h2>
+      </div>
+      <div class="cards c4">
+        <div class="card"><span class="icon"><i data-i="search"></i></span><h3>Twelve months</h3><p>The entity plus adverse terms, searched in GDELT and Google News over the last year.</p></div>
+        <div class="card"><span class="icon"><i data-i="doc"></i></span><h3>Named in the headline</h3><p>A headline must name the company and report something adverse, or it is dropped.</p></div>
+        <div class="card"><span class="icon"><i data-i="layers"></i></span><h3>Categorised</h3><p>Fraud, laundering, sanctions, bribery, regulatory action, litigation, criminal, probes, insolvency, breaches, misconduct.</p></div>
+        <div class="card"><span class="icon"><i data-i="shield"></i></span><h3>Noise removed</h3><p>Syndicated copies merge. Law-firm investor adverts and anti-fraud campaigns are not counted as adverse.</p></div>
+      </div>
+      <div class="panel scroll-x" style="margin-top:28px" id="reg"></div>
+      <div class="callout" style="margin-top:22px"><b>Known gap.</b> A headline that names two companies can count against the wrong one, for example "Meta fined, Binance is about to resume withdrawals". Tying the adverse term to the named entity is the next improvement.</div>
+    </div>
+  </section>
+</main>
+<script src="site.js"></script>
+<script>
+T.data.then((d) => {
+  const m = d.miner;
+  document.getElementById("note").innerHTML = `Searches on this page call the miner's API directly and are free. Through Telegraph each answer costs $0.01 and comes with a public receipt.`;
+  document.getElementById("reg").innerHTML = `<table class="table"><tbody>
+    <tr><td style="width:240px" class="muted">Miner</td><td><span class="mono">${T.esc(m.slug)}</span> · id ${m.id}</td></tr>
+    <tr><td class="muted">Registration</td><td>${m.registrationId} on the Telegraph H2 contract (Sepolia)</td></tr>
+    <tr><td class="muted">Intent</td><td><span class="mono">NEWS_SEARCH_GENERAL</span> · input <span class="mono">query</span> · answer, result count, sources, brief</td></tr>
+    <tr><td class="muted">Price</td><td>$0.01 per answer</td></tr>
+    <tr><td class="muted">Public endpoint</td><td><span class="mono">${T.esc(m.endpoint)}?query=…</span></td></tr>
+    <tr><td class="muted">Source</td><td><a href="${d.repo}/tree/main/miner">miner/ on GitHub</a></td></tr></tbody></table>`;
+  render(m.sample.query, m.sample.result, `Paid answer through Telegraph for "${T.esc(m.sample.query)}" · receipt ${T.sig(m.sample.signal)}`);
+  document.getElementById("form").onsubmit = async (e) => {
+    e.preventDefault();
+    const q = document.getElementById("q").value.trim(); if (!q) return;
+    const box = document.getElementById("result");
+    box.innerHTML = `<p style="padding:28px" class="muted">Screening ${T.esc(q)}…</p>`;
+    try {
+      const r = await fetch(`${m.endpoint}?query=${encodeURIComponent(q)}`); const j = await r.json();
+      if (!r.ok) throw new Error(j.error || r.status);
+      render(q, j, `Live answer from the miner · ${new Date(j.checked_at).toUTCString()}`);
+    } catch (err) { box.innerHTML = `<p style="padding:28px;color:var(--flag)">The miner did not answer: ${T.esc(err.message)}. Try again in a few seconds.</p>`; }
+  };
+});
+function render(q, r, note) {
+  const risk = { high: "FLAG", elevated: "REVIEW", low: "INFO", none: "CLEAR" }[r.risk] || (r.result_count ? "REVIEW" : "CLEAR");
+  const cats = Object.entries(r.categories || {}).sort((a, b) => b[1] - a[1]);
+  const arts = (r.articles || []).filter((a) => !a.solicitation).slice(0, 8);
+  document.getElementById("result").innerHTML = `
+    <div class="panel-head" style="padding:26px 24px"><div style="display:flex;gap:18px;align-items:baseline;flex-wrap:wrap"><span style="font:600 3rem/1 var(--display)">${r.result_count ?? 0}</span><span>adverse items naming <b>${T.esc(r.query || q)}</b> in the last 12 months</span></div><div>${T.chip(risk)} <span class="muted" style="font-size:.85rem;margin-left:6px">risk ${T.esc(r.risk || "")}</span></div></div>
+    ${cats.length ? `<div class="cats">${cats.map(([k, n]) => `<span class="cat">${T.esc(k.replace(/_/g, " "))} · ${n}</span>`).join("")}</div>` : ""}
+    ${arts.length ? `<ul class="arts">${arts.map((a) => `<li><a href="${T.esc(a.url)}" target="_blank" rel="noopener">${T.esc(a.title)}</a><span class="meta">${T.esc(a.source)} · ${T.esc(a.published)} · ${T.esc((a.categories || []).join(", ").replace(/_/g, " "))}</span></li>`).join("")}</ul>` : `<p style="padding:22px 24px;color:var(--text-2)">${T.esc(r.answer || "No adverse media found.")}</p>`}
+    <p class="muted" style="padding:14px 24px 18px;font-size:.86rem;border-top:1px solid var(--line)">${note}</p>`;
+}
+</script>
+</body>
+</html>
