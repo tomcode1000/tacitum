@@ -39,9 +39,13 @@ const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 export function classify(title, entity) {
   const t = norm(title);
   const core = coreName(entity);
-  const named = new RegExp(`(^|[^\\w])${escapeRe(core)}([^\\w]|$)`, "i").test(t);
-  if (!named) return null;
-  const categories = Object.entries(CATEGORIES).filter(([, re]) => re.test(t)).map(([k]) => k);
+  const nameRe = new RegExp(`(^|[^\\w])${escapeRe(core)}([^\\w]|$)`, "i");
+  if (!nameRe.test(t)) return null;
+  // The adverse term must sit in the same clause as the entity: "Meta fined, Binance resumes
+  // withdrawals" is about Meta. Clauses split on , ; : | and dashes used as separators.
+  // Bracketed text such as "(LSE:BARC)" is ignored when splitting.
+  const clauses = t.replace(/\([^)]*\)/g, " ").split(/\s*(?:[,;:|]|\s[-–—]\s)\s*/).filter((c) => nameRe.test(c));
+  const categories = Object.entries(CATEGORIES).filter(([, re]) => clauses.some((c) => re.test(c))).map(([k]) => k);
   if (!categories.length) return null;
   // The entity fighting fraud or warning customers is not adverse media about it.
   if (ADVISORY.test(t) && categories.every((k) => ["fraud", "data_breach"].includes(k))) return null;

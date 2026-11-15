@@ -59,6 +59,15 @@ fs.writeFileSync(`assessments/${slug}.md`, memo);
 // The full record, decoys included, is what an auditor would open (P5 encrypts it).
 fs.writeFileSync(`assessments/${slug}.json`, JSON.stringify({ ...run, real }, null, 2));
 
+// P5: seal the full record for the auditor. In production the plaintext JSON stays with the desk
+// and only this sealed record is shared; the demo repo publishes both so judges can check them.
+if (process.env.AUDITOR_PUBKEY) {
+  const { sealAssessment } = await import("./audit.mjs");
+  const s = await sealAssessment(`assessments/${slug}.json`, process.env.AUDITOR_PUBKEY);
+  fs.appendFileSync(`assessments/${slug}.md`, `\n## Audit record\n\nThe full record (real target, decoys, every receipt, the payer and the pool deposit that funded it) is sealed to auditor key \`${s.env.auditor}\` in \`${s.out.replace(/\\/g, "/")}\` (sha256 \`${s.env.sha256.slice(0, 16)}…\`). The auditor opens and verifies it with \`node scripts/audit.mjs open ${s.out.replace(/\\/g, "/")} --verify\`.\n`);
+  console.log(`audit record sealed: ${s.out}`);
+}
+
 console.log(memo);
 // Escrow calls are debited when the node settles, not per call, so this can still show the full deposit.
 console.log(`one-time escrow balance now: $${await escrowBalance(payer.account.address)} (debits settle later)`);

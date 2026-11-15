@@ -44,3 +44,7 @@ The feed shows 4 counterparties assessed by a new wallet, in no particular order
 **Funding:** the payer was funded by the pool, not by the desk. Anyone can see which wallets deposited, but not which deposit paid for this assessment: it is one of 8 approved deposits, so that set size is the number to watch. On testnet the other depositors are seeded by us.
 
 Decoy results stay in the local run record and are not part of this memo.
+
+## Audit record
+
+The full record (real target, decoys, every receipt, the payer and the pool deposit that funded it) is sealed to auditor key `5dbf68a454022585` in `assessments/audit/2026-11-15-private-barclays-plc.audit.json`. Opened and verified on 16 Nov: 27 of 27 claims check out against public data (`node scripts/audit.mjs open assessments/audit/2026-11-15-private-barclays-plc.audit.json --verify`).
