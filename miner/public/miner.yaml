@@ -35,22 +35,8 @@ endpoints:
             type: string
             intents: ["*"]
             description: "Name of the company or person to screen, e.g. Barclays PLC. Entity name only, at most 256 characters."
-limitations:
-  - code: MAX_PARAM_LENGTH
-    message: query must be at most 256 characters
-    param: query
-    property: length
-    value_num: 256
-    operator: lte
-intent_mapping:
-  NEWS_SEARCH_GENERAL:
-    endpoint: /adverse
-    input:
-      query: { from: query, how: "Only the company or person name the question is about, without extra words." }
-    output:
-      answer: { path: answer }
-      result_count: { path: result_count }
-      sources: { path: sources }
+# No intent_mapping: nodes without the parser model left answer and sources unavailable (15 Nov).
+# No length limitation: the node predicted "length 0" for a 12-character query and warned.
 semantics:
   signal_mapping:
     label_field: risk

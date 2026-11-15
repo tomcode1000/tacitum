@@ -1,13 +1,21 @@
 {
-  "registrationId": 5284,
+  "registrationId": 5285,
   "slug": "tacitum-adverse-media",
   "id": 7314402,
   "yamlUrl": "https://tacitum-adverse.vercel.app/miner.yaml",
-  "yamlHash": "0x5054cac00c2c0e6d25da8419654c85ca9459696b75383b10993dfb87d309a3d2",
+  "yamlHash": "0x904d289aa87eac92fb2cae7a0b6ba163426b3cba7242f22d3c5dbae3149f1a45",
   "intents": [
     "NEWS_SEARCH_GENERAL"
   ],
   "minPriceUsdc": 10000,
-  "tx": "0xa3882333bfc5020a90f2cda8c0a67e4542293b92140c9ad3b03f987898014953",
-  "registeredAt": "2026-11-15T13:08:51.992Z"
+  "tx": "0xb8803e842c2abb914c30603804b902fd1aa571965bcbce748880356ecac0c2f8",
+  "registeredAt": "2026-11-15T13:08:51.992Z",
+  "updatedAt": "2026-11-15T13:19:01.199Z",
+  "history": [
+    {
+      "registrationId": 5284,
+      "yamlHash": "0x5054cac00c2c0e6d25da8419654c85ca9459696b75383b10993dfb87d309a3d2",
+      "tx": "0xa3882333bfc5020a90f2cda8c0a67e4542293b92140c9ad3b03f987898014953"
+    }
+  ]
 }

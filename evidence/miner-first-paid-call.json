@@ -1,0 +1,55 @@
+{
+  "request": {
+    "miner": 7314402,
+    "intent": "NEWS_SEARCH_GENERAL",
+    "params": {
+      "query": "Barclays PLC"
+    }
+  },
+  "status": 200,
+  "response": {
+    "miner_id": "7314402",
+    "miner_name": "Tacitum Adverse Media Screen",
+    "endpoint": "/adverse",
+    "result": {
+      "answer": null,
+      "result_count": 20,
+      "sources": null,
+      "brief": "Barclays: 20 adverse items, risk high"
+    },
+    "result_shape": "intent",
+    "format_version": 3,
+    "field_status": {
+      "answer": "unavailable",
+      "result_count": "ok",
+      "sources": "unavailable",
+      "brief": "ok"
+    },
+    "input": {
+      "query": "Barclays PLC"
+    },
+    "input_schema_version": 3,
+    "cost_usd": 0.01,
+    "duration_ms": 5894,
+    "timestamp": "2026-11-15T13:16:13.794009577Z",
+    "reasoning": "Intent: miner tacitum-adverse-media given by the caller\nMiner: input schema v3 mapped in code to GET /adverse",
+    "intent": "NEWS_SEARCH_GENERAL",
+    "signal_hash": "0x6698a4a611756ace703eb8a72a2f19242c39045c5873db13974206fe171dadef",
+    "warnings": [
+      "parameter \"query\" length 0 violates the miner's declared limit (lte 256): query must be at most 256 characters"
+    ]
+  },
+  "payment": {
+    "receipt_hash": "0xc00c27306164c0582301e5c6b510a0d51d72ab4f293c6bff9ca1034c9f422f37",
+    "rail": "escrow",
+    "payer": "0xdbee317b429c8eadfce1825691cf10c7fa46b608",
+    "miner": "5284",
+    "intent": "NEWS_SEARCH_GENERAL",
+    "amount_uusdc": "10000",
+    "epoch_id": 2098,
+    "settlement": "epoch",
+    "chain": "telegraph",
+    "timestamp": 1794748593
+  },
+  "receipt": null
+}
