@@ -1,0 +1,52 @@
+{
+  "request": {
+    "miner": 7314402,
+    "intent": "NEWS_SEARCH_GENERAL",
+    "params": {
+      "query": "Lloyds Banking Group PLC"
+    }
+  },
+  "status": 200,
+  "response": {
+    "miner_id": "7314402",
+    "miner_name": "Tacitum Adverse Media Screen",
+    "endpoint": "/adverse",
+    "result": {
+      "answer": "No adverse media naming Lloyds Banking Group PLC found in English-language news over the last 12 months.",
+      "result_count": 0,
+      "sources": null,
+      "brief": "No adverse media on Lloyds Banking in 12 months"
+    },
+    "result_shape": "intent",
+    "format_version": 3,
+    "field_status": {
+      "answer": "ok",
+      "result_count": "ok",
+      "sources": "missing",
+      "brief": "ok"
+    },
+    "input": {
+      "query": "Lloyds Banking Group PLC"
+    },
+    "input_schema_version": 3,
+    "cost_usd": 0.01,
+    "duration_ms": 5681,
+    "timestamp": "2026-11-15T13:31:46.332931922Z",
+    "reasoning": "Intent: miner tacitum-adverse-media given by the caller\nMiner: input schema v3 mapped in code to GET /adverse",
+    "intent": "NEWS_SEARCH_GENERAL",
+    "signal_hash": "0xa77950f2bec3219ef1392f18e42fb26b0cbd177f7ea2a2a2c1f356fcacc114dd"
+  },
+  "payment": {
+    "receipt_hash": "0x1657292d144029e44d0a03a5ef2e52ec14691a87d671e2d72dd9badaa473eaff",
+    "rail": "escrow",
+    "payer": "0xdbee317b429c8eadfce1825691cf10c7fa46b608",
+    "miner": "5285",
+    "intent": "NEWS_SEARCH_GENERAL",
+    "amount_uusdc": "10000",
+    "epoch_id": 2098,
+    "settlement": "epoch",
+    "chain": "telegraph",
+    "timestamp": 1794749508
+  },
+  "receipt": null
+}

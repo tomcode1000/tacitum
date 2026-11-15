@@ -48,7 +48,7 @@ export function classify(title, entity) {
   return { title: t, categories, solicitation: SOLICITATION.test(t) };
 }
 
-const ADVISORY = /\b(warns?|warning|tackles?|fights?|crack(s|ing)? down|campaign|protect\w*|tips|how to (spot|avoid)|awareness|prevent\w*|alerts? customers|urges|advice|guide)\b/i;
+const ADVISORY = /\b(detect\w*|anti-fraud|solutions?|technology|warns?|warning|tackles?|fights?|crack(s|ing)? down|campaign|protect\w*|tips|how to (spot|avoid)|awareness|prevent\w*|alerts? customers|urges|advice|guide)\b/i;
 
 // GDELT filters on adverse terms server side, so 12 months of adverse coverage fits in one page
 // (the newest 250 articles about a big bank only reach back a few days). Headlines are then
@@ -125,32 +125,34 @@ export async function screen(query) {
   const risk = !reporting.length ? (adverts.length ? "low" : "none") : serious.length && domains.size >= 2 ? "high" : "elevated";
 
   const top = Object.entries(counts).sort((a, b) => b[1] - a[1]).map(([k]) => k.replace(/_/g, " "));
-  const shown = reporting.slice(0, 5);
+  // Kept small on purpose: the node reads the whole answer, and a 17 KB answer full of long
+  // redirect links came back with answer/sources rejected (15 Nov). The intent's four fields
+  // come first; sources are publisher names (the intent allows "URLs or names").
+  const shown = reporting.slice(0, 3);
   const answer = !hits.length
-    ? `No adverse media naming ${entity} found in English-language news over the last 12 months (${articles.length} articles scanned).`
-    : `${reporting.length} adverse news item(s) naming ${entity} in the last 12 months from ${domains.size} source(s)` +
+    ? `No adverse media naming ${entity} found in English-language news over the last 12 months.`
+    : `${reporting.length} adverse news items naming ${entity} in the last 12 months from ${domains.size} sources` +
       (top.length ? `, mainly ${top.slice(0, 3).join(", ")}` : "") + "." +
-      (shown.length ? " Latest: " + shown.map((h) => `"${h.title}" (${h.source}, ${h.published})`).join("; ") + "." : "") +
-      (adverts.length ? ` Plus ${adverts.length} law-firm investor solicitation(s), not counted as reporting.` : "");
-  let brief = !hits.length ? `${coreName(entity)}: no adverse media in 12 months` : `${coreName(entity)}: ${reporting.length} adverse items, risk ${risk}`;
+      (shown.length ? ` Latest: ${shown[0].title.replace(/["“”]/g, "")} (${shown[0].source}, ${shown[0].published}).` : "") +
+      (adverts.length ? ` ${adverts.length} law-firm investor adverts not counted.` : "");
+  let brief = !hits.length ? `No adverse media on ${coreName(entity)} in 12 months` : `${reporting.length} adverse items on ${coreName(entity)}, risk ${risk}`;
   if (brief.length > 80) brief = brief.slice(0, 79) + "…";
 
   return {
+    answer,
+    result_count: reporting.length,
+    sources: [...domains].slice(0, 12),
+    brief,
     query: entity,
-    entity_core: coreName(entity),
     adverse: reporting.length > 0,
     risk,
-    answer,
-    brief,
-    result_count: reporting.length,
-    sources: [...new Set(reporting.map((h) => h.url))].slice(0, 20),
     categories: counts,
     solicitations: adverts.length,
-    articles: hits.slice(0, 25),
+    articles: hits.slice(0, 8).map(({ title, source, published, categories, solicitation, url }) => ({ title, source, published, categories, solicitation, url })),
     scanned: articles.length,
     window: "last 12 months",
     method: "Entity name plus adverse terms searched over 12 months in GDELT DOC 2.0 and Google News RSS; kept only headlines that name the entity and contain an adverse term; copies de-duplicated across feeds; law-firm solicitations separated.",
-    provenance: feeds.map((f) => ({ provider: f.name, ok: f.ok, articles: f.items.length, note: f.note, request: f.url })),
+    provenance: feeds.map((f) => ({ provider: f.name, ok: f.ok, articles: f.items.length, note: f.note })),
     checked_at: new Date().toISOString(),
   };
 }

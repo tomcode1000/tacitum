@@ -1,0 +1,65 @@
+{
+  "request": {
+    "miner": 7314402,
+    "intent": "NEWS_SEARCH_GENERAL",
+    "params": {
+      "query": "Binance"
+    }
+  },
+  "status": 200,
+  "response": {
+    "miner_id": "7314402",
+    "miner_name": "Tacitum Adverse Media Screen",
+    "endpoint": "/adverse",
+    "result": {
+      "answer": "69 adverse news items naming Binance in the last 12 months from 50 sources, mainly data breach, money laundering, investigation. Latest: Binance Restores Withdrawals Across 87 Networks After $6.3bn Security Breach (Crowdfund Insider, 2026-11-14).",
+      "result_count": 69,
+      "sources": [
+        "Crowdfund Insider",
+        "Tekedia",
+        "Laodong.vn",
+        "Bitcoin News",
+        "PhilNews",
+        "Dark Reading",
+        "Yahoo Finance",
+        "TNGlobal",
+        "TradingView",
+        "Beinsure",
+        "Bitdefender",
+        "NeoTeo"
+      ],
+      "brief": "69 adverse items on Binance, risk high"
+    },
+    "result_shape": "intent",
+    "format_version": 3,
+    "field_status": {
+      "answer": "ok",
+      "result_count": "ok",
+      "sources": "ok",
+      "brief": "ok"
+    },
+    "input": {
+      "query": "Binance"
+    },
+    "input_schema_version": 3,
+    "cost_usd": 0.01,
+    "duration_ms": 5574,
+    "timestamp": "2026-11-15T13:32:32.026836161Z",
+    "reasoning": "Intent: miner tacitum-adverse-media given by the caller\nMiner: input schema v3 mapped in code to GET /adverse",
+    "intent": "NEWS_SEARCH_GENERAL",
+    "signal_hash": "0x229a9088ae79b7edb62049af41f55fbc83f07f5fc34a32481391661b6ff51ee9"
+  },
+  "payment": {
+    "receipt_hash": "0xa446fdd62cebb60056c00489dd6011fe254f6688576b6adec45baed7bddc1b52",
+    "rail": "escrow",
+    "payer": "0xdbee317b429c8eadfce1825691cf10c7fa46b608",
+    "miner": "5285",
+    "intent": "NEWS_SEARCH_GENERAL",
+    "amount_uusdc": "10000",
+    "epoch_id": 2098,
+    "settlement": "epoch",
+    "chain": "telegraph",
+    "timestamp": 1794749557
+  },
+  "receipt": null
+}
