@@ -37,6 +37,15 @@ const shuffle = (a) => {
 // refused until the epoch closes, so no paid call goes out sooner than this after funding.
 export const FUNDING_SETTLE_MS = 120_000;
 
+// Measured attacker success (data/privacy-results.json, shipped), for memos at the k it was measured.
+function measuredPrivacy(k) {
+  try {
+    const r = JSON.parse(fs.readFileSync(new URL("../data/privacy-results.json", import.meta.url), "utf8"));
+    const m = r.k === k ? r.strategies.matched : null;
+    return m && { best: Math.max(m.first, m.famous, m.format, m.learned, m.rarest ?? 0).toFixed(2), ci: m.bestCI95, runs: m.runs };
+  } catch { return null; }
+}
+
 // The screened pool on Sepolia (contracts/ScreenedPool.sol), shipped with the package.
 export const POOL = JSON.parse(fs.readFileSync(new URL("../data/pool.json", import.meta.url), "utf8"));
 
@@ -84,7 +93,7 @@ export function tacitum({ funder, k = 4, maxPerPaymentUsd = 0.1, pool = null, lo
       if (!run.costUsd) throw new Error("no call was paid; the node refused the one-time payer");
       const real = {
         ...run.real,
-        privacy: { k, parties: run.parties, costUsd: run.costUsd, funder: payer.funder, fundedUsd: payer.amountUsd, fundingTx: payer.fundingTx, viaPool: Boolean(payer.viaPool), anonymitySet: payer.anonymitySet },
+        privacy: { k, parties: run.parties, costUsd: run.costUsd, funder: payer.funder, fundedUsd: payer.amountUsd, fundingTx: payer.fundingTx, viaPool: Boolean(payer.viaPool), anonymitySet: payer.anonymitySet, measured: measuredPrivacy(k) },
       };
       return { assessment: real, memo: renderMemo(real), record: { ...run, real } };
     },

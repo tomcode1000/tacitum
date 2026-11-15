@@ -1,0 +1,38 @@
+Audit record: Tesco PLC (GB) · FLAG · 2026-11-15T18:34:26.058Z
+  desk wallet   0x6fcea76f3be067c47B1506023091105b6beB7BC1
+  real target   Tesco PLC   decoys: FirstGroup PLC, Next PLC, BAE Systems PLC
+  payer         0xeF165282962C9A9eb3Bb953538791b8494c2Dfa3   cost $0.24
+  funding       screened pool 0xfd7aa64e839003a3b7c20080653f0202e97c5e1b, withdraw 0xe90dbcda958a45d429663a8750e7653a2fc85870bd050a8d2e7691c1d5dd06b9
+  verdicts      sanctions CLEAR · registry CLEAR · filings INFO · news FLAG
+  ✓ REAL  Tesco PLC                    sanctions receipt 0x42e0d98e04… paid by the payer
+  ✓ REAL  Tesco PLC                    sanctions receipt 0xddea4feef6… paid by the payer
+  ✓ REAL  Tesco PLC                    registry  receipt 0x506824533e… paid by the payer
+  ✓ REAL  Tesco PLC                    registry  receipt 0x62b3cf1fdf… paid by the payer
+  ✓ REAL  Tesco PLC                    filings   receipt 0x6ea4f2765e… paid by the payer
+  ✓ REAL  Tesco PLC                    news      receipt 0x13afc55c8b… paid by the payer
+  ✓ decoy FirstGroup PLC               filings   receipt 0xa366bd4f35… paid by the payer
+  ✓ decoy FirstGroup PLC               registry  receipt 0xf69cc7560e… paid by the payer
+  ✓ decoy FirstGroup PLC               registry  receipt 0xcf04d93068… paid by the payer
+  ✓ decoy FirstGroup PLC               news      receipt 0xc90fc128b7… paid by the payer
+  ✓ decoy FirstGroup PLC               sanctions receipt 0xc600ce71f6… paid by the payer
+  ✓ decoy FirstGroup PLC               sanctions receipt 0xf64e275cd9… paid by the payer
+  ✓ decoy Next PLC                     registry  receipt 0x2756bb9764… paid by the payer
+  ✓ decoy Next PLC                     registry  receipt 0xe4aa77afe8… paid by the payer
+  ✓ decoy Next PLC                     filings   receipt 0x590ba75062… paid by the payer
+  ✓ decoy Next PLC                     sanctions receipt 0x968598ee1f… paid by the payer
+  ✓ decoy Next PLC                     sanctions receipt 0x8184140d5d… paid by the payer
+  ✓ decoy Next PLC                     news      receipt 0xd46cd47f07… paid by the payer
+  ✓ decoy BAE Systems PLC              registry  receipt 0x7a11cb7a35… paid by the payer
+  ✓ decoy BAE Systems PLC              registry  receipt 0x72e396e29e… paid by the payer
+  ✓ decoy BAE Systems PLC              filings   receipt 0xdf266ae8fa… paid by the payer
+  ✓ decoy BAE Systems PLC              news      receipt 0x7dfad17d56… paid by the payer
+  ✓ decoy BAE Systems PLC              sanctions receipt 0x1847936584… paid by the payer
+  ✓ decoy BAE Systems PLC              sanctions receipt 0x974800d34d… paid by the payer
+  ✓ note opens to the stated commitment
+  ✓ deposit by the desk's wallet 0x6fcea76f… (tx 0xc90fab7a71…)
+  ✓ deposit approved after screening (signal 0xeb15677550…)
+  ✓ screening receipt on Telegraph says the depositor is not sanctioned
+  ✓ withdraw spent exactly this note (nullifier hash matches)
+  ✓ withdraw funded the payer that bought every receipt
+
+VERIFIED: every claim in the record checks out against public data (30 checks).

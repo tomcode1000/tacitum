@@ -61,6 +61,17 @@
     </div>
   </section>
 
+  <section class="section alt" id="agent">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">An AI agent, on its own</p>
+        <h2>We gave an agent one task. <span class="accent">It bought the check privately.</span></h2>
+        <p class="lede">A separate Claude agent got a compliance task and only Tacitum's MCP tools. It chose the private assessment tool, paid from the screened pool, and reported back, with no human in the loop.</p>
+      </div>
+      <div class="grid-main" id="agent-body"></div>
+    </div>
+  </section>
+
   <section class="section" id="audit">
     <div class="wrap split">
       <div class="sec-head" style="margin:0">
@@ -113,6 +124,30 @@ T.data.then((d) => {
     </table></div>
     <div class="memo-foot"><span><b style="color:var(--text)">${m.verified} of ${m.receipts}</b> receipts re-verified (payer and settlement match)</span><span>Paid by ${T.addr(o.payer)}</span><span>This memo's share $${m.costUsd} · bundle $${o.bundleCostUsd}</span><a href="${d.repo}/blob/main/${m.file.replace(/\.json$/, ".md")}" style="color:var(--text)">Full memo on GitHub</a></div>
     <p class="muted" style="padding:16px 28px 22px;font-size:.88rem">FLAG means a person should review, not that the counterparty is blocked. Here it comes from adverse news alone; sanctions and registry are clear.</p>`;
+
+  const g = d.agent;
+  if (g) {
+    const md = (s) => T.esc(s).replace(/\*\*(.+?)\*\*/g, "<b style='color:var(--text)'>$1</b>").replace(/`([^`]+)`/g, "<code>$1</code>");
+    const resultHtml = (g.result || "").split(/\n\n+/).map((blk) => {
+      if (/^\|/.test(blk)) {
+        const rows = blk.split("\n").filter((r) => !/^\|[-\s|]+\|$/.test(r)).map((r) => r.split("|").slice(1, -1).map((c) => c.trim()));
+        return `<div class="scroll-x"><table class="table" style="margin:8px 0">${rows.map((r, i) => `<tr>${r.map((c) => (i ? `<td>${md(c)}</td>` : `<th>${md(c)}</th>`)).join("")}</tr>`).join("")}</table></div>`;
+      }
+      if (/^- /m.test(blk)) return `<ul style="margin:6px 0 6px 18px;color:var(--text-2)">${blk.split("\n").map((l) => `<li>${md(l.replace(/^- /, ""))}</li>`).join("")}</ul>`;
+      return `<p style="color:var(--text-2);margin:0 0 12px">${md(blk)}</p>`;
+    }).join("");
+    document.getElementById("agent-body").innerHTML = `
+      <div class="panel">
+        <div class="panel-head"><span class="eyebrow">The agent's report</span><span class="muted mono">${T.esc(g.model || "")}</span></div>
+        <div style="padding:22px">${resultHtml}</div>
+      </div>
+      <div style="display:grid;gap:18px" class="sticky">
+        <div class="panel"><div class="panel-head"><span class="eyebrow">The task it was given</span></div><p style="padding:18px 22px;color:var(--text-2);font-size:.95rem">${T.esc(g.task)}</p></div>
+        <div class="panel"><div class="panel-head"><span class="eyebrow">What it called</span></div><pre style="border:0;border-radius:0;margin:0;white-space:pre-wrap;overflow-wrap:anywhere">${T.esc(g.tool)}(${T.esc(JSON.stringify(g.input))})</pre><p class="muted" style="padding:14px 22px;font-size:.88rem">${g.minutes} minutes end to end, one tool call.</p></div>
+        <div class="panel"><div class="panel-head"><span class="eyebrow">Auditor check of its record</span>${T.chip(g.audit.passed === g.audit.total && g.audit.total ? "CLEAR" : "FLAG", true)}</div><p style="padding:16px 22px;color:var(--text-2)">${g.audit.passed} of ${g.audit.total} claims verified against public data: every receipt, the pool deposit, its screening and the withdraw that paid.</p>
+          <p class="muted" style="padding:0 22px 16px;font-size:.86rem"><a href="${d.repo}/blob/main/${g.file}" style="color:var(--text)">Full transcript</a> · <a href="${d.repo}/blob/main/${g.audit.file}" style="color:var(--text)">Audit output</a></p></div>
+      </div>`;
+  }
 
   const a = d.audit;
   if (a) {

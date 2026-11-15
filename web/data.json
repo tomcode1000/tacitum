@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-15T16:22:13.905Z",
+  "builtAt": "2026-11-15T18:39:18.690Z",
   "node": "https://devnode.telegraphprotocol.com",
   "repo": "https://github.com/tomcode1000/tacitum",
   "memo": {
@@ -223,32 +223,40 @@
       },
       {
         "v": "v5",
-        "best": 0.256,
+        "best": 0.26,
         "lo": 0.1,
         "hi": 0.49,
         "runs": 16,
         "change": "Fixed cover sets, re-probed miners"
+      },
+      {
+        "v": "v6",
+        "best": 0.313,
+        "lo": 0.18,
+        "hi": 0.49,
+        "runs": 32,
+        "change": "16 more live runs; two-source registry and our news miner"
       }
     ],
     "attackers": {
-      "first": 0.25,
-      "famous": 0.256,
-      "format": 0.195,
-      "learned": 0.25,
+      "first": 0.313,
+      "famous": 0.3,
+      "format": 0.262,
+      "learned": 0.125,
       "rarest": 0.25,
       "bestCI95": [
-        0.1,
+        0.18,
         0.49
       ],
-      "runs": 16,
-      "costUsd": 3.45
+      "runs": 32,
+      "costUsd": 7.27
     },
     "perPartyUsd": 0.052
   },
   "pool": {
     "address": "0xfd7aa64e839003a3b7c20080653f0202e97c5e1b",
     "denominationUsd": 1,
-    "approvedSet": 0,
+    "approvedSet": 16,
     "screener": {
       "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
       "miner": 731002
@@ -258,8 +266,93 @@
       "label": "Ronin bridge exploiter (OFAC SDN)",
       "matched": true
     },
-    "screened": [],
-    "screenedTotal": 0
+    "screened": [
+      {
+        "depositor": "0xB3Bc2688eE8f0246aC50fa2F6eDf4F180052940C",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x41d14ed606a6ef567fca6afb1b82b365e37c044ac3395b15d694204f6e500486",
+        "tx": "0x7d3a737069fda0bbe2e5e4245a197a4ea0b90592cd8bbddf72b917b91a22b594"
+      },
+      {
+        "depositor": "0x25Bd31dfAd6e57dA0607F8DE973Fa76014670ed6",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x901dd44f2e77a0f2d9a05466697e8e885c36b7d59fdf3edbb8373a0c26eb065d",
+        "tx": "0xc27fdf850d6321fc4bcbeedc3a518019b0146320f811cbc72502be3ad03f8e4e"
+      },
+      {
+        "depositor": "0xAAB26dA64618291AE02c52332dc437cB752EA051",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x178b86e5ea0bf15b5bac6535f58f3561bf5d466e21e9485ecf3256d9aadd06da",
+        "tx": "0x43a7d3eafa4e64c1796ca83ef98b0ef373b33e4c4736e8125f3b679daa5ff1c8"
+      },
+      {
+        "depositor": "0xeC9bbBc05cE6e854070C15A3F5322A608c368c97",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x9957db948c2c3511f1b1a9bd7253eaeb93bb7626f26fb3c4e99e859398992250",
+        "tx": "0x4cb3e6456af985a109ff52b1389d03147f4975887b1fea23e4ea7e943acc04d7"
+      },
+      {
+        "depositor": "0xb7a62BC7527ECb1D572f183CD6be0ECD2CCb6e66",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x115d5f2f505a18146f42fef133b68edd16f690a0710c05adacc1ba6ab4f60c7e",
+        "tx": "0xa2541dd5448bedcfbadb6a6069d328552e36d686b885b621d3b2c39b91776ac4"
+      },
+      {
+        "depositor": "0x57C8037Ae69e3cC785dc0ccBe06E1aA2a55e50C3",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xf308d5521536701582250e366149fa6aa9cb38dcb81daa9df50e081f190fddf3",
+        "tx": "0xb65167460ed6cb6a48fcbc5d715f5da5e07e79abfb07306921248407548a8457"
+      },
+      {
+        "depositor": "0x438fEFD34723b0469aefF3E777000e2299ea1B8e",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x357c4224157830426600494e2ea67409a65bd36936cd040613ba82fc67a309ed",
+        "tx": "0x14f1b15d0a133a143d3bbb3129a35e463fe33983e572973459ad0ebe1d0aaf52"
+      },
+      {
+        "depositor": "0xD6b6568C56E5D8eFE079B8E382bFfA48b88c6795",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xc747f7eea607f988ce8ed8b8feaf4474af4e7816ed0f52c92d34c54d93262ca3",
+        "tx": "0x8e84d9091b542f19316f1bc14a2741f660a75cbf04e2e693cdea4f332de57dbf"
+      },
+      {
+        "depositor": "0x48208773Ac6CE22129F04F0Ce5E4aa756cBecD16",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xc0d16eb642ac56b8c04dcb3beb77facd22fd2506760cad8db3016b09b470af0f",
+        "tx": "0x7ba830bcd328723f5ab2ac2e8bf5f71675c515f7505f85d12b585c3dd155c0dc"
+      },
+      {
+        "depositor": "0x4Fa4b87c8De3b43A3160b2D58494F74926405037",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x784ca87415e3cd30cc966308390664c079db9a7fce0097814b2c03b20ef41860",
+        "tx": "0xf94c0881997f454cc9d08c814c2fd31e15cd6f04063b33e2ccf4c6fa409a2042"
+      },
+      {
+        "depositor": "0x02423Ec80142120549D2eBCb4E2Faf32f4874a8a",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xf465197e468b37d4903bebcb3a19b9a45ade8735a8f0fcbd91e350fd296aeee0",
+        "tx": "0xc928ec03cb73bd4c32963357186af7088da9b5be4d68f354df0cd6bcfccf991e"
+      },
+      {
+        "depositor": "0xf93EdBF29876A36b9ca3AbcBa119bc01992A7cF5",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x5382ce30d3556bfeea68ded3a24a494622416e8d877bebf81d682936e9de5944",
+        "tx": "0x5c9b88d71d5d0fbc92a333eb68cbeff89a2b7b1e1edde2aaf2b3e3b4b289bcfa"
+      }
+    ],
+    "screenedTotal": 16
   },
   "audit": {
     "file": "assessments/audit/2026-11-15-private-barclays-plc.audit.json",
@@ -377,6 +470,24 @@
         "what": "withdraw funded the payer that bought every receipt"
       }
     ]
+  },
+  "agent": {
+    "file": "evidence/agent-run-2026-11-15-tesco-plc.jsonl",
+    "task": "You are the onboarding agent at an investment fund. Before the fund signs a supply agreement with Tesco PLC (United Kingdom), run a counterparty assessment through Telegraph. The market must not learn which company the fund is checking or that the fund is checking at all, so use the tacitum private_assess tool (jurisdiction GB, 4 parties). Then report: the overall verdict, each check's verdict, how many receipts were verified, and whether the payment was funded from the screened pool. Do not run more than one assessment.",
+    "model": "claude-opus-5-5",
+    "tool": "mcp__tacitum__private_assess",
+    "input": {
+      "name": "Tesco PLC",
+      "jurisdiction": "GB",
+      "k": 4
+    },
+    "result": "I ran one private assessment of Tesco PLC (GB, 4 parties). **The overall verdict is FLAG**, and the flag comes only from adverse news.\n\n| Check | Verdict | Detail |\n|---|---|---|\n| Sanctions (two independent screeners) | **CLEAR** | No match on either. Lists checked: US OFAC SDN and non-SDN, UN, EU, UK and Canada. |\n| Company registry | **CLEAR** | TESCO PLC, company no. 00445790, LEI 2138002P5RNKC5W2JZ46, active in both sources. |\n| Regulatory filings | **INFO** | 55 filings in the last 12 months. This is for information only, not a concern. |\n| Adverse news | **FLAG** | 21 adverse items from 21 sources, rated high risk. |\n\n**Receipts:** all 6 paid checks were re-verified against the public record. The payer and settlement transaction matched for every one.\n\n**Screened-pool funding: yes.** The checks were paid by a one-time wallet (`0xeF16…2Dfa3`), which received its $1 from the Tacitum screened pool through a zero-knowledge withdrawal (tx `0xe90d…dd06b9`). The fund's own wallet didn't pay. Anyone watching can see which wallets put money into the pool, but not which of the 16 approved deposits paid for this check.\n\n**Cover:** Tesco was checked alongside three decoys: FirstGroup PLC, Next PLC and BAE Systems PLC. All 4 were bought together, shuffled and spaced out. The total cost was $0.24, of which $0.06 was Tesco's share.\n\nBefore you rely on this:\n- **The adverse news flag needs a person to read the 21 items** before the agreement is signed. The memo gives only a count and a risk rating, not what the stories are about. For a company of Tesco's size, many items may be routine press, but I haven't confirmed that.\n- **The privacy is weaker than it looks.** The tool says the other 15 pool deposits are seeded by Tacitum on testnet, so the real group of independent depositors hiding the fund is smaller than 16. It also hasn't measured how well an attacker could pick out the real company. The only figure given is a blind guess at 1 in 4.\n\nA sealed audit record was saved to `assessments/audit/2026-11-15-agent-tesco-plc.audit.json`.",
+    "minutes": 7,
+    "audit": {
+      "file": "evidence/audit-verify-2026-11-15-agent-tesco.txt",
+      "passed": 30,
+      "total": 30
+    }
   },
   "miner": {
     "id": 7314402,

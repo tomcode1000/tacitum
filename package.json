@@ -47,6 +47,7 @@
     "src/",
     "data/filers.json",
     "data/pool.json",
+    "data/privacy-results.json",
     "data/cover-sets.json",
     "README.md",
     "LICENSE",

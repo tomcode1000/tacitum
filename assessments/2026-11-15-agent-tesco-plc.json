@@ -1,0 +1,986 @@
+{
+  "real": {
+    "counterparty": {
+      "name": "Tesco PLC",
+      "jurisdiction": "GB"
+    },
+    "startedAt": "2026-11-15T18:27:52.757Z",
+    "finishedAt": "2026-11-15T18:34:26.058Z",
+    "payer": "0xeF165282962C9A9eb3Bb953538791b8494c2Dfa3",
+    "overall": "FLAG",
+    "verdicts": {
+      "sanctions": "CLEAR",
+      "registry": "CLEAR",
+      "filings": "INFO",
+      "news": "FLAG"
+    },
+    "costUsd": 0.06,
+    "paidCalls": 6,
+    "checks": {
+      "sanctions": {
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+        "params": {
+          "name": "Tesco PLC"
+        },
+        "answers": [
+          {
+            "minerId": 731002,
+            "miner": "Counterproof Sanctions Screener",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "name": "Tesco PLC",
+              "matched": false,
+              "matches": null,
+              "lists": [
+                "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-13)",
+                "UN Security Council Consolidated List (published 2026-11-15)",
+                "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+                "UK Sanctions List (published 2026-11-12)"
+              ],
+              "match_score": 0
+            },
+            "costUsd": 0.01,
+            "signal": "0x42e0d98e04b93db93b79038a064098464adef64d2d61e1ebab75cb70e54b8a8b",
+            "receipt": null
+          },
+          {
+            "minerId": 710637,
+            "miner": "Sanctions Name Evidence",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "name": "Tesco PLC",
+              "matched": false,
+              "matches": null,
+              "lists": [
+                "OFAC SDN",
+                "OFAC Consolidated (non-SDN)",
+                "UK Sanctions List (entities only)",
+                "Canada autonomous sanctions (entities only)",
+                "EU Financial Sanctions (entities only)",
+                "US BIS Entity List (export controls)",
+                "US BIS Military End User List (export controls)",
+                "US BIS Denied Persons List (dated standard export-denial orders)",
+                "UK Sanctions List (ships)",
+                "US BIS Entity List (additional primary-row corroborated records)",
+                "Canada autonomous sanctions (November 5 additional entities)",
+                "Canada autonomous sanctions (corroborated ships)",
+                "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+              ],
+              "match_score": 0
+            },
+            "costUsd": 0.01,
+            "signal": "0xddea4feef6c66d92e6da2b90113833980e1298441ae10f54ac90a4f69b35223b",
+            "receipt": null
+          }
+        ]
+      },
+      "registry": {
+        "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+        "params": {
+          "company": "Tesco PLC",
+          "jurisdiction": "GB"
+        },
+        "answers": [
+          {
+            "minerId": 77393,
+            "miner": "ZK Corporate Registry — Exact Identity and Status",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "legal_name": "TESCO PLC",
+              "registration_id": "00445790",
+              "active": true,
+              "jurisdiction": "GB",
+              "registered_address": "TESCO HOUSE, SHIRE PARK, KESTREL WAY, WELWYN GARDEN CITY, GB-HRT, AL7 1GA, GB",
+              "incorporated": "1947-11-27"
+            },
+            "costUsd": 0.01,
+            "signal": "0x506824533eeaf4639e60aa297427c960384452dbd6335a8f47135f48a9aaad48",
+            "receipt": null
+          },
+          {
+            "minerId": 5186,
+            "miner": "Praman Desk Compliance & Procurement Auditor",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "legal_name": "TESCO PLC",
+              "registration_id": "2138002P5RNKC5W2JZ46",
+              "active": true,
+              "jurisdiction": null,
+              "registered_address": null,
+              "incorporated": "1947-11-27"
+            },
+            "costUsd": 0.01,
+            "signal": "0x62b3cf1fdf95232b9bfa94d2624ab3ef69ec707c41a24be7bce11da6f43fde2e",
+            "receipt": null
+          }
+        ]
+      },
+      "filings": {
+        "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+        "params": {
+          "entity": "Tesco PLC",
+          "period": "last 12 months"
+        },
+        "answers": [
+          {
+            "minerId": 77131,
+            "miner": "Filing Window",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "entity": null,
+              "filing_count": 55,
+              "filings": null,
+              "urls": null
+            },
+            "costUsd": 0.01,
+            "signal": "0x6ea4f2765ef0520cd477b84fc03b964c384db9ad1a92743f8abb8a134039b4cc",
+            "receipt": null
+          }
+        ]
+      },
+      "news": {
+        "intent": "NEWS_SEARCH_GENERAL",
+        "params": {
+          "query": "Tesco PLC"
+        },
+        "answers": [
+          {
+            "minerId": 7314402,
+            "miner": "Tacitum Adverse Media Screen",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "answer": "21 adverse news items naming Tesco PLC in the last 12 months from 20 sources, mainly criminal, investigation, regulatory action. Latest: Tesco suspends three UK dairy farms following animal welfare investigation (Irish Farmers Journal, 2026-11-04).",
+              "result_count": 21,
+              "sources": [
+                "Irish Farmers Journal",
+                "Dairy News Today",
+                "Blog Preston",
+                "Your Thurrock",
+                "Inverness Courier",
+                "STV News",
+                "Glasgow Live",
+                "Metro.co.uk",
+                "The Guardian",
+                "NW Mail",
+                "Forecourt Trader",
+                "The Forester"
+              ],
+              "brief": "21 adverse items on Tesco, risk high"
+            },
+            "costUsd": 0.01,
+            "signal": "0x13afc55c8ba13639c7d47f48d5edbb8f2e2956b877f8b5fb9a78e8c5e0955f41",
+            "receipt": null
+          }
+        ]
+      }
+    },
+    "verification": [
+      {
+        "signal": "0x42e0d98e04b93db93b79038a064098464adef64d2d61e1ebab75cb70e54b8a8b",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Tesco PLC\"}"
+      },
+      {
+        "signal": "0xddea4feef6c66d92e6da2b90113833980e1298441ae10f54ac90a4f69b35223b",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Tesco PLC\"}"
+      },
+      {
+        "signal": "0x506824533eeaf4639e60aa297427c960384452dbd6335a8f47135f48a9aaad48",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Tesco PLC\",\"jurisdiction\":\"GB\"}"
+      },
+      {
+        "signal": "0x62b3cf1fdf95232b9bfa94d2624ab3ef69ec707c41a24be7bce11da6f43fde2e",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Tesco PLC\",\"jurisdiction\":\"GB\"}"
+      },
+      {
+        "signal": "0x6ea4f2765ef0520cd477b84fc03b964c384db9ad1a92743f8abb8a134039b4cc",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"Tesco PLC\",\"period\":\"last 12 months\"}"
+      },
+      {
+        "signal": "0x13afc55c8ba13639c7d47f48d5edbb8f2e2956b877f8b5fb9a78e8c5e0955f41",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"Tesco PLC\"}"
+      }
+    ],
+    "privacy": {
+      "k": 4,
+      "parties": [
+        "FirstGroup PLC",
+        "Next PLC",
+        "BAE Systems PLC",
+        "Tesco PLC"
+      ],
+      "costUsd": 0.24,
+      "funder": "0xfd7aa64e839003a3b7c20080653f0202e97c5e1b",
+      "fundedUsd": 1,
+      "fundingTx": "0xe90dbcda958a45d429663a8750e7653a2fc85870bd050a8d2e7691c1d5dd06b9",
+      "viaPool": true,
+      "anonymitySet": 16
+    }
+  },
+  "k": 4,
+  "strategy": "matched",
+  "parties": [
+    "FirstGroup PLC",
+    "Next PLC",
+    "BAE Systems PLC",
+    "Tesco PLC"
+  ],
+  "targetIndex": 3,
+  "order": [
+    {
+      "name": "FirstGroup PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "registry"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "registry"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "registry"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "news"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "news"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "news"
+    },
+    {
+      "name": "Next PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Next PLC",
+      "check": "filings"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Next PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Next PLC",
+      "check": "news"
+    }
+  ],
+  "costUsd": 0.24,
+  "decoys": [
+    {
+      "counterparty": {
+        "name": "FirstGroup PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-15T18:27:52.757Z",
+      "finishedAt": "2026-11-15T18:34:16.105Z",
+      "payer": "0xeF165282962C9A9eb3Bb953538791b8494c2Dfa3",
+      "overall": "CLEAR",
+      "verdicts": {
+        "sanctions": "CLEAR",
+        "registry": "CLEAR",
+        "filings": "INFO",
+        "news": "CLEAR"
+      },
+      "costUsd": 0.06,
+      "paidCalls": 6,
+      "checks": {
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "FirstGroup PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": null,
+                "filing_count": 26,
+                "filings": null,
+                "urls": null
+              },
+              "costUsd": 0.01,
+              "signal": "0xa366bd4f35b08d885dae5bd315a0a7eb743d1fc2ae3d68fd67fcd59a97ac74cc",
+              "receipt": null
+            }
+          ]
+        },
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "FirstGroup PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "FIRSTGROUP PLC",
+                "registration_id": "SC157176",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "395 KING STREET, ABERDEEN, GB-ABD, AB24 5RP, GB",
+                "incorporated": "1995-03-31"
+              },
+              "costUsd": 0.01,
+              "signal": "0xf69cc7560e04825fdce9a8e365d9e962f3cc403225d372284c44aedbecea678c",
+              "receipt": null
+            },
+            {
+              "minerId": 5186,
+              "miner": "Praman Desk Compliance & Procurement Auditor",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "FIRSTGROUP PLC",
+                "registration_id": "549300DEJZCPWA4HKM93",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "395 KING STREET, ABERDEEN, GB-ABD, AB24 5RP, GB",
+                "incorporated": "1995-03-31"
+              },
+              "costUsd": 0.01,
+              "signal": "0xcf04d93068cc4055bfe1943912e4cf0b68d8937205ca2abf257667d96e1b91e4",
+              "receipt": null
+            }
+          ]
+        },
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "FirstGroup PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7314402,
+              "miner": "Tacitum Adverse Media Screen",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": "No adverse media naming FirstGroup PLC found in English-language news over the last 12 months.",
+                "result_count": 0,
+                "sources": null,
+                "brief": "No adverse media on FirstGroup in 12 months"
+              },
+              "costUsd": 0.01,
+              "signal": "0xc90fc128b7fd31cd4a6894d4e85e3f22f7fe215edcf9447c4480df623104445a",
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "FirstGroup PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "miner": "Counterproof Sanctions Screener",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "FirstGroup PLC",
+                "matched": false,
+                "matches": null,
+                "lists": [
+                  "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-13)",
+                  "UN Security Council Consolidated List (published 2026-11-15)",
+                  "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+                  "UK Sanctions List (published 2026-11-12)"
+                ],
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0xc600ce71f693d721d00e4edfeba7cbdc90e92a1c5bc1589caa90af058b480e0b",
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "miner": "Sanctions Name Evidence",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "FirstGroup PLC",
+                "matched": false,
+                "matches": null,
+                "lists": [
+                  "OFAC SDN",
+                  "OFAC Consolidated (non-SDN)",
+                  "UK Sanctions List (entities only)",
+                  "Canada autonomous sanctions (entities only)",
+                  "EU Financial Sanctions (entities only)",
+                  "US BIS Entity List (export controls)",
+                  "US BIS Military End User List (export controls)",
+                  "US BIS Denied Persons List (dated standard export-denial orders)",
+                  "UK Sanctions List (ships)",
+                  "US BIS Entity List (additional primary-row corroborated records)",
+                  "Canada autonomous sanctions (November 5 additional entities)",
+                  "Canada autonomous sanctions (corroborated ships)",
+                  "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+                ],
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0xf64e275cd91e93cea5fbd6cfac48d9f03a53e174fea3a2f313a078b4b1395703",
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0xa366bd4f35b08d885dae5bd315a0a7eb743d1fc2ae3d68fd67fcd59a97ac74cc",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"FirstGroup PLC\",\"period\":\"last 12 months\"}"
+        },
+        {
+          "signal": "0xf69cc7560e04825fdce9a8e365d9e962f3cc403225d372284c44aedbecea678c",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"FirstGroup PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0xcf04d93068cc4055bfe1943912e4cf0b68d8937205ca2abf257667d96e1b91e4",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"FirstGroup PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0xc90fc128b7fd31cd4a6894d4e85e3f22f7fe215edcf9447c4480df623104445a",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"FirstGroup PLC\"}"
+        },
+        {
+          "signal": "0xc600ce71f693d721d00e4edfeba7cbdc90e92a1c5bc1589caa90af058b480e0b",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"FirstGroup PLC\"}"
+        },
+        {
+          "signal": "0xf64e275cd91e93cea5fbd6cfac48d9f03a53e174fea3a2f313a078b4b1395703",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"FirstGroup PLC\"}"
+        }
+      ]
+    },
+    {
+      "counterparty": {
+        "name": "Next PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-15T18:27:52.757Z",
+      "finishedAt": "2026-11-15T18:34:19.110Z",
+      "payer": "0xeF165282962C9A9eb3Bb953538791b8494c2Dfa3",
+      "overall": "FLAG",
+      "verdicts": {
+        "sanctions": "FLAG",
+        "registry": "CLEAR",
+        "filings": "INFO",
+        "news": "FLAG"
+      },
+      "costUsd": 0.06,
+      "paidCalls": 6,
+      "checks": {
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "Next PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "NEXT PLC",
+                "registration_id": "04412362",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "DESFORD ROAD, ENDERBY, LEICESTER, GB-LCE, LE19 4AT, GB",
+                "incorporated": "2002-04-09"
+              },
+              "costUsd": 0.01,
+              "signal": "0x2756bb9764fb18f3032d54433f5617c378625c7a37292922f0ad941e4dd41a12",
+              "receipt": null
+            },
+            {
+              "minerId": 5186,
+              "miner": "Praman Desk Compliance & Procurement Auditor",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "NEXT PLC",
+                "registration_id": "213800WQD8ECPZP9PH98",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "DESFORD ROAD, ENDERBY, LEICESTER, GB-LCE, LE19 4AT, GB",
+                "incorporated": "2002-04-09"
+              },
+              "costUsd": 0.01,
+              "signal": "0xe4aa77afe831f4df4bedc6a921b46cd3a5c5aac4202ea98f09a9d83bba21bc22",
+              "receipt": null
+            }
+          ]
+        },
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "Next PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": null,
+                "filing_count": 63,
+                "filings": null,
+                "urls": null
+              },
+              "costUsd": 0.01,
+              "signal": "0x590ba750622100fb568d04d9823bf86ae9eb15af3779ed5b1af6de2c5793271f",
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "Next PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "miner": "Counterproof Sanctions Screener",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "Next PLC",
+                "matched": true,
+                "matches": null,
+                "lists": [
+                  "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-13)",
+                  "UN Security Council Consolidated List (published 2026-11-15)",
+                  "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+                  "UK Sanctions List (published 2026-11-12)"
+                ],
+                "match_score": 1
+              },
+              "costUsd": 0.01,
+              "signal": "0x968598ee1fc7f633008b543b543298573305f87c5642cf710832fd0a82581006",
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "miner": "Sanctions Name Evidence",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "Next PLC",
+                "matched": false,
+                "matches": null,
+                "lists": [
+                  "OFAC SDN",
+                  "OFAC Consolidated (non-SDN)",
+                  "UK Sanctions List (entities only)",
+                  "Canada autonomous sanctions (entities only)",
+                  "EU Financial Sanctions (entities only)",
+                  "US BIS Entity List (export controls)",
+                  "US BIS Military End User List (export controls)",
+                  "US BIS Denied Persons List (dated standard export-denial orders)",
+                  "UK Sanctions List (ships)",
+                  "US BIS Entity List (additional primary-row corroborated records)",
+                  "Canada autonomous sanctions (November 5 additional entities)",
+                  "Canada autonomous sanctions (corroborated ships)",
+                  "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+                ],
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0x8184140d5ddffac97200a5f4236a81819a3cbe8daf2fcdef1d1c205034d79a9f",
+              "receipt": null
+            }
+          ]
+        },
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "Next PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7314402,
+              "miner": "Tacitum Adverse Media Screen",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": "36 adverse news items naming Next PLC in the last 12 months from 34 sources, mainly misconduct, investigation, insolvency. Latest: Bellarmine’s football season ends. What’s next in lawsuit against CCS? (The Mercury News, 2026-11-14).",
+                "result_count": 36,
+                "sources": [
+                  "The Mercury News",
+                  "Tekedia",
+                  "Sports Business Journal",
+                  "Texas Public Radio | TPR",
+                  "Yahoo Finance",
+                  "RANE Worldview",
+                  "KTVU",
+                  "CBS News",
+                  "The Star",
+                  "WAVY.com",
+                  "WDBJ7",
+                  "Yahoo Sports"
+                ],
+                "brief": "36 adverse items on Next, risk high"
+              },
+              "costUsd": 0.01,
+              "signal": "0xd46cd47f07839df4bcf60991512ef1559cd48e860a0ce4711b1217632f22cf54",
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0x2756bb9764fb18f3032d54433f5617c378625c7a37292922f0ad941e4dd41a12",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Next PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0xe4aa77afe831f4df4bedc6a921b46cd3a5c5aac4202ea98f09a9d83bba21bc22",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Next PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0x590ba750622100fb568d04d9823bf86ae9eb15af3779ed5b1af6de2c5793271f",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"Next PLC\",\"period\":\"last 12 months\"}"
+        },
+        {
+          "signal": "0x968598ee1fc7f633008b543b543298573305f87c5642cf710832fd0a82581006",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Next PLC\"}"
+        },
+        {
+          "signal": "0x8184140d5ddffac97200a5f4236a81819a3cbe8daf2fcdef1d1c205034d79a9f",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Next PLC\"}"
+        },
+        {
+          "signal": "0xd46cd47f07839df4bcf60991512ef1559cd48e860a0ce4711b1217632f22cf54",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"Next PLC\"}"
+        }
+      ]
+    },
+    {
+      "counterparty": {
+        "name": "BAE Systems PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-15T18:27:52.757Z",
+      "finishedAt": "2026-11-15T18:34:22.229Z",
+      "payer": "0xeF165282962C9A9eb3Bb953538791b8494c2Dfa3",
+      "overall": "FLAG",
+      "verdicts": {
+        "sanctions": "CLEAR",
+        "registry": "CLEAR",
+        "filings": "INFO",
+        "news": "FLAG"
+      },
+      "costUsd": 0.06,
+      "paidCalls": 6,
+      "checks": {
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "BAE Systems PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "BAE SYSTEMS PLC",
+                "registration_id": "01470151",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "6 Carlton Gardens, London, GB-LND, SW1Y 5AD, GB",
+                "incorporated": "1979-12-31"
+              },
+              "costUsd": 0.01,
+              "signal": "0x7a11cb7a35ebf7ec8195a2d2f1c71da7b8af765c3ebf94f179475c57e53b6d38",
+              "receipt": null
+            },
+            {
+              "minerId": 5186,
+              "miner": "Praman Desk Compliance & Procurement Auditor",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "BAE SYSTEMS PLC",
+                "registration_id": "8SVCSVKSGDWMW2QHOH83",
+                "active": true,
+                "jurisdiction": "GB",
+                "registered_address": "6 Carlton Gardens, London, GB-LND, SW1Y 5AD, GB",
+                "incorporated": "1979-12-31"
+              },
+              "costUsd": 0.01,
+              "signal": "0x72e396e29e2e52c0b0361de6b6d124c60776dc6c86697922d81a2d2e69849147",
+              "receipt": null
+            }
+          ]
+        },
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "BAE Systems PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": null,
+                "filing_count": 54,
+                "filings": null,
+                "urls": null
+              },
+              "costUsd": 0.01,
+              "signal": "0xdf266ae8fa8d08312347117defd44f3544b8e25d8b2677b4fb4c4239bcd4ff8b",
+              "receipt": null
+            }
+          ]
+        },
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "BAE Systems PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7314402,
+              "miner": "Tacitum Adverse Media Screen",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": "20 adverse news items naming BAE Systems PLC in the last 12 months from 20 sources, mainly insolvency, data breach, regulatory action. Latest: Cyber Attack Hits BAE Systems, Disrupting Numerous US Federal Courts (CPO Magazine, 2026-10-22).",
+                "result_count": 20,
+                "sources": [
+                  "CPO Magazine",
+                  "eSecurity Planet",
+                  "Homeland Security Today",
+                  "Digital Watch Observatory",
+                  "TechRadar",
+                  "Rescana",
+                  "Security Affairs",
+                  "Infosecurity Magazine",
+                  "BleepingComputer",
+                  "SecurityWeek",
+                  "The Business Journals",
+                  "CyberScoop"
+                ],
+                "brief": "20 adverse items on BAE Systems, risk elevated"
+              },
+              "costUsd": 0.01,
+              "signal": "0x7dfad17d56a8068667ced16f212ea442af54edf719574b6cbc633f82855fbdf4",
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "BAE Systems PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "miner": "Counterproof Sanctions Screener",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "BAE Systems PLC",
+                "matched": false,
+                "matches": null,
+                "lists": [
+                  "US OFAC SDN and non-SDN Consolidated lists (published 2026-11-13)",
+                  "UN Security Council Consolidated List (published 2026-11-15)",
+                  "EU Consolidated Financial Sanctions List (published 2026-10-23)",
+                  "UK Sanctions List (published 2026-11-12)"
+                ],
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0x1847936584bdd433373d75f1286eb477b3132f15798f048a0083fc54fb988283",
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "miner": "Sanctions Name Evidence",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "BAE Systems PLC",
+                "matched": false,
+                "matches": null,
+                "lists": [
+                  "OFAC SDN",
+                  "OFAC Consolidated (non-SDN)",
+                  "UK Sanctions List (entities only)",
+                  "Canada autonomous sanctions (entities only)",
+                  "EU Financial Sanctions (entities only)",
+                  "US BIS Entity List (export controls)",
+                  "US BIS Military End User List (export controls)",
+                  "US BIS Denied Persons List (dated standard export-denial orders)",
+                  "UK Sanctions List (ships)",
+                  "US BIS Entity List (additional primary-row corroborated records)",
+                  "Canada autonomous sanctions (November 5 additional entities)",
+                  "Canada autonomous sanctions (corroborated ships)",
+                  "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+                ],
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0x974800d34d3323d2c7c2748d6cf9f73e56f5ddbfacdd77f8ec261e6d89a0155d",
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0x7a11cb7a35ebf7ec8195a2d2f1c71da7b8af765c3ebf94f179475c57e53b6d38",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"BAE Systems PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0x72e396e29e2e52c0b0361de6b6d124c60776dc6c86697922d81a2d2e69849147",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"BAE Systems PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0xdf266ae8fa8d08312347117defd44f3544b8e25d8b2677b4fb4c4239bcd4ff8b",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"BAE Systems PLC\",\"period\":\"last 12 months\"}"
+        },
+        {
+          "signal": "0x7dfad17d56a8068667ced16f212ea442af54edf719574b6cbc633f82855fbdf4",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"BAE Systems PLC\"}"
+        },
+        {
+          "signal": "0x1847936584bdd433373d75f1286eb477b3132f15798f048a0083fc54fb988283",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"BAE Systems PLC\"}"
+        },
+        {
+          "signal": "0x974800d34d3323d2c7c2748d6cf9f73e56f5ddbfacdd77f8ec261e6d89a0155d",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"BAE Systems PLC\"}"
+        }
+      ]
+    }
+  ]
+}

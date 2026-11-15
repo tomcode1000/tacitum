@@ -101,6 +101,16 @@ const data = {
       : [];
     return { file: f, auditor: env.auditor, sha256: env.sha256, alg: env.alg, evidence: ev, lines };
   })(),
+  agent: (() => {
+    const file = fs.readdirSync("evidence").filter((f) => /^agent-run-.*\.jsonl$/.test(f)).sort().pop();
+    if (!file) return null;
+    const ev = fs.readFileSync(`evidence/${file}`, "utf8").trim().split(/\r?\n/).map((l) => JSON.parse(l));
+    const call = ev.flatMap((e) => (Array.isArray(e.message?.content) ? e.message.content : [])).find((c) => c.type === "tool_use" && c.name.startsWith("mcp__tacitum__"));
+    const res = ev.find((e) => e.type === "result");
+    const ver = fs.readdirSync("evidence").filter((f) => /^audit-verify-.*agent/.test(f)).sort().pop();
+    const lines = ver ? fs.readFileSync(`evidence/${ver}`, "utf8").split(/\r?\n/).filter((l) => /^\s+[✓✗]/.test(l)) : [];
+    return { file: `evidence/${file}`, task: ev.find((e) => e.type === "task")?.task, model: ev.find((e) => e.type === "system")?.model, tool: call?.name, input: call?.input, result: res?.result, minutes: res ? Math.round(res.duration_ms / 60000) : null, audit: { file: ver ? `evidence/${ver}` : null, passed: lines.filter((l) => l.includes("✓")).length, total: lines.length } };
+  })(),
   miner: {
     id: miner.id,
     slug: miner.slug,

@@ -1,0 +1,203 @@
+{
+  "pool": "0xfd7aa64e839003a3b7c20080653f0202e97c5e1b",
+  "ranAt": "2026-11-15",
+  "depositors": 16,
+  "approved": 11,
+  "note": "rebuilt from data/pool-seed-v2.log: the run ended on a logs-RPC timeout after screening",
+  "deposits": [
+    {
+      "address": "0x25Bd31dfAd6e57dA0607F8DE973Fa76014670ed6",
+      "depositTx": "0x9210f3699ca29311bbdbe4a91c7897d04e095b445fdac7040e0b555a62d4fb73"
+    },
+    {
+      "address": "0xAAB26dA64618291AE02c52332dc437cB752EA051",
+      "depositTx": "0x5b37b74fb0c84fb9a6115f44ab6602c20198f5137cf4b1dde3fd34bf2dc256cf"
+    },
+    {
+      "address": "0xeC9bbBc05cE6e854070C15A3F5322A608c368c97",
+      "depositTx": "0x5a46c0cac25de0efdd30e1bad0bb394449ab3a4c37748bc4bacbe96da7fbc440"
+    },
+    {
+      "address": "0xb7a62BC7527ECb1D572f183CD6be0ECD2CCb6e66",
+      "depositTx": "0x8ea925f5d32bc18cd642d48d7d06e6af104e28cae260920c25832a7b3f003589"
+    },
+    {
+      "address": "0x57C8037Ae69e3cC785dc0ccBe06E1aA2a55e50C3",
+      "depositTx": "0xa55c2f9796df69595f87f7e64510d7e5f387125b5b70a3aefde6e12405064a25"
+    },
+    {
+      "address": "0x438fEFD34723b0469aefF3E777000e2299ea1B8e",
+      "depositTx": "0xb94bbcadb18a04e95e41c826f6ce1f23cf753d2a9f4323022058b77204e580c9"
+    },
+    {
+      "address": "0xD6b6568C56E5D8eFE079B8E382bFfA48b88c6795",
+      "depositTx": "0xfb6e74a5643160d9180479c6a2b54d75d14efe5a7dc2f76a620dad468e26c15f"
+    },
+    {
+      "address": "0x48208773Ac6CE22129F04F0Ce5E4aa756cBecD16",
+      "depositTx": "0x11e35b54465b6221d2a0399155f81359a96359cbcc67f7bd54af100438a43a02"
+    },
+    {
+      "address": "0x4Fa4b87c8De3b43A3160b2D58494F74926405037",
+      "depositTx": "0x63d4a29498d1586b77b327d3b3d09e320c4468dba6c6e3f0f93861e9830c015e"
+    },
+    {
+      "address": "0x02423Ec80142120549D2eBCb4E2Faf32f4874a8a",
+      "depositTx": "0x19796a7415ada44aa31c184bee0e6ee5b8254367a5379b2dd3cea4040390e068"
+    },
+    {
+      "address": "0xf93EdBF29876A36b9ca3AbcBa119bc01992A7cF5",
+      "depositTx": "0x9c21b4399297cfdfa63e6a33ba1b4cecfdc245b335d17fba7d801dd3fef1d45f"
+    },
+    {
+      "address": "0x6fcea76f3be067c47B1506023091105b6beB7BC1",
+      "depositTx": "0xc90fab7a71abe786b3473eea5363466f787faae5f3801d0ade2508a0d1e8e56f"
+    },
+    {
+      "address": "0xbe8Ed189016d2b38BC9131098ceE818215F6Bf7B",
+      "depositTx": "0xe8861a2400d84d38c6abe8e1009dc407ade0291c0d0a0e9bee7170690ae6adb6"
+    },
+    {
+      "address": "0x53C2C597c52f91BbD6Eb1BA3faAb8612a261B07C",
+      "depositTx": "0xb6e80423329b87a65241fe33a293fe990b2eb07e0733bd89a0d06f337edd898a"
+    },
+    {
+      "address": "0xE9E69a0c176eC5080B04882691A9E4f62fC06CcA",
+      "depositTx": "0x92d080e631824bac9d94b974ccf7f77ecd630377451d4b9f7b9e8c1ff7e8b2e6"
+    },
+    {
+      "address": "0xB3Bc2688eE8f0246aC50fa2F6eDf4F180052940C",
+      "depositTx": "0x8088357072097b84732fe1c799afc78efffa3d894f78c877935e51d3854a39da"
+    }
+  ],
+  "screening": [
+    {
+      "depositor": "0x25Bd31dfAd6e57dA0607F8DE973Fa76014670ed6",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x901dd44f2e77a0f2d9a05466697e8e885c36b7d59fdf3edbb8373a0c26eb065d",
+      "tx": "0xc27fdf850d6321fc4bcbeedc3a518019b0146320f811cbc72502be3ad03f8e4e"
+    },
+    {
+      "depositor": "0xAAB26dA64618291AE02c52332dc437cB752EA051",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x178b86e5ea0bf15b5bac6535f58f3561bf5d466e21e9485ecf3256d9aadd06da",
+      "tx": "0x43a7d3eafa4e64c1796ca83ef98b0ef373b33e4c4736e8125f3b679daa5ff1c8"
+    },
+    {
+      "depositor": "0xeC9bbBc05cE6e854070C15A3F5322A608c368c97",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x9957db948c2c3511f1b1a9bd7253eaeb93bb7626f26fb3c4e99e859398992250",
+      "tx": "0x4cb3e6456af985a109ff52b1389d03147f4975887b1fea23e4ea7e943acc04d7"
+    },
+    {
+      "depositor": "0xb7a62BC7527ECb1D572f183CD6be0ECD2CCb6e66",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x115d5f2f505a18146f42fef133b68edd16f690a0710c05adacc1ba6ab4f60c7e",
+      "tx": "0xa2541dd5448bedcfbadb6a6069d328552e36d686b885b621d3b2c39b91776ac4"
+    },
+    {
+      "depositor": "0x57C8037Ae69e3cC785dc0ccBe06E1aA2a55e50C3",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0xf308d5521536701582250e366149fa6aa9cb38dcb81daa9df50e081f190fddf3",
+      "tx": "0xb65167460ed6cb6a48fcbc5d715f5da5e07e79abfb07306921248407548a8457"
+    },
+    {
+      "depositor": "0x438fEFD34723b0469aefF3E777000e2299ea1B8e",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x357c4224157830426600494e2ea67409a65bd36936cd040613ba82fc67a309ed",
+      "tx": "0x14f1b15d0a133a143d3bbb3129a35e463fe33983e572973459ad0ebe1d0aaf52"
+    },
+    {
+      "depositor": "0xD6b6568C56E5D8eFE079B8E382bFfA48b88c6795",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0xc747f7eea607f988ce8ed8b8feaf4474af4e7816ed0f52c92d34c54d93262ca3",
+      "tx": "0x8e84d9091b542f19316f1bc14a2741f660a75cbf04e2e693cdea4f332de57dbf"
+    },
+    {
+      "depositor": "0x48208773Ac6CE22129F04F0Ce5E4aa756cBecD16",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0xc0d16eb642ac56b8c04dcb3beb77facd22fd2506760cad8db3016b09b470af0f",
+      "tx": "0x7ba830bcd328723f5ab2ac2e8bf5f71675c515f7505f85d12b585c3dd155c0dc"
+    },
+    {
+      "depositor": "0x4Fa4b87c8De3b43A3160b2D58494F74926405037",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x784ca87415e3cd30cc966308390664c079db9a7fce0097814b2c03b20ef41860",
+      "tx": "0xf94c0881997f454cc9d08c814c2fd31e15cd6f04063b33e2ccf4c6fa409a2042"
+    },
+    {
+      "depositor": "0x02423Ec80142120549D2eBCb4E2Faf32f4874a8a",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0xf465197e468b37d4903bebcb3a19b9a45ade8735a8f0fcbd91e350fd296aeee0",
+      "tx": "0xc928ec03cb73bd4c32963357186af7088da9b5be4d68f354df0cd6bcfccf991e"
+    },
+    {
+      "depositor": "0xf93EdBF29876A36b9ca3AbcBa119bc01992A7cF5",
+      "verdict": "approve",
+      "matched": false,
+      "score": 0,
+      "signal": "0x5382ce30d3556bfeea68ded3a24a494622416e8d877bebf81d682936e9de5944",
+      "tx": "0x5c9b88d71d5d0fbc92a333eb68cbeff89a2b7b1e1edde2aaf2b3e3b4b289bcfa"
+    },
+    {
+      "depositor": "0x6fcea76f3be067c47B1506023091105b6beB7BC1",
+      "verdict": "pending",
+      "matched": null,
+      "score": null,
+      "signal": null,
+      "tx": null
+    },
+    {
+      "depositor": "0xbe8Ed189016d2b38BC9131098ceE818215F6Bf7B",
+      "verdict": "pending",
+      "matched": null,
+      "score": null,
+      "signal": null,
+      "tx": null
+    },
+    {
+      "depositor": "0x53C2C597c52f91BbD6Eb1BA3faAb8612a261B07C",
+      "verdict": "pending",
+      "matched": null,
+      "score": null,
+      "signal": null,
+      "tx": null
+    },
+    {
+      "depositor": "0xE9E69a0c176eC5080B04882691A9E4f62fC06CcA",
+      "verdict": "pending",
+      "matched": null,
+      "score": null,
+      "signal": null,
+      "tx": null
+    },
+    {
+      "depositor": "0xB3Bc2688eE8f0246aC50fa2F6eDf4F180052940C",
+      "verdict": "pending",
+      "matched": null,
+      "score": null,
+      "signal": null,
+      "tx": null
+    }
+  ]
+}
