@@ -13,7 +13,10 @@ import { USDC, DIAMOND, KEYS, usdcAbi, escrowAbi, publicClient, walletClient, lo
 import { newNote, saveNote, depositGasless, approvedLeaves, Tree, prove, verifyLocally, withdraw, poolAbi, shutdown } from "../src/pool.js";
 import { screenPending } from "../src/screener.js";
 
-const N = Number(process.argv[2] || 4);
+// --deposit-only: stop after screening, leaving the desk's approved note unspent for
+// `npm run private -- "<name>" GB 4 --pool`.
+const DEPOSIT_ONLY = process.argv.includes("--deposit-only");
+const N = Number(process.argv.slice(2).find((a) => /^\d+$/.test(a)) || 4);
 const P = JSON.parse(fs.readFileSync("data/pool.json", "utf8"));
 const operator = loadAccount();
 const op = walletClient(operator);
@@ -47,6 +50,13 @@ for (const [i, d] of depositors.entries()) {
 // 3. Screening: every depositor wallet through Telegraph sanctions; approve on a clear answer.
 const screened = await screenPending(operator, P.pool, P.deployBlock, say);
 const approvedCount = screened.filter((s) => s.verdict === "approve").length;
+if (DEPOSIT_ONLY) {
+  const set = (await approvedLeaves(P.pool, P.deployBlock)).length;
+  say(`deposit-only: ${approvedCount} approved this run; approved set now ${set}. The desk note is saved, unspent.`);
+  fs.writeFileSync(`data/pool-deposits-${new Date().toISOString().slice(0, 10)}.json`, JSON.stringify({ pool: P.pool, ranAt: new Date().toISOString(), depositors: N, approved: approvedCount, approvedSet: set, deposits: depositors.map((d) => ({ address: d.account.address, depositTx: d.depositTx })), screening: screened.map(({ depositor, verdict, matched, score, signal, tx }) => ({ depositor, verdict, matched, score, signal, tx })), log }, null, 2));
+  await shutdown();
+  process.exit(0);
+}
 
 // 4. Desk withdraws: rebuild the approved tree from events, prove membership, relay into a fresh payer.
 const desk = depositors[deskIndex];

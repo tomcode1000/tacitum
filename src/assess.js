@@ -47,10 +47,12 @@ export async function runCheck(client, check, counterparty) {
   return { intent: check.intent, params, answers };
 }
 
-function judge(checks) {
+export function judge(checks) {
   const ok = (name) => checks[name].answers.filter((a) => a.ok);
 
-  const hits = ok("sanctions").map((a) => bool(a.result.matched));
+  // Only definite answers count: a miner that returns matched = null has not cleared anyone,
+  // but it has not blocked a clear from two others either (15 Nov memo read REVIEW on that).
+  const hits = ok("sanctions").map((a) => bool(a.result.matched)).filter((h) => h !== null);
   const sanctions =
     hits.includes(true) ? "FLAG" : hits.length >= 2 && hits.every((h) => h === false) ? "CLEAR" : "REVIEW";
 

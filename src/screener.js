@@ -6,19 +6,19 @@
 //   matched === true   -> reject  (refunded, never mixes)
 //   anything else      -> left pending and retried later (no verdict without a clear answer)
 import { parseAbiItem } from "viem";
-import { publicClient, walletClient } from "./config.js";
+import { publicClient, logsClient, walletClient } from "./config.js";
 import { createClient } from "./telegraph.js";
 import { poolAbi } from "./pool.js";
 
 export const SCREEN = { intent: "SANCTIONS_SCREENING_MATCH_GENERAL", miner: 731002 };
 
 export async function pendingDeposits(pool, fromBlock) {
-  const latest = await publicClient.getBlockNumber();
+  const latest = await logsClient.getBlockNumber();
   const event = parseAbiItem("event Deposited(uint256 indexed commitment, address indexed depositor)");
   const out = [];
   for (let from = BigInt(fromBlock); from <= latest; from += 9000n) {
     const to = from + 8999n > latest ? latest : from + 8999n;
-    for (const l of await publicClient.getLogs({ address: pool, event, fromBlock: from, toBlock: to })) {
+    for (const l of await logsClient.getLogs({ address: pool, event, fromBlock: from, toBlock: to })) {
       const still = await publicClient.readContract({ address: pool, abi: poolAbi, functionName: "pendingDepositor", args: [l.args.commitment] });
       if (still !== "0x0000000000000000000000000000000000000000") out.push({ commitment: l.args.commitment, depositor: l.args.depositor, tx: l.transactionHash });
     }

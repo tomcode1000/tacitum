@@ -5,10 +5,12 @@ import "./config.mjs";
 import { publicRecord } from "../src/telegraph.js";
 import { renderMemo } from "../src/memo.js";
 import { approvedLeaves } from "../src/pool.js";
+import { judge } from "../src/assess.js";
 
 const file = process.argv[2];
 const rec = JSON.parse(fs.readFileSync(file, "utf8"));
 const real = rec.real;
+Object.assign(real, judge(real.checks)); // verdicts recomputed with the current rules
 
 // Rebuilt from the answers themselves, so it works even if the saved list is incomplete.
 const answers = Object.values(real.checks).flatMap((c) => c.answers.filter((a) => a.signal));

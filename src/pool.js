@@ -13,7 +13,7 @@ import { fileURLToPath } from "node:url";
 import { buildPoseidon } from "circomlibjs";
 import * as snarkjs from "snarkjs";
 import { encodeAbiParameters, getAddress, keccak256, parseAbi, parseAbiItem, parseSignature } from "viem";
-import { KEYS, USDC, publicClient, walletClient, usdcAbi } from "./config.js";
+import { KEYS, USDC, publicClient, logsClient, walletClient, usdcAbi } from "./config.js";
 
 export const LEVELS = 16;
 const FIELD = 21888242871839275222987973346525843474722323733218440019324089856651904883201n;
@@ -113,12 +113,12 @@ export class Tree {
 
 // Public RPCs cap log ranges, so scan in chunks from the pool's deployment block.
 export async function approvedLeaves(pool, fromBlock) {
-  const latest = await publicClient.getBlockNumber();
+  const latest = await logsClient.getBlockNumber();
   const event = parseAbiItem("event Approved(uint256 indexed commitment, uint32 leafIndex, bytes32 screeningSignal, uint256 root)");
   const out = [];
   for (let from = BigInt(fromBlock); from <= latest; from += 9000n) {
     const to = from + 8999n > latest ? latest : from + 8999n;
-    const logs = await publicClient.getLogs({ address: pool, event, fromBlock: from, toBlock: to });
+    const logs = await logsClient.getLogs({ address: pool, event, fromBlock: from, toBlock: to });
     for (const l of logs) out.push({ commitment: l.args.commitment, leafIndex: Number(l.args.leafIndex), signal: l.args.screeningSignal, root: l.args.root, tx: l.transactionHash });
   }
   return out.sort((a, b) => a.leafIndex - b.leafIndex);

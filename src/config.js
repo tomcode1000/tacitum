@@ -36,3 +36,8 @@ export const publicClient = createPublicClient({ chain: sepolia, transport: http
 export function walletClient(account) {
   return createWalletClient({ account, chain: sepolia, transport: http(RPC, { timeout: 30_000, retryCount: 6, retryDelay: 2_000 }) });
 }
+
+// Log queries need history the default public node prunes ("pruned history unavailable", 15 Nov),
+// so event scans (pool deposits, approvals) use their own RPC.
+export const LOGS_RPC = process.env.LOGS_RPC_URL || "https://sepolia.gateway.tenderly.co";
+export const logsClient = createPublicClient({ chain: sepolia, transport: http(LOGS_RPC, { timeout: 30_000, retryCount: 6, retryDelay: 2_000 }) });
