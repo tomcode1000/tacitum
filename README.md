@@ -1,6 +1,6 @@
 # Tacitum
 
-**The private buying layer for [Telegraph](https://telegraphprotocol.com). Screen anyone. Tell no one. Prove everything.**
+**The private, compliant buying layer for [Telegraph](https://telegraphprotocol.com). Screen anyone. Tell no one. Prove everything.**
 
 Tacitum is the dark pool for due diligence. Agents and desks buy counterparty checks hidden among decoys, paid from a sanctions-screened pool, with every answer receipted on Telegraph and a sealed record that only the auditor's key can open.
 
