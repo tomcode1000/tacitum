@@ -259,12 +259,12 @@ ul.arts .meta{font-size:.84rem;color:var(--text-3)}
 .callout{border:1px solid var(--line-2);border-left:3px solid var(--brass);background:var(--panel);border-radius:var(--r-sm);padding:16px 20px;margin:16px 0 24px;color:var(--text-2);font-size:.95rem}
 .callout b{color:var(--text)}
 
-/* Hover-bold words: each word turns bold under the pointer without moving its neighbours.
-   The ::after copy is rendered at full weight but invisible, so every word already holds its bold width. */
-.hover-words{cursor:default}
-.hover-words .w{display:inline-flex;flex-direction:column;align-items:center;font-weight:600;transition:font-weight .18s ease,color .18s ease}
-.hover-words .w::after{content:attr(data-t);font-weight:800;height:0;overflow:hidden;visibility:hidden;user-select:none;pointer-events:none}
-.hover-words .w:hover{font-weight:800;color:var(--text)}
-.hover-words .w.near{font-weight:700;color:var(--text-2)}
-@media (hover:none){.hover-words .w:active{font-weight:800;color:var(--text)}}
-.hero .hover-words{font-size:clamp(.82rem,1vw,.98rem);letter-spacing:.2em;color:var(--text-2)}
+/* Magnifier line: letters near the pointer grow and thicken like under a lens (dock-style
+   fisheye), falling off with distance. The line keeps a fixed height so nothing below it moves. */
+.hover-words{--base:clamp(.82rem,1vw,.98rem);font-size:var(--base);letter-spacing:.2em;color:var(--text-2);cursor:default;
+  display:flex;align-items:flex-end;flex-wrap:wrap;min-height:calc(var(--base) * 2.6);column-gap:.55em;line-height:1}
+.hover-words .w{display:inline-flex;align-items:flex-end;white-space:nowrap}
+.hover-words .c{display:inline-block;font-weight:600;transition:font-size .22s ease,font-weight .22s ease,color .22s ease;will-change:font-size}
+.hover-words.live .c{transition:none}
+.hover-words .c.hot{color:var(--text)}
+@media (prefers-reduced-motion:reduce){.hover-words .c{transition:none}}

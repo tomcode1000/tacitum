@@ -84,15 +84,36 @@ T.data = fetch("data.json").then((r) => r.json()).then((d) => {
   return d;
 });
 
-// .hover-words: every word bolds under the pointer; its neighbours go half-way, so the weight
-// follows the mouse along the line. Screen readers still read the original sentence.
+// .hover-words: a magnifying lens along the line. Each letter's size and weight follow a bell
+// curve around the pointer (up to MAX times larger right under it), so the text zooms in where
+// the mouse is, like a dock. Screen readers still read the original sentence.
 document.querySelectorAll(".hover-words").forEach((el) => {
+  const MAX = 2.4, SIGMA = 46; // peak scale, lens radius in px
   const text = el.textContent.trim();
   el.setAttribute("aria-label", text);
-  el.innerHTML = text.split(/\s+/).map((w) => `<span class="w" data-t="${T.esc(w)}" aria-hidden="true">${T.esc(w)}</span>`).join(" ");
-  const words = [...el.querySelectorAll(".w")];
-  words.forEach((w, i) => {
-    w.addEventListener("mouseenter", () => words.forEach((x, j) => x.classList.toggle("near", Math.abs(i - j) === 1)));
+  el.innerHTML = text.split(/\s+/).map((w) => `<span class="w" aria-hidden="true">${[...w].map((ch) => `<span class="c">${T.esc(ch)}</span>`).join("")}</span>`).join("");
+  const chars = [...el.querySelectorAll(".c")];
+  let centers = [], frame = 0, px = null;
+  const measure = () => { centers = chars.map((c) => { const r = c.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2 }; }); };
+  const base = () => parseFloat(getComputedStyle(el).fontSize);
+  const paint = () => {
+    frame = 0;
+    const b = base();
+    chars.forEach((c, i) => {
+      const dx = px.x - centers[i].x, dy = (px.y - centers[i].y) * 1.6;
+      const k = Math.exp(-(dx * dx + dy * dy) / (2 * SIGMA * SIGMA));
+      const s = 1 + (MAX - 1) * k;
+      c.style.fontSize = `${(b * s).toFixed(2)}px`;
+      c.style.fontWeight = String(Math.round(600 + 250 * k));
+      c.classList.toggle("hot", k > 0.35);
+    });
+  };
+  el.addEventListener("pointerenter", () => { measure(); el.classList.add("live"); });
+  el.addEventListener("pointermove", (e) => { px = { x: e.clientX, y: e.clientY }; if (!frame) frame = requestAnimationFrame(paint); });
+  el.addEventListener("pointerleave", () => {
+    el.classList.remove("live");
+    if (frame) cancelAnimationFrame(frame), (frame = 0);
+    chars.forEach((c) => { c.style.fontSize = ""; c.style.fontWeight = ""; c.classList.remove("hot"); });
   });
-  el.addEventListener("mouseleave", () => words.forEach((x) => x.classList.remove("near")));
+  addEventListener("resize", () => (centers = []));
 });
