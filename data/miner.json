@@ -1,0 +1,13 @@
+{
+  "registrationId": 5284,
+  "slug": "tacitum-adverse-media",
+  "id": 7314402,
+  "yamlUrl": "https://tacitum-adverse.vercel.app/miner.yaml",
+  "yamlHash": "0x5054cac00c2c0e6d25da8419654c85ca9459696b75383b10993dfb87d309a3d2",
+  "intents": [
+    "NEWS_SEARCH_GENERAL"
+  ],
+  "minPriceUsdc": 10000,
+  "tx": "0xa3882333bfc5020a90f2cda8c0a67e4542293b92140c9ad3b03f987898014953",
+  "registeredAt": "2026-11-15T13:08:51.992Z"
+}

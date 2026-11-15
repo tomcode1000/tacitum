@@ -1,0 +1,58 @@
+version: "1"
+kind: miner
+id: 7314402
+slug: tacitum-adverse-media
+protocol: generic
+name: Tacitum Adverse Media Screen
+description: >-
+  Adverse media screening for a named company or person: news from the last 12 months whose
+  headline names the entity and reports fraud, money laundering, sanctions, bribery, regulatory
+  action, litigation, criminal charges, investigations, insolvency, data breaches or misconduct.
+  Every item has its source and date; syndicated copies are merged and law-firm investor adverts
+  are kept apart from reporting. Built for counterparty and KYB checks.
+base_url: https://tacitum-adverse.vercel.app
+docs:
+  repository: https://github.com/tomcode1000/tacitum
+rate_limit_per_sec: 2
+cache_ttl_sec: 900
+circuit_threshold: 5
+circuit_cooldown_seconds: 60
+errors:
+  message_path: error
+endpoints:
+  - path: /adverse
+    external_path: /api/adverse
+    method: GET
+    description: >-
+      Screen one company or person for adverse news coverage over the last 12 months. Send only the
+      entity name as query (for example "Barclays PLC"), not a sentence. Returns a summary, the count
+      of adverse items, risk (none, low, elevated, high), categories, and every source URL with its date.
+    intents: [NEWS_SEARCH_GENERAL]
+    params:
+      query:
+        required:
+          - name: query
+            type: string
+            intents: ["*"]
+            description: "Name of the company or person to screen, e.g. Barclays PLC. Entity name only, at most 256 characters."
+limitations:
+  - code: MAX_PARAM_LENGTH
+    message: query must be at most 256 characters
+    param: query
+    property: length
+    value_num: 256
+    operator: lte
+intent_mapping:
+  NEWS_SEARCH_GENERAL:
+    endpoint: /adverse
+    input:
+      query: { from: query, how: "Only the company or person name the question is about, without extra words." }
+    output:
+      answer: { path: answer }
+      result_count: { path: result_count }
+      sources: { path: sources }
+semantics:
+  signal_mapping:
+    label_field: risk
+  supported_intents:
+    - NEWS_SEARCH_GENERAL

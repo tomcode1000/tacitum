@@ -12,8 +12,12 @@ export const CHECKS = {
   // 77393 reads Companies House; 5185 reads GLEIF (LEI ids), so the two are independent sources.
   registry: { intent: "CORPORATE_REGISTRY_LOOKUP_GENERAL", miners: [77393, 5185], mode: "all", params: (c) => ({ company: c.name, jurisdiction: c.jurisdiction }) },
   filings: { intent: "REGULATORY_FILING_MONITOR_GENERAL", miners: [77131], mode: "first", params: (c) => ({ entity: c.name, period: "last 12 months" }) },
-  news: { intent: "NEWS_SEARCH_GENERAL", miners: [7329, 302], mode: "first", params: (c) => ({ query: c.name }) },
+  // 7314402 is our own adverse-media miner (miner/): headlines must name the entity and report
+  // something adverse, so "0 items" means screened and clean. 7329 and 302 are general news fallbacks.
+  news: { intent: "NEWS_SEARCH_GENERAL", miners: [7314402, 7329, 302], mode: "first", params: (c) => ({ query: c.name }) },
 };
+
+export const ADVERSE_MINER = 7314402;
 
 const ADVERSE = /sanction|fraud|fine[ds]?\b|penalt|probe|lawsuit|sued|charged|indict|investigat|money laundering|bribery|default|insolven|bankrupt/i;
 const TRUE = ["true", "yes", "match", "matched", "1"];
@@ -56,10 +60,17 @@ function judge(checks) {
   const filing = ok("filings")[0]?.result;
   const filings = filing ? "INFO" : "REVIEW";
 
-  const story = ok("news")[0]?.result;
+  const first = ok("news")[0];
+  const story = first?.result;
   const text = story ? [story.answer, story.brief, ...(story.titles || [])].filter(Boolean).join(" ") : "";
-  // No sources is not the same as no adverse news.
-  const news = !story || !Number(story.result_count) ? "REVIEW" : ADVERSE.test(text) ? "FLAG" : "CLEAR";
+  let news;
+  if (first && Number(first.minerId) === ADVERSE_MINER) {
+    // Adverse-media screen: a clean screen is an answer, items found need a human look.
+    news = /^no adverse media/i.test(story.answer || "") ? "CLEAR" : Number(story.result_count) > 0 ? "FLAG" : "REVIEW";
+  } else {
+    // General news: no sources is not the same as no adverse news.
+    news = !story || !Number(story.result_count) ? "REVIEW" : ADVERSE.test(text) ? "FLAG" : "CLEAR";
+  }
 
   const verdicts = { sanctions, registry, filings, news };
   const values = Object.values(verdicts);
