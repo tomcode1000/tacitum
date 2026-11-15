@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-15T18:39:18.690Z",
+  "builtAt": "2026-11-15T19:15:46.311Z",
   "node": "https://devnode.telegraphprotocol.com",
   "repo": "https://github.com/tomcode1000/tacitum",
   "memo": {
@@ -494,6 +494,165 @@
     "slug": "tacitum-adverse-media",
     "registrationId": 5285,
     "endpoint": "https://tacitum-adverse.vercel.app/api/adverse",
+    "eval": {
+      "tuning": {
+        "headlines": 64,
+        "entities": [
+          "Barclays PLC",
+          "HSBC Holdings PLC",
+          "Tesco PLC",
+          "Binance",
+          "Boeing",
+          "Thames Water",
+          "Rolls-Royce Holdings PLC",
+          "Unilever PLC"
+        ],
+        "precision": 0.964,
+        "recall": 1,
+        "f1": 0.982,
+        "accuracy": 0.984,
+        "errors": 1
+      },
+      "holdout": {
+        "headlines": 64,
+        "entities": [
+          "Tesla",
+          "BHP",
+          "Shell PLC",
+          "Meta",
+          "Ryanair",
+          "Wells Fargo",
+          "Vodafone Group PLC",
+          "Glencore"
+        ],
+        "precision": 0.853,
+        "recall": 0.906,
+        "f1": 0.879,
+        "accuracy": 0.875,
+        "errors": 8
+      },
+      "test": {
+        "headlines": 63,
+        "entities": [
+          "Uber",
+          "Philips",
+          "Starbucks",
+          "Amazon",
+          "Adani",
+          "Nike",
+          "Volkswagen",
+          "Deutsche Bank"
+        ],
+        "precision": 0.906,
+        "recall": 0.707,
+        "f1": 0.795,
+        "accuracy": 0.762,
+        "errors": 15,
+        "misses": [
+          {
+            "outcome": "FN",
+            "entity": "Philips",
+            "title": "Philips, Google's Fitbit settle fitness-tracker patent dispute",
+            "why": "patent dispute settled"
+          },
+          {
+            "outcome": "FN",
+            "entity": "Volkswagen",
+            "title": "Volkswagen Is Heading to Criminal Court in France Over Dieselgate. Yes, Here in 2026.",
+            "why": "criminal court"
+          },
+          {
+            "outcome": "FN",
+            "entity": "Deutsche Bank",
+            "title": "How a whistleblower exposed a Deutsche Bank-PIC love affair",
+            "why": "whistleblower exposure"
+          },
+          {
+            "outcome": "FN",
+            "entity": "Deutsche Bank",
+            "title": "Ex-Deutsche Bank employee ‘charged with €600,000 embezzlement’",
+            "why": "ex-employee embezzlement charge"
+          },
+          {
+            "outcome": "FN",
+            "entity": "Volkswagen",
+            "title": "VW And Audi 2.0T Engine Targeted In Lawsuit (Again) For Alleged Oil Burning",
+            "why": "lawsuit"
+          },
+          {
+            "outcome": "FN",
+            "entity": "Philips",
+            "title": "Russian hackers breach nearly 50 companies worldwide, including Shell, Philips and General Electric – Reuters",
+            "why": "breached by hackers"
+          },
+          {
+            "outcome": "FN",
+            "entity": "Volkswagen",
+            "title": "Volkswagen braces for huge financial hit from FCA motor finance scheme",
+            "why": "liability from finance scheme"
+          },
+          {
+            "outcome": "FN",
+            "entity": "Starbucks",
+            "title": "Pro­testers across N.Y. state call out Starbucks over plastic recycling claims following in­ves­ti­gation",
+            "why": "misleading-claims allegation"
+          },
+          {
+            "outcome": "FP",
+            "entity": "Philips",
+            "title": "Amazon and Philips file joint lawsuit concerning sale of counterfeit toothbrush heads",
+            "why": "plaintiff"
+          },
+          {
+            "outcome": "FN",
+            "entity": "Adani",
+            "title": "US Judge Denies DOJ Bid to Drop Bribery Charges Against Gautam Adanis Co-Defendants, Again Finds Indian Orders Contradict Govt Claims",
+            "why": "bribery charges"
+          },
+          {
+            "outcome": "FN",
+            "entity": "Adani",
+            "title": "Congress alleges major scandal, as Adani Green slashes Satara hydropower project cost by 99%",
+            "why": "scandal allegation"
+          },
+          {
+            "outcome": "FP",
+            "entity": "Volkswagen",
+            "title": "Nissan cheated diesel emissions tests even after Volkswagen scandal rocked the industry",
+            "why": "about Nissan"
+          },
+          {
+            "outcome": "FN",
+            "entity": "Starbucks",
+            "title": "Starbucks loses bid to dismiss labor union's trademark case",
+            "why": "litigation"
+          },
+          {
+            "outcome": "FN",
+            "entity": "Nike",
+            "title": "Nike, Accused of Bias Against White Workers, Is Under Federal Investigation",
+            "why": "federal investigation"
+          },
+          {
+            "outcome": "FP",
+            "entity": "Amazon",
+            "title": "Amazon vows action against India delivery partner after fire probe concludes",
+            "why": "acting against a partner"
+          }
+        ]
+      },
+      "history": {
+        "v1_tuning": {
+          "precision": 0.71,
+          "recall": 0.815
+        },
+        "v2_holdout_before_v3": {
+          "precision": 0.625,
+          "recall": 0.625
+        }
+      }
+    },
+    "paidCalls": 5,
     "sample": {
       "query": "Binance",
       "result": {

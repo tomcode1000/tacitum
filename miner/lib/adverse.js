@@ -15,13 +15,23 @@ export const CATEGORIES = {
   fraud: /\b(fraud\w*|scam\w*|ponzi|embezzl\w*|misappropriat\w*|forg(ed|ery))\b/i,
   bribery_corruption: /\b(brib\w*|corrupt\w*|kickback\w*)\b/i,
   regulatory_action: /\b(fined|fines?|penalt\w*|censure\w*|enforcement action|banned|ban on|reprimand\w*|cease[- ]and[- ]desist)\b/i,
-  litigation: /\b(lawsuits?|sued|sues|suing|class action|litigation|court case)\b/i,
-  criminal: /\b(charged|arrest\w*|indict\w*|prosecut\w*|convicted|guilty|jailed|sentenced)\b/i,
+  litigation: /\b(lawsuits?|sued|sues?|suing|class action|litigation|court case|judge|jury|legal (action|battle|fight)|claims against|settles?|settlement|on trial|trial over|found liable|liable for)\b/i,
+  // "charged" alone also means billed ("charged me £75") or energised ("copper-charged").
+  criminal: /\b(charged (with|over|in connection)|faces? charges|criminal charges?|arrest\w*|indict\w*|prosecut\w*|convicted|pleads? (not )?guilty|guilty|jailed|sentenced)\b/i,
   investigation: /\b(investigat\w*|probes?|probed|inquiry|raid\w*|subpoena\w*)\b/i,
-  insolvency: /\b(bankrupt\w*|insolven\w*|liquidat\w*|administration|collapse[sd]?|default(s|ed)?)\b/i,
-  data_breach: /\b(data breach|breach\w*|hack(ed|ers?)?|cyber[- ]?attack\w*|leak(ed|s)?)\b/i,
-  misconduct: /\b(scandal\w*|misconduct|whistleblow\w*|manipulat\w*|rigg(ed|ing))\b/i,
+  insolvency: /\b(bankrupt\w*|insolven\w*|liquidat\w*|administration|collapse[sd]?|default(s|ed)?|postpone debt|debt repayment|restructuring|rescue deal)\b/i,
+  data_breach: /\b(data breach|breach\w*|hack(ed|ers?|s)?|heist|cyber[- ]?attack\w*|data leak|leaked (data|documents|records|emails))\b/i,
+  safety: /\b(flaw(s|ed)?|defect\w*|recalls?|recalled|plane crash|crash(es)? (probe|investigation|lawsuit)|grounded|grounding|safety (board|probe|failure|lapse)s?)\b/i,
+  misconduct: /\b(scandal\w*|misconduct|whistleblow\w*|manipulat\w*|rigg(ed|ing)|accus\w*|alleg(es|ed|ation|ations)|apologi[sz]\w* over|controvers\w*|backlash|suspends? (a |its )?(senior )?(executive|chief|boss)|suspended (executive|chief|boss))\b/i,
+  environmental: /\b(pollut\w*|oil spill|spills?|toxic|contaminat\w*|dam collapse|environmental (breach|damage|disaster))\b/i,
 };
+
+// Headlines where the entity is the victim of a crime ("theft from Tesco Express").
+const victimRe = (core) => new RegExp(`\\b(stolen from|thefts? from|robbed|robbing|robbery at|shoplift\\w* (at|from)|break-in at|burgled)\\s+(the\\s+|a\\s+)?${escapeRe(core)}`, "i");
+// Routine merger and competition reviews are regulatory process, not adverse findings.
+const MERGER = /\b(merger|deal|acquisition|takeover|tie-up)\b/i;
+// Phrases that contain an adverse word in a neutral sense.
+const NEUTRAL = /\b(site investigation|investigation surveys?|gas leak|chemical leak|water leak)\b/gi;
 
 const SOLICITATION = /\b(law firm|llc encourages|llp|shareholders? (alert|rights)|investors? (alert|to (contact|inquire))|class action filed|encourages .* (investors|stockholders)|deadline alert|rosen|pomerantz|schall|bronstein|faruqi|levi & korsinsky|glancy|bragar|kessler topaz)\b/i;
 
@@ -39,20 +49,38 @@ const escapeRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 export function classify(title, entity) {
   const t = norm(title);
   const core = coreName(entity);
-  const nameRe = new RegExp(`(^|[^\\w])${escapeRe(core)}([^\\w]|$)`, "i");
+  // Case-sensitive in mixed-case headlines, so "Shell" the company is not "WW2 shell" or
+  // "K-shell"; all-caps headlines fall back to a case-insensitive match.
+  const caps = t === t.toUpperCase();
+  const nameRe = new RegExp(`(^|[^\\w-])${escapeRe(core)}([^\\w-]|$)`, caps ? "i" : "");
   if (!nameRe.test(t)) return null;
   // The adverse term must sit in the same clause as the entity: "Meta fined, Binance resumes
-  // withdrawals" is about Meta. Clauses split on , ; : | and dashes used as separators.
+  // withdrawals" is about Meta. Clauses split on , ; | and dashes used as separators (not on
+  // colons, which usually introduce the story: "Ryanair CEO: initial probe suggests ...").
   // Bracketed text such as "(LSE:BARC)" is ignored when splitting.
-  const clauses = t.replace(/\([^)]*\)/g, " ").split(/\s*(?:[,;:|]|\s[-–—]\s)\s*/).filter((c) => nameRe.test(c));
-  const categories = Object.entries(CATEGORIES).filter(([, re]) => clauses.some((c) => re.test(c))).map(([k]) => k);
+  const parts = t.replace(/\([^)]*\)/g, " ").replace(NEUTRAL, " ").split(/\s*(?:[,;|]|\s[-–—]\s)\s*/);
+  const merged = [];
+  for (const p of parts) {
+    const prev = merged[merged.length - 1];
+    // A list continues across a comma ("lawsuit against GE, Boeing over crash"), and a trailing
+    // attribution belongs to the clause before it ("..., lawsuit alleges", "..., documents show").
+    if (prev && (/\b(against|by|from|with|of|on)\s+[A-Z][\w&.-]*(\s+[A-Z][\w&.-]*)?$/.test(prev) || /^(\w+\s){0,3}(alleges?|says?|shows?|claims?|reports?|finds?)$/i.test(p))) merged[merged.length - 1] = `${prev} ${p}`;
+    else merged.push(p);
+  }
+  const clauses = merged.filter((c) => nameRe.test(c));
+  let categories = Object.entries(CATEGORIES).filter(([, re]) => clauses.some((c) => re.test(c))).map(([k]) => k);
+  if (!categories.length) return null;
+  // The entity as the victim of a crime is not adverse media about it.
+  if (victimRe(core).test(t)) categories = categories.filter((k) => k !== "criminal");
+  // A merger review is process, not a finding, unless something else adverse is reported.
+  if (MERGER.test(t)) categories = categories.filter((k) => k !== "investigation");
   if (!categories.length) return null;
   // The entity fighting fraud or warning customers is not adverse media about it.
   if (ADVISORY.test(t) && categories.every((k) => ["fraud", "data_breach"].includes(k))) return null;
   return { title: t, categories, solicitation: SOLICITATION.test(t) };
 }
 
-const ADVISORY = /\b(detect\w*|anti-fraud|solutions?|technology|warns?|warning|tackles?|fights?|crack(s|ing)? down|campaign|protect\w*|tips|how to (spot|avoid)|awareness|prevent\w*|alerts? customers|urges|advice|guide)\b/i;
+const ADVISORY = /\b(detect\w*|anti-fraud|solutions?|technology|tool|curb\w*|tackl\w*|rolls out|launch\w*|warns?|warning|tackles?|fights?|crack(s|ing)? down|campaign|protect\w*|tips|how to (spot|avoid)|awareness|prevent\w*|alerts? customers|urges|advice|guide)\b/i;
 
 // GDELT filters on adverse terms server side, so 12 months of adverse coverage fits in one page
 // (the newest 250 articles about a big bank only reach back a few days). Headlines are then
@@ -98,6 +126,13 @@ async function googleNews(entity, { timeoutMs = 8000 } = {}) {
   } catch (e) {
     return { name: "google_news_rss", url, ok: false, items: [], note: e.cause?.code || e.name };
   }
+}
+
+// Raw feed items before any filtering: used by the evaluation set builder (miner/eval/).
+export async function collect(query) {
+  const entity = String(query || "").trim().slice(0, 256);
+  const feeds = await Promise.all([gdelt(entity), googleNews(entity)]);
+  return { entity, feeds };
 }
 
 export async function screen(query) {

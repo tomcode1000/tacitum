@@ -43,10 +43,51 @@
         <div class="card"><span class="icon"><i data-i="search"></i></span><h3>Twelve months</h3><p>The entity plus adverse terms, searched in GDELT and Google News over the last year.</p></div>
         <div class="card"><span class="icon"><i data-i="doc"></i></span><h3>Named in the headline</h3><p>A headline must name the company and report something adverse, or it is dropped.</p></div>
         <div class="card"><span class="icon"><i data-i="layers"></i></span><h3>Categorised</h3><p>Fraud, laundering, sanctions, bribery, regulatory action, litigation, criminal, probes, insolvency, breaches, misconduct.</p></div>
-        <div class="card"><span class="icon"><i data-i="shield"></i></span><h3>Noise removed</h3><p>Syndicated copies merge. Law-firm investor adverts and anti-fraud campaigns are not counted as adverse.</p></div>
+        <div class="card"><span class="icon"><i data-i="shield"></i></span><h3>Right company only</h3><p>Case-sensitive names and same-clause terms: "Meta fined, Binance resumes" is not about Binance. Victims, own anti-fraud work and routine merger reviews do not count.</p></div>
       </div>
       <div class="panel scroll-x" style="margin-top:28px" id="reg"></div>
-      <div class="callout" style="margin-top:22px"><b>Known gap.</b> A headline that names two companies can count against the wrong one, for example "Meta fined, Binance is about to resume withdrawals". Tying the adverse term to the named entity is the next improvement.</div>
+    </div>
+  </section>
+
+  <section class="section" id="quality">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Measured quality</p>
+        <h2>Scored on headlines <span class="accent">it had never seen.</span></h2>
+        <p class="lede">We labelled real headlines by hand, tuned on one set, checked on a second, then froze the rules and scored a third set collected afterwards and labelled blind. Only that last number is a fair estimate, so it is the one we lead with.</p>
+      </div>
+      <div class="stats" id="q-stats"></div>
+      <div class="grid-main" style="margin-top:22px">
+        <div class="panel scroll-x" id="q-table"></div>
+        <div class="panel"><div class="panel-head"><span class="eyebrow">Missed or wrong on the test set</span></div><div id="q-miss" style="max-height:440px;overflow:auto"></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section alt" id="missions">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What it enables</p>
+        <h2>One provider, <span class="accent">four commercial missions.</span></h2>
+      </div>
+      <div class="cards c4">
+        <div class="card"><p class="eyebrow">Mission 03</p><h3>Institutional Markets</h3><p>Counterparty and KYB checks before a trade or deal. Tacitum buys it on every assessment.</p></div>
+        <div class="card"><p class="eyebrow">Mission 04</p><h3>Legal</h3><p>Litigation, enforcement and criminal history on a party in one call, each item with its source.</p></div>
+        <div class="card"><p class="eyebrow">Mission 01</p><h3>Exchange</h3><p>Listing and partner due diligence: fraud, sanctions and breach coverage on an issuer or market maker.</p></div>
+        <div class="card"><p class="eyebrow">Mission 13</p><h3>Asset Management</h3><p>Ongoing monitoring of portfolio companies and suppliers for new adverse coverage.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="run">
+    <div class="wrap split">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">Run it</p>
+        <h2>Call it free, <span class="accent">or buy it on Telegraph.</span></h2>
+        <p class="lede">Fetch an answer directly with no wallet, or buy it through Telegraph for $0.01 with a public receipt. To host your own copy and register it, follow the steps in the docs.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn brass" href="docs.html#miner">Miner docs <i data-i="arrow"></i></a><a class="btn ghost" id="readme" href="#">README</a></div>
+      </div>
+      <pre id="run-code"></pre>
     </div>
   </section>
 </main>
@@ -62,6 +103,32 @@ T.data.then((d) => {
     <tr><td class="muted">Price</td><td>$0.01 per answer</td></tr>
     <tr><td class="muted">Public endpoint</td><td><span class="mono">${T.esc(m.endpoint)}?query=…</span></td></tr>
     <tr><td class="muted">Source</td><td><a href="${d.repo}/tree/main/miner">miner/ on GitHub</a></td></tr></tbody></table>`;
+  document.getElementById("readme").href = `${d.repo}/blob/main/miner/README.md`;
+  document.getElementById("run-code").innerHTML = `<span class="c-com"># free, direct: no wallet needed</span>
+curl "${m.endpoint}?query=Barclays%20PLC"
+
+<span class="c-com"># through Telegraph: $0.01, receipted on the public record</span>
+<span class="c-key">import</span> { createClient } <span class="c-key">from</span> <span class="c-str">"tacitum"</span>;
+<span class="c-key">const</span> r = <span class="c-key">await</span> createClient(account).askMiner(
+  ${m.id}, <span class="c-str">"NEWS_SEARCH_GENERAL"</span>, { query: <span class="c-str">"Barclays PLC"</span> });
+
+<span class="c-com"># quality on the three labelled sets (free, offline)</span>
+node miner/eval/run.mjs`;
+  const e = m.eval;
+  if (e) {
+    const pct = (x) => `${Math.round(x * 100)}<small>%</small>`;
+    document.getElementById("q-stats").innerHTML = [
+      [pct(e.test.precision), "Precision", "When it flags a headline, how often it is right."],
+      [pct(e.test.recall), "Recall", "How many adverse headlines it catches."],
+      [e.test.f1.toFixed(2), "F1", `On ${e.test.headlines} blind-labelled headlines, 8 new companies.`],
+      [m.paidCalls + "+", "Paid calls", "Direct, plus every Tacitum assessment since 15 Nov."],
+    ].map(([n, w, s]) => `<div class="stat"><div class="num">${n}</div><div class="what">${w}</div><div class="src">${s}</div></div>`).join("");
+    const row = (name, role, r) => `<tr><td>${name}</td><td class="muted">${role}</td><td>${r.headlines}</td><td>${r.precision.toFixed(2)}</td><td>${r.recall.toFixed(2)}</td><td><b style="color:var(--text)">${r.f1.toFixed(2)}</b></td></tr>`;
+    document.getElementById("q-table").innerHTML = `<table class="table"><thead><tr><th>Set</th><th>Role</th><th>Headlines</th><th>Precision</th><th>Recall</th><th>F1</th></tr></thead><tbody>
+      ${row("Test", "frozen rules, labelled blind", e.test)}${row("Holdout", "rules adjusted on its errors", e.holdout)}${row("Tuning", "rules adjusted on it", e.tuning)}</tbody></table>
+      <p class="muted" style="padding:14px 22px;font-size:.88rem;border-top:1px solid var(--line)">Before the last round of rules the holdout scored ${e.history.v2_holdout_before_v3.precision} / ${e.history.v2_holdout_before_v3.recall}, which is why a separate test set exists. Labels, guide and script are in <a href="${d.repo}/tree/main/miner/eval" style="color:var(--text)">miner/eval</a>.</p>`;
+    document.getElementById("q-miss").innerHTML = e.test.misses.map((x) => `<div style="padding:12px 22px;border-bottom:1px solid var(--line)"><span class="chip ${x.outcome === "FP" ? "v-REVIEW" : "v-INFO"}" style="margin-right:8px">${x.outcome === "FP" ? "False flag" : "Missed"}</span><span style="font-size:.9rem">${T.esc(x.title.slice(0, 110))}</span><div class="muted" style="font-size:.82rem;margin-top:4px">${T.esc(x.entity)} · ${T.esc(x.why)}</div></div>`).join("");
+  }
   render(m.sample.query, m.sample.result, `Paid answer through Telegraph for "${T.esc(m.sample.query)}" · receipt ${T.sig(m.sample.signal)}`);
   document.getElementById("form").onsubmit = async (e) => {
     e.preventDefault();

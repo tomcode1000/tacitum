@@ -1,0 +1,21 @@
+{
+  "guide": "Same guide as labels.json. Clean test set: 8 companies never used for tuning (v3 rules were frozen before collection), shuffled, labelled by hand on 16 Nov 2026 before any prediction was looked at. Rulings used for consistency: being a defendant counts as adverse even when the case is won or dismissed; being the plaintiff does not; consumer fee complaints and operational incidents without misconduct do not.",
+  "labels": {
+    "1": [true, "data breach"], "2": [true, "patent dispute settled"], "3": [false, "Starbucks is the location"], "4": [false, "operational incident"],
+    "5": [true, "fined"], "6": [true, "sued by regulator"], "7": [false, "own compliance tooling"], "8": [true, "data breach"],
+    "9": [false, "product"], "10": [false, "project costs explainer"], "11": [true, "defendant in shareholder suit"], "12": [true, "bribery case"],
+    "13": [true, "lawsuit"], "14": [true, "criminal court"], "15": [false, "scam impersonating Amazon"], "16": [true, "scandal and probe demand"],
+    "17": [true, "sued"], "18": [true, "raids"], "19": [true, "scandal bill"], "20": [true, "bribery allegations probe"],
+    "21": [true, "scandal allegation"], "22": [true, "whistleblower exposure"], "23": [false, "Uber driver was the victim"], "24": [false, "index change"],
+    "25": [false, "about Nvidia"], "26": [true, "ex-employee embezzlement charge"], "27": [false, "entity not named"], "28": [true, "lawsuit"],
+    "29": [true, "breached by hackers"], "30": [true, "liability from finance scheme"], "31": [true, "rate-rigging case"], "32": [true, "defendant (dismissed)"],
+    "33": [true, "mis-selling scandal"], "34": [false, "product launch"], "35": [false, "Uber driver was the victim"], "36": [false, "entity not named"],
+    "37": [true, "data stolen by hackers"], "38": [false, "consumer fee complaint"], "39": [false, "entity not named"], "40": [true, "misleading-claims allegation"],
+    "41": [false, "plaintiff"], "42": [true, "search by investigators"], "43": [true, "lawsuit"], "44": [false, "political target"],
+    "45": [true, "bribery charges"], "46": [true, "ransomware breach"], "47": [false, "entity not named"], "48": [true, "lawsuit"],
+    "49": [true, "scandal allegation"], "50": [false, "factual tracking, no allegation in headline"], "51": [true, "raided in probe"], "52": [true, "sued"],
+    "53": [false, "about Nissan"], "54": [true, "litigation over recall"], "55": [true, "class action over breach"], "56": [true, "litigation"],
+    "57": [false, "entity not named"], "58": [true, "probe demand"], "59": [true, "security incident"], "60": [true, "federal investigation"],
+    "61": [true, "lawsuit"], "62": [false, "acting against a partner"], "63": [true, "breach"]
+  }
+}

@@ -4,7 +4,9 @@
 
 Tacitum is the dark pool for due diligence. Agents and desks buy counterparty checks hidden among decoys, paid from a sanctions-screened pool, with every answer receipted on Telegraph and a sealed record that only the auditor's key can open.
 
-Telegraph Hackathon Season II, Apps & Agents track (Mission 03, Institutional Markets), plus a Track 1 provider: the `tacitum-adverse-media` miner.
+Telegraph Hackathon Season II, two entries:
+- **Track 01, Apps & Agents** (Mission 03, Institutional Markets): Tacitum itself, this README.
+- **Track 02, Miners / Providers**: the `tacitum-adverse-media` miner, see [miner/README.md](miner/README.md). Blind-test precision 0.91, recall 0.71.
 
 | | |
 |---|---|

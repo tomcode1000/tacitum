@@ -135,6 +135,9 @@ node scripts/miner-register.mjs --dry     <span class="c-com"># simulate first</
 node scripts/miner-register.mjs           <span class="c-com"># swaps test USDC for the MACHINA bond, then registers</span>
 node scripts/miner-update.mjs             <span class="c-com"># after changing the YAML</span></code></pre>
         <p>Through Telegraph, ask it directly with miner id <code>7314402</code> and params <code>{ "query": "Barclays PLC" }</code>. Each answer costs $0.01.</p>
+        <h3>Quality</h3>
+<pre><code>node miner/eval/run.mjs     <span class="c-com"># tuning, holdout and blind test sets; free and offline</span></code></pre>
+        <p>On 63 blind-labelled headlines from 8 companies it was never tuned on: precision 0.91, recall 0.71, F1 0.80. The labelling guide, all three sets and the known misses are in <code>miner/eval/</code>; the miner's own submission document is <a href="https://github.com/tomcode1000/tacitum/blob/main/miner/README.md">miner/README.md</a>.</p>
 
         <h2 id="contracts">Contracts and circuit</h2>
         <ul>

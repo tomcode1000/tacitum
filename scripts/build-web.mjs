@@ -116,6 +116,13 @@ const data = {
     slug: miner.slug,
     registrationId: miner.registrationId,
     endpoint: "https://tacitum-adverse.vercel.app/api/adverse",
+    eval: (() => {
+      if (!fs.existsSync("miner/eval/results.json")) return null;
+      const e = read("miner/eval/results.json");
+      const pick = (r) => ({ headlines: r.headlines, entities: r.entities, precision: r.precision, recall: r.recall, f1: r.f1, accuracy: r.accuracy, errors: r.errors.length });
+      return { tuning: pick(e.tuning), holdout: pick(e.holdout), test: { ...pick(e.test), misses: e.test.errors.map((x) => ({ outcome: x.outcome, entity: x.entity, title: x.title, why: x.why })) }, history: e.history };
+    })(),
+    paidCalls: fs.readdirSync("evidence").filter((f) => /^miner-.*\.json$/.test(f)).length,
     // The inline Telegraph result keeps only the intent fields; the public record has the full answer.
     sample: { query: minerSample.request.params.query, result: (await (await fetch(`${NODE}/engine/v1/signal/${minerSample.response.signal_hash}`)).json()).payload?.response || minerSample.response.result, signal: minerSample.response.signal_hash },
   },

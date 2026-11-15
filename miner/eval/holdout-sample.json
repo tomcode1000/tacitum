@@ -1,0 +1,450 @@
+[
+ {
+  "id": 1,
+  "entity": "Tesla",
+  "title": "Nvidia $5T CEO scandal, AI legislation headaches, and Tesla returns deposits for Cybertrucks",
+  "source": "Yahoo Finance",
+  "published": "2026-11-09"
+ },
+ {
+  "id": 2,
+  "entity": "BHP",
+  "title": "UK: BHP found liable in Brazil dam collapse disaster",
+  "source": "Business and Human Rights Centre",
+  "published": "2025-11-17"
+ },
+ {
+  "id": 3,
+  "entity": "Shell PLC",
+  "title": "Ark shell offence met with court penalty",
+  "source": "Western Australian Government",
+  "published": "2025-11-27"
+ },
+ {
+  "id": 4,
+  "entity": "Meta",
+  "title": "Meta settles social media addiction case with California, other states for $16.7 billion",
+  "source": "CNBC",
+  "published": "2026-08-26"
+ },
+ {
+  "id": 5,
+  "entity": "Ryanair",
+  "title": "Ryanair CEO pledges not to hit passengers with fuel surcharge",
+  "source": "Reuters",
+  "published": "2026-09-23"
+ },
+ {
+  "id": 6,
+  "entity": "Wells Fargo",
+  "title": "Wells Fargo",
+  "source": "WCIV",
+  "published": "2026-11-13"
+ },
+ {
+  "id": 7,
+  "entity": "Vodafone Group PLC",
+  "title": "Vodafone begins global rollout of Number Verify 2.0 to strengthen protection against online fraud",
+  "source": "Vodafone",
+  "published": "2026-07-13"
+ },
+ {
+  "id": 8,
+  "entity": "Ryanair",
+  "title": "'Ryanair charged me £75 extra for suitcase I've used more than 30 times'",
+  "source": "The Mirror",
+  "published": "2026-08-06"
+ },
+ {
+  "id": 9,
+  "entity": "Shell PLC",
+  "title": "Live WW2 shell found during Rugby burglary investigation",
+  "source": "BBC",
+  "published": "2026-03-12"
+ },
+ {
+  "id": 10,
+  "entity": "BHP",
+  "title": "BHP quietly scrapped plan to build Pilbara plant that would have drastically cut emissions",
+  "source": "The Guardian",
+  "published": "2026-05-25"
+ },
+ {
+  "id": 11,
+  "entity": "Glencore",
+  "title": "Glencore Bribery Case: Ex-Oil Chief Pleads Not Guilty to Cameroon and West Africa Corruption Charges",
+  "source": "CameroonOnline.org",
+  "published": "2026-09-11"
+ },
+ {
+  "id": 12,
+  "entity": "Vodafone Group PLC",
+  "title": "How Vodafone UK is tackling phone scams with Scam Signal",
+  "source": "GSMA",
+  "published": "2026-09-09"
+ },
+ {
+  "id": 13,
+  "entity": "Shell PLC",
+  "title": "Shell fined £560,000 after deteriorated oil rig equipment led to 'potentially catastrophic' risk",
+  "source": "Daily Record",
+  "published": "2025-11-28"
+ },
+ {
+  "id": 14,
+  "entity": "Meta",
+  "title": "Five Publishers and Scott Turow Sue Meta and Mark Zuckerberg",
+  "source": "The New York Times",
+  "published": "2026-05-05"
+ },
+ {
+  "id": 15,
+  "entity": "BHP",
+  "title": "Rio Tinto (ASX:RIO) Sits Out the Rally as BHP's Copper-Charged Result Steals the Mining Spotlight",
+  "source": "Kalkine",
+  "published": "2026-08-18"
+ },
+ {
+  "id": 16,
+  "entity": "Wells Fargo",
+  "title": "JPMorgan must face Wells Fargo lawsuit over troubled $481 million real estate loan",
+  "source": "Reuters",
+  "published": "2026-03-30"
+ },
+ {
+  "id": 17,
+  "entity": "Tesla",
+  "title": "Elon Musk Confirms ‘Global Bankruptcy’ Fears As Tesla And SpaceX Explore Bitcoin Price Game-Changer",
+  "source": "Forbes",
+  "published": "2026-11-09"
+ },
+ {
+  "id": 18,
+  "entity": "Wells Fargo",
+  "title": "HUD investigates Wells Fargo over race-based mortgage policies",
+  "source": "Scotsman Guide",
+  "published": "2026-10-07"
+ },
+ {
+  "id": 19,
+  "entity": "Meta",
+  "title": "Meta is on trial – again. Here's what to know about the case brought by dozens of states",
+  "source": "PBS",
+  "published": "2026-08-18"
+ },
+ {
+  "id": 20,
+  "entity": "Shell PLC",
+  "title": "Treasury curtails reporting rules for shell companies",
+  "source": "Axios",
+  "published": "2026-08-14"
+ },
+ {
+  "id": 21,
+  "entity": "Ryanair",
+  "title": "NTSB leads probe into Ryanair’s broken window incident over Greece",
+  "source": "AeroTime",
+  "published": "2026-07-17"
+ },
+ {
+  "id": 22,
+  "entity": "Wells Fargo",
+  "title": "HUD targets Wells Fargo over SPCP for Black homeowners",
+  "source": "HousingWire",
+  "published": "2026-10-07"
+ },
+ {
+  "id": 23,
+  "entity": "Ryanair",
+  "title": "Ryanair boss Michael O'Leary apologises over 'high-fare rapists' remarks",
+  "source": "BBC",
+  "published": "2026-09-18"
+ },
+ {
+  "id": 24,
+  "entity": "Shell PLC",
+  "title": "Plasma screening in mid-charged ions observed by K-shell line emission - Scientific Reports",
+  "source": "Nature",
+  "published": "2026-02-10"
+ },
+ {
+  "id": 25,
+  "entity": "Tesla",
+  "title": "Tesla Model Y probe ends. What it means for buyers, stock prices",
+  "source": "USA Today",
+  "published": "2026-04-28"
+ },
+ {
+  "id": 26,
+  "entity": "BHP",
+  "title": "English High Court holds BHP liable for Brazilian environmental law breach: Owners of overseas projects watch out!",
+  "source": "Hill Dickinson",
+  "published": "2025-11-20"
+ },
+ {
+  "id": 27,
+  "entity": "Wells Fargo",
+  "title": "Wells Fargo denied older worker promotions over her age, lawsuit alleges",
+  "source": "Human Resources Director",
+  "published": "2026-07-22"
+ },
+ {
+  "id": 28,
+  "entity": "Vodafone Group PLC",
+  "title": "3.6M Azure Records Allegedly Stolen From Major Companies",
+  "source": "eSecurity Planet",
+  "published": "2026-08-18"
+ },
+ {
+  "id": 29,
+  "entity": "Ryanair",
+  "title": "Ryanair to let parents sit with children for free – here's how its new policy works",
+  "source": "Money Saving Expert",
+  "published": "2026-06-25"
+ },
+ {
+  "id": 30,
+  "entity": "Glencore",
+  "title": "Glencore suspends executive over Radiant scandal",
+  "source": "MiningMX",
+  "published": "2026-09-18"
+ },
+ {
+  "id": 31,
+  "entity": "Meta",
+  "title": "Tech Firms to Face Thousands of Lawsuits Over Social Media Addiction",
+  "source": "Time Magazine",
+  "published": "2026-08-11"
+ },
+ {
+  "id": 32,
+  "entity": "Meta",
+  "title": "Meta Fined €805m in Italy Over Alleged Misuse of Android Users’ Photos",
+  "source": "Brand Icon Image",
+  "published": "2026-11-14"
+ },
+ {
+  "id": 33,
+  "entity": "Shell PLC",
+  "title": "Shell pumped oil through Nigeria pipeline for years despite pollution evidence, documents show",
+  "source": "BBC",
+  "published": "2026-06-03"
+ },
+ {
+  "id": 34,
+  "entity": "Wells Fargo",
+  "title": "Couple gets all their money back after FOX23 Investigation into banking scam",
+  "source": "KOKI FOX 23",
+  "published": "2026-09-14"
+ },
+ {
+  "id": 35,
+  "entity": "Meta",
+  "title": "Ofcom investigates Meta’s compliance with UK online safety laws",
+  "source": "www.ofcom.org.uk",
+  "published": "2026-10-06"
+ },
+ {
+  "id": 36,
+  "entity": "Shell PLC",
+  "title": "Paramount President Jeff Shell Absent From WBD Merger Call With Wall Street Analysts Amid Legal Probe",
+  "source": "Deadline",
+  "published": "2026-03-02"
+ },
+ {
+  "id": 37,
+  "entity": "Tesla",
+  "title": "US opens probe of fatal Tesla crash into Texas home",
+  "source": "Reuters",
+  "published": "2026-06-23"
+ },
+ {
+  "id": 38,
+  "entity": "Vodafone Group PLC",
+  "title": "⚖️ Why Vodafone's £85 million lawsuit might end before it starts",
+  "source": "LittleLaw",
+  "published": "2026-04-08"
+ },
+ {
+  "id": 39,
+  "entity": "Tesla",
+  "title": "Why Tesla’s AI trainers don’t trust its self-driving tech – or its safety stats",
+  "source": "Reuters",
+  "published": "2026-05-28"
+ },
+ {
+  "id": 40,
+  "entity": "Tesla",
+  "title": "Sleeping driver in self-driving vehicle woken up, stopped and charged in Ottawa",
+  "source": "CBC",
+  "published": "2026-11-11"
+ },
+ {
+  "id": 41,
+  "entity": "Vodafone Group PLC",
+  "title": "'My whole world changed overnight': Franchisees accuse Vodafone of leaving them in financial ruin | ITV News",
+  "source": "ITVX",
+  "published": "2025-12-09"
+ },
+ {
+  "id": 42,
+  "entity": "Wells Fargo",
+  "title": "Man charged after allegedly robbing Wells Fargo Bank in York County",
+  "source": "ABC27",
+  "published": "2026-08-14"
+ },
+ {
+  "id": 43,
+  "entity": "BHP",
+  "title": "BHP Escondida operations halt: safety, investigation and output risks for engineers",
+  "source": "Geomechanics.io",
+  "published": "2026-09-24"
+ },
+ {
+  "id": 44,
+  "entity": "Tesla",
+  "title": "Tesla driver found asleep on Highway 417 during Ottawa rush hour: OPP",
+  "source": "Global News",
+  "published": "2026-11-12"
+ },
+ {
+  "id": 45,
+  "entity": "Vodafone Group PLC",
+  "title": "“Time expired”: Hackers leak Vodafone source code after company refuses to pay",
+  "source": "Cybernews",
+  "published": "2026-05-13"
+ },
+ {
+  "id": 46,
+  "entity": "Ryanair",
+  "title": "US to probe Ryanair broken window incident after passenger almost sucked out of plane",
+  "source": "RTE.ie",
+  "published": "2026-07-17"
+ },
+ {
+  "id": 47,
+  "entity": "Glencore",
+  "title": "Suspended Glencore executive told Radiant ‘say nothing on e-mail’",
+  "source": "The Business Times",
+  "published": "2026-09-18"
+ },
+ {
+  "id": 48,
+  "entity": "Glencore",
+  "title": "Glencore joins battle for Cuba-linked cobalt refiner",
+  "source": "MiningMX",
+  "published": "2026-08-11"
+ },
+ {
+  "id": 49,
+  "entity": "Meta",
+  "title": "Italy fines Meta $887M for accessing Android users’ photos",
+  "source": "The Washington Post",
+  "published": "2026-11-15"
+ },
+ {
+  "id": 50,
+  "entity": "Glencore",
+  "title": "Glencore's response on alleged OECD guidelines breach",
+  "source": "Business and Human Rights Centre",
+  "published": "2026-07-20"
+ },
+ {
+  "id": 51,
+  "entity": "Glencore",
+  "title": "Radiant World sent lender fake Glencore contracts, lawsuit says",
+  "source": "Yahoo Finance Singapore",
+  "published": "2026-09-02"
+ },
+ {
+  "id": 52,
+  "entity": "Glencore",
+  "title": "Glencore Prosecutors Set to Leave UK’s Crime Fighting Agency",
+  "source": "Bloomberg.com",
+  "published": "2026-01-20"
+ },
+ {
+  "id": 53,
+  "entity": "Glencore",
+  "title": "Glencore suspends senior executive in review of ties to iron ore trader",
+  "source": "Financial Times",
+  "published": "2026-09-17"
+ },
+ {
+  "id": 54,
+  "entity": "Vodafone Group PLC",
+  "title": "Vodafone suffers major network outage",
+  "source": "AFR",
+  "published": "2026-06-18"
+ },
+ {
+  "id": 55,
+  "entity": "BHP",
+  "title": "Revealed: the internal BHP memo that slammed the brakes on world’s biggest miner’s climate push",
+  "source": "The Guardian",
+  "published": "2026-05-25"
+ },
+ {
+  "id": 56,
+  "entity": "Ryanair",
+  "title": "Ryanair lashes out at Air France and Lufthansa over ownership probe",
+  "source": "POLITICO.eu",
+  "published": "2026-10-09"
+ },
+ {
+  "id": 57,
+  "entity": "Tesla",
+  "title": "US opens probe into Tesla Cybercab compliance with federal safety rules",
+  "source": "Yahoo! Finance Canada",
+  "published": "2026-09-04"
+ },
+ {
+  "id": 58,
+  "entity": "BHP",
+  "title": "Legal firm suing BHP for $70bn digs itself deeper into debt",
+  "source": "The Australian",
+  "published": "2026-03-04"
+ },
+ {
+  "id": 59,
+  "entity": "Vodafone Group PLC",
+  "title": "Vodafone rolls out AI tool to curb scam calls",
+  "source": "Mobile World Live",
+  "published": "2026-04-15"
+ },
+ {
+  "id": 60,
+  "entity": "Ryanair",
+  "title": "Ryanair CEO: initial probe suggests foreign object damage in smashed window incident",
+  "source": "Reuters",
+  "published": "2026-07-20"
+ },
+ {
+  "id": 61,
+  "entity": "Wells Fargo",
+  "title": "Trump administration investigating Wells Fargo over minority homeownership efforts",
+  "source": "Charlotte Observer",
+  "published": "2026-10-09"
+ },
+ {
+  "id": 62,
+  "entity": "Meta",
+  "title": "Meta fined ₹8,380 cr for accessing users' pics without consent in Italy | Around 20 million ​users in Italy were affected | Inshorts",
+  "source": "Inshorts",
+  "published": "2026-11-15"
+ },
+ {
+  "id": 63,
+  "entity": "Shell PLC",
+  "title": "Eisenhower Expressway reopens after person found dead in SUV surrounded by shell casings",
+  "source": "CBS News",
+  "published": "2026-06-04"
+ },
+ {
+  "id": 64,
+  "entity": "BHP",
+  "title": "BHP pushed to explore rare earths potential at Olympic Dam",
+  "source": "AFR",
+  "published": "2026-05-22"
+ }
+]

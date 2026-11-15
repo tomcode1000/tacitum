@@ -1,0 +1,443 @@
+[
+ {
+  "id": 1,
+  "entity": "Uber",
+  "title": "Uber reports the theft of U.S. drivers’ license data in an information breach",
+  "source": "Українські Національні Новини (УНН)",
+  "published": "2026-11-13"
+ },
+ {
+  "id": 2,
+  "entity": "Philips",
+  "title": "Philips, Google's Fitbit settle fitness-tracker patent dispute",
+  "source": "Reuters",
+  "published": "2026-03-17"
+ },
+ {
+  "id": 3,
+  "entity": "Starbucks",
+  "title": "Deadly Starbucks shooting suspect charged",
+  "source": "FOX 2",
+  "published": "2026-02-11"
+ },
+ {
+  "id": 4,
+  "entity": "Amazon",
+  "title": "Amazon drone on delivery crashes into garden",
+  "source": "BBC",
+  "published": "2026-07-30"
+ },
+ {
+  "id": 5,
+  "entity": "Uber",
+  "title": "Uber Fined Nearly $1 Billion by Dutch Regulators Over Automated Suspensions of Driver Accounts",
+  "source": "U.S. News & World Report",
+  "published": "2026-08-21"
+ },
+ {
+  "id": 6,
+  "entity": "Amazon",
+  "title": "Australia sues Amazon unit over alleged breach via Prime Video ads",
+  "source": "Reuters",
+  "published": "2026-06-29"
+ },
+ {
+  "id": 7,
+  "entity": "Amazon",
+  "title": "How Amazon uses AI agents to support compliance screening of billions of transactions per day",
+  "source": "Amazon Web Services (AWS)",
+  "published": "2025-11-19"
+ },
+ {
+  "id": 8,
+  "entity": "Uber",
+  "title": "Uber Data Breach: Personal Information Exposed",
+  "source": "GuruFocus",
+  "published": "2026-11-14"
+ },
+ {
+  "id": 9,
+  "entity": "Uber",
+  "title": "Women-only option for Uber goes nationwide in U.S.",
+  "source": "PBS",
+  "published": "2026-03-09"
+ },
+ {
+  "id": 10,
+  "entity": "Adani",
+  "title": "Explained in graphics: How Adani Green’s Satara project cost dropped by 99%",
+  "source": "The Indian Express",
+  "published": "2026-11-13"
+ },
+ {
+  "id": 11,
+  "entity": "Starbucks",
+  "title": "Starbucks defeats shareholder lawsuit over US, China sales declines",
+  "source": "Reuters",
+  "published": "2026-07-16"
+ },
+ {
+  "id": 12,
+  "entity": "Adani",
+  "title": "US judge seeks more details from Adani on DOJ move to drop bribery case",
+  "source": "Business Standard",
+  "published": "2026-07-09"
+ },
+ {
+  "id": 13,
+  "entity": "Nike",
+  "title": "Here’s What’s Happening With the 7-Eleven vs Nike Lawsuit",
+  "source": "Sneaker Freaker",
+  "published": "2026-07-02"
+ },
+ {
+  "id": 14,
+  "entity": "Volkswagen",
+  "title": "Volkswagen Is Heading to Criminal Court in France Over Dieselgate. Yes, Here in 2026.",
+  "source": "Road & Track",
+  "published": "2026-02-18"
+ },
+ {
+  "id": 15,
+  "entity": "Amazon",
+  "title": "Amazon scam warning for people aged 50 to 79 after £86,000 stolen",
+  "source": "Birmingham Live",
+  "published": "2026-11-13"
+ },
+ {
+  "id": 16,
+  "entity": "Philips",
+  "title": "Investors demand new deep probe into Philips over sleep apnea device scandal",
+  "source": "NL Times",
+  "published": "2026-06-28"
+ },
+ {
+  "id": 17,
+  "entity": "Starbucks",
+  "title": "Starbucks sued over ‘sugar-free’ protein drinks that contain sugar",
+  "source": "ConsumerAffairs",
+  "published": "2026-10-08"
+ },
+ {
+  "id": 18,
+  "entity": "Deutsche Bank",
+  "title": "Late SARs reporting at centre of raids on Deutsche Bank in Germany, it's revealed. Delays in filing SARs led to €45 million fine on JP Morgan Germany",
+  "source": "LinkedIn",
+  "published": "2026-01-29"
+ },
+ {
+  "id": 19,
+  "entity": "Volkswagen",
+  "title": "Volkswagen faces £725m bill from car finance scandal",
+  "source": "The Times",
+  "published": "2026-10-07"
+ },
+ {
+  "id": 20,
+  "entity": "Adani",
+  "title": "Plea in Supreme Court seeks CBI probe into Adani bribery allegations in solar power case",
+  "source": "Bar and Bench",
+  "published": "2026-07-20"
+ },
+ {
+  "id": 21,
+  "entity": "Adani",
+  "title": "Congress flags 'gigantic scandal' as Adani cuts Maharashtra hydropower project cost by 99%",
+  "source": "The Economic Times",
+  "published": "2026-11-13"
+ },
+ {
+  "id": 22,
+  "entity": "Deutsche Bank",
+  "title": "How a whistleblower exposed a Deutsche Bank-PIC love affair",
+  "source": "Financial Mail",
+  "published": "2026-08-13"
+ },
+ {
+  "id": 23,
+  "entity": "Uber",
+  "title": "Man, 19, charged after Uber driver killed in Oak Park crash",
+  "source": "FOX 2 Detroit",
+  "published": "2026-09-21"
+ },
+ {
+  "id": 24,
+  "entity": "Nike",
+  "title": "Nike and This Retail Giant Will No Longer Be Part of This Prestigious S&P Index",
+  "source": "Yahoo Finance",
+  "published": "2026-09-08"
+ },
+ {
+  "id": 25,
+  "entity": "Adani",
+  "title": "Nvidia Hires Law Firm Once Retained By Indian Billionaire Gautam Adani Amid Jensen Huang Affair Scandal",
+  "source": "Forbes",
+  "published": "2026-11-10"
+ },
+ {
+  "id": 26,
+  "entity": "Deutsche Bank",
+  "title": "Ex-Deutsche Bank employee ‘charged with €600,000 embezzlement’",
+  "source": "FStech",
+  "published": "2026-08-26"
+ },
+ {
+  "id": 27,
+  "entity": "Philips",
+  "title": "CPAP Recalls: What You Need To Know",
+  "source": "Sleep Foundation",
+  "published": "2026-01-27"
+ },
+ {
+  "id": 28,
+  "entity": "Volkswagen",
+  "title": "VW And Audi 2.0T Engine Targeted In Lawsuit (Again) For Alleged Oil Burning",
+  "source": "CarBuzz",
+  "published": "2026-03-03"
+ },
+ {
+  "id": 29,
+  "entity": "Philips",
+  "title": "Russian hackers breach nearly 50 companies worldwide, including Shell, Philips and General Electric – Reuters",
+  "source": "Українська правда",
+  "published": "2026-08-14"
+ },
+ {
+  "id": 30,
+  "entity": "Volkswagen",
+  "title": "Volkswagen braces for huge financial hit from FCA motor finance scheme",
+  "source": "Sky News",
+  "published": "2026-09-29"
+ },
+ {
+  "id": 31,
+  "entity": "Deutsche Bank",
+  "title": "Former Deutsche Bank star trader has rate-rigging conviction quashed",
+  "source": "Financial Times",
+  "published": "2026-10-09"
+ },
+ {
+  "id": 32,
+  "entity": "Starbucks",
+  "title": "Judge dismisses Missouri lawsuit against Starbucks’ DEI practices",
+  "source": "HR Brew",
+  "published": "2026-02-12"
+ },
+ {
+  "id": 33,
+  "entity": "Volkswagen",
+  "title": "Volkswagen sets aside £725mn for car finance mis-selling scandal",
+  "source": "Financial Times",
+  "published": "2026-10-07"
+ },
+ {
+  "id": 34,
+  "entity": "Philips",
+  "title": "Philips launches eV14-2v transvaginal transducer for OB/GYN imaging",
+  "source": "AuntMinnie",
+  "published": "2026-09-03"
+ },
+ {
+  "id": 35,
+  "entity": "Uber",
+  "title": "19-year-old charged in crash that killed Uber driver, injured passenger in Oak Park",
+  "source": "ClickOnDetroit | WDIV Local 4",
+  "published": "2026-09-21"
+ },
+ {
+  "id": 36,
+  "entity": "Deutsche Bank",
+  "title": "Three German banks announce anti-financial crime JV",
+  "source": "FinTech Futures",
+  "published": "2026-11-13"
+ },
+ {
+  "id": 37,
+  "entity": "Uber",
+  "title": "Hackers took Uber drivers' license data through AI vendor Fireworks AI",
+  "source": "Startup Fortune",
+  "published": "2026-11-14"
+ },
+ {
+  "id": 38,
+  "entity": "Uber",
+  "title": "Uber riders complain they were charged more for paying with Amex cards—one viral video shows a $13 difference",
+  "source": "Yahoo Finance",
+  "published": "2026-04-23"
+ },
+ {
+  "id": 39,
+  "entity": "Amazon",
+  "title": "Introducing AI-Powered Cost Investigations For Cost Anomalies",
+  "source": "Amazon Web Services (AWS)",
+  "published": "2026-06-09"
+ },
+ {
+  "id": 40,
+  "entity": "Starbucks",
+  "title": "Pro­testers across N.Y. state call out Starbucks over plastic recycling claims following in­ves­ti­gation",
+  "source": "Spectrum News",
+  "published": "2026-10-04"
+ },
+ {
+  "id": 41,
+  "entity": "Philips",
+  "title": "Amazon and Philips file joint lawsuit concerning sale of counterfeit toothbrush heads",
+  "source": "About Amazon Europe",
+  "published": "2026-04-22"
+ },
+ {
+  "id": 42,
+  "entity": "Deutsche Bank",
+  "title": "Investigators search Deutsche Bank headquarters over legacy tax trades",
+  "source": "Reuters",
+  "published": "2026-07-22"
+ },
+ {
+  "id": 43,
+  "entity": "Starbucks",
+  "title": "Starbucks faces lawsuit over 'sugar-free' protein drinks",
+  "source": "USA Today",
+  "published": "2026-10-06"
+ },
+ {
+  "id": 44,
+  "entity": "Nike",
+  "title": "Nike Was the Poster Child for Diversity Efforts. That Made It a Trump Target.",
+  "source": "The New York Times",
+  "published": "2026-07-16"
+ },
+ {
+  "id": 45,
+  "entity": "Adani",
+  "title": "US Judge Denies DOJ Bid to Drop Bribery Charges Against Gautam Adanis Co-Defendants, Again Finds Indian Orders Contradict Govt Claims",
+  "source": "TheWire.in",
+  "published": "2026-09-05"
+ },
+ {
+  "id": 46,
+  "entity": "Philips",
+  "title": "GE and Philips Investigate Data Theft Claims Following Clop Ransomware Breach",
+  "source": "The 420.in",
+  "published": "2026-08-17"
+ },
+ {
+  "id": 47,
+  "entity": "Deutsche Bank",
+  "title": "Capital One says it closed Trump Organization’s accounts after anti-money-laundering review",
+  "source": "The Guardian",
+  "published": "2026-08-01"
+ },
+ {
+  "id": 48,
+  "entity": "Amazon",
+  "title": "WTF is the Amazon ad surcharge lawsuit?",
+  "source": "Digiday",
+  "published": "2026-09-01"
+ },
+ {
+  "id": 49,
+  "entity": "Adani",
+  "title": "Congress alleges major scandal, as Adani Green slashes Satara hydropower project cost by 99%",
+  "source": "WION",
+  "published": "2026-11-13"
+ },
+ {
+  "id": 50,
+  "entity": "Starbucks",
+  "title": "Group tracking Starbucks cold cups says none made it to recycling facility",
+  "source": "The Washington Post",
+  "published": "2026-05-20"
+ },
+ {
+  "id": 51,
+  "entity": "Deutsche Bank",
+  "title": "Deutsche Bank raided in German probe over Abramovich links",
+  "source": "Financial Times",
+  "published": "2026-01-28"
+ },
+ {
+  "id": 52,
+  "entity": "Amazon",
+  "title": "Attorney General Jeff Jackson Sues Amazon Over $20 Billion Ad-Rigging Scheme",
+  "source": "NCDOJ (.gov)",
+  "published": "2026-08-31"
+ },
+ {
+  "id": 53,
+  "entity": "Volkswagen",
+  "title": "Nissan cheated diesel emissions tests even after Volkswagen scandal rocked the industry",
+  "source": "Follow the Money - Platform for investigative journalism",
+  "published": "2026-05-19"
+ },
+ {
+  "id": 54,
+  "entity": "Philips",
+  "title": "Court Denies Investor Request to Probe Philips Over 2021 Recall",
+  "source": "Livemint",
+  "published": "2026-10-11"
+ },
+ {
+  "id": 55,
+  "entity": "Nike",
+  "title": "Nike Slapped With Class Action Over Customer Data Breach",
+  "source": "Yahoo Finance",
+  "published": "2026-04-07"
+ },
+ {
+  "id": 56,
+  "entity": "Starbucks",
+  "title": "Starbucks loses bid to dismiss labor union's trademark case",
+  "source": "Reuters",
+  "published": "2026-10-02"
+ },
+ {
+  "id": 57,
+  "entity": "Volkswagen",
+  "title": "IOPC launches probe after two people die in serious crash near car dealership",
+  "source": "Telegraph and Argus",
+  "published": "2026-11-15"
+ },
+ {
+  "id": 58,
+  "entity": "Adani",
+  "title": "Congress seeks JPC probe into Adani group over reported 99% cost cut in Maharashtra project",
+  "source": "Telegraph India",
+  "published": "2026-11-13"
+ },
+ {
+  "id": 59,
+  "entity": "Nike",
+  "title": "Nike Probing Potential Security Incident as Hackers Threaten to Leak Data",
+  "source": "SecurityWeek",
+  "published": "2026-01-24"
+ },
+ {
+  "id": 60,
+  "entity": "Nike",
+  "title": "Nike, Accused of Bias Against White Workers, Is Under Federal Investigation",
+  "source": "The New York Times",
+  "published": "2026-02-04"
+ },
+ {
+  "id": 61,
+  "entity": "Volkswagen",
+  "title": "Woman Suing Volkswagen After Her Tiguan's Seat Allegedly Gave Her 2nd-Degree Burns",
+  "source": "Road & Track",
+  "published": "2026-05-08"
+ },
+ {
+  "id": 62,
+  "entity": "Amazon",
+  "title": "Amazon vows action against India delivery partner after fire probe concludes",
+  "source": "Reuters",
+  "published": "2026-07-02"
+ },
+ {
+  "id": 63,
+  "entity": "Nike",
+  "title": "Nike investigates breach after hackers release years of design and factory data",
+  "source": "Cybernews",
+  "published": "2026-01-26"
+ }
+]

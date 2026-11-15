@@ -1,0 +1,301 @@
+{
+  "scoredAt": "2026-11-15T19:14:05.674Z",
+  "tuning": {
+    "headlines": 64,
+    "entities": [
+      "Barclays PLC",
+      "HSBC Holdings PLC",
+      "Tesco PLC",
+      "Binance",
+      "Boeing",
+      "Thames Water",
+      "Rolls-Royce Holdings PLC",
+      "Unilever PLC"
+    ],
+    "confusion": {
+      "tp": 27,
+      "fp": 1,
+      "fn": 0,
+      "tn": 36
+    },
+    "precision": 0.964,
+    "recall": 1,
+    "f1": 0.982,
+    "accuracy": 0.984,
+    "guide": "Gold label = is this headline adverse media about the named entity? Adverse: the entity is the subject of an allegation, lawsuit, regulatory action or investigation, criminal matter, sanctions, a security breach, or financial distress. Not adverse: routine merger or competition reviews, the entity as a crime victim, the entity's own anti-fraud or research campaigns, law-firm investor adverts, business results without misconduct, and headlines that do not name the entity. Labelled by hand on 16 Nov 2026 before looking at the miner's predictions.",
+    "errors": [
+      {
+        "id": 19,
+        "entity": "Tesco PLC",
+        "title": "Stanford-le-Hope man charged with theft of beer from Tesco Express",
+        "outcome": "FP",
+        "why": "Tesco is the victim",
+        "categories": [
+          "criminal"
+        ]
+      }
+    ]
+  },
+  "holdout": {
+    "headlines": 64,
+    "entities": [
+      "Tesla",
+      "BHP",
+      "Shell PLC",
+      "Meta",
+      "Ryanair",
+      "Wells Fargo",
+      "Vodafone Group PLC",
+      "Glencore"
+    ],
+    "confusion": {
+      "tp": 29,
+      "fp": 5,
+      "fn": 3,
+      "tn": 27
+    },
+    "precision": 0.853,
+    "recall": 0.906,
+    "f1": 0.879,
+    "accuracy": 0.875,
+    "guide": "Same guide as labels.json. Held-out set: 8 companies the classifier rules were never tuned on, collected 16 Nov 2026 after the v2 rules were written, shuffled, and labelled by hand before any prediction was looked at.",
+    "errors": [
+      {
+        "id": 16,
+        "entity": "Wells Fargo",
+        "title": "JPMorgan must face Wells Fargo lawsuit over troubled $481 million real estate loan",
+        "outcome": "FP",
+        "why": "Wells Fargo is the plaintiff",
+        "categories": [
+          "litigation"
+        ]
+      },
+      {
+        "id": 17,
+        "entity": "Tesla",
+        "title": "Elon Musk Confirms ‘Global Bankruptcy’ Fears As Tesla And SpaceX Explore Bitcoin Price Game-Changer",
+        "outcome": "FP",
+        "why": "clickbait, not Tesla's bankruptcy",
+        "categories": [
+          "insolvency"
+        ]
+      },
+      {
+        "id": 22,
+        "entity": "Wells Fargo",
+        "title": "HUD targets Wells Fargo over SPCP for Black homeowners",
+        "outcome": "FN",
+        "why": "regulator action",
+        "categories": []
+      },
+      {
+        "id": 43,
+        "entity": "BHP",
+        "title": "BHP Escondida operations halt: safety, investigation and output risks for engineers",
+        "outcome": "FN",
+        "why": "safety incident investigation",
+        "categories": []
+      },
+      {
+        "id": 47,
+        "entity": "Glencore",
+        "title": "Suspended Glencore executive told Radiant ‘say nothing on e-mail’",
+        "outcome": "FN",
+        "why": "scandal detail",
+        "categories": []
+      },
+      {
+        "id": 51,
+        "entity": "Glencore",
+        "title": "Radiant World sent lender fake Glencore contracts, lawsuit says",
+        "outcome": "FP",
+        "why": "Glencore is the victim of fake contracts",
+        "categories": [
+          "litigation"
+        ]
+      },
+      {
+        "id": 52,
+        "entity": "Glencore",
+        "title": "Glencore Prosecutors Set to Leave UK’s Crime Fighting Agency",
+        "outcome": "FP",
+        "why": "prosecutors' career news",
+        "categories": [
+          "criminal"
+        ]
+      },
+      {
+        "id": 56,
+        "entity": "Ryanair",
+        "title": "Ryanair lashes out at Air France and Lufthansa over ownership probe",
+        "outcome": "FP",
+        "why": "the probe is into rivals",
+        "categories": [
+          "investigation"
+        ]
+      }
+    ]
+  },
+  "test": {
+    "headlines": 63,
+    "entities": [
+      "Uber",
+      "Philips",
+      "Starbucks",
+      "Amazon",
+      "Adani",
+      "Nike",
+      "Volkswagen",
+      "Deutsche Bank"
+    ],
+    "confusion": {
+      "tp": 29,
+      "fp": 3,
+      "fn": 12,
+      "tn": 19
+    },
+    "precision": 0.906,
+    "recall": 0.707,
+    "f1": 0.795,
+    "accuracy": 0.762,
+    "guide": "Same guide as labels.json. Clean test set: 8 companies never used for tuning (v3 rules were frozen before collection), shuffled, labelled by hand on 16 Nov 2026 before any prediction was looked at. Rulings used for consistency: being a defendant counts as adverse even when the case is won or dismissed; being the plaintiff does not; consumer fee complaints and operational incidents without misconduct do not.",
+    "errors": [
+      {
+        "id": 2,
+        "entity": "Philips",
+        "title": "Philips, Google's Fitbit settle fitness-tracker patent dispute",
+        "outcome": "FN",
+        "why": "patent dispute settled",
+        "categories": []
+      },
+      {
+        "id": 14,
+        "entity": "Volkswagen",
+        "title": "Volkswagen Is Heading to Criminal Court in France Over Dieselgate. Yes, Here in 2026.",
+        "outcome": "FN",
+        "why": "criminal court",
+        "categories": []
+      },
+      {
+        "id": 22,
+        "entity": "Deutsche Bank",
+        "title": "How a whistleblower exposed a Deutsche Bank-PIC love affair",
+        "outcome": "FN",
+        "why": "whistleblower exposure",
+        "categories": []
+      },
+      {
+        "id": 26,
+        "entity": "Deutsche Bank",
+        "title": "Ex-Deutsche Bank employee ‘charged with €600,000 embezzlement’",
+        "outcome": "FN",
+        "why": "ex-employee embezzlement charge",
+        "categories": []
+      },
+      {
+        "id": 28,
+        "entity": "Volkswagen",
+        "title": "VW And Audi 2.0T Engine Targeted In Lawsuit (Again) For Alleged Oil Burning",
+        "outcome": "FN",
+        "why": "lawsuit",
+        "categories": []
+      },
+      {
+        "id": 29,
+        "entity": "Philips",
+        "title": "Russian hackers breach nearly 50 companies worldwide, including Shell, Philips and General Electric – Reuters",
+        "outcome": "FN",
+        "why": "breached by hackers",
+        "categories": []
+      },
+      {
+        "id": 30,
+        "entity": "Volkswagen",
+        "title": "Volkswagen braces for huge financial hit from FCA motor finance scheme",
+        "outcome": "FN",
+        "why": "liability from finance scheme",
+        "categories": []
+      },
+      {
+        "id": 40,
+        "entity": "Starbucks",
+        "title": "Pro­testers across N.Y. state call out Starbucks over plastic recycling claims following in­ves­ti­gation",
+        "outcome": "FN",
+        "why": "misleading-claims allegation",
+        "categories": []
+      },
+      {
+        "id": 41,
+        "entity": "Philips",
+        "title": "Amazon and Philips file joint lawsuit concerning sale of counterfeit toothbrush heads",
+        "outcome": "FP",
+        "why": "plaintiff",
+        "categories": [
+          "litigation"
+        ]
+      },
+      {
+        "id": 45,
+        "entity": "Adani",
+        "title": "US Judge Denies DOJ Bid to Drop Bribery Charges Against Gautam Adanis Co-Defendants, Again Finds Indian Orders Contradict Govt Claims",
+        "outcome": "FN",
+        "why": "bribery charges",
+        "categories": []
+      },
+      {
+        "id": 49,
+        "entity": "Adani",
+        "title": "Congress alleges major scandal, as Adani Green slashes Satara hydropower project cost by 99%",
+        "outcome": "FN",
+        "why": "scandal allegation",
+        "categories": []
+      },
+      {
+        "id": 53,
+        "entity": "Volkswagen",
+        "title": "Nissan cheated diesel emissions tests even after Volkswagen scandal rocked the industry",
+        "outcome": "FP",
+        "why": "about Nissan",
+        "categories": [
+          "misconduct"
+        ]
+      },
+      {
+        "id": 56,
+        "entity": "Starbucks",
+        "title": "Starbucks loses bid to dismiss labor union's trademark case",
+        "outcome": "FN",
+        "why": "litigation",
+        "categories": []
+      },
+      {
+        "id": 60,
+        "entity": "Nike",
+        "title": "Nike, Accused of Bias Against White Workers, Is Under Federal Investigation",
+        "outcome": "FN",
+        "why": "federal investigation",
+        "categories": []
+      },
+      {
+        "id": 62,
+        "entity": "Amazon",
+        "title": "Amazon vows action against India delivery partner after fire probe concludes",
+        "outcome": "FP",
+        "why": "acting against a partner",
+        "categories": [
+          "investigation"
+        ]
+      }
+    ]
+  },
+  "history": {
+    "v1_tuning": {
+      "precision": 0.71,
+      "recall": 0.815
+    },
+    "v2_holdout_before_v3": {
+      "precision": 0.625,
+      "recall": 0.625
+    }
+  }
+}

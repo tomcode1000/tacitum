@@ -9,7 +9,7 @@ const cases = [
   ["Binance Restores Withdrawals Across 87 Networks After $6.3bn Security Breach", "Binance", ["data_breach"]],
   ["Lloyds Banking Group’s quantum leap in fraud detection", "Lloyds Banking Group PLC", null],
   ["Barclays warns customers of Black Friday scams", "Barclays PLC", null],
-  ["Barclays (LSE:BARC) Faces Class Action Probe Over Alleged Misleading Disclosures", "Barclays PLC", ["litigation", "investigation"]],
+  ["Barclays (LSE:BARC) Faces Class Action Probe Over Alleged Misleading Disclosures", "Barclays PLC", ["litigation", "investigation", "misconduct"]],
   ["Barclays, Fidera Seek Payout From Bankrupt UAE Remittances Firm", "Barclays PLC", null],
 ];
 
