@@ -71,13 +71,13 @@ v3 and v4 redo only the famous runs whose decoy rule changed; the obscure runs c
 - [x] Relayer: the operator sends deposits and withdraws; the withdraw pays straight into the one-time payer's Telegraph escrow (`depositUSDCFor` called by the pool)
 - [x] End to end (`scripts/pool-e2e.mjs`, data/pool-e2e.json): 4 depositors, 4 screens clear, root matches chain, withdraw funded payer 0x6f4E…a720 with 1 USDC, double spend rejected. Gas: deposit 271k, approve 1.16M, withdraw 541k (Sepolia charges heavily for new storage)
 - [x] First private assessment paid through the pool (14 Nov): Barclays PLC among 3 decoys, payer 0x6f4E…a720 funded only by the pool, 5/5 receipts verified, $0.20 for k=4 (assessments/2026-11-14-private-barclays-plc.md). News miners 7329 and 302 timed out, so the verdict is REVIEW on news alone
-- [ ] Contract tests on a local chain (reject path, bad proof, unknown root, fee cap)
-- [ ] Reclaim for deposits the screener never answers (timeout ragequit)
+- [x] Contract tests on a local chain (16 Nov, Hardhat node): 6 tests covering gasless deposit binding, screener-only approve, reject refund, reclaim delay, withdraw, double spend, unknown root, swapped recipient, fee cap
+- [x] Reclaim after 24h for unscreened deposits; pool v2 deployed at 0xfd7a…5e1b (v1 archived in data/pool-v1)
 - [ ] Bigger anonymity set: invite other Season II teams to deposit; today the 4 seed depositors are ours
 
 ### P5: Audit (21–25 Nov)
-- [ ] Encrypted receipt log per assessment, readable with the buyer's viewing key
-- [ ] Auditor view: full record of every question, answer and payment for whoever holds the key
+- [x] Encrypted record per assessment (16 Nov): X25519 + HKDF-SHA256 + AES-256-GCM to the auditor key; sealed automatically by `npm run private` and the MCP server when AUDITOR_PUBKEY is set (src/audit.js, scripts/audit.mjs)
+- [x] Auditor view: `audit.mjs open --verify` re-checks every receipt (real and decoys), the note commitment, the desk deposit, the screening approval and receipt, and the withdraw nullifier and recipient. 15 Nov run: 27/27. Shown on the site's Live run page
 - [ ] Stretch: proof of total spend without revealing the questions
 
 ### P6: Adoption and demo (25–28 Nov)

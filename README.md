@@ -1,8 +1,18 @@
 # Tacitum
 
-Private counterparty screening on [Telegraph](https://telegraphprotocol.com).
+**The private buying layer for [Telegraph](https://telegraphprotocol.com). Screen anyone. Tell no one. Prove everything.**
+
+Tacitum is the dark pool for due diligence. Agents and desks buy counterparty checks hidden among decoys, paid from a sanctions-screened pool, with every answer receipted on Telegraph and a sealed record that only the auditor's key can open.
 
 Telegraph Hackathon Season II, Apps & Agents track (Mission 03, Institutional Markets), plus a Track 1 provider: the `tacitum-adverse-media` miner.
+
+| | |
+|---|---|
+| **Hidden from the market** | Who was screened (real target among matched decoys; attackers at chance) and who asked (payer funded by a zero-knowledge withdraw) |
+| **Clean by construction** | Every pool depositor is sanctions-screened through Telegraph before their money can be spent; the receipt is on chain with the approval |
+| **Provable to anyone** | Every answer keeps its Telegraph receipt; 6 of 6 verified in the live run |
+| **Open to the auditor** | Each assessment is sealed to an auditor key; the auditor re-checks all 27 claims of the live run against public data |
+| **Tested** | 21 automated tests: circuit, Merkle tree, audit envelope, headline classifier, and the pool contract on a local chain (deposits, screening, reclaim, withdraw, double spend, bound recipients) |
 
 ![Tacitum: screen counterparties on Telegraph without telling the market](docs/screenshots/product-hero.png)
 
@@ -61,8 +71,8 @@ It is a layer on top of Telegraph. Every answer is still bought from Telegraph m
 - [x] Private mode v0: decoys plus a one-time payer per assessment (`npm run private`); funding still linkable on chain
 - [x] Cover sets: decoy groups are fixed and shared, so bundles look the same whichever member was wanted and repeat screens reveal nothing (`data/cover-sets.json`)
 - [x] Library and MCP server (`tacitum`, `tacitum-mcp`), below
-- [ ] Screened funding pool (removes the funding link)
-- [ ] Viewing keys
+- [x] Screened funding pool (removes the funding link): v2 on Sepolia with reclaim after 24h; contract tested on a local chain
+- [x] Audit records sealed to an auditor key (`node scripts/audit.mjs open <file> --verify`): 27 of 27 claims verified for the live run
 
 ## Use it in your project
 
