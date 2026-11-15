@@ -1,0 +1,107 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Marks & Spencer PLC",
+  "parties": [
+    "Renishaw PLC",
+    "Marks & Spencer PLC",
+    "Vodafone Group PLC",
+    "Persimmon PLC"
+  ],
+  "costUsd": 0.27,
+  "signals": [
+    "0x92b0db22adb24c215b79406b1ccd399f0e16e336eb96819cbf971d49f8d6511e",
+    "0xf03addd9334ce746a9b11698ca37d8633129994ba075925b322a4655ece4be96",
+    "0x33a8ed60aa662008c85d9521f9b333e5015bca9427af230ca18533c996be4aaf",
+    "0x96f469e639dc3f2953fd69ea1d20b7d096f8fd1dde4794f7751ce5e97057cb0e",
+    "0x5c651e73853a69637854e27e404a5ab027b3dd584307329bb3a3917ed053e1e8",
+    "0x5b69d8f34aad7a3ec5fa29b159febe0c8ec83d2856b4cd1fbd05894ebb5248d0",
+    "0xd44d8c25411e0719bca796f274ace4ce6178b1a9fc8af0d5274fa87d8b805d05",
+    "0x17c432a26ae99b8826eb9b1da5348b0442e1cf6f5e57484a213db3b97af4c89c",
+    "0xc1001e5b3eb413c5ebfd427eb1cc88ef49af1d0945c41f2800bf1a3d00388673",
+    "0xf97fe3cb71b379bfe281cccc175f5a6de6cfe73cf537dfe45d770589b8b16893",
+    "0x6e57ff70364f995716cadd68a401f7c7a45c1c76601c7cb1e1415afc1bdb682f",
+    "0x0742140b5b84d9a5c64d17a34eb5e3f01d6b731e62d3e51db414f4de384242b4",
+    "0xc32afdfccd31e77a67a3accf0d8c20d76b68aeb5e30f2e3a1506b48ea5aa1167",
+    "0x2bcf97aee547aed1f7a9b510203f40399564253587048afa76c16b1a6e4bcbd9",
+    "0x1fbd099697c830b617244acfdc594ff01a0f47979d2cabe513165b68b40af284",
+    "0x5a2b1ef23659a9e383f6d72f191f1773b0a1366b42209a462fdbc8bca9072f3f",
+    "0x93706a748ae9e4c9cbb78a5691d96221782d66169bd8645c4235ca777b2ccf48",
+    "0xfe0f1e4435b6f0a858d45a21d9137361611f4de10bb0f580de0ba1eb4941f5e3",
+    "0x0a042964687b3493a06eae2c7e15edf913ce8fb604298749af13740445fcd555",
+    "0x1e3e572f44be8e958d1c2fa30447b382ee1a1a59c7d7083ca1bc1f81029fa361",
+    "0x58d8b075da77bbaeba23911da677aa9ec5a64195f0e5fc561c9ed6f5913772cd",
+    "0xb297587dc9e908ded82b0712264f8d89c3c45d5b69702d5d02e398251810f5f7",
+    "0xf65104f33617ae5f9d4981d960c6ab53535931bc3137b5f29983480aa51c1a88",
+    "0x5908f3dbb1c009515ddd22fe2787aed2b204f8cd482b4fa636dc6ccb3bb51e53",
+    "0xc7fc5ae4d18036b612110f1f3647ec148fa0e97825968aa55fec1cbf0ea3d480",
+    "0x7c92b776fe07d39d2822a5c0e1a2119309f3c40cd8df1ebb70a3a62df4435847",
+    "0x01477b8c65ce01d7e20432381f8583208adbddde5d2f091af96f33bc46b6d4a4"
+  ],
+  "order": [
+    {
+      "name": "Persimmon PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "news"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Marks & Spencer PLC",
+      "check": "news"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "news"
+    },
+    {
+      "name": "Marks & Spencer PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Marks & Spencer PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "news"
+    },
+    {
+      "name": "Marks & Spencer PLC",
+      "check": "filings"
+    }
+  ]
+}

@@ -1,0 +1,103 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Yanco Limited",
+  "parties": [
+    "Petrocell Holdings Limited",
+    "8HC Limited",
+    "Yanco Limited",
+    "Leisure And Outdoor Furniture Association Limited"
+  ],
+  "costUsd": 0.23,
+  "signals": [
+    "0x46a3b91c4e07e80788f7329a37333af9b9c19222415f35eecd556f56d4993787",
+    "0x4ff885297a133c5b4657cb78ecb8ee04953efff7052274a4c14ab7786f276eef",
+    "0x4c86f0ec96478b73ac3e8ac6f9adf53f074818dce1e644b84c320b96047553d4",
+    "0xae9dadf31d6ae2465d25316668dd37659b49326f14b5b270487470b29779554b",
+    "0xf5a892cd75afc2b18ece02725001da1069e5eae508d6519cc9f47df1a58fea98",
+    "0x44f1d7dd0ed32164f5b862a8ecc5f8fc2cfd7650da65ef94016c86e4799bbc34",
+    "0xe2af76a7826868f83abf386d846ff47ebbe71e0c257357660836e793f100f5f8",
+    "0x223c1a28c0175e686812a5ee93c4a5b2cc98d489472e566dcf26cc1526dddaaf",
+    "0x57acd2dbecb231759589dce1c57c4257cd9e4cf51ed7b8f5410e607c7db84b9d",
+    "0x0ab2853808b61ce8e3c8ea799942bb7f31eb58f1f1c4cd90d9cd8b2a1a18f7f9",
+    "0x7c5ffa572801c294c93df5072deb6ec5b87f84b65bb391df906683a696708d42",
+    "0x5715459bf6725cca3ee7f8953aeb66504598632a7d84e7cefa32990ecc620b5a",
+    "0x4045e7c96e858ce1a4f21737fae2d1d799dfcf00a5df0a08014a8c2804a0df96",
+    "0x3b05542a8486aa43be68516da85b59f5f5959f36ba19802af0c1d0b7dffad24e",
+    "0x064b8cfbce107eb1013d9f0e36a7ca625d3ac10c35450bfdda1a4fcf9c3797f8",
+    "0xdca971900098eb1d036f45f6cc7a9f51326910f3359097ebd2e4d111ca0a7176",
+    "0xa2528aa7d4beeb33c8e6ef6a5798c088cd975a3c6836acd50e2420190f6cbb6d",
+    "0x854e5311c44213631f8d4ba876e360b02985ec26f00f41f0b66cad8b510a444c",
+    "0x974ecdaa78bf48f4dc405b1babb7188d5a886b67352f52a90ff6cf117cb5d759",
+    "0xb1d75ce9616a86a579868d434af1874f52c42d425dea42b8037b9a41734a40b0",
+    "0x59ec40d6fc218ac797682f89cc55f02ea590e5afbfc33595c75ec6f517df37eb",
+    "0x22fb6046d3e056425c06f4d9e163b0fe06b18013128d0cb018841134289defb4",
+    "0xcb838cf4cdf8c7623d31a70ef445b7d15183cdab336620a38f1daa3291ce0c6a"
+  ],
+  "order": [
+    {
+      "name": "Leisure And Outdoor Furniture Association Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Leisure And Outdoor Furniture Association Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "8HC Limited",
+      "check": "news"
+    },
+    {
+      "name": "8HC Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Yanco Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Leisure And Outdoor Furniture Association Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "filings"
+    },
+    {
+      "name": "8HC Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "8HC Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Yanco Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Yanco Limited",
+      "check": "news"
+    },
+    {
+      "name": "Yanco Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "news"
+    },
+    {
+      "name": "Petrocell Holdings Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Leisure And Outdoor Furniture Association Limited",
+      "check": "news"
+    }
+  ]
+}

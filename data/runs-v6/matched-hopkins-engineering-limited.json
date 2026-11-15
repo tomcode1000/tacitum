@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Hopkins Engineering Limited",
+  "parties": [
+    "Satobe Limited",
+    "1let Limited",
+    "Hopkins Engineering Limited",
+    "Barkisland Economics Limited"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0x37168d4d8ea65f555ce6fc9490e69944baa45461bfbd5095fb1e6e8c52a5f238",
+    "0x8745a21a726454f2bdae9c060488514f5b372a156036be5438cff2cfbd6e064a",
+    "0xc8ecd80832c52f45fa44adc6f47a2f263039610f989143434856fd5ec678e646",
+    "0x04f84be6052d02c8682f3b97ca37d68e4c3889cb2ec86afeb12c837e20fef9da",
+    "0x2f15c5383f0c04b59e358ee279142a0aa3ff9faf6a148b9f56d2d2b22436c551",
+    "0x2b1e7c83a69c4fcc75e1414d0c4749b7259a21beb32955874b5b5869b11e599a",
+    "0x64ee39cabe4905d4dba9063d82505ca578648cfda64fa9cfe6d3dd2c959feae1",
+    "0x5189b869c036587735a3e8c64894b5004402c21cb12a7fbbdc17cd7514a0821a",
+    "0x669a00f49f312cd909032e4a28b3ba2da007496cca92b16ce5572677a098f113",
+    "0x802ae60a337283d09e147c669f3ec977fcff24e95231f8c071f80d15d3bfcd33",
+    "0x4af078e64a838644917d89313ffe7df33781237dcf7fca30ffdda902393f8241",
+    "0x6de691f5317511f0bdeae3dca356be697ea21ca143b70184aee5b785ac3a791b",
+    "0xf7ca9e245f88034a8745b46172967ac96bd530f4a752f09d375fe483e095150a",
+    "0x3a739eec29998bcb9f739eb4bfcbddb322e85664e2fcc21f90a19a97c731d6e0",
+    "0x9b1dc0a21539dd00e0cf7ccdfe19465f4d00b99a3e4a90b07e8fc1fc5005366e",
+    "0xdaaa639dab8b51ced67b87ee494c7a8349420877174176cdcf324713fc7090eb",
+    "0x2b5d9219c3f358f2110635923487f02836dc81c3dc6813038f3c56552c1f6939",
+    "0x77160919e0dc296dfb5640a893c75cdd6b9cee3be685bc17b67d3989811ff51f",
+    "0x3be3c23b107eebea87986f782b24e4224333a025695e011c3856af56be06a366",
+    "0x9de47d1919546843d0f102bf69435151d2c4de8b1272d43671b5a4fe2548c50e",
+    "0xd95f669a53abd9ae162153738cc7ca729eff9178b36650bda8ecf8f56b3ea399",
+    "0x7c7391c14e86c1c6d9e7cf821e9ec00b06677aeaca453c500a964657a34a6bf2",
+    "0xd2c1e3b0221a1d557fcd83385efdcb12d3516e2742f2c70660d609c8f031bb66",
+    "0xe368d0ce7b82e0b81858185d472479cb4e4efad8c3f47ae95ec6f16178ba426d"
+  ],
+  "order": [
+    {
+      "name": "Satobe Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Barkisland Economics Limited",
+      "check": "registry"
+    },
+    {
+      "name": "1let Limited",
+      "check": "news"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "news"
+    },
+    {
+      "name": "Barkisland Economics Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Barkisland Economics Limited",
+      "check": "news"
+    },
+    {
+      "name": "Hopkins Engineering Limited",
+      "check": "registry"
+    },
+    {
+      "name": "1let Limited",
+      "check": "registry"
+    },
+    {
+      "name": "1let Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Hopkins Engineering Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "1let Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Satobe Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Barkisland Economics Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Hopkins Engineering Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Hopkins Engineering Limited",
+      "check": "news"
+    }
+  ]
+}

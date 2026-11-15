@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Diageo PLC",
+  "parties": [
+    "Diageo PLC",
+    "Lloyds Banking Group PLC",
+    "Unilever PLC",
+    "HSBC Holdings PLC"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0xda27e064e0bac01479e471c76412071b7ea0c7b2c42d5dba3aec3a0eda9abd77",
+    "0xb6b1f153c2349f894d74123f1607719fa563ea53ff3e7cc1fd699cd23815f0cb",
+    "0x83f6866e1c6fec03aa989499a0893cc0c673afb5786de0e066ff385f2557db9f",
+    "0x37cab681ff70b03d04e733189dfb9d81a8e6deac4385a0c188a0b15c4da3d7bd",
+    "0x4899c7e1a52327f2ed348150f9b5084186798c1fff97bd65afeba671c30e8546",
+    "0x0416ca2fd487098bca8fc8536cd8626f1e0172d36ad95f5980f0cf1ce7556fbd",
+    "0xf33e5eb272496379da50a3e2f9a1f96703f6a9aaa4a955b4fdcfb80de57ee6b4",
+    "0x2bd2b5317a5dfe5b7c6e5363d0d798dffae57a0ff1e3ab0b1ccd405f20bd7923",
+    "0x83ce968d8c368203e07cabb144fdfc67ed559db2c89d2b5655dd6e177fe98e7e",
+    "0x9a1824de5334e60da03d732485d1f540f0b31c13de3ebb7667c4f25d5b5831b1",
+    "0x500dd8ba472e7e9205b84d88f6ddd8eb7bbe16a9e588e7fd9b1f5aa39f0c8742",
+    "0x28934add9ccbc19c59260025a9380e77aa4fa0469879d86210af8666b5121dec",
+    "0x8c2c4fb050e8ec5b821ace27b10e5921c9502989072ce07d2134d78c88325e56",
+    "0x0cedf2ef636833f0e66f26315f2fc8a3fba08cf5420bc432f92d8b94a4e51043",
+    "0x1318721e34fdf9a214190abefdce7177890dc2cfc7d9e224a9a47f61110dcf5e",
+    "0xafd6b93efb9adbff36b3e86cfe85ed57532d9ac902ee1ab23e8ec11a1cff8cd4",
+    "0x421b3d3afb140a95f1ee23addc5c0f9941cda448b6c0e0fb219e2fa89fb45f93",
+    "0xb3571be64003d7c0495defe64108a99521b5a103a3398b51fc458a68aa7aaa48",
+    "0xfb4c24c0fa1ddab4eeb680cf8c100691ba77fce9552471a939cbeaca37a8d8cf",
+    "0x1cd58fe9a06b0d117d14e964a1c2c76e14a2e32f427d7b2e1a727984fc71d9da",
+    "0xf8397b39ff86966879099c06b0e8e866dbe0eb1c457ff9e9ea4debc1daee16f3",
+    "0xc6393b706143148787a6568e75274a0cc4a7c9eb86973446a678d3641e150d36",
+    "0x106e88b9d7fcdf2677ba960ef3a017824c6e152050a48e5abd03156d32621272",
+    "0xc5d4ebda9203b8ab35408895a58dc05a3cabf9164498d03cdc6af55b742ec430"
+  ],
+  "order": [
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "news"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "news"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Lloyds Banking Group PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Unilever PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Diageo PLC",
+      "check": "news"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "HSBC Holdings PLC",
+      "check": "news"
+    }
+  ]
+}

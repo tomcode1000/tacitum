@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Airhop Bristol Limited",
+  "parties": [
+    "Airhop Bristol Limited",
+    "LND UK Commercial Mortgages 1 Limited",
+    "G.H. And V.E. Davies And SON Limited",
+    "Three Shires Property Investment Limited"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0x08593d642c67ef243e6d26d358d06e62bd301254393973e5aa63cde1f28ed49d",
+    "0x3eb276e39202de41f48884dea8ab46d5909bbae36644c2f4f7b8a92ae4d62edb",
+    "0xc9cc25a1f2ec53740517035448e97b96cf87e4ddabbdfd751ae29a31be2f7863",
+    "0x78c671a67429c329b081d8dc955b1d5fe89d40683b98966c98a0be4dc1b16cbd",
+    "0x6d64a3cf9bfc05ad8bd104a5c30127fd6ce6d97b0deda1c4355a18264d0baec6",
+    "0xdc32d9d3ecec9d877b1ff950bdcfcdb2b8e6bdfff7df1486df66a8be6666397e",
+    "0xbe4987819c60f5eba0866d2fd1df29b0a662bebb6f066bab2a37159662bf6d10",
+    "0xcef40f0e220b47752b5aab20e8d3689dbefede4f07dcafc0a09cf482c9d63356",
+    "0xc78762830550b45dbb90e1ad5fe917652a70119e4615b104f0764d455622034f",
+    "0xcf96030d8cd24724e214474599320fecf8877c83de824d5667c90f861538f18e",
+    "0xdabd3194a3fdd5155c9de26cb8ae3cbb5dc7d8bec7e8ad209589afd8ed108cf1",
+    "0x8efdaf2d8f0e60f3be1b059f7a73d9147ba5630a4989cdb9a8e144252498700c",
+    "0x047fc3a0f7526cd49b1a68e592f9c6a199034370fd5d126aac39bf5d64b1f878",
+    "0x527645e4396cb889e1f59549a9ee87cb4f7bf7ff4ec0e97338ad5f904e2495a1",
+    "0x16e8f2ce522d93476896d602b8fbfd0dc2ec18e49d9d482369336d3990dfa32a",
+    "0x8d7c758a62551236f82390f3bc328c35c8da8ac36de87082986cd6a29877c48c",
+    "0x59763fa756a300cebba0c30240af187d073585871356b4cc7363aa004ea28d01",
+    "0x913bad61022b1d4755f10f1f187ddb0c75a3f376dc2187e808092ea6e807520c",
+    "0x0a50a0c096bc090803ab4538d01e07b73b2b75064abfe45d206005d11394a073",
+    "0x601b1865d8e567681940ac71a7aa32780cbfcdb7ed0664190007e562bfe32468",
+    "0x23343f7771ffdb62c64f4ba07ec5224c5ab3508a4a41f56b3a172bf7ff2d6507",
+    "0xc08f6f7548e5a667faa8155b3599e3c7258b4cd3e6244648b4dbac6e95cd2b70",
+    "0xe34855866129699b74546d2a968bf06265f28d51835b1258bce68417351bb337",
+    "0xfe168db0dd9f24a21a4915703cf38526e26e3cdae3c35e46b32ede73cc2bfeb8"
+  ],
+  "order": [
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "filings"
+    },
+    {
+      "name": "G.H. And V.E. Davies And SON Limited",
+      "check": "news"
+    },
+    {
+      "name": "LND UK Commercial Mortgages 1 Limited",
+      "check": "news"
+    },
+    {
+      "name": "LND UK Commercial Mortgages 1 Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Airhop Bristol Limited",
+      "check": "news"
+    },
+    {
+      "name": "Airhop Bristol Limited",
+      "check": "filings"
+    },
+    {
+      "name": "LND UK Commercial Mortgages 1 Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Airhop Bristol Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "G.H. And V.E. Davies And SON Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Airhop Bristol Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "G.H. And V.E. Davies And SON Limited",
+      "check": "registry"
+    },
+    {
+      "name": "LND UK Commercial Mortgages 1 Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Three Shires Property Investment Limited",
+      "check": "news"
+    },
+    {
+      "name": "G.H. And V.E. Davies And SON Limited",
+      "check": "filings"
+    }
+  ]
+}

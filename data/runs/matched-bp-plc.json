@@ -1,0 +1,106 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "BP PLC",
+  "parties": [
+    "Pearson PLC",
+    "Prudential PLC",
+    "BP PLC",
+    "Shell PLC"
+  ],
+  "costUsd": 0.26,
+  "signals": [
+    "0xefbee64adb8d3e4fdc78cbd72d6ee8af851d507cdcdac68324023124e52ba4a9",
+    "0x64745d6964d215192d5530cddf623b1a0afbd303a0e81254c780e700572085b1",
+    "0x5f8b00445434c5f782e8f870135a7068ff379cb1caeb6611de1aa9a4774b6d20",
+    "0x67661cfc85cf96eeb34327702540b4aa3424fcafe4108bbe75894549402098be",
+    "0xd5772ba7607c7c7573640131f09ee284697a8c789e19b7750b5d3915adba8c84",
+    "0x763fd73d313c6cbf7eee3464235d8f40697419ebd770fa9f7179919eca67c43c",
+    "0x2b4722cc88106dd656ce32b3978eaaac239ff3a14f0e78c570ad6346164ef78f",
+    "0x09c2160a53158f78b5f856699b8deac7512fc0fe4c38b89449ff1afd6afe7860",
+    "0x63932316768a61596362e6f9cee3417cf0b79d49e132008cf3ec02721797d371",
+    "0x038a69490f85e2952c098eb33d06804aa8fad7c91f66ba3ee20129780df5df1a",
+    "0x274af62cf4e0627e1ceac3899eef0021788cf003975500a68abecc638b28c478",
+    "0xea624e8692770012d86a1290f010100a9fd81b553d938297985779ea9642637f",
+    "0x8aead5a1058a872fc9ffdf398ac314b55ad11df1f5655b41e888e301eff1e209",
+    "0x776e739ea32e8b3daba1bb0431c74868e59a7fac0191221bde0c63e978163f72",
+    "0x87b8d28dd4feef4a62b1126d95ce346ab54a890f3deac61b4d6c16075e89f05e",
+    "0xaea75f076a141e424be7f3fc903ce19c427121750cddf60a1d2febab683c47c5",
+    "0x5e8acfd68793dd5eb1f4095a8c6620c55bba384cc0d5cdd43a16148f61474130",
+    "0x5d17f3a1bbbda1a48797a92912d0a4798ffc16fa7da449f44fa5ee18848dd163",
+    "0x06bfa986707cb5e9c107b873d231e4ad8a18092742212965b7cecbedcb97293d",
+    "0xc6d2ee864444517bcf68cc50b04921b7c029c42066c5a08955504b0d222cfecc",
+    "0xcb901e1a69606ec8012a7b2b2810888da68ae39e5811b62d7db409994d62b9e1",
+    "0x05d834d7eda3f3332b28efae06a70df5e51ee44c2dd818e21a6ecd078523be89",
+    "0xe251b44f250f51d59dfdfdf4638d0d0fab633998b0764ac2c44c539f3423ba94",
+    "0x3a321e495ad3c0738f7eefca528790d5e718be032798cd755a5fcd1456e9fd0a",
+    "0x20b2264624bb6d13fbd19efcb571169dbd8f86b5cea1d5bc61a038ff490957e6",
+    "0xc3c89a54c242d9da924a3aa021523d7df998acf58a7fb6ebd96985963622be1a"
+  ],
+  "order": [
+    {
+      "name": "Prudential PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "BP PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Shell PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Prudential PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Prudential PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Pearson PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Shell PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "BP PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Shell PLC",
+      "check": "news"
+    },
+    {
+      "name": "Pearson PLC",
+      "check": "registry"
+    },
+    {
+      "name": "BP PLC",
+      "check": "filings"
+    },
+    {
+      "name": "BP PLC",
+      "check": "news"
+    },
+    {
+      "name": "Pearson PLC",
+      "check": "news"
+    },
+    {
+      "name": "Prudential PLC",
+      "check": "news"
+    },
+    {
+      "name": "Pearson PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Shell PLC",
+      "check": "filings"
+    }
+  ]
+}

@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Next PLC",
+  "parties": [
+    "Next PLC",
+    "FirstGroup PLC",
+    "Tesco PLC",
+    "BAE Systems PLC"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0x9417c9b25ee5c7e89e47dd67eb79453c43be67d2e7a679141258f8f7e2592a05",
+    "0x0feefbea85a9f6c3aca5d9f976c650c78c6e7691c081927da5a722d22b44ad33",
+    "0x90a6386739c95a2aa9291ca2092d0649fad1587251a2403bf07cf9e927c69934",
+    "0xfdc0d244c35bef4e2051d9230b25921aef297a949cd72c5b4d5bf6dcc209e86c",
+    "0x3a5ea4dd76cbc108278784d19d0fac7b076c38f5f2123e5b983107dd087d09bf",
+    "0x1cbc716f07eb76d5711be9900dc0b997fc2447e5548df0ef9d9570e069cccd5b",
+    "0x7b6793e11b104994f17f7229e6eefdd7f5d5c21d4e1468f2c009a48bf0c4c8b3",
+    "0x9763bd69a4459141664748c634c3b915228e0805d2254dd79ca18e81df73887a",
+    "0xcb4d6c0f9480cb690c5b83a23f986990c654b98b78241c1c9133b067ab0858d7",
+    "0xb7d95d32cca2cd60368b833489e79891e2bd8e87cd9b2b8598506ce8261b011b",
+    "0x81010bbcc5fd3abc0dec2ca1532fcca69ccc8099d590605cf6fa2017b646547b",
+    "0xda8c8dd0dd9cedc654ee1f938af62c2f0eb67c154f60d822871ed87e154f5a8d",
+    "0xfd7ce897d326b74d48bbcf7ea1ca7343a9afadee3b64a446997b8013fb0fedfc",
+    "0xdc3e63324fc5d0ef3e9748e44f26dc9b318e2d0352653011fe36d88e815b3384",
+    "0xc3e5524cb8ec2d397899615212d7f34be91f07189b7dcbbf52ff907a49f6e914",
+    "0x6a0e0a51fbef52ec5c5d8c219e9d2bbc15f2ce03458514cda08ff9ab77381188",
+    "0xb1b3f30e3206e77456675ddc03f53e323589074f09be41d28074b135ea6c718f",
+    "0xbcb8e06185fd1d7f050dc3e9445f560ee0e2026c37ccbcabb2a591834890d713",
+    "0xa2ec6078170913d4cd8c580d8d2673c86a856aec6fa807e36398570d96ce7121",
+    "0x1c5effe6fb23eafc2fc774586d5ae0eb945aa7c76f1f0be272d69a522eadb735",
+    "0x757d10023f6eb4c24cd10f296adbaecc754e4a524550af620677dae4541d5329",
+    "0xaf5e1b0230c89989a35dd2fb630d2b72d17ab13dbf0b4cdead20303e1cb7b890",
+    "0x2b154feb84f38ed020db824390deba1ef38f1de8b69438f74a2fb06eb941e8c5",
+    "0x7a43c0b68bec2e1ab758c4852042635418b563184e8b44757a2a18c32990f67d"
+  ],
+  "order": [
+    {
+      "name": "BAE Systems PLC",
+      "check": "registry"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Next PLC",
+      "check": "registry"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "news"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Next PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Next PLC",
+      "check": "news"
+    },
+    {
+      "name": "Next PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "registry"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "news"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "filings"
+    },
+    {
+      "name": "FirstGroup PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Tesco PLC",
+      "check": "filings"
+    },
+    {
+      "name": "BAE Systems PLC",
+      "check": "news"
+    }
+  ]
+}

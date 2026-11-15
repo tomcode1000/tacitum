@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Blackthorn Finance Ltd",
+  "parties": [
+    "Lawrence Oakley Ltd",
+    "Blackthorn Finance Ltd",
+    "Zakhs Holdings Ltd",
+    "Aw&C Investments Ltd"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0x2f9f1d9502864e9fbeffe82c20da82c29d30a539c2a3886ac0d5504dc2bbf18e",
+    "0xdcaf447903da2e6bd994d9f1c74f793a4c2fa9c13b8cff3a0ae042a9da8189d0",
+    "0xeca48ca65cfedcb6b6ca6b0e11f988dacdaef65c03c2b43c23ccdd1cfb4b8529",
+    "0xa4f62ec8902f0394853561e739b08008de89c58a14164485eaa8693ba80f2871",
+    "0x7412e426b0d92411fc082a09721c45edb12a0ae326e3625f11ca76f3b8efb35a",
+    "0x995200c5a34585ac0affd3f7bf885b7a22dfaa57e6cf8ddc42999f2c7b76b9ed",
+    "0x6f5b36d715e0ef555c4512742b6d596a73da9df58d99288ca1d30cd25eb96cdd",
+    "0x30bb643c08e4ced08b7bff6593e1c649108f688f99768ea4d40840544ec974cc",
+    "0x8d082248644bb99286e289c06efce7d36cd889f9441dd8b31c19b81570f0b03c",
+    "0x617dc21dca7c50f09f844e80361fd284d114ac01b44ae7415edc6451485e8a2d",
+    "0x4de17c67363929777d6dca773c4b1aaaee62d124948d3030c01ddcce1096cc7e",
+    "0x5ba7e9a4f2a1ab5bbf9d0788a484404060bcbe07ef0c3cc913a8d1fe0bd8e374",
+    "0x30c31cd1490f7e3be4c911e8df84480f0283572afef9bc77fa1ddbb4b8a5b51d",
+    "0x2a9afdb7ec822c72f99929e832d937f9a9a9d907ed470535a6b8a7f92510e5e6",
+    "0xa8daf5266617c89955329cb66a2ea068ae1ac60c9fbcce1e20811e887e58fc9e",
+    "0x12150196457c9233719d45cccb3f507fb2e2c88fca1bca0ecf8d386d835c696f",
+    "0x1627087006a0e62ce5e3377c0c0aab9dd3f19c0eb48655f657a3e321eb7e330c",
+    "0xda968392e470956823590c6766ed55ed86f0fd7bc4a759a3b449a83b1c3c2c75",
+    "0xf0151343f394f1fae751c47bfac6b2434d4b3d0d8107896e885e00f0933da979",
+    "0xdc077ab82b6f5e18eb38d64da37982b41a12de8414d0da9bb4c4ddb7042e6961",
+    "0x7511ec83cd75291db6dcc7e7aab46e808d2fd5e15c03785dbe32b2a8f468f3b2",
+    "0x93059f8749ef9d08f22ccd94ddf99fd8f62333274a41c778c2eeb6e78ce7bb10",
+    "0xa3d3982b55ecd6531c5758613410d9f871e0bc97393a5ef6e0ade7ad622800cb",
+    "0x830c9b1f425a88dfaf13078fe553cf40891f1502bf63f44511e86fba5ae63840"
+  ],
+  "order": [
+    {
+      "name": "Blackthorn Finance Ltd",
+      "check": "news"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "news"
+    },
+    {
+      "name": "Blackthorn Finance Ltd",
+      "check": "sanctions"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Aw&C Investments Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Lawrence Oakley Ltd",
+      "check": "news"
+    },
+    {
+      "name": "Aw&C Investments Ltd",
+      "check": "news"
+    },
+    {
+      "name": "Aw&C Investments Ltd",
+      "check": "sanctions"
+    },
+    {
+      "name": "Blackthorn Finance Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "sanctions"
+    },
+    {
+      "name": "Blackthorn Finance Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Lawrence Oakley Ltd",
+      "check": "filings"
+    },
+    {
+      "name": "Aw&C Investments Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Lawrence Oakley Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Zakhs Holdings Ltd",
+      "check": "registry"
+    },
+    {
+      "name": "Lawrence Oakley Ltd",
+      "check": "sanctions"
+    }
+  ]
+}

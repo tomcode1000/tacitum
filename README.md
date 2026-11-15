@@ -8,7 +8,7 @@ Telegraph Hackathon Season II, Apps & Agents track (Mission 03, Institutional Ma
 
 | | |
 |---|---|
-| **Hidden from the market** | Who was screened (real target among matched decoys; attackers at chance) and who asked (payer funded by a zero-knowledge withdraw) |
+| **Hidden from the market** | Who was screened (real target among matched decoys; attackers within sampling error of chance: best 0.31, 95% interval 0.18–0.49, 32 live runs) and who asked (payer funded by a zero-knowledge withdraw) |
 | **Clean by construction** | Every pool depositor is sanctions-screened through Telegraph before their money can be spent; the receipt is on chain with the approval |
 | **Provable to anyone** | Every answer keeps its Telegraph receipt; 6 of 6 verified in the live run |
 | **Open to the auditor** | Each assessment is sealed to an auditor key; the auditor re-checks all 27 claims of the live run against public data |
@@ -20,7 +20,7 @@ Telegraph Hackathon Season II, Apps & Agents track (Mission 03, Institutional Ma
 
 - A desk's deposit entered a pool where **every depositor is screened through Telegraph sanctions** first. The pool now holds 16 approved deposits.
 - A zero-knowledge withdraw funded a **brand-new payer from the pool**, so the desk's wallet never appears.
-- The payer bought a full assessment of Barclays PLC **among 3 matched decoys**. Our attackers find the real company at chance (0.26 against a blind 0.25, 16 live runs).
+- The payer bought a full assessment of Barclays PLC **among 3 matched decoys**. Over 32 live runs the best attacker picks the real company 31% of the time (95% interval 18–49%) against a blind 25%.
 - News came from **our own adverse-media miner**, registered on Telegraph.
 - **6 of 6 receipts** verify against Telegraph's public signal record.
 
@@ -67,7 +67,7 @@ It is a layer on top of Telegraph. Every answer is still bought from Telegraph m
 - [x] Testnet payer wallet and x402 client (`npm run wallet`, `npm run first-call`)
 - [x] First paid call: one $0.01 sanctions screen, settled in tx `0x26bbada3…09fad1` on Sepolia. The public feed shows our wallet and the question (`evidence/`)
 - [x] Counterparty assessment workflow (`npm run assess -- "Barclays PLC" GB`), see PLAN.md
-- [x] Decoy engine and privacy measurement: with k=4 matched decoys every attacker we built, including a learned one and a cross-run "rarest name" one, is at chance: 0.25 (95% interval 0.10–0.49, 16 live runs, v5)
+- [x] Decoy engine and privacy measurement: matched decoys at k=4; best attacker 0.31 (95% interval 0.18–0.49) over 32 live runs (v6), within sampling error of the blind 0.25. v5 (16 runs): 0.26 [0.10–0.49]
 - [x] Private mode v0: decoys plus a one-time payer per assessment (`npm run private`); funding still linkable on chain
 - [x] Cover sets: decoy groups are fixed and shared, so bundles look the same whichever member was wanted and repeat screens reveal nothing (`data/cover-sets.json`)
 - [x] Library and MCP server (`tacitum`, `tacitum-mcp`), below

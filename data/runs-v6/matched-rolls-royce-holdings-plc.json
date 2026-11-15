@@ -1,0 +1,102 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Rolls-Royce Holdings PLC",
+  "parties": [
+    "Rio Tinto PLC",
+    "THG PLC",
+    "Hammerson PLC",
+    "Rolls-Royce Holdings PLC"
+  ],
+  "costUsd": 0.22,
+  "signals": [
+    "0x59ce9b4c17fdf3d13281b74a404e3c0bf4a47d70322a3615d8862fd1d9e5c913",
+    "0x631212cd6dc60b0698fed7f84c4337b27b4a5b9765625395448fd2870cf3742d",
+    "0x5fd9ed97991e32239d9c0251daed6577025fdb2c22f6f36137385c2c121ad0f5",
+    "0x818245058b080b73bb5865d487c7ab9b9715cc93f4860042ddbeca39d1a723af",
+    "0xd21b319034e280f1aaf5413ee822fbec23a1016c072c230409989e370cf8703c",
+    "0xc48230fdc60bd3e498eff7de474c655ca3cbaa91766ba354f0bd5ca89bfab42a",
+    "0x60ea6f0a03876b1071c5fbe0a0a6aa0afbf09cae3389f1303b9ea23751506ae5",
+    "0x20463f5d861d727c454005abbae868efef507af766481aed0f81c901939b3507",
+    "0xf14f23a0b2f98676881c70e9216f228b3cc17abdc9cdcc1715c07c030143c696",
+    "0x4fbe24a49f4f2170beff9738fd561c88be32a6e9860cc423fe368bf890c474f6",
+    "0x872b409fb000c07fec46419fb753eee3bdd66c430b4f9304d3b8481cf59d6ed9",
+    "0x4ae9e142dc987a8ec67c77bbc1baf3705916361fe8c4430459bfb96dba9a3b0e",
+    "0x0b2689253459316c7b193ecb612cd28e8444b46fc8aa6234026d2f5f1a76b8ba",
+    "0x73d562781ff7c267d0d4bbe15afb5588d0ba526006c80d66764ef5fc7715246d",
+    "0x5cd66b302c8ea87d7d7a656a201faf0da30247c1fbe56436fbb01d54940d9fd6",
+    "0xd507bb0d07f34668e378116a6bfc506af3c4b69f2535f67df88bcf82d324e0f4",
+    "0x632b702e49508b9806f7e79e12fdbda7ecf70f1e0dca6bfff4d354a0341a78ae",
+    "0x619d2980d5da0a172e05d4effa2846c499e20857cf9ad1c1b788f3a5663926af",
+    "0x73754dfd965680fbb9c840a868f0f7341adda0dec0bcaeb6b21ed3b89c3cb218",
+    "0x9a4ed6e9e926340a7e6ed73faaf32a0445d888b507b6b469841495962347425e",
+    "0x4015efd70fea01229c87304caf0f36753e365defc487908e6eb48de28250ab39",
+    "0x193d1a80718ba8be43dc066462f91d5b930a5e554482238d86e8e89237328626"
+  ],
+  "order": [
+    {
+      "name": "Rio Tinto PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Hammerson PLC",
+      "check": "filings"
+    },
+    {
+      "name": "THG PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Rio Tinto PLC",
+      "check": "news"
+    },
+    {
+      "name": "Hammerson PLC",
+      "check": "news"
+    },
+    {
+      "name": "Hammerson PLC",
+      "check": "registry"
+    },
+    {
+      "name": "THG PLC",
+      "check": "news"
+    },
+    {
+      "name": "Hammerson PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Rio Tinto PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Rio Tinto PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "news"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "registry"
+    },
+    {
+      "name": "THG PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "THG PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "check": "filings"
+    }
+  ]
+}

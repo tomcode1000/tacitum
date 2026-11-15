@@ -1,12 +1,12 @@
 {
   "k": 4,
   "chance": 0.25,
-  "scoredAt": "2026-11-13T12:59:01.231Z",
+  "scoredAt": "2026-11-15T16:58:29.619Z",
   "strategies": {
     "random": {
       "first": 0.5,
-      "famous": 0.497,
-      "format": 0.608,
+      "famous": 0.527,
+      "format": 0.645,
       "learned": 1,
       "rarest": 0.25,
       "bestCI95": [
@@ -17,17 +17,17 @@
       "costUsd": 1.53
     },
     "matched": {
-      "first": 0.25,
-      "famous": 0.256,
-      "format": 0.195,
-      "learned": 0.25,
+      "first": 0.313,
+      "famous": 0.3,
+      "format": 0.262,
+      "learned": 0.125,
       "rarest": 0.25,
       "bestCI95": [
-        0.1,
+        0.18,
         0.49
       ],
-      "runs": 16,
-      "costUsd": 3.45
+      "runs": 32,
+      "costUsd": 7.27
     }
   }
 }

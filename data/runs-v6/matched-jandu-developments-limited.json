@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Jandu Developments Limited",
+  "parties": [
+    "Jandu Developments Limited",
+    "Bentham Developments Limited",
+    "Leadership Connections Limited",
+    "Barton Fabrications Limited"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0xa8ab659e0f1f0e97f8b0ddc6be6295149d3a72e15a24b233b1c0d51534052430",
+    "0xc1b7a61ed4ed308e20d294b0e5ab3241b0785087b1c85d7a60c7f8dec500d136",
+    "0x0346645fc45f42976c753863efc5c462ea3c016c27615c0c28a628eb27551461",
+    "0x19d6b29c1145852270c81343645387d50e7e7bb7200632b01dcd66a89b0f3578",
+    "0x552d6376977cf74ee8fa940931fc60e3d3c0c920acfae4e76ce15177f71f4eec",
+    "0x264056a7f48a196c2bd85e97d11410b3235b4676d75d16c82fc929e14b6c5844",
+    "0x4d154bc30a81b621d344aa6259cadde64e18c6f0d9280c461c63ea7d20532de3",
+    "0x144d196e0684658ee6360392133858ccf84d9a46c2f775810f13073337c6557d",
+    "0x2c6761e0b6f11307e6437adac2a4284c04510ca5a17d17116480ddfcdbcc8943",
+    "0x7237ea7bd3d99ba36565f93486d0aa75725430f48da8278926a328a79e59114a",
+    "0xca132b08d8830c76ad1aa5d9a2b8bd56183ff797ee0323449266f3b6e670816a",
+    "0xfdaa4c5c0e42ead41753fb7792d410ee0420b425a4f3de116506fb6e0eaee01d",
+    "0xcb37a6e7b23d17622186e963913ff78f2559df80a115007b8454feb6d8b3a696",
+    "0x2a26bcf6fc97661fb314e3d657d4ec39298356d646304f45b0b11d18c0c63a92",
+    "0x9f7f487b3d6e1d03da933573abae6f97636549f4c3b47322f3d46db7fb3d24a1",
+    "0xc007e39d3bc2bb30525e38b00947f8ced7f13ed0ed12872f73486c647178a16d",
+    "0xb09b228666149cde336aef58f00021e2fe17b1459eee3a883a17806ae7084baf",
+    "0xc7e3cbb8a3a349f970019a418e44a772a61f37d79f47d73bba695e0cb409656b",
+    "0x964454514fe7637c24f56124ba852421cc2150c5cf151711c159ad13f4ce4d9d",
+    "0x668268335227d505befa4dfc26124fd397d1dc9d5faaeb32b7423cea426c09ea",
+    "0x13788cc7b17f805edd27515a8f8cf969e9cc39b727f6278ec7b3881db9735fa0",
+    "0x545135382c506322dd3fff03f07d9e42d05a71e4e395dfee6d6f2ae21dec1237",
+    "0xaaaf4699b246cdc65dc082f55167b309dbafd48b7501c30cb6da1d6f63b1150e",
+    "0x72092d4bad8cc73d9af47a2f08c894ac0e32483b165318fc10c5d26b34542d47"
+  ],
+  "order": [
+    {
+      "name": "Jandu Developments Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Jandu Developments Limited",
+      "check": "news"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Leadership Connections Limited",
+      "check": "news"
+    },
+    {
+      "name": "Bentham Developments Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "news"
+    },
+    {
+      "name": "Leadership Connections Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Leadership Connections Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Leadership Connections Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Bentham Developments Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Jandu Developments Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barton Fabrications Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Bentham Developments Limited",
+      "check": "news"
+    },
+    {
+      "name": "Jandu Developments Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Bentham Developments Limited",
+      "check": "filings"
+    }
+  ]
+}

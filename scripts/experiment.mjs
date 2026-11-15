@@ -28,6 +28,23 @@ const TARGETS = [
   { name: "Recircle Consulting Limited", jurisdiction: "GB", matchedOnly: true },
   { name: "Barton Fabrications Limited", jurisdiction: "GB", matchedOnly: true },
   { name: "Klicco Limited", jurisdiction: "GB", matchedOnly: true },
+  // Third batch (16 Nov): 16 new targets to narrow the interval (32 matched runs in total).
+  { name: "GSK PLC", jurisdiction: "GB", matchedOnly: true },
+  { name: "National Grid PLC", jurisdiction: "GB", matchedOnly: true },
+  { name: "Diageo PLC", jurisdiction: "GB", matchedOnly: true },
+  { name: "BP PLC", jurisdiction: "GB", matchedOnly: true },
+  { name: "BAE Systems PLC", jurisdiction: "GB", matchedOnly: true },
+  { name: "Next PLC", jurisdiction: "GB", matchedOnly: true },
+  { name: "Persimmon PLC", jurisdiction: "GB", matchedOnly: true },
+  { name: "Marks & Spencer PLC", jurisdiction: "GB", matchedOnly: true },
+  { name: "Hopkins Engineering Limited", jurisdiction: "GB", matchedOnly: true },
+  { name: "Blackthorn Finance Ltd", jurisdiction: "GB", matchedOnly: true },
+  { name: "Airhop Bristol Limited", jurisdiction: "GB", matchedOnly: true },
+  { name: "Domainex Limited", jurisdiction: "GB", matchedOnly: true },
+  { name: "Jandu Developments Limited", jurisdiction: "GB", matchedOnly: true },
+  { name: "Yanco Limited", jurisdiction: "GB", matchedOnly: true },
+  { name: "Lawrence Oakley Ltd", jurisdiction: "GB", matchedOnly: true },
+  { name: "Suntrust Limited", jurisdiction: "GB", matchedOnly: true },
 ];
 
 // 95% Wilson interval for a success rate.

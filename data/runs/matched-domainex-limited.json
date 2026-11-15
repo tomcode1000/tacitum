@@ -1,0 +1,104 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "Domainex Limited",
+  "parties": [
+    "ST IA Limited",
+    "Recircle Consulting Limited",
+    "Circle Square Agency Limited",
+    "Domainex Limited"
+  ],
+  "costUsd": 0.24,
+  "signals": [
+    "0x44d29f3b2e88cb12e7734ebf869f64e38049c206b0703a1734f113aed732b584",
+    "0x1510fb0ead4f4babb50f0062a6d18a3a13b5b9dcf17188d04feec6ab5e79fed7",
+    "0xa590d713c5f89ec2a65801edbd77dc01b06385ca08be98a95c03154b7d95840e",
+    "0xcc46febd85eabbbe08b65450b86f31fc006e11f208fff676006810fb557fee1e",
+    "0x15c76ed254fea405a01b74052d0fc4c1e88e4468407a162bcc985f765948a312",
+    "0xddf5c0b4621ddbb9efd5f74c49c66446c57ca23699ca8cb1d7cf3a6f741b839b",
+    "0x3b1666949a380c192cbde96561e108491b2c6a8a48bf891a77860e79c8bb091a",
+    "0x672e678f012ddc52b2d03756c5fdddd0fea7a4dcac40958fdadf23fe462e67d4",
+    "0x0f1fe9dbfcac008decb44fc969b215c1f8f20341a76959b1ee316a078729f3d9",
+    "0x88f0cf7ed8207481327bd666423e7379cc094aa52f010f2da0519e5179618d5b",
+    "0xedf8d9ce30b3b712e64494febc7015f6f6572b7a08ac0aede80f1ba53aca3938",
+    "0x19a9d14c43a0bd9cdab021c17283c781d3dba04f1d8ffd5e575d86bf97fde2ea",
+    "0xb65b51ee5fe2e74017f84a846c439bed9b188d39d9c5d07797162d255518a946",
+    "0x59085c786487da05e2954f818ba9f8f27f2a5c86446e9ebd12c914ce1efe4dc6",
+    "0xb2b60f6b21e67d1c9a49ef4f7825d8155ce22fe4b40f2d413c243a6d610bad11",
+    "0x58c39717b1e3192c07fa7bc2212ffc869956b91c2cd760d1eae44ac380d2946b",
+    "0xf72691eb957ad11630b1e50db3d09d35c416698efc61e1b32172957dad63f510",
+    "0x61ff9ddd1d03748fb0b6811064dfebc757c6675832cb0f1179a0c058891e2b7b",
+    "0x36669c0d56caa0e2a53974476e88fa9fe01969576d44960805630c1a1275ab11",
+    "0x1dde4f57a97de8dae72022df8497e9b06fae0180ed53a44f010e99f4fbe608a5",
+    "0xd104dffb92e824e2083c543f761c3bcf51a57ea0167602e4e9ecb4cc8cb13f31",
+    "0xe99014d2677a65a3e331658165af5ad4334bac10c9e6eea6a0529fa0b4cda7ea",
+    "0xb13cc097c52bb6573b4e4b55a80ff468a2ce74c70690207fa6dc2bd8bcfbc027",
+    "0x2b0875f0defb3dbee5eef0e4a20cc94e0374846a4c77ab704759e4f7964fe352"
+  ],
+  "order": [
+    {
+      "name": "Domainex Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Recircle Consulting Limited",
+      "check": "filings"
+    },
+    {
+      "name": "ST IA Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "ST IA Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Circle Square Agency Limited",
+      "check": "filings"
+    },
+    {
+      "name": "ST IA Limited",
+      "check": "filings"
+    },
+    {
+      "name": "ST IA Limited",
+      "check": "news"
+    },
+    {
+      "name": "Recircle Consulting Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Recircle Consulting Limited",
+      "check": "news"
+    },
+    {
+      "name": "Circle Square Agency Limited",
+      "check": "news"
+    },
+    {
+      "name": "Domainex Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Circle Square Agency Limited",
+      "check": "sanctions"
+    },
+    {
+      "name": "Domainex Limited",
+      "check": "news"
+    },
+    {
+      "name": "Circle Square Agency Limited",
+      "check": "registry"
+    },
+    {
+      "name": "Domainex Limited",
+      "check": "filings"
+    },
+    {
+      "name": "Recircle Consulting Limited",
+      "check": "registry"
+    }
+  ]
+}

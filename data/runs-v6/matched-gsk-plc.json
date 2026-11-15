@@ -1,0 +1,97 @@
+{
+  "strategy": "matched",
+  "k": 4,
+  "target": "GSK PLC",
+  "parties": [
+    "AstraZeneca PLC",
+    "Barclays PLC",
+    "National Grid PLC",
+    "GSK PLC"
+  ],
+  "costUsd": 0.17,
+  "signals": [
+    "0x16cbdbf7f00acf9abcde9874fdf50339578dcfd0bb54e348b5c0e497a75b46cd",
+    "0x7c91f4764fc5e21d22b93d1785cbb3623b0aaf8ebc17c3c2b5095b797e10b31e",
+    "0xe12a8fc9505a1e2f0624579dd5153f8cda935d4d518b91a1eb75fc7b52a54bec",
+    "0x54123816e2d4f14f9a480bddca995096c5badbe116636e28d5765dc3d32eb6ac",
+    "0xa2870bb7fa4911eb0a75429593d95e74caacf360445017a3bcf00c2369b80141",
+    "0x6d5e483cb4b5e4364cba877e36912998c05126308a142f8fa6070fa135ca36fd",
+    "0xd23254e1e172699add07d4f1ef5ed5198cdfde2f45ebf2a8290229fc5a415ddc",
+    "0x5352082aa3091b38729eb7b9b35ea1d573a3af00158f69cc98769eed71717b9b",
+    "0xe1443229c2c204c65ff547cfef1c798c2b5b94e72f01f732a090b1a8415653ec",
+    "0xce83e683156a5156954c7b3037874c886aaf1a63451e868da7f73d915ebe85b9",
+    "0x687d1513b35ac9a78dc880b34ed12195f2c48a77d359a7e0fa2f8f33f2cb79e9",
+    "0x25b28d69099b4bdd07024bf7935fb4a450abd4fd610889cb49c858ae724a8589",
+    "0xd6a969648491e435ef62ae8429935b3c660f96f78707f9d4709bff07a063f9e0",
+    "0xb81ab77d5c8f75014da9b8470d5debb1929c335f3fae566e41dbe5b1fa6759fb",
+    "0x14a06bd19e32cdc97755ab6af3e6ace313c4ae1c605f3de6f7b713d1be772a92",
+    "0x564c33a938e5239a971f4c9bf54094bdda48c10442a0c5fdd2c6f0add1cfe15b",
+    "0x73d28284dbc4faa616accc8d4c4330226f888af266ed3af5319c7205969fb347"
+  ],
+  "order": [
+    {
+      "name": "GSK PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "filings"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "registry"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "registry"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "news"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "news"
+    },
+    {
+      "name": "National Grid PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Barclays PLC",
+      "check": "filings"
+    },
+    {
+      "name": "AstraZeneca PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "GSK PLC",
+      "check": "news"
+    }
+  ]
+}
