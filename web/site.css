@@ -259,12 +259,15 @@ ul.arts .meta{font-size:.84rem;color:var(--text-3)}
 .callout{border:1px solid var(--line-2);border-left:3px solid var(--brass);background:var(--panel);border-radius:var(--r-sm);padding:16px 20px;margin:16px 0 24px;color:var(--text-2);font-size:.95rem}
 .callout b{color:var(--text)}
 
-/* Magnifier line: letters near the pointer grow and thicken like under a lens (dock-style
-   fisheye), falling off with distance. The line keeps a fixed height so nothing below it moves. */
+/* Magnifier line: letters near the pointer are scaled up like under a lens. Only transforms are
+   used and every letter reserves its bold width, so the line never changes size or wraps and the
+   page below never moves. */
 .hover-words{--base:clamp(.82rem,1vw,.98rem);font-size:var(--base);letter-spacing:.2em;color:var(--text-2);cursor:default;
-  display:flex;align-items:flex-end;flex-wrap:wrap;min-height:calc(var(--base) * 2.6);column-gap:.55em;line-height:1}
-.hover-words .w{display:inline-flex;align-items:flex-end;white-space:nowrap}
-.hover-words .c{display:inline-block;font-weight:600;transition:font-size .22s ease,font-weight .22s ease,color .22s ease;will-change:font-size}
-.hover-words.live .c{transition:none}
+  white-space:nowrap;line-height:1;padding:calc(var(--base) * 1.4) 0 0;margin-top:calc(var(--base) * -1.4);position:relative}
+.hover-words .c{display:inline-flex;flex-direction:column;align-items:center;font-weight:600;transform-origin:50% 100%;
+  transition:transform .25s ease,font-weight .25s ease,color .25s ease;will-change:transform}
+.hover-words .c::after{content:attr(data-t);font-weight:850;height:0;overflow:hidden;visibility:hidden;user-select:none}
+.hover-words.live .c{transition:font-weight .08s linear,color .08s linear}
 .hover-words .c.hot{color:var(--text)}
+@media (max-width:700px),(hover:none){.hover-words{white-space:normal}}
 @media (prefers-reduced-motion:reduce){.hover-words .c{transition:none}}

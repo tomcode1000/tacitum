@@ -91,29 +91,37 @@ document.querySelectorAll(".hover-words").forEach((el) => {
   const MAX = 2.4, SIGMA = 46; // peak scale, lens radius in px
   const text = el.textContent.trim();
   el.setAttribute("aria-label", text);
-  el.innerHTML = text.split(/\s+/).map((w) => `<span class="w" aria-hidden="true">${[...w].map((ch) => `<span class="c">${T.esc(ch)}</span>`).join("")}</span>`).join("");
+  // Spaces become letters too, so the gaps widen with the lens instead of letters colliding.
+  el.innerHTML = [...text].map((ch) => `<span class="c" data-t="${ch === " " ? " " : T.esc(ch)}" aria-hidden="true">${ch === " " ? "&nbsp;" : T.esc(ch)}</span>`).join("");
   const chars = [...el.querySelectorAll(".c")];
-  let centers = [], frame = 0, px = null;
-  const measure = () => { centers = chars.map((c) => { const r = c.getBoundingClientRect(); return { x: r.left + r.width / 2, y: r.top + r.height / 2 }; }); };
-  const base = () => parseFloat(getComputedStyle(el).fontSize);
+  let box = [], frame = 0, px = null;
+  // Rest positions, measured with no transforms applied (transforms never change layout).
+  const measure = () => { box = chars.map((c) => { const r = c.getBoundingClientRect(); return { l: r.left, w: r.width, cx: r.left + r.width / 2, cy: r.top + r.height / 2 }; }); };
   const paint = () => {
     frame = 0;
-    const b = base();
+    const k = box.map((b) => { const dx = px.x - b.cx, dy = (px.y - b.cy) * 1.4; return Math.exp(-(dx * dx + dy * dy) / (2 * SIGMA * SIGMA)); });
+    const extra = box.map((b, i) => b.w * (MAX - 1) * k[i]);
+    // How much the line grows to the left of the pointer: whole letters before it, part of the one under it.
+    let anchor = 0;
+    box.forEach((b, i) => { anchor += extra[i] * Math.min(1, Math.max(0, (px.x - b.l) / b.w)); });
+    // Never push the start of the line off screen: the left side may grow only into free space.
+    anchor = Math.min(anchor, Math.max(0, box[0].l - 12));
+    let run = 0;
     chars.forEach((c, i) => {
-      const dx = px.x - centers[i].x, dy = (px.y - centers[i].y) * 1.6;
-      const k = Math.exp(-(dx * dx + dy * dy) / (2 * SIGMA * SIGMA));
-      const s = 1 + (MAX - 1) * k;
-      c.style.fontSize = `${(b * s).toFixed(2)}px`;
-      c.style.fontWeight = String(Math.round(600 + 250 * k));
-      c.classList.toggle("hot", k > 0.35);
+      const shift = run + extra[i] / 2 - anchor; // letters left of the pointer move left, right of it move right
+      run += extra[i];
+      c.style.transform = `translateX(${shift.toFixed(2)}px) scale(${(1 + (MAX - 1) * k[i]).toFixed(3)})`;
+      c.style.fontWeight = String(Math.round(600 + 250 * k[i]));
+      c.classList.toggle("hot", k[i] > 0.35);
     });
   };
   el.addEventListener("pointerenter", () => { measure(); el.classList.add("live"); });
-  el.addEventListener("pointermove", (e) => { px = { x: e.clientX, y: e.clientY }; if (!frame) frame = requestAnimationFrame(paint); });
+  el.addEventListener("pointermove", (e) => { px = { x: e.clientX, y: e.clientY }; if (!box.length) measure(); if (!frame) frame = requestAnimationFrame(paint); });
   el.addEventListener("pointerleave", () => {
     el.classList.remove("live");
     if (frame) cancelAnimationFrame(frame), (frame = 0);
-    chars.forEach((c) => { c.style.fontSize = ""; c.style.fontWeight = ""; c.classList.remove("hot"); });
+    chars.forEach((c) => { c.style.transform = ""; c.style.fontWeight = ""; c.classList.remove("hot"); });
   });
-  addEventListener("resize", () => (centers = []));
+  addEventListener("resize", () => (box = []));
+  addEventListener("scroll", () => (box = []), { passive: true });
 });
