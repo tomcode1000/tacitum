@@ -83,3 +83,16 @@ T.data = fetch("data.json").then((r) => r.json()).then((d) => {
   if (b) b.textContent = `Data built ${new Date(d.builtAt).toUTCString().slice(5, 16)}`;
   return d;
 });
+
+// .hover-words: every word bolds under the pointer; its neighbours go half-way, so the weight
+// follows the mouse along the line. Screen readers still read the original sentence.
+document.querySelectorAll(".hover-words").forEach((el) => {
+  const text = el.textContent.trim();
+  el.setAttribute("aria-label", text);
+  el.innerHTML = text.split(/\s+/).map((w) => `<span class="w" data-t="${T.esc(w)}" aria-hidden="true">${T.esc(w)}</span>`).join(" ");
+  const words = [...el.querySelectorAll(".w")];
+  words.forEach((w, i) => {
+    w.addEventListener("mouseenter", () => words.forEach((x, j) => x.classList.toggle("near", Math.abs(i - j) === 1)));
+  });
+  el.addEventListener("mouseleave", () => words.forEach((x) => x.classList.remove("near")));
+});
