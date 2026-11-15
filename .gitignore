@@ -8,3 +8,5 @@ keys/
 /build/
 .vercel/
 web/img/src/
+cache/
+artifacts/

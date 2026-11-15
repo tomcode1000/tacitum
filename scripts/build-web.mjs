@@ -90,6 +90,16 @@ const data = {
     screened: screened.slice(-12),
     screenedTotal: screened.length,
   },
+  audit: (() => {
+    const f = `assessments/audit/${path.basename(memoFile).replace(/\.json$/, ".audit.json")}`;
+    const ev = `evidence/audit-verify-${path.basename(memoFile).slice(0, 10)}-${real.counterparty.name.split(" ")[0].toLowerCase()}.txt`;
+    if (!fs.existsSync(f)) return null;
+    const env = read(f);
+    const lines = fs.existsSync(ev)
+      ? fs.readFileSync(ev, "utf8").split(/\r?\n/).filter((l) => /^\s+[✓✗]/.test(l)).map((l) => ({ pass: l.includes("✓"), what: l.replace(/^\s+[✓✗]\s*/, "") }))
+      : [];
+    return { file: f, auditor: env.auditor, sha256: env.sha256, alg: env.alg, evidence: ev, lines };
+  })(),
   miner: {
     id: miner.id,
     slug: miner.slug,

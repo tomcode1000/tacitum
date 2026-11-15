@@ -60,6 +60,18 @@
       </div>
     </div>
   </section>
+
+  <section class="section" id="audit">
+    <div class="wrap split">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">The auditor's view</p>
+        <h2>Private to the market. <span class="accent">Open to your auditor.</span></h2>
+        <p class="lede">The full record of this purchase is published only as ciphertext, sealed to the auditor's key. The auditor opens it and checks every claim against public data on their own: each receipt, the desk's deposit, its sanctions screen, and the zero-knowledge withdraw that paid.</p>
+        <div id="audit-meta" class="muted" style="font-size:.9rem;display:grid;gap:6px"></div>
+      </div>
+      <div class="panel" id="audit-panel"></div>
+    </div>
+  </section>
 </main>
 <script src="site.js"></script>
 <script>
@@ -101,6 +113,18 @@ T.data.then((d) => {
     </table></div>
     <div class="memo-foot"><span><b style="color:var(--text)">${m.verified} of ${m.receipts}</b> receipts re-verified (payer and settlement match)</span><span>Paid by ${T.addr(o.payer)}</span><span>This memo's share $${m.costUsd} · bundle $${o.bundleCostUsd}</span><a href="${d.repo}/blob/main/${m.file.replace(/\.json$/, ".md")}" style="color:var(--text)">Full memo on GitHub</a></div>
     <p class="muted" style="padding:16px 28px 22px;font-size:.88rem">FLAG means a person should review, not that the counterparty is blocked. Here it comes from adverse news alone; sanctions and registry are clear.</p>`;
+
+  const a = d.audit;
+  if (a) {
+    const receipts = a.lines.filter((l) => /receipt/.test(l.what)), chain = a.lines.filter((l) => !/receipt/.test(l.what));
+    document.getElementById("audit-meta").innerHTML = `<span>Sealed record <a href="${d.repo}/blob/main/${a.file}" style="color:var(--text)">${T.esc(a.file.split("/").pop())}</a></span><span>Auditor key <span class="mono">${a.auditor}</span> · ${T.esc(a.alg)}</span><span>Plaintext sha256 <span class="mono">${a.sha256.slice(0, 24)}…</span></span>`;
+    const li = (l) => `<div class="g-row" style="border-bottom:1px solid var(--line);padding:12px 22px;display:flex;gap:12px;align-items:baseline"><span style="color:${l.pass ? "var(--clear)" : "var(--flag)"}">${l.pass ? "✓" : "✗"}</span><span style="font-size:.92rem">${T.esc(l.what)}</span></div>`;
+    document.getElementById("audit-panel").innerHTML = `<div class="panel-head"><span class="eyebrow">Auditor verification</span>${T.chip(a.lines.every((l) => l.pass) ? "CLEAR" : "FLAG", true)}</div>
+      <div style="padding:14px 22px;border-bottom:1px solid var(--line);color:var(--text-2)">${a.lines.filter((l) => l.pass).length} of ${a.lines.length} claims verified against public data</div>
+      ${chain.map(li).join("")}
+      <div style="padding:12px 22px;color:var(--text-2);font-size:.92rem;border-bottom:1px solid var(--line)">✓ ${receipts.filter((l) => l.pass).length} of ${receipts.length} receipts paid by the payer: the real company's and every decoy's</div>
+      <p class="muted" style="padding:14px 22px;font-size:.86rem">Run it yourself with the auditor key: <code>node scripts/audit.mjs open ${T.esc(a.file)} --verify</code></p>`;
+  }
 });
 </script>
 </body>

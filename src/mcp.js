@@ -5,20 +5,46 @@
 //
 // TACITUM_FUNDER_KEY is a Sepolia key holding test USDC and a little ETH. It only funds one-time
 // payers; it never pays a miner itself. Optional: TACITUM_HOME (state dir), RPC_URL, TELEGRAPH_NODE.
+// TACITUM_RELAYER_KEY switches assessments to pool funding (a separate wallet that sends the
+// withdraw). AUDITOR_PUBKEY seals every assessment for the auditor (P5).
+import fs from "node:fs";
+import path from "node:path";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import { privateKeyToAccount } from "viem/accounts";
 import { z } from "zod";
-import { tacitum } from "./index.js";
+import { tacitum, POOL } from "./index.js";
+import { HOME } from "./config.js";
+import { seal, auditRecord, fundingFor } from "./audit.js";
 
 const key = process.env.TACITUM_FUNDER_KEY;
 if (!/^0x[0-9a-fA-F]{64}$/.test(key || "")) {
   console.error("tacitum-mcp: set TACITUM_FUNDER_KEY to a Sepolia private key (test USDC + a little ETH)");
   process.exit(1);
 }
+const relayerKey = process.env.TACITUM_RELAYER_KEY;
+const pool = /^0x[0-9a-fA-F]{64}$/.test(relayerKey || "") ? { relayer: privateKeyToAccount(relayerKey) } : null;
 // stdout carries the MCP protocol, so progress goes to stderr.
-const t = tacitum({ funder: privateKeyToAccount(key), log: (m) => console.error(`tacitum: ${m}`) });
+const log = (m) => console.error(`tacitum: ${m}`);
+const t = tacitum({ funder: privateKeyToAccount(key), pool, log });
 const text = (s) => ({ content: [{ type: "text", text: s }] });
+
+// Every agent purchase leaves the same trail as a desk run: memo, full record, sealed audit record.
+async function keep(record, memo) {
+  const slug = `${new Date().toISOString().slice(0, 10)}-agent-${record.real.counterparty.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+  const dir = path.join(HOME, "assessments");
+  fs.mkdirSync(path.join(dir, "audit"), { recursive: true });
+  fs.writeFileSync(path.join(dir, `${slug}.json`), JSON.stringify(record, null, 2));
+  let note = "";
+  if (process.env.AUDITOR_PUBKEY) {
+    const funding = await fundingFor(record.real.payer, POOL);
+    const env = seal(auditRecord({ run: record, desk: funding.note?.depositor || funding.funder, funding }), process.env.AUDITOR_PUBKEY);
+    fs.writeFileSync(path.join(dir, "audit", `${slug}.audit.json`), JSON.stringify(env, null, 2));
+    note = `\n## Audit record\n\nSealed to auditor key \`${env.auditor}\` in \`assessments/audit/${slug}.audit.json\` (sha256 \`${env.sha256.slice(0, 16)}…\`).\n`;
+  }
+  fs.writeFileSync(path.join(dir, `${slug}.md`), memo + note);
+  return { slug, memo: memo + note };
+}
 
 const server = new McpServer({ name: "tacitum", version: "0.1.0" });
 
@@ -37,8 +63,9 @@ server.registerTool(
     },
   },
   async ({ name, jurisdiction, k }) => {
-    const { memo } = await tacitum({ funder: privateKeyToAccount(key), k, log: (m) => console.error(`tacitum: ${m}`) }).assess({ name, jurisdiction });
-    return text(memo);
+    const { memo, record } = await tacitum({ funder: privateKeyToAccount(key), k, pool, log }).assess({ name, jurisdiction });
+    const kept = await keep(record, memo);
+    return text(kept.memo);
   },
 );
 

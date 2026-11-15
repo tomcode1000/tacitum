@@ -11,7 +11,11 @@ import { auditorKeygen, fingerprint, seal, open, auditRecord, fundingFor, verify
 
 export async function sealAssessment(runFile, auditorPub) {
   const run = JSON.parse(fs.readFileSync(runFile, "utf8"));
-  const pool = fs.existsSync("data/pool.json") ? JSON.parse(fs.readFileSync("data/pool.json", "utf8")) : null;
+  // The current pool and earlier ones (data/pool-v1/pool.json ...), so old runs still seal fully.
+  const pools = ["data/pool.json", ...fs.readdirSync("data").filter((f) => /^pool-v\d+$/.test(f)).map((f) => `data/${f}/pool.json`)].filter((f) => fs.existsSync(f)).map((f) => JSON.parse(fs.readFileSync(f, "utf8")));
+  const payerRec = path.join(process.env.TACITUM_KEYS || "keys", `${run.real.payer}.json`);
+  const funder = fs.existsSync(payerRec) ? JSON.parse(fs.readFileSync(payerRec, "utf8")).funder?.toLowerCase() : null;
+  const pool = pools.find((p) => p.pool.toLowerCase() === funder) || pools[0] || null;
   const funding = await fundingFor(run.real.payer, pool);
   const desk = funding.note?.depositor || funding.funder || null;
   const env = seal(auditRecord({ run, desk, funding }), auditorPub);

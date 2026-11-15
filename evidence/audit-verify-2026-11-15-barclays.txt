@@ -1,0 +1,35 @@
+Audit record: Barclays PLC (GB) · FLAG · 2026-11-15T13:48:20.417Z
+  desk wallet   0xa722D4B8F1A2928931537c77D6DcE41A1e9923c2
+  real target   Barclays PLC   decoys: GSK PLC, AstraZeneca PLC, National Grid PLC
+  payer         0xa327b26325B6A0de2BC28aFCbcf4ddd2b37Fb992   cost $0.21
+  funding       screened pool 0x615cacc9f7613e435a5c39e3ac55efa16e442f11, withdraw 0x54ba86dbc949f1aea37d0e28c3238148ac77abbfc503c2787cb593c735ffa510
+  verdicts      sanctions CLEAR · registry CLEAR · filings INFO · news FLAG
+  ✓ REAL  Barclays PLC                 news      receipt 0x9561195494… paid by the payer
+  ✓ REAL  Barclays PLC                 sanctions receipt 0x48e236aa73… paid by the payer
+  ✓ REAL  Barclays PLC                 sanctions receipt 0x0cf2175491… paid by the payer
+  ✓ REAL  Barclays PLC                 sanctions receipt 0xb1f81e44ba… paid by the payer
+  ✓ REAL  Barclays PLC                 filings   receipt 0x91a46a3ffe… paid by the payer
+  ✓ REAL  Barclays PLC                 registry  receipt 0x2dbbd8ea78… paid by the payer
+  ✓ decoy GSK PLC                      news      receipt 0x573a0a6075… paid by the payer
+  ✓ decoy GSK PLC                      registry  receipt 0xa7e85ef121… paid by the payer
+  ✓ decoy GSK PLC                      filings   receipt 0xc239a4230c… paid by the payer
+  ✓ decoy GSK PLC                      sanctions receipt 0xc4c0bbf372… paid by the payer
+  ✓ decoy GSK PLC                      sanctions receipt 0x5517e0855d… paid by the payer
+  ✓ decoy AstraZeneca PLC              filings   receipt 0xf3b5931c85… paid by the payer
+  ✓ decoy AstraZeneca PLC              news      receipt 0x84ddf93e45… paid by the payer
+  ✓ decoy AstraZeneca PLC              sanctions receipt 0xc210057e5d… paid by the payer
+  ✓ decoy AstraZeneca PLC              sanctions receipt 0x147d80bafb… paid by the payer
+  ✓ decoy AstraZeneca PLC              registry  receipt 0x68b4fdb942… paid by the payer
+  ✓ decoy National Grid PLC            filings   receipt 0x69750aa80b… paid by the payer
+  ✓ decoy National Grid PLC            news      receipt 0xdce9c249c0… paid by the payer
+  ✓ decoy National Grid PLC            registry  receipt 0xfb8ef76cbb… paid by the payer
+  ✓ decoy National Grid PLC            sanctions receipt 0xb732c41542… paid by the payer
+  ✓ decoy National Grid PLC            sanctions receipt 0x612ce837e4… paid by the payer
+  ✓ note opens to the stated commitment
+  ✓ deposit by the desk's wallet 0xa722D4B8… (tx 0xd3973c5c82…)
+  ✓ deposit approved after screening (signal 0xeb88201aa4…)
+  ✓ screening receipt on Telegraph says the depositor is not sanctioned
+  ✓ withdraw spent exactly this note (nullifier hash matches)
+  ✓ withdraw funded the payer that bought every receipt
+
+VERIFIED: every claim in the record checks out against public data (27 checks).

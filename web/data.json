@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-15T14:42:03.033Z",
+  "builtAt": "2026-11-15T16:22:13.905Z",
   "node": "https://devnode.telegraphprotocol.com",
   "repo": "https://github.com/tomcode1000/tacitum",
   "memo": {
@@ -246,9 +246,9 @@
     "perPartyUsd": 0.052
   },
   "pool": {
-    "address": "0x615cacc9f7613e435a5c39e3ac55efa16e442f11",
+    "address": "0xfd7aa64e839003a3b7c20080653f0202e97c5e1b",
     "denominationUsd": 1,
-    "approvedSet": 16,
+    "approvedSet": 0,
     "screener": {
       "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
       "miner": 731002
@@ -258,93 +258,125 @@
       "label": "Ronin bridge exploiter (OFAC SDN)",
       "matched": true
     },
-    "screened": [
+    "screened": [],
+    "screenedTotal": 0
+  },
+  "audit": {
+    "file": "assessments/audit/2026-11-15-private-barclays-plc.audit.json",
+    "auditor": "5dbf68a454022585",
+    "sha256": "bdb71c323df5dc171b93100abf2b3255febbcd0be60be44283529d95f8edad6a",
+    "alg": "X25519-HKDF-SHA256-AES-256-GCM",
+    "evidence": "evidence/audit-verify-2026-11-15-barclays.txt",
+    "lines": [
       {
-        "depositor": "0xa722D4B8F1A2928931537c77D6DcE41A1e9923c2",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xeb88201aa468f3aa1fc419b0319eb80c70837c8bf7c7046860716aa4fbbda296",
-        "tx": "0x4b932cd4611595233b1ff07ffbe8de1ca347c4a5ff86378323142bbe994bb09d"
+        "pass": true,
+        "what": "REAL  Barclays PLC                 news      receipt 0x9561195494… paid by the payer"
       },
       {
-        "depositor": "0xaECbDB3d17b2DBdFc144fA76569FFC08575cb1a6",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x4bdd3dc10b44af3edf407055932f910240b67ab6712d3fe2b72f394893556d47",
-        "tx": "0xe90cd2d38251ed03f0dc36c889f920f78d3e6b67d13724adb4ad71fa83dd63cc"
+        "pass": true,
+        "what": "REAL  Barclays PLC                 sanctions receipt 0x48e236aa73… paid by the payer"
       },
       {
-        "depositor": "0xE51A072D14D727eBA8d84fb3f056e46E1B1e35f1",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x6ad35ed79a07f3b9862f05e69e7a5ff2b029c1995a01026531368453eeada516",
-        "tx": "0x51b9977c9038de23bc8bc4b45f63a8b24570c9feac0299dad9f1ee0fc1f0ce9f"
+        "pass": true,
+        "what": "REAL  Barclays PLC                 sanctions receipt 0x0cf2175491… paid by the payer"
       },
       {
-        "depositor": "0x9b0CeEAAe7b51723017614b36071C5f59F0a3626",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x87216015123e98f9145ca24e338341fa0c4e8021525b8db6e04daaaf1a9d8133",
-        "tx": "0x053f1e551ef3221f5c80260a166ae2253f4ec884f488b4248b988c4516629287"
+        "pass": true,
+        "what": "REAL  Barclays PLC                 sanctions receipt 0xb1f81e44ba… paid by the payer"
       },
       {
-        "depositor": "0x6547E59e8114f9fc8Df7211dD92d6aF60cDE22cC",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xe248f7cf70f80370323403e0ef7ba2127ca192316b5fdcc122c12b22899af031",
-        "tx": "0xf52c4241f112a1f26bae36b53b9192cca2fa307520085232d3d25875c9e7e71e"
+        "pass": true,
+        "what": "REAL  Barclays PLC                 filings   receipt 0x91a46a3ffe… paid by the payer"
       },
       {
-        "depositor": "0x08CFA028456A4a8d275509094530d8dB15f45121",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xeffa0e5f0f315e628c62683ad0e07d8e50b04b7f93b3ad9e8929f69ae08654ce",
-        "tx": "0xb7ac8b386d827ea201221410f14eaa89f89304c05980c2382274f05c58c4068b"
+        "pass": true,
+        "what": "REAL  Barclays PLC                 registry  receipt 0x2dbbd8ea78… paid by the payer"
       },
       {
-        "depositor": "0xE2fd0e821818cFd5CaC6D9757F61Cd4379A4EA90",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xc2e900dc5c4e5f90d066fab281691483d8b9f8a5f622a92bd78217923ac7fcda",
-        "tx": "0x1cd0b49ee70e8b5b24c520dddcc148911e799791bbe8ebfdb8f02fbb12438ee2"
+        "pass": true,
+        "what": "decoy GSK PLC                      news      receipt 0x573a0a6075… paid by the payer"
       },
       {
-        "depositor": "0xeB5c16d4313f6fC95EC60a3F2b11E3C797bFDDea",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x92230d067f2c886b5ca85774432cabf94271b800e8bc891ed9f1f2846d66e6f4",
-        "tx": "0x2d5595d164fc48c918e6ad8b24aadca05907f3bcbdb42b23aef120b84734efe7"
+        "pass": true,
+        "what": "decoy GSK PLC                      registry  receipt 0xa7e85ef121… paid by the payer"
       },
       {
-        "depositor": "0xdAbD908647C922e4CAF29934086b9480C4265119",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xff462d122662515d39cd43ec6d05af60d563dc99b0745c3781e2a8b1ec5c2230",
-        "tx": "0xb7f16f55d176e2ce5625c0d2d83e65cb5510f649f2074121992173f7963c5786"
+        "pass": true,
+        "what": "decoy GSK PLC                      filings   receipt 0xc239a4230c… paid by the payer"
       },
       {
-        "depositor": "0xe101Cf516e040f12fAb1ea5D48B9D7cE10917b42",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xdf1665c84600b09b0ce7d8a0063ac7710a3acf905383f89613356e77db9f5572",
-        "tx": "0xf28cf4f9adfa3c01fbf5460bd87dfa159dddf436cd9f53a992eeb6ad2651f111"
+        "pass": true,
+        "what": "decoy GSK PLC                      sanctions receipt 0xc4c0bbf372… paid by the payer"
       },
       {
-        "depositor": "0x9Bbc3587a9309E47db676826EA0F2f24E3E370Eb",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x669b7678daa2e0157e5bd208eca70acda80581f7d3c580539361c1bfd5909e3f",
-        "tx": "0x13022015bb8eeb049b2c2fb1d0b07f9a33f00f171c9b442f3aa36bdb8acd804b"
+        "pass": true,
+        "what": "decoy GSK PLC                      sanctions receipt 0x5517e0855d… paid by the payer"
       },
       {
-        "depositor": "0xB435531502b50340A93A19A54678287Cee4ceE13",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x71439b678435169326aa2a99d9c6301d82b76e25d46f4557cdb4e722eccf3071",
-        "tx": "0xdca13bcbd3b718e2202b0c90eb807507dbb27a977d17574377c2319c6e9d0266"
+        "pass": true,
+        "what": "decoy AstraZeneca PLC              filings   receipt 0xf3b5931c85… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "decoy AstraZeneca PLC              news      receipt 0x84ddf93e45… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "decoy AstraZeneca PLC              sanctions receipt 0xc210057e5d… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "decoy AstraZeneca PLC              sanctions receipt 0x147d80bafb… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "decoy AstraZeneca PLC              registry  receipt 0x68b4fdb942… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "decoy National Grid PLC            filings   receipt 0x69750aa80b… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "decoy National Grid PLC            news      receipt 0xdce9c249c0… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "decoy National Grid PLC            registry  receipt 0xfb8ef76cbb… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "decoy National Grid PLC            sanctions receipt 0xb732c41542… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "decoy National Grid PLC            sanctions receipt 0x612ce837e4… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "note opens to the stated commitment"
+      },
+      {
+        "pass": true,
+        "what": "deposit by the desk's wallet 0xa722D4B8… (tx 0xd3973c5c82…)"
+      },
+      {
+        "pass": true,
+        "what": "deposit approved after screening (signal 0xeb88201aa4…)"
+      },
+      {
+        "pass": true,
+        "what": "screening receipt on Telegraph says the depositor is not sanctioned"
+      },
+      {
+        "pass": true,
+        "what": "withdraw spent exactly this note (nullifier hash matches)"
+      },
+      {
+        "pass": true,
+        "what": "withdraw funded the payer that bought every receipt"
       }
-    ],
-    "screenedTotal": 16
+    ]
   },
   "miner": {
     "id": 7314402,

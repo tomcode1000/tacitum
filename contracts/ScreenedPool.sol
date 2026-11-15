@@ -54,13 +54,19 @@ contract ScreenedPool {
     uint32 public nextIndex;
 
     mapping(uint256 => address) public pendingDepositor; // commitment -> who paid, until screened
+    mapping(uint256 => uint64) public pendingSince;      // when the deposit arrived
     mapping(uint256 => bool) public approved;
+
+    // A depositor whose deposit is never screened (screener offline, no clear answer) can take
+    // it back after this delay. Approved deposits cannot be reclaimed: they are in the set.
+    uint64 public constant RECLAIM_DELAY = 1 days;
     mapping(uint256 => bool) public spent; // nullifierHash -> used
 
     event Deposited(uint256 indexed commitment, address indexed depositor);
     event Approved(uint256 indexed commitment, uint32 leafIndex, bytes32 screeningSignal, uint256 root);
     event Rejected(uint256 indexed commitment, address indexed depositor, bytes32 screeningSignal);
     event Withdrawn(address indexed recipient, uint256 nullifierHash, address relayer, uint256 fee);
+    event Reclaimed(uint256 indexed commitment, address indexed depositor);
 
     error NotScreener();
     error BadCommitment();
@@ -70,6 +76,8 @@ contract ScreenedPool {
     error AlreadySpent();
     error BadProof();
     error FeeTooHigh();
+    error NotDepositor();
+    error TooEarly();
 
     constructor(IERC20 _usdc, ITelegraphEscrow _escrow, IPoseidon2 _hasher, IVerifier _verifier, uint256 _denomination, address _screener) {
         usdc = _usdc;
@@ -93,6 +101,7 @@ contract ScreenedPool {
     function deposit(uint256 commitment) external {
         _checkNew(commitment);
         pendingDepositor[commitment] = msg.sender;
+        pendingSince[commitment] = uint64(block.timestamp);
         require(usdc.transferFrom(msg.sender, address(this), denomination), "transfer failed");
         emit Deposited(commitment, msg.sender);
     }
@@ -103,6 +112,7 @@ contract ScreenedPool {
     function depositWithAuthorization(uint256 commitment, address from, uint256 validAfter, uint256 validBefore, uint8 v, bytes32 r, bytes32 s) external {
         _checkNew(commitment);
         pendingDepositor[commitment] = from;
+        pendingSince[commitment] = uint64(block.timestamp);
         usdc.receiveWithAuthorization(from, address(this), denomination, validAfter, validBefore, keccak256(abi.encode(commitment)), v, r, s);
         emit Deposited(commitment, from);
     }
@@ -111,11 +121,24 @@ contract ScreenedPool {
         if (commitment == 0 || commitment >= FIELD || approved[commitment] || pendingDepositor[commitment] != address(0)) revert BadCommitment();
     }
 
+    // Unscreened after RECLAIM_DELAY: the depositor takes the money back. Nothing enters the set.
+    function reclaim(uint256 commitment) external {
+        address depositor = pendingDepositor[commitment];
+        if (depositor == address(0)) revert NotPending();
+        if (msg.sender != depositor) revert NotDepositor();
+        if (block.timestamp < pendingSince[commitment] + RECLAIM_DELAY) revert TooEarly();
+        delete pendingDepositor[commitment];
+        delete pendingSince[commitment];
+        require(usdc.transfer(depositor, denomination), "refund failed");
+        emit Reclaimed(commitment, depositor);
+    }
+
     // The depositor's wallet came back clear on Telegraph: add the deposit to the approved set.
     function approve(uint256 commitment, bytes32 screeningSignal) external {
         if (msg.sender != screener) revert NotScreener();
         if (pendingDepositor[commitment] == address(0)) revert NotPending();
         delete pendingDepositor[commitment];
+        delete pendingSince[commitment];
         approved[commitment] = true;
         uint32 index = _insert(commitment);
         emit Approved(commitment, index, screeningSignal, roots[currentRootIndex]);
@@ -127,6 +150,7 @@ contract ScreenedPool {
         address depositor = pendingDepositor[commitment];
         if (depositor == address(0)) revert NotPending();
         delete pendingDepositor[commitment];
+        delete pendingSince[commitment];
         require(usdc.transfer(depositor, denomination), "refund failed");
         emit Rejected(commitment, depositor, screeningSignal);
     }
