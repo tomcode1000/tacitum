@@ -13,4 +13,4 @@ http.createServer((req, res) => {
   if (!file.startsWith(ROOT) || !fs.existsSync(file) || fs.statSync(file).isDirectory()) { res.writeHead(404); return res.end("not found"); }
   res.writeHead(200, { "Content-Type": TYPES[path.extname(file)] || "application/octet-stream", "Cache-Control": "no-cache" });
   fs.createReadStream(file).pipe(res);
-}).listen(PORT, () => console.log(`Tacitum demo on http://localhost:${PORT}`));
+}).listen(PORT, process.env.HOST || "127.0.0.1", () => console.log(`Tacitum site on http://localhost:${PORT}`));

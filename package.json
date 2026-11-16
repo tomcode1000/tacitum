@@ -14,7 +14,8 @@
     "pool:e2e": "node scripts/pool-e2e.mjs",
     "pool:screen": "node scripts/pool-screen.mjs",
     "web": "node scripts/serve-web.mjs",
-    "web:build": "node scripts/build-web.mjs"
+    "web:build": "node scripts/build-web.mjs",
+    "miner:serve": "node miner/server.mjs"
   },
   "keywords": [
     "telegraph",
@@ -34,7 +35,8 @@
     "circomlibjs": "^0.1.7",
     "snarkjs": "^0.7.6",
     "viem": "^2.57.16",
-    "zod": "^4.6.7"
+    "zod": "^4.6.7",
+    "dotenv": "^18.0.9"
   },
   "type": "module",
   "exports": {
@@ -65,7 +67,6 @@
   },
   "devDependencies": {
     "circomlib": "^2.0.5",
-    "dotenv": "^18.0.9",
     "hardhat": "^2.22.17",
     "solc": "^0.8.28"
   }
