@@ -11,6 +11,7 @@ import { screen } from "./lib/adverse.js";
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
 const PORT = Number(process.env.PORT || 4202);
+process.env.GDELT_TIMEOUT_MS ||= "12000"; // own IP: worth waiting for GDELT
 const cache = new Map(); // query -> { at, body }: 15 minutes, as the Vercel edge cache did
 const TTL = 15 * 60 * 1000;
 

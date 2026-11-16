@@ -2,7 +2,7 @@
   "registrationId": 5285,
   "slug": "tacitum-adverse-media",
   "id": 7314402,
-  "yamlUrl": "https://tacitum-adverse.vercel.app/miner.yaml",
+  "yamlUrl": "https://adverse.54-255-109-186.sslip.io/miner.yaml",
   "yamlHash": "0x904d289aa87eac92fb2cae7a0b6ba163426b3cba7242f22d3c5dbae3149f1a45",
   "intents": [
     "NEWS_SEARCH_GENERAL"

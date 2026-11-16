@@ -10,7 +10,7 @@ description: >-
   action, litigation, criminal charges, investigations, insolvency, data breaches or misconduct.
   Every item has its source and date; syndicated copies are merged and law-firm investor adverts
   are kept apart from reporting. Built for counterparty and KYB checks.
-base_url: https://tacitum-adverse.vercel.app
+base_url: https://adverse.54-255-109-186.sslip.io
 docs:
   repository: https://github.com/tomcode1000/tacitum
 rate_limit_per_sec: 2

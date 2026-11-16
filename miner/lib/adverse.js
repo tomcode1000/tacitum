@@ -91,7 +91,9 @@ const UA = { "User-Agent": "tacitum-adverse-media/0.1 (+https://github.com/tomco
 const day = (seen) => (seen ? `${seen.slice(0, 4)}-${seen.slice(4, 6)}-${seen.slice(6, 8)}` : null);
 
 // GDELT: one try. On shared cloud IPs it often answers 429; the other source still runs.
-async function gdelt(entity, { timespan = "12m", max = 150, timeoutMs = 5000 } = {}) {
+// GDELT_TIMEOUT_MS: 5 s on shared cloud IPs (it mostly answers 429 there anyway); the standalone
+// server on its own IP waits longer, because GDELT itself can take ~10 s to answer.
+async function gdelt(entity, { timespan = "12m", max = 150, timeoutMs = Number(process.env.GDELT_TIMEOUT_MS || 5000) } = {}) {
   const q = `"${coreName(entity)}" ${QUERY_TERMS} sourcelang:english`;
   const url = `${GDELT}?query=${encodeURIComponent(q)}&mode=artlist&maxrecords=${max}&format=json&timespan=${timespan}&sort=hybridrel`;
   try {

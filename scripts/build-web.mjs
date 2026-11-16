@@ -115,7 +115,7 @@ const data = {
     id: miner.id,
     slug: miner.slug,
     registrationId: miner.registrationId,
-    endpoint: "https://tacitum-adverse.vercel.app/api/adverse",
+    endpoint: "https://adverse.54-255-109-186.sslip.io/api/adverse",
     eval: (() => {
       if (!fs.existsSync("miner/eval/results.json")) return null;
       const e = read("miner/eval/results.json");

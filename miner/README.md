@@ -9,7 +9,7 @@ Telegraph Hackathon Season II, **Track 02 (Miners / Providers)**. Built alongsid
 | Miner | `tacitum-adverse-media`, id **7314402**, active on the Telegraph H2 contract (Sepolia) |
 | Intent | `NEWS_SEARCH_GENERAL` (input `query`; answer, result_count, sources, brief) |
 | Price | $0.01 per answer |
-| Endpoint | `https://tacitum-adverse.vercel.app/api/adverse?query=<company or person>` |
+| Endpoint | `https://adverse.54-255-109-186.sslip.io/api/adverse?query=<company or person>` |
 | Quality | Blind test set: **precision 0.91, recall 0.71, F1 0.80** (63 headlines, 8 companies) |
 | Paid calls | 5 direct (in `../evidence/miner-*.json`) and every Tacitum assessment since 15 Nov, including one bought by an AI agent on its own |
 | Missions it serves | 03 Institutional Markets (counterparty checks), 04 Legal (litigation and enforcement history), 01 Exchange (listing and partner checks), 13 Asset Management (portfolio and supplier monitoring) |
@@ -62,7 +62,7 @@ Only the test row is a fair estimate. Before the last round of rules, the holdou
 **Free, direct** (no wallet):
 
 ```bash
-curl "https://tacitum-adverse.vercel.app/api/adverse?query=Barclays%20PLC"
+curl "https://adverse.54-255-109-186.sslip.io/api/adverse?query=Barclays%20PLC"
 ```
 
 **Through Telegraph** (paid, receipted; needs a Sepolia wallet with test USDC in its Telegraph escrow, see the main [docs](../web/docs.html#funds)):
@@ -91,6 +91,6 @@ Register or update it on Telegraph from the repo root: `node scripts/miner-regis
 ## Limits
 
 - Runs on Sepolia (Telegraph H2 testnet); answers are free to fetch directly and $0.01 through Telegraph.
-- Hosted on Vercel, whose shared egress IPs are rate-limited by GDELT, so most answers currently come from Google News RSS. A host with its own IP lets GDELT carry the load.
+- Hosted on its own server (AWS Lightsail, dedicated IP) behind Caddy, with a 15-minute answer cache; a Vercel copy (`tacitum-adverse.vercel.app`) serves as a fallback. GDELT can take ~10 s to answer; Google News RSS answers in about a second.
 - Headline-level screening: it does not read article bodies. A FLAG means "a person should read these items", not a finding.
 - English-language news only.
