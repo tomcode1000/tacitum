@@ -29,13 +29,14 @@ const depositors = [];
 for (let i = 0; i < N; i++) {
   const key = generatePrivateKey();
   const account = privateKeyToAccount(key);
-  const h = await op.writeContract({ address: USDC, abi: usdcAbi, functionName: "mint", args: [account.address, denom] });
+  // Circle USDC cannot be minted: the operator funds each depositor by transfer.
+  const h = await op.writeContract({ address: USDC, abi: usdcAbi, functionName: "transfer", args: [account.address, denom] });
   await publicClient.waitForTransactionReceipt({ hash: h });
   depositors.push({ key, account, mintTx: h });
 }
 const deskIndex = Math.floor(Math.random() * N);
 // The desk index is never printed or saved outside the keys folder: that is the secret.
-say(`minted ${formatUnits(denom, 6)} USDC to ${N} fresh depositors; one of them is the desk`);
+say(`sent ${formatUnits(denom, 6)} USDC to ${N} fresh depositors; one of them is the desk`);
 
 // 2. Each depositor signs; the operator relays. Notes are saved (the desk's matters; the others are seed).
 fs.mkdirSync(path.join(KEYS, "depositors"), { recursive: true });
@@ -76,7 +77,7 @@ say(`proof made in ${((Date.now() - t0) / 1000).toFixed(1)} s, verifies locally:
 const withdrawTx = await withdraw(operator, P.pool, p, { nullifierHash: desk.note.nullifierHash, recipient: payer.address });
 // Read at the withdraw block: load-balanced RPCs can lag latest and show 0.
 const { blockNumber: wBlock } = await publicClient.getTransactionReceipt({ hash: withdrawTx });
-const escrow = await publicClient.readContract({ address: DIAMOND, abi: escrowAbi, functionName: "effectiveBalance", args: [payer.address], blockNumber: wBlock });
+const [escrow] = await publicClient.readContract({ address: DIAMOND, abi: escrowAbi, functionName: "ledgerAccount", args: [payer.address], blockNumber: wBlock });
 say(`withdraw tx ${withdrawTx}: one-time payer ${payer.address} escrow = ${formatUnits(escrow, 6)} USDC`);
 fs.writeFileSync(path.join(KEYS, `${payer.address}.json`), JSON.stringify({ address: payer.address, key: payerKey, funder: P.pool, fundingTx: withdrawTx, amountUsd: Number(formatUnits(denom, 6)), label: "pool withdraw (e2e)", createdAt: new Date().toISOString() }, null, 2));
 

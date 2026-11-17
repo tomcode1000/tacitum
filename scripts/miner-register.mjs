@@ -1,24 +1,26 @@
-// Registers the Tacitum adverse-media miner on the Telegraph H2 contract (Sepolia).
+// Registers the Tacitum adverse-media miner on the Telegraph Diamond (Sepolia).
 // Usage: node scripts/miner-register.mjs [--dry]
-// Steps: fetch the hosted YAML and check it matches miner/public/miner.yaml, swap test USDC for
-// MACHINA if the bond needs it, approve the bond, simulate registerMiner, then send it.
+// Steps: check the hosted YAML matches miner/public/miner.yaml, pay the bond in whatever token the
+// Diamond names (USDC since the 17 Nov 2026 Diamond; MACHINA before), simulate, send, and read the
+// registration id from the transaction's own logs (a simulated id can be taken by someone else
+// before the transaction lands, which happened on 16 Nov).
 import fs from "node:fs";
 import { createHash } from "node:crypto";
-import { parseAbi, parseUnits, formatUnits } from "viem";
-import { USDC, DIAMOND, usdcAbi, publicClient, walletClient, loadAccount } from "./config.mjs";
+import { parseAbi, formatUnits, zeroAddress } from "viem";
+import { USDC, DIAMOND, publicClient, walletClient, loadAccount } from "./config.mjs";
 
 const DRY = process.argv.includes("--dry");
-const YAML_URL = "https://tacitum-adverse.vercel.app/miner.yaml";
-const MACHINA = "0xd68305cA83C7AF42A4F720144E7416fB53F8AaF4";
-const ROUTER = "0x3bFA4769FB09eefC5a80d6E87c3B9C650f7Ae48E"; // Uniswap SwapRouter02 (Sepolia)
+const rec = fs.existsSync("data/miner.json") ? JSON.parse(fs.readFileSync("data/miner.json", "utf8")) : {};
+const YAML_URL = rec.yamlUrl || "https://adverse.54-255-109-186.sslip.io/miner.yaml";
 const INTENTS = ["NEWS_SEARCH_GENERAL"];
 const MIN_PRICE = 10000n; // $0.01
 
 const erc20 = parseAbi(["function balanceOf(address) view returns (uint256)", "function approve(address,uint256) returns (bool)", "function allowance(address,address) view returns (uint256)"]);
-const routerAbi = parseAbi(["function exactInputSingle((address tokenIn,address tokenOut,uint24 fee,address recipient,uint256 amountIn,uint256 amountOutMinimum,uint160 sqrtPriceLimitX96)) payable returns (uint256)"]);
-const registryAbi = parseAbi([
+const diamondAbi = parseAbi([
   "function registerMiner(string yamlUrl, bytes32 yamlHash, address feeAddress, uint256 minPriceUsdc, string[] supportedIntents) returns (uint256)",
-  "event MinerRegistered(uint256 indexed registrationId, address indexed miner, string yamlUrl)",
+  "function machinaToken() view returns (address)",
+  "function usdcToken() view returns (address)",
+  "function minerBondParams() view returns (uint256 firstIntent, uint256 nextIntents, uint256 beyondNine)",
 ]);
 
 const account = loadAccount();
@@ -32,32 +34,32 @@ const wait = async (hash) => {
 // 1. The hosted YAML must be byte-identical to the repo copy (the hash is what goes on chain).
 const local = fs.readFileSync("miner/public/miner.yaml");
 const hosted = Buffer.from(await (await fetch(YAML_URL)).arrayBuffer());
-if (!hosted.equals(local)) throw new Error("hosted YAML differs from miner/public/miner.yaml: deploy first");
+if (!hosted.equals(local)) throw new Error(`hosted YAML at ${YAML_URL} differs from miner/public/miner.yaml: deploy first`);
 const yamlHash = `0x${createHash("sha256").update(local).digest("hex")}`;
 console.log(`yaml ${YAML_URL} sha256 ${yamlHash}`);
 
-// 2. Bond: about $1 of MACHINA for one intent. Swap 2 test USDC if we hold under 1.5 MACHINA.
-const bal = () => publicClient.readContract({ address: MACHINA, abi: erc20, functionName: "balanceOf", args: [account.address] });
-if ((await bal()) < parseUnits("1.5", 18) && !DRY) {
-  const amountIn = parseUnits("2", 6);
-  if ((await publicClient.readContract({ address: USDC, abi: usdcAbi, functionName: "allowance", args: [account.address, ROUTER] })) < amountIn) {
-    await wait(await w.writeContract({ address: USDC, abi: usdcAbi, functionName: "approve", args: [ROUTER, amountIn] }));
-  }
-  const swap = await w.writeContract({ address: ROUTER, abi: routerAbi, functionName: "exactInputSingle", args: [{ tokenIn: USDC, tokenOut: MACHINA, fee: 3000, recipient: account.address, amountIn, amountOutMinimum: 0n, sqrtPriceLimitX96: 0n }] });
-  await wait(swap);
-  console.log(`swapped 2 USDC for MACHINA, tx ${swap}`);
-}
-console.log(`MACHINA balance ${formatUnits(await bal(), 18)}`);
-if ((await publicClient.readContract({ address: MACHINA, abi: erc20, functionName: "allowance", args: [account.address, DIAMOND] })) < parseUnits("2", 18) && !DRY) {
-  await wait(await w.writeContract({ address: MACHINA, abi: erc20, functionName: "approve", args: [DIAMOND, parseUnits("3", 18)] }));
+// 2. Bond: the Diamond says which token (MACHINA if set, otherwise USDC) and how much.
+const machina = await publicClient.readContract({ address: DIAMOND, abi: diamondAbi, functionName: "machinaToken" });
+const bondToken = machina === zeroAddress ? await publicClient.readContract({ address: DIAMOND, abi: diamondAbi, functionName: "usdcToken" }).catch(() => USDC) : machina;
+const decimals = machina === zeroAddress ? 6 : 18;
+const [firstIntent] = await publicClient.readContract({ address: DIAMOND, abi: diamondAbi, functionName: "minerBondParams" });
+const need = firstIntent + firstIntent / 10n; // headroom for rounding
+const have = await publicClient.readContract({ address: bondToken, abi: erc20, functionName: "balanceOf", args: [account.address] });
+console.log(`bond ${formatUnits(firstIntent, decimals)} in ${machina === zeroAddress ? "USDC" : "MACHINA"} (${bondToken}); wallet holds ${formatUnits(have, decimals)}`);
+if (have < firstIntent) throw new Error("not enough of the bond token: top up the wallet first (USDC: faucet.circle.com)");
+if (!DRY && (await publicClient.readContract({ address: bondToken, abi: erc20, functionName: "allowance", args: [account.address, DIAMOND] })) < need) {
+  await wait(await w.writeContract({ address: bondToken, abi: erc20, functionName: "approve", args: [DIAMOND, need] }));
 }
 
-// 3. Simulate, then send.
+// 3. Simulate, then send; the real id comes from the logs.
 const args = [YAML_URL, yamlHash, account.address, MIN_PRICE, INTENTS];
-const sim = await publicClient.simulateContract({ account, address: DIAMOND, abi: registryAbi, functionName: "registerMiner", args });
-console.log(`simulation ok: registrationId would be ${sim.result}`);
+const sim = await publicClient.simulateContract({ account, address: DIAMOND, abi: diamondAbi, functionName: "registerMiner", args });
+console.log(`simulation ok (id at simulation time: ${sim.result})`);
 if (DRY) process.exit(0);
 const tx = await w.writeContract(sim.request);
 const r = await wait(tx);
-console.log(`registered: registrationId ${sim.result}, tx ${tx}, block ${r.blockNumber}`);
-fs.writeFileSync("data/miner.json", JSON.stringify({ registrationId: Number(sim.result), slug: "tacitum-adverse-media", id: 7314402, yamlUrl: YAML_URL, yamlHash, intents: INTENTS, minPriceUsdc: Number(MIN_PRICE), tx, registeredAt: new Date().toISOString() }, null, 2));
+const ours = r.logs.filter((l) => l.address.toLowerCase() === DIAMOND.toLowerCase() && l.topics.length >= 3 && BigInt(l.topics[2]) === BigInt(account.address)).map((l) => BigInt(l.topics[1]));
+const registrationId = Number(ours.length ? ours.reduce((a, b) => (b > a ? b : a)) : sim.result);
+console.log(`registered: registrationId ${registrationId}, tx ${tx}, block ${r.blockNumber}`);
+const history = [...(rec.history || []), ...(rec.registrationId ? [{ registrationId: rec.registrationId, yamlHash: rec.yamlHash, tx: rec.tx, diamond: rec.diamond || "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b" }] : [])];
+fs.writeFileSync("data/miner.json", JSON.stringify({ registrationId, slug: "tacitum-adverse-media", id: 7314402, diamond: DIAMOND, yamlUrl: YAML_URL, yamlHash, intents: INTENTS, minPriceUsdc: Number(MIN_PRICE), tx, registeredAt: new Date().toISOString(), history }, null, 2));

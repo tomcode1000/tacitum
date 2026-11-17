@@ -26,6 +26,7 @@ export const poolAbi = parseAbi([
   "function reject(uint256 commitment, bytes32 screeningSignal)",
   "function withdraw(uint256[2] a, uint256[2][2] b, uint256[2] c, uint256 root, uint256 nullifierHash, address recipient, address relayer, uint256 fee)",
   "function denomination() view returns (uint256)",
+  "function usdc() view returns (address)",
   "function screener() view returns (address)",
   "function latestRoot() view returns (uint256)",
   "function isKnownRoot(uint256) view returns (bool)",
@@ -175,8 +176,13 @@ export async function depositGasless(depositor, relayer, pool, note, validForSec
   const validAfter = 0n;
   const validBefore = BigInt(Math.floor(Date.now() / 1000) + validForSec);
   const nonce = keccak256(encodeAbiParameters([{ type: "uint256" }], [note.commitment]));
+  // Sign against the token the pool really holds, with its own EIP-712 name and version
+  // (Circle's Sepolia USDC is "USDC" v2; the retired test token was "USD Coin" v2).
+  const token = await publicClient.readContract({ address: pool, abi: poolAbi, functionName: "usdc" });
+  const [tname, tversion] = await Promise.all(["name", "version"].map((f) => publicClient.readContract({ address: token, abi: usdcAbi, functionName: f })));
+  const domain = { name: tname, version: tversion, chainId: 11155111, verifyingContract: token };
   const signature = await depositor.signTypedData({
-    domain: { name: "USD Coin", version: "2", chainId: 11155111, verifyingContract: USDC },
+    domain,
     types: { ReceiveWithAuthorization: [
       { name: "from", type: "address" }, { name: "to", type: "address" }, { name: "value", type: "uint256" },
       { name: "validAfter", type: "uint256" }, { name: "validBefore", type: "uint256" }, { name: "nonce", type: "bytes32" },

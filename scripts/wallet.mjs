@@ -21,14 +21,8 @@ console.log(`payer   ${account.address}`);
 console.log(`ETH     ${formatEther(eth)}`);
 console.log(`USDC    ${formatUnits(usdc, 6)}`);
 
+// Since Telegraph's 17 Nov Diamond, payments are in Circle's Sepolia USDC, which cannot be minted.
 if (usdc < parseUnits("0.1", 6)) {
-  if (eth === 0n) {
-    console.log("\nNeeds a little Sepolia ETH to mint test USDC. Send ~0.01 to the payer address, then rerun.");
-  } else {
-    const hash = await walletClient(account).writeContract({ address: USDC, abi: usdcAbi, functionName: "mint", args: [account.address, parseUnits("10", 6)] });
-    const { blockNumber } = await publicClient.waitForTransactionReceipt({ hash });
-    // Read at the mint block: load-balanced public RPCs can lag "latest" by a block.
-    usdc = await publicClient.readContract({ address: USDC, abi: usdcAbi, functionName: "balanceOf", args: [account.address], blockNumber });
-    console.log(`minted  10 test USDC (tx ${hash}), balance now ${formatUnits(usdc, 6)}`);
-  }
+  console.log(`\nGet USDC from https://faucet.circle.com (USDC, Ethereum Sepolia) for ${account.address}, then rerun.`);
+  if (eth === 0n) console.log("It also needs a little Sepolia ETH for gas (~0.01) from any Sepolia faucet.");
 }

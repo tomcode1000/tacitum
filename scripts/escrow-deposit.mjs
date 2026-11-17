@@ -11,5 +11,5 @@ await publicClient.waitForTransactionReceipt({ hash: approve });
 const deposit = await wallet.writeContract({ address: DIAMOND, abi: escrowAbi, functionName: "depositUSDC", args: [amount] });
 const { blockNumber } = await publicClient.waitForTransactionReceipt({ hash: deposit });
 
-const balance = await publicClient.readContract({ address: DIAMOND, abi: escrowAbi, functionName: "effectiveBalance", args: [account.address], blockNumber });
-console.log(`deposited ${formatUnits(amount, 6)} USDC (tx ${deposit}); escrow balance ${formatUnits(balance, 6)}`);
+const [deposited, withdrawn] = await publicClient.readContract({ address: DIAMOND, abi: escrowAbi, functionName: "ledgerAccount", args: [account.address], blockNumber });
+console.log(`deposited ${formatUnits(amount, 6)} USDC (tx ${deposit}); on-chain deposits net of withdrawals ${formatUnits(deposited - withdrawn, 6)}`);

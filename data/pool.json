@@ -1,23 +1,25 @@
 {
   "network": "sepolia",
-  "pool": "0xfd7aa64e839003a3b7c20080653f0202e97c5e1b",
-  "deployBlock": 12141356,
-  "hasher": "0xeeaaf609c70ce7cf9fe973d7034d0a43db006420",
-  "verifier": "0x6f0cc079013494c74fb60a81abf8165a90369f19",
-  "usdc": "0xcc194e1a843B658526D0D5C431f670028582Ae17",
-  "escrow": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b",
-  "denominationUsd": 1,
+  "pool": "0x9c7d7c728e8eacdfea3bd1e3123c45856a1e8ab4",
+  "deployBlock": 12154877,
+  "hasher": "0xdbd88daa4bebc7eeaf1cefd61996f36d3baff2bd",
+  "verifier": "0x0e20425421b573a8415fa8b199e8f828bfcf6f3b",
+  "usdc": "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238",
+  "escrow": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
+  "denominationUsd": 0.5,
   "screener": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
   "txs": {
-    "hasher": "0x24d89e1d0129c76e36cd415c7ae8df50bebcade74b8f2f14970edd66795f84c2",
-    "verifier": "0x150b8723c3d6dd1d1b41373ddb4f64b833d513a455959b646291d08ea3118068",
-    "pool": "0x9697b9baf68c022ca7a119feba2f0efb2bc2f665e9808f5afd02087ff18320fd"
+    "hasher": "0xabbbecc09dff830c15f7991bc335af7b4960f5486528ba4a42febdb0bca15694",
+    "verifier": "0x3f1333c89a74be1868a4a15fe586c2fbb622cdfa9f570a3432ac42fd815af68e",
+    "pool": "0xf9a549d1165fb1b13343ce1f6ae8f597caee42039de4165e21310817aba79cfb"
   },
-  "deployedAt": "2026-11-15T16:18:49.985Z",
-  "version": 2,
+  "deployedAt": "2026-11-17T14:06:04.228Z",
+  "version": 3,
   "features": [
     "screened deposits",
     "gasless EIP-3009 deposits",
     "reclaim after 24h"
-  ]
+  ],
+  "telegraphDiamond": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
+  "note": "Telegraph Diamond of 17 Nov 2026, Circle Sepolia USDC"
 }

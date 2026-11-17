@@ -42,5 +42,5 @@ const denomination = parseUnits(denomUsd, 6);
 const pool = await deploy("pool", c.pool.abi, c.pool.evm.bytecode.object, [USDC, DIAMOND, hasher.address, verifier.address, denomination, account.address]);
 
 const record = { network: "sepolia", pool: pool.address, deployBlock: pool.block, hasher: hasher.address, verifier: verifier.address, usdc: USDC, escrow: DIAMOND, denominationUsd: Number(denomUsd), screener: account.address, txs: { hasher: hasher.tx, verifier: verifier.tx, pool: pool.tx }, deployedAt: new Date().toISOString() };
-fs.writeFileSync("data/pool.json", JSON.stringify({ ...record, version: 2, features: ["screened deposits", "gasless EIP-3009 deposits", "reclaim after 24h"] }, null, 2));
+fs.writeFileSync("data/pool.json", JSON.stringify({ ...record, version: 3, features: ["screened deposits", "gasless EIP-3009 deposits", "reclaim after 24h"], telegraphDiamond: DIAMOND, note: "Telegraph Diamond of 17 Nov 2026, Circle Sepolia USDC" }, null, 2));
 console.log("wrote data/pool.json");

@@ -10,7 +10,7 @@ import fs from "node:fs";
 import { formatUnits, parseUnits } from "viem";
 import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
 import path from "node:path";
-import { USDC, DIAMOND, KEYS, usdcAbi, escrowAbi, publicClient, walletClient } from "./config.js";
+import { USDC, DIAMOND, KEYS, usdcAbi, escrowAbi, publicClient, walletClient, ledger } from "./config.js";
 
 // One-time keys are kept (in TACITUM_KEYS) so the record can be opened for an auditor later.
 
@@ -39,8 +39,9 @@ export async function oneTimePayer(funder, amountUsd, label = "") {
     }
   }
   const { blockNumber } = await publicClient.waitForTransactionReceipt({ hash: fundingTx });
-  const balance = await publicClient.readContract({ address: DIAMOND, abi: escrowAbi, functionName: "effectiveBalance", args: [account.address], blockNumber });
-  if (balance < amount) throw new Error(`escrow shows ${formatUnits(balance, 6)} USDC for ${account.address}, expected ${amountUsd}`);
+  // On-chain ledger at the funding block (the node's view catches up a little later).
+  const [deposited] = await publicClient.readContract({ address: DIAMOND, abi: escrowAbi, functionName: "ledgerAccount", args: [account.address], blockNumber });
+  if (deposited < amount) throw new Error(`escrow shows ${formatUnits(deposited, 6)} USDC deposited for ${account.address}, expected ${amountUsd}`);
 
   fs.mkdirSync(KEYS, { recursive: true });
   const record = { address: account.address, key, funder: funder.address, fundingTx, amountUsd: Number(amountUsd), label, createdAt: new Date().toISOString() };
@@ -49,9 +50,9 @@ export async function oneTimePayer(funder, amountUsd, label = "") {
   return { account, fundingTx, funder: funder.address, amountUsd: Number(amountUsd), fundedAt: Date.now() };
 }
 
+// What the node will let this address spend next (USD).
 export async function escrowBalance(address) {
-  const b = await publicClient.readContract({ address: DIAMOND, abi: escrowAbi, functionName: "effectiveBalance", args: [address] });
-  return Number(formatUnits(b, 6));
+  return Number(formatUnits((await ledger(address)).available, 6));
 }
 
 // P4: fund a one-time payer from the screened pool instead of from the desk. The relayer sends
