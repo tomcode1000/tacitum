@@ -1,0 +1,68 @@
+{
+  "request": {
+    "miner": 7314402,
+    "intent": "NEWS_SEARCH_GENERAL",
+    "params": {
+      "query": "Volkswagen"
+    }
+  },
+  "diamond": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
+  "host": "https://adverse.54-255-109-186.sslip.io",
+  "status": 200,
+  "response": {
+    "miner_id": "7314402",
+    "miner_name": "Tacitum Adverse Media Screen",
+    "endpoint": "/adverse",
+    "result": {
+      "answer": "18 adverse news items naming Volkswagen in the last 12 months from 16 sources, mainly litigation, misconduct, investigation. Latest: Volkswagen reports worst loss since 'Dieselgate' scandal in 2015 (This is Money, 2026-10-29).",
+      "result_count": 18,
+      "sources": [
+        "This is Money",
+        "Financial Times",
+        "City AM",
+        "The Times",
+        "Reuters",
+        "BigGo Finance",
+        "Follow the Money - Platform for investigative journalism",
+        "NL Times",
+        "Road & Track",
+        "NJ.com",
+        "Autoblog",
+        "www.volkswagen-group.com"
+      ],
+      "brief": "18 adverse items on Volkswagen, risk high"
+    },
+    "result_shape": "intent",
+    "format_version": 3,
+    "field_status": {
+      "answer": "ok",
+      "result_count": "ok",
+      "sources": "ok",
+      "brief": "ok"
+    },
+    "input": {
+      "query": "Volkswagen"
+    },
+    "input_schema_version": 3,
+    "cost_usd": 0.01,
+    "duration_ms": 11194,
+    "timestamp": "2026-11-17T14:26:11.554236516Z",
+    "reasoning": "Intent: miner tacitum-adverse-media given by the caller\nMiner: input schema v3 mapped in code to GET /adverse",
+    "intent": "NEWS_SEARCH_GENERAL",
+    "intent_version": 1,
+    "signal_hash": "0xdf108a624160b162b559045c6ca2418012d93ae16b753bd30acf2c3f26808526"
+  },
+  "payment": {
+    "receipt_hash": "0xc7f7050b0e76a1436d4bf9b1050900b01c4b4ae089f198186987607a0d2b22fa",
+    "rail": "escrow",
+    "payer": "0xdbee317b429c8eadfce1825691cf10c7fa46b608",
+    "miner": "5307",
+    "intent": "NEWS_SEARCH_GENERAL",
+    "amount_uusdc": "10000",
+    "epoch_id": 2,
+    "settlement": "epoch",
+    "chain": "telegraph",
+    "timestamp": 1794925576
+  },
+  "receipt": null
+}

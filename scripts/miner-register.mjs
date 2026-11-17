@@ -43,7 +43,7 @@ const machina = await publicClient.readContract({ address: DIAMOND, abi: diamond
 const bondToken = machina === zeroAddress ? await publicClient.readContract({ address: DIAMOND, abi: diamondAbi, functionName: "usdcToken" }).catch(() => USDC) : machina;
 const decimals = machina === zeroAddress ? 6 : 18;
 const [firstIntent] = await publicClient.readContract({ address: DIAMOND, abi: diamondAbi, functionName: "minerBondParams" });
-const need = firstIntent + firstIntent / 10n; // headroom for rounding
+const need = firstIntent * 2n; // headroom: the bond is priced at registration time
 const have = await publicClient.readContract({ address: bondToken, abi: erc20, functionName: "balanceOf", args: [account.address] });
 console.log(`bond ${formatUnits(firstIntent, decimals)} in ${machina === zeroAddress ? "USDC" : "MACHINA"} (${bondToken}); wallet holds ${formatUnits(have, decimals)}`);
 if (have < firstIntent) throw new Error("not enough of the bond token: top up the wallet first (USDC: faucet.circle.com)");
@@ -53,7 +53,12 @@ if (!DRY && (await publicClient.readContract({ address: bondToken, abi: erc20, f
 
 // 3. Simulate, then send; the real id comes from the logs.
 const args = [YAML_URL, yamlHash, account.address, MIN_PRICE, INTENTS];
-const sim = await publicClient.simulateContract({ account, address: DIAMOND, abi: diamondAbi, functionName: "registerMiner", args });
+// Load-balanced public RPCs can simulate against a block before the approval landed: retry.
+let sim;
+for (let i = 0; !sim; i++) {
+  try { sim = await publicClient.simulateContract({ account, address: DIAMOND, abi: diamondAbi, functionName: "registerMiner", args }); }
+  catch (e) { if (DRY || i >= 6 || !/allowance/i.test(e.shortMessage + e.message)) throw e; await new Promise((r) => setTimeout(r, 5000)); }
+}
 console.log(`simulation ok (id at simulation time: ${sim.result})`);
 if (DRY) process.exit(0);
 const tx = await w.writeContract(sim.request);

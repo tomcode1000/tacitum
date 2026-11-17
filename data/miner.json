@@ -1,21 +1,32 @@
 {
-  "registrationId": 5285,
+  "registrationId": 5307,
   "slug": "tacitum-adverse-media",
   "id": 7314402,
+  "diamond": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
   "yamlUrl": "https://adverse.54-255-109-186.sslip.io/miner.yaml",
-  "yamlHash": "0x904d289aa87eac92fb2cae7a0b6ba163426b3cba7242f22d3c5dbae3149f1a45",
+  "yamlHash": "0x11b482e3145d44c9f9413684ba32a04cf3f939901ebc6569fb020e545c5c325d",
   "intents": [
     "NEWS_SEARCH_GENERAL"
   ],
   "minPriceUsdc": 10000,
-  "tx": "0xb8803e842c2abb914c30603804b902fd1aa571965bcbce748880356ecac0c2f8",
-  "registeredAt": "2026-11-15T13:08:51.992Z",
-  "updatedAt": "2026-11-15T13:19:01.199Z",
+  "tx": "0x7768b277195f2b65f8d8d17c70271436030c3fdbdb6a9c98f632e2273b818ca7",
+  "registeredAt": "2026-11-17T14:17:52.123Z",
   "history": [
     {
       "registrationId": 5284,
       "yamlHash": "0x5054cac00c2c0e6d25da8419654c85ca9459696b75383b10993dfb87d309a3d2",
       "tx": "0xa3882333bfc5020a90f2cda8c0a67e4542293b92140c9ad3b03f987898014953"
+    },
+    {
+      "registrationId": 5285,
+      "yamlHash": "0x904d289aa87eac92fb2cae7a0b6ba163426b3cba7242f22d3c5dbae3149f1a45",
+      "tx": "0xb8803e842c2abb914c30603804b902fd1aa571965bcbce748880356ecac0c2f8"
+    },
+    {
+      "registrationId": 5303,
+      "yamlHash": "0x11b482e3145d44c9f9413684ba32a04cf3f939901ebc6569fb020e545c5c325d",
+      "tx": "0x9af10a74898f7ef62d32805fa9637afb215564fd6ee4a65fce99cbe8a8ef858e",
+      "diamond": "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b"
     }
   ]
 }

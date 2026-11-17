@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-16T17:09:08.890Z",
+  "builtAt": "2026-11-17T14:28:39.449Z",
   "node": "https://devnode.telegraphprotocol.com",
   "repo": "https://github.com/tomcode1000/tacitum",
   "memo": {
@@ -254,9 +254,9 @@
     "perPartyUsd": 0.052
   },
   "pool": {
-    "address": "0xfd7aa64e839003a3b7c20080653f0202e97c5e1b",
-    "denominationUsd": 1,
-    "approvedSet": 16,
+    "address": "0x9c7d7c728e8eacdfea3bd1e3123c45856a1e8ab4",
+    "denominationUsd": 0.5,
+    "approvedSet": 0,
     "screener": {
       "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
       "miner": 731002
@@ -266,93 +266,8 @@
       "label": "Ronin bridge exploiter (OFAC SDN)",
       "matched": true
     },
-    "screened": [
-      {
-        "depositor": "0xB3Bc2688eE8f0246aC50fa2F6eDf4F180052940C",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x41d14ed606a6ef567fca6afb1b82b365e37c044ac3395b15d694204f6e500486",
-        "tx": "0x7d3a737069fda0bbe2e5e4245a197a4ea0b90592cd8bbddf72b917b91a22b594"
-      },
-      {
-        "depositor": "0x25Bd31dfAd6e57dA0607F8DE973Fa76014670ed6",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x901dd44f2e77a0f2d9a05466697e8e885c36b7d59fdf3edbb8373a0c26eb065d",
-        "tx": "0xc27fdf850d6321fc4bcbeedc3a518019b0146320f811cbc72502be3ad03f8e4e"
-      },
-      {
-        "depositor": "0xAAB26dA64618291AE02c52332dc437cB752EA051",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x178b86e5ea0bf15b5bac6535f58f3561bf5d466e21e9485ecf3256d9aadd06da",
-        "tx": "0x43a7d3eafa4e64c1796ca83ef98b0ef373b33e4c4736e8125f3b679daa5ff1c8"
-      },
-      {
-        "depositor": "0xeC9bbBc05cE6e854070C15A3F5322A608c368c97",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x9957db948c2c3511f1b1a9bd7253eaeb93bb7626f26fb3c4e99e859398992250",
-        "tx": "0x4cb3e6456af985a109ff52b1389d03147f4975887b1fea23e4ea7e943acc04d7"
-      },
-      {
-        "depositor": "0xb7a62BC7527ECb1D572f183CD6be0ECD2CCb6e66",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x115d5f2f505a18146f42fef133b68edd16f690a0710c05adacc1ba6ab4f60c7e",
-        "tx": "0xa2541dd5448bedcfbadb6a6069d328552e36d686b885b621d3b2c39b91776ac4"
-      },
-      {
-        "depositor": "0x57C8037Ae69e3cC785dc0ccBe06E1aA2a55e50C3",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xf308d5521536701582250e366149fa6aa9cb38dcb81daa9df50e081f190fddf3",
-        "tx": "0xb65167460ed6cb6a48fcbc5d715f5da5e07e79abfb07306921248407548a8457"
-      },
-      {
-        "depositor": "0x438fEFD34723b0469aefF3E777000e2299ea1B8e",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x357c4224157830426600494e2ea67409a65bd36936cd040613ba82fc67a309ed",
-        "tx": "0x14f1b15d0a133a143d3bbb3129a35e463fe33983e572973459ad0ebe1d0aaf52"
-      },
-      {
-        "depositor": "0xD6b6568C56E5D8eFE079B8E382bFfA48b88c6795",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xc747f7eea607f988ce8ed8b8feaf4474af4e7816ed0f52c92d34c54d93262ca3",
-        "tx": "0x8e84d9091b542f19316f1bc14a2741f660a75cbf04e2e693cdea4f332de57dbf"
-      },
-      {
-        "depositor": "0x48208773Ac6CE22129F04F0Ce5E4aa756cBecD16",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xc0d16eb642ac56b8c04dcb3beb77facd22fd2506760cad8db3016b09b470af0f",
-        "tx": "0x7ba830bcd328723f5ab2ac2e8bf5f71675c515f7505f85d12b585c3dd155c0dc"
-      },
-      {
-        "depositor": "0x4Fa4b87c8De3b43A3160b2D58494F74926405037",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x784ca87415e3cd30cc966308390664c079db9a7fce0097814b2c03b20ef41860",
-        "tx": "0xf94c0881997f454cc9d08c814c2fd31e15cd6f04063b33e2ccf4c6fa409a2042"
-      },
-      {
-        "depositor": "0x02423Ec80142120549D2eBCb4E2Faf32f4874a8a",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xf465197e468b37d4903bebcb3a19b9a45ade8735a8f0fcbd91e350fd296aeee0",
-        "tx": "0xc928ec03cb73bd4c32963357186af7088da9b5be4d68f354df0cd6bcfccf991e"
-      },
-      {
-        "depositor": "0xf93EdBF29876A36b9ca3AbcBa119bc01992A7cF5",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x5382ce30d3556bfeea68ded3a24a494622416e8d877bebf81d682936e9de5944",
-        "tx": "0x5c9b88d71d5d0fbc92a333eb68cbeff89a2b7b1e1edde2aaf2b3e3b4b289bcfa"
-      }
-    ],
-    "screenedTotal": 16
+    "screened": [],
+    "screenedTotal": 0
   },
   "audit": {
     "file": "assessments/audit/2026-11-15-private-barclays-plc.audit.json",
@@ -492,7 +407,7 @@
   "miner": {
     "id": 7314402,
     "slug": "tacitum-adverse-media",
-    "registrationId": 5285,
+    "registrationId": 5307,
     "endpoint": "https://adverse.54-255-109-186.sslip.io/api/adverse",
     "eval": {
       "tuning": {
@@ -652,122 +567,12 @@
         }
       }
     },
-    "paidCalls": 5,
+    "paidCalls": 7,
     "sample": {
       "query": "Binance",
       "result": {
-        "adverse": true,
         "answer": "69 adverse news items naming Binance in the last 12 months from 50 sources, mainly data breach, money laundering, investigation. Latest: Binance Restores Withdrawals Across 87 Networks After $6.3bn Security Breach (Crowdfund Insider, 2026-11-14).",
-        "articles": [
-          {
-            "categories": [
-              "data_breach"
-            ],
-            "published": "2026-11-14",
-            "solicitation": false,
-            "source": "Crowdfund Insider",
-            "title": "Binance Restores Withdrawals Across 87 Networks After $6.3bn Security Breach",
-            "url": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOQnVIa1JYZkg0ZnpqQjJDR04xTE5LOUVrUDdMTHgyXzhiaXdSclZuUFY2dW14blp4ZkZ5QVVnTEtBTW1DTldkWDlmTmd3VUlMSmw4X0hqdkR5R09DNHlscHYtLWJUYzNIZHFFdTZkMnJXYnkwWlNYMEpnZ3lWM0gweWcxTlpnWVdRcEszNGNxcVA4UVQ2SDdrWmZaT2Y3dWtsV0Ywd05TZXJBVHJ3OTh6ek1LN3lseW1UeElSWFFiNHpkZw?oc=5"
-          },
-          {
-            "categories": [
-              "data_breach"
-            ],
-            "published": "2026-11-14",
-            "solicitation": false,
-            "source": "Tekedia",
-            "title": "Binance Targets Full Withdrawal Resumption Next Week After $6.3bn Security Breach",
-            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQemxOa2o5RFB6ZTJVbU1jS3N0cjJqUDlaVzMzTWRnNUdWTHRfSzNjX2M5TU1qSGgzUU9waXpPY0sxdEZXdWJXb3d4NE91YkRVeHVpX1BVTkxmRnRoUFlnNHh2Q1BPV3AxdThpSWhlWW1mZGZxNThaLVp4V01lWV92MkdfenNRaWM0X0tHT19jZ1NZaTJDOWk1cURTbnlydmZmbk1INHVjSEs?oc=5"
-          },
-          {
-            "categories": [
-              "regulatory_action"
-            ],
-            "published": "2026-11-14",
-            "solicitation": false,
-            "source": "Laodong.vn",
-            "title": "Technology 24h: Meta fined, Binance is about to resume withdrawals",
-            "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbTQ1cnFMbko0NWNlQTNhYlpOeVdPLU1zbXljak1zMmpDbXA0eXlDZ0lxbDhvd0c3VkNmdmRmMU1HZnRzazRReWNmd3ZOUUl2MFZFMkFtZllrMHBELUIyVmhDTGZsXzVPc21GQUQ0S3U1Y3NxMTdjekZhYlVOTzJJS1F2bkVwNmdJMVUtTHR1NDNOMldpYzZveDNjUEVjaTMzaF9aQVNQTHdyN1o0dFNIbDdKSQ?oc=5"
-          },
-          {
-            "categories": [
-              "data_breach"
-            ],
-            "published": "2026-11-14",
-            "solicitation": false,
-            "source": "Bitcoin News",
-            "title": "Binance Reopens 87 Networks Following Historic $6.3 Billion Breach",
-            "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOT2x6V1pTbGZNdmEyYzhkeUlqQ2FRYkNZQVRUcTdCc0ZqTjlxZzRWdXQ2dE1oSVhFeXg1dzhqaE9jeEJaeFVhZHBPTnZVZDViTnRFX2xDLUE2NjIwdWxKTDdmNVk2UUNQemU0dVNYVlU2VXFLeXI5Z1FkX01ibkp2dlViVFR5OHZuQlRwTmxxYjIybkgwRGdGdzlCMmVHODQyb2c?oc=5"
-          },
-          {
-            "categories": [
-              "data_breach"
-            ],
-            "published": "2026-11-14",
-            "solicitation": false,
-            "source": "PhilNews",
-            "title": "Binance Announces Completion of $6.34-Billion Reimbursement After Major Security Breach",
-            "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQODFsRlBmaUpjYnNlNDRQa1ZPYndNWTVIaEhScWllQmFpV3JnNG9qeVNEMWZScVIwUTJyUHllSFdnT3J5UXh6dkpOcVNYdG5DOXVMYUdhSnBSVzBjS3JwRlpscVdQT3JtdVdEaHM5MWNYd0pvVDh2VWtvcENSeHJ3bTF0aGE0eTdRS2E2Mkdsb19qOXJCTk9oZGN6VGJkZnh2YU1qcnJiSHJ6Z3F1TlRGaHY1TnFJbW5ubnc?oc=5"
-          },
-          {
-            "categories": [
-              "data_breach"
-            ],
-            "published": "2026-11-13",
-            "solicitation": false,
-            "source": "Dark Reading",
-            "title": "Binance Breach Highlights Control Weaknesses at Crypto Orgs",
-            "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORHNmV2pXZXB5alo2TGlqbnlrb0RFbnhjT0VONjE4UlpGYmR3VDYzd1l5am51V1hPdDlicFBNaWwxWGRMX3lZS3BMdW5fbnFtLUx1RVdfZm1BSEtrVnVkVkpZMGlKYWY2b21lN3JOVlFUMzBUYXlYOHhVOTU3ODlYYWE0di1WY2JDVUE2RlRaTFJnckZqQkZ1a19KV3lrYmU0X3BQTHpZNW83YjFCU3pLb0F3?oc=5"
-          },
-          {
-            "categories": [
-              "data_breach"
-            ],
-            "published": "2026-11-13",
-            "solicitation": false,
-            "source": "Yahoo Finance",
-            "title": "3 Cybersecurity Stocks Investors Are Watching After The Binance Breach",
-            "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQbHk1WjFHbF9EMTBreXdTS0hPb0t1V3VSakRmSkhJSEkzcXNmWW1FRFl3cndZS0N5ckFFQWwxUFlhS3UzZ2tac1d0VWt3MWc2Y0pySDVWbzQ3ODhHNWR6SjFkajlQS3FTRGVINWxEaUtfUWt6VmdPSHNJNGdMY3FvTEs0aFNqeUMxbS16NGlvQk9YMFBZMGZpbnBQdEM1QmhSNGZNajVQQmw?oc=5"
-          },
-          {
-            "categories": [
-              "data_breach"
-            ],
-            "published": "2026-11-13",
-            "solicitation": false,
-            "source": "TNGlobal",
-            "title": "Binance completes coverage of $6.34B in losses from security breach",
-            "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSHQySVlyQnk0RWtXWVdyLXJQbTg0cU1DeVIzcUZ1NkhtRHktb3F5WEx5c2JNYnBWTzB1dVdMb3g1OW5Ec3ByZGN2ODVKZ2tfV1poNHBSWEQzTUZWYWgtU2MzVFZ0SlM4aFN0MnFrVEFmLVF0cTg5dHFlWTQ4SHgzUkd6VDVSNE1QZm42WE5FQUc2cXFjWktvd0RhNzZuWVhnNm1oeA?oc=5"
-          }
-        ],
-        "brief": "69 adverse items on Binance, risk high",
-        "categories": {
-          "data_breach": 63,
-          "investigation": 2,
-          "litigation": 2,
-          "money_laundering": 4,
-          "regulatory_action": 1
-        },
-        "checked_at": "2026-11-15T13:32:31.921Z",
-        "method": "Entity name plus adverse terms searched over 12 months in GDELT DOC 2.0 and Google News RSS; kept only headlines that name the entity and contain an adverse term; copies de-duplicated across feeds; law-firm solicitations separated.",
-        "provenance": [
-          {
-            "articles": 0,
-            "note": "TimeoutError",
-            "ok": false,
-            "provider": "gdelt"
-          },
-          {
-            "articles": 90,
-            "ok": true,
-            "provider": "google_news_rss"
-          }
-        ],
-        "query": "Binance",
         "result_count": 69,
-        "risk": "high",
-        "scanned": 90,
-        "solicitations": 0,
         "sources": [
           "Crowdfund Insider",
           "Tekedia",
@@ -782,7 +587,7 @@
           "Bitdefender",
           "NeoTeo"
         ],
-        "window": "last 12 months"
+        "brief": "69 adverse items on Binance, risk high"
       },
       "signal": "0x229a9088ae79b7edb62049af41f55fbc83f07f5fc34a32481391661b6ff51ee9"
     }
