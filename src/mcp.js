@@ -26,7 +26,8 @@ const relayerKey = process.env.TACITUM_RELAYER_KEY;
 const pool = /^0x[0-9a-fA-F]{64}$/.test(relayerKey || "") ? { relayer: privateKeyToAccount(relayerKey) } : null;
 // stdout carries the MCP protocol, so progress goes to stderr.
 const log = (m) => console.error(`tacitum: ${m}`);
-const t = tacitum({ funder: privateKeyToAccount(key), pool, log });
+const caps = { maxPerPaymentUsd: Number(process.env.TACITUM_MAX_PAYMENT_USD || 0.1), maxTotalUsd: Number(process.env.TACITUM_MAX_TOTAL_USD || 2) };
+const t = tacitum({ funder: privateKeyToAccount(key), pool, log, ...caps });
 const text = (s) => ({ content: [{ type: "text", text: s }] });
 
 // Every agent purchase leaves the same trail as a desk run: memo, full record, sealed audit record.
@@ -63,7 +64,7 @@ server.registerTool(
     },
   },
   async ({ name, jurisdiction, k }) => {
-    const { memo, record } = await tacitum({ funder: privateKeyToAccount(key), k, pool, log }).assess({ name, jurisdiction });
+    const { memo, record } = await tacitum({ funder: privateKeyToAccount(key), k, pool, log, ...caps }).assess({ name, jurisdiction });
     const kept = await keep(record, memo);
     return text(kept.memo);
   },

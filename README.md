@@ -1,5 +1,7 @@
 # Tacitum
 
+[![tests](https://github.com/tomcode1000/tacitum/actions/workflows/test.yml/badge.svg)](https://github.com/tomcode1000/tacitum/actions/workflows/test.yml)
+
 **The private, compliant buying layer for [Telegraph](https://telegraphprotocol.com). Screen anyone. Tell no one. Prove everything.**
 
 Tacitum is the dark pool for due diligence. Agents and desks buy counterparty checks hidden among decoys, paid from a sanctions-screened pool, with every answer receipted on Telegraph and a sealed record that only the auditor's key can open.
@@ -14,7 +16,9 @@ Telegraph Hackathon Season II, two entries:
 | **Clean by construction** | Every pool depositor is sanctions-screened through Telegraph before their money can be spent; the receipt is on chain with the approval |
 | **Provable to anyone** | Every answer keeps its Telegraph receipt; 6 of 6 verified in the live run |
 | **Open to the auditor** | Each assessment is sealed to an auditor key; the auditor re-checks all 27 claims of the live run against public data |
-| **Tested** | 21 automated tests: circuit, Merkle tree, audit envelope, headline classifier, and the pool contract on a local chain (deposits, screening, reclaim, withdraw, double spend, bound recipients) |
+| **Tested** | 24 automated tests, run in CI on every push: circuit, Merkle tree, audit envelope, spend caps, headline classifier, and the pool contract on a local chain (deposits, screening, reclaim, withdraw, double spend, bound recipients) |
+
+**Judges:** [EVIDENCE.md](EVIDENCE.md) is a two-minute path with a verify link for every claim. [THREAT-MODEL.md](THREAT-MODEL.md) covers who can learn what, and the mainnet checklist.
 
 ![Tacitum: screen counterparties on Telegraph without telling the market](docs/screenshots/product-hero.png)
 
@@ -99,6 +103,10 @@ const { answer } = await t.ask("SANCTIONS_SCREENING_MATCH_GENERAL", { name: "Acm
 });
 ```
 
+Spend caps are on by default: at most $0.10 per miner payment and $2.00 per `tacitum()` instance. Pass `maxPerPaymentUsd` / `maxTotalUsd` to change them. A call that would pass the cap throws before any money moves.
+
+Pool mode: pass `pool: { relayer }` (a separate wallet with Sepolia ETH) and each one-time payer is funded by a zero-knowledge withdraw from the screened pool instead of by the funder. `t.deposit()` adds the funder's deposit; `t.poolStatus()` shows the approved set.
+
 A private call takes at least two minutes: the node only sees a new escrow deposit after a delay, and a payer it has seen empty is refused until the epoch closes, so Tacitum waits before the first paid call.
 
 State (caches, cover sets, one-time keys) goes to `./.tacitum`, or `TACITUM_HOME` / `TACITUM_KEYS`. Keep the keys: they are what lets you open the record for an auditor.
@@ -109,12 +117,13 @@ State (caches, cover sets, one-time keys) goes to `./.tacitum`, or `TACITUM_HOME
 claude mcp add tacitum -e TACITUM_FUNDER_KEY=0x... -- npx -y github:tomcode1000/tacitum
 ```
 
-Tools: `private_assess` (name, jurisdiction, k) returns the memo; `private_ask` (intent, params, decoys, minerId) returns only the real answer.
+Tools: `private_assess` (name, jurisdiction, k) returns the memo; `private_ask` (intent, params, decoys, minerId) returns only the real answer; `pool_deposit` and `pool_status` manage the screened pool. Set `TACITUM_RELAYER_KEY` to fund payers from the pool, `AUDITOR_PUBKEY` to seal every record for an auditor, and `TACITUM_MAX_PAYMENT_USD` / `TACITUM_MAX_TOTAL_USD` to change the spend caps.
 
 ### What it hides, and what it does not
 
 - Hidden: which counterparty you cared about (one of k, measured against attackers in `data/privacy-results.json`), and the link between this question and your other questions (a new wallet each time).
-- Not hidden yet: the funding deposit is on chain, so the one-time wallet can be traced to the funder. The screened pool will remove that.
+- Without pool mode, the funding deposit is on chain, so the one-time wallet can be traced to the funder. Pool mode removes that link: the payer is funded by a zero-knowledge withdraw, and the funder is one screened depositor among the approved set.
+- The full picture (screener, relayer, auditor, node operator, timing) is in [THREAT-MODEL.md](THREAT-MODEL.md).
 - Decoys you pass to `ask()` are only as good as they are plausible. A famous name among made-up ones hides nothing.
 
 ## Run (this repo)

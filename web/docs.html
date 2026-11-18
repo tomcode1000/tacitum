@@ -28,7 +28,7 @@
         <span class="grp">Build</span>
         <a href="#miner">Adverse-media miner</a><a href="#contracts">Contracts and circuit</a><a href="#experiment">Privacy experiment</a><a href="#web">Web demo</a>
         <span class="grp">Reference</span>
-        <a href="#commands">Commands</a><a href="#evidence">Evidence files</a><a href="#troubleshooting">Troubleshooting</a>
+        <a href="#commands">Commands</a><a href="#judges">For judges</a><a href="#evidence">Evidence files</a><a href="#threats">Threat model</a><a href="#troubleshooting">Troubleshooting</a>
       </nav>
 
       <article class="prose">
@@ -168,6 +168,14 @@ npm run web          <span class="c-com"># serves web/ on http://localhost:8080 
           <tr><td><code>npm test</code></td><td>Free</td><td>Circuit and tree tests</td></tr>
           <tr><td><code>node scripts/rerender-memo.mjs &lt;file&gt;</code></td><td>Free</td><td>Re-verify receipts and rewrite a memo</td></tr>
         </tbody></table>
+
+        <h2 id="judges">For judges</h2>
+        <p>Two minutes, five claims, each with a link you can check without trusting us: <a href="https://github.com/tomcode1000/tacitum/blob/main/EVIDENCE.md" target="_blank" rel="noopener">EVIDENCE.md</a>. Every answer is a paid Telegraph answer with a receipt. The desk never touches the purchase. Every depositor is screened first. The market cannot tell who was screened (best attacker 0.31 against a chance of 0.25). The auditor can re-check everything (27/27 and 30/30). The same page lists what is not proven yet.</p>
+        <p>Tests: <code>npm test</code> runs 24 tests, the same suite as <a href="https://github.com/tomcode1000/tacitum/actions/workflows/test.yml" target="_blank" rel="noopener">CI</a>.</p>
+
+        <h2 id="threats">Threat model and spend caps</h2>
+        <p>Who can learn what (market, node operator, miners, screener, relayer, auditor), what each could break, and the mainnet checklist: <a href="https://github.com/tomcode1000/tacitum/blob/main/THREAT-MODEL.md" target="_blank" rel="noopener">THREAT-MODEL.md</a>.</p>
+        <p>Spend caps are on by default: at most $0.10 per miner payment and $2.00 per <code>tacitum()</code> instance. Change them with <code>maxPerPaymentUsd</code> / <code>maxTotalUsd</code>, or in the MCP server with <code>TACITUM_MAX_PAYMENT_USD</code> / <code>TACITUM_MAX_TOTAL_USD</code>. A call over the cap throws before any money moves.</p>
 
         <h2 id="evidence">Evidence files</h2>
         <table class="table"><tbody>

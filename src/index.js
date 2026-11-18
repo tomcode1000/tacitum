@@ -52,14 +52,22 @@ export const POOL = JSON.parse(fs.readFileSync(new URL("../data/pool.json", impo
 // pool: { relayer } funds each one-time payer from the screened pool instead of from the funder.
 // The relayer sends the withdraw transaction, so it must be a wallet with no on-chain link to the
 // funder; using the funder itself would tie the withdraw back to the desk.
-export function tacitum({ funder, k = 4, maxPerPaymentUsd = 0.1, pool = null, log = () => {} } = {}) {
+// Spend caps are on by default: no single miner payment above maxPerPaymentUsd, and no more than
+// maxTotalUsd sent to one-time payers over the life of this instance. Raise them deliberately.
+export function tacitum({ funder, k = 4, maxPerPaymentUsd = 0.1, maxTotalUsd = 2, pool = null, log = () => {} } = {}) {
   if (!funder?.address) throw new Error("tacitum({ funder }) needs a viem account that can pay");
   if (pool && (!pool.relayer?.address || pool.relayer.address.toLowerCase() === funder.address.toLowerCase())) {
     throw new Error("pool mode needs { relayer }: a separate wallet with Sepolia ETH and no link to the funder");
   }
   const maxPerPayment = String(Math.round(maxPerPaymentUsd * 1e6));
+  let committedUsd = 0;
 
   async function freshPayer(fundUsd, label) {
+    const want = pool ? Number(POOL.denominationUsd ?? 1) : fundUsd;
+    if (committedUsd + want > maxTotalUsd + 1e-9) {
+      throw new Error(`spend cap: ${(committedUsd + want).toFixed(2)} USD would pass maxTotalUsd ${maxTotalUsd.toFixed(2)}; raise it explicitly to continue`);
+    }
+    committedUsd += want;
     const payer = pool
       ? await poolPayer(pool.relayer, POOL, label)
       : await oneTimePayer(funder, fundUsd.toFixed(2), label);
