@@ -10,7 +10,7 @@ import fs from "node:fs";
 import { formatUnits, parseUnits } from "viem";
 import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
 import path from "node:path";
-import { USDC, DIAMOND, KEYS, usdcAbi, escrowAbi, publicClient, walletClient, ledger } from "./config.js";
+import { DIAMOND, KEYS, usdcAbi, escrowAbi, publicClient, walletClient, ledger, usdcToken } from "./config.js";
 
 // One-time keys are kept (in TACITUM_KEYS) so the record can be opened for an auditor later.
 
@@ -20,6 +20,7 @@ export async function oneTimePayer(funder, amountUsd, label = "") {
   const account = privateKeyToAccount(key);
 
   const wallet = walletClient(funder);
+  const USDC = await usdcToken(); // the token the Diamond takes today
   const allowance = await publicClient.readContract({ address: USDC, abi: usdcAbi, functionName: "allowance", args: [funder.address, DIAMOND] });
   if (allowance < amount) {
     // Approve a float once instead of per payer: one fewer transaction from the desk each time.

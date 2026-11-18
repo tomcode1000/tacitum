@@ -158,6 +158,7 @@ export async function verifyLocally(proof, publicSignals) {
 export async function deposit(depositor, pool, note) {
   const w = walletClient(depositor);
   const denom = await publicClient.readContract({ address: pool, abi: poolAbi, functionName: "denomination" });
+  const USDC = await publicClient.readContract({ address: pool, abi: poolAbi, functionName: "usdc" }); // the pool's own token
   const allowance = await publicClient.readContract({ address: USDC, abi: usdcAbi, functionName: "allowance", args: [depositor.address, pool] });
   if (allowance < denom) {
     const h = await w.writeContract({ address: USDC, abi: usdcAbi, functionName: "approve", args: [pool, denom * 20n] });
@@ -179,7 +180,15 @@ export async function depositGasless(depositor, relayer, pool, note, validForSec
   // Sign against the token the pool really holds, with its own EIP-712 name and version
   // (Circle's Sepolia USDC is "USDC" v2; the retired test token was "USD Coin" v2).
   const token = await publicClient.readContract({ address: pool, abi: poolAbi, functionName: "usdc" });
-  const [tname, tversion] = await Promise.all(["name", "version"].map((f) => publicClient.readContract({ address: token, abi: usdcAbi, functionName: f })));
+  // EIP-5267 eip712Domain() when the token has it; otherwise name() and version() if present, else "2".
+  // (The Telegraph test USDC has no version() but signs with version "2".)
+  let tname, tversion;
+  try {
+    [, tname, tversion] = await publicClient.readContract({ address: token, abi: parseAbi(["function eip712Domain() view returns (bytes1, string, string, uint256, address, bytes32, uint256[])"]), functionName: "eip712Domain" });
+  } catch {
+    tname = await publicClient.readContract({ address: token, abi: usdcAbi, functionName: "name" });
+    tversion = await publicClient.readContract({ address: token, abi: usdcAbi, functionName: "version" }).catch(() => "2");
+  }
   const domain = { name: tname, version: tversion, chainId: 11155111, verifyingContract: token };
   const signature = await depositor.signTypedData({
     domain,

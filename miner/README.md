@@ -6,7 +6,8 @@ Telegraph Hackathon Season II, **Track 02 (Miners / Providers)**. Built alongsid
 
 | | |
 |---|---|
-| Miner | `tacitum-adverse-media`, id **7314402**, registration 5307 on Telegraph's 17 Nov 2026 Diamond (Sepolia, Circle USDC) |
+| Miner | `tacitum-adverse-media`, id **7314402**, registration 5307 on Telegraph's 17 Nov 2026 Diamond (Sepolia) |
+| Listing | **Active on Anjoman**: https://anjoman.ai/dashboard/explore/miners/tacitum-adverse-media |
 | Intent | `NEWS_SEARCH_GENERAL` (input `query`; answer, result_count, sources, brief) |
 | Price | $0.01 per answer |
 | Endpoint | `https://adverse.54-255-109-186.sslip.io/api/adverse?query=<company or person>` |

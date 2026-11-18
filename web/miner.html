@@ -16,7 +16,8 @@
       <div>
         <p class="crumbs"><a href="index.html">Tacitum</a> / Adverse media</p>
         <h1 style="margin-top:22px;max-width:16ch">Adverse media, <span class="accent">sold on Telegraph.</span></h1>
-        <p class="lede">Telegraph had no miner for adverse-media screening, so we built one. It returns headlines from the last twelve months that name the company and report something adverse, each with its source and date. It is registered on Telegraph, and every Tacitum assessment buys from it.</p>
+        <p class="lede">Telegraph had no miner for adverse-media screening, so we built one. It returns headlines from the last twelve months that name the company and report something adverse, each with its source and date. It is registered on Telegraph, listed and active on Anjoman, and every Tacitum assessment buys from it.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><a class="btn light" href="https://anjoman.ai/dashboard/explore/miners/tacitum-adverse-media" target="_blank" rel="noopener">View on Anjoman <i data-i="arrow"></i></a><a class="btn ghost" href="#run">Run it</a></div>
       </div>
     </div>
   </section>
@@ -98,6 +99,7 @@ T.data.then((d) => {
   document.getElementById("note").innerHTML = `Searches on this page call the miner's API directly and are free. Through Telegraph each answer costs $0.01 and comes with a public receipt.`;
   document.getElementById("reg").innerHTML = `<table class="table"><tbody>
     <tr><td style="width:240px" class="muted">Miner</td><td><span class="mono">${T.esc(m.slug)}</span> · id ${m.id}</td></tr>
+    <tr><td class="muted">Listing</td><td><a href="${m.listing}" target="_blank" rel="noopener">Active on Anjoman</a> (Telegraph's provider directory)</td></tr>
     <tr><td class="muted">Registration</td><td>${m.registrationId} on the Telegraph H2 contract (Sepolia)</td></tr>
     <tr><td class="muted">Intent</td><td><span class="mono">NEWS_SEARCH_GENERAL</span> · input <span class="mono">query</span> · answer, result count, sources, brief</td></tr>
     <tr><td class="muted">Price</td><td>$0.01 per answer</td></tr>

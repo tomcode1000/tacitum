@@ -1,0 +1,1 @@
+{"note":"Pool v3 was deployed against Circle Sepolia USDC while Telegraph briefly used it on 17 Nov 2026. Telegraph switched back to the test USDC the same day, so v3 cannot fund escrow; its 8 USDC of seeded deposits stay locked. Superseded by v4."}

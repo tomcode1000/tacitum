@@ -115,6 +115,8 @@ const data = {
     id: miner.id,
     slug: miner.slug,
     registrationId: miner.registrationId,
+    listing: "https://anjoman.ai/dashboard/explore/miners/tacitum-adverse-media",
+    usage: (() => { const f = fs.readdirSync("evidence").filter((x) => /^miner-usage-.*\.json$/.test(x)).sort().pop(); if (!f) return null; const u = read(`evidence/${f}`); return { file: `evidence/${f}`, total: u.total, ours: u.ours, others: u.others, since: u.since }; })(),
     endpoint: "https://adverse.54-255-109-186.sslip.io/api/adverse",
     eval: (() => {
       if (!fs.existsSync("miner/eval/results.json")) return null;

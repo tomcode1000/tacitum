@@ -1,11 +1,12 @@
 // Usage: node scripts/escrow-deposit.mjs 3   (deposits 3 test USDC into the payer's Telegraph escrow)
 import { formatUnits, parseUnits } from "viem";
-import { USDC, DIAMOND, usdcAbi, escrowAbi, publicClient, loadAccount, walletClient } from "./config.mjs";
+import { DIAMOND, usdcAbi, escrowAbi, publicClient, loadAccount, walletClient, usdcToken } from "./config.mjs";
 
 const amount = parseUnits(process.argv[2] || "3", 6);
 const account = loadAccount();
 const wallet = walletClient(account);
 
+const USDC = await usdcToken();
 const approve = await wallet.writeContract({ address: USDC, abi: usdcAbi, functionName: "approve", args: [DIAMOND, amount] });
 await publicClient.waitForTransactionReceipt({ hash: approve });
 const deposit = await wallet.writeContract({ address: DIAMOND, abi: escrowAbi, functionName: "depositUSDC", args: [amount] });

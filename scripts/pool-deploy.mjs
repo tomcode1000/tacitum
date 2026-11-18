@@ -5,7 +5,7 @@ import fs from "node:fs";
 import solc from "solc";
 import { poseidonContract } from "circomlibjs";
 import { parseUnits } from "viem";
-import { USDC, DIAMOND, publicClient, walletClient, loadAccount } from "./config.mjs";
+import { DIAMOND, publicClient, walletClient, loadAccount, usdcToken } from "./config.mjs";
 
 const denomUsd = process.argv[2] || "1";
 const account = loadAccount();
@@ -22,8 +22,18 @@ function compile() {
   return { pool: out.contracts["ScreenedPool.sol"].ScreenedPool, verifier: out.contracts["Verifier.sol"].Groth16Verifier };
 }
 
+// Load-balanced public RPCs estimate gas on a node that may not have seen the contract deployed a
+// moment ago (the pool's constructor calls the new hasher), so a revert or nonce clash is retried.
 async function deploy(label, abi, bytecode, args = []) {
-  const hash = await wallet.deployContract({ abi, bytecode: bytecode.startsWith("0x") ? bytecode : `0x${bytecode}`, args });
+  let hash;
+  for (let i = 0; !hash; i++) {
+    try {
+      hash = await wallet.deployContract({ abi, bytecode: bytecode.startsWith("0x") ? bytecode : `0x${bytecode}`, args });
+    } catch (e) {
+      if (i >= 8 || !/execution reverted|nonce|underpriced/i.test(e.shortMessage + e.message)) throw e;
+      await new Promise((r) => setTimeout(r, 6000));
+    }
+  }
   const r = await publicClient.waitForTransactionReceipt({ hash });
   if (r.status !== "success" || !r.contractAddress) throw new Error(`${label} deploy failed: ${hash}`);
   console.log(`${label.padEnd(9)} ${r.contractAddress}  gas ${r.gasUsed}  tx ${hash}`);
@@ -39,8 +49,10 @@ if (process.argv.includes("--compile-only")) {
 const hasher = await deploy("poseidon", poseidonContract.generateABI(2), poseidonContract.createCode(2));
 const verifier = await deploy("verifier", c.verifier.abi, c.verifier.evm.bytecode.object);
 const denomination = parseUnits(denomUsd, 6);
+const USDC = await usdcToken(); // the token the Diamond takes for escrow deposits
+console.log(`token    ${USDC} (from the Diamond)`);
 const pool = await deploy("pool", c.pool.abi, c.pool.evm.bytecode.object, [USDC, DIAMOND, hasher.address, verifier.address, denomination, account.address]);
 
 const record = { network: "sepolia", pool: pool.address, deployBlock: pool.block, hasher: hasher.address, verifier: verifier.address, usdc: USDC, escrow: DIAMOND, denominationUsd: Number(denomUsd), screener: account.address, txs: { hasher: hasher.tx, verifier: verifier.tx, pool: pool.tx }, deployedAt: new Date().toISOString() };
-fs.writeFileSync("data/pool.json", JSON.stringify({ ...record, version: 3, features: ["screened deposits", "gasless EIP-3009 deposits", "reclaim after 24h"], telegraphDiamond: DIAMOND, note: "Telegraph Diamond of 17 Nov 2026, Circle Sepolia USDC" }, null, 2));
+fs.writeFileSync("data/pool.json", JSON.stringify({ ...record, version: 4, features: ["screened deposits", "gasless EIP-3009 deposits", "reclaim after 24h"], telegraphDiamond: DIAMOND, note: "Telegraph Diamond of 17 Nov 2026; token read from usdcToken() at deploy" }, null, 2));
 console.log("wrote data/pool.json");

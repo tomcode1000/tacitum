@@ -25,12 +25,13 @@ const say = (s) => { console.log(s); log.push(s); };
 
 // 1. Depositors: fresh wallets, 1 test USDC each, minted by the operator (same for every one).
 const denom = await publicClient.readContract({ address: P.pool, abi: poolAbi, functionName: "denomination" });
+const poolToken = await publicClient.readContract({ address: P.pool, abi: poolAbi, functionName: "usdc" });
 const depositors = [];
 for (let i = 0; i < N; i++) {
   const key = generatePrivateKey();
   const account = privateKeyToAccount(key);
-  // Circle USDC cannot be minted: the operator funds each depositor by transfer.
-  const h = await op.writeContract({ address: USDC, abi: usdcAbi, functionName: "transfer", args: [account.address, denom] });
+  // The operator funds each depositor by transfer, in the token the pool holds.
+  const h = await op.writeContract({ address: poolToken, abi: usdcAbi, functionName: "transfer", args: [account.address, denom] });
   await publicClient.waitForTransactionReceipt({ hash: h });
   depositors.push({ key, account, mintTx: h });
 }

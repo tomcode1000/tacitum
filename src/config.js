@@ -6,12 +6,22 @@ import { createPublicClient, createWalletClient, http, parseAbi } from "viem";
 import { sepolia } from "viem/chains";
 
 export const NETWORK = "eip155:11155111";
-// 17 Nov 2026: Telegraph moved to a new Diamond that uses Circle's Sepolia USDC (faucet.circle.com).
-// The old Diamond (0x3624…b99b) and its test USDC (0xcc19…Ae17) are retired; balances did not
-// carry over. Both can be overridden for a rollback or another network.
+// 17 Nov 2026: Telegraph moved to a new Diamond (the old 0x3624…b99b is a rollback only; balances
+// did not carry over). The same day its payment token went to Circle's Sepolia USDC and back to
+// the mintable test USDC. So the token is not trusted from a constant: usdcToken() asks the
+// Diamond, as Telegraph's migration notes recommend. USDC below is only the offline default.
 export const DIAMOND = process.env.TELEGRAPH_DIAMOND || "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b";
-export const USDC = process.env.TELEGRAPH_USDC || "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238";
-export const LEGACY = { diamond: "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b", usdc: "0xcc194e1a843B658526D0D5C431f670028582Ae17" };
+export const USDC = process.env.TELEGRAPH_USDC || "0xcc194e1a843B658526D0D5C431f670028582Ae17";
+export const LEGACY = { diamond: "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b", circleUsdc: "0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238" };
+
+let usdcCache;
+export async function usdcToken() {
+  if (process.env.TELEGRAPH_USDC) return process.env.TELEGRAPH_USDC;
+  usdcCache ??= publicClient
+    .readContract({ address: DIAMOND, abi: parseAbi(["function usdcToken() view returns (address)"]), functionName: "usdcToken" })
+    .catch(() => USDC);
+  return usdcCache;
+}
 export const NODE = process.env.TELEGRAPH_NODE || "https://devnode.telegraphprotocol.com";
 export const RPC = process.env.RPC_URL || "https://ethereum-sepolia-rpc.publicnode.com";
 

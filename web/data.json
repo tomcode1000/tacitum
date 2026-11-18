@@ -1,5 +1,5 @@
 {
-  "builtAt": "2026-11-18T12:57:37.065Z",
+  "builtAt": "2026-11-18T13:31:14.255Z",
   "node": "https://devnode.telegraphprotocol.com",
   "repo": "https://github.com/tomcode1000/tacitum",
   "memo": {
@@ -254,9 +254,9 @@
     "perPartyUsd": 0.052
   },
   "pool": {
-    "address": "0x9c7d7c728e8eacdfea3bd1e3123c45856a1e8ab4",
+    "address": "0xff7b916dee345bcba14a732685e50a9dc82de309",
     "denominationUsd": 0.5,
-    "approvedSet": 16,
+    "approvedSet": 0,
     "screener": {
       "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
       "miner": 731002
@@ -268,88 +268,76 @@
     },
     "screened": [
       {
-        "depositor": "0x495573994f3ab1197180Bb60405E8553DA95a929",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x2dcce6b9633f0b931bd26298fbb13cd3cdf17db0ea50f6c76f74681aa3e551e5",
-        "tx": "0xc312870d620c53bcbed9cf65338b39376f109db833f8c81d89f1b69cfadd26d8"
+        "depositor": "0x6b190E9751f0EbBdBFC0C545F7250A3B46375998",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       },
       {
-        "depositor": "0x9c60603Bc2B00E0C1F4A2Cca1FFaF4Fac9e02556",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x076b8171b5f39c3428f5ae48d2232755e04799ff436ab5cfbf6453a8f7ebadbc",
-        "tx": "0x04a614e78a13a40e69d2f5cf395fbfe0f6f55f8804daad203880d860e8c10374"
+        "depositor": "0xE63681a16A29c4eE862b72f4c1792A3aA445E528",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       },
       {
-        "depositor": "0x14A9c337c7b6e0D194Ca453aCa5F4225d08F7a90",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xa284fe2609237676dcac9e55c43e1ac1e5cdde2ba34db1b9c3da85dde6eadcb4",
-        "tx": "0x1d7b548937fd4dcd3d515073db5ab877311ebba2b46281919e648098b57cc092"
+        "depositor": "0x47B61D3ce76C960E3bA3A97f280eDe38B23018e6",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       },
       {
-        "depositor": "0x29940DffE99B5eeb2aef1957aAE7686221AA2ed6",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x2e1d0836f86da92ed0eb76d0f4c31d44f14834dd363366b299a1de6462985fba",
-        "tx": "0x5f380763ebd540b5dbad1e5ccf1b97bf9afeee701961bf4165953572ebbf7e01"
+        "depositor": "0xE1c96FD8Dec6a8F410b6d0fbb6328A6809C06401",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       },
       {
-        "depositor": "0xD9C6818c82d0E3a141Fd6f8A0d371e085272ED18",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x90403c62b08841185e320806fbf9d91440092d2be8d059f6889b660ef45bd461",
-        "tx": "0x8b74242590f7656d6437e86f0a87bbda5be86adf472264d25271635d86daed4f"
+        "depositor": "0x98614CF5c4033bE09bb520CAbf03B28248Fe5039",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       },
       {
-        "depositor": "0x1F4884583a44f6EBc0F945852Bc99E46f0C210a0",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x9f96f0d8eed825ac3f9dbdbfb9c1bd71ce25ed1681fe4d9a1520b0bd1ded247d",
-        "tx": "0xb5114e5befb520ddd17c0f4e4a7efd2b2807e8aa6100342fc1a7a329444388b4"
+        "depositor": "0x268bDb6607ee1BE146ca6552bF24506bea795D8f",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       },
       {
-        "depositor": "0xAF118063dc472fCBD37e72AB68e0A7D2bb532c00",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x649cd78bee225e07fab8577b76f7ba0696b0af6d8a55bcb35b79b9715d19c5ae",
-        "tx": "0x0d8aee1d17e4c654a11932e864db314eb7d405058fa3afb8a537aae304a09a9b"
+        "depositor": "0xc4cf3Df8b6ad81d84208aD4D564815fDBDbB891e",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       },
       {
-        "depositor": "0x7e461EE144DdE42CFBb6ed9a55D467Dd29CB041A",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x09d8c4745fa3da5e446e08637081653fb4418d973b2ee548820d21326d910dc6",
-        "tx": "0xc97ad49893bbad6e7f867d90884c88a7357f92899fa4e6a7c641b90a786a6c67"
+        "depositor": "0x948B27209EBAF6203a77F045301dDb587680aD07",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       },
       {
-        "depositor": "0x8Deeb2d2Ef9b4F7097654e22c35673E4B75e7Bb8",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x5026a3437ffacd880c5868344e01e37387136067aeb69fc2bd91eb586f017de6",
-        "tx": "0x34104d43d9fbe891cfe6e93d77a5ebd9259e9e5bbfe0c3c7e335effbab3f2acf"
+        "depositor": "0x91E3907D0a493677D68B0758365E0e2dc1DB3F36",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       },
       {
-        "depositor": "0xC4564738f32242A6f594E396fD0Df3f6A088ed0a",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0x7a216f34d3d9111344540e8d542422beccd72a59d0dbcd28b9976fa2cc2add24",
-        "tx": "0x6e0857e5b9457f87761fb1f363def608c1b9489cffccea73cacfa6255e76379f"
+        "depositor": "0xe2E1fB82A05a408ED8C58ccF8Ce913Cad2A6f7Fd",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       },
       {
-        "depositor": "0x55043aA6B2D907931F71Fa8159520aF79E13C137",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xed64464223fdd5e90f75953b6d3ee3063a725a1f8c0e9319f657339ec0efab02",
-        "tx": "0x693d60a4d3245be8434cff79c3c9e509076398d1833a05ff2e3c2b68dd2d481f"
+        "depositor": "0x753a6F4F40559c29D7226e626FC2Cc01af2bF5E0",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       },
       {
-        "depositor": "0x5C43e43Fb22e57Aabf38f9a6Ab0c139c7aa8FD80",
-        "verdict": "approve",
-        "matched": false,
-        "signal": "0xf79e344b8e1ecbb68e0f9ac29965eaba0bd4a85a305ed1a99d3cb8147559a4f0",
-        "tx": "0x2e43945cc51e2052037bcfd3a93c2d2deda0050cfa3d05686ab39eb3469c0cc0"
+        "depositor": "0xb0C294fD7D11971866ddA1Eb8e0f8CA81d26F410",
+        "verdict": "pending",
+        "signal": null,
+        "tx": null
       }
     ],
     "screenedTotal": 16
@@ -493,6 +481,14 @@
     "id": 7314402,
     "slug": "tacitum-adverse-media",
     "registrationId": 5307,
+    "listing": "https://anjoman.ai/dashboard/explore/miners/tacitum-adverse-media",
+    "usage": {
+      "file": "evidence/miner-usage-2026-11-18.json",
+      "total": 1,
+      "ours": 1,
+      "others": 0,
+      "since": "2026-11-17T14:17:52.123Z"
+    },
     "endpoint": "https://adverse.54-255-109-186.sslip.io/api/adverse",
     "eval": {
       "tuning": {
@@ -652,7 +648,7 @@
         }
       }
     },
-    "paidCalls": 7,
+    "paidCalls": 8,
     "sample": {
       "query": "Binance",
       "result": {

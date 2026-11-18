@@ -1,0 +1,20 @@
+{
+  "miner": "tacitum-adverse-media",
+  "registration": 5307,
+  "since": "2026-11-17T14:17:52.123Z",
+  "countedAt": "2026-11-18T13:29:58.913Z",
+  "total": 1,
+  "ours": 1,
+  "others": 0,
+  "unknownPayer": 0,
+  "succeeded": 1,
+  "otherPayers": 0,
+  "requests": [
+    {
+      "at": "2026-11-17T14:26:16.568593Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    }
+  ]
+}

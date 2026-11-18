@@ -12,7 +12,8 @@ if (!/^PRIVATE_KEY=0x[0-9a-fA-F]{64}/m.test(env)) {
   console.log("Created a new testnet payer key in .env (never commit it).");
 }
 
-const { USDC, usdcAbi, publicClient, loadAccount, walletClient } = await import("./config.mjs");
+const { usdcAbi, publicClient, loadAccount, usdcToken } = await import("./config.mjs");
+const USDC = await usdcToken();
 const account = loadAccount();
 
 const eth = await publicClient.getBalance({ address: account.address });
@@ -21,8 +22,8 @@ console.log(`payer   ${account.address}`);
 console.log(`ETH     ${formatEther(eth)}`);
 console.log(`USDC    ${formatUnits(usdc, 6)}`);
 
-// Since Telegraph's 17 Nov Diamond, payments are in Circle's Sepolia USDC, which cannot be minted.
+// The Diamond's token: the test USDC can be minted by anyone (mint(to, amount)); Circle USDC comes from faucet.circle.com.
 if (usdc < parseUnits("0.1", 6)) {
-  console.log(`\nGet USDC from https://faucet.circle.com (USDC, Ethereum Sepolia) for ${account.address}, then rerun.`);
+  console.log(`\nTop up ${USDC} for ${account.address}: mint(address,uint256) on the test token, or faucet.circle.com for Circle USDC.`);
   if (eth === 0n) console.log("It also needs a little Sepolia ETH for gas (~0.01) from any Sepolia faucet.");
 }
