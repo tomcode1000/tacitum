@@ -36,8 +36,13 @@ for (const f of ["data/pool-e2e.json", ...fs.readdirSync("data").filter((f) => /
   const j = read(f);
   for (const s of Array.isArray(j) ? j : j.screening || []) screening.push({ depositor: s.depositor, verdict: s.verdict, matched: s.matched, signal: s.signal, tx: s.tx });
 }
+// The current pool's approvals are read from chain (scripts/pool-approvals.mjs): authoritative, one row per deposit.
+const approvalsFile = "data/screening/pool-v4-approvals.json";
+const onchain = fs.existsSync(approvalsFile) && read(approvalsFile).pool?.toLowerCase() === pool.pool.toLowerCase() ? read(approvalsFile).approvals : null;
 const seen = new Set();
-const screened = screening.filter((s) => s.depositor && !seen.has(s.depositor) && seen.add(s.depositor));
+const screened = onchain
+  ? onchain.map((a) => ({ depositor: a.depositor, verdict: "approve", matched: false, signal: a.signal, tx: a.tx, miner: a.miner }))
+  : screening.filter((s) => s.depositor && !seen.has(s.depositor) && seen.add(s.depositor));
 
 const results = read("data/privacy-results.json");
 const minerSample = read("evidence/miner-paid-call-5.json");
@@ -86,7 +91,7 @@ const data = {
     address: pool.pool,
     denominationUsd: pool.denominationUsd,
     approvedSet: (await approvedLeaves(pool.pool, pool.deployBlock)).length,
-    screener: { intent: "SANCTIONS_SCREENING_MATCH_GENERAL", miner: 731002 },
+    screener: { intent: "SANCTIONS_SCREENING_MATCH_GENERAL", miner: 731002, miners: [731002, 710637, 4433] },
     flaggedExample: { wallet: "0x098B716B8Aaf21512996dC57EB0615e2383E2f96", label: "Ronin bridge exploiter (OFAC SDN)", matched: true },
     screened: screened.slice(-12),
     screenedTotal: screened.length,

@@ -1,10 +1,11 @@
 {
   "pool": "0xff7b916dee345bcba14a732685e50a9dc82de309",
-  "exportedAt": "2026-11-19T17:05:15.045Z",
-  "approved": 16,
+  "exportedAt": "2026-11-19T20:27:36.581Z",
+  "approved": 17,
   "approvals": [
     {
       "leafIndex": 0,
+      "depositor": "0xCa25c626198bfE92158444aE46d4A30766f56550",
       "signal": "0xf242054d800b4eb5b2ecc4bb23d1aacaa292fdc47ca210b9f5763d4c147b0024",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xf242054d800b4eb5b2ecc4bb23d1aacaa292fdc47ca210b9f5763d4c147b0024",
@@ -13,6 +14,7 @@
     },
     {
       "leafIndex": 1,
+      "depositor": "0x5EC9F2e8a1B58C54Bf655019e32951Ff33f5214e",
       "signal": "0x934687143e536e91bd07ed54ea4506068f4989ae12946c4368a23950b438e194",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x934687143e536e91bd07ed54ea4506068f4989ae12946c4368a23950b438e194",
@@ -21,6 +23,7 @@
     },
     {
       "leafIndex": 2,
+      "depositor": "0x5C967a501cf859153F3277FF05d24d07003db750",
       "signal": "0xc2a930936f7969345600c3b256771f6849f9d94db81f5e6d16623c106be23abb",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xc2a930936f7969345600c3b256771f6849f9d94db81f5e6d16623c106be23abb",
@@ -29,6 +32,7 @@
     },
     {
       "leafIndex": 3,
+      "depositor": "0x5de04FE986A2A7163E2C9B94b05D0B75509BfB55",
       "signal": "0xb829120c552c59c50717b9ad07f8c71a16866b292c85dd5a2e462521093a45c1",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xb829120c552c59c50717b9ad07f8c71a16866b292c85dd5a2e462521093a45c1",
@@ -37,6 +41,7 @@
     },
     {
       "leafIndex": 4,
+      "depositor": "0x6b190E9751f0EbBdBFC0C545F7250A3B46375998",
       "signal": "0xc350bfbeb666425a00d1e8587229f4a5aaeba9afcf9b0be023105016e28367eb",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xc350bfbeb666425a00d1e8587229f4a5aaeba9afcf9b0be023105016e28367eb",
@@ -45,6 +50,7 @@
     },
     {
       "leafIndex": 5,
+      "depositor": "0xE63681a16A29c4eE862b72f4c1792A3aA445E528",
       "signal": "0x68f1185869e10ab9dc5309e46d62099f30120c4c596b36932195fe52a661755b",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x68f1185869e10ab9dc5309e46d62099f30120c4c596b36932195fe52a661755b",
@@ -53,6 +59,7 @@
     },
     {
       "leafIndex": 6,
+      "depositor": "0x47B61D3ce76C960E3bA3A97f280eDe38B23018e6",
       "signal": "0xac69923183a9a20d8148105ae8d17820f4ce399ced69afa76bd3c2e989e25d3c",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xac69923183a9a20d8148105ae8d17820f4ce399ced69afa76bd3c2e989e25d3c",
@@ -61,6 +68,7 @@
     },
     {
       "leafIndex": 7,
+      "depositor": "0xE1c96FD8Dec6a8F410b6d0fbb6328A6809C06401",
       "signal": "0x034b28db7ffde03844ef17611d67d4251e56a5c511c830fe89c41a939c4075dd",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x034b28db7ffde03844ef17611d67d4251e56a5c511c830fe89c41a939c4075dd",
@@ -69,6 +77,7 @@
     },
     {
       "leafIndex": 8,
+      "depositor": "0x98614CF5c4033bE09bb520CAbf03B28248Fe5039",
       "signal": "0x8aea9c47dd95be74cfa430f734482279bda45e0f3e2107d1115c51a9541496ef",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x8aea9c47dd95be74cfa430f734482279bda45e0f3e2107d1115c51a9541496ef",
@@ -77,6 +86,7 @@
     },
     {
       "leafIndex": 9,
+      "depositor": "0x268bDb6607ee1BE146ca6552bF24506bea795D8f",
       "signal": "0x3bbdd9f56da9e6edbbc33e2b05299161da7095cbfed92dd894a084f070979b0b",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x3bbdd9f56da9e6edbbc33e2b05299161da7095cbfed92dd894a084f070979b0b",
@@ -85,6 +95,7 @@
     },
     {
       "leafIndex": 10,
+      "depositor": "0xc4cf3Df8b6ad81d84208aD4D564815fDBDbB891e",
       "signal": "0xfb08ba5722fe5b8d9ae252db8584f87b4bcf3d5c15fc8df57fd7697953282373",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xfb08ba5722fe5b8d9ae252db8584f87b4bcf3d5c15fc8df57fd7697953282373",
@@ -93,6 +104,7 @@
     },
     {
       "leafIndex": 11,
+      "depositor": "0x948B27209EBAF6203a77F045301dDb587680aD07",
       "signal": "0xb0da8af469977e35566894f42a10ef035f1d4fedcbfd7556b537a81c0cd21ae2",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xb0da8af469977e35566894f42a10ef035f1d4fedcbfd7556b537a81c0cd21ae2",
@@ -101,6 +113,7 @@
     },
     {
       "leafIndex": 12,
+      "depositor": "0x91E3907D0a493677D68B0758365E0e2dc1DB3F36",
       "signal": "0x6bdd16aaa43b6c4b2a7766082599485313b23a448762802ce1ec4312af262e8b",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x6bdd16aaa43b6c4b2a7766082599485313b23a448762802ce1ec4312af262e8b",
@@ -109,6 +122,7 @@
     },
     {
       "leafIndex": 13,
+      "depositor": "0xe2E1fB82A05a408ED8C58ccF8Ce913Cad2A6f7Fd",
       "signal": "0x6dd0beea4eef6cb0505c8026c482465323d8be0bc8dc65026fb62bb14b10e6bd",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x6dd0beea4eef6cb0505c8026c482465323d8be0bc8dc65026fb62bb14b10e6bd",
@@ -117,6 +131,7 @@
     },
     {
       "leafIndex": 14,
+      "depositor": "0x753a6F4F40559c29D7226e626FC2Cc01af2bF5E0",
       "signal": "0x92af9008b54ce62ee15161b7c63703e70b6ef143a2f93ff7c288c5bf73c0ce34",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x92af9008b54ce62ee15161b7c63703e70b6ef143a2f93ff7c288c5bf73c0ce34",
@@ -125,11 +140,21 @@
     },
     {
       "leafIndex": 15,
+      "depositor": "0xb0C294fD7D11971866ddA1Eb8e0f8CA81d26F410",
       "signal": "0xb9485ae227960c172764129b37eea24c70b5f154ae187f7911ea8ac562197570",
       "miner": "710637 (zk-sanctions)",
       "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xb9485ae227960c172764129b37eea24c70b5f154ae187f7911ea8ac562197570",
       "tx": "0xa3e959eb4360e10fba700100d4ef5b3a5f816c1ac361618df1ca4568746a5e2e",
       "block": 12169645
+    },
+    {
+      "leafIndex": 16,
+      "depositor": "0x11CC017547Bb4A498549f569f2F5Dc733c21ADDA",
+      "signal": "0xf4d6273f2283e80a4c2419c204e8e19acced1158292e226ffbb90ab990fe79e9",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xf4d6273f2283e80a4c2419c204e8e19acced1158292e226ffbb90ab990fe79e9",
+      "tx": "0xd9e3f4a12e40385ea08d289247f1398ff13eed5dbec7854fd1a98c27286fc421",
+      "block": 12169872
     }
   ]
 }

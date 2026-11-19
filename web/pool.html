@@ -60,7 +60,7 @@ T.data.then((d) => {
   const p = d.pool;
   document.getElementById("pool-stats").innerHTML = [
     [p.approvedSet, "Approved deposits", "The set each withdraw hides in."],
-    [p.screenedTotal, "Wallets screened", "Through Telegraph sanctions, miner " + p.screener.miner + "."],
+    [p.screenedTotal, "Wallets screened", (p.screener.miners ? "Through Telegraph sanctions: the first clear, receipted answer from miners " + p.screener.miners.join(", ") + "." : "Through Telegraph sanctions, miner " + p.screener.miner + ".")],
     ["$" + Number(p.denominationUsd).toFixed(2), "Per deposit", "Fixed size, so deposits look alike."],
     ["9,255", "Circuit constraints", "Groth16 withdraw proof, about 1.7 s."],
   ].map(([n, w, s]) => `<div class="stat"><div class="num">${n}</div><div class="what">${w}</div><div class="src">${s}</div></div>`).join("");

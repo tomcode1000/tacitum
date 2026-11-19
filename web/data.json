@@ -1,19 +1,63 @@
 {
-  "builtAt": "2026-11-18T13:31:14.255Z",
+  "builtAt": "2026-11-19T20:27:41.322Z",
   "node": "https://devnode.telegraphprotocol.com",
   "repo": "https://github.com/tomcode1000/tacitum",
   "memo": {
-    "file": "assessments/2026-11-15-private-barclays-plc.json",
+    "file": "assessments/2026-11-19-private-vodafone-group-plc.json",
     "counterparty": {
-      "name": "Barclays PLC",
+      "name": "Vodafone Group PLC",
       "jurisdiction": "GB"
     },
-    "finishedAt": "2026-11-15T13:48:20.417Z",
+    "finishedAt": "2026-11-19T16:54:56.227Z",
     "overall": "FLAG",
     "verified": 6,
     "receipts": 6,
     "costUsd": 0.06,
     "checks": [
+      {
+        "name": "filings",
+        "verdict": "INFO",
+        "answers": [
+          {
+            "miner": "Filing Window",
+            "minerId": 77131,
+            "ok": true,
+            "summary": "65 filings in the last 12 months",
+            "signal": "0x2a017659b670b96fb3342888e657d2dbe5e49a67f1ee854aef705f5407ec7bba",
+            "costUsd": 0.01
+          }
+        ]
+      },
+      {
+        "name": "registry",
+        "verdict": "REVIEW",
+        "answers": [
+          {
+            "miner": "ZK Corporate Registry — Exact Identity and Status",
+            "minerId": 77393,
+            "ok": true,
+            "summary": "? · active = null",
+            "signal": "0x9bc162a8187625712e7ed872704d9a55ae5c5c97f4e1164d233b9f565c6e11d0",
+            "costUsd": 0.01
+          },
+          {
+            "miner": "miner 5186",
+            "minerId": 5186,
+            "ok": false,
+            "summary": "no answer (404, miner_not_found)",
+            "signal": null,
+            "costUsd": 0
+          },
+          {
+            "miner": "DataWire Corporate Registry Lookup",
+            "minerId": 7393,
+            "ok": true,
+            "summary": "? · active = null",
+            "signal": "0x62d1fe63d0295466dadd4a11ce236a2fc63ec5e770b57b3378778b395de6626f",
+            "costUsd": 0.01
+          }
+        ]
+      },
       {
         "name": "news",
         "verdict": "FLAG",
@@ -22,8 +66,8 @@
             "miner": "Tacitum Adverse Media Screen",
             "minerId": 7314402,
             "ok": true,
-            "summary": "21 adverse items on Barclays, risk high",
-            "signal": "0x95611954943fbc324bb13bcf66b8155a0044e0c5e64cee8ee8977762a911e70d",
+            "summary": "22 adverse items on Vodafone, risk high",
+            "signal": "0x3b339b92f58e1be24ae182af256171a5f5dd6653a0aab72c74fdf6f4075d6f91",
             "costUsd": 0.01
           }
         ]
@@ -33,19 +77,19 @@
         "verdict": "CLEAR",
         "answers": [
           {
-            "miner": "Counterproof Sanctions Screener",
+            "miner": "miner 731002",
             "minerId": 731002,
-            "ok": true,
-            "summary": "matched = false",
-            "signal": "0x48e236aa736e13595519fb2332c28185e3bac7704c8c8ef74089b01575067393",
-            "costUsd": 0.01
+            "ok": false,
+            "summary": "no answer (500, miner error 503 [LISTS_LOADING]: Sanctio)",
+            "signal": null,
+            "costUsd": 0
           },
           {
             "miner": "Sanctions Name Evidence",
             "minerId": 710637,
             "ok": true,
-            "summary": "matched = null",
-            "signal": "0x0cf217549156d43c3c4f56f5517dc2de464a2f4c5d8e9da9130961fcd4978b58",
+            "summary": "matched = false",
+            "signal": "0x7ea4e8b00e4185544a35467225ff60fe4849a30bc383394fe9a395be47ba3d45",
             "costUsd": 0.01
           },
           {
@@ -53,129 +97,93 @@
             "minerId": 4433,
             "ok": true,
             "summary": "matched = false",
-            "signal": "0xb1f81e44ba7faf875c43e073748dfb7359d2c2de90cce478f10eace6d051f677",
+            "signal": "0x4a5f2a9c6bb586f8dd4941f8873bc560b323181fb0562dbcf540fe378bd4f16e",
             "costUsd": 0.01
-          }
-        ]
-      },
-      {
-        "name": "filings",
-        "verdict": "INFO",
-        "answers": [
-          {
-            "miner": "Filing Window",
-            "minerId": 77131,
-            "ok": true,
-            "summary": "242 filings in the last 12 months",
-            "signal": "0x91a46a3ffe885358a5c1735b50eb3042f9fb30f5d5a7c4eac5a30819490a0121",
-            "costUsd": 0.01
-          }
-        ]
-      },
-      {
-        "name": "registry",
-        "verdict": "CLEAR",
-        "answers": [
-          {
-            "miner": "ZK Corporate Registry — Exact Identity and Status",
-            "minerId": 77393,
-            "ok": true,
-            "summary": "BARCLAYS PLC · active = true",
-            "signal": "0x2dbbd8ea78f0b171f6af97f80584633a62c67fadc2ec7f655c11ec284ab427e1",
-            "costUsd": 0.01
-          },
-          {
-            "miner": "miner 5185",
-            "minerId": 5185,
-            "ok": false,
-            "summary": "no answer (404, miner_not_found)",
-            "signal": null,
-            "costUsd": 0
           }
         ]
       }
     ]
   },
   "observed": {
-    "payer": "0xa327b26325B6A0de2BC28aFCbcf4ddd2b37Fb992",
-    "funder": "0x615cacc9f7613e435a5c39e3ac55efa16e442f11",
-    "fundingTx": "0x54ba86dbc949f1aea37d0e28c3238148ac77abbfc503c2787cb593c735ffa510",
+    "payer": "0x71DD12eDc521af6D55FD44983514f4c6C8CB213d",
+    "funder": "0xff7b916dee345bcba14a732685e50a9dc82de309",
+    "fundingTx": "0xea3f36cfbb6df838e946ebde1aa2c503f5477581484cc16102a7ea7efab5c7f3",
     "viaPool": true,
-    "anonymitySet": 8,
+    "anonymitySet": 16,
     "parties": [
-      "Barclays PLC",
-      "GSK PLC",
-      "AstraZeneca PLC",
-      "National Grid PLC"
+      "Marks & Spencer PLC",
+      "Persimmon PLC",
+      "Vodafone Group PLC",
+      "Renishaw PLC"
     ],
-    "real": "Barclays PLC",
+    "real": "Vodafone Group PLC",
     "order": [
       {
-        "name": "National Grid PLC",
+        "name": "Marks & Spencer PLC",
         "check": "filings"
       },
       {
-        "name": "Barclays PLC",
-        "check": "news"
+        "name": "Marks & Spencer PLC",
+        "check": "sanctions"
       },
       {
-        "name": "National Grid PLC",
-        "check": "news"
-      },
-      {
-        "name": "AstraZeneca PLC",
+        "name": "Vodafone Group PLC",
         "check": "filings"
       },
       {
-        "name": "GSK PLC",
+        "name": "Marks & Spencer PLC",
         "check": "news"
       },
       {
-        "name": "GSK PLC",
-        "check": "registry"
-      },
-      {
-        "name": "National Grid PLC",
-        "check": "registry"
-      },
-      {
-        "name": "AstraZeneca PLC",
+        "name": "Persimmon PLC",
         "check": "news"
       },
       {
-        "name": "Barclays PLC",
-        "check": "sanctions"
-      },
-      {
-        "name": "National Grid PLC",
-        "check": "sanctions"
-      },
-      {
-        "name": "Barclays PLC",
+        "name": "Persimmon PLC",
         "check": "filings"
       },
       {
-        "name": "AstraZeneca PLC",
-        "check": "sanctions"
-      },
-      {
-        "name": "Barclays PLC",
+        "name": "Renishaw PLC",
         "check": "registry"
       },
       {
-        "name": "AstraZeneca PLC",
+        "name": "Marks & Spencer PLC",
         "check": "registry"
       },
       {
-        "name": "GSK PLC",
+        "name": "Renishaw PLC",
         "check": "filings"
       },
       {
-        "name": "GSK PLC",
+        "name": "Persimmon PLC",
         "check": "sanctions"
+      },
+      {
+        "name": "Renishaw PLC",
+        "check": "sanctions"
+      },
+      {
+        "name": "Vodafone Group PLC",
+        "check": "registry"
+      },
+      {
+        "name": "Vodafone Group PLC",
+        "check": "news"
+      },
+      {
+        "name": "Renishaw PLC",
+        "check": "news"
+      },
+      {
+        "name": "Vodafone Group PLC",
+        "check": "sanctions"
+      },
+      {
+        "name": "Persimmon PLC",
+        "check": "registry"
       }
     ],
-    "bundleCostUsd": 0.21
+    "bundleCostUsd": 0.23
   },
   "privacy": {
     "k": 4,
@@ -251,15 +259,20 @@
       "runs": 32,
       "costUsd": 7.27
     },
-    "perPartyUsd": 0.052
+    "perPartyUsd": 0.058
   },
   "pool": {
     "address": "0xff7b916dee345bcba14a732685e50a9dc82de309",
     "denominationUsd": 0.5,
-    "approvedSet": 0,
+    "approvedSet": 17,
     "screener": {
       "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
-      "miner": 731002
+      "miner": 731002,
+      "miners": [
+        731002,
+        710637,
+        4433
+      ]
     },
     "flaggedExample": {
       "wallet": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
@@ -268,170 +281,202 @@
     },
     "screened": [
       {
-        "depositor": "0x6b190E9751f0EbBdBFC0C545F7250A3B46375998",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
-      },
-      {
         "depositor": "0xE63681a16A29c4eE862b72f4c1792A3aA445E528",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x68f1185869e10ab9dc5309e46d62099f30120c4c596b36932195fe52a661755b",
+        "tx": "0x7e627b7cc40f19cb03e067418a565f99665bbe5c7a04f3efc206e954866d1d06",
+        "miner": "710637 (zk-sanctions)"
       },
       {
         "depositor": "0x47B61D3ce76C960E3bA3A97f280eDe38B23018e6",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xac69923183a9a20d8148105ae8d17820f4ce399ced69afa76bd3c2e989e25d3c",
+        "tx": "0x2004d3fd002b93b6bc42fa09aa8d2b2c89268d965ff3b60ba9f8c5aaf7472a9a",
+        "miner": "710637 (zk-sanctions)"
       },
       {
         "depositor": "0xE1c96FD8Dec6a8F410b6d0fbb6328A6809C06401",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x034b28db7ffde03844ef17611d67d4251e56a5c511c830fe89c41a939c4075dd",
+        "tx": "0xc20c144ca4529149d618f8f6ceceb1b8ada739efa90a8f954ba3086b5ae6b00b",
+        "miner": "710637 (zk-sanctions)"
       },
       {
         "depositor": "0x98614CF5c4033bE09bb520CAbf03B28248Fe5039",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x8aea9c47dd95be74cfa430f734482279bda45e0f3e2107d1115c51a9541496ef",
+        "tx": "0xd50a6dc8db1e901e27d8ab97ee37e2dd4673cf6cb483687c89cbe58bf600c0d5",
+        "miner": "710637 (zk-sanctions)"
       },
       {
         "depositor": "0x268bDb6607ee1BE146ca6552bF24506bea795D8f",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x3bbdd9f56da9e6edbbc33e2b05299161da7095cbfed92dd894a084f070979b0b",
+        "tx": "0xd7c7bc5f9e5763476d240f20b87a757caa7809961a055d48b7aeb5344bda73a9",
+        "miner": "710637 (zk-sanctions)"
       },
       {
         "depositor": "0xc4cf3Df8b6ad81d84208aD4D564815fDBDbB891e",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xfb08ba5722fe5b8d9ae252db8584f87b4bcf3d5c15fc8df57fd7697953282373",
+        "tx": "0x7a713a90d2933165e1dafa21d79f54ba7f0b3d7332b8eeff330b6894f346f261",
+        "miner": "710637 (zk-sanctions)"
       },
       {
         "depositor": "0x948B27209EBAF6203a77F045301dDb587680aD07",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xb0da8af469977e35566894f42a10ef035f1d4fedcbfd7556b537a81c0cd21ae2",
+        "tx": "0x13d5458b8ff0365409b765e5ef0b79d2f6c5359be32f7fc3384ef72366fbdecc",
+        "miner": "710637 (zk-sanctions)"
       },
       {
         "depositor": "0x91E3907D0a493677D68B0758365E0e2dc1DB3F36",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x6bdd16aaa43b6c4b2a7766082599485313b23a448762802ce1ec4312af262e8b",
+        "tx": "0xe861c65b3634bc47a5cd3c89cbc416ed235efc70a7ee79261d8d23a8a1c96042",
+        "miner": "710637 (zk-sanctions)"
       },
       {
         "depositor": "0xe2E1fB82A05a408ED8C58ccF8Ce913Cad2A6f7Fd",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x6dd0beea4eef6cb0505c8026c482465323d8be0bc8dc65026fb62bb14b10e6bd",
+        "tx": "0x63ebc50bc0ceaa9b3980548cbf3574169c283b9b4b2d9db255487b313109887e",
+        "miner": "710637 (zk-sanctions)"
       },
       {
         "depositor": "0x753a6F4F40559c29D7226e626FC2Cc01af2bF5E0",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0x92af9008b54ce62ee15161b7c63703e70b6ef143a2f93ff7c288c5bf73c0ce34",
+        "tx": "0x47687fb062f67ec7f93ce62594a3b2c504215842d93702847601cc390e372739",
+        "miner": "710637 (zk-sanctions)"
       },
       {
         "depositor": "0xb0C294fD7D11971866ddA1Eb8e0f8CA81d26F410",
-        "verdict": "pending",
-        "signal": null,
-        "tx": null
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xb9485ae227960c172764129b37eea24c70b5f154ae187f7911ea8ac562197570",
+        "tx": "0xa3e959eb4360e10fba700100d4ef5b3a5f816c1ac361618df1ca4568746a5e2e",
+        "miner": "710637 (zk-sanctions)"
+      },
+      {
+        "depositor": "0x11CC017547Bb4A498549f569f2F5Dc733c21ADDA",
+        "verdict": "approve",
+        "matched": false,
+        "signal": "0xf4d6273f2283e80a4c2419c204e8e19acced1158292e226ffbb90ab990fe79e9",
+        "tx": "0xd9e3f4a12e40385ea08d289247f1398ff13eed5dbec7854fd1a98c27286fc421",
+        "miner": "710637 (zk-sanctions)"
       }
     ],
-    "screenedTotal": 16
+    "screenedTotal": 17
   },
   "audit": {
-    "file": "assessments/audit/2026-11-15-private-barclays-plc.audit.json",
+    "file": "assessments/audit/2026-11-19-private-vodafone-group-plc.audit.json",
     "auditor": "5dbf68a454022585",
-    "sha256": "bdb71c323df5dc171b93100abf2b3255febbcd0be60be44283529d95f8edad6a",
+    "sha256": "52838342e5c3be87a4e7fc7d54a8f860fb9cac49dd6580171f403dd53f2f1ba5",
     "alg": "X25519-HKDF-SHA256-AES-256-GCM",
-    "evidence": "evidence/audit-verify-2026-11-15-barclays.txt",
+    "evidence": "evidence/audit-verify-2026-11-19-vodafone.txt",
     "lines": [
       {
         "pass": true,
-        "what": "REAL  Barclays PLC                 news      receipt 0x9561195494… paid by the payer"
+        "what": "REAL  Vodafone Group PLC           filings   receipt 0x2a017659b6… paid by the payer"
       },
       {
         "pass": true,
-        "what": "REAL  Barclays PLC                 sanctions receipt 0x48e236aa73… paid by the payer"
+        "what": "REAL  Vodafone Group PLC           registry  receipt 0x9bc162a818… paid by the payer"
       },
       {
         "pass": true,
-        "what": "REAL  Barclays PLC                 sanctions receipt 0x0cf2175491… paid by the payer"
+        "what": "REAL  Vodafone Group PLC           registry  receipt 0x62d1fe63d0… paid by the payer"
       },
       {
         "pass": true,
-        "what": "REAL  Barclays PLC                 sanctions receipt 0xb1f81e44ba… paid by the payer"
+        "what": "REAL  Vodafone Group PLC           news      receipt 0x3b339b92f5… paid by the payer"
       },
       {
         "pass": true,
-        "what": "REAL  Barclays PLC                 filings   receipt 0x91a46a3ffe… paid by the payer"
+        "what": "REAL  Vodafone Group PLC           sanctions receipt 0x7ea4e8b00e… paid by the payer"
       },
       {
         "pass": true,
-        "what": "REAL  Barclays PLC                 registry  receipt 0x2dbbd8ea78… paid by the payer"
+        "what": "REAL  Vodafone Group PLC           sanctions receipt 0x4a5f2a9c6b… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy GSK PLC                      news      receipt 0x573a0a6075… paid by the payer"
+        "what": "decoy Marks & Spencer PLC          filings   receipt 0xa74420633e… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy GSK PLC                      registry  receipt 0xa7e85ef121… paid by the payer"
+        "what": "decoy Marks & Spencer PLC          sanctions receipt 0xe3a914c3c4… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy GSK PLC                      filings   receipt 0xc239a4230c… paid by the payer"
+        "what": "decoy Marks & Spencer PLC          sanctions receipt 0xacb0e6b1ba… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy GSK PLC                      sanctions receipt 0xc4c0bbf372… paid by the payer"
+        "what": "decoy Marks & Spencer PLC          news      receipt 0x02bb7f5922… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy GSK PLC                      sanctions receipt 0x5517e0855d… paid by the payer"
+        "what": "decoy Marks & Spencer PLC          registry  receipt 0x6bdcf1b5d1… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy AstraZeneca PLC              filings   receipt 0xf3b5931c85… paid by the payer"
+        "what": "decoy Persimmon PLC                news      receipt 0xe46a9ba716… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy AstraZeneca PLC              news      receipt 0x84ddf93e45… paid by the payer"
+        "what": "decoy Persimmon PLC                filings   receipt 0x0d53507c36… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy AstraZeneca PLC              sanctions receipt 0xc210057e5d… paid by the payer"
+        "what": "decoy Persimmon PLC                sanctions receipt 0xeef26e826e… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy AstraZeneca PLC              sanctions receipt 0x147d80bafb… paid by the payer"
+        "what": "decoy Persimmon PLC                sanctions receipt 0xd864d1258e… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy AstraZeneca PLC              registry  receipt 0x68b4fdb942… paid by the payer"
+        "what": "decoy Persimmon PLC                registry  receipt 0x56ac8878d7… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy National Grid PLC            filings   receipt 0x69750aa80b… paid by the payer"
+        "what": "decoy Persimmon PLC                registry  receipt 0x531fc6f5e5… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy National Grid PLC            news      receipt 0xdce9c249c0… paid by the payer"
+        "what": "decoy Renishaw PLC                 registry  receipt 0x2fef10adcc… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy National Grid PLC            registry  receipt 0xfb8ef76cbb… paid by the payer"
+        "what": "decoy Renishaw PLC                 registry  receipt 0x077d722184… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy National Grid PLC            sanctions receipt 0xb732c41542… paid by the payer"
+        "what": "decoy Renishaw PLC                 filings   receipt 0xf9e8b4d509… paid by the payer"
       },
       {
         "pass": true,
-        "what": "decoy National Grid PLC            sanctions receipt 0x612ce837e4… paid by the payer"
+        "what": "decoy Renishaw PLC                 sanctions receipt 0xe843c8d8fc… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "decoy Renishaw PLC                 sanctions receipt 0xf92093866f… paid by the payer"
+      },
+      {
+        "pass": true,
+        "what": "decoy Renishaw PLC                 news      receipt 0x68eebe27bd… paid by the payer"
       },
       {
         "pass": true,
@@ -439,11 +484,11 @@
       },
       {
         "pass": true,
-        "what": "deposit by the desk's wallet 0xa722D4B8… (tx 0xd3973c5c82…)"
+        "what": "deposit by the desk's wallet 0x753a6F4F… (tx 0xee1b5e153f…)"
       },
       {
         "pass": true,
-        "what": "deposit approved after screening (signal 0xeb88201aa4…)"
+        "what": "deposit approved after screening (signal 0x92af9008b5…)"
       },
       {
         "pass": true,
