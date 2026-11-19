@@ -1,0 +1,37 @@
+Audit record: Vodafone Group PLC (GB) · FLAG · 2026-11-19T16:54:56.227Z
+  desk wallet   0x753a6F4F40559c29D7226e626FC2Cc01af2bF5E0
+  real target   Vodafone Group PLC   decoys: Marks & Spencer PLC, Persimmon PLC, Renishaw PLC
+  payer         0x71DD12eDc521af6D55FD44983514f4c6C8CB213d   cost $0.23
+  funding       screened pool 0xff7b916dee345bcba14a732685e50a9dc82de309, withdraw 0xea3f36cfbb6df838e946ebde1aa2c503f5477581484cc16102a7ea7efab5c7f3
+  verdicts      sanctions CLEAR · registry REVIEW · filings INFO · news FLAG
+  ✓ REAL  Vodafone Group PLC           filings   receipt 0x2a017659b6… paid by the payer
+  ✓ REAL  Vodafone Group PLC           registry  receipt 0x9bc162a818… paid by the payer
+  ✓ REAL  Vodafone Group PLC           registry  receipt 0x62d1fe63d0… paid by the payer
+  ✓ REAL  Vodafone Group PLC           news      receipt 0x3b339b92f5… paid by the payer
+  ✓ REAL  Vodafone Group PLC           sanctions receipt 0x7ea4e8b00e… paid by the payer
+  ✓ REAL  Vodafone Group PLC           sanctions receipt 0x4a5f2a9c6b… paid by the payer
+  ✓ decoy Marks & Spencer PLC          filings   receipt 0xa74420633e… paid by the payer
+  ✓ decoy Marks & Spencer PLC          sanctions receipt 0xe3a914c3c4… paid by the payer
+  ✓ decoy Marks & Spencer PLC          sanctions receipt 0xacb0e6b1ba… paid by the payer
+  ✓ decoy Marks & Spencer PLC          news      receipt 0x02bb7f5922… paid by the payer
+  ✓ decoy Marks & Spencer PLC          registry  receipt 0x6bdcf1b5d1… paid by the payer
+  ✓ decoy Persimmon PLC                news      receipt 0xe46a9ba716… paid by the payer
+  ✓ decoy Persimmon PLC                filings   receipt 0x0d53507c36… paid by the payer
+  ✓ decoy Persimmon PLC                sanctions receipt 0xeef26e826e… paid by the payer
+  ✓ decoy Persimmon PLC                sanctions receipt 0xd864d1258e… paid by the payer
+  ✓ decoy Persimmon PLC                registry  receipt 0x56ac8878d7… paid by the payer
+  ✓ decoy Persimmon PLC                registry  receipt 0x531fc6f5e5… paid by the payer
+  ✓ decoy Renishaw PLC                 registry  receipt 0x2fef10adcc… paid by the payer
+  ✓ decoy Renishaw PLC                 registry  receipt 0x077d722184… paid by the payer
+  ✓ decoy Renishaw PLC                 filings   receipt 0xf9e8b4d509… paid by the payer
+  ✓ decoy Renishaw PLC                 sanctions receipt 0xe843c8d8fc… paid by the payer
+  ✓ decoy Renishaw PLC                 sanctions receipt 0xf92093866f… paid by the payer
+  ✓ decoy Renishaw PLC                 news      receipt 0x68eebe27bd… paid by the payer
+  ✓ note opens to the stated commitment
+  ✓ deposit by the desk's wallet 0x753a6F4F… (tx 0xee1b5e153f…)
+  ✓ deposit approved after screening (signal 0x92af9008b5…)
+  ✓ screening receipt on Telegraph says the depositor is not sanctioned
+  ✓ withdraw spent exactly this note (nullifier hash matches)
+  ✓ withdraw funded the payer that bought every receipt
+
+VERIFIED: every claim in the record checks out against public data (29 checks).

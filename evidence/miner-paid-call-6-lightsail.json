@@ -1,0 +1,17 @@
+{
+  "request": {
+    "miner": 7314402,
+    "intent": "NEWS_SEARCH_GENERAL",
+    "params": {
+      "query": "Volkswagen"
+    }
+  },
+  "host": "https://adverse.54-255-109-186.sslip.io",
+  "status": 404,
+  "response": {
+    "error": "miner_not_found",
+    "message": "miner not found: 7314402"
+  },
+  "payment": null,
+  "receipt": null
+}

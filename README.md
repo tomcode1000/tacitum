@@ -1,6 +1,11 @@
 # Tacitum
 
 [![tests](https://github.com/tomcode1000/tacitum/actions/workflows/test.yml/badge.svg)](https://github.com/tomcode1000/tacitum/actions/workflows/test.yml)
+[![test count](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Ftomcode1000%2Ftacitum%2Fmain%2Fdocs%2Fassets%2Ftest-summary.json&query=%24.label&label=tests&color=brightgreen)](docs/assets/test-summary.json)
+[![CodeQL](https://github.com/tomcode1000/tacitum/actions/workflows/codeql.yml/badge.svg)](https://github.com/tomcode1000/tacitum/actions/workflows/codeql.yml)
+[![live demo](https://img.shields.io/badge/live%20demo-54--255--109--186.sslip.io-c9a227)](https://54-255-109-186.sslip.io)
+[![Telegraph](https://img.shields.io/badge/built%20on-Telegraph-1f2937)](https://telegraphprotocol.com)
+[![miner on Anjoman](https://img.shields.io/badge/miner-active%20on%20Anjoman-1f2937)](https://anjoman.ai/dashboard/explore/miners/tacitum-adverse-media)
 
 **The private, compliant buying layer for [Telegraph](https://telegraphprotocol.com). Screen anyone. Tell no one. Prove everything.**
 
@@ -16,7 +21,7 @@ Telegraph Hackathon Season II, two entries:
 | **Clean by construction** | Every pool depositor is sanctions-screened through Telegraph before their money can be spent; the receipt is on chain with the approval |
 | **Provable to anyone** | Every answer keeps its Telegraph receipt; 6 of 6 verified in the live run |
 | **Open to the auditor** | Each assessment is sealed to an auditor key; the auditor re-checks all 27 claims of the live run against public data |
-| **Tested** | 24 automated tests, run in CI on every push: circuit, Merkle tree, audit envelope, spend caps, headline classifier, and the pool contract on a local chain (deposits, screening, reclaim, withdraw, double spend, bound recipients) |
+| **Tested** | 31 automated tests, run in CI on every push with CodeQL scanning: circuit, Merkle tree, audit envelope, spend caps, screening fallback, watchlist monitor, headline classifier, and the pool contract on a local chain (deposits, screening, reclaim, withdraw, double spend, bound recipients) |
 
 **Judges:** [EVIDENCE.md](EVIDENCE.md) is a two-minute path with a verify link for every claim. [THREAT-MODEL.md](THREAT-MODEL.md) covers who can learn what, and the mainnet checklist.
 
@@ -102,6 +107,13 @@ const { answer } = await t.ask("SANCTIONS_SCREENING_MATCH_GENERAL", { name: "Acm
   decoys: [{ name: "Brindle Supplies Ltd" }, { name: "Corvel Logistics Ltd" }, { name: "Dunmore Metals Ltd" }],
 });
 ```
+
+```js
+// Ongoing monitoring: re-screen a watchlist for adverse media every day, each name among decoys.
+const run = await t.monitor([{ name: "Tesco PLC", jurisdiction: "GB" }, { name: "BP P.L.C.", jurisdiction: "GB" }]);
+```
+
+From this repo: `node scripts/monitor.mjs watchlists/uk-suppliers.json [--pool]` saves the run to `assessments/monitor/` and prints what changed since the last run. Run it from cron or a systemd timer for daily monitoring.
 
 Spend caps are on by default: at most $0.10 per miner payment and $2.00 per `tacitum()` instance. Pass `maxPerPaymentUsd` / `maxTotalUsd` to change them. A call that would pass the cap throws before any money moves.
 

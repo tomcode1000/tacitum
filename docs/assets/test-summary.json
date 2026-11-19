@@ -1,0 +1,10 @@
+{
+  "tests": 31,
+  "passed": 31,
+  "failed": 0,
+  "files": 7,
+  "generatedAt": "2026-11-19T16:56:32.845Z",
+  "node": "v22.19.0",
+  "label": "31 passing",
+  "color": "brightgreen"
+}

@@ -15,6 +15,7 @@ import { oneTimePayer, poolPayer } from "./payers.js";
 import { newNote, saveNote, loadNotes, deposit as poolDeposit, approvedLeaves } from "./pool.js";
 import { renderMemo } from "./memo.js";
 import { assess as openAssess } from "./assess.js";
+import { monitorRun } from "./monitor.js";
 
 export { createClient, publicRecord } from "./telegraph.js";
 export { privateAssess } from "./private.js";
@@ -123,6 +124,15 @@ export function tacitum({ funder, k = 4, maxPerPaymentUsd = 0.1, maxTotalUsd = 2
         else cover.push({ params: job.params, status: res.status, signal: res.data?.signal_hash });
       }
       return { answer, cover, payer: payer.account.address, fundingTx: payer.fundingTx };
+    },
+
+    // Ongoing monitoring: re-screen a watchlist for adverse media through Tacitum's own miner,
+    // every name among k-1 matched decoys, all shuffled into one batch from one fresh payer.
+    async monitor(watchlist, { fundUsd } = {}) {
+      if (!watchlist?.length) throw new Error("monitor() needs a watchlist: [{ name, jurisdiction }]");
+      const payer = await freshPayer(fundUsd ?? 0.01 * watchlist.length * k + 0.02, `monitor ${watchlist.length}`);
+      const run = await monitorRun(payer.client, watchlist, { k, notBefore: payer.fundedAt + FUNDING_SETTLE_MS });
+      return { ...run, payer: payer.account.address, fundingTx: payer.fundingTx, viaPool: Boolean(payer.viaPool) };
     },
 
     // The same assessment with no privacy: what the feed shows today. Useful as a baseline.

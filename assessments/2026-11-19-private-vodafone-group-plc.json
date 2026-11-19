@@ -1,0 +1,1133 @@
+{
+  "real": {
+    "counterparty": {
+      "name": "Vodafone Group PLC",
+      "jurisdiction": "GB"
+    },
+    "startedAt": "2026-11-19T16:45:53.085Z",
+    "finishedAt": "2026-11-19T16:54:56.227Z",
+    "payer": "0x71DD12eDc521af6D55FD44983514f4c6C8CB213d",
+    "overall": "FLAG",
+    "verdicts": {
+      "sanctions": "CLEAR",
+      "registry": "REVIEW",
+      "filings": "INFO",
+      "news": "FLAG"
+    },
+    "costUsd": 0.06,
+    "paidCalls": 6,
+    "checks": {
+      "filings": {
+        "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+        "params": {
+          "entity": "Vodafone Group PLC",
+          "period": "last 12 months"
+        },
+        "answers": [
+          {
+            "minerId": 77131,
+            "miner": "Filing Window",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "entity": null,
+              "filing_count": 65,
+              "filings": null,
+              "urls": null
+            },
+            "costUsd": 0.01,
+            "signal": "0x2a017659b670b96fb3342888e657d2dbe5e49a67f1ee854aef705f5407ec7bba",
+            "receipt": null
+          }
+        ]
+      },
+      "registry": {
+        "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+        "params": {
+          "company": "Vodafone Group PLC",
+          "jurisdiction": "GB"
+        },
+        "answers": [
+          {
+            "minerId": 77393,
+            "miner": "ZK Corporate Registry — Exact Identity and Status",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "active": null,
+              "as_of": "2026-11-19T16:52:00.008Z",
+              "attribution": "GLEIF Global LEI Index: CC0 1.0. Companies House: Crown copyright, Open Government Licence v3.0. Contains data under the Norwegian Licence for Open Government Data (NLOD 2.0) distributed by Brønnøysundregistrene; fields selected and reformatted. French Annuaire des Entreprises: Licence Ouverte 2.0, INSEE/RNE data. SEC EDGAR: US Government public records.",
+              "candidates": [],
+              "confidence": 0,
+              "found": false,
+              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+              "match_count": 0,
+              "observed_at": "2026-11-19T16:52:00.008Z",
+              "query": "Vodafone Group PLC",
+              "reason": "no_exact_match",
+              "search_complete": true,
+              "sources": [
+                {
+                  "observed_at": "2026-11-19T16:52:00.008Z",
+                  "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.legalName%5D=VODAFONE+GROUP+PLC&filter%5Bentity.jurisdiction%5D=GB&page%5Bsize%5D=100"
+                },
+                {
+                  "observed_at": "2026-11-19T16:52:01.844Z",
+                  "url": "https://find-and-update.company-information.service.gov.uk/advanced-search/get-results?companyNameIncludes=Vodafone%20Group%20PLC"
+                }
+              ],
+              "status_active": null,
+              "summary": "No unique exact legal identity was verified in the requested jurisdiction. Supply the full registered legal name or a registry identifier/LEI; candidate names are not a status verdict."
+            },
+            "costUsd": 0.01,
+            "signal": "0x9bc162a8187625712e7ed872704d9a55ae5c5c97f4e1164d233b9f565c6e11d0",
+            "receipt": null
+          },
+          {
+            "minerId": 5186,
+            "ok": false,
+            "status": 404,
+            "result": null,
+            "error": "miner_not_found",
+            "costUsd": 0,
+            "receipt": null
+          },
+          {
+            "minerId": 7393,
+            "miner": "DataWire Corporate Registry Lookup",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "active": null,
+              "as_of": "2026-11-19T16:52:14.964Z",
+              "attribution": "GLEIF Global LEI Index: CC0 1.0. Companies House: Crown copyright, Open Government Licence v3.0. Contains data under the Norwegian Licence for Open Government Data (NLOD 2.0) distributed by Brønnøysundregistrene; fields selected and reformatted. French Annuaire des Entreprises: Licence Ouverte 2.0, INSEE/RNE data. SEC EDGAR: US Government public records.",
+              "candidates": [],
+              "confidence": 0,
+              "found": false,
+              "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+              "match_count": 0,
+              "observed_at": "2026-11-19T16:52:14.964Z",
+              "query": "Vodafone Group PLC",
+              "reason": "no_exact_match",
+              "search_complete": true,
+              "sources": [
+                {
+                  "observed_at": "2026-11-19T16:52:14.964Z",
+                  "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.legalName%5D=VODAFONE+GROUP+PLC&filter%5Bentity.jurisdiction%5D=GB&page%5Bsize%5D=100"
+                },
+                {
+                  "observed_at": "2026-11-19T16:52:16.828Z",
+                  "url": "https://find-and-update.company-information.service.gov.uk/advanced-search/get-results?companyNameIncludes=Vodafone%20Group%20PLC"
+                }
+              ],
+              "status_active": null,
+              "summary": "No unique exact legal identity was verified in the requested jurisdiction. Supply the full registered legal name or a registry identifier/LEI; candidate names are not a status verdict."
+            },
+            "costUsd": 0.01,
+            "signal": "0x62d1fe63d0295466dadd4a11ce236a2fc63ec5e770b57b3378778b395de6626f",
+            "receipt": null
+          }
+        ]
+      },
+      "news": {
+        "intent": "NEWS_SEARCH_GENERAL",
+        "params": {
+          "query": "Vodafone Group PLC"
+        },
+        "answers": [
+          {
+            "minerId": 7314402,
+            "miner": "Tacitum Adverse Media Screen",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "answer": "22 adverse news items naming Vodafone Group PLC in the last 12 months from 19 sources, mainly regulatory action, data breach, misconduct. Latest: Vodafone to unlock Crime + Investigation for all TV customers (Broadband TV News, 2026-11-12).",
+              "result_count": 22,
+              "sources": [
+                "Broadband TV News",
+                "ABC News & Headlines – Australian Broadcasting Corporation",
+                "DataGuidance",
+                "MLex",
+                "TradingView",
+                "Cybersecurity Insiders",
+                "Daily Express",
+                "SCC Online",
+                "The Guardian",
+                "Cybernews",
+                "The Register",
+                "TechNadu"
+              ],
+              "brief": "22 adverse items on Vodafone, risk high"
+            },
+            "costUsd": 0.01,
+            "signal": "0x3b339b92f58e1be24ae182af256171a5f5dd6653a0aab72c74fdf6f4075d6f91",
+            "receipt": null
+          }
+        ]
+      },
+      "sanctions": {
+        "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+        "params": {
+          "name": "Vodafone Group PLC"
+        },
+        "answers": [
+          {
+            "minerId": 731002,
+            "ok": false,
+            "status": 500,
+            "result": null,
+            "error": "miner error 503 [LISTS_LOADING]: Sanctions lists are still loading; retry shortly",
+            "costUsd": 0,
+            "receipt": null
+          },
+          {
+            "minerId": 710637,
+            "miner": "Sanctions Name Evidence",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "name": "Vodafone Group PLC",
+              "matched": false,
+              "matches": null,
+              "lists": [
+                "OFAC SDN",
+                "OFAC Consolidated (non-SDN)",
+                "UK Sanctions List (entities only)",
+                "Canada autonomous sanctions (entities only)",
+                "EU Financial Sanctions (entities only)",
+                "US BIS Entity List (export controls)",
+                "US BIS Military End User List (export controls)",
+                "US BIS Denied Persons List (dated standard export-denial orders)",
+                "UK Sanctions List (ships)",
+                "US BIS Entity List (additional primary-row corroborated records)",
+                "Canada autonomous sanctions (November 5 additional entities)",
+                "Canada autonomous sanctions (corroborated ships)",
+                "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+              ],
+              "match_score": 0
+            },
+            "costUsd": 0.01,
+            "signal": "0x7ea4e8b00e4185544a35467225ff60fe4849a30bc383394fe9a395be47ba3d45",
+            "receipt": null
+          },
+          {
+            "minerId": 4433,
+            "miner": "LiveCert — Sourced Answers for Agents",
+            "ok": true,
+            "status": 200,
+            "result": {
+              "name": null,
+              "matched": false,
+              "matches": null,
+              "lists": null,
+              "match_score": null
+            },
+            "costUsd": 0.01,
+            "signal": "0x4a5f2a9c6bb586f8dd4941f8873bc560b323181fb0562dbcf540fe378bd4f16e",
+            "receipt": null
+          }
+        ]
+      }
+    },
+    "verification": [
+      {
+        "signal": "0x2a017659b670b96fb3342888e657d2dbe5e49a67f1ee854aef705f5407ec7bba",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"Vodafone Group PLC\",\"period\":\"last 12 months\"}"
+      },
+      {
+        "signal": "0x9bc162a8187625712e7ed872704d9a55ae5c5c97f4e1164d233b9f565c6e11d0",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Vodafone Group PLC\",\"jurisdiction\":\"GB\"}"
+      },
+      {
+        "signal": "0x62d1fe63d0295466dadd4a11ce236a2fc63ec5e770b57b3378778b395de6626f",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Vodafone Group PLC\",\"jurisdiction\":\"GB\"}"
+      },
+      {
+        "signal": "0x3b339b92f58e1be24ae182af256171a5f5dd6653a0aab72c74fdf6f4075d6f91",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"Vodafone Group PLC\"}"
+      },
+      {
+        "signal": "0x7ea4e8b00e4185544a35467225ff60fe4849a30bc383394fe9a395be47ba3d45",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Vodafone Group PLC\"}"
+      },
+      {
+        "signal": "0x4a5f2a9c6bb586f8dd4941f8873bc560b323181fb0562dbcf540fe378bd4f16e",
+        "found": true,
+        "payerMatches": true,
+        "txMatches": true,
+        "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Vodafone Group PLC\"}"
+      }
+    ],
+    "privacy": {
+      "k": 4,
+      "parties": [
+        "Marks & Spencer PLC",
+        "Persimmon PLC",
+        "Vodafone Group PLC",
+        "Renishaw PLC"
+      ],
+      "costUsd": 0.23,
+      "funder": "0xff7b916dee345bcba14a732685e50a9dc82de309",
+      "fundedUsd": 0.5,
+      "fundingTx": "0xea3f36cfbb6df838e946ebde1aa2c503f5477581484cc16102a7ea7efab5c7f3",
+      "measured": {
+        "best": "0.31",
+        "ci": [
+          0.18,
+          0.49
+        ],
+        "runs": 32
+      },
+      "viaPool": true,
+      "anonymitySet": 16
+    }
+  },
+  "k": 4,
+  "strategy": "matched",
+  "parties": [
+    "Marks & Spencer PLC",
+    "Persimmon PLC",
+    "Vodafone Group PLC",
+    "Renishaw PLC"
+  ],
+  "targetIndex": 2,
+  "order": [
+    {
+      "name": "Marks & Spencer PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Marks & Spencer PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Marks & Spencer PLC",
+      "check": "news"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "news"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Marks & Spencer PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "filings"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "registry"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "news"
+    },
+    {
+      "name": "Renishaw PLC",
+      "check": "news"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "check": "sanctions"
+    },
+    {
+      "name": "Persimmon PLC",
+      "check": "registry"
+    }
+  ],
+  "costUsd": 0.23,
+  "decoys": [
+    {
+      "counterparty": {
+        "name": "Marks & Spencer PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-19T16:45:53.085Z",
+      "finishedAt": "2026-11-19T16:54:46.512Z",
+      "payer": "0x71DD12eDc521af6D55FD44983514f4c6C8CB213d",
+      "overall": "FLAG",
+      "verdicts": {
+        "sanctions": "CLEAR",
+        "registry": "REVIEW",
+        "filings": "INFO",
+        "news": "FLAG"
+      },
+      "costUsd": 0.05,
+      "paidCalls": 5,
+      "checks": {
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "Marks & Spencer PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": "Marks & Spencer PLC",
+                "filing_count": 2,
+                "filings": [
+                  "Group of companies' accounts — AA; filed 2026-09-23 (MzU0NjA3NDMxM2FkaXF6a2N4); accounts made up to 2026-03-28",
+                  "Confirmation statement — CS01; filed 2026-02-09 (MzUwMzg2MDAxMmFkaXF6a2N4); statement made on 2026-02-09"
+                ],
+                "urls": [
+                  "https://find-and-update.company-information.service.gov.uk/company/00214436/filing-history/MzU0NjA3NDMxM2FkaXF6a2N4/document?format=pdf&download=0",
+                  "https://find-and-update.company-information.service.gov.uk/company/00214436/filing-history/MzUwMzg2MDAxMmFkaXF6a2N4/document?format=pdf&download=0"
+                ]
+              },
+              "costUsd": 0.01,
+              "signal": "0xa74420633ecc233de7297c988a4996c07797fe715613b04aad41824c6c945863",
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "Marks & Spencer PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "ok": false,
+              "status": 500,
+              "result": null,
+              "error": "miner error 503 [LISTS_LOADING]: Sanctions lists are still loading; retry shortly",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "miner": "Sanctions Name Evidence",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "Marks & Spencer PLC",
+                "matched": false,
+                "matches": null,
+                "lists": [
+                  "OFAC SDN",
+                  "OFAC Consolidated (non-SDN)",
+                  "UK Sanctions List (entities only)",
+                  "Canada autonomous sanctions (entities only)",
+                  "EU Financial Sanctions (entities only)",
+                  "US BIS Entity List (export controls)",
+                  "US BIS Military End User List (export controls)",
+                  "US BIS Denied Persons List (dated standard export-denial orders)",
+                  "UK Sanctions List (ships)",
+                  "US BIS Entity List (additional primary-row corroborated records)",
+                  "Canada autonomous sanctions (November 5 additional entities)",
+                  "Canada autonomous sanctions (corroborated ships)",
+                  "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+                ],
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0xe3a914c3c419c2438a49bacfe5cb9eb78650e80ed53c8cb5a85d3900a59e6d74",
+              "receipt": null
+            },
+            {
+              "minerId": 4433,
+              "miner": "LiveCert — Sourced Answers for Agents",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": null,
+                "matched": false,
+                "matches": null,
+                "lists": null,
+                "match_score": null
+              },
+              "costUsd": 0.01,
+              "signal": "0xacb0e6b1ba3f7941474213143ae07ecd7685f9e3a5c4b7c31a49f683e7766bc9",
+              "receipt": null
+            }
+          ]
+        },
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "Marks & Spencer PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7314402,
+              "miner": "Tacitum Adverse Media Screen",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": "1 adverse news items naming Marks & Spencer PLC in the last 12 months from 1 sources, mainly data breach. Latest: Marks & Spencer annual profits hit by cyber attack (ITVX, 2026-05-20).",
+                "result_count": 1,
+                "sources": [
+                  "ITVX"
+                ],
+                "brief": "1 adverse items on Marks & Spencer, risk elevated"
+              },
+              "costUsd": 0.01,
+              "signal": "0x02bb7f59227d0c191af6c038434d12957b8c9ccc4950860303f343b42f00bdba",
+              "receipt": null
+            }
+          ]
+        },
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "Marks & Spencer PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "active": null,
+                "as_of": "2026-11-19T16:50:24.317Z",
+                "attribution": "GLEIF Global LEI Index: CC0 1.0. Companies House: Crown copyright, Open Government Licence v3.0. Contains data under the Norwegian Licence for Open Government Data (NLOD 2.0) distributed by Brønnøysundregistrene; fields selected and reformatted. French Annuaire des Entreprises: Licence Ouverte 2.0, INSEE/RNE data. SEC EDGAR: US Government public records.",
+                "candidates": [
+                  {
+                    "jurisdiction": "GB",
+                    "legal_name": "MARKS AND SPENCER FINANCIAL SERVICES PLC",
+                    "lei": "2138009M124EE2Q9ZK29",
+                    "registration_id": "01772585"
+                  }
+                ],
+                "confidence": 0,
+                "found": false,
+                "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+                "match_count": 1,
+                "observed_at": "2026-11-19T16:50:24.317Z",
+                "query": "Marks & Spencer PLC",
+                "reason": "ambiguous_or_nonexact_name",
+                "search_complete": true,
+                "sources": [
+                  {
+                    "observed_at": "2026-11-19T16:50:24.317Z",
+                    "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.legalName%5D=MARKS+SPENCER+PLC&filter%5Bentity.jurisdiction%5D=GB&page%5Bsize%5D=100"
+                  }
+                ],
+                "status_active": null,
+                "summary": "No unique exact legal identity was verified in the requested jurisdiction. Supply the full registered legal name or a registry identifier/LEI; candidate names are not a status verdict."
+              },
+              "costUsd": 0.01,
+              "signal": "0x6bdcf1b5d11e259b8e407f0ad82c11ab5a66817934f7093c3cf781b7ed7b242f",
+              "receipt": null
+            },
+            {
+              "minerId": 5186,
+              "ok": false,
+              "status": 404,
+              "result": null,
+              "error": "miner_not_found",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 7393,
+              "ok": false,
+              "status": 503,
+              "result": null,
+              "error": "could not route this question now, try again later",
+              "costUsd": 0,
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0xa74420633ecc233de7297c988a4996c07797fe715613b04aad41824c6c945863",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"Marks \\u0026 Spencer PLC\",\"period\":\"last 12 months\"}"
+        },
+        {
+          "signal": "0xe3a914c3c419c2438a49bacfe5cb9eb78650e80ed53c8cb5a85d3900a59e6d74",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Marks \\u0026 Spencer PLC\"}"
+        },
+        {
+          "signal": "0xacb0e6b1ba3f7941474213143ae07ecd7685f9e3a5c4b7c31a49f683e7766bc9",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Marks \\u0026 Spencer PLC\"}"
+        },
+        {
+          "signal": "0x02bb7f59227d0c191af6c038434d12957b8c9ccc4950860303f343b42f00bdba",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"Marks \\u0026 Spencer PLC\"}"
+        },
+        {
+          "signal": "0x6bdcf1b5d11e259b8e407f0ad82c11ab5a66817934f7093c3cf781b7ed7b242f",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Marks \\u0026 Spencer PLC\",\"jurisdiction\":\"GB\"}"
+        }
+      ]
+    },
+    {
+      "counterparty": {
+        "name": "Persimmon PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-19T16:45:53.085Z",
+      "finishedAt": "2026-11-19T16:54:50.812Z",
+      "payer": "0x71DD12eDc521af6D55FD44983514f4c6C8CB213d",
+      "overall": "FLAG",
+      "verdicts": {
+        "sanctions": "CLEAR",
+        "registry": "REVIEW",
+        "filings": "INFO",
+        "news": "FLAG"
+      },
+      "costUsd": 0.06,
+      "paidCalls": 6,
+      "checks": {
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "Persimmon PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7314402,
+              "miner": "Tacitum Adverse Media Screen",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": "1 adverse news items naming Persimmon PLC in the last 12 months from 1 sources, mainly litigation. Latest: Taylor Wimpey and Persimmon among companies facing £4.5bn class action over house prices (Scottish Housing News, 2026-07-03).",
+                "result_count": 1,
+                "sources": [
+                  "Scottish Housing News"
+                ],
+                "brief": "1 adverse items on Persimmon, risk elevated"
+              },
+              "costUsd": 0.01,
+              "signal": "0xe46a9ba71645b2938fbd431b21ca928ae48e63c6100b7218d6cc21f8bad9fb41",
+              "receipt": null
+            }
+          ]
+        },
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "Persimmon PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": null,
+                "filing_count": 17,
+                "filings": null,
+                "urls": null
+              },
+              "costUsd": 0.01,
+              "signal": "0x0d53507c36ef70d7d56f5398867407f0550b6e1afc15c6bf286576e212a582d5",
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "Persimmon PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "ok": false,
+              "status": 500,
+              "result": null,
+              "error": "upstream call failed: circuit opened due to repeated failures",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "miner": "Sanctions Name Evidence",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "Persimmon PLC",
+                "matched": false,
+                "matches": null,
+                "lists": [
+                  "OFAC SDN",
+                  "OFAC Consolidated (non-SDN)",
+                  "UK Sanctions List (entities only)",
+                  "Canada autonomous sanctions (entities only)",
+                  "EU Financial Sanctions (entities only)",
+                  "US BIS Entity List (export controls)",
+                  "US BIS Military End User List (export controls)",
+                  "US BIS Denied Persons List (dated standard export-denial orders)",
+                  "UK Sanctions List (ships)",
+                  "US BIS Entity List (additional primary-row corroborated records)",
+                  "Canada autonomous sanctions (November 5 additional entities)",
+                  "Canada autonomous sanctions (corroborated ships)",
+                  "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+                ],
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0xeef26e826e1a5d57834a43981334f5e34a9eacf4fd6583ccd246c74ecfefe2c3",
+              "receipt": null
+            },
+            {
+              "minerId": 4433,
+              "miner": "LiveCert — Sourced Answers for Agents",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": null,
+                "matched": false,
+                "matches": null,
+                "lists": null,
+                "match_score": null
+              },
+              "costUsd": 0.01,
+              "signal": "0xd864d1258ec62de0cd50b902100738cc3ec653c621bc96be647a81c0461d0729",
+              "receipt": null
+            }
+          ]
+        },
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "Persimmon PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "active": null,
+                "as_of": "2026-11-19T16:53:21.892Z",
+                "attribution": "GLEIF Global LEI Index: CC0 1.0. Companies House: Crown copyright, Open Government Licence v3.0. Contains data under the Norwegian Licence for Open Government Data (NLOD 2.0) distributed by Brønnøysundregistrene; fields selected and reformatted. French Annuaire des Entreprises: Licence Ouverte 2.0, INSEE/RNE data. SEC EDGAR: US Government public records.",
+                "candidates": [
+                  {
+                    "jurisdiction": "GB",
+                    "legal_name": "PERSIMMON PLC - M P FARLEY EXECUTIVE TRUST",
+                    "lei": "213800FBAZQMM54KMQ85",
+                    "registration_id": null
+                  }
+                ],
+                "confidence": 0,
+                "found": false,
+                "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+                "match_count": 1,
+                "observed_at": "2026-11-19T16:53:21.892Z",
+                "query": "Persimmon PLC",
+                "reason": "ambiguous_or_nonexact_name",
+                "search_complete": true,
+                "sources": [
+                  {
+                    "observed_at": "2026-11-19T16:53:21.892Z",
+                    "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.legalName%5D=PERSIMMON+PLC&filter%5Bentity.jurisdiction%5D=GB&page%5Bsize%5D=100"
+                  }
+                ],
+                "status_active": null,
+                "summary": "No unique exact legal identity was verified in the requested jurisdiction. Supply the full registered legal name or a registry identifier/LEI; candidate names are not a status verdict."
+              },
+              "costUsd": 0.01,
+              "signal": "0x56ac8878d7e5515051953b75b7c808f504be38dc505eb91257a5e32aa9ddd736",
+              "receipt": null
+            },
+            {
+              "minerId": 5186,
+              "ok": false,
+              "status": 404,
+              "result": null,
+              "error": "miner_not_found",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 7393,
+              "miner": "DataWire Corporate Registry Lookup",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "legal_name": "PERSIMMON PLC - M P FARLEY EXECUTIVE TRUST",
+                "registration_id": null,
+                "active": null,
+                "jurisdiction": "GB",
+                "registered_address": null,
+                "incorporated": null
+              },
+              "costUsd": 0.01,
+              "signal": "0x531fc6f5e58f0613c68ad150a242c9406a227ae1fc933e38423c0bd35b13ac98",
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0xe46a9ba71645b2938fbd431b21ca928ae48e63c6100b7218d6cc21f8bad9fb41",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"Persimmon PLC\"}"
+        },
+        {
+          "signal": "0x0d53507c36ef70d7d56f5398867407f0550b6e1afc15c6bf286576e212a582d5",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"Persimmon PLC\",\"period\":\"last 12 months\"}"
+        },
+        {
+          "signal": "0xeef26e826e1a5d57834a43981334f5e34a9eacf4fd6583ccd246c74ecfefe2c3",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Persimmon PLC\"}"
+        },
+        {
+          "signal": "0xd864d1258ec62de0cd50b902100738cc3ec653c621bc96be647a81c0461d0729",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Persimmon PLC\"}"
+        },
+        {
+          "signal": "0x56ac8878d7e5515051953b75b7c808f504be38dc505eb91257a5e32aa9ddd736",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Persimmon PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0x531fc6f5e58f0613c68ad150a242c9406a227ae1fc933e38423c0bd35b13ac98",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Persimmon PLC\",\"jurisdiction\":\"GB\"}"
+        }
+      ]
+    },
+    {
+      "counterparty": {
+        "name": "Renishaw PLC",
+        "jurisdiction": "GB"
+      },
+      "startedAt": "2026-11-19T16:45:53.085Z",
+      "finishedAt": "2026-11-19T16:55:00.437Z",
+      "payer": "0x71DD12eDc521af6D55FD44983514f4c6C8CB213d",
+      "overall": "FLAG",
+      "verdicts": {
+        "sanctions": "CLEAR",
+        "registry": "REVIEW",
+        "filings": "INFO",
+        "news": "FLAG"
+      },
+      "costUsd": 0.06,
+      "paidCalls": 6,
+      "checks": {
+        "registry": {
+          "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+          "params": {
+            "company": "Renishaw PLC",
+            "jurisdiction": "GB"
+          },
+          "answers": [
+            {
+              "minerId": 77393,
+              "miner": "ZK Corporate Registry — Exact Identity and Status",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "active": null,
+                "as_of": "2026-11-19T16:50:02.441Z",
+                "attribution": "GLEIF Global LEI Index: CC0 1.0. Companies House: Crown copyright, Open Government Licence v3.0. Contains data under the Norwegian Licence for Open Government Data (NLOD 2.0) distributed by Brønnøysundregistrene; fields selected and reformatted. French Annuaire des Entreprises: Licence Ouverte 2.0, INSEE/RNE data. SEC EDGAR: US Government public records.",
+                "candidates": [],
+                "confidence": 0,
+                "found": false,
+                "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+                "match_count": 0,
+                "observed_at": "2026-11-19T16:50:02.441Z",
+                "query": "Renishaw PLC",
+                "reason": "no_exact_match",
+                "search_complete": true,
+                "sources": [
+                  {
+                    "observed_at": "2026-11-19T16:50:02.441Z",
+                    "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.legalName%5D=RENISHAW+PLC&filter%5Bentity.jurisdiction%5D=GB&page%5Bsize%5D=100"
+                  },
+                  {
+                    "observed_at": "2026-11-19T16:50:04.673Z",
+                    "url": "https://find-and-update.company-information.service.gov.uk/advanced-search/get-results?companyNameIncludes=Renishaw%20PLC"
+                  }
+                ],
+                "status_active": null,
+                "summary": "No unique exact legal identity was verified in the requested jurisdiction. Supply the full registered legal name or a registry identifier/LEI; candidate names are not a status verdict."
+              },
+              "costUsd": 0.01,
+              "signal": "0x2fef10adccc9ca96d63fcdaa4d06f97228b6449ca52155ef0473eeb43364aa42",
+              "receipt": null
+            },
+            {
+              "minerId": 5186,
+              "ok": false,
+              "status": 404,
+              "result": null,
+              "error": "miner_not_found",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 7393,
+              "miner": "DataWire Corporate Registry Lookup",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "active": null,
+                "as_of": "2026-11-19T16:50:16.304Z",
+                "attribution": "GLEIF Global LEI Index: CC0 1.0. Companies House: Crown copyright, Open Government Licence v3.0. Contains data under the Norwegian Licence for Open Government Data (NLOD 2.0) distributed by Brønnøysundregistrene; fields selected and reformatted. French Annuaire des Entreprises: Licence Ouverte 2.0, INSEE/RNE data. SEC EDGAR: US Government public records.",
+                "candidates": [],
+                "confidence": 0,
+                "found": false,
+                "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+                "match_count": 0,
+                "observed_at": "2026-11-19T16:50:16.304Z",
+                "query": "Renishaw PLC",
+                "reason": "no_exact_match",
+                "search_complete": true,
+                "sources": [
+                  {
+                    "observed_at": "2026-11-19T16:50:16.304Z",
+                    "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.legalName%5D=RENISHAW+PLC&filter%5Bentity.jurisdiction%5D=GB&page%5Bsize%5D=100"
+                  },
+                  {
+                    "observed_at": "2026-11-19T16:50:18.069Z",
+                    "url": "https://find-and-update.company-information.service.gov.uk/advanced-search/get-results?companyNameIncludes=Renishaw%20PLC"
+                  }
+                ],
+                "status_active": null,
+                "summary": "No unique exact legal identity was verified in the requested jurisdiction. Supply the full registered legal name or a registry identifier/LEI; candidate names are not a status verdict."
+              },
+              "costUsd": 0.01,
+              "signal": "0x077d722184a1172f44e9cabf521d08c64abecdc050c26f7b5f86769f62f7cac2",
+              "receipt": null
+            }
+          ]
+        },
+        "filings": {
+          "intent": "REGULATORY_FILING_MONITOR_GENERAL",
+          "params": {
+            "entity": "Renishaw PLC",
+            "period": "last 12 months"
+          },
+          "answers": [
+            {
+              "minerId": 77131,
+              "miner": "Filing Window",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "entity": null,
+                "filing_count": 8,
+                "filings": null,
+                "urls": null
+              },
+              "costUsd": 0.01,
+              "signal": "0xf9e8b4d50941c6f1eb7c2993d48380149633d04e59db4f264d785eb99eca487e",
+              "receipt": null
+            }
+          ]
+        },
+        "sanctions": {
+          "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+          "params": {
+            "name": "Renishaw PLC"
+          },
+          "answers": [
+            {
+              "minerId": 731002,
+              "ok": false,
+              "status": 500,
+              "result": null,
+              "error": "upstream call failed: circuit open",
+              "costUsd": 0,
+              "receipt": null
+            },
+            {
+              "minerId": 710637,
+              "miner": "Sanctions Name Evidence",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": "Renishaw PLC",
+                "matched": false,
+                "matches": null,
+                "lists": [
+                  "OFAC SDN",
+                  "OFAC Consolidated (non-SDN)",
+                  "UK Sanctions List (entities only)",
+                  "Canada autonomous sanctions (entities only)",
+                  "EU Financial Sanctions (entities only)",
+                  "US BIS Entity List (export controls)",
+                  "US BIS Military End User List (export controls)",
+                  "US BIS Denied Persons List (dated standard export-denial orders)",
+                  "UK Sanctions List (ships)",
+                  "US BIS Entity List (additional primary-row corroborated records)",
+                  "Canada autonomous sanctions (November 5 additional entities)",
+                  "Canada autonomous sanctions (corroborated ships)",
+                  "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+                ],
+                "match_score": 0
+              },
+              "costUsd": 0.01,
+              "signal": "0xe843c8d8fcc708b2be922f1b61d8fc9a22c26ab7855f00890f37501584dc3106",
+              "receipt": null
+            },
+            {
+              "minerId": 4433,
+              "miner": "LiveCert — Sourced Answers for Agents",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "name": null,
+                "matched": false,
+                "matches": null,
+                "lists": null,
+                "match_score": null
+              },
+              "costUsd": 0.01,
+              "signal": "0xf92093866f40256bbe739f1c70dd805f0994c4f32ddf7d17ef7a4915366741e8",
+              "receipt": null
+            }
+          ]
+        },
+        "news": {
+          "intent": "NEWS_SEARCH_GENERAL",
+          "params": {
+            "query": "Renishaw PLC"
+          },
+          "answers": [
+            {
+              "minerId": 7314402,
+              "miner": "Tacitum Adverse Media Screen",
+              "ok": true,
+              "status": 200,
+              "result": {
+                "answer": "4 adverse news items naming Renishaw PLC in the last 12 months from 3 sources, mainly investigation. Latest: Renishaw introduces RMP400S machine tool probe (Engineering.com, 2026-07-17).",
+                "result_count": 4,
+                "sources": [
+                  "Engineering.com",
+                  "Today's Medical Developments",
+                  "Metrology and Quality News"
+                ],
+                "brief": "4 adverse items on Renishaw, risk elevated"
+              },
+              "costUsd": 0.01,
+              "signal": "0x68eebe27bdf5233c2e06ec2dc3af6a54e79d9a08c08acd607d53e5886a365455",
+              "receipt": null
+            }
+          ]
+        }
+      },
+      "verification": [
+        {
+          "signal": "0x2fef10adccc9ca96d63fcdaa4d06f97228b6449ca52155ef0473eeb43364aa42",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Renishaw PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0x077d722184a1172f44e9cabf521d08c64abecdc050c26f7b5f86769f62f7cac2",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] CORPORATE_REGISTRY_LOOKUP_GENERAL → {\"company\":\"Renishaw PLC\",\"jurisdiction\":\"GB\"}"
+        },
+        {
+          "signal": "0xf9e8b4d50941c6f1eb7c2993d48380149633d04e59db4f264d785eb99eca487e",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] REGULATORY_FILING_MONITOR_GENERAL → {\"entity\":\"Renishaw PLC\",\"period\":\"last 12 months\"}"
+        },
+        {
+          "signal": "0xe843c8d8fcc708b2be922f1b61d8fc9a22c26ab7855f00890f37501584dc3106",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Renishaw PLC\"}"
+        },
+        {
+          "signal": "0xf92093866f40256bbe739f1c70dd805f0994c4f32ddf7d17ef7a4915366741e8",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] SANCTIONS_SCREENING_MATCH_GENERAL → {\"name\":\"Renishaw PLC\"}"
+        },
+        {
+          "signal": "0x68eebe27bdf5233c2e06ec2dc3af6a54e79d9a08c08acd607d53e5886a365455",
+          "found": true,
+          "payerMatches": true,
+          "txMatches": true,
+          "publicQuestion": "[intent] NEWS_SEARCH_GENERAL → {\"query\":\"Renishaw PLC\"}"
+        }
+      ]
+    }
+  ]
+}

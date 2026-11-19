@@ -25,7 +25,7 @@ export async function oneTimePayer(funder, amountUsd, label = "") {
   if (allowance < amount) {
     // Approve a float once instead of per payer: one fewer transaction from the desk each time.
     const hash = await wallet.writeContract({ address: USDC, abi: usdcAbi, functionName: "approve", args: [DIAMOND, parseUnits("5", 6)] });
-    await publicClient.waitForTransactionReceipt({ hash });
+    await publicClient.waitForTransactionReceipt({ hash, timeout: 600_000 });
   }
 
   // Load-balanced public RPCs can simulate against a block from before the approval, which
@@ -39,7 +39,7 @@ export async function oneTimePayer(funder, amountUsd, label = "") {
       await new Promise((r) => setTimeout(r, 4000));
     }
   }
-  const { blockNumber } = await publicClient.waitForTransactionReceipt({ hash: fundingTx });
+  const { blockNumber } = await publicClient.waitForTransactionReceipt({ hash: fundingTx, timeout: 600_000 });
   // On-chain ledger at the funding block (the node's view catches up a little later).
   const [deposited] = await publicClient.readContract({ address: DIAMOND, abi: escrowAbi, functionName: "ledgerAccount", args: [account.address], blockNumber });
   if (deposited < amount) throw new Error(`escrow shows ${formatUnits(deposited, 6)} USDC deposited for ${account.address}, expected ${amountUsd}`);

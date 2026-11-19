@@ -5,12 +5,16 @@
 //   matched === false  -> approve (enters the approved set)
 //   matched === true   -> reject  (refunded, never mixes)
 //   anything else      -> left pending and retried later (no verdict without a clear answer)
+//
+// Miners are tried in order; the first that gives a clear answer with a Telegraph receipt decides.
+// A miner that is down (e.g. 503 LISTS_LOADING) or answers without a receipt is skipped, never
+// counted as clear. The deciding miner is recorded with the verdict.
 import { parseAbiItem } from "viem";
 import { publicClient, logsClient, walletClient } from "./config.js";
 import { createClient } from "./telegraph.js";
 import { poolAbi } from "./pool.js";
 
-export const SCREEN = { intent: "SANCTIONS_SCREENING_MATCH_GENERAL", miner: 731002 };
+export const SCREEN = { intent: "SANCTIONS_SCREENING_MATCH_GENERAL", miner: 731002, miners: [731002, 710637, 4433] };
 
 export async function pendingDeposits(pool, fromBlock) {
   const latest = await logsClient.getBlockNumber();
@@ -26,11 +30,23 @@ export async function pendingDeposits(pool, fromBlock) {
   return out;
 }
 
-export async function screenWallet(client, address) {
-  const res = await client.askMiner(SCREEN.miner, SCREEN.intent, { name: address });
+export async function screenWallet(client, address, miner = SCREEN.miner) {
+  const res = await client.askMiner(miner, SCREEN.intent, { name: address });
   const data = res.data || res;
   const matched = data?.result?.matched;
-  return { matched, score: data?.result?.match_score, signal: data?.signal_hash, receipt: res.receipt || data?.receipt, raw: data };
+  return { miner, matched, score: data?.result?.match_score, signal: data?.signal_hash, receipt: res.receipt || data?.receipt, error: data?.error, raw: data };
+}
+
+export const isClear = (s) => /^0x[0-9a-fA-F]{64}$/.test(s?.signal || "") && typeof s.matched === "boolean";
+
+// ask(miner) -> screenWallet-shaped result. Returns the first clear answer, or the last attempt.
+export async function screenWithFallback(ask, miners = SCREEN.miners) {
+  let last = null;
+  for (const m of miners) {
+    try { last = await ask(m); } catch (e) { last = { miner: m, error: e.shortMessage || e.message }; }
+    if (isClear(last)) return last;
+  }
+  return last;
 }
 
 // screenerAccount must be the pool's screener; it also pays the Telegraph screening calls.
@@ -39,8 +55,8 @@ export async function screenPending(screenerAccount, pool, fromBlock, log = cons
   const w = walletClient(screenerAccount);
   const results = [];
   for (const d of await pendingDeposits(pool, fromBlock)) {
-    const s = await screenWallet(client, d.depositor);
-    const signal = /^0x[0-9a-fA-F]{64}$/.test(s.signal || "") ? s.signal : null;
+    const s = await screenWithFallback((m) => screenWallet(client, d.depositor, m));
+    const signal = isClear(s) ? s.signal : null;
     let verdict = "pending";
     let tx = null;
     if (signal && s.matched === false) verdict = "approve";
@@ -50,8 +66,8 @@ export async function screenPending(screenerAccount, pool, fromBlock, log = cons
       const r = await publicClient.waitForTransactionReceipt({ hash: tx });
       if (r.status !== "success") throw new Error(`${verdict} reverted: ${tx}`);
     }
-    log(`${verdict.padEnd(8)} depositor ${d.depositor}  matched=${s.matched} score=${s.score}  signal ${signal ?? "-"}  ${tx ?? ""}`);
-    results.push({ ...d, verdict, matched: s.matched, score: s.score, signal, tx });
+    log(`${verdict.padEnd(8)} depositor ${d.depositor}  miner=${s.miner} matched=${s.matched} score=${s.score}  signal ${signal ?? "-"}  ${tx ?? ""}`);
+    results.push({ ...d, verdict, miner: s.miner, matched: s.matched, score: s.score, signal, tx, error: signal ? undefined : s.error });
   }
   return results;
 }

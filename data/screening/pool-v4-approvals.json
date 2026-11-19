@@ -1,0 +1,135 @@
+{
+  "pool": "0xff7b916dee345bcba14a732685e50a9dc82de309",
+  "exportedAt": "2026-11-19T17:05:15.045Z",
+  "approved": 16,
+  "approvals": [
+    {
+      "leafIndex": 0,
+      "signal": "0xf242054d800b4eb5b2ecc4bb23d1aacaa292fdc47ca210b9f5763d4c147b0024",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xf242054d800b4eb5b2ecc4bb23d1aacaa292fdc47ca210b9f5763d4c147b0024",
+      "tx": "0x86132a9855d7bccec642d92a4ccb97341c531221c98664148c61706ddbf897df",
+      "block": 12163475
+    },
+    {
+      "leafIndex": 1,
+      "signal": "0x934687143e536e91bd07ed54ea4506068f4989ae12946c4368a23950b438e194",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x934687143e536e91bd07ed54ea4506068f4989ae12946c4368a23950b438e194",
+      "tx": "0x97a5ecbf4c2a2a04c1819b56091a55da8712041e38edb5770d75da221c0a77ba",
+      "block": 12163480
+    },
+    {
+      "leafIndex": 2,
+      "signal": "0xc2a930936f7969345600c3b256771f6849f9d94db81f5e6d16623c106be23abb",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xc2a930936f7969345600c3b256771f6849f9d94db81f5e6d16623c106be23abb",
+      "tx": "0x336af81223b349ede2f4b1971379d6029ff405e78c1955fbcc0270fb0008bdec",
+      "block": 12163482
+    },
+    {
+      "leafIndex": 3,
+      "signal": "0xb829120c552c59c50717b9ad07f8c71a16866b292c85dd5a2e462521093a45c1",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xb829120c552c59c50717b9ad07f8c71a16866b292c85dd5a2e462521093a45c1",
+      "tx": "0xd25abd44532d1d7fa084b14b8b1ac7900a73d5aace7134e9e26cd5b2f03957da",
+      "block": 12163484
+    },
+    {
+      "leafIndex": 4,
+      "signal": "0xc350bfbeb666425a00d1e8587229f4a5aaeba9afcf9b0be023105016e28367eb",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xc350bfbeb666425a00d1e8587229f4a5aaeba9afcf9b0be023105016e28367eb",
+      "tx": "0x4ea1e01d9ac2f973c5d12c47367627cf4624aa9713e4ac8c9f4b7be45d57f464",
+      "block": 12163486
+    },
+    {
+      "leafIndex": 5,
+      "signal": "0x68f1185869e10ab9dc5309e46d62099f30120c4c596b36932195fe52a661755b",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x68f1185869e10ab9dc5309e46d62099f30120c4c596b36932195fe52a661755b",
+      "tx": "0x7e627b7cc40f19cb03e067418a565f99665bbe5c7a04f3efc206e954866d1d06",
+      "block": 12163488
+    },
+    {
+      "leafIndex": 6,
+      "signal": "0xac69923183a9a20d8148105ae8d17820f4ce399ced69afa76bd3c2e989e25d3c",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xac69923183a9a20d8148105ae8d17820f4ce399ced69afa76bd3c2e989e25d3c",
+      "tx": "0x2004d3fd002b93b6bc42fa09aa8d2b2c89268d965ff3b60ba9f8c5aaf7472a9a",
+      "block": 12163490
+    },
+    {
+      "leafIndex": 7,
+      "signal": "0x034b28db7ffde03844ef17611d67d4251e56a5c511c830fe89c41a939c4075dd",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x034b28db7ffde03844ef17611d67d4251e56a5c511c830fe89c41a939c4075dd",
+      "tx": "0xc20c144ca4529149d618f8f6ceceb1b8ada739efa90a8f954ba3086b5ae6b00b",
+      "block": 12163492
+    },
+    {
+      "leafIndex": 8,
+      "signal": "0x8aea9c47dd95be74cfa430f734482279bda45e0f3e2107d1115c51a9541496ef",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x8aea9c47dd95be74cfa430f734482279bda45e0f3e2107d1115c51a9541496ef",
+      "tx": "0xd50a6dc8db1e901e27d8ab97ee37e2dd4673cf6cb483687c89cbe58bf600c0d5",
+      "block": 12163494
+    },
+    {
+      "leafIndex": 9,
+      "signal": "0x3bbdd9f56da9e6edbbc33e2b05299161da7095cbfed92dd894a084f070979b0b",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x3bbdd9f56da9e6edbbc33e2b05299161da7095cbfed92dd894a084f070979b0b",
+      "tx": "0xd7c7bc5f9e5763476d240f20b87a757caa7809961a055d48b7aeb5344bda73a9",
+      "block": 12163497
+    },
+    {
+      "leafIndex": 10,
+      "signal": "0xfb08ba5722fe5b8d9ae252db8584f87b4bcf3d5c15fc8df57fd7697953282373",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xfb08ba5722fe5b8d9ae252db8584f87b4bcf3d5c15fc8df57fd7697953282373",
+      "tx": "0x7a713a90d2933165e1dafa21d79f54ba7f0b3d7332b8eeff330b6894f346f261",
+      "block": 12163500
+    },
+    {
+      "leafIndex": 11,
+      "signal": "0xb0da8af469977e35566894f42a10ef035f1d4fedcbfd7556b537a81c0cd21ae2",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xb0da8af469977e35566894f42a10ef035f1d4fedcbfd7556b537a81c0cd21ae2",
+      "tx": "0x13d5458b8ff0365409b765e5ef0b79d2f6c5359be32f7fc3384ef72366fbdecc",
+      "block": 12163508
+    },
+    {
+      "leafIndex": 12,
+      "signal": "0x6bdd16aaa43b6c4b2a7766082599485313b23a448762802ce1ec4312af262e8b",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x6bdd16aaa43b6c4b2a7766082599485313b23a448762802ce1ec4312af262e8b",
+      "tx": "0xe861c65b3634bc47a5cd3c89cbc416ed235efc70a7ee79261d8d23a8a1c96042",
+      "block": 12163515
+    },
+    {
+      "leafIndex": 13,
+      "signal": "0x6dd0beea4eef6cb0505c8026c482465323d8be0bc8dc65026fb62bb14b10e6bd",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x6dd0beea4eef6cb0505c8026c482465323d8be0bc8dc65026fb62bb14b10e6bd",
+      "tx": "0x63ebc50bc0ceaa9b3980548cbf3574169c283b9b4b2d9db255487b313109887e",
+      "block": 12163518
+    },
+    {
+      "leafIndex": 14,
+      "signal": "0x92af9008b54ce62ee15161b7c63703e70b6ef143a2f93ff7c288c5bf73c0ce34",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x92af9008b54ce62ee15161b7c63703e70b6ef143a2f93ff7c288c5bf73c0ce34",
+      "tx": "0x47687fb062f67ec7f93ce62594a3b2c504215842d93702847601cc390e372739",
+      "block": 12163524
+    },
+    {
+      "leafIndex": 15,
+      "signal": "0xb9485ae227960c172764129b37eea24c70b5f154ae187f7911ea8ac562197570",
+      "miner": "710637 (zk-sanctions)",
+      "verify": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xb9485ae227960c172764129b37eea24c70b5f154ae187f7911ea8ac562197570",
+      "tx": "0xa3e959eb4360e10fba700100d4ef5b3a5f816c1ac361618df1ca4568746a5e2e",
+      "block": 12169645
+    }
+  ]
+}

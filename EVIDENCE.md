@@ -55,7 +55,7 @@ Everything below is on Sepolia testnet against Telegraph's public devnode.
 - The auditor's verifier re-checks every claim against public data. It confirmed 27 of 27 claims for Barclays, and 30 of 30 for the Tesco run that an AI agent made on its own.
 
 **Check it yourself:**
-- Read the verifier output in [evidence/audit-verify-2026-11-15-barclays.txt](evidence/audit-verify-2026-11-15-barclays.txt) and [evidence/audit-verify-2026-11-15-agent-tesco.txt](evidence/audit-verify-2026-11-15-agent-tesco.txt).
+- Read the verifier output in [evidence/audit-verify-2026-11-15-barclays.txt](evidence/audit-verify-2026-11-15-barclays.txt) and [evidence/audit-verify-2026-11-15-agent-tesco.txt](evidence/audit-verify-2026-11-15-agent-tesco.txt). The latest run, Vodafone on 19 Nov 2026 through the current pool (16 approved deposits, screened with miner fallback), verified 29 of 29: [evidence/audit-verify-2026-11-19-vodafone.txt](evidence/audit-verify-2026-11-19-vodafone.txt).
 - The command is `node scripts/audit.mjs open <record> --verify`.
 - The agent's sanitized transcript is in [evidence/agent-run-2026-11-15-tesco-plc.jsonl](evidence/agent-run-2026-11-15-tesco-plc.jsonl).
 
@@ -67,10 +67,12 @@ Everything below is on Sepolia testnet against Telegraph's public devnode.
 
 ## Tests
 
-`npm test` runs 24 tests, the same suite as CI. They cover:
+`npm test` runs 31 tests, the same suite as CI ([summary](docs/assets/test-summary.json)). They cover:
 - the withdraw circuit and Merkle tree
 - the audit envelope
 - the spend caps
+- the screening fallback (a down miner, or an answer without a receipt, never approves a deposit)
+- the watchlist monitor (verdicts, change detection, decoys bought but not reported)
 - the adverse-media classifier
 - the ScreenedPool contract on a local chain: gasless deposits, screener-only approval, refunds, reclaim after 24h, withdraw into escrow, double spend, unknown roots, bound recipients and the fee cap
 

@@ -1,0 +1,12 @@
+[
+  {
+    "depositor": "0xb0C294fD7D11971866ddA1Eb8e0f8CA81d26F410",
+    "tx": "0xa3e959eb4360e10fba700100d4ef5b3a5f816c1ac361618df1ca4568746a5e2e",
+    "verdict": "approve",
+    "miner": 710637,
+    "matched": false,
+    "score": 0,
+    "signal": "0xb9485ae227960c172764129b37eea24c70b5f154ae187f7911ea8ac562197570",
+    "commitment": "462124488716336635243380133510389437801183806189295505731057426544797352806"
+  }
+]

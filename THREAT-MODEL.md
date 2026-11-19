@@ -39,7 +39,7 @@ None of this is done. Tacitum is a testnet build.
 
 **Screening**
 - [ ] A screener behind a multi-sig or threshold key, with a published screening policy and an appeal path.
-- [ ] Two independent sanctions miners must agree before approval (the assessments already use mode "two"), plus a documented answer for when the miners are down. During testnet, Counterproof outages simply left deposits pending, as designed.
+- [ ] Two independent sanctions miners must agree before approval (the assessments already use mode "two"). Today the screener takes the first miner, in a fixed order (731002, 710637, 4433), that gives a clear answer with a receipt. A miner that is down is skipped; a match stops the search, so the screener cannot shop for a clean answer. On 18 Nov 2026, Counterproof (731002) returned 503 LISTS_LOADING for hours, and the fallback kept the pool working.
 - [ ] Re-screen on list updates. Decide whether a later listing can freeze unspent notes, and say so up front.
 
 **Keys and money**
