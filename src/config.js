@@ -36,6 +36,7 @@ export const usdcAbi = parseAbi([
   "function name() view returns (string)",
   "function version() view returns (string)",
   "function transfer(address to, uint256 amount) returns (bool)",
+  "function mint(address to, uint256 amount)",
   "function approve(address spender, uint256 amount) returns (bool)",
   "function allowance(address owner, address spender) view returns (uint256)",
 ]);

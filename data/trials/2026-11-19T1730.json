@@ -1,0 +1,20 @@
+{
+  "startedAt": "2026-11-19T17:30:33.134Z",
+  "pool": "0xff7b916dee345bcba14a732685e50a9dc82de309",
+  "minAgeH": 6,
+  "spend": {
+    "skipped": "no approved, unspent desk note in this pool: deposit first"
+  },
+  "deposit": {
+    "desk": "0x11CC017547Bb4A498549f569f2F5Dc733c21ADDA",
+    "mintTx": "0x20fe9bf5397f5012a27b5211c3f12aedb01e1d4a38b1cc8d2e01349ae7cb1ea1",
+    "depositTx": "0x7e9de3060bf3e495b0e6ba2731883ea59c995e8080da586cb01c7e1b1b59f12c"
+  },
+  "screened": [
+    {
+      "verdict": "approve",
+      "miner": 710637
+    }
+  ],
+  "finishedAt": "2026-11-19T17:32:54.571Z"
+}
