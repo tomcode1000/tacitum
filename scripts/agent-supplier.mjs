@@ -55,7 +55,10 @@ child.stdout.on("data", (d) => sink.write(d));
 child.on("close", async (code) => {
   await new Promise((r) => sink.end(r));
   fs.rmSync(cfgDir, { recursive: true, force: true });
-  const text = sanitize(fs.readFileSync(out, "utf8"));
+  // Local paths (the temp working folder) name the machine's user; replace the home folder in both JSON-escaped and plain form.
+  const home = os.homedir();
+  const escaped = JSON.stringify(home).slice(1, -1);
+  const text = sanitize(fs.readFileSync(out, "utf8")).split(escaped).join("<home>").split(home).join("<home>");
   if (process.env.PRIVATE_KEY && text.includes(process.env.PRIVATE_KEY)) { fs.rmSync(out); throw new Error("a key reached the transcript; deleted it"); }
   const events = text.trim().split("\n").map((l) => { try { return JSON.parse(l); } catch { return null; } }).filter(Boolean);
   const last = events.filter((e) => e.type === "result").pop();

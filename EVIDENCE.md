@@ -59,6 +59,14 @@ Everything below is on Sepolia testnet against Telegraph's public devnode.
 - The command is `node scripts/audit.mjs open <record> --verify`.
 - The agent's sanitized transcript is in [evidence/agent-run-2026-11-15-tesco-plc.jsonl](evidence/agent-run-2026-11-15-tesco-plc.jsonl).
 
+## Supplier payment release, with and without Telegraph
+
+This is the Telegraph team's Siemens example, run by the same agent twice:
+- **With Telegraph:** APPROVE on the clean invoice, HOLD on the mismatch. Every fact comes from 2+ miners with receipts.
+- **Without Telegraph:** REVIEW on the clean invoice, because a sanctions API needed a key and no live TLS check was possible. HOLD on the mismatch.
+
+Run directly, 5 of 5 cases were decided as expected. See [docs/supplier-with-without-telegraph.md](docs/supplier-with-without-telegraph.md).
+
 ## Second entry: the adverse-media miner (Track 02)
 
 - **Listing:** [active on Anjoman](https://anjoman.ai/dashboard/explore/miners/tacitum-adverse-media), id 7314402, registration 5307.

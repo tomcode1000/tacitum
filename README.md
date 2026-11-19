@@ -23,6 +23,8 @@ Telegraph Hackathon Season II, two entries:
 | **Open to the auditor** | Each assessment is sealed to an auditor key; the auditor re-checks all 27 claims of the live run against public data |
 | **Tested** | 40 automated tests, run in CI on every push with CodeQL scanning: circuit, Merkle tree, audit envelope, spend caps, screening fallback, watchlist monitor, supplier-payment rules, privacy tracer, headline classifier, and the pool contract on a local chain (deposits, screening, reclaim, withdraw, double spend, bound recipients) |
 
+**New, 19 Nov:** the Telegraph team's supplier payment-release workflow (Siemens AG), run by the same agent with and without Telegraph: [docs/supplier-with-without-telegraph.md](docs/supplier-with-without-telegraph.md). With Telegraph it can complete every required check and APPROVE; without, it has to stop at REVIEW.
+
 **Judges:** [EVIDENCE.md](EVIDENCE.md) is a two-minute path with a verify link for every claim. [THREAT-MODEL.md](THREAT-MODEL.md) covers who can learn what, and the mainnet checklist.
 
 ![Tacitum: screen counterparties on Telegraph without telling the market](docs/screenshots/product-hero.png)
