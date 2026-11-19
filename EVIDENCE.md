@@ -67,7 +67,7 @@ Everything below is on Sepolia testnet against Telegraph's public devnode.
 
 ## Tests
 
-`npm test` runs 31 tests, the same suite as CI ([summary](docs/assets/test-summary.json)). They cover:
+`npm test` runs 40 tests, the same suite as CI ([summary](docs/assets/test-summary.json)). They cover:
 - the withdraw circuit and Merkle tree
 - the audit envelope
 - the spend caps

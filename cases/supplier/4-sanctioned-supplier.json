@@ -1,0 +1,26 @@
+{
+  "title": "A sanctioned company (Rosneft) with matching documents",
+  "expect": "HOLD",
+  "supplier": {
+    "legalName": "Rosneft Oil Company",
+    "jurisdiction": "RU",
+    "website": "https://www.rosneft.com"
+  },
+  "invoice": {
+    "number": "INV-2026-1187",
+    "currency": "EUR",
+    "units": 12,
+    "unitPrice": 700,
+    "total": 8400
+  },
+  "po": {
+    "number": "PO-44120",
+    "currency": "EUR",
+    "units": 12,
+    "unitPrice": 700
+  },
+  "acceptance": {
+    "unitsAccepted": 12,
+    "date": "2026-11-10"
+  }
+}

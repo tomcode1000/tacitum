@@ -1,0 +1,364 @@
+{
+  "case": "4-sanctioned-supplier",
+  "title": "A sanctioned company (Rosneft) with matching documents",
+  "expect": "HOLD",
+  "payer": "0x7bfdB1968C772665EFBd5941fC4b068B80a91713",
+  "mode": "one-time payer",
+  "supplier": {
+    "legalName": "Rosneft Oil Company",
+    "jurisdiction": "RU",
+    "website": "https://www.rosneft.com"
+  },
+  "decision": "HOLD",
+  "failed": [
+    "sanctions"
+  ],
+  "missing": [
+    "registry"
+  ],
+  "results": {
+    "registry": {
+      "status": "MISSING",
+      "why": "fewer than two registries confirmed the company"
+    },
+    "sanctions": {
+      "status": "FAILED",
+      "why": "a sanctions miner reports a match"
+    },
+    "tls": {
+      "status": "PASSED",
+      "why": "certificate valid (2 miners)"
+    },
+    "url": {
+      "status": "PASSED",
+      "why": "not listed as malicious"
+    },
+    "fx": {
+      "status": "PASSED",
+      "why": "3 sources agree within 0.5%",
+      "usd": 9233.28,
+      "rate": 0.90975
+    },
+    "match": {
+      "status": "PASSED",
+      "why": "12 units at 700 EUR agree across invoice, PO and acceptance (2026-11-10)",
+      "issues": []
+    }
+  },
+  "providers": {
+    "registry": [
+      {
+        "minerId": 77393,
+        "miner": "ZK Corporate Registry — Exact Identity and Status",
+        "ok": true,
+        "signal": "0xdc2cd01d5e475e3c30f7943ec7d504c7174e135abf89b8ebc16891aaea6ec44d"
+      },
+      {
+        "minerId": 7393,
+        "miner": "DataWire Corporate Registry Lookup",
+        "ok": true,
+        "signal": "0xc739f5ce424085481adcc17d43734d07cac97653e83e865ec2998974fec30a44"
+      }
+    ],
+    "sanctions": [
+      {
+        "minerId": 731002,
+        "miner": null,
+        "ok": false,
+        "signal": null,
+        "error": "miner error 503 [LISTS_LOADING]: Sanctions lists are still loading; retry shortly"
+      },
+      {
+        "minerId": 710637,
+        "miner": "Sanctions Name Evidence",
+        "ok": true,
+        "signal": "0x130feea51b4e29ae3f6c38151979f0b0f023d848ecd542a4dda38e68992d6fc7"
+      },
+      {
+        "minerId": 4433,
+        "miner": "LiveCert — Sourced Answers for Agents",
+        "ok": true,
+        "signal": "0xaeb6b7bd4696d3aa20b3a63a89f87d99eab34cea48a9be70dcfa7de601594386"
+      }
+    ],
+    "tls": [
+      {
+        "minerId": 7332,
+        "miner": "NetWire SSL Verification",
+        "ok": true,
+        "signal": "0x38fdf8b0d7bfad5293391ff13f73113986b6d462e181b5a04808816f3bc9b20f"
+      },
+      {
+        "minerId": 4433,
+        "miner": "LiveCert — Sourced Answers for Agents",
+        "ok": true,
+        "signal": "0x45e94e250e72e727e66b88675a89b4b865a821a1e7590982fe9916fa5e1fe99d"
+      }
+    ],
+    "url": [
+      {
+        "minerId": 20260828,
+        "miner": "PREFLIGHT Infrastructure Signals",
+        "ok": true,
+        "signal": "0x16cac7bf893ab8600be5cfe73d811c9980da6b88494388c240bff93d6c656d71"
+      },
+      {
+        "minerId": 7353,
+        "miner": "GuardWire URL Safety Check",
+        "ok": true,
+        "signal": "0xb86a2128e2bbda2919d0b244b8555b8de5c3053001101dc19905fb7474e3eda5"
+      }
+    ],
+    "fxConvert": [
+      {
+        "minerId": 7321,
+        "miner": "FinWire Currency Exchange",
+        "ok": true,
+        "signal": "0x596f7dd3edee925acba5a4929ecb40378b41d25d9e53d3bac53ae8d0d171508a"
+      },
+      {
+        "minerId": 4433,
+        "miner": "LiveCert — Sourced Answers for Agents",
+        "ok": true,
+        "signal": "0xdb7bd60916671838e97d2795dede239ab2ef5946e8f4330ede1b9365ec8ace7b"
+      }
+    ],
+    "fxRate": [
+      {
+        "minerId": 9601,
+        "miner": "FX Now (Frankfurter ECB)",
+        "ok": true,
+        "signal": "0x5fbc1ac3d1dec2b6beaf1c3eee1d3a1afbc54f7b533027c93db273251ceac839"
+      },
+      {
+        "minerId": 31001,
+        "miner": "Frankfurter FX Now",
+        "ok": true,
+        "signal": "0x074e6ca7c08bb09d4ded5308631aa57f2a086958cc434c46dda0ebb9e682bd5b"
+      }
+    ]
+  },
+  "costUsd": 0.12,
+  "seconds": 90,
+  "paymentExecuted": false,
+  "raw": {
+    "registry": {
+      "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+      "params": {
+        "company": "Rosneft Oil Company",
+        "jurisdiction": "RU"
+      },
+      "answers": [
+        {
+          "minerId": 77393,
+          "miner": "ZK Corporate Registry — Exact Identity and Status",
+          "ok": true,
+          "result": {
+            "active": null,
+            "as_of": "2026-11-19T19:59:07.981Z",
+            "attribution": "GLEIF Global LEI Index: CC0 1.0. Companies House: Crown copyright, Open Government Licence v3.0. Contains data under the Norwegian Licence for Open Government Data (NLOD 2.0) distributed by Brønnøysundregistrene; fields selected and reformatted. French Annuaire des Entreprises: Licence Ouverte 2.0, INSEE/RNE data. SEC EDGAR: US Government public records.",
+            "candidates": [],
+            "confidence": 0,
+            "found": false,
+            "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+            "match_count": 0,
+            "observed_at": "2026-11-19T19:59:07.981Z",
+            "query": "Rosneft Oil Company",
+            "reason": "no_exact_match",
+            "search_complete": true,
+            "sources": [
+              {
+                "observed_at": "2026-11-19T19:59:07.981Z",
+                "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.legalName%5D=ROSNEFT+OIL+COMPANY&filter%5Bentity.jurisdiction%5D=RU&page%5Bsize%5D=100"
+              }
+            ],
+            "status_active": null,
+            "summary": "No unique exact legal identity was verified in the requested jurisdiction. Supply the full registered legal name or a registry identifier/LEI; candidate names are not a status verdict."
+          },
+          "signal": "0xdc2cd01d5e475e3c30f7943ec7d504c7174e135abf89b8ebc16891aaea6ec44d",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 7393,
+          "miner": "DataWire Corporate Registry Lookup",
+          "ok": true,
+          "result": {
+            "legal_name": null,
+            "registration_id": null,
+            "active": null,
+            "jurisdiction": "RU",
+            "registered_address": null,
+            "incorporated": null
+          },
+          "signal": "0xc739f5ce424085481adcc17d43734d07cac97653e83e865ec2998974fec30a44",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "sanctions": {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "Rosneft Oil Company"
+      },
+      "answers": [
+        {
+          "minerId": 731002,
+          "miner": null,
+          "ok": false,
+          "result": null,
+          "error": "miner error 503 [LISTS_LOADING]: Sanctions lists are still loading; retry shortly",
+          "signal": null,
+          "costUsd": 0
+        },
+        {
+          "minerId": 710637,
+          "miner": "Sanctions Name Evidence",
+          "ok": true,
+          "result": {
+            "name": null,
+            "matched": null,
+            "matches": null,
+            "lists": null,
+            "match_score": 1
+          },
+          "signal": "0x130feea51b4e29ae3f6c38151979f0b0f023d848ecd542a4dda38e68992d6fc7",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 4433,
+          "miner": "LiveCert — Sourced Answers for Agents",
+          "ok": true,
+          "result": {
+            "name": null,
+            "matched": true,
+            "matches": null,
+            "lists": null,
+            "match_score": null
+          },
+          "signal": "0xaeb6b7bd4696d3aa20b3a63a89f87d99eab34cea48a9be70dcfa7de601594386",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "tls": {
+      "intent": "SSL_VERIFICATION_CERT",
+      "params": {
+        "host": "www.rosneft.com"
+      },
+      "answers": [
+        {
+          "minerId": 7332,
+          "miner": "NetWire SSL Verification",
+          "ok": true,
+          "result": {
+            "certificate_valid": true
+          },
+          "signal": "0x38fdf8b0d7bfad5293391ff13f73113986b6d462e181b5a04808816f3bc9b20f",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 4433,
+          "miner": "LiveCert — Sourced Answers for Agents",
+          "ok": true,
+          "result": {
+            "certificate_valid": true
+          },
+          "signal": "0x45e94e250e72e727e66b88675a89b4b865a821a1e7590982fe9916fa5e1fe99d",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "url": {
+      "intent": "URL_SAFE_GENERAL",
+      "params": {
+        "url": "https://www.rosneft.com"
+      },
+      "answers": [
+        {
+          "minerId": 20260828,
+          "miner": "PREFLIGHT Infrastructure Signals",
+          "ok": true,
+          "result": {
+            "url": "https://www.rosneft.com",
+            "verdict": "Safe",
+            "detections": 0,
+            "summary": "https://www.rosneft.com is not listed as malicious by any of the 2 threat sources checked: OpenPhish (not listed), Cloudflare Security DNS (resolves normally)."
+          },
+          "signal": "0x16cac7bf893ab8600be5cfe73d811c9980da6b88494388c240bff93d6c656d71",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 7353,
+          "miner": "GuardWire URL Safety Check",
+          "ok": true,
+          "result": {
+            "url": "https://www.rosneft.com",
+            "verdict": "Unknown",
+            "detections": 0,
+            "summary": "Unknown: 0 detections for www.rosneft.com in 4 responding sources (CERT Polska Warning List; Cloudflare security DNS; Quad9 threat-blocking DNS; PhishDestroy curated Primary phishing list); the transport request did not complete; TLS validity is unknown. Hostname checks cannot prove an unlisted page safe or rule out exact-path threats."
+          },
+          "signal": "0xb86a2128e2bbda2919d0b244b8555b8de5c3053001101dc19905fb7474e3eda5",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "fxConvert": {
+      "intent": "CURRENCY_EXCHANGE_CONVERT",
+      "params": {
+        "from_currency": "EUR",
+        "to_currency": "USD",
+        "amount": 8400
+      },
+      "answers": [
+        {
+          "minerId": 7321,
+          "miner": "FinWire Currency Exchange",
+          "ok": true,
+          "result": {
+            "converted_amount": 9233.28
+          },
+          "signal": "0x596f7dd3edee925acba5a4929ecb40378b41d25d9e53d3bac53ae8d0d171508a",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 4433,
+          "miner": "LiveCert — Sourced Answers for Agents",
+          "ok": true,
+          "result": {
+            "converted_amount": 9233.279999999999
+          },
+          "signal": "0xdb7bd60916671838e97d2795dede239ab2ef5946e8f4330ede1b9365ec8ace7b",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "fxRate": {
+      "intent": "FX_NOW_EUR",
+      "params": {
+        "currency": "EUR"
+      },
+      "answers": [
+        {
+          "minerId": 9601,
+          "miner": "FX Now (Frankfurter ECB)",
+          "ok": true,
+          "result": {
+            "rate": 0.90975
+          },
+          "signal": "0x5fbc1ac3d1dec2b6beaf1c3eee1d3a1afbc54f7b533027c93db273251ceac839",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 31001,
+          "miner": "Frankfurter FX Now",
+          "ok": true,
+          "result": {
+            "rate": 1.0992
+          },
+          "signal": "0x074e6ca7c08bb09d4ded5308631aa57f2a086958cc434c46dda0ebb9e682bd5b",
+          "costUsd": 0.01
+        }
+      ]
+    }
+  }
+}

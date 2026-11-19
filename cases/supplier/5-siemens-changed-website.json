@@ -1,0 +1,28 @@
+{
+  "title": "Siemens AG, but the supplier record's website was changed to one with a broken certificate",
+  "expect": "HOLD",
+  "supplier": {
+    "legalName": "Siemens Aktiengesellschaft",
+    "tradingName": "Siemens AG",
+    "jurisdiction": "DE",
+    "lei": "W38RGI023J3WT1HWRP32",
+    "website": "https://expired.badssl.com"
+  },
+  "invoice": {
+    "number": "INV-2026-1187",
+    "currency": "EUR",
+    "units": 12,
+    "unitPrice": 700,
+    "total": 8400
+  },
+  "po": {
+    "number": "PO-44120",
+    "currency": "EUR",
+    "units": 12,
+    "unitPrice": 700
+  },
+  "acceptance": {
+    "unitsAccepted": 12,
+    "date": "2026-11-10"
+  }
+}

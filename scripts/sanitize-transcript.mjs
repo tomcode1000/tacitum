@@ -17,7 +17,8 @@ export function sanitize(text) {
   return out.map((o) => JSON.stringify(o)).join("\n") + "\n";
 }
 
-if (process.argv[2]) {
+// Only as a command (node scripts/sanitize-transcript.mjs <file>), never when imported.
+if (process.argv[2] && import.meta.url === (await import("node:url")).pathToFileURL(process.argv[1]).href) {
   const f = process.argv[2];
   fs.writeFileSync(f, sanitize(fs.readFileSync(f, "utf8")));
   console.log(`sanitized ${f}`);

@@ -1,0 +1,51 @@
+{
+  "mode": "one-time payer",
+  "payer": "0xDE6F43a72FE53C1FA182a953ea4DD32BB45603BC",
+  "results": [
+    {
+      "case": "1-siemens-clean",
+      "expect": "APPROVE",
+      "decision": "REVIEW",
+      "hit": false,
+      "why": "registry: fewer than two registries confirmed the company | sanctions: only 0 sanctions screen answered clearly; two are required | tls: no miner confirmed the certificate | url: no URL scanner gave a verdict | fx: fewer than two FX sources answered",
+      "costUsd": 0,
+      "seconds": 35
+    },
+    {
+      "case": "2-siemens-invoice-mismatch",
+      "expect": "HOLD",
+      "decision": "HOLD",
+      "hit": true,
+      "why": "match: units: invoice 13, PO 12; accepted 12 units, invoiced 13 | registry: fewer than two registries confirmed the company | sanctions: only 0 sanctions screen answered clearly; two are required | tls: no miner confirmed the certificate | url: no URL scanner gave a verdict | fx: fewer than two FX sources answered",
+      "costUsd": 0,
+      "seconds": 544
+    },
+    {
+      "case": "3-siemens-no-lei",
+      "expect": "REVIEW",
+      "decision": "REVIEW",
+      "hit": true,
+      "why": "registry: identity ambiguous: 4 similarly named entities; supply the LEI | sanctions: only 0 sanctions screen answered clearly; two are required | url: no URL scanner gave a verdict | fx: fewer than two FX sources answered",
+      "costUsd": 0.04,
+      "seconds": 1543
+    },
+    {
+      "case": "4-sanctioned-supplier",
+      "expect": "HOLD",
+      "decision": "REVIEW",
+      "hit": false,
+      "why": "registry: fewer than two registries confirmed the company | sanctions: only 0 sanctions screen answered clearly; two are required | tls: no miner confirmed the certificate | url: no URL scanner gave a verdict | fx: fewer than two FX sources answered",
+      "costUsd": 0,
+      "seconds": 3283
+    },
+    {
+      "case": "5-siemens-changed-website",
+      "expect": "HOLD",
+      "decision": "REVIEW",
+      "hit": false,
+      "why": "registry: fewer than two registries confirmed the company | sanctions: only 0 sanctions screen answered clearly; two are required | tls: no miner confirmed the certificate | url: no URL scanner gave a verdict | fx: fewer than two FX sources answered",
+      "costUsd": 0,
+      "seconds": 47
+    }
+  ]
+}

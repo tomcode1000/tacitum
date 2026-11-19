@@ -1,0 +1,374 @@
+{
+  "case": "3-siemens-no-lei",
+  "title": "Siemens AG given by trading name only, no LEI",
+  "expect": "REVIEW",
+  "payer": "0xDE6F43a72FE53C1FA182a953ea4DD32BB45603BC",
+  "mode": "one-time payer",
+  "supplier": {
+    "legalName": "Siemens AG",
+    "jurisdiction": "DE",
+    "website": "https://www.siemens.com"
+  },
+  "decision": "REVIEW",
+  "failed": [],
+  "missing": [
+    "registry",
+    "sanctions",
+    "url",
+    "fx"
+  ],
+  "results": {
+    "registry": {
+      "status": "MISSING",
+      "why": "identity ambiguous: 4 similarly named entities; supply the LEI"
+    },
+    "sanctions": {
+      "status": "MISSING",
+      "why": "only 0 sanctions screen answered clearly; two are required"
+    },
+    "tls": {
+      "status": "PASSED",
+      "why": "certificate valid (2 miners)"
+    },
+    "url": {
+      "status": "MISSING",
+      "why": "no URL scanner gave a verdict"
+    },
+    "fx": {
+      "status": "MISSING",
+      "why": "fewer than two FX sources answered"
+    },
+    "match": {
+      "status": "PASSED",
+      "why": "12 units at 700 EUR agree across invoice, PO and acceptance (2026-11-10)",
+      "issues": []
+    }
+  },
+  "providers": {
+    "registry": [
+      {
+        "minerId": 77393,
+        "miner": "ZK Corporate Registry — Exact Identity and Status",
+        "ok": true,
+        "signal": "0xdf4f7ea75d5f97e6a33f6890919f9c8bf86e4e805b4d5a9725e7bf679abaa5a4"
+      },
+      {
+        "minerId": 7393,
+        "miner": "DataWire Corporate Registry Lookup",
+        "ok": true,
+        "signal": "0x61dd8ce87120b0e125bffdb77783a5c1826beb32ea7261080055988ee342379b"
+      }
+    ],
+    "sanctions": [
+      {
+        "minerId": 731002,
+        "miner": null,
+        "ok": false,
+        "signal": null,
+        "error": "miner error 503 [LISTS_LOADING]: Sanctions lists are still loading; retry shortly"
+      },
+      {
+        "minerId": 710637,
+        "miner": null,
+        "ok": false,
+        "signal": null,
+        "error": "UND_ERR_CONNECT_TIMEOUT"
+      },
+      {
+        "minerId": 4433,
+        "miner": null,
+        "ok": false,
+        "signal": null,
+        "error": "UND_ERR_CONNECT_TIMEOUT"
+      }
+    ],
+    "tls": [
+      {
+        "minerId": 7332,
+        "miner": "NetWire SSL Verification",
+        "ok": true,
+        "signal": "0x630314ba757a1512435ae22fc9b9754357d57351c4ec260b6b3781994d904128"
+      },
+      {
+        "minerId": 4433,
+        "miner": "LiveCert — Sourced Answers for Agents",
+        "ok": true,
+        "signal": "0x601e98c8cddac6e4c6faf9a43ef37e66b1e8a2b6a54c905d55948cd5e024e8cf"
+      }
+    ],
+    "url": [
+      {
+        "minerId": 20260828,
+        "miner": null,
+        "ok": false,
+        "signal": null,
+        "error": "UND_ERR_CONNECT_TIMEOUT"
+      },
+      {
+        "minerId": 7353,
+        "miner": null,
+        "ok": false,
+        "signal": null,
+        "error": "ETIMEDOUT"
+      }
+    ],
+    "fxConvert": [
+      {
+        "minerId": 7321,
+        "miner": null,
+        "ok": false,
+        "signal": null,
+        "error": "ENOTFOUND"
+      },
+      {
+        "minerId": 4433,
+        "miner": null,
+        "ok": false,
+        "signal": null,
+        "error": "ENOTFOUND"
+      }
+    ],
+    "fxRate": [
+      {
+        "minerId": 9601,
+        "miner": null,
+        "ok": false,
+        "signal": null,
+        "error": "ENOTFOUND"
+      },
+      {
+        "minerId": 31001,
+        "miner": null,
+        "ok": false,
+        "signal": null,
+        "error": "ENOTFOUND"
+      }
+    ]
+  },
+  "costUsd": 0.04,
+  "seconds": 1543,
+  "paymentExecuted": false,
+  "raw": {
+    "registry": {
+      "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+      "params": {
+        "company": "Siemens AG",
+        "jurisdiction": "DE"
+      },
+      "answers": [
+        {
+          "minerId": 77393,
+          "miner": "ZK Corporate Registry — Exact Identity and Status",
+          "ok": true,
+          "result": {
+            "active": null,
+            "as_of": "2026-11-19T17:55:13.765Z",
+            "attribution": "GLEIF Global LEI Index: CC0 1.0. Companies House: Crown copyright, Open Government Licence v3.0. Contains data under the Norwegian Licence for Open Government Data (NLOD 2.0) distributed by Brønnøysundregistrene; fields selected and reformatted. French Annuaire des Entreprises: Licence Ouverte 2.0, INSEE/RNE data. SEC EDGAR: US Government public records.",
+            "candidates": [
+              {
+                "jurisdiction": "DE",
+                "legal_name": "Siemens Healthineers AG",
+                "lei": "529900QBVWXMWANH7H45",
+                "registration_id": "HRB 237558"
+              },
+              {
+                "jurisdiction": "DE",
+                "legal_name": "Siemens Energy AG",
+                "lei": "5299005CHJZ14D4FDJ62",
+                "registration_id": "HRB 252581"
+              },
+              {
+                "jurisdiction": "DE",
+                "legal_name": "Siemens Pensionsfonds AG",
+                "lei": "391200GVHYOMW4GQ0Y26",
+                "registration_id": "HRB 163569"
+              },
+              {
+                "jurisdiction": "DE",
+                "legal_name": "Verein von Belegschaftsaktionären in der Siemens AG, e.V. München",
+                "lei": "391200IFAW30UIQZUK41",
+                "registration_id": "VR 15117"
+              }
+            ],
+            "confidence": 0,
+            "found": false,
+            "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+            "match_count": 4,
+            "observed_at": "2026-11-19T17:55:13.765Z",
+            "query": "Siemens AG",
+            "reason": "ambiguous_or_nonexact_name",
+            "search_complete": true,
+            "sources": [
+              {
+                "observed_at": "2026-11-19T17:55:13.765Z",
+                "url": "https://api.gleif.org/api/v1/lei-records?filter%5Bentity.legalName%5D=SIEMENS+AG&filter%5Bentity.jurisdiction%5D=DE&page%5Bsize%5D=100"
+              }
+            ],
+            "status_active": null,
+            "summary": "No unique exact legal identity was verified in the requested jurisdiction. Supply the full registered legal name or a registry identifier/LEI; candidate names are not a status verdict."
+          },
+          "signal": "0xdf4f7ea75d5f97e6a33f6890919f9c8bf86e4e805b4d5a9725e7bf679abaa5a4",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 7393,
+          "miner": "DataWire Corporate Registry Lookup",
+          "ok": true,
+          "result": {
+            "legal_name": "Siemens Healthineers AG",
+            "registration_id": "HRB 237558",
+            "active": null,
+            "jurisdiction": "DE",
+            "registered_address": null,
+            "incorporated": null
+          },
+          "signal": "0x61dd8ce87120b0e125bffdb77783a5c1826beb32ea7261080055988ee342379b",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "sanctions": {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "Siemens AG"
+      },
+      "answers": [
+        {
+          "minerId": 731002,
+          "miner": null,
+          "ok": false,
+          "result": null,
+          "error": "miner error 503 [LISTS_LOADING]: Sanctions lists are still loading; retry shortly",
+          "signal": null,
+          "costUsd": 0
+        },
+        {
+          "minerId": 710637,
+          "miner": null,
+          "ok": false,
+          "result": null,
+          "error": "UND_ERR_CONNECT_TIMEOUT",
+          "signal": null,
+          "costUsd": 0
+        },
+        {
+          "minerId": 4433,
+          "miner": null,
+          "ok": false,
+          "result": null,
+          "error": "UND_ERR_CONNECT_TIMEOUT",
+          "signal": null,
+          "costUsd": 0
+        }
+      ]
+    },
+    "tls": {
+      "intent": "SSL_VERIFICATION_CERT",
+      "params": {
+        "host": "www.siemens.com"
+      },
+      "answers": [
+        {
+          "minerId": 7332,
+          "miner": "NetWire SSL Verification",
+          "ok": true,
+          "result": {
+            "certificate_valid": true
+          },
+          "signal": "0x630314ba757a1512435ae22fc9b9754357d57351c4ec260b6b3781994d904128",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 4433,
+          "miner": "LiveCert — Sourced Answers for Agents",
+          "ok": true,
+          "result": {
+            "certificate_valid": true
+          },
+          "signal": "0x601e98c8cddac6e4c6faf9a43ef37e66b1e8a2b6a54c905d55948cd5e024e8cf",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "url": {
+      "intent": "URL_SAFE_GENERAL",
+      "params": {
+        "url": "https://www.siemens.com"
+      },
+      "answers": [
+        {
+          "minerId": 20260828,
+          "miner": null,
+          "ok": false,
+          "result": null,
+          "error": "UND_ERR_CONNECT_TIMEOUT",
+          "signal": null,
+          "costUsd": 0
+        },
+        {
+          "minerId": 7353,
+          "miner": null,
+          "ok": false,
+          "result": null,
+          "error": "ETIMEDOUT",
+          "signal": null,
+          "costUsd": 0
+        }
+      ]
+    },
+    "fxConvert": {
+      "intent": "CURRENCY_EXCHANGE_CONVERT",
+      "params": {
+        "from_currency": "EUR",
+        "to_currency": "USD",
+        "amount": 8400
+      },
+      "answers": [
+        {
+          "minerId": 7321,
+          "miner": null,
+          "ok": false,
+          "result": null,
+          "error": "ENOTFOUND",
+          "signal": null,
+          "costUsd": 0
+        },
+        {
+          "minerId": 4433,
+          "miner": null,
+          "ok": false,
+          "result": null,
+          "error": "ENOTFOUND",
+          "signal": null,
+          "costUsd": 0
+        }
+      ]
+    },
+    "fxRate": {
+      "intent": "FX_NOW_EUR",
+      "params": {
+        "currency": "EUR"
+      },
+      "answers": [
+        {
+          "minerId": 9601,
+          "miner": null,
+          "ok": false,
+          "result": null,
+          "error": "ENOTFOUND",
+          "signal": null,
+          "costUsd": 0
+        },
+        {
+          "minerId": 31001,
+          "miner": null,
+          "ok": false,
+          "result": null,
+          "error": "ENOTFOUND",
+          "signal": null,
+          "costUsd": 0
+        }
+      ]
+    }
+  }
+}

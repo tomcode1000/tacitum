@@ -92,6 +92,37 @@ server.registerTool(
 );
 
 server.registerTool(
+  "supplier_check",
+  {
+    title: "Supplier check before payment release",
+    description:
+      "Checks a supplier through Telegraph before an invoice is paid: legal identity and active registry status (two registries), " +
+      "sanctions (three screens), the website's TLS certificate and URL safety, a sourced FX rate to USD (two or more sources), and a " +
+      "three-way match of invoice, purchase order and goods acceptance. Bought by a one-time wallet so the feed does not show who asked. " +
+      "Returns APPROVE only if every check passed and the documents agree; otherwise HOLD (a check failed) or REVIEW (a check is missing), " +
+      "with the provider and Telegraph receipt behind each result. Never executes a payment. About 3-5 minutes, about $0.13.",
+    inputSchema: {
+      legalName: z.string().describe('Registered legal name, e.g. "Siemens Aktiengesellschaft" (not the trading name)'),
+      jurisdiction: z.string().length(2).describe("ISO country code, e.g. DE"),
+      lei: z.string().optional().describe("Legal Entity Identifier, if known. Without it, similarly named companies can make identity ambiguous."),
+      website: z.string().describe("Supplier website, e.g. https://www.siemens.com"),
+      invoice: z.object({ currency: z.string(), units: z.number(), unitPrice: z.number(), total: z.number() }),
+      po: z.object({ currency: z.string(), units: z.number(), unitPrice: z.number() }),
+      acceptance: z.object({ unitsAccepted: z.number(), date: z.string() }),
+    },
+  },
+  async ({ legalName, jurisdiction, lei, website, invoice, po, acceptance }) => {
+    const r = await t.supplierCheck({ supplier: { legalName, jurisdiction, lei, website }, invoice, po, acceptance });
+    const dir = path.join(HOME, "assessments", "supplier");
+    fs.mkdirSync(dir, { recursive: true });
+    const slug = `${new Date().toISOString().slice(0, 16).replace(/:/g, "")}-agent-${legalName.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+    const { raw, ...pub } = r;
+    fs.writeFileSync(path.join(dir, `${slug}.json`), JSON.stringify({ ...pub, raw }, null, 2));
+    return text(r.memo + `\n\nPayer: ${r.payer}. Receipts verify at https://devnode.telegraphprotocol.com/engine/v1/signal/<hash>.`);
+  },
+);
+
+server.registerTool(
   "pool_deposit",
   {
     title: "Deposit into the screened pool",

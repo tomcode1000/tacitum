@@ -1,0 +1,364 @@
+{
+  "case": "1-siemens-clean",
+  "title": "Siemens AG, everything agrees (the mod's example)",
+  "expect": "APPROVE",
+  "payer": "0x7bfdB1968C772665EFBd5941fC4b068B80a91713",
+  "mode": "one-time payer",
+  "supplier": {
+    "legalName": "Siemens Aktiengesellschaft",
+    "tradingName": "Siemens AG",
+    "jurisdiction": "DE",
+    "lei": "W38RGI023J3WT1HWRP32",
+    "website": "https://www.siemens.com"
+  },
+  "decision": "APPROVE",
+  "failed": [],
+  "missing": [],
+  "results": {
+    "registry": {
+      "status": "PASSED",
+      "why": "active, legal name and registration confirmed by 2 registries",
+      "registrationId": "HRB 6684",
+      "address": "Werner-von-Siemens-Str. 1, München, DE-BY, 80333, DE"
+    },
+    "sanctions": {
+      "status": "PASSED",
+      "why": "no match on 2 independent sanctions screens"
+    },
+    "tls": {
+      "status": "PASSED",
+      "why": "certificate valid (2 miners)"
+    },
+    "url": {
+      "status": "PASSED",
+      "why": "not listed as malicious"
+    },
+    "fx": {
+      "status": "PASSED",
+      "why": "3 sources agree within 0.5%",
+      "usd": 9233.28,
+      "rate": 0.90975
+    },
+    "match": {
+      "status": "PASSED",
+      "why": "12 units at 700 EUR agree across invoice, PO and acceptance (2026-11-10)",
+      "issues": []
+    }
+  },
+  "providers": {
+    "registry": [
+      {
+        "minerId": 77393,
+        "miner": "ZK Corporate Registry — Exact Identity and Status",
+        "ok": true,
+        "signal": "0xe2f8f65c172c3b08b50f94da08d811dfe25d9a72135399aa5220348171bcc6b6"
+      },
+      {
+        "minerId": 7393,
+        "miner": "DataWire Corporate Registry Lookup",
+        "ok": true,
+        "signal": "0xbf424172e5afb8c7e2ffb7ebe2a7a86a26860d12cb7262a56ee35b8f8f280963"
+      }
+    ],
+    "sanctions": [
+      {
+        "minerId": 731002,
+        "miner": null,
+        "ok": false,
+        "signal": null,
+        "error": "miner error 503 [LISTS_LOADING]: Sanctions lists are still loading; retry shortly"
+      },
+      {
+        "minerId": 710637,
+        "miner": "Sanctions Name Evidence",
+        "ok": true,
+        "signal": "0xf1c7de5b96bd929b3bab1146c6faf6806f055e65e63db0697ebb4abf9e6b1067"
+      },
+      {
+        "minerId": 4433,
+        "miner": "LiveCert — Sourced Answers for Agents",
+        "ok": true,
+        "signal": "0x9272e43ea714a387bcd12aba08c68ba392f1cd2d7564bbafff69f7aa43d509c2"
+      }
+    ],
+    "tls": [
+      {
+        "minerId": 7332,
+        "miner": "NetWire SSL Verification",
+        "ok": true,
+        "signal": "0x2debfff8c5e790ce4464e2aeaa4aa2253d28f9660d87e853ac7fb304d744ec64"
+      },
+      {
+        "minerId": 4433,
+        "miner": "LiveCert — Sourced Answers for Agents",
+        "ok": true,
+        "signal": "0xca86cd7d068cf5a7936ddb99d226dc8761bd5cb90769c993a6ed0e650d668cb2"
+      }
+    ],
+    "url": [
+      {
+        "minerId": 20260828,
+        "miner": "PREFLIGHT Infrastructure Signals",
+        "ok": true,
+        "signal": "0xe9c1abe549d3323e69182ab1e4e5a5dba7862d06a64dd2cfec1f8c6f47b2edb8"
+      },
+      {
+        "minerId": 7353,
+        "miner": "GuardWire URL Safety Check",
+        "ok": true,
+        "signal": "0xdd5b17ab6e74dd5220ac371d29fb1722f77aea6f3fcf597a7d6bfe7bdd1e390f"
+      }
+    ],
+    "fxConvert": [
+      {
+        "minerId": 7321,
+        "miner": "FinWire Currency Exchange",
+        "ok": true,
+        "signal": "0xc3bc85d136f2322f7bdbaee8a9ad5313a45cdef1b287e6757638ffe7650e1e89"
+      },
+      {
+        "minerId": 4433,
+        "miner": "LiveCert — Sourced Answers for Agents",
+        "ok": true,
+        "signal": "0x0a03ab8d6335e1aba299282e29c8e1623107d866b52d72a70d28bbf54d693d2c"
+      }
+    ],
+    "fxRate": [
+      {
+        "minerId": 9601,
+        "miner": "FX Now (Frankfurter ECB)",
+        "ok": true,
+        "signal": "0x5dea4d67ca41fbec7af7062d63b4ea0924c36cc8031943f46b58a98c38539d48"
+      },
+      {
+        "minerId": 31001,
+        "miner": "Frankfurter FX Now",
+        "ok": true,
+        "signal": "0x94607bf7fe4399bd01f0e48785bd27bacc78a3731edae9b84ee41970ef9b0a57"
+      }
+    ]
+  },
+  "costUsd": 0.12,
+  "seconds": 78,
+  "paymentExecuted": false,
+  "raw": {
+    "registry": {
+      "intent": "CORPORATE_REGISTRY_LOOKUP_GENERAL",
+      "params": {
+        "company": "Siemens Aktiengesellschaft (LEI W38RGI023J3WT1HWRP32)",
+        "jurisdiction": "DE"
+      },
+      "answers": [
+        {
+          "minerId": 77393,
+          "miner": "ZK Corporate Registry — Exact Identity and Status",
+          "ok": true,
+          "result": {
+            "legal_name": "Siemens Aktiengesellschaft",
+            "registration_id": "HRB 6684",
+            "active": true,
+            "jurisdiction": "DE",
+            "registered_address": "Werner-von-Siemens-Str. 1, München, DE-BY, 80333, DE",
+            "incorporated": "1996-08-27"
+          },
+          "signal": "0xe2f8f65c172c3b08b50f94da08d811dfe25d9a72135399aa5220348171bcc6b6",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 7393,
+          "miner": "DataWire Corporate Registry Lookup",
+          "ok": true,
+          "result": {
+            "legal_name": "Siemens Aktiengesellschaft",
+            "registration_id": "HRB 6684",
+            "active": true,
+            "jurisdiction": "DE",
+            "registered_address": "Werner-von-Siemens-Str. 1, München, DE-BY, 80333, DE",
+            "incorporated": "1996-08-27"
+          },
+          "signal": "0xbf424172e5afb8c7e2ffb7ebe2a7a86a26860d12cb7262a56ee35b8f8f280963",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "sanctions": {
+      "intent": "SANCTIONS_SCREENING_MATCH_GENERAL",
+      "params": {
+        "name": "Siemens Aktiengesellschaft"
+      },
+      "answers": [
+        {
+          "minerId": 731002,
+          "miner": null,
+          "ok": false,
+          "result": null,
+          "error": "miner error 503 [LISTS_LOADING]: Sanctions lists are still loading; retry shortly",
+          "signal": null,
+          "costUsd": 0
+        },
+        {
+          "minerId": 710637,
+          "miner": "Sanctions Name Evidence",
+          "ok": true,
+          "result": {
+            "name": "Siemens Aktiengesellschaft",
+            "matched": false,
+            "matches": null,
+            "lists": [
+              "OFAC SDN",
+              "OFAC Consolidated (non-SDN)",
+              "UK Sanctions List (entities only)",
+              "Canada autonomous sanctions (entities only)",
+              "EU Financial Sanctions (entities only)",
+              "US BIS Entity List (export controls)",
+              "US BIS Military End User List (export controls)",
+              "US BIS Denied Persons List (dated standard export-denial orders)",
+              "UK Sanctions List (ships)",
+              "US BIS Entity List (additional primary-row corroborated records)",
+              "Canada autonomous sanctions (November 5 additional entities)",
+              "Canada autonomous sanctions (corroborated ships)",
+              "Canada autonomous sanctions (November 5 Iranian entity amendment)"
+            ],
+            "match_score": 0
+          },
+          "signal": "0xf1c7de5b96bd929b3bab1146c6faf6806f055e65e63db0697ebb4abf9e6b1067",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 4433,
+          "miner": "LiveCert — Sourced Answers for Agents",
+          "ok": true,
+          "result": {
+            "name": null,
+            "matched": false,
+            "matches": null,
+            "lists": null,
+            "match_score": null
+          },
+          "signal": "0x9272e43ea714a387bcd12aba08c68ba392f1cd2d7564bbafff69f7aa43d509c2",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "tls": {
+      "intent": "SSL_VERIFICATION_CERT",
+      "params": {
+        "host": "www.siemens.com"
+      },
+      "answers": [
+        {
+          "minerId": 7332,
+          "miner": "NetWire SSL Verification",
+          "ok": true,
+          "result": {
+            "certificate_valid": true
+          },
+          "signal": "0x2debfff8c5e790ce4464e2aeaa4aa2253d28f9660d87e853ac7fb304d744ec64",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 4433,
+          "miner": "LiveCert — Sourced Answers for Agents",
+          "ok": true,
+          "result": {
+            "certificate_valid": true
+          },
+          "signal": "0xca86cd7d068cf5a7936ddb99d226dc8761bd5cb90769c993a6ed0e650d668cb2",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "url": {
+      "intent": "URL_SAFE_GENERAL",
+      "params": {
+        "url": "https://www.siemens.com"
+      },
+      "answers": [
+        {
+          "minerId": 20260828,
+          "miner": "PREFLIGHT Infrastructure Signals",
+          "ok": true,
+          "result": {
+            "url": "https://www.siemens.com",
+            "verdict": "Safe",
+            "detections": 0,
+            "summary": "https://www.siemens.com is not listed as malicious by any of the 2 threat sources checked: OpenPhish (not listed), Cloudflare Security DNS (resolves normally)."
+          },
+          "signal": "0xe9c1abe549d3323e69182ab1e4e5a5dba7862d06a64dd2cfec1f8c6f47b2edb8",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 7353,
+          "miner": "GuardWire URL Safety Check",
+          "ok": true,
+          "result": {
+            "url": "https://www.siemens.com",
+            "verdict": "Unknown",
+            "detections": 0,
+            "summary": null
+          },
+          "signal": "0xdd5b17ab6e74dd5220ac371d29fb1722f77aea6f3fcf597a7d6bfe7bdd1e390f",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "fxConvert": {
+      "intent": "CURRENCY_EXCHANGE_CONVERT",
+      "params": {
+        "from_currency": "EUR",
+        "to_currency": "USD",
+        "amount": 8400
+      },
+      "answers": [
+        {
+          "minerId": 7321,
+          "miner": "FinWire Currency Exchange",
+          "ok": true,
+          "result": {
+            "converted_amount": 9233.28
+          },
+          "signal": "0xc3bc85d136f2322f7bdbaee8a9ad5313a45cdef1b287e6757638ffe7650e1e89",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 4433,
+          "miner": "LiveCert — Sourced Answers for Agents",
+          "ok": true,
+          "result": {
+            "converted_amount": 9233.279999999999
+          },
+          "signal": "0x0a03ab8d6335e1aba299282e29c8e1623107d866b52d72a70d28bbf54d693d2c",
+          "costUsd": 0.01
+        }
+      ]
+    },
+    "fxRate": {
+      "intent": "FX_NOW_EUR",
+      "params": {
+        "currency": "EUR"
+      },
+      "answers": [
+        {
+          "minerId": 9601,
+          "miner": "FX Now (Frankfurter ECB)",
+          "ok": true,
+          "result": {
+            "rate": 0.90975
+          },
+          "signal": "0x5dea4d67ca41fbec7af7062d63b4ea0924c36cc8031943f46b58a98c38539d48",
+          "costUsd": 0.01
+        },
+        {
+          "minerId": 31001,
+          "miner": "Frankfurter FX Now",
+          "ok": true,
+          "result": {
+            "rate": 0.90975
+          },
+          "signal": "0x94607bf7fe4399bd01f0e48785bd27bacc78a3731edae9b84ee41970ef9b0a57",
+          "costUsd": 0.01
+        }
+      ]
+    }
+  }
+}
