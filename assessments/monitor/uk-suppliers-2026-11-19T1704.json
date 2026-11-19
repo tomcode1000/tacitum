@@ -1,0 +1,131 @@
+{
+  "watchlist": "uk-suppliers",
+  "startedAt": "2026-11-19T17:04:07.777Z",
+  "finishedAt": "2026-11-19T17:22:39.409Z",
+  "miner": 7314402,
+  "k": 4,
+  "calls": 24,
+  "coverCalls": 18,
+  "costUsd": 0.22,
+  "results": [
+    {
+      "name": "Barclays PLC",
+      "jurisdiction": "GB",
+      "verdict": "FLAG",
+      "answer": "16 adverse news items naming Barclays PLC in the last 12 months from 13 sources, mainly investigation, misconduct, litigation. Latest: Barclays triggers early payouts to car finance scandal victims, but not all of them (Auto Express, 2026-11-03).",
+      "resultCount": 16,
+      "sources": [
+        "Auto Express",
+        "Yahoo Finance",
+        "Simply Wall St",
+        "TradingPedia",
+        "BBN Times"
+      ],
+      "signal": "0x1eac129412cb86c3bf0521b2bad20d97159ee4968b1775fdbb327956977a8af8"
+    },
+    {
+      "name": "BP P.L.C.",
+      "jurisdiction": "GB",
+      "verdict": "CLEAR",
+      "answer": "No adverse media naming BP P.L.C. found in English-language news over the last 12 months.",
+      "resultCount": 0,
+      "sources": [],
+      "signal": "0x5eec5a0589ca9d957972acf6fab8a46796f40a1440f56ce41229128232f5a3d8"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "jurisdiction": "GB",
+      "verdict": "FLAG",
+      "answer": "8 adverse news items naming Rolls-Royce Holdings PLC in the last 12 months from 8 sources, mainly criminal, misconduct, bribery corruption. Latest: Escambia County Man Accused of Funneling $433K From IRS Into Rolls-Royce, Vegas Sprees (Hoodline, 2026-11-18).",
+      "resultCount": 8,
+      "sources": [
+        "Hoodline",
+        "Nilepost",
+        "Global Investigations Review",
+        "Bangkok Post",
+        "The Straits Times"
+      ],
+      "signal": "0x06506949239056b85ab56cc2b24504746528d3ac84352bc20c39bee995d8e706"
+    },
+    {
+      "name": "Tesco PLC",
+      "jurisdiction": "GB",
+      "verdict": "FLAG",
+      "answer": "12 adverse news items naming Tesco PLC in the last 12 months from 12 sources, mainly investigation, criminal, misconduct. Latest: Police launch investigation into burglary at a Tesco Express store in Narborough (Leicester Media Online, 2026-11-06).",
+      "resultCount": 12,
+      "sources": [
+        "Leicester Media Online",
+        "WWD",
+        "Irish Farmers Journal",
+        "Dairy News Today",
+        "Your Thurrock"
+      ],
+      "signal": "0x6423c2e957ea7bce88c1e2f4edb7cefc8441ba7aa88c84e3c73b4dda1b3488f7"
+    },
+    {
+      "name": "Unilever PLC",
+      "jurisdiction": "GB",
+      "verdict": "FLAG",
+      "answer": "12 adverse news items naming Unilever PLC in the last 12 months from 11 sources, mainly litigation, misconduct, investigation. Latest: McCormick/Unilever: SAMR Switches Case Back to Standard Probe from Fast-Track Process, Potentially Extending Review Period (The Capitol Forum, 2026-11-03).",
+      "resultCount": 12,
+      "sources": [
+        "The Capitol Forum",
+        "FreightWaves",
+        "FoodNavigator.com",
+        "FoodBev Media",
+        "New York Post"
+      ],
+      "signal": "0x0a3778785b4810e0f447fd0b49871b34ef5dc83995d2a1bee70390a95166f4e9"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "jurisdiction": "GB",
+      "verdict": "FLAG",
+      "answer": "22 adverse news items naming Vodafone Group PLC in the last 12 months from 19 sources, mainly regulatory action, data breach, misconduct. Latest: Vodafone to unlock Crime + Investigation for all TV customers (Broadband TV News, 2026-11-12).",
+      "resultCount": 22,
+      "sources": [
+        "Broadband TV News",
+        "ABC News & Headlines – Australian Broadcasting Corporation",
+        "DataGuidance",
+        "MLex",
+        "TradingView"
+      ],
+      "signal": "0xb008dbcd77a2296bc926c5c730f87bb03b6a32778721fc29d3468406fc88838e"
+    }
+  ],
+  "payer": "0xb6C90fbAd152A0E61ecD95AD72fB50D2f11237FE",
+  "fundingTx": "0xa93325b67b178597b1d75216789adaeb29128dee14834256686544cca43e55d2",
+  "viaPool": false,
+  "changes": [
+    {
+      "name": "Barclays PLC",
+      "change": "new on watchlist",
+      "verdict": "FLAG"
+    },
+    {
+      "name": "BP P.L.C.",
+      "change": "new on watchlist",
+      "verdict": "CLEAR"
+    },
+    {
+      "name": "Rolls-Royce Holdings PLC",
+      "change": "new on watchlist",
+      "verdict": "FLAG"
+    },
+    {
+      "name": "Tesco PLC",
+      "change": "new on watchlist",
+      "verdict": "FLAG"
+    },
+    {
+      "name": "Unilever PLC",
+      "change": "new on watchlist",
+      "verdict": "FLAG"
+    },
+    {
+      "name": "Vodafone Group PLC",
+      "change": "new on watchlist",
+      "verdict": "FLAG"
+    }
+  ]
+}
