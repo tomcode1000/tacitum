@@ -16,7 +16,6 @@ import { newNote, saveNote, loadNotes, deposit as poolDeposit, approvedLeaves } 
 import { renderMemo } from "./memo.js";
 import { assess as openAssess } from "./assess.js";
 import { monitorRun } from "./monitor.js";
-import { supplierCheck, renderSupplier } from "./supplier.js";
 
 export { createClient, publicRecord } from "./telegraph.js";
 export { privateAssess } from "./private.js";
@@ -134,16 +133,6 @@ export function tacitum({ funder, k = 4, maxPerPaymentUsd = 0.1, maxTotalUsd = 2
       const payer = await freshPayer(fundUsd ?? 0.01 * watchlist.length * k + 0.02, `monitor ${watchlist.length}`);
       const run = await monitorRun(payer.client, watchlist, { k, notBefore: payer.fundedAt + FUNDING_SETTLE_MS });
       return { ...run, payer: payer.account.address, fundingTx: payer.fundingTx, viaPool: Boolean(payer.viaPool) };
-    },
-
-    // Supplier check before payment release: identity, sanctions, TLS, URL safety, FX and the
-    // invoice / PO / acceptance match. Returns APPROVE, HOLD or REVIEW; never moves money.
-    async supplierCheck(c, { fundUsd = 0.18 } = {}) {
-      const payer = await freshPayer(fundUsd, "supplier-check");
-      const wait = payer.fundedAt + FUNDING_SETTLE_MS - Date.now();
-      if (wait > 0) await sleep(wait);
-      const r = await supplierCheck(payer.client, c);
-      return { ...r, payer: payer.account.address, memo: renderSupplier(r) };
     },
 
     // The same assessment with no privacy: what the feed shows today. Useful as a baseline.
