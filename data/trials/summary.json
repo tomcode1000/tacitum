@@ -1,10 +1,10 @@
 {
-  "trials": 0,
-  "updatedAt": "2026-11-19T17:32:54.571Z",
-  "chance": null,
-  "latestDeposit": null,
-  "latestApproval": null,
-  "oldestDeposit": null,
-  "sameRelayer": null,
-  "freshestDepositor": null
+  "trials": 1,
+  "updatedAt": "2026-11-23T12:11:38.294Z",
+  "chance": 0.058823529411764705,
+  "latestDeposit": 1,
+  "latestApproval": 1,
+  "oldestDeposit": 0,
+  "sameRelayer": 0.058823529411764705,
+  "freshestDepositor": 0.058823529411764705
 }

@@ -21,7 +21,7 @@ Telegraph Hackathon Season II, two entries:
 | **Clean by construction** | Every pool depositor is sanctions-screened through Telegraph before their money can be spent; the receipt is on chain with the approval |
 | **Provable to anyone** | Every answer keeps its Telegraph receipt; 6 of 6 verified in the live run |
 | **Open to the auditor** | Each assessment is sealed to an auditor key; the auditor re-checks all 27 claims of the live run against public data |
-| **Tested** | 34 automated tests, run in CI on every push with CodeQL scanning: circuit, Merkle tree, audit envelope, spend caps, screening fallback, watchlist monitor, privacy tracer, headline classifier, and the pool contract on a local chain (deposits, screening, reclaim, withdraw, double spend, bound recipients) |
+| **Tested** | 37 automated tests, run in CI on every push with CodeQL scanning: circuit, Merkle tree, audit envelope, spend caps, screening fallback, watchlist monitor, privacy tracer, headline classifier, and the pool contract on a local chain (deposits, screening, reclaim, withdraw, double spend, bound recipients) |
 
 **Judges:** [EVIDENCE.md](EVIDENCE.md) is a two-minute path with a verify link for every claim. [THREAT-MODEL.md](THREAT-MODEL.md) covers who can learn what, and the mainnet checklist.
 

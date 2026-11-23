@@ -24,7 +24,7 @@ const fundUsd = (0.1 * k).toFixed(2);
 
 const poolInfo = (usePool || reuse) && fs.existsSync("data/pool.json") ? JSON.parse(fs.readFileSync("data/pool.json", "utf8")) : null;
 const payer = reuse ? savedPayer(reuse)
-  : usePool ? await poolPayer(loadAccount(), poolInfo, `private assessment via pool, k=${k}`)
+  : usePool ? await poolPayer(loadAccount(), poolInfo, `private assessment via pool, k=${k}`, { pick: (notes) => notes.filter((n) => !n.trial) })
   : await oneTimePayer(loadAccount(), fundUsd, `private assessment, k=${k}`);
 if (payer.viaPool || (poolInfo && payer.funder?.toLowerCase() === poolInfo.pool.toLowerCase())) {
   payer.viaPool = true;

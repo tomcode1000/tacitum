@@ -59,18 +59,28 @@ export async function escrowBalance(address) {
 // P4: fund a one-time payer from the screened pool instead of from the desk. The relayer sends
 // the withdraw; on chain the payer's escrow deposit comes from the pool contract, and the desk's
 // deposit is one of the approved set. Uses (and spends) the oldest unspent desk note.
-export async function poolPayer(relayer, poolInfo, label = "", { pick = (notes) => notes } = {}) {
+//
+// Timing rule: a deposit is spendable only after enough newer deposits were approved. Spending the
+// newest deposit lets anyone link it to the withdraw (the tracer did exactly this on 23 Nov 2026).
+export const MIN_LATER_DEPOSITS = 3;
+export const hasCover = (leafIndex, total, min = MIN_LATER_DEPOSITS) => leafIndex >= 0 && total - 1 - leafIndex >= min;
+
+export async function poolPayer(relayer, poolInfo, label = "", { pick = (notes) => notes, minLaterDeposits = MIN_LATER_DEPOSITS } = {}) {
   const pool = await import("./pool.js");
   const notes = pick(pool.loadNotes(poolInfo.pool).filter((n) => n.desk));
+  const leaves = await pool.approvedLeaves(poolInfo.pool, poolInfo.deployBlock);
   let note;
+  let waiting = 0;
   for (const n of notes) {
     const used = await publicClient.readContract({ address: poolInfo.pool, abi: pool.poolAbi, functionName: "spent", args: [n.nullifierHash] });
     const ok = await publicClient.readContract({ address: poolInfo.pool, abi: pool.poolAbi, functionName: "approved", args: [n.commitment] });
-    if (!used && ok) { note = n; break; }
+    if (used || !ok) continue;
+    if (hasCover(leaves.findIndex((l) => l.commitment === n.commitment), leaves.length, minLaterDeposits)) { note = n; break; }
+    waiting++;
   }
+  if (!note && waiting) throw new Error(`${waiting} desk note(s) waiting for cover: each needs ${minLaterDeposits} newer approved deposits before it can be spent`);
   if (!note) throw new Error("no approved, unspent desk note in this pool: deposit first");
 
-  const leaves = await pool.approvedLeaves(poolInfo.pool, poolInfo.deployBlock);
   const tree = await pool.Tree.create(leaves.map((l) => l.commitment));
   const leafIndex = leaves.findIndex((l) => l.commitment === note.commitment);
   const key = generatePrivateKey();

@@ -1,0 +1,176 @@
+{
+  "miner": "tacitum-adverse-media",
+  "registration": 5307,
+  "since": "2026-11-17T14:17:52.123Z",
+  "countedAt": "2026-11-23T12:03:51.174Z",
+  "total": 27,
+  "ours": 27,
+  "others": 0,
+  "unknownPayer": 0,
+  "succeeded": 27,
+  "otherPayers": 0,
+  "requests": [
+    {
+      "at": "2026-11-19T17:21:23.068991Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:21:01.914065Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:20:40.543497Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:20:19.617071Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:20:01.122706Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:19:40.799116Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:19:21.886446Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:18:52.736961Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:18:28.568131Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:18:11.77207Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:12:03.066573Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:11:45.84636Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:11:13.094725Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:10:56.390141Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:10:40.791934Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:10:06.958385Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:09:47.522105Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:09:26.365168Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:08:35.692393Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:08:17.451831Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:08:01.562829Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T17:07:41.627796Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T16:53:02.609976Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T16:52:44.284797Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T16:49:19.223696Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-19T16:48:55.880425Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    },
+    {
+      "at": "2026-11-17T14:26:16.568593Z",
+      "status": "success",
+      "ours": true,
+      "routing": "auto"
+    }
+  ]
+}

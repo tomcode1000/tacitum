@@ -1,0 +1,35 @@
+{
+  "startedAt": "2026-11-23T11:54:44.206Z",
+  "pool": "0xff7b916dee345bcba14a732685e50a9dc82de309",
+  "minAgeH": 6,
+  "spend": {
+    "payer": "0x13edcE0Ac852F913d40A709E006c7078090bC7d9",
+    "withdrawTx": "0x8db091ea8ec0b20c304a2329218bc705b32a609a81103005d8e0ef5f9df18d08",
+    "anonymitySet": 17,
+    "depositAgeH": 90.6,
+    "costUsd": 0.22,
+    "parties": 4
+  },
+  "trace": {
+    "withdrawBlock": 12195522,
+    "candidates": 17,
+    "chance": 0.058823529411764705,
+    "latestDeposit": 1,
+    "latestApproval": 1,
+    "oldestDeposit": 0,
+    "sameRelayer": 0.058823529411764705,
+    "freshestDepositor": 0.058823529411764705
+  },
+  "deposit": {
+    "desk": "0x009f11C9cc9E8578e95cf0A210FBDaF8C28746AF",
+    "mintTx": "0x8c1292f1f41ef23a132d1d2f99a4460eaa38394db65cf5c61c8197b2c46370a6",
+    "depositTx": "0xdd9c155e5c1c4704fc204224ed1d2f6c1272132e37655cd65b0738023ba868e5"
+  },
+  "screened": [
+    {
+      "verdict": "approve",
+      "miner": 731002
+    }
+  ],
+  "finishedAt": "2026-11-23T12:11:38.294Z"
+}

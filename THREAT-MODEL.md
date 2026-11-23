@@ -21,6 +21,7 @@ Tacitum keeps everything provable: Telegraph receipts for every answer and a sea
 ## What Tacitum does not protect
 
 - **Timing.** A withdraw followed quickly by payer activity narrows the anonymity set to recent withdrawals. The library waits for funding to settle, but it does not add long random delays.
+- **Spending the newest deposit (found and fixed).** On 23 Nov 2026 our public-data tracer ([src/tracer.js](src/tracer.js)) linked a trial payer to its deposit, out of 17 candidates, because that deposit was the most recent one in the pool ([data/trials/2026-11-23T1154.json](data/trials/2026-11-23T1154.json)). Tacitum now refuses to spend a deposit until at least 3 newer deposits have been approved after it. One trial cannot show the rule is enough: the twice-daily trials keep measuring it.
 - **A small pool.** Privacy grows with the number of approved deposits. On testnet we seeded them ourselves, so the set is honest about mechanics, not about real anonymity.
 - **Weak decoys.** If the caller's `ask()` decoys don't resemble the real question, they hide nothing. `assess()` uses fixed matched cover sets. `ask()` leaves decoy choice to the caller.
 - **The answer itself.** The real target's results are in the public signal record (as are the decoys'). Tacitum hides which one mattered, not the facts.

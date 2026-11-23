@@ -62,7 +62,8 @@ export async function trace(pool, deployBlock, withdrawTx, realCommitment) {
     const d = deps.get(a.args.commitment.toString());
     if (!d) continue;
     const dtx = await publicClient.getTransaction({ hash: d.transactionHash });
-    const depositorNonce = await publicClient.getTransactionCount({ address: d.args.depositor, blockNumber: view.block });
+    // Public RPCs prune old state; the current count is the closest public substitute for an old withdraw.
+    const depositorNonce = await publicClient.getTransactionCount({ address: d.args.depositor, blockNumber: view.block }).catch(() => publicClient.getTransactionCount({ address: d.args.depositor }));
     candidates.push({
       commitment: a.args.commitment.toString(),
       depositor: d.args.depositor,

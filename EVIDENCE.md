@@ -67,7 +67,7 @@ Everything below is on Sepolia testnet against Telegraph's public devnode.
 
 ## Tests
 
-`npm test` runs 34 tests, the same suite as CI ([summary](docs/assets/test-summary.json)). They cover:
+`npm test` runs 37 tests, the same suite as CI ([summary](docs/assets/test-summary.json)). They cover:
 - the withdraw circuit and Merkle tree
 - the audit envelope
 - the spend caps
@@ -80,5 +80,6 @@ Everything below is on Sepolia testnet against Telegraph's public devnode.
 ## What is not proven yet
 
 - **No outside users.** Every request so far was paid by our own wallets. [evidence/miner-usage-2026-11-18.json](evidence/miner-usage-2026-11-18.json) counts them by payer.
+- **Timing leak, found by our own tracer.** On 23 Nov 2026 a trial payer was linked to its deposit because it spent the newest deposit in the pool. A deposit now needs 3 newer approved deposits before it can be spent. See [THREAT-MODEL.md](THREAT-MODEL.md) and [data/trials/](data/trials/).
 - **Self-seeded pool.** We made the deposits that hide the desk ourselves. A real anonymity set needs independent depositors.
 - **Testnet only.** It has not been audited. [THREAT-MODEL.md](THREAT-MODEL.md) lists what would have to change before mainnet.

@@ -21,8 +21,19 @@ for (const sub of ["depositors"]) {
 
 const hits = [];
 for (let page = 0, done = false; !done && page < 400; page++) {
-  const res = await fetch(`${NODE}/daemon/api/questions?limit=100&offset=${page * 100}`);
-  const j = await res.json();
+  // The feed is long and connections drop; a page that cannot be read must stop the count, not skew it.
+  let j;
+  for (let attempt = 1; ; attempt++) {
+    try {
+      const res = await fetch(`${NODE}/daemon/api/questions?limit=100&offset=${page * 100}`, { signal: AbortSignal.timeout(30_000) });
+      if (!res.ok) throw new Error(`feed ${res.status}`);
+      j = await res.json();
+      break;
+    } catch (e) {
+      if (attempt >= 5) throw e;
+      await new Promise((r) => setTimeout(r, 3000 * attempt));
+    }
+  }
   const rows = j.results || [];
   if (!rows.length) break;
   for (const q of rows) {
