@@ -3,7 +3,7 @@
 [![tests](https://github.com/tomcode1000/tacitum/actions/workflows/test.yml/badge.svg)](https://github.com/tomcode1000/tacitum/actions/workflows/test.yml)
 [![test count](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fraw.githubusercontent.com%2Ftomcode1000%2Ftacitum%2Fmain%2Fdocs%2Fassets%2Ftest-summary.json&query=%24.label&label=tests&color=brightgreen)](docs/assets/test-summary.json)
 [![CodeQL](https://github.com/tomcode1000/tacitum/actions/workflows/codeql.yml/badge.svg)](https://github.com/tomcode1000/tacitum/actions/workflows/codeql.yml)
-[![live demo](https://img.shields.io/badge/live%20demo-54--255--109--186.sslip.io-c9a227)](https://54-255-109-186.sslip.io)
+[![live demo](https://img.shields.io/badge/live%20demo-tacitum-c9a227)](https://tacitum.54-255-109-186.sslip.io)
 [![Telegraph](https://img.shields.io/badge/built%20on-Telegraph-1f2937)](https://telegraphprotocol.com)
 [![miner on Anjoman](https://img.shields.io/badge/miner-active%20on%20Anjoman-1f2937)](https://anjoman.ai/dashboard/explore/miners/tacitum-adverse-media)
 

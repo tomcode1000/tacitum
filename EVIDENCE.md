@@ -9,7 +9,7 @@ Everything below is on Sepolia testnet against Telegraph's public devnode.
 ## The two-minute path
 
 1. Read the table at the top of the [README](README.md).
-2. Open the live site: https://54-255-109-186.sslip.io (Live run, then Screened pool).
+2. Open the live site: https://tacitum.54-255-109-186.sslip.io (Live run, then Screened pool).
 3. Pick any one proof below and click its verify link.
 
 ## 1. Every answer is a real, paid Telegraph answer
