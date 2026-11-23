@@ -67,12 +67,13 @@ Everything below is on Sepolia testnet against Telegraph's public devnode.
 
 ## Tests
 
-`npm test` runs 31 tests, the same suite as CI ([summary](docs/assets/test-summary.json)). They cover:
+`npm test` runs 34 tests, the same suite as CI ([summary](docs/assets/test-summary.json)). They cover:
 - the withdraw circuit and Merkle tree
 - the audit envelope
 - the spend caps
 - the screening fallback (a down miner, or an answer without a receipt, never approves a deposit)
 - the watchlist monitor (verdicts, change detection, decoys bought but not reported)
+- the privacy tracer's scoring (the attacker that tries to link a payer to its deposit)
 - the adverse-media classifier
 - the ScreenedPool contract on a local chain: gasless deposits, screener-only approval, refunds, reclaim after 24h, withdraw into escrow, double spend, unknown roots, bound recipients and the fee cap
 
