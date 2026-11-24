@@ -24,7 +24,9 @@ export async function oneTimePayer(funder, amountUsd, label = "") {
   const allowance = await publicClient.readContract({ address: USDC, abi: usdcAbi, functionName: "allowance", args: [funder.address, DIAMOND] });
   if (allowance < amount) {
     // Approve a float once instead of per payer: one fewer transaction from the desk each time.
-    const hash = await wallet.writeContract({ address: USDC, abi: usdcAbi, functionName: "approve", args: [DIAMOND, parseUnits("5", 6)] });
+    // At least the amount needed now: a fixed float smaller than one payment could never be spent.
+    const float = parseUnits("5", 6);
+    const hash = await wallet.writeContract({ address: USDC, abi: usdcAbi, functionName: "approve", args: [DIAMOND, amount > float ? amount : float] });
     await publicClient.waitForTransactionReceipt({ hash, timeout: 600_000 });
   }
 
