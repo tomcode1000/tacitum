@@ -1,0 +1,1002 @@
+[
+ {
+  "id": 1,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "npm",
+  "package": "ws",
+  "version": "8.23.0",
+  "target": "pkg:npm/ws@8.23.0",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 2,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "npm",
+  "package": "tar",
+  "version": "7.5.23",
+  "target": "pkg:npm/tar@7.5.23",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 3,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "pypi",
+  "package": "requests-retry-queue-plus",
+  "version": "1.0.0",
+  "target": "pkg:pypi/requests-retry-queue-plus@1.0.0",
+  "evidence": "package is not on the registry"
+ },
+ {
+  "id": 4,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "pypi",
+  "package": "urllib3",
+  "version": "2.8.0",
+  "target": "Our scanner flags GHSA-vxq7-64xx-v4gw on urllib3 2.8.0 (pypi). Is this exact version affected by that advisory?",
+  "evidence": "2.8.0 is the first fixed version of GHSA-vxq7-64xx-v4gw in OSV"
+ },
+ {
+  "id": 5,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "glob-parent",
+  "version": "5.1.2",
+  "target": "Our scanner flags GHSA-ww39-953v-wcq6 on glob-parent 5.1.2 (npm). Is this exact version affected by that advisory?",
+  "evidence": "5.1.2 is the first fixed version of GHSA-ww39-953v-wcq6 in OSV"
+ },
+ {
+  "id": 6,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "requests",
+  "version": "2.5.3",
+  "target": "pkg:pypi/requests@2.5.3",
+  "evidence": "OSV lists GHSA-pg2w-x9wp-vw92 for this version; fixed in 2.6.0"
+ },
+ {
+  "id": 7,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "crossenv",
+  "version": "1.0.0",
+  "target": "pkg:npm/crossenv@1.0.0",
+  "evidence": "OSV GHSA-c2m4-w5hm-vqjw marks this release as malicious"
+ },
+ {
+  "id": 8,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "pypi",
+  "package": "numpy",
+  "version": "1.16.3",
+  "target": "Our scanner flags GHSA-9fq2-x9r6-wfmf on numpy 1.16.3 (pypi). Is this exact version affected by that advisory?",
+  "evidence": "1.16.3 is the first fixed version of GHSA-9fq2-x9r6-wfmf in OSV"
+ },
+ {
+  "id": 9,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "tar",
+  "version": "7.5.10",
+  "target": "pkg:npm/tar@7.5.10",
+  "evidence": "OSV lists GHSA-9ppj-qmqm-q256 for this version; fixed in 7.5.11"
+ },
+ {
+  "id": 10,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "json5",
+  "version": "2.2.1",
+  "target": "pkg:npm/json5@2.2.1",
+  "evidence": "OSV lists GHSA-9c47-m6qq-7p4h for this version; fixed in 2.2.2"
+ },
+ {
+  "id": 11,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "npm",
+  "package": "semver",
+  "version": "7.8.6",
+  "target": "pkg:npm/semver@7.8.6",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 12,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "cross-env.js",
+  "version": "0.0.1",
+  "target": "pkg:npm/cross-env.js@0.0.1",
+  "evidence": "OSV GHSA-hwhq-3hrj-v6v5 marks this release as malicious"
+ },
+ {
+  "id": 13,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "axios",
+  "version": "1.15.0",
+  "target": "pkg:npm/axios@1.15.0",
+  "evidence": "OSV lists GHSA-pf86-5x62-jrwf for this version; fixed in 1.15.1"
+ },
+ {
+  "id": 14,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "pypi",
+  "package": "requests",
+  "version": "42.0.0",
+  "target": "pkg:pypi/requests@42.0.0",
+  "evidence": "package exists; this version was never published"
+ },
+ {
+  "id": 15,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "pypi",
+  "package": "werkzeug",
+  "version": "0.11.11",
+  "target": "Our scanner flags GHSA-h2fp-xgx6-xh6f on werkzeug 0.11.11 (pypi). Is this exact version affected by that advisory?",
+  "evidence": "0.11.11 is the first fixed version of GHSA-h2fp-xgx6-xh6f in OSV"
+ },
+ {
+  "id": 16,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "npm",
+  "package": "vite-plugin-env-sentry-lite",
+  "version": "1.0.0",
+  "target": "pkg:npm/vite-plugin-env-sentry-lite@1.0.0",
+  "evidence": "package is not on the registry"
+ },
+ {
+  "id": 17,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "pillow",
+  "version": "8.1.0",
+  "target": "pkg:pypi/pillow@8.1.0",
+  "evidence": "OSV lists GHSA-8xjq-8fcg-g5hw for this version; fixed in 8.1.1"
+ },
+ {
+  "id": 18,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "express",
+  "version": "4.19.2",
+  "target": "Our scanner flags GHSA-rv95-896h-c2vc on express 4.19.2 (npm). Is this exact version affected by that advisory?",
+  "evidence": "4.19.2 is the first fixed version of GHSA-rv95-896h-c2vc in OSV"
+ },
+ {
+  "id": 19,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "follow-redirects",
+  "version": "1.14.8",
+  "target": "Our scanner flags GHSA-pw2r-vq6v-hr8c on follow-redirects 1.14.8 (npm). Is this exact version affected by that advisory?",
+  "evidence": "1.14.8 is the first fixed version of GHSA-pw2r-vq6v-hr8c in OSV"
+ },
+ {
+  "id": 20,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "gunicorn",
+  "version": "19.4.5",
+  "target": "pkg:pypi/gunicorn@19.4.5",
+  "evidence": "OSV lists GHSA-32pc-xphx-q4f6 for this version; fixed in 19.5.0"
+ },
+ {
+  "id": 21,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "glob-parent",
+  "version": "5.1.1",
+  "target": "pkg:npm/glob-parent@5.1.1",
+  "evidence": "OSV lists GHSA-ww39-953v-wcq6 for this version; fixed in 5.1.2"
+ },
+ {
+  "id": 22,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "pypi",
+  "package": "openai-retry-wrapper-plus",
+  "version": "1.0.0",
+  "target": "pkg:pypi/openai-retry-wrapper-plus@1.0.0",
+  "evidence": "package is not on the registry"
+ },
+ {
+  "id": 23,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "pypi",
+  "package": "gunicorn",
+  "version": "27.0.1",
+  "target": "pkg:pypi/gunicorn@27.0.1",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 24,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "flask",
+  "version": "0.12.5",
+  "target": "pkg:pypi/flask@0.12.5",
+  "evidence": "OSV lists GHSA-5wv5-4vpf-pj6m for this version; fixed in 1.0"
+ },
+ {
+  "id": 25,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "werkzeug",
+  "version": "0.11.10",
+  "target": "pkg:pypi/werkzeug@0.11.10",
+  "evidence": "OSV lists GHSA-h2fp-xgx6-xh6f for this version; fixed in 0.11.11"
+ },
+ {
+  "id": 26,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "node-ipc",
+  "version": "10.1.1",
+  "target": "pkg:npm/node-ipc@10.1.1",
+  "evidence": "OSV GHSA-97m3-w2cp-4xx6 marks this release as malicious"
+ },
+ {
+  "id": 27,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "pypi",
+  "package": "flask-secure-jwt-helper",
+  "version": "1.0.0",
+  "target": "pkg:pypi/flask-secure-jwt-helper@1.0.0",
+  "evidence": "package is not on the registry"
+ },
+ {
+  "id": 28,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "npm",
+  "package": "shell-quote",
+  "version": "1.12.0",
+  "target": "pkg:npm/shell-quote@1.12.0",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 29,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "npm",
+  "package": "express",
+  "version": "9.9.9",
+  "target": "pkg:npm/express@9.9.9",
+  "evidence": "package exists; this version was never published"
+ },
+ {
+  "id": 30,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "npm",
+  "package": "react-secure-auth-helper",
+  "version": "1.0.0",
+  "target": "pkg:npm/react-secure-auth-helper@1.0.0",
+  "evidence": "package is not on the registry"
+ },
+ {
+  "id": 31,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "paramiko",
+  "version": "2.4.1",
+  "target": "pkg:pypi/paramiko@2.4.1",
+  "evidence": "OSV lists GHSA-f2j6-wrhh-v25m for this version; fixed in 2.4.2"
+ },
+ {
+  "id": 32,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "jsonwebtoken",
+  "version": "9.0.0",
+  "target": "Our scanner flags GHSA-hjrf-2m68-5959 on jsonwebtoken 9.0.0 (npm). Is this exact version affected by that advisory?",
+  "evidence": "9.0.0 is the first fixed version of GHSA-hjrf-2m68-5959 in OSV"
+ },
+ {
+  "id": 33,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "pypi",
+  "package": "gunicorn",
+  "version": "19.5.0",
+  "target": "Our scanner flags GHSA-32pc-xphx-q4f6 on gunicorn 19.5.0 (pypi). Is this exact version affected by that advisory?",
+  "evidence": "19.5.0 is the first fixed version of GHSA-32pc-xphx-q4f6 in OSV"
+ },
+ {
+  "id": 34,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "pypi",
+  "package": "pyyaml",
+  "version": "5.1",
+  "target": "Our scanner flags GHSA-rprw-h62v-c2w7 on pyyaml 5.1 (pypi). Is this exact version affected by that advisory?",
+  "evidence": "5.1 is the first fixed version of GHSA-rprw-h62v-c2w7 in OSV"
+ },
+ {
+  "id": 35,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "tornado",
+  "version": "6.5.10",
+  "target": "pkg:pypi/tornado@6.5.10",
+  "evidence": "OSV lists GHSA-pcg2-g6cj-q92c for this version; fixed in 6.6"
+ },
+ {
+  "id": 36,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "pypi",
+  "package": "sqlparse",
+  "version": "0.6.1",
+  "target": "pkg:pypi/sqlparse@0.6.1",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 37,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "npm",
+  "package": "node-fetch",
+  "version": "3.3.2",
+  "target": "pkg:npm/node-fetch@3.3.2",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 38,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "pypi",
+  "package": "fastapi-session-guard-lite",
+  "version": "1.0.0",
+  "target": "pkg:pypi/fastapi-session-guard-lite@1.0.0",
+  "evidence": "package is not on the registry"
+ },
+ {
+  "id": 39,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "cryptography",
+  "version": "2.2.2",
+  "target": "pkg:pypi/cryptography@2.2.2",
+  "evidence": "OSV lists GHSA-fcf9-3qw3-gxmj for this version; fixed in 2.3"
+ },
+ {
+  "id": 40,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "postcss",
+  "version": "8.5.11",
+  "target": "pkg:npm/postcss@8.5.11",
+  "evidence": "OSV lists GHSA-6g55-p6wh-862q for this version; fixed in 8.5.12"
+ },
+ {
+  "id": 41,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "nanoid",
+  "version": "3.3.16",
+  "target": "Our scanner flags GHSA-28wg-ghj8-5hjv on nanoid 3.3.16 (npm). Is this exact version affected by that advisory?",
+  "evidence": "3.3.16 is the first fixed version of GHSA-28wg-ghj8-5hjv in OSV"
+ },
+ {
+  "id": 42,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "pypi",
+  "package": "flask",
+  "version": "1.0",
+  "target": "Our scanner flags GHSA-5wv5-4vpf-pj6m on flask 1.0 (pypi). Is this exact version affected by that advisory?",
+  "evidence": "1.0 is the first fixed version of GHSA-5wv5-4vpf-pj6m in OSV"
+ },
+ {
+  "id": 43,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "minimist",
+  "version": "1.2.5",
+  "target": "pkg:npm/minimist@1.2.5",
+  "evidence": "OSV lists GHSA-xvch-5gv4-984h for this version; fixed in 1.2.6"
+ },
+ {
+  "id": 44,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "django",
+  "version": "1.11.22",
+  "target": "pkg:pypi/django@1.11.22",
+  "evidence": "OSV lists GHSA-v9qg-3j8p-r63v for this version; fixed in 1.11.23"
+ },
+ {
+  "id": 45,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "pyyaml",
+  "version": "3.13",
+  "target": "pkg:pypi/pyyaml@3.13",
+  "evidence": "OSV lists GHSA-rprw-h62v-c2w7 for this version; fixed in 5.1"
+ },
+ {
+  "id": 46,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "npm",
+  "package": "moment",
+  "version": "2.31.0",
+  "target": "pkg:npm/moment@2.31.0",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 47,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "scrapy",
+  "version": "2.11.0",
+  "target": "pkg:pypi/scrapy@2.11.0",
+  "evidence": "OSV lists GHSA-cc65-xxvf-f7r9 for this version; fixed in 2.11.1"
+ },
+ {
+  "id": 48,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "pypi",
+  "package": "sqlalchemy-soft-delete-kit",
+  "version": "1.0.0",
+  "target": "pkg:pypi/sqlalchemy-soft-delete-kit@1.0.0",
+  "evidence": "package is not on the registry"
+ },
+ {
+  "id": 49,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "aiohttp",
+  "version": "3.8.4",
+  "target": "pkg:pypi/aiohttp@3.8.4",
+  "evidence": "OSV lists GHSA-45c4-8wx5-qw6w for this version; fixed in 3.8.5"
+ },
+ {
+  "id": 50,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "ua-parser-js",
+  "version": "0.7.29",
+  "target": "pkg:npm/ua-parser-js@0.7.29",
+  "evidence": "OSV GHSA-pjwm-rvh2-c87w marks this release as malicious"
+ },
+ {
+  "id": 51,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "npm",
+  "package": "next-auth-session-guard",
+  "version": "1.0.0",
+  "target": "pkg:npm/next-auth-session-guard@1.0.0",
+  "evidence": "package is not on the registry"
+ },
+ {
+  "id": 52,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "jquery",
+  "version": "1.6.3",
+  "target": "Our scanner flags GHSA-579v-mp3v-rrw5 on jquery 1.6.3 (npm). Is this exact version affected by that advisory?",
+  "evidence": "1.6.3 is the first fixed version of GHSA-579v-mp3v-rrw5 in OSV"
+ },
+ {
+  "id": 53,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "pypi",
+  "package": "sqlparse",
+  "version": "0.5.4",
+  "target": "Our scanner flags GHSA-27jp-wm6q-gp25 on sqlparse 0.5.4 (pypi). Is this exact version affected by that advisory?",
+  "evidence": "0.5.4 is the first fixed version of GHSA-27jp-wm6q-gp25 in OSV"
+ },
+ {
+  "id": 54,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "node-fetch",
+  "version": "2.6.1",
+  "target": "Our scanner flags GHSA-w7rc-rwvf-8q5r on node-fetch 2.6.1 (npm). Is this exact version affected by that advisory?",
+  "evidence": "2.6.1 is the first fixed version of GHSA-w7rc-rwvf-8q5r in OSV"
+ },
+ {
+  "id": 55,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "loadyaml",
+  "version": "1.0.0",
+  "target": "pkg:npm/loadyaml@1.0.0",
+  "evidence": "OSV GHSA-mfc2-93pr-jf92 marks this release as malicious"
+ },
+ {
+  "id": 56,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "rc",
+  "version": "1.2.9",
+  "target": "pkg:npm/rc@1.2.9",
+  "evidence": "OSV GHSA-g2q5-5433-rhrf marks this release as malicious"
+ },
+ {
+  "id": 57,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "pypi",
+  "package": "aiohttp",
+  "version": "3.8.5",
+  "target": "Our scanner flags GHSA-45c4-8wx5-qw6w on aiohttp 3.8.5 (pypi). Is this exact version affected by that advisory?",
+  "evidence": "3.8.5 is the first fixed version of GHSA-45c4-8wx5-qw6w in OSV"
+ },
+ {
+  "id": 58,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "flatmap-stream",
+  "version": "0.1.1",
+  "target": "pkg:npm/flatmap-stream@0.1.1",
+  "evidence": "OSV GHSA-9x64-5r7x-2q53 marks this release as malicious"
+ },
+ {
+  "id": 59,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "pypi",
+  "package": "django",
+  "version": "99.0",
+  "target": "pkg:pypi/django@99.0",
+  "evidence": "package exists; this version was never published"
+ },
+ {
+  "id": 60,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "pypi",
+  "package": "django",
+  "version": "1.11.23",
+  "target": "Our scanner flags GHSA-v9qg-3j8p-r63v on django 1.11.23 (pypi). Is this exact version affected by that advisory?",
+  "evidence": "1.11.23 is the first fixed version of GHSA-v9qg-3j8p-r63v in OSV"
+ },
+ {
+  "id": 61,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "tar",
+  "version": "7.5.11",
+  "target": "Our scanner flags GHSA-9ppj-qmqm-q256 on tar 7.5.11 (npm). Is this exact version affected by that advisory?",
+  "evidence": "7.5.11 is the first fixed version of GHSA-9ppj-qmqm-q256 in OSV"
+ },
+ {
+  "id": 62,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "semver",
+  "version": "4.3.2",
+  "target": "Our scanner flags GHSA-x6fg-f45m-jf5q on semver 4.3.2 (npm). Is this exact version affected by that advisory?",
+  "evidence": "4.3.2 is the first fixed version of GHSA-x6fg-f45m-jf5q in OSV"
+ },
+ {
+  "id": 63,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "sqlparse",
+  "version": "0.5.3",
+  "target": "pkg:pypi/sqlparse@0.5.3",
+  "evidence": "OSV lists GHSA-27jp-wm6q-gp25 for this version; fixed in 0.5.4"
+ },
+ {
+  "id": 64,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "pypi",
+  "package": "jinja2",
+  "version": "3.1.6",
+  "target": "pkg:pypi/jinja2@3.1.6",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 65,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "npm",
+  "package": "ansi-regex",
+  "version": "6.6.0",
+  "target": "pkg:npm/ansi-regex@6.6.0",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 66,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "discord.dll",
+  "version": "1.0.0",
+  "target": "pkg:npm/discord.dll@1.0.0",
+  "evidence": "OSV MAL-2025-18479 marks this release as malicious"
+ },
+ {
+  "id": 67,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "marked",
+  "version": "4.0.9",
+  "target": "pkg:npm/marked@4.0.9",
+  "evidence": "OSV lists GHSA-rrrm-qjm4-v8hf for this version; fixed in 4.0.10"
+ },
+ {
+  "id": 68,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "moment",
+  "version": "2.29.1",
+  "target": "pkg:npm/moment@2.29.1",
+  "evidence": "OSV lists GHSA-8hfj-j24r-96c4 for this version; fixed in 2.29.2"
+ },
+ {
+  "id": 69,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "pypi",
+  "package": "flask",
+  "version": "99.1.0",
+  "target": "pkg:pypi/flask@99.1.0",
+  "evidence": "package exists; this version was never published"
+ },
+ {
+  "id": 70,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "pypi",
+  "package": "lxml",
+  "version": "4.6.3",
+  "target": "Our scanner flags GHSA-jq4v-f5q6-mjqq on lxml 4.6.3 (pypi). Is this exact version affected by that advisory?",
+  "evidence": "4.6.3 is the first fixed version of GHSA-jq4v-f5q6-mjqq in OSV"
+ },
+ {
+  "id": 71,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "coa",
+  "version": "2.0.3",
+  "target": "pkg:npm/coa@2.0.3",
+  "evidence": "OSV GHSA-73qr-pfmq-6rp8 marks this release as malicious"
+ },
+ {
+  "id": 72,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "npm",
+  "package": "axios",
+  "version": "1.21.1",
+  "target": "pkg:npm/axios@1.21.1",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 73,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "vite",
+  "version": "6.2.6",
+  "target": "Our scanner flags GHSA-356w-63v5-8wf4 on vite 6.2.6 (npm). Is this exact version affected by that advisory?",
+  "evidence": "6.2.6 is the first fixed version of GHSA-356w-63v5-8wf4 in OSV"
+ },
+ {
+  "id": 74,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "getcookies",
+  "version": "1.0.0",
+  "target": "pkg:npm/getcookies@1.0.0",
+  "evidence": "OSV GHSA-3cjv-4phw-gvvv marks this release as malicious"
+ },
+ {
+  "id": 75,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "pypi",
+  "package": "django",
+  "version": "6.1.3",
+  "target": "pkg:pypi/django@6.1.3",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 76,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "pypi",
+  "package": "django-rest-auth-guard",
+  "version": "1.0.0",
+  "target": "pkg:pypi/django-rest-auth-guard@1.0.0",
+  "evidence": "package is not on the registry"
+ },
+ {
+  "id": 77,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "eslint-scope",
+  "version": "3.7.2",
+  "target": "pkg:npm/eslint-scope@3.7.2",
+  "evidence": "OSV GHSA-hxxf-q3w9-4xgw marks this release as malicious"
+ },
+ {
+  "id": 78,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "fallguys",
+  "version": "1.0.0",
+  "target": "pkg:npm/fallguys@1.0.0",
+  "evidence": "OSV MAL-2025-20210 marks this release as malicious"
+ },
+ {
+  "id": 79,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "node-fetch",
+  "version": "2.6.0",
+  "target": "pkg:npm/node-fetch@2.6.0",
+  "evidence": "OSV lists GHSA-w7rc-rwvf-8q5r for this version; fixed in 2.6.1"
+ },
+ {
+  "id": 80,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "ejs",
+  "version": "2.5.4",
+  "target": "pkg:npm/ejs@2.5.4",
+  "evidence": "OSV lists GHSA-3w5v-p54c-f74x for this version; fixed in 2.5.5"
+ },
+ {
+  "id": 81,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "pypi",
+  "package": "setuptools",
+  "version": "84.2.1",
+  "target": "pkg:pypi/setuptools@84.2.1",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 82,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "pypi",
+  "package": "cryptography",
+  "version": "50.0.2",
+  "target": "pkg:pypi/cryptography@50.0.2",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 83,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "serialize-javascript",
+  "version": "7.0.4",
+  "target": "pkg:npm/serialize-javascript@7.0.4",
+  "evidence": "OSV lists GHSA-qj8w-gfj5-8c6v for this version; fixed in 7.0.5"
+ },
+ {
+  "id": 84,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "express",
+  "version": "4.19.1",
+  "target": "pkg:npm/express@4.19.1",
+  "evidence": "OSV lists GHSA-rv95-896h-c2vc for this version; fixed in 4.19.2"
+ },
+ {
+  "id": 85,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "pypi",
+  "package": "ctx",
+  "version": "0.2.2",
+  "target": "pkg:pypi/ctx@0.2.2",
+  "evidence": "OSV GHSA-67r3-h899-9w95 marks this release as malicious"
+ },
+ {
+  "id": 86,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "electorn",
+  "version": "1.0.0",
+  "target": "pkg:npm/electorn@1.0.0",
+  "evidence": "OSV GHSA-38hx-3542-8fh3 marks this release as malicious"
+ },
+ {
+  "id": 87,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "certifi",
+  "version": "2023.5.7",
+  "target": "pkg:pypi/certifi@2023.5.7",
+  "evidence": "OSV lists GHSA-xqr8-7jwr-rhp7 for this version; fixed in 2023.7.22"
+ },
+ {
+  "id": 88,
+  "category": "malicious",
+  "label": "malicious",
+  "ecosystem": "npm",
+  "package": "twilio-npm",
+  "version": "1.0.1",
+  "target": "pkg:npm/twilio-npm@1.0.1",
+  "evidence": "OSV MAL-2025-37375 marks this release as malicious"
+ },
+ {
+  "id": 89,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "npm",
+  "package": "axios",
+  "version": "42.0.0",
+  "target": "pkg:npm/axios@42.0.0",
+  "evidence": "package exists; this version was never published"
+ },
+ {
+  "id": 90,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "semver",
+  "version": "4.3.1",
+  "target": "pkg:npm/semver@4.3.1",
+  "evidence": "OSV lists GHSA-x6fg-f45m-jf5q for this version; fixed in 4.3.2"
+ },
+ {
+  "id": 91,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "shell-quote",
+  "version": "1.10.0",
+  "target": "pkg:npm/shell-quote@1.10.0",
+  "evidence": "OSV lists GHSA-pqg4-j6r4-53mv for this version; fixed in 1.11.0"
+ },
+ {
+  "id": 92,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "npm",
+  "package": "jsonwebtoken",
+  "version": "8.5.1",
+  "target": "pkg:npm/jsonwebtoken@8.5.1",
+  "evidence": "OSV lists GHSA-hjrf-2m68-5959 for this version; fixed in 9.0.0"
+ },
+ {
+  "id": 93,
+  "category": "current_clean",
+  "label": "no_known_issue",
+  "ecosystem": "npm",
+  "package": "vite",
+  "version": "8.3.8",
+  "target": "pkg:npm/vite@8.3.8",
+  "evidence": "latest registry release; OSV lists no advisory for it"
+ },
+ {
+  "id": 94,
+  "category": "known_vulnerable",
+  "label": "vulnerable",
+  "ecosystem": "pypi",
+  "package": "jinja2",
+  "version": "2.7.1",
+  "target": "pkg:pypi/jinja2@2.7.1",
+  "evidence": "OSV lists GHSA-8r7q-cvjq-x353 for this version; fixed in 2.7.2"
+ },
+ {
+  "id": 95,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "ansi-regex",
+  "version": "6.0.1",
+  "target": "Our scanner flags GHSA-93q8-gq69-wqmw on ansi-regex 6.0.1 (npm). Is this exact version affected by that advisory?",
+  "evidence": "6.0.1 is the first fixed version of GHSA-93q8-gq69-wqmw in OSV"
+ },
+ {
+  "id": 96,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "pypi",
+  "package": "twisted",
+  "version": "19.2.1",
+  "target": "Our scanner flags GHSA-6cc5-2vg4-cc7m on twisted 19.2.1 (pypi). Is this exact version affected by that advisory?",
+  "evidence": "19.2.1 is the first fixed version of GHSA-6cc5-2vg4-cc7m in OSV"
+ },
+ {
+  "id": 97,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "minimist",
+  "version": "1.2.6",
+  "target": "Our scanner flags GHSA-xvch-5gv4-984h on minimist 1.2.6 (npm). Is this exact version affected by that advisory?",
+  "evidence": "1.2.6 is the first fixed version of GHSA-xvch-5gv4-984h in OSV"
+ },
+ {
+  "id": 98,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "ejs",
+  "version": "2.5.5",
+  "target": "Our scanner flags GHSA-3w5v-p54c-f74x on ejs 2.5.5 (npm). Is this exact version affected by that advisory?",
+  "evidence": "2.5.5 is the first fixed version of GHSA-3w5v-p54c-f74x in OSV"
+ },
+ {
+  "id": 99,
+  "category": "scanner_false_alarm",
+  "label": "not_affected",
+  "ecosystem": "npm",
+  "package": "moment",
+  "version": "2.29.2",
+  "target": "Our scanner flags GHSA-8hfj-j24r-96c4 on moment 2.29.2 (npm). Is this exact version affected by that advisory?",
+  "evidence": "2.29.2 is the first fixed version of GHSA-8hfj-j24r-96c4 in OSV"
+ },
+ {
+  "id": 100,
+  "category": "does_not_exist",
+  "label": "does_not_exist",
+  "ecosystem": "npm",
+  "package": "fastify-rate-guard-core",
+  "version": "1.0.0",
+  "target": "pkg:npm/fastify-rate-guard-core@1.0.0",
+  "evidence": "package is not on the registry"
+ }
+]

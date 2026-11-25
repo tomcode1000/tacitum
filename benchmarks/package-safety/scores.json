@@ -1,0 +1,87 @@
+{
+ "scoredAt": "2026-11-25T09:27:16.644Z",
+ "replies": 500,
+ "cases": 100,
+ "table": [
+  {
+   "miner": "a1-preflight",
+   "answered": 100,
+   "decisionPct": 100,
+   "exactPct": 98,
+   "falseSafe": 0,
+   "falseAlarm": 0,
+   "noUsableAnswer": 0,
+   "byCategory": {
+    "no_known_issue": "15/15",
+    "does_not_exist": "15/15",
+    "not_affected": "23/25",
+    "vulnerable": "30/30",
+    "malicious": "15/15"
+   }
+  },
+  {
+   "miner": "salence",
+   "answered": 100,
+   "decisionPct": 83,
+   "exactPct": 68,
+   "falseSafe": 17,
+   "falseAlarm": 0,
+   "noUsableAnswer": 0,
+   "byCategory": {
+    "no_known_issue": "15/15",
+    "does_not_exist": "0/15",
+    "not_affected": "23/25",
+    "vulnerable": "30/30",
+    "malicious": "0/15"
+   }
+  },
+  {
+   "miner": "txlens",
+   "answered": 100,
+   "decisionPct": 60,
+   "exactPct": 40,
+   "falseSafe": 28,
+   "falseAlarm": 5,
+   "noUsableAnswer": 7,
+   "byCategory": {
+    "no_known_issue": "9/15",
+    "does_not_exist": "0/15",
+    "not_affected": "6/25",
+    "vulnerable": "19/30",
+    "malicious": "6/15"
+   }
+  },
+  {
+   "miner": "livecert",
+   "answered": 100,
+   "decisionPct": 48,
+   "exactPct": 30,
+   "falseSafe": 42,
+   "falseAlarm": 10,
+   "noUsableAnswer": 0,
+   "byCategory": {
+    "no_known_issue": "7/15",
+    "does_not_exist": "0/15",
+    "not_affected": "4/25",
+    "vulnerable": "19/30",
+    "malicious": "0/15"
+   }
+  },
+  {
+   "miner": "chainsight-oracle",
+   "answered": 100,
+   "decisionPct": 0,
+   "exactPct": 0,
+   "falseSafe": 0,
+   "falseAlarm": 0,
+   "noUsableAnswer": 100,
+   "byCategory": {
+    "no_known_issue": "0/15",
+    "does_not_exist": "0/15",
+    "not_affected": "0/25",
+    "vulnerable": "0/30",
+    "malicious": "0/15"
+   }
+  }
+ ]
+}

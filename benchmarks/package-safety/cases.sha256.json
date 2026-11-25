@@ -1,0 +1,18 @@
+{
+ "sha256": "f2214daa82681449e2c8133a887a56e523e182116284e1bbe08c8c1434238b7e",
+ "frozenAt": "2026-11-23T16:14:01.030Z",
+ "total": 100,
+ "counts": {
+  "current_clean": 15,
+  "does_not_exist": 15,
+  "scanner_false_alarm": 25,
+  "known_vulnerable": 30,
+  "malicious": 15
+ },
+ "seed": "tacitum-package-safety-v1",
+ "sources": [
+  "api.osv.dev",
+  "registry.npmjs.org",
+  "pypi.org"
+ ]
+}
