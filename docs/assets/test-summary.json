@@ -1,10 +1,10 @@
 {
-  "tests": 37,
-  "passed": 37,
+  "tests": 70,
+  "passed": 70,
   "failed": 0,
-  "files": 9,
-  "generatedAt": "2026-11-23T12:42:53.712Z",
+  "files": 10,
+  "generatedAt": "2026-11-27T22:50:50.096Z",
   "node": "v22.19.0",
-  "label": "37 passing",
+  "label": "70 passing",
   "color": "brightgreen"
 }

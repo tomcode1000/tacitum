@@ -1,0 +1,258 @@
+{
+ "summary": {
+  "ranAt": "2026-11-27T22:40:19.125Z",
+  "pools": 21,
+  "asks": 458,
+  "answered": 14,
+  "declined": 7,
+  "vsGeckoTerminal": {
+   "poolsWithTruth": 13,
+   "answered": 12,
+   "within2pct": 12,
+   "within5pct": 12,
+   "within10pct": 12,
+   "declinedWhereTruthExists": 1,
+   "medianErrPct": 0.13
+  },
+  "poolsNoMinerAnswered": {
+   "pools": 10,
+   "asks": 402,
+   "nowAnswered": 3,
+   "asksNowAnswered": 230,
+   "nowDeclinedWithReason": 7
+  }
+ },
+ "rows": [
+  {
+   "pool": "8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo",
+   "asks": 216,
+   "okOnFeed": 0,
+   "dex": "BisonFi",
+   "ours": 4183073.43831,
+   "route_verified": false,
+   "decline": null,
+   "gecko": null,
+   "relErr": null
+  },
+  {
+   "pool": "9mzt81moHM2tCkFzWxETM4ztTnhjzWt4e1iMrZBf29NP",
+   "asks": 52,
+   "okOnFeed": 0,
+   "dex": null,
+   "ours": null,
+   "route_verified": null,
+   "decline": "reserves_not_attributable",
+   "gecko": null,
+   "relErr": null
+  },
+  {
+   "pool": "5ZWCKP2E8LqTUmo98xhq1YELjcqvxpNsv4xfzVbKGswc",
+   "asks": 52,
+   "okOnFeed": 0,
+   "dex": null,
+   "ours": null,
+   "route_verified": null,
+   "decline": "reserves_not_attributable",
+   "gecko": null,
+   "relErr": null
+  },
+  {
+   "pool": "H7o7KCr5n3whqcPsPkeCPWrzivKrarqzidD3kt8fijvB",
+   "asks": 48,
+   "okOnFeed": 0,
+   "dex": null,
+   "ours": null,
+   "route_verified": null,
+   "decline": "reserves_not_attributable",
+   "gecko": null,
+   "relErr": null
+  },
+  {
+   "pool": "C8Gr6AUuq9hEdSYJzoEpNcdjpojPZwqG5MtQbeouNNwg",
+   "asks": 17,
+   "okOnFeed": 17,
+   "dex": "Meteora DLMM",
+   "ours": 1647571.467654,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 1648431.2376,
+   "relErr": 0.0005215685837474408
+  },
+  {
+   "pool": "7ecvmhGKVcK4SgxeGQJG6yVwVAhbQxLrBuaMoUmpRZ6i",
+   "asks": 14,
+   "okOnFeed": 0,
+   "dex": null,
+   "ours": null,
+   "route_verified": null,
+   "decline": "reserves_not_attributable",
+   "gecko": null,
+   "relErr": null
+  },
+  {
+   "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+   "asks": 11,
+   "okOnFeed": 11,
+   "dex": "Whirlpool",
+   "ours": 18045677.167173,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 18064517.004,
+   "relErr": 0.001042919488123086
+  },
+  {
+   "pool": "23XoPQqGw9WMsLoqTu8HMzJLD6RnXsufbKyWPLJywsCT",
+   "asks": 8,
+   "okOnFeed": 0,
+   "dex": "Byreal",
+   "ours": 1056181.691957,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 1054665.6262,
+   "relErr": 0.0014374847528333028
+  },
+  {
+   "pool": "FJnaiidSLXFweWkgbinxEHRykVHsnkzDcYbNDR3RF5LN",
+   "asks": 6,
+   "okOnFeed": 0,
+   "dex": "BisonFi",
+   "ours": 1146768.461173,
+   "route_verified": false,
+   "decline": null,
+   "gecko": null,
+   "relErr": null
+  },
+  {
+   "pool": "5zpyutJu9ee6jFymDGoK7F6S5Kczqtc9FomP3ueKuyA9",
+   "asks": 5,
+   "okOnFeed": 5,
+   "dex": "Whirlpool",
+   "ours": 214190.730253,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 214426.5313,
+   "relErr": 0.00109968223414532
+  },
+  {
+   "pool": "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz",
+   "asks": 5,
+   "okOnFeed": 5,
+   "dex": "Whirlpool",
+   "ours": 500302.490758,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 501268.228,
+   "relErr": 0.0019265877788687674
+  },
+  {
+   "pool": "31p1hptjhFo6ZD8oBqkfutNXQKGGPyi7YcEAfsyKW777",
+   "asks": 4,
+   "okOnFeed": 4,
+   "dex": "Meteora DLMM",
+   "ours": 195967.408394,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 195754.7371,
+   "relErr": 0.0010864171010653912
+  },
+  {
+   "pool": "Hp53XEtt4S8SvPCXarsLSdGfZBuUr5mMmZmX2DRNXQKp",
+   "asks": 4,
+   "okOnFeed": 4,
+   "dex": "Whirlpool",
+   "ours": 3983506.499619,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 3993148.9775,
+   "relErr": 0.002414755356069084
+  },
+  {
+   "pool": "8EzbUfvcRT1Q6RL462ekGkgqbxsPmwC5FMLQZhSPMjJ3",
+   "asks": 3,
+   "okOnFeed": 3,
+   "dex": "Raydium CLMM",
+   "ours": 555288.505272,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 556333.4953,
+   "relErr": 0.00187835181025091
+  },
+  {
+   "pool": "Etb72AHGeCAcD72s3PVtzdQGnkYNd2ny4ULb6YgKi58",
+   "asks": 2,
+   "okOnFeed": 0,
+   "dex": null,
+   "ours": null,
+   "route_verified": null,
+   "decline": "reserves_not_attributable",
+   "gecko": 468969.0649,
+   "relErr": null
+  },
+  {
+   "pool": "4ba9bguTo7HbXFopJHaNMh8iAyApFpyQPgoufj3cSnyt",
+   "asks": 2,
+   "okOnFeed": 0,
+   "dex": null,
+   "ours": null,
+   "route_verified": null,
+   "decline": "reserves_not_attributable",
+   "gecko": null,
+   "relErr": null
+  },
+  {
+   "pool": "BZtgQEyS6eXUXicYPHecYQ7PybqodXQMvkjUbP4R8mUU",
+   "asks": 2,
+   "okOnFeed": 2,
+   "dex": "Raydium CLMM",
+   "ours": 1993523.128417,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 1993954.0275,
+   "relErr": 0.00021610281734549275
+  },
+  {
+   "pool": "BCDdHonby65iduz3Ev3c9v5XjNkzyu5e56KRFHpBM4T9",
+   "asks": 2,
+   "okOnFeed": 2,
+   "dex": "Raydium CLMM",
+   "ours": 9910787.897652,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 9934551.237,
+   "relErr": 0.002391989208279076
+  },
+  {
+   "pool": "8phK65jxmTPEN158xLgSr4oZvssw9SyTErpNZj3g7px4",
+   "asks": 2,
+   "okOnFeed": 2,
+   "dex": "Whirlpool",
+   "ours": 413852.424483,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 414040.876,
+   "relErr": 0.00045515196185600646
+  },
+  {
+   "pool": "Gb7m4daakbVbrFLR33FKMDVMHAprRZ66CSYt4bpFwUgS",
+   "asks": 2,
+   "okOnFeed": 0,
+   "dex": null,
+   "ours": null,
+   "route_verified": null,
+   "decline": "reserves_not_attributable",
+   "gecko": null,
+   "relErr": null
+  },
+  {
+   "pool": "58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2",
+   "asks": 1,
+   "okOnFeed": 1,
+   "dex": "Raydium",
+   "ours": 14434828.747082,
+   "route_verified": true,
+   "decline": null,
+   "gecko": 14453516.1056,
+   "relErr": 0.0012929281969498365
+  }
+ ]
+}

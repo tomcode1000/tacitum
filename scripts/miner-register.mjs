@@ -1,5 +1,5 @@
-// Registers the Tacitum adverse-media miner on the Telegraph Diamond (Sepolia).
-// Usage: node scripts/miner-register.mjs [--dry]
+// Registers a Tacitum miner (adverse-media or pool-depth) on the Telegraph Diamond (Sepolia).
+// Usage: node scripts/miner-register.mjs [--dry] [--miner adverse|depth]   (default adverse)
 // Steps: check the hosted YAML matches miner/public/miner.yaml, pay the bond in whatever token the
 // Diamond names (USDC since the 17 Nov 2026 Diamond; MACHINA before), simulate, send, and read the
 // registration id from the transaction's own logs (a simulated id can be taken by someone else
@@ -9,10 +9,12 @@ import { createHash } from "node:crypto";
 import { parseAbi, formatUnits, zeroAddress } from "viem";
 import { USDC, DIAMOND, publicClient, walletClient, loadAccount } from "./config.mjs";
 
+import { MINERS } from "./miners.mjs";
 const DRY = process.argv.includes("--dry");
-const rec = fs.existsSync("data/miner.json") ? JSON.parse(fs.readFileSync("data/miner.json", "utf8")) : {};
-const YAML_URL = rec.yamlUrl || "https://adverse.54-255-109-186.sslip.io/miner.yaml";
-const INTENTS = ["NEWS_SEARCH_GENERAL"];
+const M = MINERS[process.argv[process.argv.indexOf("--miner") + 1]] ?? MINERS.adverse;
+const rec = fs.existsSync(M.record) ? JSON.parse(fs.readFileSync(M.record, "utf8")) : {};
+const YAML_URL = rec.yamlUrl || M.yamlUrl;
+const INTENTS = M.intents;
 const MIN_PRICE = 10000n; // $0.01
 
 const erc20 = parseAbi(["function balanceOf(address) view returns (uint256)", "function approve(address,uint256) returns (bool)", "function allowance(address,address) view returns (uint256)"]);
@@ -32,9 +34,9 @@ const wait = async (hash) => {
 };
 
 // 1. The hosted YAML must be byte-identical to the repo copy (the hash is what goes on chain).
-const local = fs.readFileSync("miner/public/miner.yaml");
+const local = fs.readFileSync(M.yamlFile);
 const hosted = Buffer.from(await (await fetch(YAML_URL)).arrayBuffer());
-if (!hosted.equals(local)) throw new Error(`hosted YAML at ${YAML_URL} differs from miner/public/miner.yaml: deploy first`);
+if (!hosted.equals(local)) throw new Error(`hosted YAML at ${YAML_URL} differs from ${M.yamlFile}: deploy first`);
 const yamlHash = `0x${createHash("sha256").update(local).digest("hex")}`;
 console.log(`yaml ${YAML_URL} sha256 ${yamlHash}`);
 
@@ -67,4 +69,4 @@ const ours = r.logs.filter((l) => l.address.toLowerCase() === DIAMOND.toLowerCas
 const registrationId = Number(ours.length ? ours.reduce((a, b) => (b > a ? b : a)) : sim.result);
 console.log(`registered: registrationId ${registrationId}, tx ${tx}, block ${r.blockNumber}`);
 const history = [...(rec.history || []), ...(rec.registrationId ? [{ registrationId: rec.registrationId, yamlHash: rec.yamlHash, tx: rec.tx, diamond: rec.diamond || "0x3624EB012B5E998BB57B6bE6C9Cfc9c4bc5eb99b" }] : [])];
-fs.writeFileSync("data/miner.json", JSON.stringify({ registrationId, slug: "tacitum-adverse-media", id: 7314402, diamond: DIAMOND, yamlUrl: YAML_URL, yamlHash, intents: INTENTS, minPriceUsdc: Number(MIN_PRICE), tx, registeredAt: new Date().toISOString(), history }, null, 2));
+fs.writeFileSync(M.record, JSON.stringify({ registrationId, slug: M.slug, id: M.id, diamond: DIAMOND, yamlUrl: YAML_URL, yamlHash, intents: INTENTS, minPriceUsdc: Number(MIN_PRICE), tx, registeredAt: new Date().toISOString(), history }, null, 2));

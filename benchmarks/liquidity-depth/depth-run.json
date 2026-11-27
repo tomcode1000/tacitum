@@ -1,0 +1,196 @@
+{
+ "at": "2026-11-27T15:18:38.092Z",
+ "results": [
+  {
+   "pool": "8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo",
+   "dex": "BisonFi",
+   "asks": 216,
+   "vaultsFound": 8,
+   "top2": [
+    {
+     "mint": "EPjFWd",
+     "amount": 2679760,
+     "usd": 2678742,
+     "how": "owned-by-pool"
+    },
+    {
+     "mint": "So1111",
+     "amount": 21030,
+     "usd": 1499785,
+     "how": "owned-by-pool"
+    }
+   ],
+   "oursUsd": 4178527,
+   "geckoterminalUsd": null,
+   "dexscreenerUsd": null
+  },
+  {
+   "pool": "9mzt81moHM2tCkFzWxETM4ztTnhjzWt4e1iMrZBf29NP",
+   "dex": "Scorch",
+   "asks": 52,
+   "vaultsFound": 2,
+   "top2": [
+    {
+     "mint": "EPjFWd",
+     "amount": 976520,
+     "usd": 976159,
+     "how": "referenced-in-pool"
+    },
+    {
+     "mint": "JUPyiw",
+     "amount": 384167,
+     "usd": 94315,
+     "how": "referenced-in-pool"
+    }
+   ],
+   "oursUsd": 1070474,
+   "geckoterminalUsd": null,
+   "dexscreenerUsd": null
+  },
+  {
+   "pool": "5ZWCKP2E8LqTUmo98xhq1YELjcqvxpNsv4xfzVbKGswc",
+   "dex": "Scorch",
+   "asks": 52,
+   "vaultsFound": 2,
+   "top2": [
+    {
+     "mint": "EPjFWd",
+     "amount": 986678,
+     "usd": 986314,
+     "how": "referenced-in-pool"
+    },
+    {
+     "mint": "DezXAZ",
+     "amount": 26810468561,
+     "usd": 56861,
+     "how": "referenced-in-pool"
+    }
+   ],
+   "oursUsd": 1043175,
+   "geckoterminalUsd": null,
+   "dexscreenerUsd": null
+  },
+  {
+   "pool": "H7o7KCr5n3whqcPsPkeCPWrzivKrarqzidD3kt8fijvB",
+   "dex": "Deriverse",
+   "asks": 48,
+   "vaultsFound": 0,
+   "top2": [],
+   "oursUsd": 0,
+   "geckoterminalUsd": null,
+   "dexscreenerUsd": null
+  },
+  {
+   "pool": "7ecvmhGKVcK4SgxeGQJG6yVwVAhbQxLrBuaMoUmpRZ6i",
+   "dex": "Manifest",
+   "asks": 14,
+   "vaultsFound": 2,
+   "top2": [
+    {
+     "mint": "J1toso",
+     "amount": 6264,
+     "usd": 585037,
+     "how": "referenced-in-pool"
+    },
+    {
+     "mint": "So1111",
+     "amount": 4614,
+     "usd": 327754,
+     "how": "referenced-in-pool"
+    }
+   ],
+   "oursUsd": 912790,
+   "geckoterminalUsd": null,
+   "dexscreenerUsd": null
+  },
+  {
+   "pool": "23XoPQqGw9WMsLoqTu8HMzJLD6RnXsufbKyWPLJywsCT",
+   "dex": "Byreal",
+   "asks": 8,
+   "vaultsFound": 2,
+   "top2": [
+    {
+     "mint": "Es9vMF",
+     "amount": 993345,
+     "usd": 991811,
+     "how": "owned-by-pool"
+    },
+    {
+     "mint": "EPjFWd",
+     "amount": 63898,
+     "usd": 63874,
+     "how": "owned-by-pool"
+    }
+   ],
+   "oursUsd": 1055685,
+   "geckoterminalUsd": 1060056,
+   "dexscreenerUsd": null
+  },
+  {
+   "pool": "FJnaiidSLXFweWkgbinxEHRykVHsnkzDcYbNDR3RF5LN",
+   "dex": "BisonFi",
+   "asks": 6,
+   "vaultsFound": 2,
+   "top2": [
+    {
+     "mint": "Es9vMF",
+     "amount": 647524,
+     "usd": 646525,
+     "how": "owned-by-pool"
+    },
+    {
+     "mint": "So1111",
+     "amount": 7003,
+     "usd": 497811,
+     "how": "owned-by-pool"
+    }
+   ],
+   "oursUsd": 1144336,
+   "geckoterminalUsd": null,
+   "dexscreenerUsd": null
+  },
+  {
+   "pool": "Etb72AHGeCAcD72s3PVtzdQGnkYNd2ny4ULb6YgKi58",
+   "dex": "JupLend AMM",
+   "asks": 2,
+   "vaultsFound": 0,
+   "top2": [],
+   "oursUsd": 0,
+   "geckoterminalUsd": 466281,
+   "dexscreenerUsd": null
+  },
+  {
+   "pool": "4ba9bguTo7HbXFopJHaNMh8iAyApFpyQPgoufj3cSnyt",
+   "dex": "Manifest",
+   "asks": 2,
+   "vaultsFound": 2,
+   "top2": [
+    {
+     "mint": "EPjFWd",
+     "amount": 208960,
+     "usd": 208882,
+     "how": "referenced-in-pool"
+    },
+    {
+     "mint": "USD1tt",
+     "amount": 553,
+     "usd": 553,
+     "how": "referenced-in-pool"
+    }
+   ],
+   "oursUsd": 209435,
+   "geckoterminalUsd": null,
+   "dexscreenerUsd": null
+  },
+  {
+   "pool": "Gb7m4daakbVbrFLR33FKMDVMHAprRZ66CSYt4bpFwUgS",
+   "dex": "Sanctum Infinity",
+   "asks": 2,
+   "vaultsFound": 0,
+   "top2": [],
+   "oursUsd": 0,
+   "geckoterminalUsd": null,
+   "dexscreenerUsd": null
+  }
+ ]
+}

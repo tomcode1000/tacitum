@@ -1,0 +1,367 @@
+{
+ "frozenAt": "2026-11-27T17:24:46.404Z",
+ "source": "https://api.geckoterminal.com/api/v2/networks/solana/pools?page=1..3",
+ "sha256": "a7faf70ceed6d404b9bcb18081732fa4df5604d26cb3588828f4395c81240746",
+ "cases": [
+  {
+   "pool": "DJNtGuBGEQiUCWE8F981M2C3ZghZt2XLD8f2sQdZ6rsZ",
+   "name": "SOL / USDC",
+   "geckoDex": "pancakeswap-v3-solana",
+   "geckoUsd": 2338832.5693
+  },
+  {
+   "pool": "rDxFmGsvvkuorYBmFgRwMCVHUq8jcruVo5eGvmzQZvX",
+   "name": "ATX / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 3764903.5244
+  },
+  {
+   "pool": "FQ86N5mg3XWdJzGsrBRKRYtxD4ftDpvkyPzx53rFhpFP",
+   "name": "KAI / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 3984.4133
+  },
+  {
+   "pool": "QCgbjXKcGhHgASqNhwetiZ8FVMNcmacHfHQq5BH9fYN",
+   "name": "SNOWBALLZ / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1495.203
+  },
+  {
+   "pool": "Gtg8nBPx5T4HiBZJfJB9FVzYp6WChJaw3BTU21kcV796",
+   "name": "UGOS / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 831323.7895
+  },
+  {
+   "pool": "HTvjzsfX3yU6BUodCjZ5vZkUrAxMDTrBs3CJaq43ashR",
+   "name": "SOL / USDC",
+   "geckoDex": "meteora",
+   "geckoUsd": 157323.1449
+  },
+  {
+   "pool": "8sLbNZoA1cfnvMJLPfp98ZLAnFSYCFApfJKMbiXNLwxj",
+   "name": "SOL / USDC 0.01%",
+   "geckoDex": "raydium-clmm",
+   "geckoUsd": 330782.7125
+  },
+  {
+   "pool": "B9xKSbD9CjvTdiAQscsTcKzP9e777y64KuWtLiXgaD6c",
+   "name": "WOOPY / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 4586.4896
+  },
+  {
+   "pool": "31snvX8YjugQqDDFhR3DUtsgyvJCquQ4NBki3rkGXRnX",
+   "name": "SITTINGDUK / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1504.2339
+  },
+  {
+   "pool": "83v8iPyZihDEjDdY8RdZddyZNyUtXngz69Lgo9Kt5d6d",
+   "name": "SOL / USDC",
+   "geckoDex": "orca",
+   "geckoUsd": 19503.4569
+  },
+  {
+   "pool": "HxFLNNDVSZZwtjhWCf94JU4LxnMNDXimXgoSyoRPvpsv",
+   "name": "SpaceXCoin / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1936.0665
+  },
+  {
+   "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+   "name": "SOL / USDC",
+   "geckoDex": "orca",
+   "geckoUsd": 18115578.727
+  },
+  {
+   "pool": "3nMFwZXwY1s1M5s8vYAHqd4wGs4iSxXE4LRoUMMYqEgF",
+   "name": "SOL / USDT 0.01%",
+   "geckoDex": "raydium-clmm",
+   "geckoUsd": 575847.6445
+  },
+  {
+   "pool": "2yyjypQsN3HrPSmYow81E2sT478zpbNP2ErGYaWjqyT3",
+   "name": "Hoppy / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1660.2896
+  },
+  {
+   "pool": "7MNK6qxFsxxFg6JMSE3oGpfvHeVSfsUkAuteQt8HZEve",
+   "name": "SpaceXCoin / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 0.0072
+  },
+  {
+   "pool": "AirCDeU4yL6hjuina65mtWAKzmex7STKZSiNMYZhzKt2",
+   "name": "Snowball / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 72726.5863
+  },
+  {
+   "pool": "8sKQHfjNhvmAw94PhfvfMcytmqW6jmxvwieYyzXCCPu",
+   "name": "SOL / USDC",
+   "geckoDex": "humidifi",
+   "geckoUsd": 51570.9357
+  },
+  {
+   "pool": "FbJUkdYU6DeDKnKUm4dJQkTZ5Y6U6939XbwWozDQqfzz",
+   "name": "Santaball / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1791.5133
+  },
+  {
+   "pool": "DjkYZZ9WLjTnm4LJ2N37LtgnJXxJt4D4DNxJ7YcCgnkt",
+   "name": "ZOTH / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 0.0432
+  },
+  {
+   "pool": "6rYHxuBn9Hwpnu5i5arBwc48Y8AmgLPvqAEqhepHvYiM",
+   "name": "ATX / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 419565.5483
+  },
+  {
+   "pool": "51V5bAPGaz3vj4SiJeoLGNzAQNxGr4Vps8gSBKmSZx71",
+   "name": "hSOL / SOL",
+   "geckoDex": "raydium-clmm",
+   "geckoUsd": 46646.6921
+  },
+  {
+   "pool": "B3GPdczNyHpLVcS2NirKMFXVnwioRa2FAiJLsQ74grDv",
+   "name": "mihao / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 29256.6259
+  },
+  {
+   "pool": "676jLiDHMfe4MgCZZVAaFuseXCmZMpLq5GcSKJnu9Ssv",
+   "name": "Snowball / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 0.000881566074264292
+  },
+  {
+   "pool": "BJbmxBiGv7sQRZa9soKci4StfrqTxLiWFFBWPoVKSqVQ",
+   "name": "ATX / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 965177.7273
+  },
+  {
+   "pool": "49iMatQtoyabsYAQc8GafVq6aeBFVDxSRH44oiatyyw6",
+   "name": "NVDAx / USDC",
+   "geckoDex": "raydium-clmm",
+   "geckoUsd": 2562717.0524
+  },
+  {
+   "pool": "3ucNos4NbumPLZNWztqGHNFFgkHeRMBQAVemeeomsUxv",
+   "name": "SOL / USDC",
+   "geckoDex": "raydium-clmm",
+   "geckoUsd": 5551801.285
+  },
+  {
+   "pool": "7W2sjdKzuwTGgMB9RWf4XeFarpfY1PucB73GJnJ7mKYV",
+   "name": "Elonmas / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 24629.1781
+  },
+  {
+   "pool": "9GovAGG2dTfQZh6nwraN6Rf3Pj7EnycutWFgXn4rwjFq",
+   "name": "SNOWBALLO / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 19674.2605
+  },
+  {
+   "pool": "5U2cayatpH4SYf2qUrupUWv84ZNaqjrKFcYmv3no8YK6",
+   "name": "ZCOIN / hSOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 6869.4945
+  },
+  {
+   "pool": "HKB5anf7vkDyHjT3b1NnGhhwhn799PwQfu4WNi4HTDFu",
+   "name": "JENSEN / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1478.0978
+  },
+  {
+   "pool": "23XoPQqGw9WMsLoqTu8HMzJLD6RnXsufbKyWPLJywsCT",
+   "name": "USDT / USDC",
+   "geckoDex": "byreal",
+   "geckoUsd": 1058736.4207
+  },
+  {
+   "pool": "DyzGYEhdgSn5EEUt4XXviavZ7v7SV2YGrYV8HX3Aw5XT",
+   "name": "SOL / USD1",
+   "geckoDex": "byreal",
+   "geckoUsd": 26375.4688
+  },
+  {
+   "pool": "HVyb7zxVk6aB66HhHMtEZyw4AWwzMkjur3a3XHj1j7u7",
+   "name": "SNOWBALLY / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 73794.5694
+  },
+  {
+   "pool": "BKde1PKY9R52JtxE7HLhpt1tMTMPwvdGbgAKLrzm4fbg",
+   "name": "CaveBaby / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 0.00004308647242
+  },
+  {
+   "pool": "3ZdoeJ7FViBqLNKQVz7J4szsmVsLkQJTXBiznNs19Lpp",
+   "name": "mihao / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 0.0072
+  },
+  {
+   "pool": "6zGvzhksX7LS14MbCkMUSJctsXUmCFsUyibEMHhxRWXf",
+   "name": "BASKET / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1397.9705
+  },
+  {
+   "pool": "E1XDrrALLZJuzicaw7xBfQeSsFCWsZ6tY3dthWuB7GiU",
+   "name": "CASH / USDC",
+   "geckoDex": "manifest",
+   "geckoUsd": 0
+  },
+  {
+   "pool": "58iQRQbAKgPU2ADzRLS4QJxBS2RsdUTEd567dPpMcLHe",
+   "name": "SPCX / SOL",
+   "geckoDex": "orca",
+   "geckoUsd": 141862.3046
+  },
+  {
+   "pool": "FjuBy7jjf9DXj9d3R7cHpvcnoFW2iQxf7F7P3vqx4Jza",
+   "name": "SPCX / USDC",
+   "geckoDex": "raydium-clmm",
+   "geckoUsd": 2344942.1311
+  },
+  {
+   "pool": "4hHnR5sXJs5QpETmEBNtrroq7fZ3FsP517e9sGQ1XvLe",
+   "name": "TWORBIT / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1511.7506
+  },
+  {
+   "pool": "ARRZFEoSUSb8dNC2WnxY82EPAJPPw3oJzSLrJgdquV7q",
+   "name": "CI / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1415.683
+  },
+  {
+   "pool": "BFKBQT4yFZPtzyttHQayNmjDJYduvFaPXuytMgnaqexV",
+   "name": "wXMR / SOL",
+   "geckoDex": "meteora",
+   "geckoUsd": 21297.7562
+  },
+  {
+   "pool": "HEtoZXTuBx3GiLAXjyfwU47wb2Ad3Sr7eYmJjvZyJqdZ",
+   "name": "ATX / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1791.1204
+  },
+  {
+   "pool": "CYbD9RaToYMtWKA7QZyoLahnHdWq553Vm62Lh6qWtuxq",
+   "name": "SOL / USDC",
+   "geckoDex": "raydium-clmm",
+   "geckoUsd": 261373.8465
+  },
+  {
+   "pool": "9uYLgmimjb75MzDF3EUzHgxQtdepAQrJZDytgGmABBPB",
+   "name": "Cateball / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1452.0231
+  },
+  {
+   "pool": "7TdsEEykvs6xJt5w1dDHyY5kxM6xfUoGUTgTT8AVsXwN",
+   "name": "Snowball / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1417.4769
+  },
+  {
+   "pool": "FDU3uATJTZQY2LiowiZt58cUmxjHXRyLzU4RcLdHK9wb",
+   "name": "GOTF / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 876661.2335
+  },
+  {
+   "pool": "FUzScAtZzSt9rzMtt2pCDLPpJ1ikYC5LgDNjYtfWyqdj",
+   "name": "NORFEATH / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1986.3592
+  },
+  {
+   "pool": "9m6cYJ8dd26Smzh35qDvFjkyqvMWYw1CwG5R5F7xWg9Q",
+   "name": "hSOL / SOL",
+   "geckoDex": "raydium-clmm",
+   "geckoUsd": 2239052.9893
+  },
+  {
+   "pool": "FGcDm4uy1oXK1V4ZbQzahU6iWofGzCN4K48bPcTs4Vt5",
+   "name": "PNP / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 0.0072
+  },
+  {
+   "pool": "AyEvFxFMYASrfNRenTANL5Ta8WoPAhTddqZLaDYErXdj",
+   "name": "QILIN / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 0.0288
+  },
+  {
+   "pool": "DSfRR73aoxgnkq1wo8xKo8GGxXwTziRg2geGnsQjMGwV",
+   "name": "大鱼 / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 0.0001911007327
+  },
+  {
+   "pool": "7uKA9bK5emZpJ4AL15ZuP6RXiKKfDr5RaexmH9qYrHgr",
+   "name": "SuperFIONA / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 8.1477
+  },
+  {
+   "pool": "GhxtcDQ7JpGE8KpwUpsT2oQubuozrgE3Gd1ZEwnrsvqV",
+   "name": "KAI / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1410.5615
+  },
+  {
+   "pool": "EGKhqtAAFNdw6ggy2bT8i9pP43K5iafTv7auumMfDomg",
+   "name": "GTAVI / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1426.2877
+  },
+  {
+   "pool": "8siJoktb9peBcpADjfLWRu52PJ9GYfMMQHXQD4cyMYAx",
+   "name": "Rockstar / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1405.9674
+  },
+  {
+   "pool": "9876QVjcfg53eSTGJGJq9MsWyfnZw2fmf9T51b3YjtSQ",
+   "name": "LEGO / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1388.4275
+  },
+  {
+   "pool": "8bQSATg4rPeicWDGkP8cWgMBh72ZSu75MPuNhTLZNXzm",
+   "name": "FLOAT / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 1414.6395
+  },
+  {
+   "pool": "Cn4He1ujAoJ3SxTwy1wX9RGJJ1qQzGH5W34SfHo2ceDv",
+   "name": "KITT / SOL",
+   "geckoDex": "pumpswap",
+   "geckoUsd": 3962.8453
+  },
+  {
+   "pool": "6R4r93V5fcMzc13CL2enEepDSYcr4Qx3ptZBDwudTXCo",
+   "name": "NVDAx / USDC",
+   "geckoDex": "orca",
+   "geckoUsd": 250243.1249
+  }
+ ]
+}

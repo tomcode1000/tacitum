@@ -1,0 +1,112 @@
+{
+ "frozenAt": "2026-11-27T17:17:11.126Z",
+ "source": "https://devnode.telegraphprotocol.com/daemon/api/questions",
+ "sha256": "f182b6579e3c61bcd5769d87d6d1b55b890479aab2c312c5716674bcd9274f40",
+ "cases": [
+  {
+   "pool": "8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo",
+   "asks": 216,
+   "okOnFeed": 0
+  },
+  {
+   "pool": "9mzt81moHM2tCkFzWxETM4ztTnhjzWt4e1iMrZBf29NP",
+   "asks": 52,
+   "okOnFeed": 0
+  },
+  {
+   "pool": "5ZWCKP2E8LqTUmo98xhq1YELjcqvxpNsv4xfzVbKGswc",
+   "asks": 52,
+   "okOnFeed": 0
+  },
+  {
+   "pool": "H7o7KCr5n3whqcPsPkeCPWrzivKrarqzidD3kt8fijvB",
+   "asks": 48,
+   "okOnFeed": 0
+  },
+  {
+   "pool": "C8Gr6AUuq9hEdSYJzoEpNcdjpojPZwqG5MtQbeouNNwg",
+   "asks": 17,
+   "okOnFeed": 17
+  },
+  {
+   "pool": "7ecvmhGKVcK4SgxeGQJG6yVwVAhbQxLrBuaMoUmpRZ6i",
+   "asks": 14,
+   "okOnFeed": 0
+  },
+  {
+   "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+   "asks": 11,
+   "okOnFeed": 11
+  },
+  {
+   "pool": "23XoPQqGw9WMsLoqTu8HMzJLD6RnXsufbKyWPLJywsCT",
+   "asks": 8,
+   "okOnFeed": 0
+  },
+  {
+   "pool": "FJnaiidSLXFweWkgbinxEHRykVHsnkzDcYbNDR3RF5LN",
+   "asks": 6,
+   "okOnFeed": 0
+  },
+  {
+   "pool": "5zpyutJu9ee6jFymDGoK7F6S5Kczqtc9FomP3ueKuyA9",
+   "asks": 5,
+   "okOnFeed": 5
+  },
+  {
+   "pool": "C1MgLojNLWBKADvu9BHdtgzz1oZX4dZ5zGdGcgvvW8Wz",
+   "asks": 5,
+   "okOnFeed": 5
+  },
+  {
+   "pool": "31p1hptjhFo6ZD8oBqkfutNXQKGGPyi7YcEAfsyKW777",
+   "asks": 4,
+   "okOnFeed": 4
+  },
+  {
+   "pool": "Hp53XEtt4S8SvPCXarsLSdGfZBuUr5mMmZmX2DRNXQKp",
+   "asks": 4,
+   "okOnFeed": 4
+  },
+  {
+   "pool": "8EzbUfvcRT1Q6RL462ekGkgqbxsPmwC5FMLQZhSPMjJ3",
+   "asks": 3,
+   "okOnFeed": 3
+  },
+  {
+   "pool": "Etb72AHGeCAcD72s3PVtzdQGnkYNd2ny4ULb6YgKi58",
+   "asks": 2,
+   "okOnFeed": 0
+  },
+  {
+   "pool": "4ba9bguTo7HbXFopJHaNMh8iAyApFpyQPgoufj3cSnyt",
+   "asks": 2,
+   "okOnFeed": 0
+  },
+  {
+   "pool": "BZtgQEyS6eXUXicYPHecYQ7PybqodXQMvkjUbP4R8mUU",
+   "asks": 2,
+   "okOnFeed": 2
+  },
+  {
+   "pool": "BCDdHonby65iduz3Ev3c9v5XjNkzyu5e56KRFHpBM4T9",
+   "asks": 2,
+   "okOnFeed": 2
+  },
+  {
+   "pool": "8phK65jxmTPEN158xLgSr4oZvssw9SyTErpNZj3g7px4",
+   "asks": 2,
+   "okOnFeed": 2
+  },
+  {
+   "pool": "Gb7m4daakbVbrFLR33FKMDVMHAprRZ66CSYt4bpFwUgS",
+   "asks": 2,
+   "okOnFeed": 0
+  },
+  {
+   "pool": "58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2",
+   "asks": 1,
+   "okOnFeed": 1
+  }
+ ]
+}

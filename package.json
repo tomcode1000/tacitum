@@ -4,7 +4,7 @@
   "description": "Private buying on Telegraph: one-time payers and matched decoys, so the public feed cannot tell who was screened or who asked.",
   "scripts": {
     "test:summary": "node scripts/test-summary.mjs",
-    "test": "node --test \"test/**/*.test.mjs\" \"miner/test/**/*.test.mjs\"",
+    "test": "node --test \"test/**/*.test.mjs\" \"miner/test/**/*.test.mjs\" \"depth-miner/test/**/*.test.mjs\"",
     "wallet": "node scripts/wallet.mjs",
     "first-call": "node scripts/first-call.mjs",
     "assess": "node scripts/assess.mjs",

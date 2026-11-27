@@ -14,6 +14,7 @@ Tacitum is the dark pool for due diligence. Agents and desks buy counterparty ch
 Telegraph Hackathon Season II, two entries:
 - **Track 01, Apps & Agents** (Mission 03, Institutional Markets): Tacitum itself, this README.
 - **Track 02, Miners / Providers**: the `tacitum-adverse-media` miner, [active on Anjoman](https://anjoman.ai/dashboard/explore/miners/tacitum-adverse-media); see [miner/README.md](miner/README.md). Blind-test precision 0.91, recall 0.71.
+- **Track 02, Miners / Providers**: the `tacitum-pool-depth` miner for `LIQUIDITY_DEPTH_VERIFY_GENERAL`, the most-failed intent on the network (603 asks, 32% usable). It reads Solana pools no miner could, covering 230 of the 402 asks that had never been answered, and declines with a reason where reserves can't be attributed. 12 of 12 within 2% of GeckoTerminal; see [depth-miner/README.md](depth-miner/README.md).
 
 | | |
 |---|---|
@@ -21,7 +22,7 @@ Telegraph Hackathon Season II, two entries:
 | **Clean by construction** | Every pool depositor is sanctions-screened through Telegraph before their money can be spent; the receipt is on chain with the approval |
 | **Provable to anyone** | Every answer keeps its Telegraph receipt; 6 of 6 verified in the live run |
 | **Open to the auditor** | Each assessment is sealed to an auditor key; the auditor re-checks all 27 claims of the live run against public data |
-| **Tested** | 37 automated tests, run in CI on every push with CodeQL scanning: circuit, Merkle tree, audit envelope, spend caps, screening fallback, watchlist monitor, privacy tracer, headline classifier, and the pool contract on a local chain (deposits, screening, reclaim, withdraw, double spend, bound recipients) |
+| **Tested** | 70 automated tests, run in CI on every push with CodeQL scanning: circuit, Merkle tree, audit envelope, spend caps, screening fallback, watchlist monitor, privacy tracer, headline classifier, the pool-depth miner (reserve rule, Raydium and PumpSwap layouts, declines, time budget), and the pool contract on a local chain (deposits, screening, reclaim, withdraw, double spend, bound recipients) |
 
 **Judges:** [EVIDENCE.md](EVIDENCE.md) is a two-minute path with a verify link for every claim. [THREAT-MODEL.md](THREAT-MODEL.md) covers who can learn what, and the mainnet checklist.
 

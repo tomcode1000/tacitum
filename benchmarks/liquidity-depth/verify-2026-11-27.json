@@ -1,0 +1,495 @@
+{
+ "at": "2026-11-27T16:38:49.863Z",
+ "results": [
+  {
+   "pool": "8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo",
+   "dex": "BisonFi",
+   "asks": 216,
+   "swapsRead": 11,
+   "vaultsFromSwaps": [],
+   "reserveFromSwapsUsd": 0,
+   "reserveFromFirstRunUsd": 4178527,
+   "firstRunAgrees": false,
+   "quotes": [],
+   "quoteContradicts": false,
+   "quotedThroughPool": 0
+  },
+  {
+   "pool": "9mzt81moHM2tCkFzWxETM4ztTnhjzWt4e1iMrZBf29NP",
+   "dex": "Scorch",
+   "asks": 52,
+   "swapsRead": 4,
+   "vaultsFromSwaps": [
+    {
+     "account": "5tPeeFqecG9jccbY7H4uzDDXSvwhdYszg5XLPfyQtcJV",
+     "mint": "JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN",
+     "owner": "EHcege7dok1iYs7SxL2XzDPvhg6XzMVcx2V5SkMUurJP",
+     "movedIn": "4/4",
+     "amount": 422116.42808,
+     "usd": 104047
+    },
+    {
+     "account": "HrTf9CzXR1dRH4Sof5QrpmGWwpwAf3qZzwCsEjQpXcSq",
+     "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "owner": "R4rNJHaffSUotNmqSKNEfDcJE8A7zJUkaoM5Jkd7cYX",
+     "movedIn": "2/4",
+     "amount": 1497356.42486,
+     "usd": 1496874
+    }
+   ],
+   "reserveFromSwapsUsd": 1600922,
+   "reserveFromFirstRunUsd": 1070474,
+   "firstRunAgrees": false,
+   "quotes": [
+    {
+     "sizeVsOutReserve": 0.01,
+     "throughThisPool": true,
+     "ammKey": "9mzt81moHM2tCkFzWxETM4ztTnhjzWt4e1iMrZBf29NP",
+     "outUi": 14895.7797,
+     "outReserve": 1497356.42486,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 0.5,
+     "throughThisPool": false,
+     "ammKey": null,
+     "outUi": null,
+     "outReserve": 1497356.42486,
+     "exceedsReserve": false,
+     "error": "No routes found"
+    },
+    {
+     "sizeVsOutReserve": 1.5,
+     "throughThisPool": false,
+     "ammKey": null,
+     "outUi": null,
+     "outReserve": 1497356.42486,
+     "exceedsReserve": false,
+     "error": "No routes found"
+    }
+   ],
+   "quoteContradicts": false,
+   "quotedThroughPool": 1
+  },
+  {
+   "pool": "5ZWCKP2E8LqTUmo98xhq1YELjcqvxpNsv4xfzVbKGswc",
+   "dex": "Scorch",
+   "asks": 52,
+   "swapsRead": 12,
+   "vaultsFromSwaps": [
+    {
+     "account": "34WpFzQ1WE2nDLLEKJuvCXxapL7ak6CigJS8Ks5NDo5K",
+     "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "owner": "EHcege7dok1iYs7SxL2XzDPvhg6XzMVcx2V5SkMUurJP",
+     "movedIn": "12/12",
+     "amount": 895090.248853,
+     "usd": 894802
+    },
+    {
+     "account": "EYZdaSMrKcSgw3BdbbTMzRyBy4raUZBgKtdhFBZeM2Uo",
+     "mint": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263",
+     "owner": "EHcege7dok1iYs7SxL2XzDPvhg6XzMVcx2V5SkMUurJP",
+     "movedIn": "12/12",
+     "amount": 27687741479.70666,
+     "usd": 59560
+    }
+   ],
+   "reserveFromSwapsUsd": 954362,
+   "reserveFromFirstRunUsd": 1043175,
+   "firstRunAgrees": false,
+   "quotes": [
+    {
+     "sizeVsOutReserve": 0.01,
+     "throughThisPool": true,
+     "ammKey": "5ZWCKP2E8LqTUmo98xhq1YELjcqvxpNsv4xfzVbKGswc",
+     "outUi": 276726800,
+     "outReserve": 27687741479.70666,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 0.5,
+     "throughThisPool": false,
+     "ammKey": null,
+     "outUi": null,
+     "outReserve": 27687741479.70666,
+     "exceedsReserve": false,
+     "error": "No routes found"
+    },
+    {
+     "sizeVsOutReserve": 1.5,
+     "throughThisPool": false,
+     "ammKey": null,
+     "outUi": null,
+     "outReserve": 27687741479.70666,
+     "exceedsReserve": false,
+     "error": "No routes found"
+    }
+   ],
+   "quoteContradicts": false,
+   "quotedThroughPool": 1
+  },
+  {
+   "pool": "H7o7KCr5n3whqcPsPkeCPWrzivKrarqzidD3kt8fijvB",
+   "dex": "Deriverse",
+   "asks": 48,
+   "swapsRead": 12,
+   "vaultsFromSwaps": [
+    {
+     "account": "EPUHjseXG3izk3MVUJ1PcyWT9xeBhtAnq8gUpq3j8Uni",
+     "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "owner": "EPUHjseXG3izk3MVUJ1PcyWT9xeBhtAnq8gUpq3j8Uni",
+     "movedIn": "11/12",
+     "amount": 169677.952561,
+     "usd": 169623
+    },
+    {
+     "account": "2n6fxuD6PA5NYgEnXXYMh2iWD1JBJ1LGf76kFJAayZmX",
+     "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+     "owner": "3nMFwZXwY1s1M5s8vYAHqd4wGs4iSxXE4LRoUMMYqEgF",
+     "movedIn": "5/12",
+     "amount": 158578.739774,
+     "usd": 158389
+    }
+   ],
+   "reserveFromSwapsUsd": 328012,
+   "reserveFromFirstRunUsd": 0,
+   "firstRunAgrees": null,
+   "quotes": [
+    {
+     "sizeVsOutReserve": 0.01,
+     "throughThisPool": true,
+     "ammKey": "H7o7KCr5n3whqcPsPkeCPWrzivKrarqzidD3kt8fijvB",
+     "outUi": 1585.784355,
+     "outReserve": 158578.739774,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 0.5,
+     "throughThisPool": true,
+     "ammKey": "H7o7KCr5n3whqcPsPkeCPWrzivKrarqzidD3kt8fijvB",
+     "outUi": 17052.1339,
+     "outReserve": 158578.739774,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 1.5,
+     "throughThisPool": true,
+     "ammKey": "H7o7KCr5n3whqcPsPkeCPWrzivKrarqzidD3kt8fijvB",
+     "outUi": 16536.71701,
+     "outReserve": 158578.739774,
+     "exceedsReserve": false,
+     "error": null
+    }
+   ],
+   "quoteContradicts": false,
+   "quotedThroughPool": 3
+  },
+  {
+   "pool": "7ecvmhGKVcK4SgxeGQJG6yVwVAhbQxLrBuaMoUmpRZ6i",
+   "dex": "Manifest",
+   "asks": 14,
+   "swapsRead": 12,
+   "vaultsFromSwaps": [
+    {
+     "account": "4ThJXdq1ga5aaZSXRa9gDgEBwkj7iG2tJxJ3XXC2K23u",
+     "mint": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+     "owner": "4ThJXdq1ga5aaZSXRa9gDgEBwkj7iG2tJxJ3XXC2K23u",
+     "movedIn": "12/12",
+     "amount": 3790.257772459,
+     "usd": 360435
+    },
+    {
+     "account": "GkXG58JMDWCfoAorj8uCJcKj748uqV7tfYaV67mSW5LH",
+     "mint": "So11111111111111111111111111111111111111112",
+     "owner": "GkXG58JMDWCfoAorj8uCJcKj748uqV7tfYaV67mSW5LH",
+     "movedIn": "12/12",
+     "amount": 4135.399112449,
+     "usd": 299033
+    }
+   ],
+   "reserveFromSwapsUsd": 659468,
+   "reserveFromFirstRunUsd": 912790,
+   "firstRunAgrees": false,
+   "quotes": [
+    {
+     "sizeVsOutReserve": 0.01,
+     "throughThisPool": true,
+     "ammKey": "7ecvmhGKVcK4SgxeGQJG6yVwVAhbQxLrBuaMoUmpRZ6i",
+     "outUi": 41.294041909,
+     "outReserve": 4135.399112449,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 0.5,
+     "throughThisPool": true,
+     "ammKey": "7ecvmhGKVcK4SgxeGQJG6yVwVAhbQxLrBuaMoUmpRZ6i",
+     "outUi": 2064.379034824,
+     "outReserve": 4135.399112449,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 1.5,
+     "throughThisPool": true,
+     "ammKey": "7ecvmhGKVcK4SgxeGQJG6yVwVAhbQxLrBuaMoUmpRZ6i",
+     "outUi": 6191.438365945,
+     "outReserve": 4135.399112449,
+     "exceedsReserve": true,
+     "error": null
+    }
+   ],
+   "quoteContradicts": true,
+   "quotedThroughPool": 3
+  },
+  {
+   "pool": "23XoPQqGw9WMsLoqTu8HMzJLD6RnXsufbKyWPLJywsCT",
+   "dex": "Byreal",
+   "asks": 8,
+   "swapsRead": 6,
+   "vaultsFromSwaps": [
+    {
+     "account": "6nMF76wKdFZaE78eRRDcNikVw1jMKMC4zoj7ibq1N25f",
+     "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "owner": "23XoPQqGw9WMsLoqTu8HMzJLD6RnXsufbKyWPLJywsCT",
+     "movedIn": "6/6",
+     "amount": 82694.008741,
+     "usd": 82667
+    },
+    {
+     "account": "J9WJF4NbJwio4DiKiTGsb7uDnxbruWjEVkj7M6bLhCRa",
+     "mint": "Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB",
+     "owner": "23XoPQqGw9WMsLoqTu8HMzJLD6RnXsufbKyWPLJywsCT",
+     "movedIn": "6/6",
+     "amount": 974530.848829,
+     "usd": 973359
+    }
+   ],
+   "reserveFromSwapsUsd": 1056027,
+   "reserveFromFirstRunUsd": 1055685,
+   "firstRunAgrees": true,
+   "quotes": [
+    {
+     "sizeVsOutReserve": 0.01,
+     "throughThisPool": true,
+     "ammKey": "23XoPQqGw9WMsLoqTu8HMzJLD6RnXsufbKyWPLJywsCT",
+     "outUi": 9744.971292,
+     "outReserve": 974530.848829,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 0.5,
+     "throughThisPool": true,
+     "ammKey": "23XoPQqGw9WMsLoqTu8HMzJLD6RnXsufbKyWPLJywsCT",
+     "outUi": 486774.391134,
+     "outReserve": 974530.848829,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 1.5,
+     "throughThisPool": false,
+     "ammKey": null,
+     "outUi": null,
+     "outReserve": 974530.848829,
+     "exceedsReserve": false,
+     "error": "No routes found"
+    }
+   ],
+   "quoteContradicts": false,
+   "quotedThroughPool": 2
+  },
+  {
+   "pool": "FJnaiidSLXFweWkgbinxEHRykVHsnkzDcYbNDR3RF5LN",
+   "dex": "BisonFi",
+   "asks": 6,
+   "swapsRead": 7,
+   "vaultsFromSwaps": [],
+   "reserveFromSwapsUsd": 0,
+   "reserveFromFirstRunUsd": 1144336,
+   "firstRunAgrees": false,
+   "quotes": [],
+   "quoteContradicts": false,
+   "quotedThroughPool": 0
+  },
+  {
+   "pool": "Etb72AHGeCAcD72s3PVtzdQGnkYNd2ny4ULb6YgKi58",
+   "dex": "JupLend AMM",
+   "asks": 2,
+   "swapsRead": 8,
+   "vaultsFromSwaps": [
+    {
+     "account": "5JP5zgYCb9W37QQLgAHRHuinFLrKt87akDY1CgZoTPzr",
+     "mint": "So11111111111111111111111111111111111111112",
+     "owner": "7s1da8DduuBFqGra5bJBjpnvL5E9mGzCuMk1Qkh4or2Z",
+     "movedIn": "8/8",
+     "amount": 486787.493391439,
+     "usd": 35201853
+    },
+    {
+     "account": "7NJ28xrEjSydJtAdqvJA1XihRF2NwBKq3vjKCRrwGAA8",
+     "mint": "J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn",
+     "owner": "7s1da8DduuBFqGra5bJBjpnvL5E9mGzCuMk1Qkh4or2Z",
+     "movedIn": "8/8",
+     "amount": 93803.356183582,
+     "usd": 8918289
+    }
+   ],
+   "reserveFromSwapsUsd": 44120141,
+   "reserveFromFirstRunUsd": 0,
+   "firstRunAgrees": null,
+   "quotes": [
+    {
+     "sizeVsOutReserve": 0.01,
+     "throughThisPool": true,
+     "ammKey": "Etb72AHGeCAcD72s3PVtzdQGnkYNd2ny4ULb6YgKi58",
+     "outUi": 938.698995076,
+     "outReserve": 93803.356183582,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 0.5,
+     "throughThisPool": false,
+     "ammKey": null,
+     "outUi": null,
+     "outReserve": 93803.356183582,
+     "exceedsReserve": false,
+     "error": "No routes found"
+    },
+    {
+     "sizeVsOutReserve": 1.5,
+     "throughThisPool": false,
+     "ammKey": null,
+     "outUi": null,
+     "outReserve": 93803.356183582,
+     "exceedsReserve": false,
+     "error": "No routes found"
+    }
+   ],
+   "quoteContradicts": false,
+   "quotedThroughPool": 1
+  },
+  {
+   "pool": "4ba9bguTo7HbXFopJHaNMh8iAyApFpyQPgoufj3cSnyt",
+   "dex": "Manifest",
+   "asks": 2,
+   "swapsRead": 6,
+   "vaultsFromSwaps": [
+    {
+     "account": "BDVsoFu2GrvXG8HRjfp8aCyphSmEhb9Sm92siVSb6VES",
+     "mint": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+     "owner": "BDVsoFu2GrvXG8HRjfp8aCyphSmEhb9Sm92siVSb6VES",
+     "movedIn": "6/6",
+     "amount": 209228.391481,
+     "usd": 209161
+    },
+    {
+     "account": "yCeSRFxf5zn4nTMV4wjsBswhKD1ac6bz1FsTPSqWeG7",
+     "mint": "USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB",
+     "owner": "DyzGYEhdgSn5EEUt4XXviavZ7v7SV2YGrYV8HX3Aw5XT",
+     "movedIn": "5/6",
+     "amount": 15388.909711,
+     "usd": 15381
+    }
+   ],
+   "reserveFromSwapsUsd": 224542,
+   "reserveFromFirstRunUsd": 209435,
+   "firstRunAgrees": false,
+   "quotes": [
+    {
+     "sizeVsOutReserve": 0.01,
+     "throughThisPool": true,
+     "ammKey": "4ba9bguTo7HbXFopJHaNMh8iAyApFpyQPgoufj3cSnyt",
+     "outUi": 92.537187,
+     "outReserve": 15388.909711,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 0.5,
+     "throughThisPool": true,
+     "ammKey": "4ba9bguTo7HbXFopJHaNMh8iAyApFpyQPgoufj3cSnyt",
+     "outUi": 280.739756,
+     "outReserve": 15388.909711,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 1.5,
+     "throughThisPool": true,
+     "ammKey": "4ba9bguTo7HbXFopJHaNMh8iAyApFpyQPgoufj3cSnyt",
+     "outUi": 641.243583,
+     "outReserve": 15388.909711,
+     "exceedsReserve": false,
+     "error": null
+    }
+   ],
+   "quoteContradicts": false,
+   "quotedThroughPool": 3
+  },
+  {
+   "pool": "Gb7m4daakbVbrFLR33FKMDVMHAprRZ66CSYt4bpFwUgS",
+   "dex": "Sanctum Infinity",
+   "asks": 2,
+   "swapsRead": 12,
+   "vaultsFromSwaps": [
+    {
+     "account": "B8Xd8JbArDnGizyJbNLjBzxnKk1ftXLwsbKzPHiDUmgE",
+     "mint": "5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm",
+     "owner": "8iibPkw7zbNHMPcihHeBgcL7rDnHteZb2NfvTy8bNm7d",
+     "movedIn": "6/12",
+     "amount": 282.111510141,
+     "usd": 29893
+    },
+    {
+     "account": "7QVQFQjpxgjcfE131i5Fsgw3WTHKWNv2fNQntMyfP7My",
+     "mint": "he1iusmfkpAdwvxLNGV8Y1iSbj4rUy6yMhEA3fotn9A",
+     "owner": "AYhux5gJzCoeoc1PoJ1VxwPDe22RwcvpHviLDD1oCGvW",
+     "movedIn": "6/12",
+     "amount": 7.49083078,
+     "usd": 649
+    }
+   ],
+   "reserveFromSwapsUsd": 30542,
+   "reserveFromFirstRunUsd": 0,
+   "firstRunAgrees": null,
+   "quotes": [
+    {
+     "sizeVsOutReserve": 0.01,
+     "throughThisPool": true,
+     "ammKey": "Gb7m4daakbVbrFLR33FKMDVMHAprRZ66CSYt4bpFwUgS",
+     "outUi": 0.074820164,
+     "outReserve": 7.49083078,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 0.5,
+     "throughThisPool": true,
+     "ammKey": "Gb7m4daakbVbrFLR33FKMDVMHAprRZ66CSYt4bpFwUgS",
+     "outUi": 3.741008366,
+     "outReserve": 7.49083078,
+     "exceedsReserve": false,
+     "error": null
+    },
+    {
+     "sizeVsOutReserve": 1.5,
+     "throughThisPool": false,
+     "ammKey": null,
+     "outUi": null,
+     "outReserve": 7.49083078,
+     "exceedsReserve": false,
+     "error": "No routes found"
+    }
+   ],
+   "quoteContradicts": false,
+   "quotedThroughPool": 2
+  }
+ ]
+}

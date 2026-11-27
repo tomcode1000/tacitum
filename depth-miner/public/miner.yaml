@@ -1,0 +1,45 @@
+version: "1"
+kind: miner
+id: 7314403
+slug: tacitum-pool-depth
+protocol: generic
+name: Tacitum Solana Pool Depth
+description: >-
+  Total liquidity in US dollars of any Solana DEX pool, read from the pool's own token vaults on chain:
+  Orca, Raydium (AMM v4, CPMM, CLMM), Meteora, Byreal, BisonFi and every other program whose pool account owns its
+  reserves. Each answer names the vault accounts, the amounts and prices, a Jupiter route check that
+  trades go through this exact pool, and the price impact at $1k, $10k and $100k. Pools whose reserves
+  sit outside the pool account (Scorch, Manifest, Deriverse, JupLend, Sanctum) are declined with the
+  reason, never guessed. No API key; nothing cached for more than 60 seconds.
+base_url: https://depth.54-255-109-186.sslip.io
+docs:
+  repository: https://github.com/tomcode1000/tacitum
+rate_limit_per_sec: 2
+cache_ttl_sec: 60
+circuit_threshold: 5
+circuit_cooldown_seconds: 60
+errors:
+  message_path: error
+endpoints:
+  - path: /depth
+    external_path: /api/depth
+    method: GET
+    description: >-
+      Liquidity of one Solana DEX pool. Send the pool's account address (base58) as pool and "solana"
+      as chain. Returns liquidity_usd (sum of the pool's two reserve vaults in USD), the reserves with
+      vault addresses, dex, pair, route_verified, confidence and a price-impact table.
+    intents: [LIQUIDITY_DEPTH_VERIFY_GENERAL]
+    params:
+      query:
+        required:
+          - name: pool
+            type: string
+            intents: ["*"]
+            description: "Solana pool account address (base58), e.g. 8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo."
+          - name: chain
+            type: string
+            intents: ["*"]
+            description: "Chain of the pool. Only solana is supported."
+semantics:
+  supported_intents:
+    - LIQUIDITY_DEPTH_VERIFY_GENERAL
