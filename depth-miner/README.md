@@ -56,3 +56,15 @@ node scripts/miner-register.mjs --miner depth --dry             # then without -
 - Needs the pool's account address, not a pair name.
 - `liquidity_usd` is the reserves held by the pool account. For concentrated-liquidity pools that is total value locked, not depth near the price; the `depth` table gives the price impact for trades.
 - Prices come from Jupiter; a token with no Jupiter price is declined (`unpriced_reserves`), not given a zero.
+
+## On Telegraph: before and after (28 Nov 2026)
+
+Bought through Tacitum's private `ask` (one-time payer, each real pool hidden among 3 decoy pools), then asked again with no miner named so Telegraph's router chose. Full record: [evidence/depth-through-tacitum-2026-11-28.json](../evidence/depth-through-tacitum-2026-11-28.json).
+
+| Pool (asks before, all unanswered) | tacitum-pool-depth via Tacitum | Telegraph router's pick |
+|---|---|---|
+| BisonFi 8FnX3x (216) | **$4,170,858** · [record](https://devnode.telegraphprotocol.com/engine/v1/signal/0x598da16ea5cbe6524374e38e222f2214fb67de5e8eeacc74e1df6f00aaf8a500) | liq-bitstamp-book: $0 · [record](https://devnode.telegraphprotocol.com/engine/v1/signal/0xe8945486aea958b1a3cb3fb6eee60bb058f3211099ce2a62ce9776e8708d3140) |
+| BisonFi FJnaii (6) | **$1,142,714** · [record](https://devnode.telegraphprotocol.com/engine/v1/signal/0xfa2102780e6b2f28091996d33a7fa7e0f874198272b64267b6d8603ede6d42e9) | txlens: $7,164,117 · [record](https://devnode.telegraphprotocol.com/engine/v1/signal/0xe4f9ee407f98da588a9342bd701b5081b635a015bd71f549939414fa3718572c) |
+| Byreal 23XoPQ (8) | **$1,056,227** · [record](https://devnode.telegraphprotocol.com/engine/v1/signal/0xceea9e4748bfd920520ad785f73a1fed03b3d64bf8e25ca70e568b267db4f9ea) | txlens: $7,164,117 · [record](https://devnode.telegraphprotocol.com/engine/v1/signal/0xe668fc5d4471fe09b5c048d54c82ea44b949eedfe0f836b6ffed269af221d44f) |
+
+The router's picks returned $0 for a $4M pool and the same $7.16M for two different pools; GeckoTerminal puts Byreal at about $1.06M. Our three answers match the pools' own vaults on chain (and Byreal matches GeckoTerminal within 0.4%).

@@ -1,0 +1,207 @@
+{
+ "at": "2026-11-28T13:05:13.738Z",
+ "intent": "LIQUIDITY_DEPTH_VERIFY_GENERAL",
+ "miner": 7314403,
+ "private": [
+  {
+   "pool": "8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo",
+   "dex": "BisonFi",
+   "askedBefore": 216,
+   "answer": {
+    "status": 200,
+    "ok": true,
+    "miner": null,
+    "liquidity_usd": 4170858.399281,
+    "dex": null,
+    "route_verified": null,
+    "signal": "0x598da16ea5cbe6524374e38e222f2214fb67de5e8eeacc74e1df6f00aaf8a500"
+   },
+   "payer": "0x4b1777a80CCBA71d10218EC9FFcd7c6D2c0aF805",
+   "fundingTx": "0x5ddca3fdec90afab80b2d2336910c809bb253f3fca473b8a23f8a6a4ae503fa5",
+   "cover": [
+    {
+     "params": {
+      "pool": "3ucNos4NbumPLZNWztqGHNFFgkHeRMBQAVemeeomsUxv",
+      "chain": "solana"
+     },
+     "status": 200,
+     "signal": "0x337e5afc62a2d3262447467a17092245ef7759d486a2672c9656f8ac3f5bacca"
+    },
+    {
+     "params": {
+      "pool": "BZtgQEyS6eXUXicYPHecYQ7PybqodXQMvkjUbP4R8mUU",
+      "chain": "solana"
+     },
+     "status": 200,
+     "signal": "0xda02c4a9797b2a2225ffae673c465abce8bde6a36669729964773702c2e13afe"
+    },
+    {
+     "params": {
+      "pool": "58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2",
+      "chain": "solana"
+     },
+     "status": 200,
+     "signal": "0xa9e2cd91c2443b213a5799460059e204cab418b74d8e949dcbd5d68adc710350"
+    }
+   ],
+   "publicRecord": {
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/signal/0x598da16ea5cbe6524374e38e222f2214fb67de5e8eeacc74e1df6f00aaf8a500",
+    "miner": null,
+    "found": true
+   }
+  },
+  {
+   "pool": "FJnaiidSLXFweWkgbinxEHRykVHsnkzDcYbNDR3RF5LN",
+   "dex": "BisonFi",
+   "askedBefore": 6,
+   "answer": {
+    "status": 200,
+    "ok": true,
+    "miner": null,
+    "liquidity_usd": 1142714.01664,
+    "dex": null,
+    "route_verified": null,
+    "signal": "0xfa2102780e6b2f28091996d33a7fa7e0f874198272b64267b6d8603ede6d42e9"
+   },
+   "payer": "0x1c02C68f6Dab52FaA7E4369ed3ad8BbDab6D07c1",
+   "fundingTx": "0x7ddf4062c8337aec8e843022c3010e609e1cb5dcf9d4fe80dd1ad9bfcc385070",
+   "cover": [
+    {
+     "params": {
+      "pool": "BZtgQEyS6eXUXicYPHecYQ7PybqodXQMvkjUbP4R8mUU",
+      "chain": "solana"
+     },
+     "status": 200,
+     "signal": "0x3ac6b321b67d62bba02ae47a9b81b54327de96f652da898b2b00ee8b2f6014f8"
+    },
+    {
+     "params": {
+      "pool": "C8Gr6AUuq9hEdSYJzoEpNcdjpojPZwqG5MtQbeouNNwg",
+      "chain": "solana"
+     },
+     "status": 200,
+     "signal": "0x96fc1c0bcff34fff4c66c9e94a9f0c0c2f29115efa2b522ec3780f1f024e28bf"
+    },
+    {
+     "params": {
+      "pool": "58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2",
+      "chain": "solana"
+     },
+     "status": 200,
+     "signal": "0x413f49946f7a99e66178543946d22e8d39144ede3f53a956f4ab78cf8b31511f"
+    }
+   ],
+   "publicRecord": {
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xfa2102780e6b2f28091996d33a7fa7e0f874198272b64267b6d8603ede6d42e9",
+    "miner": null,
+    "found": true
+   }
+  },
+  {
+   "pool": "23XoPQqGw9WMsLoqTu8HMzJLD6RnXsufbKyWPLJywsCT",
+   "dex": "Byreal",
+   "askedBefore": 8,
+   "answer": {
+    "status": 200,
+    "ok": true,
+    "miner": null,
+    "liquidity_usd": 1056227.356222,
+    "dex": null,
+    "route_verified": null,
+    "signal": "0xceea9e4748bfd920520ad785f73a1fed03b3d64bf8e25ca70e568b267db4f9ea"
+   },
+   "payer": "0x0Db6ffA4F7A910A7F802CD418e1F1AE7e7CdA484",
+   "fundingTx": "0x715448f70f6625c757a00819cfd29110294417c6b751facca716fa19436afc0d",
+   "cover": [
+    {
+     "params": {
+      "pool": "BZtgQEyS6eXUXicYPHecYQ7PybqodXQMvkjUbP4R8mUU",
+      "chain": "solana"
+     },
+     "status": 200,
+     "signal": "0xd51e3696fbadfb54f6f87acc7cf33db1b2ad2ee90488ce218b20e8cad41c370b"
+    },
+    {
+     "params": {
+      "pool": "58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2",
+      "chain": "solana"
+     },
+     "status": 200,
+     "signal": "0x368a0f67908df8d7a5ff5b8ba7332413ba9e77906c632d2d69b772d07a09c720"
+    },
+    {
+     "params": {
+      "pool": "Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE",
+      "chain": "solana"
+     },
+     "status": 200,
+     "signal": "0x30ccd7d6454695ed45663e296ad6fa902cf654bb3b85e7faf93f0571c6b593c9"
+    }
+   ],
+   "publicRecord": {
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xceea9e4748bfd920520ad785f73a1fed03b3d64bf8e25ca70e568b267db4f9ea",
+    "miner": null,
+    "found": true
+   }
+  }
+ ],
+ "routed": [
+  {
+   "pool": "8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo",
+   "dex": "BisonFi",
+   "askedBefore": 216,
+   "answer": {
+    "status": 200,
+    "ok": true,
+    "miner": null,
+    "liquidity_usd": null,
+    "dex": null,
+    "route_verified": null,
+    "signal": "0xe8945486aea958b1a3cb3fb6eee60bb058f3211099ce2a62ce9776e8708d3140"
+   },
+   "publicRecord": {
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xe8945486aea958b1a3cb3fb6eee60bb058f3211099ce2a62ce9776e8708d3140",
+    "miner": null,
+    "found": true
+   }
+  },
+  {
+   "pool": "FJnaiidSLXFweWkgbinxEHRykVHsnkzDcYbNDR3RF5LN",
+   "dex": "BisonFi",
+   "askedBefore": 6,
+   "answer": {
+    "status": 200,
+    "ok": true,
+    "miner": null,
+    "liquidity_usd": 7164117,
+    "dex": null,
+    "route_verified": null,
+    "signal": "0xe4f9ee407f98da588a9342bd701b5081b635a015bd71f549939414fa3718572c"
+   },
+   "publicRecord": {
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xe4f9ee407f98da588a9342bd701b5081b635a015bd71f549939414fa3718572c",
+    "miner": null,
+    "found": true
+   }
+  },
+  {
+   "pool": "23XoPQqGw9WMsLoqTu8HMzJLD6RnXsufbKyWPLJywsCT",
+   "dex": "Byreal",
+   "askedBefore": 8,
+   "answer": {
+    "status": 200,
+    "ok": true,
+    "miner": null,
+    "liquidity_usd": 7164117,
+    "dex": null,
+    "route_verified": null,
+    "signal": "0xe668fc5d4471fe09b5c048d54c82ea44b949eedfe0f836b6ffed269af221d44f"
+   },
+   "publicRecord": {
+    "url": "https://devnode.telegraphprotocol.com/engine/v1/signal/0xe668fc5d4471fe09b5c048d54c82ea44b949eedfe0f836b6ffed269af221d44f",
+    "miner": null,
+    "found": true
+   }
+  }
+ ]
+}
