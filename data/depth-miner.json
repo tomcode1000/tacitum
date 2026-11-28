@@ -1,0 +1,15 @@
+{
+  "registrationId": 6222,
+  "slug": "tacitum-pool-depth",
+  "id": 7314403,
+  "diamond": "0x72a70e949362670Bf8bceAd24eFC5b8f950aa08b",
+  "yamlUrl": "https://depth.54-255-109-186.sslip.io/miner.yaml",
+  "yamlHash": "0x62511ff7233327a63b8d3aded7774eb6a8b9a86d00c926b15479338587c59a43",
+  "intents": [
+    "LIQUIDITY_DEPTH_VERIFY_GENERAL"
+  ],
+  "minPriceUsdc": 10000,
+  "tx": "0xb74e4b4114c77e44b2827e5a2cd1e69b1e309ba28403c7984953c987e29b6f55",
+  "registeredAt": "2026-11-28T10:29:29.934Z",
+  "history": []
+}

@@ -36,6 +36,7 @@ const PAGES = [
   ["privacy.html", "Privacy"],
   ["pool.html", "Screened pool"],
   ["miner.html", "Adverse media"],
+  ["depth.html", "Pool depth"],
   ["docs.html", "Docs"],
 ];
 const REPO = "https://github.com/tomcode1000/tacitum";
@@ -57,7 +58,7 @@ function chrome() {
   <footer class="site-foot">
     <div class="wrap">
       <div><a class="logo" href="index.html" style="padding:0;color:var(--text)">${LOGO}Tacitum</a><p style="margin-top:16px;max-width:34ch">The private, compliant buying layer for Telegraph. Screen anyone. Tell no one. Prove everything. Built for Telegraph Hackathon Season II, Mission 03.</p></div>
-      <div><h5>Product</h5><a href="how-it-works.html">How it works</a><a href="live-run.html">Live run</a><a href="pool.html">Screened pool</a><a href="miner.html">Adverse-media miner</a></div>
+      <div><h5>Product</h5><a href="how-it-works.html">How it works</a><a href="live-run.html">Live run</a><a href="pool.html">Screened pool</a><a href="miner.html">Adverse-media miner</a><a href="depth.html">Pool-depth miner</a></div>
       <div><h5>Evidence</h5><a href="privacy.html">Privacy results</a><a href="${REPO}/tree/main/assessments">Assessment memos</a><a href="${REPO}/tree/main/evidence">Paid-call receipts</a><a href="${REPO}/blob/main/PLAN.md">Build plan</a></div>
       <div><h5>Build</h5><a href="docs.html">Documentation</a><a href="${REPO}">Source on GitHub</a><a href="https://x.com/Toluinweb3">X: @Toluinweb3</a></div>
       <div class="fine"><span>Runs on Ethereum Sepolia with test USDC. Every figure on this site comes from committed evidence.</span><span id="built-at"></span></div>

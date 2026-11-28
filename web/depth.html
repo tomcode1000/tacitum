@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pool-depth miner · Tacitum</title>
+<meta name="description" content="tacitum-pool-depth: a Telegraph miner that reads the real liquidity of any Solana pool from chain, including pools no other miner could answer.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..800&family=Inter+Tight:wght@600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" href="img/icon.svg"><link rel="stylesheet" href="site.css">
+</head>
+<body data-head="solid">
+<main id="main">
+  <section class="hero" style="min-height:auto;padding:170px 0 90px">
+    <div class="hero-bg"><img src="img/skyline.jpg" alt="" style="object-position:center 60%"></div>
+    <div class="wrap" style="grid-template-columns:minmax(0,1fr)">
+      <div>
+        <p class="crumbs"><a href="index.html">Tacitum</a> / Pool depth</p>
+        <h1 style="margin-top:22px;max-width:17ch">How much money is <span class="accent">really in this pool?</span></h1>
+        <p class="lede">An agent needs that answer before it trades, lends, lists a token or moves a treasury through a Solana pool. On Telegraph it was the most-failed question on the network: 603 asks in three days, 32% usable, and ten pools asked about 402 times with no answer at all. This miner reads the reserves straight from chain, shows its work, and says so when nobody can know.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:28px"><a class="btn light" href="#try">Try a pool <i data-i="arrow"></i></a><a class="btn ghost" href="#quality">Measured accuracy</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:40px" id="try">
+    <div class="wrap">
+      <form class="search" id="form">
+        <label class="sr" for="q">Solana pool address</label>
+        <input id="q" placeholder="Solana pool address, for example 8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo" autocomplete="off" required maxlength="60" spellcheck="false">
+        <button class="btn brass" type="submit" style="height:56px">Read pool <i data-i="search"></i></button>
+      </form>
+      <p class="muted" style="margin-top:14px;font-size:.88rem">Examples:
+        <a href="#" data-p="8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo">BisonFi SOL/USDC</a> (asked 216 times on Telegraph, never answered before) ·
+        <a href="#" data-p="Czfq3xZZDmsdGdUyrNLtRhGc47cXcZtLG4crryfu44zE">Orca SOL/USDC</a> ·
+        <a href="#" data-p="58oQChx4yWmvKdwLLZzBi4ChoCc2fqCUWBkwMihLYQo2">Raydium SOL/USDC</a> ·
+        <a href="#" data-p="9mzt81moHM2tCkFzWxETM4ztTnhjzWt4e1iMrZBf29NP">Scorch (declined, see why)</a>.
+        Free here; $0.01 with a public receipt through Telegraph.</p>
+      <div class="panel" id="result" style="margin-top:24px"><p style="padding:28px" class="muted">Pick an example or paste a pool address.</p></div>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">How it answers</p>
+        <h2>Shows its work, <span class="accent">declines instead of guessing.</span></h2>
+      </div>
+      <div class="cards c4">
+        <div class="card"><span class="icon"><i data-i="layers"></i></span><h3>Read from chain</h3><p>Only token vaults the pool account owns, or the two vaults a Raydium or PumpSwap pool names in its own data. Tokens spammed to the pool address are ignored.</p></div>
+        <div class="card"><span class="icon"><i data-i="doc"></i></span><h3>Every number re-checkable</h3><p>Each answer lists the vault accounts, amounts, prices and Solana slot, so anyone can read the same accounts and get the same figure.</p></div>
+        <div class="card"><span class="icon"><i data-i="search"></i></span><h3>Route and depth</h3><p>Jupiter quotes restricted to that DEX confirm trades go through this exact pool, and give the price impact of a $1k, $10k and $100k trade.</p></div>
+        <div class="card"><span class="icon"><i data-i="shield"></i></span><h3>Honest declines</h3><p>Scorch, Manifest, Deriverse, JupLend and Sanctum keep funds outside the pool. Generic methods were off by up to 100 times there, so the miner says why and returns no number.</p></div>
+      </div>
+      <div class="panel scroll-x" style="margin-top:28px"><table class="table"><tbody>
+        <tr><td style="width:240px" class="muted">Miner</td><td><span class="mono">tacitum-pool-depth</span> · id 7314403</td></tr>
+        <tr><td class="muted">Registration</td><td>6222 on the Telegraph H2 contract (Sepolia), <a href="https://sepolia.etherscan.io/tx/0xb74e4b4114c77e44b2827e5a2cd1e69b1e309ba28403c7984953c987e29b6f55" target="_blank" rel="noopener">transaction</a></td></tr>
+        <tr><td class="muted">Intent</td><td><span class="mono">LIQUIDITY_DEPTH_VERIFY_GENERAL</span> · inputs <span class="mono">pool</span>, <span class="mono">chain</span> · scored field <span class="mono">liquidity_usd</span></td></tr>
+        <tr><td class="muted">Price</td><td>$0.01 per answer</td></tr>
+        <tr><td class="muted">Public endpoint</td><td><span class="mono">https://depth.54-255-109-186.sslip.io/api/depth?pool=…&amp;chain=solana</span></td></tr>
+        <tr><td class="muted">Source</td><td><a href="https://github.com/tomcode1000/tacitum/tree/main/depth-miner">depth-miner/ on GitHub</a> · 33 unit tests</td></tr>
+      </tbody></table></div>
+    </div>
+  </section>
+
+  <section class="section" id="quality">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">Measured accuracy</p>
+        <h2>Checked against an independent indexer, <span class="accent">on sets frozen first.</span></h2>
+        <p class="lede">Both test sets were fixed with a hash before the miner ran, and every figure is compared with GeckoTerminal. One set is what Telegraph users actually asked; the other is GeckoTerminal's own top pools, which we did not choose.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><div class="num">12<small>/12</small></div><div class="what">Within 2%</div><div class="src">Every Solana pool asked on Telegraph that GeckoTerminal indexes. Median error 0.13%.</div></div>
+        <div class="stat"><div class="num">230</div><div class="what">Asks now answered</div><div class="src">Of 402 asks on pools no miner had ever answered (BisonFi, Byreal). Was 0.</div></div>
+        <div class="stat"><div class="num">50<small>/50</small></div><div class="what">Top pools answered</div><div class="src">GeckoTerminal's top Solana pools worth $1k or more; 46 within 10%.</div></div>
+        <div class="stat"><div class="num">7</div><div class="what">Honest declines</div><div class="src">Pools whose funds sit outside the pool account, each with the reason.</div></div>
+      </div>
+      <p class="muted" style="margin-top:18px;font-size:.9rem">The 4 top pools beyond 10% are fast-moving memecoin pools. Re-checked minutes later, 3 matched within 0.2%; on the fourth, the chain shows GeckoTerminal's figure is stale. Full results, scripts and the pre-build check: <a href="https://github.com/tomcode1000/tacitum/blob/main/benchmarks/liquidity-depth/FINDINGS.md" style="color:var(--text)">benchmarks/liquidity-depth</a>.</p>
+    </div>
+  </section>
+
+  <section class="section alt">
+    <div class="wrap">
+      <div class="sec-head">
+        <p class="eyebrow">What it enables</p>
+        <h2>Two missions, <span class="accent">and any agent that trades.</span></h2>
+      </div>
+      <div class="cards c3">
+        <div class="card"><p class="eyebrow">Mission 01</p><h3>Exchange</h3><p>Market-integrity alerts: is a listed token's liquidity real, and where does it sit?</p></div>
+        <div class="card"><p class="eyebrow">Mission 02</p><h3>Stablecoin</h3><p>Evidence-based treasury decisions: can this pool absorb the size we need to move?</p></div>
+        <div class="card"><p class="eyebrow">Trading agents</p><h3>Pre-trade check</h3><p>Before an agent swaps, it learns the pool's real depth and the price impact of its trade size.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap split">
+      <div class="sec-head" style="margin:0">
+        <p class="eyebrow">Run it</p>
+        <h2>Call it free, <span class="accent">or buy it on Telegraph.</span></h2>
+        <p class="lede">Fetch an answer directly with no wallet, or buy it through Telegraph for $0.01 with a public receipt.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn ghost" href="https://github.com/tomcode1000/tacitum/blob/main/depth-miner/README.md">README <i data-i="arrow"></i></a></div>
+      </div>
+      <pre><span class="c-com"># free, direct: no wallet needed</span>
+curl "https://depth.54-255-109-186.sslip.io/api/depth?pool=8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo&amp;chain=solana"
+
+<span class="c-com"># through Telegraph: $0.01, receipted on the public record</span>
+<span class="c-key">import</span> { createClient } <span class="c-key">from</span> <span class="c-str">"tacitum"</span>;
+<span class="c-key">const</span> r = <span class="c-key">await</span> createClient(account).askMiner(
+  7314403, <span class="c-str">"LIQUIDITY_DEPTH_VERIFY_GENERAL"</span>,
+  { pool: <span class="c-str">"8FnX3xo2…"</span>, chain: <span class="c-str">"solana"</span> });
+
+<span class="c-com"># accuracy vs GeckoTerminal (free)</span>
+node benchmarks/liquidity-depth/eval.mjs --reuse</pre>
+    </div>
+  </section>
+</main>
+<script src="site.js"></script>
+<script>
+const API = "https://depth.54-255-109-186.sslip.io/api/depth";
+const usd = (n) => n >= 1e6 ? `$${(n / 1e6).toFixed(2)}M` : n >= 1e3 ? `$${(n / 1e3).toFixed(1)}k` : `$${Number(n).toFixed(2)}`;
+const short = (a) => `${a.slice(0, 6)}…${a.slice(-4)}`;
+async function run(pool) {
+  const box = document.getElementById("result");
+  box.innerHTML = `<p style="padding:28px" class="muted">Reading ${T.esc(short(pool))} from Solana…</p>`;
+  try {
+    const r = await fetch(`${API}?pool=${encodeURIComponent(pool)}&chain=solana`);
+    const j = await r.json();
+    if (!r.ok) {
+      box.innerHTML = `<div class="panel-head" style="padding:26px 24px"><div><span style="font:600 1.6rem/1.2 var(--display)">No figure given</span></div><div><span class="chip v-REVIEW">Declined</span> <span class="mono muted" style="font-size:.85rem;margin-left:6px">${T.esc(j.code || r.status)}</span></div></div><p style="padding:22px 24px;color:var(--text-2)">${T.esc(j.error || "The miner declined.")}</p>`;
+      return;
+    }
+    const sol = (a) => `<a class="mono" href="https://solscan.io/account/${T.esc(a)}" target="_blank" rel="noopener">${T.esc(short(a))}</a>`;
+    box.innerHTML = `
+      <div class="panel-head" style="padding:26px 24px"><div style="display:flex;gap:18px;align-items:baseline;flex-wrap:wrap"><span style="font:600 3rem/1 var(--display)">${usd(j.liquidity_usd)}</span><span>in the <b>${T.esc(j.dex || "Solana")} ${T.esc(j.pair)}</b> pool ${sol(j.pool)}</span></div><div><span class="chip v-${j.route_verified ? "CLEAR" : "INFO"}">${j.route_verified ? "Jupiter routes through this pool" : "Route not confirmed"}</span></div></div>
+      <div class="scroll-x"><table class="table"><thead><tr><th>Reserve</th><th>Amount</th><th>Price</th><th>Value</th><th>Vault account</th></tr></thead><tbody>
+        ${j.reserves.map((s) => `<tr><td>${T.esc(s.symbol || short(s.mint))}</td><td>${Number(s.amount).toLocaleString(undefined, { maximumFractionDigits: 4 })}</td><td>$${Number(s.price_usd).toPrecision(4)}</td><td>${usd(s.usd)}</td><td>${sol(s.vault)}</td></tr>`).join("")}
+      </tbody></table></div>
+      ${j.depth?.length ? `<div class="cats">${j.depth.map((d) => `<span class="cat">sell ${usd(d.sell_usd)} of ${T.esc(d.sell)} · price moves ${d.price_impact_pct}%</span>`).join("")}</div>` : ""}
+      <p class="muted" style="padding:14px 24px 18px;font-size:.86rem;border-top:1px solid var(--line)">Live from the miner · Solana slot ${j.slot} · ${T.esc(j.method)}</p>`;
+  } catch (err) { box.innerHTML = `<p style="padding:28px;color:var(--flag)">The miner did not answer: ${T.esc(err.message)}. Try again in a few seconds.</p>`; }
+}
+document.getElementById("form").onsubmit = (e) => { e.preventDefault(); const p = document.getElementById("q").value.trim(); if (p) run(p); };
+document.querySelectorAll("[data-p]").forEach((a) => a.onclick = (e) => { e.preventDefault(); document.getElementById("q").value = a.dataset.p; run(a.dataset.p); });
+</script>
+</body>
+</html>
