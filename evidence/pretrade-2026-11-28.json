@@ -1,0 +1,79 @@
+{
+ "at": "2026-11-28T14:29:37.490Z",
+ "pool": "8FnX3xo2yYw3EUE6w3nQA4GfXGS9wpK6oj3veJpbFzLo",
+ "runs": [
+  {
+   "label": "own wallet",
+   "counterparty": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+   "sizeUsd": 25000,
+   "expect": "GO",
+   "verdict": "CAUTION",
+   "reasons": [
+    "Counterparty clear of sanctions (miner 731002).",
+    "Pool holds $4,166,477 (Solana).",
+    "Jupiter did not confirm trades route through this pool."
+   ],
+   "liquidity_usd": 4166476.643331,
+   "receipts": {
+    "depth": "0x4b484c4ad4a33ca3c087c6ceb3819bddee1fad988b826f5a313c1041adf8dcc3",
+    "sanctions": "0x1aea315871367d855d14f06269c3e28c34a929b44827575480b4250cee960b55"
+   },
+   "sanctionsMiner": 731002,
+   "privacy": {
+    "decoyPools": 3,
+    "decoyWallets": 3
+   },
+   "payer": "0x1F81Cf26Acec42CEed7a514B019B0a16d5aed4F1",
+   "fundingTx": "0xc56a916c4fc5a2a2590146ec934a8c045058404bbc6d12f5aa5783e68e9461dc"
+  },
+  {
+   "label": "OFAC-listed wallet",
+   "counterparty": "0x098B716B8Aaf21512996dC57EB0615e2383E2f96",
+   "sizeUsd": 25000,
+   "expect": "STOP",
+   "verdict": "STOP",
+   "reasons": [
+    "Counterparty matched a sanctions list (miner 731002).",
+    "Pool holds $4,163,944 (Solana).",
+    "Jupiter did not confirm trades route through this pool."
+   ],
+   "liquidity_usd": 4163943.929753,
+   "receipts": {
+    "depth": "0xcf81a6bc144289ed12bd284138883551875d9ec418b41c2f13f754ac7e4e9ffa",
+    "sanctions": "0x2dffe122e800ed49c0166a5c2c2215db0df562708ea2cf42fa7595a7cbece18e"
+   },
+   "sanctionsMiner": 731002,
+   "privacy": {
+    "decoyPools": 3,
+    "decoyWallets": 3
+   },
+   "payer": "0x33c3c10B4cbDC6B95993E86dd5b85cFC7A01e124",
+   "fundingTx": "0x673a2f3118175a9dabf3efa8f2c585424bcd93b9b1b93d741fdf334b3d96ecbc"
+  },
+  {
+   "label": "own wallet, after fix",
+   "counterparty": "0xdbEE317b429c8EADFcE1825691cF10C7fa46b608",
+   "sizeUsd": 25000,
+   "expect": "GO",
+   "verdict": "GO",
+   "reasons": [
+    "Counterparty clear of sanctions (miner 731002).",
+    "Pool holds $4,165,740 (BisonFi USDC/SOL).",
+    "Selling up to $100,000 moves the price 0.1612% (limit 1%)."
+   ],
+   "liquidity_usd": 4165739.937984,
+   "receipts": {
+    "depth": "0xb2e214596c5459cba7aefc74788a68d40117ba1e89f5a502d13d89177a1cc6ac",
+    "sanctions": "0x21f7e8161cd89d4131d6ffcb4e67c5bd800578d4c70381a4e452dff1e32a8956"
+   },
+   "sanctionsMiner": 731002,
+   "privacy": {
+    "decoyPools": 3,
+    "decoyWallets": 3
+   },
+   "payer": "0x83e8E5cC4E4A1fCC10f766CF5105989e51Cb0d0a",
+   "fundingTx": "0xdb07a5a516e62ac37a6c9d0efcda2e10e0e40728bbcd1adb3f0751b3392664a0"
+  }
+ ],
+ "note": "Run 1 returned CAUTION because Telegraph gives the buyer only liquidity_usd; the route check and depth table are in the public record. Fixed (fullDepthAnswer reads the record); re-deciding run 1 from its own receipts gives GO, and run 3 below is a fresh live run after the fix."
+}

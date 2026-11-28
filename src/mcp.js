@@ -92,6 +92,29 @@ server.registerTool(
 );
 
 server.registerTool(
+  "pre_trade_check",
+  {
+    title: "Private pre-trade check (Solana pool)",
+    description:
+      "Before swapping through a Solana pool: reads the pool's real liquidity and the price impact at your trade size " +
+      "(tacitum-pool-depth, from the pool's own vaults on chain) and screens the counterparty wallet for sanctions. Both are " +
+      "bought from a one-time wallet among decoy pools and wallets, so the public feed does not show which pool you are about " +
+      "to trade. Returns GO, CAUTION (trade large for the pool), HOLD (a check could not be answered) or STOP (sanctions match), " +
+      "with reasons and Telegraph receipts. About 2-4 minutes, $0.05-0.15.",
+    inputSchema: {
+      pool: z.string().describe("Solana pool account address (base58)"),
+      sizeUsd: z.number().positive().describe("Trade size in US dollars"),
+      counterparty: z.string().optional().describe("Counterparty wallet to screen (Solana or EVM address); optional"),
+      maxImpactPct: z.number().positive().default(1).describe("Largest acceptable price impact, percent"),
+    },
+  },
+  async ({ pool: p, sizeUsd, counterparty, maxImpactPct }) => {
+    const r = await t.preTrade({ pool: p, sizeUsd, counterparty, maxImpactPct });
+    return text(JSON.stringify({ verdict: r.verdict, reasons: r.reasons, liquidity_usd: r.depth?.liquidity_usd ?? null, depth: r.depth?.depth ?? null, receipts: r.receipts, privacy: { decoyPools: r.privacy.decoyPools, decoyWallets: r.privacy.decoyWallets }, payer: r.payer }, null, 2));
+  },
+);
+
+server.registerTool(
   "pool_deposit",
   {
     title: "Deposit into the screened pool",

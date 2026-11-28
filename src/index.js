@@ -16,6 +16,7 @@ import { newNote, saveNote, loadNotes, deposit as poolDeposit, approvedLeaves } 
 import { renderMemo } from "./memo.js";
 import { assess as openAssess } from "./assess.js";
 import { monitorRun } from "./monitor.js";
+import { preTradeRun } from "./pretrade.js";
 
 export { createClient, publicRecord } from "./telegraph.js";
 export { privateAssess } from "./private.js";
@@ -23,6 +24,7 @@ export { pickDecoys, coverSetFor } from "./decoys.js";
 export { oneTimePayer, poolPayer, escrowBalance } from "./payers.js";
 export { newNote, Tree, prove, verifyLocally, approvedLeaves } from "./pool.js";
 export { renderMemo } from "./memo.js";
+export { decide as preTradeDecide, preTradeRun, DEPTH_MINER } from "./pretrade.js";
 export { CHECKS } from "./assess.js";
 
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -132,6 +134,16 @@ export function tacitum({ funder, k = 4, maxPerPaymentUsd = 0.1, maxTotalUsd = 2
       if (!watchlist?.length) throw new Error("monitor() needs a watchlist: [{ name, jurisdiction }]");
       const payer = await freshPayer(fundUsd ?? 0.01 * watchlist.length * k + 0.02, `monitor ${watchlist.length}`);
       const run = await monitorRun(payer.client, watchlist, { k, notBefore: payer.fundedAt + FUNDING_SETTLE_MS });
+      return { ...run, payer: payer.account.address, fundingTx: payer.fundingTx, viaPool: Boolean(payer.viaPool) };
+    },
+
+    // Pre-trade check for a Solana pool: depth and price impact at sizeUsd from tacitum-pool-depth,
+    // plus sanctions on the counterparty wallet, bought privately among decoy pools and wallets.
+    // Returns verdict GO / CAUTION / HOLD / STOP with reasons and both Telegraph receipts.
+    async preTrade({ pool, chain = "solana", sizeUsd, counterparty = null, maxImpactPct = 1, minLiquidityMultiple = 20, fundUsd } = {}) {
+      const calls = 4 + (counterparty ? 4 * 2 : 0); // depth x4; sanctions x4 with room for one fallback each
+      const payer = await freshPayer(fundUsd ?? 0.01 * calls + 0.02, "pre-trade");
+      const run = await preTradeRun(payer.client, { pool, chain, sizeUsd, counterparty, maxImpactPct, minLiquidityMultiple, notBefore: payer.fundedAt + FUNDING_SETTLE_MS });
       return { ...run, payer: payer.account.address, fundingTx: payer.fundingTx, viaPool: Boolean(payer.viaPool) };
     },
 
