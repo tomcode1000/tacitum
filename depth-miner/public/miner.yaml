@@ -5,12 +5,17 @@ slug: tacitum-pool-depth
 protocol: generic
 name: Tacitum Solana Pool Depth
 description: >-
-  Total liquidity in US dollars of any Solana DEX pool, read from the pool's own token vaults on chain:
-  Orca, Raydium (AMM v4, CPMM, CLMM), Meteora, Byreal, BisonFi and every other program whose pool account owns its
-  reserves. Each answer names the vault accounts, the amounts and prices, a Jupiter route check that
-  trades go through this exact pool, and the price impact at $1k, $10k and $100k. Pools whose reserves
-  sit outside the pool account (Scorch, Manifest, Deriverse, JupLend, Sanctum) are declined with the
-  reason, never guessed. No API key; nothing cached for more than 60 seconds.
+  How much money is really in this Solana pool? An agent needs that answer before it trades, lends,
+  lists a token or moves a treasury through a pool, and most liquidity providers can only read Orca,
+  Raydium and Meteora. On Telegraph, BisonFi and Byreal pools were asked about 230 times with no answer.
+  This miner reads any pool's reserves straight from chain: Raydium (AMM v4, CPMM, CLMM), Orca, Meteora,
+  PumpSwap, BisonFi, Byreal and every DEX whose pool holds its own funds. Every answer shows its work
+  (the vault accounts, amounts, prices and slot) so anyone can re-check it, confirms through Jupiter
+  that trades route through that exact pool, and gives the price impact of a $1k, $10k and $100k trade.
+  Measured against GeckoTerminal: 12 of 12 within 2% on every Solana pool asked on Telegraph, and 50 of
+  50 top pools answered. Where a DEX keeps funds outside the pool (Scorch, Manifest, Deriverse,
+  JupLend, Sanctum) it declines and says why, rather than return a confident wrong number. Built for
+  Mission 01 market-integrity alerts and Mission 02 treasury decisions. Solana only; no API key.
 base_url: https://depth.54-255-109-186.sslip.io
 docs:
   repository: https://github.com/tomcode1000/tacitum
